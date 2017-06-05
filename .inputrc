@@ -1,4 +1,5 @@
 # ~/.inputrc: readline initialization file.
+# Note: This configuration has only been tested on Cygwin
 
 # the following line is actually
 # equivalent to "\C-?": delete-char
