@@ -28,10 +28,10 @@ alias la='ll -A'                              # all but . and ..
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
 alias l='ls -CF'
-
+#
 alias open='cygstart'
 alias home='cd /cygdrive/c/Users/212341870'
-
+#
 alias info='info --vi-keys'
 
 # Allow switching direction in reverse-i-search using Ctrl+s
