@@ -1,3 +1,5 @@
+# ~/.profile: executed by the command interpreter for login shells.
+
 # Set user-defined locale
 export LANG=$(locale -uU)
 

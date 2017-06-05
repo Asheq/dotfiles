@@ -1,4 +1,5 @@
-# Note: This has only been tested on Cygwin
+# ~/.bashrc: executed by bash(1) for interactive shells.
+# Note: This configuration has only been tested on Cygwin
 
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
