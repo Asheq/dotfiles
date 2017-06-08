@@ -35,10 +35,14 @@ alias home='cd /cygdrive/c/Users/212341870'
 alias info='info --vi-keys'
 #
 alias hr='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
+#
+alias gitls='git ls-tree -r master --name-only'
 
 # Allow switching direction in reverse-i-search using Ctrl+s
 stty -ixon
 
 # Make programs aware that the terminal is capable of 256 colors
 export TERM=xterm-256color
+
+# Add up command
 source ~/.config/up/up.sh
