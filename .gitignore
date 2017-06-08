@@ -1,8 +1,10 @@
 *
-!.bashrc
 !.agignore
-!.gitignore
 !.bash_profile
+!.bashrc
+!.config
+!.config/**
+!.gitignore
 !.inputrc
 !.minttyrc
 !.profile

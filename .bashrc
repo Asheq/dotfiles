@@ -12,8 +12,7 @@ export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 # Ignore some controlling instructions
 # HISTIGNORE is a colon-delimited list of patterns which should be excluded.
 # The '&' is a special pattern which suppresses duplicate entries.
-export HISTIGNORE=$'[ \t]*:&:[fb]g:exit'
-export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
+export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls'
 
 # Aliases
 #
@@ -28,12 +27,18 @@ alias ll='ls -l'                              # long list
 alias la='ll -A'                              # all but . and ..
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
-alias l='ls -CF'
+alias l='ls -C'
 #
 alias open='cygstart'
 alias home='cd /cygdrive/c/Users/212341870'
 #
 alias info='info --vi-keys'
+#
+alias hr='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
 
 # Allow switching direction in reverse-i-search using Ctrl+s
 stty -ixon
+
+# Make programs aware that the terminal is capable of 256 colors
+export TERM=xterm-256color
+source ~/.config/up/up.sh
