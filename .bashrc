@@ -37,6 +37,9 @@ alias info='info --vi-keys'
 alias hr='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
 #
 alias gitls='git ls-tree -r master --name-only'
+#
+# Do not load /etc/vimrc
+alias vim='vim -u ~/.vimrc'
 
 # Allow switching direction in reverse-i-search using Ctrl+s
 stty -ixon
