@@ -31,6 +31,8 @@ alias l='ls -C'
 #
 alias open='cygstart'
 alias home='cd /cygdrive/c/Users/212341870'
+alias root='cd /cygdrive/c'
+alias dev='cd /cygdrive/c/Development/GE/'
 #
 alias info='info --vi-keys'
 #
