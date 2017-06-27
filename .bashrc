@@ -30,9 +30,9 @@ alias vdir='ls --color=auto --format=long'
 alias l='ls -C'
 #
 alias open='cygstart'
-alias home='cd /cygdrive/c/Users/212341870'   # windows home
-alias root='cd /cygdrive/c'                   # windows root
-alias dev='cd /cygdrive/c/Development/GE/'    # development directory
+alias h='cd /cygdrive/c/Users/212341870'   # windows home
+alias r='cd /cygdrive/c'                   # windows root
+alias d='cd /cygdrive/c/Development/GE/'   # development directory
 #
 alias info='info --vi-keys'
 #
