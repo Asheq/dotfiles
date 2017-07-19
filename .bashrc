@@ -17,22 +17,24 @@ export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls'
 # Aliases
 #
 # Misc :)
-alias grep='grep --color'                     # show differences in colour
-alias egrep='egrep --color=auto'              # show differences in colour
-alias fgrep='fgrep --color=auto'              # show differences in colour
+alias grep='grep --color'               # show differences in colour
+alias egrep='egrep --color=auto'        # show differences in colour
+alias fgrep='fgrep --color=auto'        # show differences in colour
 #
 # Some shortcuts for different directory listings
-alias ls='ls -hF --color=tty'                 # classify files in colour
-alias ll='ls -l'                              # long list
-alias la='ll -A'                              # all but . and ..
+alias ls='ls -hF --color=tty'           # classify files in colour
+alias ll='ls -l'                        # long list
+alias la='ll -A'                        # all but . and ..
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
 alias l='ls -C'
 #
 alias open='cygstart'
-alias h='cd /cygdrive/c/Users/212341870'   # windows home
-alias r='cd /cygdrive/c'                   # windows root
-alias d='cd /cygdrive/c/Development/GE/'   # development directory
+alias ch='cd'                           # home
+alias cr='cd /'                         # root
+alias wh='cd $USERPROFILE'              # windows home
+alias wr='cd $HOMEDRIVE'                # windows root
+alias d='cd $HOMEDRIVE/Development/GE/' # development directory
 #
 alias info='info --vi-keys'
 #
