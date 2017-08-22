@@ -4,7 +4,10 @@
 !.bash_profile
 !.bash_git
 !.config
-!.config/**
+!.config/up
+!.config/up/**
+!.config/lxterminal
+!.config/lxterminal/**
 !.gitignore
 !.inputrc
 !.minttyrc
