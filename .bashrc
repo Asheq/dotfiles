@@ -33,11 +33,9 @@ alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
 #
 alias open='cygstart'
-alias l='cd'                           # linux home
-alias L='cd /'                         # linux root
-alias w='cd $USERPROFILE'              # windows home
-alias W='cd $HOMEDRIVE'                # windows root
-alias d='cd $HOMEDRIVE/Development/GE/' # development directory
+alias cdu='cd $USERPROFILE'               # Windows user profile on Cygwin
+alias cdh='cd $HOMEDRIVE'                 # Windows home drive on Cygwin
+alias cdg='cd $HOMEDRIVE/Development/GE/' # GE development directory
 #
 alias info='info --vi-keys'
 #
