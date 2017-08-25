@@ -89,3 +89,14 @@ xterm*|rxvt*)
     ;;
 esac
 
+function setproxy() {
+    export {http,https,ftp,all}_proxy='http://proxy-src.research.ge.com:8080'
+    export no_proxy='localhost,127.0.0.0/8,127.0.*.*,local.home,192.168.*.*,github.build.ge.com,github.sw.ge.com,openge.ge.com'
+}
+
+function unsetproxy() {
+    unset {http,https,ftp,all}_proxy
+    unset no_proxy
+}
+
+setproxy
