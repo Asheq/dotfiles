@@ -34,7 +34,7 @@ alias vdir='ls --color=auto --format=long'
 #
 alias open='cygstart'
 alias cdu='cd $USERPROFILE'               # Windows user profile on Cygwin
-alias cdh='cd $HOMEDRIVE'                 # Windows home drive on Cygwin
+alias cdr='cd $HOMEDRIVE'                 # Windows home drive on Cygwin
 alias cdg='cd $HOMEDRIVE/Development/GE/' # GE development directory
 #
 alias info='info --vi-keys'
