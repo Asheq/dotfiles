@@ -35,11 +35,6 @@ alias ll='ls -l'                          # long list
 alias la='ll -a'                          # all
 alias lA='ll -A'                          # all but . and ..
 
-# Change Directory
-alias cdu='cd $USERPROFILE'               # Windows user profile on Cygwin
-alias cdr='cd $HOMEDRIVE'                 # Windows home drive on Cygwin
-alias cdg='cd $HOMEDRIVE/Development/GE/' # GE development directory
-
 # Miscellaneous
 alias info='info --vi-keys'
 alias hr='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
@@ -48,8 +43,11 @@ alias vim='vim -u ~/.vimrc'               # Do not load /etc/vimrc
 
 # Cygwin Overrides
 # TODO: Figure out how to apply these overrides automatically only when running Cygwin
-# alias ls='ls -hF --color=tty'           # classify files in colour
+# alias ls='ls -hF --color=tty'             # classify files in colour
 # alias open='cygstart'
+# alias cdu='cd $USERPROFILE'               # Windows user profile on Cygwin
+# alias cdr='cd $HOMEDRIVE'                 # Windows home drive on Cygwin
+# alias cdg='cd $HOMEDRIVE/Development/GE/' # GE development directory
 
 ########################################################
 ### Source external shell scripts
