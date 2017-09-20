@@ -9,6 +9,5 @@
 !.config/lxterminal
 !.config/lxterminal/**
 !.gitignore
-!.inputrc
 !.minttyrc
 !.vimrc
