@@ -41,14 +41,6 @@ alias hr='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
 alias gitls='git ls-tree -r master --name-only'
 alias vim='vim -u ~/.vimrc'               # Do not load /etc/vimrc
 
-# Cygwin Overrides
-# TODO: Figure out how to apply these overrides automatically only when running Cygwin
-# alias ls='ls -hF --color=tty'             # classify files in colour
-# alias open='cygstart'
-# alias cdu='cd $USERPROFILE'               # Windows user profile on Cygwin
-# alias cdr='cd $HOMEDRIVE'                 # Windows home drive on Cygwin
-# alias cdg='cd $HOMEDRIVE/Development/GE/' # GE development directory
-
 ########################################################
 ### Source external shell scripts
 ########################################################
@@ -115,5 +107,17 @@ setproxy
 # Allow switching direction in reverse-i-search using Ctrl+s
 stty -ixon
 
-# Make programs aware that the terminal is capable of 256 colors
-export TERM=xterm-256color
+# Make programs aware of my preferred text editor
+export EDITOR=vim
+export VISUAL=$EDITOR
+
+########################################################
+### Cygwin Overrides
+########################################################
+# TODO: Figure out how to apply these overrides automatically only when running Cygwin
+# alias ls='ls -hF --color=tty'             # classify files in colour
+# alias open='cygstart'
+# alias cdu='cd $USERPROFILE'               # Windows user profile on Cygwin
+# alias cdr='cd $HOMEDRIVE'                 # Windows home drive on Cygwin
+# alias cdg='cd $HOMEDRIVE/Development/GE/' # GE development directory
+# export TERM=xterm-256color                # Make programs aware that this terminal is capable of 256 colors
