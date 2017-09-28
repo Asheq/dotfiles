@@ -118,6 +118,5 @@ export VISUAL=$EDITOR
 # alias ls='ls -hF --color=tty'             # classify files in colour
 # alias open='cygstart'
 # alias cdu='cd $USERPROFILE'               # Windows user profile on Cygwin
-# alias cdr='cd $HOMEDRIVE'                 # Windows home drive on Cygwin
-# alias cdg='cd $HOMEDRIVE/Development/GE/' # GE development directory
+# alias cdr='cd $HOMEDRIVE'                 # Windows home drive (root) on Cygwin
 # export TERM=xterm-256color                # Make programs aware that this terminal is capable of 256 colors
