@@ -6,8 +6,5 @@
 !.config
 !.config/up
 !.config/up/**
-!.config/lxterminal
-!.config/lxterminal/**
 !.gitignore
-!.minttyrc
 !.vimrc
