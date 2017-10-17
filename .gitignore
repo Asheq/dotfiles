@@ -1,6 +1,7 @@
 *
 !.agignore
 !.bashrc
+!.inputrc
 !.bash_profile
 !.bash_git
 !.config
