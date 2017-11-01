@@ -119,3 +119,5 @@ export VISUAL=$EDITOR
 # alias cdu='cd $USERPROFILE'               # Windows user profile on Cygwin
 # alias cdr='cd $HOMEDRIVE'                 # Windows home drive (root) on Cygwin
 # export TERM=xterm-256color                # Make programs aware that this terminal is capable of 256 colors
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
