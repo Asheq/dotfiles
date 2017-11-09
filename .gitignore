@@ -9,3 +9,6 @@
 !.config/up/**
 !.gitignore
 !.vimrc
+!.fzf.bash
+!.fzf.zsh
+!.zshrc
