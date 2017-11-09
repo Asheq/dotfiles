@@ -40,6 +40,7 @@ alias info='info --vi-keys'
 alias hr='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
 alias gitls='git ls-tree -r master --name-only'
 alias vim='vim -u ~/.vimrc'               # Do not load /etc/vimrc
+alias vi='vim'
 
 ########################################################
 ### Source external shell scripts
