@@ -7,6 +7,8 @@
 !.config
 !.config/up
 !.config/up/**
+!.config/alacritty
+!.config/alacritty/**
 !.gitignore
 !.vimrc
 !.fzf.bash
