@@ -891,11 +891,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 147 697 509 0 0 1920 1178 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>380 314 796 473 0 0 1440 878 </string>
+	<string>663 536 796 473 0 0 1920 1178 </string>
 	<key>NSWindow Frame com.apple.typography_panel_Monaco</key>
 	<string>346 629 260 56 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2241 194 1210 808 1920 0 1920 1178 </string>
+	<string>613 290 1210 808 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>334 299 1210 808 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1568,7 +1568,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>6D25252B-0A80-4DB5-9368-9611E77CB730</string>
 	<key>NoSyncLastTipTime</key>
-	<real>533544206.10146201</real>
+	<real>534883562.21803802</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1630,6 +1630,14 @@
 		<string>0047</string>
 		<string>0048</string>
 		<string>0049</string>
+		<string>0050</string>
+		<string>0051</string>
+		<string>0052</string>
+		<string>0053</string>
+		<string>0054</string>
+		<string>0055</string>
+		<string>0056</string>
+		<string>0057</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -1683,7 +1691,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-28T02:20:40Z</date>
+	<date>2017-12-13T18:46:03Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
