@@ -1,3 +1,4 @@
+echo 'Logging in...'
 echo 'Executing ~/.bash_profile'
 
 # source .bashrc if it exists
