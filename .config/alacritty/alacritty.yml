@@ -84,8 +84,8 @@ custom_cursor_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x000000'
-    foreground: '0xeaeaea'
+    background: '0x282828'
+    foreground: '0xeeeeee'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
@@ -150,7 +150,7 @@ colors:
 #
 visual_bell:
   animation: EaseOutExpo
-  duration: 100
+  duration: 0
 
 # Background opacity
 background_opacity: 1.0
