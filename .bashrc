@@ -41,6 +41,7 @@ alias hr='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
 alias gitls='git ls-tree -r master --name-only'
 alias vim='vim -u ~/.vimrc'               # Do not load /etc/vimrc
 alias vi='vim'
+alias tm='tmux'
 
 # TODO: Turn into functions?
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
@@ -93,7 +94,7 @@ esac
 
 function setproxy() {
     export {http,https,ftp,all}_proxy='http://proxy-src.research.ge.com:8080'
-    export no_proxy='localhost,127.0.0.0/8,127.0.*.*,local.home,192.168.*.*,github.build.ge.com,github.sw.ge.com,openge.ge.com,devcloud.swcoe.ge.com'
+    export no_proxy='localhost,127.0.0.1,127.0.0.0/8,127.0.*.*,local.home,192.168.*.*,github.build.ge.com,github.sw.ge.com,openge.ge.com,devcloud.swcoe.ge.com'
 }
 
 function unsetproxy() {
@@ -114,6 +115,8 @@ stty -ixon
 # Make programs aware of my preferred text editor
 export EDITOR=vim
 export VISUAL=$EDITOR
+
+export NODE_TLS_REJECT_UNAUTHORIZED=0
 
 ########################################################
 ### FZF
