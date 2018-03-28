@@ -1,4 +1,4 @@
-echo 'Logging in...'
+echo 'You are logged in'
 echo 'Executing ~/.bash_profile'
 
 # source .bashrc if it exists
@@ -12,13 +12,13 @@ if [ -d "${HOME}/bin" ] ; then
 fi
 
 # Set MANPATH so it includes user's private man if it exists
-# if [ -d "${HOME}/man" ]; then
-#   MANPATH="${HOME}/man:${MANPATH}"
-# fi
+if [ -d "${HOME}/man" ]; then
+  MANPATH="${HOME}/man:${MANPATH}"
+fi
 
 # Set INFOPATH so it includes user's private info if it exists
-# if [ -d "${HOME}/info" ]; then
-#   INFOPATH="${HOME}/info:${INFOPATH}"
-# fi
+if [ -d "${HOME}/info" ]; then
+  INFOPATH="${HOME}/info:${INFOPATH}"
+fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
