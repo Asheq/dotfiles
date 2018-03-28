@@ -72,6 +72,7 @@ alias gdc='git diff --cached'
 alias gl='git log'
 alias gls='git ls-tree -r master --name-only'
 alias gs='git status'
+alias gp='git push'
 
 # Miscellaneous
 alias info='info --vi-keys'
