@@ -5,8 +5,6 @@
 !.bash_profile
 !.bash_git
 !.config
-!.config/up
-!.config/up/**
 !.config/alacritty
 !.config/alacritty/**
 !.gitignore
