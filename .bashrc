@@ -1,14 +1,14 @@
-########################################################
+###############################################################################
 ### Guard
-########################################################
+###############################################################################
 
 # If not running bash interactively, do not run this script
 [[ "$-" != *i* ]] && return
 echo 'Executing ~/.bashrc'
 
-########################################################
-### Bash History
-########################################################
+###############################################################################
+### shopt
+###############################################################################
 
 # Append to the history file, don't overwrite it
 shopt -s histappend
@@ -16,55 +16,33 @@ shopt -s histappend
 # Save multi-line commands as one command
 shopt -s cmdhist
 
-# Record each line as it gets issued
-PROMPT_COMMAND='history -a'
+# Update window size after every command
+shopt -s checkwinsize
 
-HISTSIZE=1000
-HISTFILESIZE=2000
+# Prepend cd to directory names automatically
+shopt -s autocd 2> /dev/null
 
-# Avoid duplicate entries
-HISTCONTROL=erasedups:ignoreboth
+# Correct spelling errors during tab-completion
+shopt -s dirspell 2> /dev/null
 
-# Ignore some controlling instructions.
-# HISTIGNORE is a colon-delimited list of patterns which should be excluded.
-# The '&' is a special pattern which suppresses duplicate entries.
-export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls:clear:vi:vim:tmux:cd:jobs'
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell 2> /dev/null
 
-########################################################
-### Miscellaneous
-########################################################
+###############################################################################
+### set
+###############################################################################
 
 # Prevent file overwrite on stdout redirection
 # Use `>|` to force redirection to an existing file
 set -o noclobber
 
-# Update window size after every command
-shopt -s checkwinsize
+###############################################################################
+### alias
+###############################################################################
 
-# Automatically trim long paths in the prompt (requires Bash 4.x)
-PROMPT_DIRTRIM=2
-
-# Node BS
-export NODE_TLS_REJECT_UNAUTHORIZED=0
-
-# Prepend cd to directory names automatically
-shopt -s autocd 2> /dev/null
-# Correct spelling errors during tab-completion
-shopt -s dirspell 2> /dev/null
-# Correct spelling errors in arguments supplied to cd
-shopt -s cdspell 2> /dev/null
-
-########################################################
-### Editor
-########################################################
-export EDITOR=vim
-export VISUAL=$EDITOR
-
-########################################################
-### Aliases
-########################################################
-
+# ------------------------------------------------------
 # ls
+# ------------------------------------------------------
 alias ls='ls -hFG'
 alias ll='ls -l'
 alias la='ls -a'
@@ -72,28 +50,39 @@ alias lla='ll -a'
 alias lA='ls -A'
 alias llA='ll -A'
 
+# ------------------------------------------------------
 # grep
+# ------------------------------------------------------
 alias grep='grep --color'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+# ------------------------------------------------------
 # cd
+# ------------------------------------------------------
 alias ..='cd ..'
 alias ...='cd ..; cd ..'
 alias ....='cd ..; cd ..; cd ..'
 
+# ------------------------------------------------------
 # tmux
+# ------------------------------------------------------
 alias t='tmux'
 alias tls='tmux ls'
 alias ta='tmux a -t'
 
+# ------------------------------------------------------
 # vim
-alias vim='vim -u ~/.vimrc' # use only ~/.vimrc as init file; do not load /etc/vimrc or any other
+# ------------------------------------------------------
+alias vim='vim -u ~/.vimrc' # Use only ~/.vimrc as init file; do not load /etc/vimrc or any other
 alias vi='vim'
 
+# ------------------------------------------------------
 # git
+# ------------------------------------------------------
 alias g='git'
 alias ga='git add'
+alias gaa='git add -A'
 alias gc='git commit -m'
 alias gd='git diff'
 alias gdc='git diff --cached'
@@ -101,20 +90,29 @@ alias gl='git log'
 alias gls='git ls-tree -r master --name-only'
 alias gs='git status'
 alias gp='git push'
+alias gp='git pull'
 
-# Miscellaneous
+# ------------------------------------------------------
+# Show and hide hidden files
+# ------------------------------------------------------
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# ------------------------------------------------------
+# Misc.
+# ------------------------------------------------------
 alias info='info --vi-keys'
 alias hr='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
 alias h='history'
 alias o='open'
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-########################################################
-### Functions
-########################################################
+###############################################################################
+### function
+###############################################################################
 
+# ------------------------------------------------------
 # Proxies
+# ------------------------------------------------------
 function setproxy() {
     export {http,https,ftp,all}_proxy='http://proxy-src.research.ge.com:8080'
     export no_proxy='localhost,127.0.0.1,127.0.0.0/8,127.0.*.*,local.home,192.168.*.*,github.build.ge.com,github.sw.ge.com,openge.ge.com,devcloud.swcoe.ge.com'
@@ -125,25 +123,75 @@ function unsetproxy() {
     unset no_proxy
 }
 
-# Call setproxy function immediately
-setproxy
+# ------------------------------------------------------
+# Update everything
+# ------------------------------------------------------
+function updateEverything() {
+    # softwareupdate --install --all
+    (brew update && brew upgrade && brew cleanup && brew doctor)
+    npm update -g
+    # (pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U)
+    # (gem update --system && gem update && gem cleanup)
+}
 
-########################################################
-### Source external shell scripts
-########################################################
+###############################################################################
+### source
+###############################################################################
 
-# git (add ability to include git info in prompt via __git_ps1)
-[ -f ~/.bash_git ] && source ~/.bash_git
+[ -f ~/.bash_git ] && source ~/.bash_git # adds __git_ps1 command
 
-# fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 [ -f ~/.config/up/up.sh ] && source ~/.config/up/up.sh
 
-########################################################
-### Prompt and Title
-########################################################
+###############################################################################
+### =
+###############################################################################
 
+# ------------------------------------------------------
+# fzf
+# ------------------------------------------------------
+
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# ------------------------------------------------------
+# Bash history
+# ------------------------------------------------------
+
+# Record each line as it gets issued
+PROMPT_COMMAND='history -a'
+
+# Expand history size
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# Avoid duplicate entries
+HISTCONTROL=erasedups:ignoreboth
+
+# Dont' record some commdns
+# The '&' is a special pattern which suppresses duplicate entries.
+export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls:clear:vi:vim:tmux:cd:jobs'
+
+# ------------------------------------------------------
+# Editor
+# ------------------------------------------------------
+export EDITOR=vim
+export VISUAL=$EDITOR
+
+# ------------------------------------------------------
+# Misc.
+# ------------------------------------------------------
+
+# Automatically trim long paths in the prompt (requires Bash 4.x)
+PROMPT_DIRTRIM=2
+
+# Node thing TODO: Figure out how to do this the proper way
+export NODE_TLS_REJECT_UNAUTHORIZED=0
+
+# ------------------------------------------------------
+# Prompt and title (PS1)
+# ------------------------------------------------------
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
     color_prompt=yes
 else
@@ -155,7 +203,7 @@ if [ "$color_prompt" = yes ]; then
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
-unset color_prompt force_color_prompt
+unset color_prompt
 
 # If this is an xterm, set the title to user@host:dir
 case "$TERM" in
@@ -165,3 +213,8 @@ case "$TERM" in
     *)
         ;;
 esac
+
+###############################################################################
+### Call some functions immediately
+###############################################################################
+setproxy
