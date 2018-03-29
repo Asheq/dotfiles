@@ -109,7 +109,6 @@ alias h='history'
 alias o='open'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-alias bd=". bd -si"
 
 ########################################################
 ### Functions
@@ -139,8 +138,7 @@ setproxy
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# bd
-[ -f /etc/bash_completion.d/bd ] && source /etc/bash_completion.d/bd
+[ -f ~/.config/up/up.sh ] && source ~/.config/up/up.sh
 
 ########################################################
 ### Prompt and Title
@@ -167,4 +165,3 @@ case "$TERM" in
     *)
         ;;
 esac
-source ~/.config/up/up.sh
