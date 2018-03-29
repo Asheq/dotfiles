@@ -10,26 +10,49 @@ echo 'Executing ~/.bashrc'
 ### Bash History
 ########################################################
 
-# Do not put duplicate lines or lines starting with space in history
-HISTCONTROL=ignoreboth
+# Append to the history file, don't overwrite it
+shopt -s histappend
+
+# Save multi-line commands as one command
+shopt -s cmdhist
+
+# Record each line as it gets issued
+PROMPT_COMMAND='history -a'
+
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# Avoid duplicate entries
+HISTCONTROL=erasedups:ignoreboth
 
 # Ignore some controlling instructions.
 # HISTIGNORE is a colon-delimited list of patterns which should be excluded.
 # The '&' is a special pattern which suppresses duplicate entries.
-export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls:vi:vim:tmux:cd:jobs'
-
-HISTSIZE=1000
-HISTFILESIZE=2000
+export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls:clear:vi:vim:tmux:cd:jobs'
 
 ########################################################
 ### Miscellaneous
 ########################################################
 
-# Allow switching direction in reverse-i-search using Ctrl+s
-stty -ixon
+# Prevent file overwrite on stdout redirection
+# Use `>|` to force redirection to an existing file
+set -o noclobber
+
+# Update window size after every command
+shopt -s checkwinsize
+
+# Automatically trim long paths in the prompt (requires Bash 4.x)
+PROMPT_DIRTRIM=2
 
 # Node BS
 export NODE_TLS_REJECT_UNAUTHORIZED=0
+
+# Prepend cd to directory names automatically
+shopt -s autocd 2> /dev/null
+# Correct spelling errors during tab-completion
+shopt -s dirspell 2> /dev/null
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell 2> /dev/null
 
 ########################################################
 ### Editor
@@ -86,6 +109,7 @@ alias h='history'
 alias o='open'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias bd=". bd -si"
 
 ########################################################
 ### Functions
@@ -115,6 +139,9 @@ setproxy
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# bd
+[ -f /etc/bash_completion.d/bd ] && source /etc/bash_completion.d/bd
+
 ########################################################
 ### Prompt and Title
 ########################################################
@@ -140,3 +167,4 @@ case "$TERM" in
     *)
         ;;
 esac
+source ~/.config/up/up.sh
