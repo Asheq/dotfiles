@@ -41,7 +41,7 @@ export VISUAL=$EDITOR
 ### Aliases
 ########################################################
 
-# List Directory
+# ls
 alias ls='ls -hFG'
 alias ll='ls -l'
 alias la='ls -a'
@@ -49,21 +49,26 @@ alias lla='ll -a'
 alias lA='ls -A'
 alias llA='ll -A'
 
-# Grep
+# grep
 alias grep='grep --color'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# Vim
-alias vim='vim -u ~/.vimrc' # use only ~/.vimrc as init file; do not load /etc/vimrc or any other
-alias vi='vim'
-
-# Directory navigation
+# cd
 alias ..='cd ..'
 alias ...='cd ..; cd ..'
 alias ....='cd ..; cd ..; cd ..'
 
-# Git
+# tmux
+alias t='tmux'
+alias tls='tmux ls'
+alias ta='tmux a -t'
+
+# vim
+alias vim='vim -u ~/.vimrc' # use only ~/.vimrc as init file; do not load /etc/vimrc or any other
+alias vi='vim'
+
+# git
 alias g='git'
 alias ga='git add'
 alias gc='git commit -m'
@@ -77,7 +82,6 @@ alias gp='git push'
 # Miscellaneous
 alias info='info --vi-keys'
 alias hr='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
-alias tm='tmux'
 alias h='history'
 alias o='open'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
