@@ -6,6 +6,8 @@
 !.config
 !.config/alacritty
 !.config/alacritty/**
+!.config/karabiner/
+!.config/karabiner/**
 !.config/up
 !.config/up/**
 !.fzf.bash
