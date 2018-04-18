@@ -1,10 +1,12 @@
 ###############################################################################
 ### Guard
 ###############################################################################
+echo 'Executing ~/.bashrc'
 
 # If not running bash interactively, do not run this script
 [[ "$-" != *i* ]] && return
-echo 'Executing ~/.bashrc'
+
+echo 'Running bash interactively so continuing execution of ~/.bashrc'
 
 ###############################################################################
 ### shopt

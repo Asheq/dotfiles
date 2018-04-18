@@ -12,9 +12,12 @@
 !.config/up/**
 !.fzf.bash
 !.fzf.zsh
+!.gitconfig
 !.gitignore
 !.ignore
 !.inputrc
+!.jsbeautifyrc
+!.profile
 !.tmux.conf
 !.vimrc
 !.zshrc
