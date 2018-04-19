@@ -52,7 +52,8 @@ alias fgrep='fgrep --color=auto'
 # ------------------------------------------------------
 # vim
 # ------------------------------------------------------
-alias vim='vim -u ~/.vimrc' # Use only ~/.vimrc as init file; do not load /etc/vimrc or any other
+# alias vim='vim -u ~/.vimrc' # Use only ~/.vimrc as init file; do not load /etc/vimrc or any other
+alias vim='nvim'
 alias vi='vim'
 alias v='vi'
 
@@ -337,7 +338,7 @@ export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls:clear:vi:vim:tmux:cd:jobs'
 # ------------------------------------------------------
 # Editor
 # ------------------------------------------------------
-export EDITOR=vim
+export EDITOR=nvim
 export VISUAL=$EDITOR
 
 # ------------------------------------------------------
