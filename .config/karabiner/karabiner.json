@@ -1168,30 +1168,6 @@
                     {
                         "type": "basic",
                         "from": {
-                            "key_code": "grave_accent_and_tilde",
-                            "modifiers": {
-                                "mandatory": [
-                                    "command"
-                                ],
-                                "optional": [
-                                    "any"
-                                ]
-                            }
-                        },
-                        "to": [{
-                            "key_code": "grave_accent_and_tilde",
-                            "modifiers": ["control"]
-                        }],
-                        "conditions": [{
-                            "type": "frontmost_application_if",
-                            "bundle_identifiers": [
-                                "^org\\.vim\\.MacVim$"
-                            ]
-                        }]
-                    },
-                    {
-                        "type": "basic",
-                        "from": {
                             "key_code": "comma",
                             "modifiers": {
                                 "mandatory": [
