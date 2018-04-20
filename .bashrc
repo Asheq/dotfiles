@@ -108,8 +108,8 @@ alias po='popd'
 # npm (copied from zsh)
 # ------------------------------------------------------
 alias npmg="npm i -g "
-alias npmS="npm i -S "
-alias npmD="npm i -D "
+alias npms="npm i -S "
+alias npmd="npm i -D "
 alias npmE='PATH="$(npm bin)":"$PATH"'
 alias npmO="npm outdated"
 alias npmV="npm -v"
@@ -123,7 +123,8 @@ alias npmP="npm publish"
 # ------------------------------------------------------
 # bower (copied from zsh)
 # ------------------------------------------------------
-alias bi="bower install"
+alias bis="bower i -S"
+alias bid="bower i -D"
 alias bl="bower list"
 alias bs="bower search"
 
