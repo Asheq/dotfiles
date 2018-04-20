@@ -14,7 +14,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Command to Control in MacVim, kitty, alacritty",
+                        "description": "Swap Command and Control in MacVim, kitty, alacritty (except for tab and tilde)",
                         "manipulators": [
                             {
                                 "conditions": [
