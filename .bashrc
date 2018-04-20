@@ -107,9 +107,9 @@ alias po='popd'
 # ------------------------------------------------------
 # npm (copied from zsh)
 # ------------------------------------------------------
-alias npmg="npm i -g "
-alias npms="npm i -S "
-alias npmd="npm i -D "
+alias npmig="npm i -g "
+alias npmis="npm i -S "
+alias npmid="npm i -D "
 alias npmE='PATH="$(npm bin)":"$PATH"'
 alias npmO="npm outdated"
 alias npmV="npm -v"
