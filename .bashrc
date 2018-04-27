@@ -42,6 +42,8 @@ set -o noclobber
 ### alias
 ###############################################################################
 
+alias perftest='~/Development/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
+
 # ------------------------------------------------------
 # grep
 # ------------------------------------------------------
@@ -289,13 +291,9 @@ function unsetproxy() {
 # ------------------------------------------------------
 # Update everything
 # ------------------------------------------------------
-function updateEverything() {
-    # softwareupdate --install --all
-    (brew update && brew upgrade && brew cleanup && brew doctor)
-    npm update -g
-    # (pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U)
-    # (gem update --system && gem update && gem cleanup)
-}
+# function updateEverything() {
+#     (brew update && brew upgrade && brew cleanup && brew doctor)
+# }
 
 ###############################################################################
 ### source
