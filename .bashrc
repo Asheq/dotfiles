@@ -299,7 +299,7 @@ function unsetproxy() {
 ### source
 ###############################################################################
 
-[ -f ~/.bash_git ] && source ~/.bash_git # adds __git_ps1 command
+# [ -f ~/.bash_git ] && source ~/.bash_git # adds __git_ps1 command
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -360,7 +360,8 @@ else
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;92m\]\u@\h\[\033[00m\] \[\033[01;33m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\n\$ '
+    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;92m\]\u@\h\[\033[00m\] \[\033[01;33m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\n\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;92m\]\u@\h\[\033[00m\] \[\033[01;33m\]\w\[\033[00m\]\n\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi

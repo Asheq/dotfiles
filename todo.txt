@@ -1,2 +1,0 @@
-Create a simple kitty config
-Try fish or zsh instead of bash (migrate bashrc)

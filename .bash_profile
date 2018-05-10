@@ -22,3 +22,4 @@ if [ -d "${HOME}/info" ]; then
 fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=~/.npm-global/bin:$PATH
