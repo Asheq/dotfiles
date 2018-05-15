@@ -339,6 +339,7 @@ export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls:clear:vi:vim:tmux:cd:jobs'
 # ------------------------------------------------------
 export EDITOR=nvim
 export VISUAL=$EDITOR
+export MANPAGER="nvim -c 'set ft=man' -"
 
 # ------------------------------------------------------
 # Misc.
