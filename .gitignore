@@ -8,6 +8,8 @@
 !.config/alacritty/**
 !.config/karabiner/
 !.config/karabiner/**
+!.config/nvim
+!.config/nvim/**
 !.config/up
 !.config/up/**
 !.gitconfig
