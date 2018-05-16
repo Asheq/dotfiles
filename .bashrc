@@ -291,9 +291,9 @@ function unsetproxy() {
 # ------------------------------------------------------
 # Update everything
 # ------------------------------------------------------
-# function updateEverything() {
-#     (brew update && brew upgrade && brew cleanup && brew doctor)
-# }
+function updateEverything() {
+    (brew update && brew upgrade && brew cleanup && brew doctor)
+}
 
 ###############################################################################
 ### source
