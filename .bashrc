@@ -3,7 +3,7 @@
 ###############################################################################
 echo 'Executing ~/.bashrc'
 
-# If not running bash interactively, do not run this script
+# If not running bash interactively, do not run this script.
 [[ "$-" != *i* ]] && return
 
 echo 'Running bash interactively so continuing execution of ~/.bashrc'
@@ -12,30 +12,30 @@ echo 'Running bash interactively so continuing execution of ~/.bashrc'
 ### shopt
 ###############################################################################
 
-# Append to the history file, don't overwrite it
+# Append to the history file, don't overwrite it.
 shopt -s histappend
 
-# Save multi-line commands as one command
+# Save multi-line commands as one command.
 shopt -s cmdhist
 
-# Update window size after every command
+# Update window size after every command.
 shopt -s checkwinsize
 
-# Prepend cd to directory names automatically
+# Prepend cd to directory names automatically.
 shopt -s autocd 2> /dev/null
 
-# Correct spelling errors during tab-completion
+# Correct spelling errors during tab-completion.
 shopt -s dirspell 2> /dev/null
 
-# Correct spelling errors in arguments supplied to cd
+# Correct spelling errors in arguments supplied to cd.
 shopt -s cdspell 2> /dev/null
 
 ###############################################################################
 ### set
 ###############################################################################
 
-# Prevent file overwrite on stdout redirection
-# Use `>|` to force redirection to an existing file
+# Prevent file overwrite on stdout redirection.
+# Use `>|` to force redirection to an existing file.
 set -o noclobber
 
 ###############################################################################
@@ -54,7 +54,6 @@ alias fgrep='fgrep --color=auto'
 # ------------------------------------------------------
 # vim
 # ------------------------------------------------------
-# alias vim='vim -u ~/.vimrc' # Use only ~/.vimrc as init file; do not load /etc/vimrc or any other
 alias vim='nvim'
 alias vi='vim'
 alias v='vi'
@@ -348,7 +347,7 @@ export MANPAGER="nvim -c 'set ft=man' -"
 # Automatically trim long paths in the prompt (requires Bash 4.x)
 PROMPT_DIRTRIM=2
 
-# Node thing TODO: Figure out how to do this the proper way
+# TODO: Figure out the proper way to handle Node errors
 export NODE_TLS_REJECT_UNAUTHORIZED=0
 
 # ------------------------------------------------------
@@ -367,15 +366,6 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt
-
-# If this is an xterm, set the title to user@host:dir
-case "$TERM" in
-    xterm*|rxvt*)
-        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-        ;;
-    *)
-        ;;
-esac
 
 ###############################################################################
 ### Call some functions immediately

@@ -1,15 +1,15 @@
 $include /etc/inputrc
 
-# Perform file completion in a case insensitive fashion
+# Perform file completion in a case insensitive fashion.
 set completion-ignore-case on
 
-# Treat hyphens and underscores as equivalent
+# Treat hyphens and underscores as equivalent.
 set completion-map-case on
 
-# Display matches for ambiguous patterns at first tab press
+# Display matches for ambiguous patterns at first tab press.
 set show-all-if-ambiguous on
 
-# Immediately add a trailing slash when autocompleting symlinks to directories
+# Immediately add a trailing slash when autocompleting symlinks to directories.
 set mark-symlinked-directories on
 
 # Enable incremental history search with up/down arrows (also Readline goodness)

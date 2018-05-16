@@ -10,8 +10,6 @@
 !.config/karabiner/**
 !.config/up
 !.config/up/**
-!.fzf.bash
-!.fzf.zsh
 !.gitconfig
 !.gitignore
 !.ignore
@@ -20,7 +18,6 @@
 !.profile
 !.tmux.conf
 !.vimrc
-!.zshrc
 !Library
 !Library/Preferences
 !Library/Preferences/kitty

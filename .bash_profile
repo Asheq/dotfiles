@@ -1,5 +1,5 @@
+# TODO: Figure out why some entires in PATH are duplicated inside a tmux session.
 echo 'Executing ~/.bash_profile'
-# TODO: Figure out why some entires in path are duplicated inside a tmux session
 
 # source .bashrc if it exists
 if [ -f "${HOME}/.bashrc" ] ; then
