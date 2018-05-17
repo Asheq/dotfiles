@@ -12,6 +12,7 @@
 !.config/nvim/**
 !.config/up
 !.config/up/**
+!.fzf.bash
 !.gitconfig
 !.gitignore
 !.ignore
