@@ -247,10 +247,7 @@
                     }
                 },
                 "to": [{
-                    "key_code": "i",
-                    "modifiers": [
-                        "control"
-                    ]
+                    "key_code": "f9"
                 }],
                 "type": "basic"
             },

@@ -19,19 +19,19 @@ echo 'Running bash interactively so continuing execution of ~/.bashrc'
 ### shopt
 ###############################################################################
 
-# Append to the history file, don't overwrite it.
+# Append to the history file, don't overwrite it. TODO: Necessary?
 shopt -s histappend
 
-# Save multi-line commands as one command.
+# Save multi-line commands as one command. TODO: Necessary?
 shopt -s cmdhist
 
-# Update window size after every command.
+# Update window size after every command. TODO: Necessary?
 shopt -s checkwinsize
 
-# Prepend cd to directory names automatically.
+# Prepend cd to directory names automatically. TODO: Does this work? Necessary?
 shopt -s autocd 2> /dev/null
 
-# Correct spelling errors during tab-completion.
+# Correct spelling errors during tab-completion. TODO: Does this work? Necessary?
 shopt -s dirspell 2> /dev/null
 
 # Correct spelling errors in arguments supplied to cd.
@@ -49,17 +49,17 @@ set -o noclobber
 ### alias
 ###############################################################################
 
+# ------------------------------------------------------
+# Miscellaneous
+# ------------------------------------------------------
+alias hr='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
+alias info='info --vi-keys'
+alias o='open'
 alias perftest='~/Development/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
+alias r=ranger
 
 # ------------------------------------------------------
-# grep
-# ------------------------------------------------------
-alias grep='grep --color'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-
-# ------------------------------------------------------
-# vim
+# (Neo)vim
 # ------------------------------------------------------
 alias vim='nvim'
 alias vi='vim'
@@ -83,68 +83,30 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
 # ------------------------------------------------------
-# Show and hide hidden files
-# ------------------------------------------------------
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
-# ------------------------------------------------------
-# Misc.
-# ------------------------------------------------------
-alias info='info --vi-keys'
-alias hr='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
-alias h='history'
-alias o='open'
-
-# ------------------------------------------------------
-# super user (copied from zsh)
-# ------------------------------------------------------
-alias _='sudo'
-alias please='sudo'
-
-# ------------------------------------------------------
-# diretories (copied from zsh)
+# directories
 # ------------------------------------------------------
 alias md='mkdir -p'
 alias rd=rmdir
-alias d='dirs -v | head -10'
-
-alias pu='pushd'
-alias po='popd'
 
 # ------------------------------------------------------
-# npm (copied from zsh)
+# npm
 # ------------------------------------------------------
-alias npmig="npm i -g "
 alias npmis="npm i -S "
 alias npmid="npm i -D "
-alias npmE='PATH="$(npm bin)":"$PATH"'
-alias npmO="npm outdated"
-alias npmV="npm -v"
-alias npmL="npm list"
-alias npmL0="npm ls --depth=0"
-alias npmst="npm start"
-alias npmt="npm test"
-alias npmR="npm run"
-alias npmP="npm publish"
+alias npmig="npm i -g "
 
 # ------------------------------------------------------
-# bower (copied from zsh)
+# bower
 # ------------------------------------------------------
 alias bis="bower i -S"
 alias bid="bower i -D"
-alias bl="bower list"
-alias bs="bower search"
 
 # ------------------------------------------------------
-# tmux (copied from zsh)
+# tmux
 # ------------------------------------------------------
 alias ta='tmux attach -t'
-alias tad='tmux attach -d -t'
 alias ts='tmux new-session -s'
 alias tl='tmux list-sessions'
-alias tksv='tmux kill-server'
-alias tkss='tmux kill-session -t'
 
 # ------------------------------------------------------
 # git (copied from zsh)
@@ -305,8 +267,6 @@ function updateEverything() {
 ### source
 ###############################################################################
 
-# [ -f ~/.bash_git ] && source ~/.bash_git # adds __git_ps1 command
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 [ -f ~/.config/up/up.sh ] && source ~/.config/up/up.sh
@@ -326,17 +286,17 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # Bash history
 # ------------------------------------------------------
 
-# Record each line as it gets issued
+# Record each line as it gets issued.
 PROMPT_COMMAND='history -a'
 
-# Expand history size
+# Expand history size.
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# Avoid duplicate entries
+# Avoid duplicate entries.
 HISTCONTROL=erasedups:ignoreboth
 
-# Dont' record some commdns
+# Don't record some commands.
 # The '&' is a special pattern which suppresses duplicate entries.
 export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls:clear:vi:vim:tmux:cd:jobs'
 
@@ -351,10 +311,10 @@ export MANPAGER="nvim -c 'set ft=man' -"
 # Misc.
 # ------------------------------------------------------
 
-# Automatically trim long paths in the prompt (requires Bash 4.x)
+# Automatically trim long paths in the prompt (requires Bash 4.x).
 PROMPT_DIRTRIM=2
 
-# TODO: Figure out the proper way to handle Node errors
+# TODO: Figure out the proper way to handle Node errors.
 export NODE_TLS_REJECT_UNAUTHORIZED=0
 
 # ------------------------------------------------------
@@ -367,7 +327,6 @@ else
 fi
 
 if [ "$color_prompt" = yes ]; then
-    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;92m\]\u@\h\[\033[00m\] \[\033[01;33m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\n\$ '
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;92m\]\u@\h\[\033[00m\] \[\033[01;33m\]\w\[\033[00m\]\n\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
