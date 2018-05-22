@@ -19,23 +19,28 @@ echo 'Running bash interactively so continuing execution of ~/.bashrc'
 ### shopt
 ###############################################################################
 
-# Append to the history file, don't overwrite it. TODO: Necessary?
+# Append to the history file, don't overwrite it.
 shopt -s histappend
 
-# Save multi-line commands as one command. TODO: Necessary?
+# Save multi-line commands as one command.
 shopt -s cmdhist
 
-# Update window size after every command. TODO: Necessary?
+# Update window size after every command.
 shopt -s checkwinsize
-
-# Correct spelling errors during tab-completion. TODO: Does this work? Necessary?
-shopt -s dirspell 2> /dev/null
 
 # Prepend cd to directory names automatically.
 shopt -s autocd 2> /dev/null
 
 # Correct spelling errors in arguments supplied to cd.
 shopt -s cdspell 2> /dev/null
+
+###############################################################################
+### bind
+###############################################################################
+
+# Enable history expansion with space.
+# E.g. typing !!<space> will replace the !! with your last command.
+bind Space:magic-space
 
 ###############################################################################
 ### set
@@ -345,8 +350,7 @@ HISTFILESIZE=2000
 HISTCONTROL=erasedups:ignoreboth
 
 # Don't record some commands.
-# The '&' is a special pattern which suppresses duplicate entries.
-export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls:clear:vi:vim:tmux:cd:jobs'
+export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:clear:cd:jobs:tmux:l:la:ls:v:vi:vim:nvim'
 
 # ------------------------------------------------------
 # Editor
