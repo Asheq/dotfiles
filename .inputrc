@@ -10,7 +10,7 @@ $include /etc/inputrc
 # Perform file completion in a case insensitive fashion.
 set completion-ignore-case on
 
-# Treat hyphens and underscores as equivalent. TODO: Doesn't work.
+# Treat hyphens and underscores as equivalent.
 set completion-map-case on
 
 # Display matches for ambiguous patterns at first tab press.
