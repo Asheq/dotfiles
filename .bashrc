@@ -28,11 +28,11 @@ shopt -s cmdhist
 # Update window size after every command. TODO: Necessary?
 shopt -s checkwinsize
 
-# Prepend cd to directory names automatically. TODO: Does this work? Necessary?
-shopt -s autocd 2> /dev/null
-
 # Correct spelling errors during tab-completion. TODO: Does this work? Necessary?
 shopt -s dirspell 2> /dev/null
+
+# Prepend cd to directory names automatically.
+shopt -s autocd 2> /dev/null
 
 # Correct spelling errors in arguments supplied to cd.
 shopt -s cdspell 2> /dev/null
@@ -266,7 +266,6 @@ function updateEverything() {
 # ------------------------------------------------------
 # Git
 # ------------------------------------------------------
-# Get current branch in git repo.
 function parse_git_branch() {
         BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
         if [ ! "${BRANCH}" == "" ]
@@ -278,7 +277,6 @@ function parse_git_branch() {
         fi
 }
 
-# Get current status of git repo.
 function parse_git_dirty {
         status=`git status 2>&1 | tee`
         dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
