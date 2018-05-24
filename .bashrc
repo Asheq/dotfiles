@@ -380,7 +380,7 @@ else
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\[\033[01;92m\]\u@\h\[\033[00m\] \[\033[01;33m\]\w\[\033[00m\] \`parse_git_branch\`\n $ "
+    PS1="\[\033[01;92m\]\u@\h\[\033[00m\] \[\033[01;33m\]\w\[\033[00m\] \`parse_git_branch\`\n\j $ "
 else
     PS1="\u@\h \w\ \`parse_git_branch\`\n $ "
 fi
