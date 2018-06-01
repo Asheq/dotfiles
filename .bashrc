@@ -77,6 +77,7 @@ alias ls='ls -hFG'
 alias l='ls'
 alias la='ls -A'
 alias ll='ls -la'
+alias lg='ll | ag'
 
 # ------------------------------------------------------
 # cd
