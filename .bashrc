@@ -77,7 +77,7 @@ alias ls='ls -hFG'
 alias l='ls'
 alias la='ls -A'
 alias ll='ls -la'
-alias lg='ll | ag'
+alias lg='la | ag'
 
 # ------------------------------------------------------
 # cd
@@ -381,9 +381,9 @@ else
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\[\033[01;92m\]\u@\h\[\033[00m\] \[\033[01;33m\]\w\[\033[00m\] \`parse_git_branch\`\n\j $ "
+    PS1="\[\033[01;92m\]\u@\h\[\033[00m\] \[\033[01;33m\]\w\[\033[00m\] \`parse_git_branch\` [\j]\n$ "
 else
-    PS1="\u@\h \w\ \`parse_git_branch\`\n $ "
+    PS1="\u@\h \w\\n$ "
 fi
 unset color_prompt
 
