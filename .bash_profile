@@ -1,5 +1,6 @@
-# TODO: Figure out why some entires in PATH are duplicated inside a tmux session.
 echo 'Executing ~/.bash_profile'
+
+source "${HOME}/.profile"
 
 # Source .bashrc.
 if [ -f "${HOME}/.bashrc" ] ; then
@@ -20,6 +21,3 @@ fi
 if [ -d "${HOME}/info" ]; then
   INFOPATH="${HOME}/info:${INFOPATH}"
 fi
-
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH=~/.npm-global/bin:$PATH
