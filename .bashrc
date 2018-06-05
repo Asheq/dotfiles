@@ -57,11 +57,12 @@ set -o noclobber
 # ------------------------------------------------------
 # Miscellaneous
 # ------------------------------------------------------
+alias c=clear
+alias o=open
+alias r=ranger
 alias hr='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
 alias info='info --vi-keys'
-alias o='open'
 alias perftest='~/Development/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
-alias r=ranger
 
 # ------------------------------------------------------
 # (Neo)vim
