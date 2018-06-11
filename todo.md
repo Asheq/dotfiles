@@ -1,2 +1,2 @@
-- Have a shell prompt as useful as upterm terminal.
+- Create an upterm-like shell prompt.
 - Post Karabiner Elements config online on medium.
