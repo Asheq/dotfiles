@@ -111,6 +111,13 @@ alias bid="bower i -D"
 # ------------------------------------------------------
 # tmux
 # ------------------------------------------------------
+alias a='abduco'
+alias ac='abduco -c'
+alias aa='abduco -a'
+
+# ------------------------------------------------------
+# tmux
+# ------------------------------------------------------
 alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
 alias tl='tmux list-sessions'

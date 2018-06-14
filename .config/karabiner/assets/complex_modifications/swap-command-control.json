@@ -1,13 +1,14 @@
 {
     "title": "Swap Command to Control",
     "rules": [{
-        "description": "Swap Command and Control in MacVim, kitty, alacritty (except for tab and tilde)",
+        "description": "Swap Command and Control (except for tab and tilde)",
         "manipulators": [{
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -34,8 +35,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -62,8 +64,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -90,8 +93,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -118,8 +122,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -146,8 +151,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -174,8 +180,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -202,8 +209,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -230,8 +238,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -255,8 +264,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -283,8 +293,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -311,8 +322,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -339,8 +351,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -367,8 +380,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -395,8 +409,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -423,8 +438,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -451,8 +467,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -479,8 +496,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -507,8 +525,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -535,8 +554,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -563,8 +583,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -591,8 +612,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -619,8 +641,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -647,8 +670,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -675,8 +699,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -703,8 +728,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -731,8 +757,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -759,8 +786,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -787,8 +815,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -815,8 +844,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -843,8 +873,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -871,8 +902,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -899,8 +931,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -927,8 +960,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -955,8 +989,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -983,8 +1018,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1011,8 +1047,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1039,8 +1076,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1067,8 +1105,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1095,8 +1134,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1123,8 +1163,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1151,8 +1192,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1179,8 +1221,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1207,8 +1250,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1235,8 +1279,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1263,8 +1308,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1291,8 +1337,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1319,8 +1366,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1347,8 +1395,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1375,8 +1424,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1403,8 +1453,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1431,8 +1482,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1459,8 +1511,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1487,8 +1540,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1515,8 +1569,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1543,8 +1598,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1571,8 +1627,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1599,8 +1656,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1627,8 +1685,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1655,8 +1714,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1683,8 +1743,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1710,8 +1771,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1737,8 +1799,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1764,8 +1827,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1791,8 +1855,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1818,8 +1883,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1845,8 +1911,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1872,8 +1939,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1899,8 +1967,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1926,8 +1995,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1953,8 +2023,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1980,8 +2051,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2007,8 +2079,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2034,8 +2107,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2061,8 +2135,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2088,8 +2163,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2115,8 +2191,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2142,8 +2219,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2169,8 +2247,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2196,8 +2275,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2223,8 +2303,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2250,8 +2331,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2277,8 +2359,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2304,8 +2387,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2331,8 +2415,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2358,8 +2443,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2385,8 +2471,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2412,8 +2499,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2439,8 +2527,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2466,8 +2555,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2493,8 +2583,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2520,8 +2611,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2547,8 +2639,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2574,8 +2667,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2601,8 +2695,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2628,8 +2723,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2655,8 +2751,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2682,8 +2779,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2709,8 +2807,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2736,8 +2835,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2763,8 +2863,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2790,8 +2891,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2817,8 +2919,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2844,8 +2947,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2871,8 +2975,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2898,8 +3003,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2925,8 +3031,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2952,8 +3059,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2979,8 +3087,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3006,8 +3115,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3033,8 +3143,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3060,8 +3171,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3087,8 +3199,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3114,8 +3227,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3141,8 +3255,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3168,8 +3283,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3195,8 +3311,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3222,8 +3339,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3249,8 +3367,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3276,8 +3395,9 @@
                 "conditions": [{
                     "bundle_identifiers": [
                         "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty",
-                        "^io\\.alacritty$"
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^io\\.alacritty$",
+                        "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_if"
                 }],
