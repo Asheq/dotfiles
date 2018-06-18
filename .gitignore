@@ -2,6 +2,8 @@
 !.agignore
 !.bash_profile
 !.bashrc
+!.bash_aliases
+!.bash_git_functions
 !.config
 !.config/alacritty
 !.config/alacritty/**
