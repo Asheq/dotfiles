@@ -1,2 +1,3 @@
 - Create an upterm-like shell prompt.
 - Post Karabiner Elements config online on medium.
+- Delete alacritty config if you decide not to use it

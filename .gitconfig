@@ -20,7 +20,3 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
-; [core]
-; 	; these pagers are slow
-	; pager = diff-so-fancy | less --tabs=4 -RFX
-	; pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less --tabs=4 -RFX
