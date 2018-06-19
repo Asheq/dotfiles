@@ -31,7 +31,7 @@ shopt -s nocaseglob;
 # Append to the history file, don't overwrite it.
 shopt -s histappend
 
-STIGNORE# Save multi-line commands as one command.
+# Save multi-line commands as one command.
 shopt -s cmdhist
 
 # Prepend cd to directory names automatically.
