@@ -5,8 +5,6 @@
 !.bash_aliases
 !.bash_git_functions
 !.config
-!.config/alacritty
-!.config/alacritty/**
 !.config/karabiner/
 !.config/karabiner/**
 !.config/nvim
@@ -16,7 +14,6 @@
 !.fzf.bash
 !.gitconfig
 !.gitignore
-!.ignore
 !.inputrc
 !.jsbeautifyrc
 !.profile
