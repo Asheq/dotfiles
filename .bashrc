@@ -8,12 +8,11 @@
 ###############################################################################
 ### Guard
 ###############################################################################
-echo 'Executing ~/.bashrc'
 
 # Only continue running this script if bash is being run interactively
 [[ "$-" != *i* ]] && return
 
-echo 'Running bash interactively so continuing execution of ~/.bashrc'
+echo 'Executing ~/.bashrc'
 
 ###############################################################################
 ### shopt
