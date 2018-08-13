@@ -1,6 +1,9 @@
 echo 'Executing ~/.bash_profile'
 
-source "${HOME}/.profile"
+# Source .profile.
+if [ -f "${HOME}/.profile" ] ; then
+  source "${HOME}/.profile"
+fi
 
 # Source .bashrc.
 if [ -f "${HOME}/.bashrc" ] ; then
