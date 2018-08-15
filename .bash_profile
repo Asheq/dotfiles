@@ -6,29 +6,23 @@
 #                      |_____|_|
 # The personal initialization file, executed for login shells.
 
+# When bash is started as a login shell, it looks for (in order):
+#     ~/.bash_profile
+#     ~/.bash_login
+#     ~/.profile
+# It executes _only_ the first one. Also, because it is started as a login shell, bash does not read
+# `~/.bashrc` (even if it's interactive).
+
+# This file ensures both ~/.profile and ~/.bashrc are executed.
+
 echo 'Executing ~/.bash_profile'
 
-# Source .profile.
+# Source ~/.profile.
 if [ -f "${HOME}/.profile" ] ; then
   source "${HOME}/.profile"
 fi
 
-# Source .bashrc.
+# Source ~/.bashrc.
 if [ -f "${HOME}/.bashrc" ] ; then
   source "${HOME}/.bashrc"
-fi
-
-# Set PATH so it includes user's private bin.
-if [ -d "${HOME}/bin" ] ; then
-  PATH="${HOME}/bin:${PATH}"
-fi
-
-# Set MANPATH so it includes user's private man.
-if [ -d "${HOME}/man" ]; then
-  MANPATH="${HOME}/man:${MANPATH}"
-fi
-
-# Set INFOPATH so it includes user's private info.
-if [ -d "${HOME}/info" ]; then
-  INFOPATH="${HOME}/info:${INFOPATH}"
 fi

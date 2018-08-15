@@ -11,6 +11,8 @@
 
 echo 'Executing ~/.bashrc'
 
+# TODO: Get comments from 'man bash'
+
 ###############################################################################
 ### shopt
 ###############################################################################
@@ -87,10 +89,20 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 
 # Avoid duplicate entries.
-HISTCONTROL=erasedups:ignoreboth
+#                            ┌─ Don't save commands beginning with a space.
+#                            │
+#            ┌─ ignoredups + ignorespace
+#            │
+HISTCONTROL="ignoreboth:erasedups"
+#                       │
+#                       └─ Erase duplicate lines in the history.
 
 # Don't record some commands.
-HISTIGNORE=$'[ \t]*:&:[fb]g:exit:clear:cd:jobs:tmux:l:la:ls:v:vi:vim:nvim'
+#             ┌─ Ignore commands containing only 2 characters.
+#             │
+HISTIGNORE="?:??:clear:history:exit:jobs:tmux:vim:nvim"
+#           │
+#           └─ Ignore commands containing only 1 character.
 
 # Automatically trim long paths in the prompt.
 PROMPT_DIRTRIM=2
@@ -101,10 +113,32 @@ PROMPT_DIRTRIM=2
 HISTTIMEFORMAT='%F %T '
 
 # ------------------------------------------------------
+# PS1
+# ------------------------------------------------------
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    color_prompt=yes
+else
+    color_prompt=
+fi
+
+if [ "$color_prompt" = yes ]; then
+    PS1="\[\033[01;92m\]\u@\h\[\033[00m\] \[\033[01;33m\]\w\[\033[00m\] \`parse_git_branch\` [\j]\n$ "
+else
+    PS1="\u@\h \w\\n$ "
+fi
+unset color_prompt
+
+# ------------------------------------------------------
 # Cdable vars
 # ------------------------------------------------------
 gh="$HOME/Development/github.com"
 ghb="$HOME/Development/github.build.ge.com"
+
+
+###############################################################################
+### export =
+###############################################################################
+# TODO: Should these go here or in .profile or somewhere else?
 
 # ------------------------------------------------------
 # fzf
@@ -124,22 +158,6 @@ export MANPAGER="nvim -c 'set ft=man' -"
 # ------------------------------------------------------
 # TODO: Figure out the proper way to handle Node errors.
 export NODE_TLS_REJECT_UNAUTHORIZED=0
-
-# ------------------------------------------------------
-# PS1
-# ------------------------------------------------------
-if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    color_prompt=yes
-else
-    color_prompt=
-fi
-
-if [ "$color_prompt" = yes ]; then
-    PS1="\[\033[01;92m\]\u@\h\[\033[00m\] \[\033[01;33m\]\w\[\033[00m\] \`parse_git_branch\` [\j]\n$ "
-else
-    PS1="\u@\h \w\\n$ "
-fi
-unset color_prompt
 
 ###############################################################################
 ### function

@@ -1,4 +1,20 @@
 echo 'Executing ~/.profile'
 
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH=~/.npm-global/bin:$PATH
+# Set PATH so it includes user's private bin.
+if [ -d "${HOME}/bin" ] ; then
+  PATH="${HOME}/bin:${PATH}"
+fi
+
+# Set MANPATH so it includes user's private man.
+if [ -d "${HOME}/man" ]; then
+  MANPATH="${HOME}/man:${MANPATH}"
+fi
+
+# Set INFOPATH so it includes user's private info.
+if [ -d "${HOME}/info" ]; then
+  INFOPATH="${HOME}/info:${INFOPATH}"
+fi
+
+# Set PATH to include other things
+PATH="$HOME/.cargo/bin:$PATH"
+PATH=~/.npm-global/bin:$PATH
