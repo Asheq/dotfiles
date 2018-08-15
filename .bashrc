@@ -4,10 +4,7 @@
 # | |_) | (_| \__ \ | | | | | (__
 # |_.__/ \__,_|___/_| |_|_|  \___|
 #
-
-###############################################################################
-### Guard
-###############################################################################
+# The personal per-interactive-shell startup file.
 
 # Only continue running this script if bash is being run interactively
 [[ "$-" != *i* ]] && return
