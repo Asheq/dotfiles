@@ -162,18 +162,22 @@ export NODE_TLS_REJECT_UNAUTHORIZED=0
 ###############################################################################
 ### function
 ###############################################################################
+# TODO: Refactor
 
 # ------------------------------------------------------
 # Proxies
 # ------------------------------------------------------
 function setproxy() {
     export {http,https,ftp,all}_proxy='http://proxy-src.research.ge.com:8080'
-    export no_proxy='localhost,127.0.0.1,127.0.0.0/8,127.0.*.*,local.home,192.168.*.*,github.build.ge.com,github.sw.ge.com,openge.ge.com,devcloud.swcoe.ge.com'
+    export {HTTP,HTTPS,FTP,ALL}_PROXY=$http_proxy
+
+    export {no_proxy,NO_PROXY}='localhost,127.0.0.1,127.0.0.0/8,127.0.*.*,local.home,192.168.*.*,github.build.ge.com,github.sw.ge.com,openge.com,openge.ge.com,devcloud.swcoe.ge.com,*.ice.ge.com,ice.ge.com,predix.io'
 }
 
 function unsetproxy() {
     unset {http,https,ftp,all}_proxy
-    unset no_proxy
+    unset {HTTP,HTTPS,FTP,ALL}_PROXY
+    unset {no_proxy, NO_PROXY}
 }
 
 # ------------------------------------------------------
@@ -186,4 +190,4 @@ function updateEverything() {
 ###############################################################################
 ### Call some functions immediately
 ###############################################################################
-setproxy
+# setproxy
