@@ -8,7 +8,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -37,7 +38,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -66,7 +68,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -95,7 +98,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -124,7 +128,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -153,7 +158,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -182,7 +188,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -211,7 +218,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -240,7 +248,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -266,7 +275,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -295,7 +305,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -324,7 +335,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -353,7 +365,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -382,7 +395,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -411,7 +425,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -440,7 +455,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -469,7 +485,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -498,7 +515,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -527,7 +545,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -556,7 +575,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -585,7 +605,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -614,7 +635,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -643,7 +665,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -672,7 +695,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -701,7 +725,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -730,7 +755,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -759,7 +785,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -788,7 +815,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -817,7 +845,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -846,7 +875,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -875,7 +905,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -904,7 +935,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -933,7 +965,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -962,7 +995,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -991,7 +1025,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1020,7 +1055,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1049,7 +1085,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1078,7 +1115,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1107,7 +1145,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1136,7 +1175,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1165,7 +1205,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1194,7 +1235,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1223,7 +1265,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1252,7 +1295,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1281,7 +1325,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1310,7 +1355,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1339,7 +1385,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1368,7 +1415,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1397,7 +1445,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1426,7 +1475,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1455,7 +1505,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1484,7 +1535,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1513,7 +1565,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1542,7 +1595,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1571,7 +1625,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1600,7 +1655,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1629,7 +1685,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1658,7 +1715,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1687,7 +1745,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1716,7 +1775,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1745,7 +1805,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1773,7 +1834,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1801,7 +1863,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1829,7 +1892,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1857,7 +1921,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1885,7 +1950,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1913,7 +1979,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1941,7 +2008,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1969,7 +2037,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -1997,7 +2066,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2025,7 +2095,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2053,7 +2124,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2081,7 +2153,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2109,7 +2182,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2137,7 +2211,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2165,7 +2240,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2193,7 +2269,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2221,7 +2298,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2249,7 +2327,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2277,7 +2356,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2305,7 +2385,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2333,7 +2414,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2361,7 +2443,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2389,7 +2472,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2417,7 +2501,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2445,7 +2530,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2473,7 +2559,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2501,7 +2588,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2529,7 +2617,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2557,7 +2646,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2585,7 +2675,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2613,7 +2704,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2641,7 +2733,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2669,7 +2762,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2697,7 +2791,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2725,7 +2820,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2753,7 +2849,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2781,7 +2878,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2809,7 +2907,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2837,7 +2936,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2865,7 +2965,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2893,7 +2994,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2921,7 +3023,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2949,7 +3052,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -2977,7 +3081,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3005,7 +3110,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3033,7 +3139,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3061,7 +3168,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3089,7 +3197,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3117,7 +3226,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3145,7 +3255,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3173,7 +3284,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3201,7 +3313,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3229,7 +3342,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3257,7 +3371,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3285,7 +3400,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3313,7 +3429,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3341,7 +3458,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3369,7 +3487,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],
@@ -3397,7 +3516,8 @@
                         "^org\\.vim\\.MacVim$",
                         "^net\\.kovidgoyal\\.kitty$",
                         "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
+                        "^com\\.qvacua\\.VimR$",
+                        "^com\\.apple\\.Terminal$"
                     ],
                     "type": "frontmost_application_if"
                 }],

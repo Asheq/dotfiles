@@ -105,7 +105,7 @@ HISTIGNORE="?:??:clear:history:exit:jobs:tmux:vim:nvim"
 #           └─ Ignore commands containing only 1 character.
 
 # Automatically trim long paths in the prompt.
-PROMPT_DIRTRIM=2
+# PROMPT_DIRTRIM=2
 
 # Use standard ISO 8601 timestamp
 # %F equivalent to %Y-%m-%d
@@ -167,11 +167,12 @@ export NODE_TLS_REJECT_UNAUTHORIZED=0
 # ------------------------------------------------------
 function setproxy() {
     proxy_url='http://proxy-src.research.ge.com:8080'
-    no_proxy_urls='localhost,127.0.0.1,127.0.0.0/8,127.0.*.*,local.home,192.168.*.*,github.build.ge.com,github.sw.ge.com,openge.com,openge.ge.com,devcloud.swcoe.ge.com,*.ice.ge.com,ice.ge.com,predix.io'
+    no_proxy_urls='127.0.0.1,10.*,3.*,localhost,github.build.ge.com,openge.ge.com,ice.ge.com,g2ua6181mjne.logon.ds.ge.com'
 
     export {http,https,ftp,all}_proxy=$proxy_url
     export {HTTP,HTTPS,FTP,ALL}_PROXY=$proxy_url
-    export {no_proxy,NO_PROXY}=$no_proxy_urls
+    export no_proxy=$no_proxy_urls
+    export NO_PROXY=$no_proxy_urls
 }
 
 function unsetproxy() {
