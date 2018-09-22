@@ -62,18 +62,6 @@ bind Space:magic-space
 set -o noclobber
 
 ###############################################################################
-### source
-###############################################################################
-
-[ -f ~/.bash_aliases ] && source ~/.bash_aliases
-
-[ -f ~/.bash_git_functions ] && source ~/.bash_git_functions
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-[ -f ~/.config/up/up.sh ] && source ~/.config/up/up.sh
-
-###############################################################################
 ### =
 ###############################################################################
 
@@ -158,6 +146,7 @@ export MANPAGER="nvim -c 'set ft=man' -"
 # ------------------------------------------------------
 # TODO: Figure out the proper way to handle Node errors.
 export NODE_TLS_REJECT_UNAUTHORIZED=0
+export NVM_DIR="$HOME/.nvm"
 
 ###############################################################################
 ### function
@@ -180,6 +169,21 @@ function unsetproxy() {
     unset {HTTP,HTTPS,FTP,ALL}_PROXY
     unset {no_proxy,NO_PROXY}
 }
+
+###############################################################################
+### source
+###############################################################################
+
+[ -f ~/.bash_aliases ] && source ~/.bash_aliases
+
+[ -f ~/.bash_git_functions ] && source ~/.bash_git_functions
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+[ -f ~/.config/up/up.sh ] && source ~/.config/up/up.sh
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # ------------------------------------------------------
 # Update everything

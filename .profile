@@ -16,5 +16,5 @@ if [ -d "${HOME}/info" ]; then
 fi
 
 # Set PATH to include other things
-PATH="$HOME/.cargo/bin:$PATH"
-PATH=~/.npm-global/bin:$PATH
+# TODO: Why does it show up twice in tmux session?
+PATH="${HOME}/.cargo/bin:${PATH}"
