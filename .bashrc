@@ -173,7 +173,6 @@ function unsetproxy() {
 ###############################################################################
 ### source
 ###############################################################################
-
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
 
 [ -f ~/.bash_git_functions ] && source ~/.bash_git_functions
@@ -182,8 +181,8 @@ function unsetproxy() {
 
 [ -f ~/.config/up/up.sh ] && source ~/.config/up/up.sh
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # ------------------------------------------------------
 # Update everything
