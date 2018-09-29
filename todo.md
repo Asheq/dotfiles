@@ -1,2 +1,2 @@
 - Create an upterm-like shell prompt.
-- Post Karabiner Elements config online on medium.
+- Customize/simplify tmux bar.
