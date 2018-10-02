@@ -1,2 +1,2 @@
 - Create an upterm-like shell prompt.
-- Change session name
+- Modify bash prompt flags.
