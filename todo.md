@@ -1,2 +1,2 @@
 - Create an upterm-like shell prompt.
-- Customize/simplify tmux bar.
+- Change session name
