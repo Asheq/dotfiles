@@ -1,2 +1,1 @@
 - Create an upterm-like shell prompt.
-- Modify bash prompt flags.
