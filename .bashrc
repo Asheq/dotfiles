@@ -9,7 +9,7 @@
 # Only continue running this script if bash is being run interactively
 [[ "$-" != *i* ]] && return
 
-echo 'Executing ~/.bashrc'
+# echo 'Executing ~/.bashrc'
 
 # TODO: Get comments from 'man bash'
 

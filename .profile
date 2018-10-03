@@ -1,4 +1,4 @@
-echo 'Executing ~/.profile'
+# echo 'Executing ~/.profile'
 
 # Set PATH so it includes user's private bin.
 if [ -d "${HOME}/bin" ] ; then
