@@ -12,6 +12,7 @@
 # echo 'Executing ~/.bashrc'
 
 # TODO: Get comments from 'man bash'
+# TODO: Split up into several files
 
 ###############################################################################
 ### shopt
@@ -173,6 +174,13 @@ function unsetproxy() {
     unset {no_proxy,NO_PROXY}
 }
 
+# ------------------------------------------------------
+# Update everything
+# ------------------------------------------------------
+function updateEverything() {
+    (brew update && brew upgrade && brew cleanup && brew doctor)
+}
+
 ###############################################################################
 ### source
 ###############################################################################
@@ -186,13 +194,6 @@ function unsetproxy() {
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# ------------------------------------------------------
-# Update everything
-# ------------------------------------------------------
-function updateEverything() {
-    (brew update && brew upgrade && brew cleanup && brew doctor)
-}
 
 ###############################################################################
 ### Call some functions immediately

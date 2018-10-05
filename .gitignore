@@ -7,8 +7,6 @@
 !.config
 !.config/karabiner/
 !.config/karabiner/**
-!.config/nvim
-!.config/nvim/**
 !.config/up
 !.config/up/**
 !.fzf.bash
@@ -18,7 +16,6 @@
 !.jsbeautifyrc
 !.profile
 !.tmux.conf
-!todo.md
 !Library
 !Library/Preferences
 !Library/Preferences/kitty
