@@ -1,1 +1,0 @@
-- Create an upterm-like shell prompt.
