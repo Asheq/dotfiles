@@ -111,12 +111,12 @@ else
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\033[00;36m \h "
+    PS1="\033[00;36m┌╴ \h "
     PS1+=" \u\033[00m "
     PS1+="\033[00;33m  \w\033[00m "
     PS1+="\033[00;36m\`parse_git_branch\`"
     PS1+='`[ \j -gt 0 ] && echo [ \j]`\033[00m'
-    PS1+="\n\033[00;36m  \033[00m"
+    PS1+="\n\033[00;36m└╴\033[00m"
 else
     PS1="\u@\h \w\\n$ "
 fi
