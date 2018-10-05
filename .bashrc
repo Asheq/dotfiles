@@ -94,7 +94,7 @@ HISTIGNORE="?:??:clear:history:exit:jobs:tmux:vim:nvim"
 #           └─ Ignore commands containing only 1 character.
 
 # Automatically trim long paths in the prompt.
-# PROMPT_DIRTRIM=2
+PROMPT_DIRTRIM=2
 
 # Use standard ISO 8601 timestamp
 # %F equivalent to %Y-%m-%d
@@ -111,12 +111,12 @@ else
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\[\033[00;36m\]┌╴ \h "
+    PS1="┌╴\[\033[00;36m\] \h "
     PS1+=" \u\[\033[00m\] "
     PS1+="\[\033[00;33m\]  \w\[\033[00m\] "
     PS1+="\[\033[00;36m\]\`parse_git_branch\`"
-    PS1+='`[ \j -gt 0 ] && echo [ \j]`'
-    PS1+='\n└╴$ \[\033[00m\]'
+    PS1+='`[ \j -gt 0 ] && echo [ \j]`\[\033[00m\]'
+    PS1+='\n└╴$ '
 else
     PS1="\u@\h \w\\n$ "
 fi
