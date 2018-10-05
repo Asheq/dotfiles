@@ -111,10 +111,12 @@ else
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\[\033[01;36m\]\u@\h\[\033[00m\] "
+    PS1="\[\033[01;36m\]┌╴ \h "
+    PS1+=" \u\[\033[00m\] "
     PS1+="\[\033[01;33m\]  \w\[\033[00m\] "
     PS1+="\[\033[01;36m\]\`parse_git_branch\`"
-    PS1+='`[ \j -gt 0 ] && echo [ \j]`\n$\[\033[00m\] '
+    PS1+='`[ \j -gt 0 ] && echo [ \j]`'
+    PS1+='\n└╴$ \[\033[00m\] '
 else
     PS1="\u@\h \w\\n$ "
 fi
@@ -192,7 +194,7 @@ function updateEverything() {
 
 [ -f ~/.config/up/up.sh ] && source ~/.config/up/up.sh
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 ###############################################################################
