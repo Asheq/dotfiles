@@ -6,7 +6,7 @@
 #
 # The personal per-interactive-shell startup file.
 
-# Only continue running this script if bash is being run interactively
+# Only continue running this script if bash is being run interactively.
 [[ "$-" != *i* ]] && return
 
 # echo 'Executing ~/.bashrc'
@@ -43,8 +43,8 @@ shopt -s dirspell 2> /dev/null
 # Correct spelling errors in arguments supplied to cd.
 shopt -s cdspell 2> /dev/null
 
-# This allows you to bookmark your favorite places across the file system
-# Define a variable containing a path and you will be able to cd into it regardless of the directory you're in
+# This allows you to bookmark your favorite places across the file system.
+# Define a variable containing a path and you will be able to cd into it regardless of the directory you're in.
 shopt -s cdable_vars
 
 ###############################################################################
@@ -97,9 +97,9 @@ HISTIGNORE="?:??:clear:history:exit:jobs:tmux:vim:nvim"
 # Automatically trim long paths in the prompt.
 PROMPT_DIRTRIM=2
 
-# Use standard ISO 8601 timestamp
-# %F equivalent to %Y-%m-%d
-# %T equivalent to %H:%M:%S (24-hours format)
+# Use standard ISO 8601 timestamp.
+# %F equivalent to %Y-%m-%d.
+# %T equivalent to %H:%M:%S (24-hours format).
 HISTTIMEFORMAT='%F %T '
 
 # ------------------------------------------------------

@@ -5,27 +5,24 @@
 # |_|_| |_| .__/ \__,_|\__|_|  \___|
 #         |_|
 
-# TODO:
-# Learn all readline key bindings: http://www.catonmat.net/download/readline-emacs-editing-mode-cheat-sheet.pdf
-
 $include /etc/inputrc
 
-# Perform filename matching and completion in a case-insensitive fashion
+# Perform filename matching and completion in a case-insensitive fashion.
 set completion-ignore-case on
 
 # Treat hyphens (-) and underscores (_) as equivalent when performing case-insensitive filename
-# matching and completion
+# matching and completion.
 set completion-map-case on
 
-# Completed names which are symbolic links to directories have a slash appended
+# Completed names which are symbolic links to directories have a slash appended.
 set mark-symlinked-directories on
 
-# Words which have more than one possible completion cause the matches to be listed immediately instead of ringing the bell
+# Words which have more than one possible completion cause the matches to be listed immediately instead of ringing the bell.
 set show-all-if-ambiguous on
 
 # Menu completion displays the common prefix of the list of possible completions (which may be empty) before cycling through the list.
 set menu-complete-display-prefix on
 
-# Rebind Tab and Shift+Tab
+# Rebind Tab and Shift+Tab.
 "\t": menu-complete
 "\e[Z": menu-complete-backward
