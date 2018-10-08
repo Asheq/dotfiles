@@ -10,6 +10,7 @@
 [[ "$-" != *i* ]] && return
 
 # echo 'Executing ~/.bashrc'
+echo Hello $(whoami)...
 
 # TODO: Get comments from 'man bash'
 # TODO: Split up into several files
