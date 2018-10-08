@@ -105,11 +105,7 @@ HISTTIMEFORMAT='%F %T '
 # ------------------------------------------------------
 # PS1
 # ------------------------------------------------------
-if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    color_prompt=yes
-else
-    color_prompt=
-fi
+color_prompt=yes
 
 if [ "$color_prompt" = yes ]; then
     PS1="\[\033[00;36m\]┌╴"
