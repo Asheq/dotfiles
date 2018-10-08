@@ -113,6 +113,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     PS1="\033[00;36m"
+    PS1+="--------------------------------------------------\n"
     if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
         PS1+=" \h "
     fi
