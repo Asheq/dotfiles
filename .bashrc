@@ -105,6 +105,8 @@ HISTTIMEFORMAT='%F %T '
 # ------------------------------------------------------
 # PS1
 # ------------------------------------------------------
+# TODO: Change color based on exit code of lat command
+
 color_prompt=yes
 
 if [ "$color_prompt" = yes ]; then
