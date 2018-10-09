@@ -108,7 +108,7 @@ HISTTIMEFORMAT='%F %T '
 color_prompt=yes
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\[\033[00;36m\]┌╴"
+    PS1="\[\033[00;36m\]\n┌╴"
     if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
         PS1+=" \h "
     fi
@@ -120,6 +120,7 @@ if [ "$color_prompt" = yes ]; then
 else
     PS1="\u@\h \w\\n$ "
 fi
+
 unset color_prompt
 
 # ------------------------------------------------------
