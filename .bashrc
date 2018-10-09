@@ -108,6 +108,7 @@ HISTTIMEFORMAT='%F %T '
 # TODO: Set fancy or non-fancy icons based on an environment variable.
 # TODO: Change color based on exit code of last command.
 # TODO: Show depth of nested shells.
+# TODO: Show time last command took to run.
 
 color_prompt=yes
 
