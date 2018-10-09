@@ -1,11 +1,16 @@
 # ------------------------------------------------------
 # Miscellaneous
 # ------------------------------------------------------
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'
 alias o=open
 alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-alias hr='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
+alias h='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
 alias info='info --vi-keys'
 alias perftest='~/Development/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
+alias cal='cal -3'
+alias now='date +"%a %b %-d %-I:%M:%S %p"'
 
 # ------------------------------------------------------
 # (Neo)vim
@@ -22,15 +27,6 @@ alias l='ls'
 alias la='ls -A'
 alias ll='ls -la'
 alias lg='la | ag'
-
-# ------------------------------------------------------
-# cd
-# ------------------------------------------------------
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
 
 # ------------------------------------------------------
 # directories
