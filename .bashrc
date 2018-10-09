@@ -105,14 +105,16 @@ HISTTIMEFORMAT='%F %T '
 # ------------------------------------------------------
 # PS1
 # ------------------------------------------------------
-# TODO: Change color based on exit code of lat command
+# TODO: Set fancy or non-fancy icons based on an environment variable.
+# TODO: Change color based on exit code of last command.
+# TODO: Show depth of nested shells.
 
 color_prompt=yes
 
 if [ "$color_prompt" = yes ]; then
     PS1="\[\033[00;36m\]\n┌╴"
     if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-        PS1+=" \h "
+        PS1+=" \h "
     fi
     PS1+=" \u\[\033[00m\] "
     PS1+="\[\033[00;33m\]  \w\[\033[00m\] "
