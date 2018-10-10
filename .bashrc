@@ -10,6 +10,7 @@
 [[ "$-" != *i* ]] && return
 
 # echo 'Executing ~/.bashrc'
+echo Running bash "$BASH_VERSION".
 echo Hello $(whoami)...
 
 # TODO: Get comments from 'man bash'
