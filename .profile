@@ -16,5 +16,4 @@ if [ -d "${HOME}/info" ]; then
 fi
 
 # Set PATH to include other things.
-# TODO: Why does it show up twice in tmux session?
 PATH="${HOME}/.cargo/bin:${PATH}"
