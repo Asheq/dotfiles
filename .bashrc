@@ -11,8 +11,7 @@
 
 # echo 'Executing ~/.bashrc'
 echo Running bash "$BASH_VERSION".
-echo "Hello $(whoami)"
-echo "Loading..."
+echo "Hello $(whoami)..."
 
 # TODO: Get comments from 'man bash'
 # TODO: Split up into several files
