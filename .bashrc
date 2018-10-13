@@ -114,17 +114,17 @@ HISTTIMEFORMAT='%F %T '
 color_prompt=yes
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\[\033[00;36m\]\n┌╴"
-    if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-        PS1+=" \h "
-    fi
-    PS1+=" \u\[\033[00m\] "
-    PS1+="\[\033[00;33m\]  \w\[\033[00m\] "
-    PS1+="\[\033[00;36m\]\`parse_git_branch\`"
-    PS1+='`[ \j -gt 0 ] && echo [ \j]`\[\033[00m\]'
-    PS1+="\n\[\033[00;36m\]└╴\[\033[00m\]"
+	PS1="\[\033[00;36m\]\n┌╴"
+	if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+		PS1+=" \h "
+	fi
+	PS1+=" \u\[\033[00m\] "
+	PS1+="\[\033[00;33m\]  \w\[\033[00m\] "
+	PS1+="\[\033[00;36m\]\`parse_git_branch\`"
+	PS1+='`[ \j -gt 0 ] && echo [ \j]`\[\033[00m\]'
+	PS1+="\n\[\033[00;36m\]└╴\[\033[00m\]"
 else
-    PS1="\u@\h \w\\n$ "
+	PS1="\u@\h \w\\n$ "
 fi
 
 unset color_prompt
@@ -169,35 +169,36 @@ export NVM_DIR="$HOME/.nvm"
 # Print arguments for testing
 # ------------------------------------------------------
 function printargs() {
-	echo "argument 1: $1"
-	echo "argument 2: $2"
-	echo "argument 3: $3"
+	for var in "$@"
+	do
+		echo "argument: $var"
+	done
 }
 
 # ------------------------------------------------------
 # Proxies
 # ------------------------------------------------------
 function setproxy() {
-    proxy_url='http://proxy-src.research.ge.com:8080'
-    no_proxy_urls='127.0.0.1,10.*,3.*,localhost,github.build.ge.com,openge.ge.com,ice.ge.com,g2ua6181mjne.logon.ds.ge.com'
+	proxy_url='http://proxy-src.research.ge.com:8080'
+	no_proxy_urls='127.0.0.1,10.*,3.*,localhost,github.build.ge.com,openge.ge.com,ice.ge.com,g2ua6181mjne.logon.ds.ge.com'
 
-    export {http,https,ftp,all}_proxy=$proxy_url
-    export {HTTP,HTTPS,FTP,ALL}_PROXY=$proxy_url
-    export no_proxy=$no_proxy_urls
-    export NO_PROXY=$no_proxy_urls
+	export {http,https,ftp,all}_proxy=$proxy_url
+	export {HTTP,HTTPS,FTP,ALL}_PROXY=$proxy_url
+	export no_proxy=$no_proxy_urls
+	export NO_PROXY=$no_proxy_urls
 }
 
 function unsetproxy() {
-    unset {http,https,ftp,all}_proxy
-    unset {HTTP,HTTPS,FTP,ALL}_PROXY
-    unset {no_proxy,NO_PROXY}
+	unset {http,https,ftp,all}_proxy
+	unset {HTTP,HTTPS,FTP,ALL}_PROXY
+	unset {no_proxy,NO_PROXY}
 }
 
 # ------------------------------------------------------
 # Update everything
 # ------------------------------------------------------
 function updateEverything() {
-    (brew update && brew upgrade && brew cleanup && brew doctor)
+	(brew update && brew upgrade && brew cleanup && brew doctor)
 }
 
 ###############################################################################
