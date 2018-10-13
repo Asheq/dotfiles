@@ -1,3 +1,9 @@
+#                   __ _ _
+#  _ __  _ __ ___  / _(_) | ___
+# | '_ \| '__/ _ \| |_| | |/ _ \
+# | |_) | | | (_) |  _| | |  __/
+# | .__/|_|  \___/|_| |_|_|\___|
+# |_|
 # echo 'Executing ~/.profile'
 
 # Set PATH so it includes user's private bin.
