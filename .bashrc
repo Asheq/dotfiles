@@ -106,7 +106,7 @@ HISTTIMEFORMAT='%F %T '
 # ------------------------------------------------------
 # PS1
 # ------------------------------------------------------
-# TODO: Set fancy or non-fancy icons based on an environment variable.
+# TODO: Set fancy or non-fancy icons based on an $USE_FANCY_SYMBOLS.
 # TODO: Change color based on exit code of last command.
 # TODO: Show depth of nested shells.
 # TODO: Show time last command took to run.
@@ -160,6 +160,7 @@ export MANPAGER="nvim -c 'set ft=man' -"
 # TODO: Figure out the proper way to handle Node errors.
 export NODE_TLS_REJECT_UNAUTHORIZED=0
 export NVM_DIR="$HOME/.nvm"
+export USE_FANCY_SYMBOLS='yes'
 
 ###############################################################################
 ### function
