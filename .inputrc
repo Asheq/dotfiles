@@ -4,6 +4,8 @@
 # | | | | | |_) | |_| | |_| | | (__
 # |_|_| |_| .__/ \__,_|\__|_|  \___|
 #         |_|
+#
+# Personal readline initialization file
 
 $include /etc/inputrc
 

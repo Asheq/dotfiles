@@ -4,6 +4,7 @@
 # | |_) | (_| \__ \ | | |    | |_) | | | (_) |  _| | |  __/
 # |_.__/ \__,_|___/_| |_|____| .__/|_|  \___/|_| |_|_|\___|
 #                      |_____|_|
+#
 # The personal initialization file, executed for login shells.
 
 # When bash is started as a login shell, it looks for (in order):
