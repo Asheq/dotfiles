@@ -7,16 +7,13 @@ if [ "$color_prompt" = yes ]; then
 	PS1="\[\033[00;36m\]"
 	PS1+="\n"
 	PS1+="┌╴"
-	PS1+="  \w"
-	PS1+=" "
+	PS1+="  \w "
 	PS1+="\[\033[00;02m\]"
-	PS1+="\`parse_git_branch\`"
-	PS1+='`[ \j -gt 0 ] && echo [ \j]`'
-	PS1+=" "
-	PS1+="[ \u]"
-	PS1+=" "
+	PS1+="\`parse_git_branch\` "
+	PS1+='`[ \j -gt 0 ] && echo [ \j]\ `'
+	PS1+="[ \u] "
 	if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-		PS1+="[ \h] "
+		PS1+="[ \h]"
 	fi
 	PS1+="\n"
 	PS1+="\[\033[00;36m\]"
