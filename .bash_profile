@@ -16,8 +16,6 @@
 
 # This file ensures both ~/.profile and ~/.bashrc are executed.
 
-# echo 'Executing ~/.bash_profile'
-
 # Source ~/.profile.
 if [ -f "${HOME}/.profile" ] ; then
   source "${HOME}/.profile"
