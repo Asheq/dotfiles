@@ -5,17 +5,22 @@
 # |_|_| |_| .__/ \__,_|\__|_|  \___|
 #         |_|
 #
-# Personal readline initialization file
+# Personal readline initialization file.
 
 $include /etc/inputrc
 
+# ------------------------------------------------------------------------------
 # Set variables
+# ------------------------------------------------------------------------------
 set completion-ignore-case on
 set completion-map-case on
 set mark-symlinked-directories on
 set show-all-if-ambiguous on
 set menu-complete-display-prefix on
 
-# Rebind Tab and Shift+Tab.
+# ------------------------------------------------------------------------------
+# Rebind keys
+# ------------------------------------------------------------------------------
+# Tab and Shift+Tab
 "\t": menu-complete
 "\e[Z": menu-complete-backward
