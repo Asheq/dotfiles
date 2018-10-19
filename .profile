@@ -13,7 +13,10 @@
 if [ -d "${HOME}/bin" ] ; then
   PATH="${HOME}/bin:${PATH}"
 fi
-PATH="${HOME}/.cargo/bin:${PATH}"
+
+if [ -d "${HOME}/.cargo/bin" ] ; then
+  PATH="${HOME}/.cargo/bin:${PATH}"
+fi
 
 # MANPATH
 if [ -d "${HOME}/man" ]; then

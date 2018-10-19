@@ -16,12 +16,10 @@
 
 # This file ensures both ~/.profile and ~/.bashrc are executed.
 
-# Source ~/.profile.
 if [ -f "${HOME}/.profile" ] ; then
   source "${HOME}/.profile"
 fi
 
-# Source ~/.bashrc.
 if [ -f "${HOME}/.bashrc" ] ; then
   source "${HOME}/.bashrc"
 fi
