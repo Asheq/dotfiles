@@ -12,7 +12,7 @@
 # ------------------------------------------------------------------------------
 # Greeting
 # ------------------------------------------------------------------------------
-echo Running bash "$BASH_VERSION".
+echo Running bash "${BASH_VERSION}".
 echo "Hello $(id -F)..."
 
 # ------------------------------------------------------------------------------
@@ -48,8 +48,8 @@ PROMPT_DIRTRIM=3
 [ -f ~/.bash/prompt.sh ] && source ~/.bash/prompt.sh
 
 # cd-able vars
-gh="$HOME/Development/github.com"
-ghb="$HOME/Development/github.build.ge.com"
+gh="${HOME}/Development/github.com"
+ghb="${HOME}/Development/github.build.ge.com"
 
 # ------------------------------------------------------------------------------
 # Aliases

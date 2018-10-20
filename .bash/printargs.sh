@@ -1,6 +1,6 @@
 function printargs() {
 	for var in "$@"
 	do
-		echo "argument: $var"
+		echo "argument: ${var}"
 	done
 }
