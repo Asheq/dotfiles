@@ -42,5 +42,5 @@ export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 export NODE_TLS_REJECT_UNAUTHORIZED=0
 export NVM_DIR="${HOME}/.nvm"
 
-# Miscellaneous
+# USE_FANCY_SYMBOLS
 export USE_FANCY_SYMBOLS='yes'
