@@ -1,16 +1,29 @@
 # TODO
 # - Set fancy or non-fancy icons based on an $USE_FANCY_SYMBOLS.
-# - Change color based on exit code of last command.
 # - Show depth of nested shells.
 # - Show time last command took to run.
 
-color_prompt=yes
-if [ "${color_prompt}" = yes ]; then
-	PS1="\[\033[00;36m\]"
+PROMPT_COMMAND=__prompt_command
+
+__prompt_command() {
+	local EXIT="$?"
+	PS1=""
+
+	local reset_color='\[\e[0m\]'
+
+	if [ $EXIT != 0 ]; then
+		local main_color='\[\e[0;31m\]' # Red
+	else
+		local main_color='\[\e[0;36m\]' # Cyan
+	fi
+
+	local secondary_color='\[\e[0;02m\]' # Gray
+
+	PS1="${main_color}"
 	PS1+="\n"
 	PS1+="┌╴"
 	PS1+="  \w "
-	PS1+="\[\033[00;02m\]"
+	PS1+="${secondary_color}"
 	PS1+="\`parse_git_branch\` "
 	PS1+='`[ \j -gt 0 ] && echo [ \j]\ `'
 	PS1+="[ \u] "
@@ -18,10 +31,7 @@ if [ "${color_prompt}" = yes ]; then
 		PS1+="[ \h]"
 	fi
 	PS1+="\n"
-	PS1+="\[\033[00;36m\]"
+	PS1+="${main_color}"
 	PS1+="└╴"
-	PS1+="\[\033[00m\]"
-else
-	PS1="\u@\h \w\\n$ "
-fi
-unset color_prompt
+	PS1+="${reset_color}"
+}
