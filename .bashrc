@@ -5,6 +5,9 @@
 # |_.__/ \__,_|___/_| |_|_|  \___|
 #
 # The personal per-interactive-shell startup file.
+#
+# When an interactive shell that is not a login shell is started, bash reads and executes commands
+# from ~/.bashrc
 
 # Only continue running this script if bash is being run interactively.
 [[ "$-" != *i* ]] && return
