@@ -30,7 +30,7 @@ fi
 
 # EDITOR
 export EDITOR=nvim
-export VISUAL=${EDITOR}
+export VISUAL="${EDITOR}"
 export MANPAGER="nvim -c 'set ft=man' -"
 
 # FZF
