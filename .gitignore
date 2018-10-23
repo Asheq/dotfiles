@@ -2,8 +2,8 @@
 !.agignore
 !.bash_profile
 !.bashrc
-!.bash
-!.bash/**
+!.bash.d
+!.bash.d/**
 !.config
 !.config/karabiner/
 !.config/karabiner/**

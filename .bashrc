@@ -47,7 +47,7 @@ HISTIGNORE="?:??:clear:history:exit:jobs:tmux:vim:nvim"
 
 # PROMPT
 PROMPT_DIRTRIM=3
-[ -f ~/.bash/prompt.sh ] && source ~/.bash/prompt.sh
+[ -f ~/.bash.d/prompt.sh ] && source ~/.bash.d/prompt.sh
 
 # cd-able vars
 gh="${HOME}/Development/github.com"
@@ -56,17 +56,17 @@ ghb="${HOME}/Development/github.build.ge.com"
 # ------------------------------------------------------------------------------
 # Aliases
 # ------------------------------------------------------------------------------
-[ -f ~/.bash/aliases.sh ] && source ~/.bash/aliases.sh
+[ -f ~/.bash.d/aliases.sh ] && source ~/.bash.d/aliases.sh
 
 # ------------------------------------------------------------------------------
 # Custom functions and commands
 # ------------------------------------------------------------------------------
-[ -f ~/.bash/setproxy.sh ]      && source ~/.bash/setproxy.sh
-[ -f ~/.bash/printargs.sh ]     && source ~/.bash/printargs.sh
+[ -f ~/.bash.d/setproxy.sh ]      && source ~/.bash.d/setproxy.sh
+[ -f ~/.bash.d/printargs.sh ]     && source ~/.bash.d/printargs.sh
 
 # TODO: Download into another directory?
-[ -f ~/.bash/up.sh ]            && source ~/.bash/up.sh
-[ -f ~/.bash/git_functions.sh ] && source ~/.bash/git_functions.sh
+[ -f ~/.bash.d/up.sh ]            && source ~/.bash.d/up.sh
+[ -f ~/.bash.d/git_functions.sh ] && source ~/.bash.d/git_functions.sh
 
 # ------------------------------------------------------------------------------
 # Setup fzf
