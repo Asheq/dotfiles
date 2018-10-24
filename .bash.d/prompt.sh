@@ -22,8 +22,9 @@ __prompt_command() {
 	PS1="${main_color}"
 	PS1+="\n"
 	PS1+="┌╴"
-	PS1+="  \w "
+	PS1+="\W "
 	PS1+="${secondary_color}"
+	PS1+="[  \w] "
 	PS1+="\`parse_git_branch\` "
 	PS1+='`[ \j -gt 0 ] && echo [ \j]\ `'
 	PS1+="[ \u] "
