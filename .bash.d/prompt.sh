@@ -23,7 +23,6 @@ __prompt_command() {
 	PS1+="\n"
 	PS1+="┌╴"
 	PS1+='`pwd_head`'
-	PS1+='/'
 	PS1+="${main_color}"
 	PS1+='`pwd_tail` '
 	PS1+="${secondary_color}"
@@ -39,19 +38,17 @@ __prompt_command() {
 	PS1+="${reset_color}"
 }
 
-
 pwd_head() {
 	local head="$(dirname "${PWD}")"
 	if [ "${head}" = '/' ]; then
 		head=''
+	else
+		head="${head}/"
 	fi
 	echo "${head}"
 }
 
 pwd_tail() {
 	local tail="$(basename "${PWD}")"
-	if [ "${tail}" = '/' ]; then
-		tail=''
-	fi
 	echo "${tail}"
 }
