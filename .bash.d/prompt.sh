@@ -19,12 +19,14 @@ __prompt_command() {
 
 	local secondary_color='\[\e[0;02m\]' # Gray
 
-	PS1="${main_color}"
+	PS1="${secondary_color}"
 	PS1+="\n"
 	PS1+="┌╴"
-	PS1+="\W "
+	PS1+='`pwd_head`'
+	PS1+='/'
+	PS1+="${main_color}"
+	PS1+='`pwd_tail` '
 	PS1+="${secondary_color}"
-	PS1+="[  \w] "
 	PS1+="\`parse_git_branch\`"
 	PS1+='`[ \j -gt 0 ] && echo [ \ \j]\ `'
 	PS1+="[  \u] "
@@ -32,7 +34,24 @@ __prompt_command() {
 		PS1+="[  \h]"
 	fi
 	PS1+="\n"
-	PS1+="${main_color}"
+	PS1+="${secondary_color}"
 	PS1+="└╴"
 	PS1+="${reset_color}"
+}
+
+
+pwd_head() {
+	local head="$(dirname "${PWD}")"
+	if [ "${head}" = '/' ]; then
+		head=''
+	fi
+	echo "${head}"
+}
+
+pwd_tail() {
+	local tail="$(basename "${PWD}")"
+	if [ "${tail}" = '/' ]; then
+		tail=''
+	fi
+	echo "${tail}"
 }
