@@ -42,21 +42,27 @@ __prompt_command() {
 # PS1+=' > '
 
 pwd_head() {
-	local head
-	if [ "${PWD}" = '/' ]; then
-		head=''
+	local l_head
+	if [ "${PWD}" = '/' ] || [ "${PWD}" = "${HOME}" ]; then
+		l_head=''
 	else
-		head="$(dirname "${PWD}")"
-		if [ "${head}" = '/' ]; then
-			head="/"
+		l_head="$(dirname "${PWD}")"
+		l_head="${l_head/${HOME}/\~}"
+		if [ "${l_head}" = '/' ]; then
+			l_head="/"
 		else
-			# TODO: Replace ${HOME} with ~
-			head="${head}/"
+			l_head="${l_head}/"
 		fi
 	fi
-	echo "${head}"
+	echo "${l_head}"
 }
 
 pwd_tail() {
-	basename "${PWD}"
+	local l_tail
+	if [ "${PWD}" = "${HOME}" ]; then
+		l_tail='~'
+	else
+		l_tail="$(basename "${PWD}")"
+	fi
+	echo "${l_tail}"
 }
