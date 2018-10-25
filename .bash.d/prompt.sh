@@ -51,7 +51,7 @@ pwd_head() {
 	else
 		head="$(dirname "${PWD}")"
 		if [ "${head}" = '/' ]; then
-			head="${head}"
+			head="/"
 		else
 			head="${head}/"
 		fi
@@ -60,7 +60,5 @@ pwd_head() {
 }
 
 pwd_tail() {
-	local tail
-	tail="$(basename "${PWD}")"
-	echo "${tail}"
+	echo "$(basename "${PWD}")"
 }
