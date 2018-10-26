@@ -76,7 +76,7 @@ ghb="${HOME}/Development/github.build.ge.com"
 # ------------------------------------------------------------------------------
 # Setup nvm
 # ------------------------------------------------------------------------------
-echo 'Loading nvm...'
+echo -n 'Loading nvm... '
 [ -s "$NVM_DIR/nvm.sh" ]          && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 echo 'Done.'
