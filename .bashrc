@@ -4,12 +4,12 @@
 # | |_) | (_| \__ \ | | | | | (__
 # |_.__/ \__,_|___/_| |_|_|  \___|
 #
-# The personal per-interactive-shell startup file.
+# "The individual per-interactive-shell startup file"
 #
-# When an interactive shell that is not a login shell is started, bash reads and executes commands
-# from ~/.bashrc
+# When an interactive shell that is not a login shell is invoked, bash reads and
+# executes commands from ~/.bashrc.
 
-# Only continue running this script if bash is being run interactively.
+# Only continue running this script if bash is interactive.
 [[ "$-" != *i* ]] && return
 
 # ------------------------------------------------------------------------------
@@ -18,7 +18,7 @@
 echo "BASH_VERSION: ${BASH_VERSION}"
 
 # ------------------------------------------------------------------------------
-# Shell options (shopt)
+# Set shell options (shopt)
 # ------------------------------------------------------------------------------
 shopt -s checkwinsize
 shopt -s globstar
@@ -31,12 +31,12 @@ shopt -s cdspell
 shopt -s cdable_vars
 
 # ------------------------------------------------------------------------------
-# Shell options (set)
+# Set shell options (set)
 # ------------------------------------------------------------------------------
 set -o noclobber
 
 # ------------------------------------------------------------------------------
-# Internal shell variables
+# Set internal shell variables
 # ------------------------------------------------------------------------------
 # HIST
 HISTSIZE=10000

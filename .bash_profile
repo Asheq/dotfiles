@@ -5,20 +5,20 @@
 # |_.__/ \__,_|___/_| |_|____| .__/|_|  \___/|_| |_|_|\___|
 #                      |_____|_|
 #
-# The personal initialization file, executed for login shells.
+# "The personal initialization file, executed for login shells"
 #
-# When bash is invoked as a login shell, it first reads and executes commands from /etc/profile. It
-# then looks for (in order):
+# When bash is invoked as a login shell, it first reads and executes commands
+# from /etc/profile. It then looks for (in order):
 #	~/.bash_profile
 #	~/.bash_login
 #	~/.profile
-# It executes _only_ the first one. Also, because it is started as a _login_ shell, bash does not
-# execute `~/.bashrc`.
+# It executes _only_ the first one. Also, because it is started as a _login_
+# shell, bash does not execute ~/.bashrc.
 
 # This file ensures both ~/.profile and ~/.bashrc are executed.
 
 # ------------------------------------------------------------------------------
-# Greeting
+# Echo login session info
 # ------------------------------------------------------------------------------
 echo "MACHTYPE: ${MACHTYPE}"
 
