@@ -7,14 +7,14 @@ PROMPT_COMMAND=__prompt_command
 
 __prompt_command() {
 	local EXIT="$?"
-
+	local primary_color
+	if [ $EXIT != 0 ]; then
+		primary_color='\[\e[0;31m\]' # Red
+	else
+		primary_color='\[\e[0;36m\]' # Cyan
+	fi
 	local reset_color='\[\e[0m\]'
 	local secondary_color='\[\e[0;02m\]' # Gray
-	if [ $EXIT != 0 ]; then
-		local primary_color='\[\e[0;31m\]' # Red
-	else
-		local primary_color='\[\e[0;36m\]' # Cyan
-	fi
 
 	PS1='\n'
 	PS1+="${secondary_color}"
@@ -34,12 +34,6 @@ __prompt_command() {
 	PS1+='└╴'
 	PS1+="${reset_color}"
 }
-
-# PS1='$(pwd_head)'
-# PS1+='\[\e[0;36m\]'
-# PS1+='$(pwd_tail)'
-# PS1+='\[\e[0m\]'
-# PS1+=' > '
 
 pwd_head() {
 	local l_head
