@@ -16,6 +16,8 @@
 # Echo bash info
 # ------------------------------------------------------------------------------
 echo "BASH_VERSION: ${BASH_VERSION}"
+echo 'Loading...'
+echo -n '> ' # temporary prompt
 
 # ------------------------------------------------------------------------------
 # Set shell options (shopt)
@@ -42,8 +44,8 @@ set -o noclobber
 HISTSIZE=10000
 HISTFILESIZE=20000
 HISTTIMEFORMAT='%F %T '
-HISTCONTROL="ignoreboth:erasedups"
-HISTIGNORE="?:??:clear:history:exit:jobs:tmux:vim:nvim"
+HISTCONTROL='ignoreboth:erasedups'
+HISTIGNORE='?:??:clear:history:exit:jobs:tmux:vim:nvim'
 
 # PROMPT
 PROMPT_DIRTRIM=3
@@ -76,10 +78,8 @@ ghb="${HOME}/Development/github.build.ge.com"
 # ------------------------------------------------------------------------------
 # Setup nvm
 # ------------------------------------------------------------------------------
-echo -n 'Loading nvm... '
 [ -s "$NVM_DIR/nvm.sh" ]          && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-echo 'Done.'
 
 # ------------------------------------------------------------------------------
 # Set proxy

@@ -31,7 +31,7 @@ fi
 # EDITOR
 export EDITOR=nvim
 export VISUAL="${EDITOR}"
-export MANPAGER="nvim -c 'set ft=man' -"
+export MANPAGER='nvim -c "set ft=man" -'
 
 # FZF
 export FZF_DEFAULT_COMMAND='ag -g ""'
@@ -41,4 +41,4 @@ export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 export NVM_DIR="${HOME}/.nvm"
 
 # USE_FANCY_SYMBOLS
-export USE_FANCY_SYMBOLS='yes'
+export USE_FANCY_SYMBOLS=yes
