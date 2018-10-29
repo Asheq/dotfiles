@@ -4,9 +4,7 @@
 # - Show depth of nested shells.
 # - Show time last command took to run.
 
-PROMPT_COMMAND=__prompt_command
-
-__prompt_command() {
+function __prompt_command() {
 	local exit="$?"
 	local primary_color
 	if [ "${exit}" != 0 ]; then
@@ -36,7 +34,7 @@ __prompt_command() {
 	PS1+="${reset_color}"
 }
 
-pwd_head() {
+function pwd_head() {
 	local l_head
 	if [ "${PWD}" = '/' ] || [ "${PWD}" = "${HOME}" ]; then
 		l_head=''
@@ -53,7 +51,7 @@ pwd_head() {
 	echo "${l_head}"
 }
 
-pwd_tail() {
+function pwd_tail() {
 	local l_tail
 	if [ "${PWD}" = "${HOME}" ]; then
 		l_tail='~'

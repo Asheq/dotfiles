@@ -50,37 +50,37 @@ HISTIGNORE='?:??:clear:history:exit:jobs:tmux:vim:nvim'
 
 # PROMPT
 PROMPT_DIRTRIM=3
-[ -f ~/.bash.d/prompt.sh ] && source ~/.bash.d/prompt.sh
+PROMPT_COMMAND=__prompt_command
 
-# cdable vars
+# cdable_vars
 gh="${HOME}/Development/github.com"
 ghb="${HOME}/Development/github.build.ge.com"
 
 # ------------------------------------------------------------------------------
-# Aliases
+# Create aliases
 # ------------------------------------------------------------------------------
-[ -f ~/.bash.d/aliases.sh ] && source ~/.bash.d/aliases.sh
+[ -f ~/.bash.d/aliases.sh ]        && source ~/.bash.d/aliases.sh
 
 # ------------------------------------------------------------------------------
-# Functions and commands (self-written)
+# Create functions
 # ------------------------------------------------------------------------------
-[ -f ~/.bash.d/setproxy.sh ]  && source ~/.bash.d/setproxy.sh
-[ -f ~/.bash.d/printargs.sh ] && source ~/.bash.d/printargs.sh
+[ -f ~/.bash.d/prompt_command.sh ] && source ~/.bash.d/prompt_command.sh
+[ -f ~/.bash.d/setproxy.sh ]       && source ~/.bash.d/setproxy.sh
+[ -f ~/.bash.d/printargs.sh ]      && source ~/.bash.d/printargs.sh
 
 # ------------------------------------------------------------------------------
-# Functions and commands (external)
+# Source external scripts
 # ------------------------------------------------------------------------------
+# up
 [ -f ~/.bash.d/external/up.sh ]            && source ~/.bash.d/external/up.sh
+
+# git
 [ -f ~/.bash.d/external/git_functions.sh ] && source ~/.bash.d/external/git_functions.sh
 
-# ------------------------------------------------------------------------------
-# Setup fzf
-# ------------------------------------------------------------------------------
+# fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# ------------------------------------------------------------------------------
-# Setup nvm
-# ------------------------------------------------------------------------------
+# nvm
 [ -s "$NVM_DIR/nvm.sh" ]          && source "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 
