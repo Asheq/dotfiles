@@ -16,7 +16,7 @@
 [[ "$-" != *i* ]] && return
 
 # ------------------------------------------------------------------------------
-# Temporary prompt
+# Show temporary prompt
 # ------------------------------------------------------------------------------
 echo -n '> '
 
@@ -59,14 +59,14 @@ ghb="${HOME}/Development/github.build.ge.com"
 # ------------------------------------------------------------------------------
 # Create aliases
 # ------------------------------------------------------------------------------
-[ -f ~/.bash.d/aliases.sh ]        && source ~/.bash.d/aliases.sh
+[ -f ~/.bash.d/aliases.sh ]                && source ~/.bash.d/aliases.sh
 
 # ------------------------------------------------------------------------------
 # Create functions
 # ------------------------------------------------------------------------------
-[ -f ~/.bash.d/prompt_command.sh ] && source ~/.bash.d/prompt_command.sh
-[ -f ~/.bash.d/setproxy.sh ]       && source ~/.bash.d/setproxy.sh
-[ -f ~/.bash.d/printargs.sh ]      && source ~/.bash.d/printargs.sh
+[ -f ~/.bash.d/__prompt_command.sh ]       && source ~/.bash.d/__prompt_command.sh
+[ -f ~/.bash.d/setproxy.sh ]               && source ~/.bash.d/setproxy.sh
+[ -f ~/.bash.d/printargs.sh ]              && source ~/.bash.d/printargs.sh
 
 # ------------------------------------------------------------------------------
 # Source external scripts
@@ -78,11 +78,11 @@ ghb="${HOME}/Development/github.build.ge.com"
 [ -f ~/.bash.d/external/git_functions.sh ] && source ~/.bash.d/external/git_functions.sh
 
 # fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.bash ]                         && source ~/.fzf.bash
 
 # nvm
-[ -s "$NVM_DIR/nvm.sh" ]          && source "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+[ -s "$NVM_DIR/nvm.sh" ]                   && source "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ]          && source "$NVM_DIR/bash_completion"
 
 # ------------------------------------------------------------------------------
 # Set proxy
