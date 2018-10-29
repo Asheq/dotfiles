@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #  _               _                           __ _ _
 # | |__   __ _ ___| |__       _ __  _ __ ___  / _(_) | ___
 # | '_ \ / _` / __| '_ \     | '_ \| '__/ _ \| |_| | |/ _ \
@@ -18,9 +19,10 @@
 # This file ensures both ~/.profile and ~/.bashrc are executed.
 
 # ------------------------------------------------------------------------------
-# Echo login session info
+# Echo environment info
 # ------------------------------------------------------------------------------
 echo "MACHTYPE: ${MACHTYPE}"
+echo "BASH_VERSION: ${BASH_VERSION}"
 
 # ------------------------------------------------------------------------------
 # Source ~/.profile and ~/.bashrc

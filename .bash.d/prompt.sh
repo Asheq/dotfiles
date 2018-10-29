@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # TODO:
 # - Set fancy or non-fancy icons based on an $USE_FANCY_SYMBOLS.
 # - Show depth of nested shells.
@@ -6,15 +7,15 @@
 PROMPT_COMMAND=__prompt_command
 
 __prompt_command() {
-	local EXIT="$?"
+	local exit="$?"
 	local primary_color
-	if [ $EXIT != 0 ]; then
+	if [ "${exit}" != 0 ]; then
 		primary_color='\[\e[0;31m\]' # Red
 	else
 		primary_color='\[\e[0;36m\]' # Cyan
 	fi
-	local reset_color='\[\e[0m\]'
 	local secondary_color='\[\e[0;02m\]' # Gray
+	local reset_color='\[\e[0m\]'
 
 	PS1='\n'
 	PS1+="${secondary_color}"
@@ -41,6 +42,7 @@ pwd_head() {
 		l_head=''
 	else
 		l_head="$(dirname "${PWD}")"
+		# TODO: Only do the replacement from the start (just in case)
 		l_head="${l_head/${HOME}/\~}"
 		if [ "${l_head}" = '/' ]; then
 			l_head="/"

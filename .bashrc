@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #  _               _
 # | |__   __ _ ___| |__  _ __ ___
 # | '_ \ / _` / __| '_ \| '__/ __|
@@ -9,15 +10,15 @@
 # When an interactive shell that is not a login shell is invoked, bash reads and
 # executes commands from ~/.bashrc.
 
-# Only continue running this script if bash is interactive.
+# ------------------------------------------------------------------------------
+# Double-check that this bash is interactive before continuing
+# ------------------------------------------------------------------------------
 [[ "$-" != *i* ]] && return
 
 # ------------------------------------------------------------------------------
-# Echo bash info
+# Temporary prompt
 # ------------------------------------------------------------------------------
-echo "BASH_VERSION: ${BASH_VERSION}"
-echo 'Loading...'
-echo -n '> ' # temporary prompt
+echo -n '> '
 
 # ------------------------------------------------------------------------------
 # Set shell options (shopt)
@@ -51,29 +52,31 @@ HISTIGNORE='?:??:clear:history:exit:jobs:tmux:vim:nvim'
 PROMPT_DIRTRIM=3
 [ -f ~/.bash.d/prompt.sh ] && source ~/.bash.d/prompt.sh
 
-# cd-able vars
+# cdable vars
 gh="${HOME}/Development/github.com"
 ghb="${HOME}/Development/github.build.ge.com"
 
 # ------------------------------------------------------------------------------
 # Aliases
 # ------------------------------------------------------------------------------
-[ -f ~/.bash.d/aliases.sh ]       && source ~/.bash.d/aliases.sh
+[ -f ~/.bash.d/aliases.sh ] && source ~/.bash.d/aliases.sh
 
 # ------------------------------------------------------------------------------
-# Custom functions and commands
+# Functions and commands (self-written)
 # ------------------------------------------------------------------------------
-[ -f ~/.bash.d/setproxy.sh ]      && source ~/.bash.d/setproxy.sh
-[ -f ~/.bash.d/printargs.sh ]     && source ~/.bash.d/printargs.sh
+[ -f ~/.bash.d/setproxy.sh ]  && source ~/.bash.d/setproxy.sh
+[ -f ~/.bash.d/printargs.sh ] && source ~/.bash.d/printargs.sh
 
-# TODO: Download into another directory?
-[ -f ~/.bash.d/up.sh ]            && source ~/.bash.d/up.sh
-[ -f ~/.bash.d/git_functions.sh ] && source ~/.bash.d/git_functions.sh
+# ------------------------------------------------------------------------------
+# Functions and commands (external)
+# ------------------------------------------------------------------------------
+[ -f ~/.bash.d/external/up.sh ]            && source ~/.bash.d/external/up.sh
+[ -f ~/.bash.d/external/git_functions.sh ] && source ~/.bash.d/external/git_functions.sh
 
 # ------------------------------------------------------------------------------
 # Setup fzf
 # ------------------------------------------------------------------------------
-[ -f ~/.fzf.bash ]                && source ~/.fzf.bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # ------------------------------------------------------------------------------
 # Setup nvm
