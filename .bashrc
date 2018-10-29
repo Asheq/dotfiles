@@ -58,7 +58,7 @@ ghb="${HOME}/Development/github.build.ge.com"
 # ------------------------------------------------------------------------------
 # Aliases
 # ------------------------------------------------------------------------------
-[ -f ~/.bash.d/aliases.sh ] && source ~/.bash.d/aliases.sh
+[ -f ~/.bash.d/aliases.sh ]       && source ~/.bash.d/aliases.sh
 
 # ------------------------------------------------------------------------------
 # Custom functions and commands
@@ -73,13 +73,13 @@ ghb="${HOME}/Development/github.build.ge.com"
 # ------------------------------------------------------------------------------
 # Setup fzf
 # ------------------------------------------------------------------------------
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.bash ]                && source ~/.fzf.bash
 
 # ------------------------------------------------------------------------------
 # Setup nvm
 # ------------------------------------------------------------------------------
-[ -s "$NVM_DIR/nvm.sh" ]          && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+[ -s "$NVM_DIR/nvm.sh" ]          && source "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 
 # ------------------------------------------------------------------------------
 # Set proxy
