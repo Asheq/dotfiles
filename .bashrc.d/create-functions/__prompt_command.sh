@@ -16,7 +16,7 @@ function __prompt_command() {
 
 	PS1='\n'
 	PS1+="${secondary_color}"
-	PS1+='┌╴'
+	PS1+='┌─ '
 	PS1+='$(pwd_head)'
 	PS1+="${primary_color}"
 	PS1+='$(pwd_tail) '
@@ -29,7 +29,7 @@ function __prompt_command() {
 	fi
 	PS1+='\n'
 	PS1+="${secondary_color}"
-	PS1+='└╴'
+	PS1+='└─ '
 	PS1+="${reset_color}"
 }
 
