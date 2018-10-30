@@ -26,10 +26,10 @@ echo "BASH_VERSION: ${BASH_VERSION}"
 # ------------------------------------------------------------------------------
 # Source ~/.profile and ~/.bashrc
 # ------------------------------------------------------------------------------
-if [ -f "${HOME}/.profile" ] ; then
+if [[ -f "${HOME}/.profile" ]] ; then
   source "${HOME}/.profile"
 fi
 
-if [ -f "${HOME}/.bashrc" ] ; then
+if [[ -f "${HOME}/.bashrc" ]] ; then
   source "${HOME}/.bashrc"
 fi

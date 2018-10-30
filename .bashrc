@@ -10,6 +10,7 @@
 # executes commands from ~/.bashrc.
 
 # TODO: Use bash-specific language constructs (e.g. [[ ... ]])
+# TODO: Move almost everything to under .bash.d
 
 # ------------------------------------------------------------------------------
 # Double-check that this bash is interactive before continuing
