@@ -22,13 +22,16 @@ echo -n '> '
 # ------------------------------------------------------------------------------
 # Source individual files
 # ------------------------------------------------------------------------------
+shopt -s globstar
 bashrcd="${HOME}/.bashrc.d"
-if [[ -d "${bashrcd}" ]]; then
-	# TODO: Deal with potential spaces in file names
-	for file in $(find "${bashrcd}" -type f); do
-		source "${file}"
+if [[ -d "${bashrcd}" ]] ; then
+	for file in "${bashrcd}"/** ; do
+		if [[ -f "${file}" ]] ; then
+			source "${file}"
+		fi
 	done
 fi
+unset bashrcd
 
 # ------------------------------------------------------------------------------
 # Finish

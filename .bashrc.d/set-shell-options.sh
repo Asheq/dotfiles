@@ -2,7 +2,6 @@
 # shopt
 # ------------------------------------------------------------------------------
 shopt -s checkwinsize
-shopt -s globstar
 shopt -s nocaseglob
 shopt -s histappend
 shopt -s cmdhist
