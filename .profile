@@ -4,6 +4,8 @@
 # | |_) | | | (_) |  _| | |  __/
 # | .__/|_|  \___/|_| |_|_|\___|
 # |_|
+#
+# NOTE: Strive to keep this file strictly POSIX-compliant.
 
 # ------------------------------------------------------------------------------
 # Modify environment variables

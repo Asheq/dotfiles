@@ -51,7 +51,7 @@ alias info='info --vi-keys'
 alias termtest='~/Development/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
 
 # ------------------------------------------------------------------------------
-# git (copied from zsh)
+# git (copied from oh-my-zsh)
 # ------------------------------------------------------------------------------
 alias g='git'
 alias ga='git add'
