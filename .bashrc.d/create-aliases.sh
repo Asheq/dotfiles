@@ -7,21 +7,18 @@ alias mkdir='mkdir -pv'
 alias md=mkdir
 alias rd=rmdir
 
+alias ls='ls -hFG'
+alias l='ls'
+alias la='ls -A'
+alias ll='ls -la'
+alias lg='la | ag'
+
 # ------------------------------------------------------------------------------
 # Advanced file management
 # ------------------------------------------------------------------------------
 alias ranger='ranger --choosedir=${HOME}/.rangerdir; LASTDIR=`cat ${HOME}/.rangerdir`; cd "${LASTDIR}"'
 alias r=ranger
 alias o=open
-
-# ------------------------------------------------------------------------------
-# ls
-# ------------------------------------------------------------------------------
-alias ls='ls -hFG'
-alias l='ls'
-alias la='ls -A'
-alias ll='ls -la'
-alias lg='la | ag'
 
 # ------------------------------------------------------------------------------
 # Date and time

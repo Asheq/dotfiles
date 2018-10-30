@@ -1,5 +1,5 @@
 # TODO:
-# - Set fancy or non-fancy icons based on an $USE_FANCY_SYMBOLS.
+# - Set fancy or non-fancy icons based on $USE_FANCY_SYMBOLS.
 # - Show depth of nested shells.
 # - Show time last command took to run.
 
