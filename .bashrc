@@ -30,6 +30,7 @@ if [[ -d "${bashrcd}" ]] ; then
 			source "${file}"
 		fi
 	done
+	unset file
 fi
 unset bashrcd
 
