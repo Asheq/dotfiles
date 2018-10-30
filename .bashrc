@@ -9,6 +9,8 @@
 # When an interactive shell that is not a login shell is invoked, bash reads and
 # executes commands from ~/.bashrc.
 
+# TODO: Use bash-specific language constructs (e.g. [[ ... ]])
+
 # ------------------------------------------------------------------------------
 # Double-check that this bash is interactive before continuing
 # ------------------------------------------------------------------------------
