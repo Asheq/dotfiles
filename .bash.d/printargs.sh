@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 function printargs() {
 	for var in "$@"
 	do
