@@ -22,17 +22,22 @@ echo -n '> '
 # ------------------------------------------------------------------------------
 # Source individual files
 # ------------------------------------------------------------------------------
+# TODO: Figure out how to do this without first setting 'shopt -s globstart'
 shopt -s globstar
-bashrcd="${HOME}/.bashrc.d"
-if [[ -d "${bashrcd}" ]] ; then
-	for file in "${bashrcd}"/** ; do
-		if [[ -f "${file}" ]] ; then
-			source "${file}"
-		fi
-	done
-	unset file
-fi
-unset bashrcd
+function source_files_recursively() {
+	local dir="$1"
+	local file
+	if [[ -d "${dir}" ]] ; then
+		for file in "${dir}"/** ; do
+			if [[ -f "${file}" ]] ; then
+				source "${file}"
+			fi
+		done
+	fi
+}
+source_files_recursively "${HOME}/.bashrc.d/first"
+source_files_recursively "${HOME}/.bashrc.d/second"
+source_files_recursively "${HOME}/.bashrc.d/third"
 
 # ------------------------------------------------------------------------------
 # Finish
