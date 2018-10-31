@@ -58,13 +58,14 @@ function pwd_tail() {
 }
 
 function shell_level() {
-	if [ -n "${TMUX}" ]; then
-		if [ "${SHLVL}" -gt 2 ]; then
-			echo " ${SHLVL} "
-		fi
-	else
-		if [ "${SHLVL}" -gt 1 ]; then
-			echo " ${SHLVL} "
-		fi
-	fi
+	echo " ${SHLVL} "
+	# if [ -n "${TMUX}" ]; then
+	# 	if [ "${SHLVL}" -gt 2 ]; then
+	# 		echo " ${SHLVL} "
+	# 	fi
+	# else
+	# 	if [ "${SHLVL}" -gt 1 ]; then
+	# 		echo " ${SHLVL} "
+	# 	fi
+	# fi
 }
