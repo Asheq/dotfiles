@@ -1,7 +1,4 @@
-# TODO:
-# - Set fancy or non-fancy icons based on $USE_FANCY_SYMBOLS.
-# - Show depth of nested shells.
-# - Show time last command took to run.
+# TODO: Set fancy or non-fancy icons based on $USE_FANCY_SYMBOLS.
 
 function __prompt_command() {
 	local exit="$?"
@@ -23,6 +20,7 @@ function __prompt_command() {
 	PS1+="${secondary_color}"
 	PS1+='$(parse_git_branch)'
 	PS1+='$([ \j -gt 0 ] && echo  \ \j\ )'
+	PS1+='$(shell_level)'
 	PS1+='  \u '
 	if [ -n "${SSH_CLIENT}" ] || [ -n "${SSH_TTY}" ]; then
 		PS1+='  \h '
@@ -57,4 +55,16 @@ function pwd_tail() {
 		l_tail="$(basename "${PWD}")"
 	fi
 	echo "${l_tail}"
+}
+
+function shell_level() {
+	if [ -n "${TMUX}" ]; then
+		if [ "${SHLVL}" -gt 2 ]; then
+			echo " ${SHLVL} "
+		fi
+	else
+		if [ "${SHLVL}" -gt 1 ]; then
+			echo " ${SHLVL} "
+		fi
+	fi
 }
