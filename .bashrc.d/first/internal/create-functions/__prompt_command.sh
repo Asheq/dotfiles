@@ -19,11 +19,11 @@ function __prompt_command() {
 	PS1+='$(pwd_tail) '
 	PS1+="${secondary_color}"
 	PS1+='$(parse_git_branch)'
-	PS1+='$([ \j -gt 0 ] && echo  \ \j\ )'
+	PS1+='$(jobs_count)'
 	PS1+='$(shell_level)'
-	PS1+='  \u '
+	PS1+='[  \u] '
 	if [ -n "${SSH_CLIENT}" ] || [ -n "${SSH_TTY}" ]; then
-		PS1+='  \h '
+		PS1+='[  \h] '
 	fi
 	PS1+='\n'
 	PS1+="${secondary_color}"
@@ -57,15 +57,28 @@ function pwd_tail() {
 	echo "${l_tail}"
 }
 
+repeat() {
+	local str=$1
+	local num=$2
+	if [ "${num}" -ne 0 ] ; then
+		printf "${str}"'%.0s' $(seq 1 "${num}")
+	fi
+}
+
 function shell_level() {
-	echo " ${SHLVL} "
-	# if [ -n "${TMUX}" ]; then
-	# 	if [ "${SHLVL}" -gt 2 ]; then
-	# 		echo " ${SHLVL} "
-	# 	fi
-	# else
-	# 	if [ "${SHLVL}" -gt 1 ]; then
-	# 		echo " ${SHLVL} "
-	# 	fi
-	# fi
+	if [ "${SHLVL}" -ne 0 ] ; then
+		local shlvl='['
+		shlvl+=$(repeat "" "${SHLVL}")
+		shlvl+='] '
+		echo "${shlvl}"
+	fi
+}
+function jobs_count() {
+	local c="$(jobs | wc -l)"
+	if [ "$c" -ne 0 ] ; then
+		local count='['
+		count+=$(repeat " " "$c")
+		count+='] '
+		echo "${count}"
+	fi
 }
