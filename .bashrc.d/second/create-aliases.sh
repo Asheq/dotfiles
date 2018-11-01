@@ -4,8 +4,8 @@
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
-alias md=mkdir
-alias rd=rmdir
+alias md='mkdir'
+alias rd='rmdir'
 
 alias ls='ls -hFG'
 alias l='ls'
@@ -17,8 +17,8 @@ alias lg='la | ag'
 # Advanced file management
 # ------------------------------------------------------------------------------
 alias ranger='ranger --choosedir=${HOME}/.rangerdir; LASTDIR=`cat ${HOME}/.rangerdir`; cd "${LASTDIR}"'
-alias r=ranger
-alias o=open
+alias r='ranger'
+alias o='open'
 
 # ------------------------------------------------------------------------------
 # Date and time

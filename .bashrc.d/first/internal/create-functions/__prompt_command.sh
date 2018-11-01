@@ -27,7 +27,7 @@ function __prompt_command() {
 	PS1+='$(parse_git_branch)'
 	PS1+='$(jobs_count_flag)'
 	PS1+='$(is_not_login_shell_flag)'
-	PS1+='[  \u] '
+	PS1+='$(user_flag)'
 	if [ -n "${SSH_CONNECTION}" ]; then
 		PS1+='[  \h] '
 	fi
@@ -88,6 +88,13 @@ function jobs_count_flag() {
 		flag+=$(repeat " " "${count}")
 		flag+='] '
 		echo "${flag}"
+	fi
+}
+
+function user_flag() {
+	local username="$(whoami)"
+	if [ "${username}" != "${LOGNAME}" ] ; then
+		echo "[  ${username}] "
 	fi
 }
 

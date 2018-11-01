@@ -1,7 +1,8 @@
 function printargs() {
-	for var in "$@"
+	local arg
+	for arg in "$@"
 	do
-		echo "Argument: ${var}"
+		echo "Argument: ${arg}"
 	done
 	echo "Count: $#"
 }
