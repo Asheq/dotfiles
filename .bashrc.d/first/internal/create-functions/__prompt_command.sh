@@ -1,9 +1,14 @@
 # TODO: Set fancy or non-fancy icons based on $USE_FANCY_SYMBOLS.
 
+# ------------------------------------------------------------------------------
+# The all-important __prompt_command function
+# ------------------------------------------------------------------------------
 function __prompt_command() {
-	local exit="$?"
+
+	# Color palette
+	local exit_code="$?"
 	local primary_color
-	if [ "${exit}" != 0 ]; then
+	if [ "${exit_code}" != 0 ]; then
 		primary_color='\[\e[0;31m\]' # Red
 	else
 		primary_color='\[\e[0;36m\]' # Cyan
@@ -11,6 +16,7 @@ function __prompt_command() {
 	local secondary_color='\[\e[0;02m\]' # Gray
 	local reset_color='\[\e[0m\]'
 
+	# Set PS1
 	PS1='\n'
 	PS1+="${secondary_color}"
 	PS1+='┌─ '
@@ -19,8 +25,8 @@ function __prompt_command() {
 	PS1+='$(pwd_tail) '
 	PS1+="${secondary_color}"
 	PS1+='$(parse_git_branch)'
-	PS1+='$(jobs_count)'
-	PS1+='$(shell_level)'
+	PS1+='$(jobs_count_flag)'
+	PS1+='$(shell_level_flag)'
 	PS1+='[  \u] '
 	if [ -n "${SSH_CLIENT}" ] || [ -n "${SSH_TTY}" ]; then
 		PS1+='[  \h] '
@@ -31,6 +37,9 @@ function __prompt_command() {
 	PS1+="${reset_color}"
 }
 
+# ------------------------------------------------------------------------------
+# Helper functions
+# ------------------------------------------------------------------------------
 function pwd_head() {
 	local l_head
 	if [ "${PWD}" = '/' ] || [ "${PWD}" = "${HOME}" ]; then
@@ -57,28 +66,28 @@ function pwd_tail() {
 	echo "${l_tail}"
 }
 
-repeat() {
+function shell_level_flag() {
+	if [ "${SHLVL}" -ne 0 ] ; then
+		local flag='['
+		flag+=$(repeat "" "${SHLVL}")
+		flag+='] '
+		echo "${flag}"
+	fi
+}
+function jobs_count_flag() {
+	local count="$(jobs | wc -l)"
+	if [ "${count}" -ne 0 ] ; then
+		local flag='['
+		flag+=$(repeat " " "${count}")
+		flag+='] '
+		echo "${flag}"
+	fi
+}
+
+function repeat() {
 	local str=$1
 	local num=$2
 	if [ "${num}" -ne 0 ] ; then
 		printf "${str}"'%.0s' $(seq 1 "${num}")
-	fi
-}
-
-function shell_level() {
-	if [ "${SHLVL}" -ne 0 ] ; then
-		local shlvl='['
-		shlvl+=$(repeat "" "${SHLVL}")
-		shlvl+='] '
-		echo "${shlvl}"
-	fi
-}
-function jobs_count() {
-	local c="$(jobs | wc -l)"
-	if [ "$c" -ne 0 ] ; then
-		local count='['
-		count+=$(repeat " " "$c")
-		count+='] '
-		echo "${count}"
 	fi
 }
