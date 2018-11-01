@@ -26,9 +26,9 @@ function __prompt_command() {
 	PS1+="${secondary_color}"
 	PS1+='$(parse_git_branch)'
 	PS1+='$(jobs_count_flag)'
-	PS1+='$(shell_level_flag)'
+	PS1+='$(is_not_login_shell_flag)'
 	PS1+='[  \u] '
-	if [ -n "${SSH_CLIENT}" ] || [ -n "${SSH_TTY}" ]; then
+	if [ -n "${SSH_CONNECTION}" ]; then
 		PS1+='[  \h] '
 	fi
 	PS1+='\n'
@@ -66,6 +66,12 @@ function pwd_tail() {
 	echo "${l_tail}"
 }
 
+function is_not_login_shell_flag() {
+	if ! shopt -q login_shell ; then
+		echo "[ ] "
+	fi
+}
+
 function shell_level_flag() {
 	if [ "${SHLVL}" -ne 0 ] ; then
 		local flag='['
@@ -74,6 +80,7 @@ function shell_level_flag() {
 		echo "${flag}"
 	fi
 }
+
 function jobs_count_flag() {
 	local count="$(jobs | wc -l)"
 	if [ "${count}" -ne 0 ] ; then
