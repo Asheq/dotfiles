@@ -10,7 +10,6 @@
 !.config/karabiner/
 !.config/karabiner/**
 !.fzf.bash
-!.gitconfig
 !.gitignore
 !.inputrc
 !.jsbeautifyrc
