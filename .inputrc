@@ -24,3 +24,7 @@ set menu-complete-display-prefix on
 # Tab and Shift+Tab
 "\t": menu-complete
 "\e[Z": menu-complete-backward
+
+# Up and Down
+"\e[A": history-search-backward
+"\e[B": history-search-forward
