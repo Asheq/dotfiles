@@ -5,6 +5,8 @@
 !.bashrc.d
 !.bashrc.d/**
 !.config
+!.config/git/
+!.config/git/**
 !.config/karabiner/
 !.config/karabiner/**
 !.fzf.bash
