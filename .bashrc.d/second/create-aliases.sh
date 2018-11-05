@@ -36,6 +36,7 @@ alias v='vi'
 # ------------------------------------------------------------------------------
 # tmux
 # ------------------------------------------------------------------------------
+alias t='tmux'
 alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
 alias tl='tmux list-sessions'
@@ -46,6 +47,14 @@ alias tl='tmux list-sessions'
 alias h='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
 alias info='info --vi-keys'
 alias termtest='~/Development/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
+
+# ------------------------------------------------------------------------------
+# bower
+# ------------------------------------------------------------------------------
+alias b=bower
+alias bi='bower i'
+alias bis='bower i -S'
+alias bid='bower i -D'
 
 # ------------------------------------------------------------------------------
 # git (copied from oh-my-zsh)
