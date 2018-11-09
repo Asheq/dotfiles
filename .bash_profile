@@ -19,7 +19,7 @@
 # ------------------------------------------------------------------------------
 # Echo environment info
 # ------------------------------------------------------------------------------
-if [ -n "${SSH_CONNECTION}" ]; then
+if [[ -n "${SSH_CONNECTION}" ]]; then
 	echo "MACHTYPE: ${MACHTYPE}"
 fi
 echo "BASH_VERSION: ${BASH_VERSION}"

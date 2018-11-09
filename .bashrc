@@ -22,7 +22,6 @@ echo -n '> '
 # ------------------------------------------------------------------------------
 # Source individual files
 # ------------------------------------------------------------------------------
-# TODO: Figure out how to do this without first setting 'shopt -s globstar'
 shopt -s globstar
 function source_files_recursively() {
 	local dir="$1"
