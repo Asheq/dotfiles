@@ -13,11 +13,11 @@ $include /etc/inputrc
 # Set variables
 # ------------------------------------------------------------------------------
 set completion-ignore-case on
-set completion-prefix-display-length 1
 set completion-map-case on
 set mark-symlinked-directories on
 set show-all-if-ambiguous on
 set menu-complete-display-prefix on
+set completion-prefix-display-length 1
 set skip-completed-text on
 set enable-bracketed-paste on
 
@@ -29,5 +29,6 @@ set enable-bracketed-paste on
 "\e[Z": menu-complete-backward
 
 # Up and Down
+# TODO: Use Ctrl-p and Ctrl-n instead
 "\e[A": history-search-backward
 "\e[B": history-search-forward
