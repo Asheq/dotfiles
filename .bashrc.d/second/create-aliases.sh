@@ -18,6 +18,7 @@ alias lg='la | ag'
 # ------------------------------------------------------------------------------
 alias ranger='ranger --choosedir=${HOME}/.rangerdir; LASTDIR=`cat ${HOME}/.rangerdir`; cd "${LASTDIR}"'
 alias r='ranger'
+alias d='dirvish'
 alias o='open'
 
 # ------------------------------------------------------------------------------
