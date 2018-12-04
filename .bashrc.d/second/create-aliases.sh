@@ -7,7 +7,7 @@ alias mkdir='mkdir -pv'
 alias md='mkdir'
 alias rd='rmdir'
 
-alias ls='ls -hFG'
+alias ls='ls -hFG1'
 alias l='ls'
 alias la='ls -A'
 alias ll='ls -la'
