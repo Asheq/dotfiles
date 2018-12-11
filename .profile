@@ -20,6 +20,10 @@ if [ -d "${HOME}/.cargo/bin" ] ; then
   PATH="${HOME}/.cargo/bin:${PATH}"
 fi
 
+if [ -d "/usr/local/lib/ruby/gems/2.5.0/bin" ] ; then
+  PATH="/usr/local/lib/ruby/gems/2.5.0/bin:${PATH}"
+fi
+
 # MANPATH
 if [ -d "${HOME}/man" ]; then
   MANPATH="${HOME}/man:${MANPATH}"
