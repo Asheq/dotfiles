@@ -8,14 +8,8 @@ alias md='mkdir'
 alias rd='rmdir'
 
 # TODO: What are the disadvantages of using colorls?
-
-# alias ls='ls -hFG1'
-# alias l='ls'
-# alias la='ls -A'
-# alias ll='ls -la'
-# alias lg='la | ag'
-
-alias ls='colorls -1'
+alias ls='ls -hFG1'
+# alias ls='colorls -1'
 alias l='ls'
 alias la='ls -A'
 alias ll='ls -la'
