@@ -7,9 +7,11 @@ alias mkdir='mkdir -pv'
 alias md='mkdir'
 alias rd='rmdir'
 
-# TODO: What are the disadvantages of using colorls?
-alias ls='ls -hFG1'
-# alias ls='colorls -1'
+# TODO: Figure out which one is best
+# TODO: Group directores for BSD ls
+# alias ls='ls -hFG1'
+alias ls='gls -hF1 --color --group-directories-first'
+# alias ls='colorls -1 --sd'
 alias l='ls'
 alias la='ls -A'
 alias ll='ls -la'
