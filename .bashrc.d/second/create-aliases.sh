@@ -3,27 +3,27 @@
 # ------------------------------------------------------------------------------
 alias cp='cp -iv'
 alias mv='mv -iv'
+alias rf='rm -rf'
 alias mkdir='mkdir -pv'
 alias md='mkdir'
 alias rd='rmdir'
+alias o='open'
 
-# TODO: Figure out which one is best
-# TODO: Group directores for BSD ls
-# alias ls='ls -hFG1'
+# ------------------------------------------------------------------------------
+# List files
+# ------------------------------------------------------------------------------
+# alias ls='ls -hFG1' # TODO: group directories first in a simple way
 alias ls='gls -hF1 --color --group-directories-first'
-# alias ls='colorls -1 --sd'
 alias l='ls'
 alias la='ls -A'
 alias ll='ls -la'
 alias lg='la | ag'
 
 # ------------------------------------------------------------------------------
-# Advanced file management
+# Directory navigation
 # ------------------------------------------------------------------------------
-alias ranger='ranger --choosedir=${HOME}/.rangerdir; LASTDIR=`cat ${HOME}/.rangerdir`; cd "${LASTDIR}"'
-alias r='ranger'
-alias d='dirvish'
-alias o='open'
+# TODO: Decide between using dirvish or nnn
+alias n='nnn'
 
 # ------------------------------------------------------------------------------
 # Date and time
