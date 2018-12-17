@@ -13,7 +13,7 @@ alias o='open'
 # List files
 # ------------------------------------------------------------------------------
 # alias ls='ls -hFG1' # TODO: group directories first in a simple way
-alias ls='gls -hF1 --color --group-directories-first'
+alias ls='gls -hFN1 --color --group-directories-first'
 alias l='ls'
 alias la='ls -A'
 alias ll='ls -la'
