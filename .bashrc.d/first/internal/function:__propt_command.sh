@@ -1,4 +1,5 @@
 # TODO: Set fancy or non-fancy icons based on $USE_FANCY_SYMBOLS.
+# TODO: Change the [ to [[
 
 # ------------------------------------------------------------------------------
 # The all-important __prompt_command function

@@ -1,10 +1,9 @@
 export NNN_TMPFILE="/tmp/nnn"
 
-n()
-{
+n() {
         nnn -li "$@"
 
-        if [ -f $NNN_TMPFILE ]; then
+        if [[ -f $NNN_TMPFILE ]]; then
                 . $NNN_TMPFILE
                 rm -f $NNN_TMPFILE > /dev/null
         fi
