@@ -1,7 +1,7 @@
 export NNN_TMPFILE="/tmp/nnn"
 
 n() {
-        nnn -li "$@"
+        nnn -l "$@"
 
         if [[ -f $NNN_TMPFILE ]]; then
                 . $NNN_TMPFILE
