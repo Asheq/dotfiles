@@ -1,3 +1,4 @@
+# TODO: Go back to using dirvish
 export NNN_TMPFILE="/tmp/nnn"
 
 n() {
