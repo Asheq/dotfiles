@@ -8,23 +8,26 @@ function __prompt_command() {
 
 	# Color palette
 	local exit_code="$?"
-	local primary_color
+	local bright_color='\[\e[0;1m\]' # White Bold
+	local faded_color='\[\e[0;02m\]' # Gray
+
+	local exit_code_color
 	if [ "${exit_code}" != 0 ]; then
-		primary_color='\[\e[0;31m\]' # Red
+		exit_code_color='\[\e[0;31m\]' # Red
 	else
-		primary_color='\[\e[0;1m\]' # Cyan
+		exit_code_color='\[\e[0;34m\]' # Blue
 	fi
-	local secondary_color='\[\e[0;02m\]' # Gray
 	local reset_color='\[\e[0m\]'
 
 	# Set PS1
 	PS1='\n'
-	PS1+="${secondary_color}"
+	PS1+="${exit_code_color}"
 	PS1+='┌─ '
+	PS1+="${faded_color}"
 	PS1+='$(pwd_head)'
-	PS1+="${primary_color}"
+	PS1+="${bright_color}"
 	PS1+='$(pwd_tail) '
-	PS1+="${secondary_color}"
+	PS1+="${faded_color}"
 	PS1+='$(parse_git_branch)'
 	PS1+='$(jobs_count_flag)'
 	PS1+='$(is_not_login_shell_flag)'
@@ -33,7 +36,7 @@ function __prompt_command() {
 		PS1+='[  \h] '
 	fi
 	PS1+='\n'
-	PS1+="${secondary_color}"
+	PS1+="${exit_code_color}"
 	PS1+='└─ '
 	PS1+="${reset_color}"
 }
