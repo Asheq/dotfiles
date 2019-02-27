@@ -21,11 +21,12 @@ function __prompt_command() {
 	PS1='\n'
 	PS1+="${secondary_color}"
 	PS1+='┌─ '
-	PS1+='$(pwd_head)'
-	PS1+="${primary_color}"
-	PS1+='$(pwd_tail) '
+	# PS1+='$(pwd_head)'
+	# PS1+="${primary_color}"
+	# PS1+='$(pwd_tail) '
+	PS1+='$(pwd) '
 	PS1+="${secondary_color}"
-	PS1+='$(parse_git_branch)'
+	# PS1+='$(parse_git_branch)'
 	PS1+='$(jobs_count_flag)'
 	PS1+='$(is_not_login_shell_flag)'
 	PS1+='$(user_flag)'
