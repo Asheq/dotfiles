@@ -86,7 +86,7 @@ function shell_level_flag() {
 }
 
 function jobs_count_flag() {
-	local count="$(jobs | wc -l)"
+	local count="$(\jobs | wc -l)"
 	if [ "${count}" -ne 0 ] ; then
 		local flag='['
 		flag+=$(repeat " " "${count}")
