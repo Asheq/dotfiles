@@ -4180,14 +4180,6 @@
                     "to": {
                         "key_code": "caps_lock"
                     }
-                },
-                {
-                    "from": {
-                        "key_code": "application"
-                    },
-                    "to": {
-                        "key_code": "right_option"
-                    }
                 }
             ],
             "virtual_hid_keyboard": {
