@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 # Eliminate old habits
 # ------------------------------------------------------------------------------
-alias jobs='echo "but do you really need to use jobs?"'
+alias jobs='printf "but do you really not to use jobs though?%.0s\n" {1..15}'
 
 # ------------------------------------------------------------------------------
 # Basic file management
