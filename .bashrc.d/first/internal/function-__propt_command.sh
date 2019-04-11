@@ -1,4 +1,10 @@
-# TODO: Set fancy or non-fancy icons based on $USE_FANCY_SYMBOLS.
+# TODO: Finish setting fancy or non-fancy icons based on $USE_FANCY_SYMBOLS.
+if [ "${USE_FANCY_GLYPHS}" = "yes" ]; then
+	jobs_symbol=''
+else
+	jobs_symbol='j'
+fi
+
 # TODO: Change the [ to [[
 
 # ------------------------------------------------------------------------------
@@ -89,7 +95,7 @@ function jobs_count_flag() {
 	local count="$(\jobs | wc -l)"
 	if [ "${count}" -ne 0 ] ; then
 		local flag='['
-		flag+=$(repeat " " "${count}")
+		flag+=$(repeat "${jobs_symbol} " "${count}")
 		flag+='] '
 		echo "${flag}"
 	fi
