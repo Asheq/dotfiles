@@ -28,7 +28,7 @@ if [ -d "${HOME}/info" ]; then
 fi
 
 # EDITOR
-if command -v nvim; then
+if command -v nvim > /dev/null; then
   export EDITOR=nvim
   export MANPAGER='nvim -c "set ft=man" -'
 else
@@ -48,3 +48,6 @@ export USE_FANCY_GLYPHS=yes
 
 # PROXY (for GUI apps)
 export PROXY=https://proxy-src.research.ge.com:8080
+
+# DISPLAY (for X Server)
+export DISPLAY=:0
