@@ -28,9 +28,13 @@ if [ -d "${HOME}/info" ]; then
 fi
 
 # EDITOR
-export EDITOR=nvim
+if command -v nvim; then
+  export EDITOR=nvim
+  export MANPAGER='nvim -c "set ft=man" -'
+else
+  export EDITOR=vim
+fi
 export VISUAL="${EDITOR}"
-export MANPAGER='nvim -c "set ft=man" -'
 
 # FZF
 export FZF_DEFAULT_COMMAND='ag -g ""'
