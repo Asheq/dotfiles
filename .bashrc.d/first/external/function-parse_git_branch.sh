@@ -1,9 +1,14 @@
 function parse_git_branch() {
+        if [ "${USE_FANCY_GLYPHS}" = "yes" ]; then
+                branch_symbol=''
+        else
+                branch_symbol='β'
+        fi
         BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
         if [ ! "${BRANCH}" == "" ]
         then
                 STAT=`parse_git_dirty`
-                echo "[  ${BRANCH}${STAT}] "
+                echo "[${branch_symbol}  ${BRANCH}${STAT}] "
         else
                 echo ""
         fi
