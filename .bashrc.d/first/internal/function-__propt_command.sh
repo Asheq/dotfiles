@@ -1,8 +1,12 @@
 # TODO: Finish setting fancy or non-fancy icons based on $USE_FANCY_SYMBOLS.
 if [ "${USE_FANCY_GLYPHS}" = "yes" ]; then
-	jobs_symbol=''
+	jobs_symbol=' '
+	not_login_shell_symbol=' '
+	shell_level_symbol=''
 else
 	jobs_symbol='j'
+	not_login_shell_symbol='»'
+	shell_level_symbol='sh'
 fi
 
 # TODO: Change the [ to [[
@@ -78,14 +82,14 @@ function pwd_tail() {
 
 function is_not_login_shell_flag() {
 	if ! shopt -q login_shell ; then
-		echo "[ ] "
+		echo "[${not_login_shell_symbol}] "
 	fi
 }
 
 function shell_level_flag() {
 	if [ "${SHLVL}" -ne 0 ] ; then
 		local flag='['
-		flag+=$(repeat "" "${SHLVL}")
+		flag+=$(repeat "${shell_level_symbol}" "${SHLVL}")
 		flag+='] '
 		echo "${flag}"
 	fi
@@ -95,7 +99,7 @@ function jobs_count_flag() {
 	local count="$(\jobs | wc -l)"
 	if [ "${count}" -ne 0 ] ; then
 		local flag='['
-		flag+=$(repeat "${jobs_symbol} " "${count}")
+		flag+=$(repeat "${jobs_symbol}" "${count}")
 		flag+='] '
 		echo "${flag}"
 	fi
