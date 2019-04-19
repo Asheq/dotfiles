@@ -1,12 +1,13 @@
-# TODO: Finish setting fancy or non-fancy icons based on $USE_FANCY_SYMBOLS.
 if [ "${USE_FANCY_GLYPHS}" = "yes" ]; then
 	jobs_symbol=' '
-	not_login_shell_symbol=' '
-	shell_level_symbol=''
+	not_login_shell_symbol=' '
+	shell_level_symbol=' '
+	user_symbol=' '
 else
 	jobs_symbol='j'
 	not_login_shell_symbol='»'
 	shell_level_symbol='sh'
+	user_symbol='u '
 fi
 
 # TODO: Change the [ to [[
@@ -41,6 +42,7 @@ function __prompt_command() {
 	PS1+='$(parse_git_branch)'
 	PS1+='$(jobs_count_flag)'
 	PS1+='$(is_not_login_shell_flag)'
+	# PS1+='$(shell_level_flag)'
 	PS1+='$(user_flag)'
 	if [ -n "${SSH_CONNECTION}" ]; then
 		PS1+='[  \h] '
@@ -108,7 +110,7 @@ function jobs_count_flag() {
 function user_flag() {
 	local username="$(whoami)"
 	if [ "${username}" != "${LOGNAME}" ] ; then
-		echo "[  ${username}] "
+		echo "[${user_symbol} ${username}] "
 	fi
 }
 
