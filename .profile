@@ -46,8 +46,5 @@ export NVM_DIR="${HOME}/.nvm"
 # USE_FANCY_GLYPHS
 export USE_FANCY_GLYPHS=yes
 
-# PROXY (for GUI apps)
-export PROXY=https://proxy-src.research.ge.com:8080
-
 # DISPLAY (for X Server)
 export DISPLAY=:0

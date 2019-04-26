@@ -53,7 +53,7 @@ alias tl='tmux list-sessions'
 # ------------------------------------------------------------------------------
 alias h='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
 alias info='info --vi-keys'
-alias termtest='~/Development/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
+alias termtest='~/dev/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
 
 # ------------------------------------------------------------------------------
 # brew
@@ -61,6 +61,13 @@ alias termtest='~/Development/github.com/p-e-w/ternimal/ternimal length=20 thick
 alias br=brew
 alias bri='brew install'
 alias bru='brew uninstal'
+
+# ------------------------------------------------------------------------------
+# apt-get
+# ------------------------------------------------------------------------------
+alias apg='sudo apt-get'
+alias apgi='sudo apt-get install'
+alias apgu='sudo apt-get remove'
 
 # ------------------------------------------------------------------------------
 # bower
@@ -74,6 +81,7 @@ alias bid='bower i -D'
 # nvm
 # ------------------------------------------------------------------------------
 alias nu='nvm use'
+alias nus='nvm use 8.14.1'
 
 # ------------------------------------------------------------------------------
 # git (copied from oh-my-zsh)
@@ -120,6 +128,7 @@ alias gco='git checkout'
 # alias gcpc='git cherry-pick --continue'
 # alias gcs='git commit -S'
 alias gd='git diff'
+alias gdv='git diff | v -'
 alias gdca='git diff --cached'
 # alias gdcw='git diff --cached --word-diff'
 # alias gdct='git describe --tags `git rev-list --tags --max-count=1`'

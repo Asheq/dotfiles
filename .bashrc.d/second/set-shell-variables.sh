@@ -15,5 +15,4 @@ PROMPT_COMMAND=__prompt_command
 # ------------------------------------------------------------------------------
 # cdable_vars
 # ------------------------------------------------------------------------------
-gh="${HOME}/Development/github.com"
-ghb="${HOME}/Development/github.build.ge.com"
+gh="${HOME}/dev/github.com"
