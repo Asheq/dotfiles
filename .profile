@@ -44,7 +44,7 @@ export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 export NVM_DIR="${HOME}/.nvm"
 
 # USE_FANCY_GLYPHS
-export USE_FANCY_GLYPHS=yes
+export USE_FANCY_GLYPHS=no
 
 # DISPLAY (for X Server)
 export DISPLAY=:0

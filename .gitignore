@@ -9,6 +9,7 @@
 !.config/git/**
 !.config/karabiner/
 !.config/karabiner/**
+.config/karabiner/automatic_backups/
 !.config/kitty/
 !.config/kitty/**
 !.fzf.bash
