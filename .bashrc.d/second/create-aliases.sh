@@ -17,10 +17,10 @@ alias o='open'
 # ------------------------------------------------------------------------------
 # List files
 # ------------------------------------------------------------------------------
-if command -v gls; then
+if command -v gls >/dev/null 2>&1 ; then
 	alias ls='gls -hFN1 --color --group-directories-first'
 else
-	alias ls='ls -hFN1 --color --group-directories-first'
+	alias ls='ls -hFG'
 fi
 alias l='ls'
 alias la='ls -A'
