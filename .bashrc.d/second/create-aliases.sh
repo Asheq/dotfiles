@@ -4,6 +4,11 @@
 alias jobs='printf "but do you really not to use jobs though?%.0s\n" {1..15}'
 
 # ------------------------------------------------------------------------------
+# ctags
+# ------------------------------------------------------------------------------
+alias jtags="ctags -R src public app config lib && sed -i '' -E '/^(if|switch|function|module\.exports|it|describe).+language:js$/d' tags"
+
+# ------------------------------------------------------------------------------
 # Basic file management
 # ------------------------------------------------------------------------------
 alias cp='cp -iv'
