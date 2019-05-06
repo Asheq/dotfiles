@@ -18,15 +18,16 @@ fi
 function __prompt_command() {
 
 	# Color palette
+	# Reference: https://www.tecmint.com/customize-bash-colors-terminal-prompt-linux
 	local exit_code="$?"
-	local bright_color='\[\e[0;1m\]' # White Bold
-	local faded_color='\[\e[0;02m\]' # Gray
+	local bright_color='\[\e[1;39m\]' # bold;brightwhite
+	local faded_color='\[\e[0;37m\]' # normal;white
 
 	local exit_code_color
 	if [ "${exit_code}" != 0 ]; then
-		exit_code_color='\[\e[0;31m\]' # Red
+		exit_code_color='\[\e[0;31m\]' # normal;red
 	else
-		exit_code_color='\[\e[0;34m\]' # Blue
+		exit_code_color='\[\e[0;34m\]' # normal;blue
 	fi
 	local reset_color='\[\e[0m\]'
 
