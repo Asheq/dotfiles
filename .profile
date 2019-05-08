@@ -27,24 +27,23 @@ if [ -d "${HOME}/info" ]; then
   INFOPATH="${HOME}/info:${INFOPATH}"
 fi
 
-# EDITOR
-if command -v nvim > /dev/null; then
-  export EDITOR=nvim
-  export MANPAGER='nvim -c "set ft=man" -'
-else
-  export EDITOR=vim
-fi
-export VISUAL="${EDITOR}"
-
-# FZF
-export FZF_DEFAULT_COMMAND='ag -g ""'
-export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
-
 # NODE and NVM
 export NVM_DIR="${HOME}/.nvm"
 
-# USE_FANCY_GLYPHS
-export USE_FANCY_GLYPHS=yes
-
 # DISPLAY (for X Server)
 export DISPLAY=:0
+
+if [ "${USE_CUSTOM_SHELL_SETTINGS}" == "yes" ]; then
+  # EDITOR
+  if command -v nvim > /dev/null; then
+    export EDITOR=nvim
+    export MANPAGER='nvim -c "set ft=man" -'
+  else
+    export EDITOR=vim
+  fi
+  export VISUAL="${EDITOR}"
+
+  # FZF
+  export FZF_DEFAULT_COMMAND='ag -g ""'
+  export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
+fi

@@ -1,0 +1,10 @@
+# https://EditorConfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# Set default indent style and indent size
+[*]
+indent_style = space
+indent_size = 2
+

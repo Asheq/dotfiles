@@ -12,6 +12,7 @@
 .config/karabiner/automatic_backups/
 !.config/kitty/
 !.config/kitty/**
+!.editorconfig
 !.fzf.bash
 !.gitignore
 !.inputrc

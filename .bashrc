@@ -9,24 +9,33 @@
 [[ "$-" != *i* ]] && return
 
 # ------------------------------------------------------------------------------
-# Source individual files
+# Source nvm's scripts
 # ------------------------------------------------------------------------------
-shopt -s globstar
-function source_files_recursively() {
-	local dir="$1"
-	local file
-	if [[ -d "${dir}" ]] ; then
-		for file in "${dir}"/** ; do
-			if [[ -f "${file}" ]] ; then
-				source "${file}"
-			fi
-		done
-	fi
-}
-source_files_recursively "${HOME}/.bashrc.d/first"
-source_files_recursively "${HOME}/.bashrc.d/second"
+[[ -s "$NVM_DIR/nvm.sh" ]]          && source "$NVM_DIR/nvm.sh" --no-use
+[[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
 
-# ------------------------------------------------------------------------------
-# Finish
-# ------------------------------------------------------------------------------
-# setproxy
+if [[ "${USE_CUSTOM_SHELL_SETTINGS}" == "yes" ]]; then
+  # ------------------------------------------------------------------------------
+  # Source fzf's scripts
+  # ------------------------------------------------------------------------------
+  [[ -f ~/.fzf.bash ]]                && source ~/.fzf.bash
+
+  # ------------------------------------------------------------------------------
+  # Source individual files
+  # ------------------------------------------------------------------------------
+  shopt -s globstar
+  function source_files_recursively() {
+    local dir="$1"
+    local file
+    if [[ -d "${dir}" ]] ; then
+      for file in "${dir}"/** ; do
+        if [[ -f "${file}" ]] ; then
+          source "${file}"
+        fi
+      done
+    fi
+  }
+
+  source_files_recursively "${HOME}/.bashrc.d/first"
+  source_files_recursively "${HOME}/.bashrc.d/second"
+fi
