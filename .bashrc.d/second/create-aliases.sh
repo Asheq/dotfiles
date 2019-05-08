@@ -1,12 +1,7 @@
 # ------------------------------------------------------------------------------
 # Eliminate old habits
 # ------------------------------------------------------------------------------
-alias jobs='printf "but do you really need to use jobs though?%.0s\n" {1..15}'
-
-# ------------------------------------------------------------------------------
-# ctags
-# ------------------------------------------------------------------------------
-alias jtags="ctags -R src public app config lib && sed -i '' -E '/^(if|switch|function|module\.exports|it|describe).+language:js$/d' tags"
+alias jobs='printf "But do you really need to use jobs though?%.0s\n" {1..15}'
 
 # ------------------------------------------------------------------------------
 # Basic file management
@@ -33,12 +28,6 @@ alias ll='ls -la'
 alias lg='la | ag'
 
 # ------------------------------------------------------------------------------
-# Date and time
-# ------------------------------------------------------------------------------
-alias cal='cal -3'
-alias now='date +"%a %b %-d %-I:%M:%S %p"'
-
-# ------------------------------------------------------------------------------
 # (Neo)vim
 # ------------------------------------------------------------------------------
 alias vim='nvim'
@@ -59,28 +48,9 @@ alias tl='tmux list-sessions'
 alias h='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
 alias info='info --vi-keys'
 alias termtest='~/dev/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
-
-# ------------------------------------------------------------------------------
-# brew
-# ------------------------------------------------------------------------------
-alias br=brew
-alias bri='brew install'
-alias bru='brew uninstal'
-
-# ------------------------------------------------------------------------------
-# apt-get
-# ------------------------------------------------------------------------------
-alias apg='sudo apt-get'
-alias apgi='sudo apt-get install'
-alias apgu='sudo apt-get remove'
-
-# ------------------------------------------------------------------------------
-# bower
-# ------------------------------------------------------------------------------
-alias b=bower
-alias bi='bower i'
-alias bis='bower i -S'
-alias bid='bower i -D'
+alias jtags="ctags -R src public app config lib && sed -i '' -E '/^(if|switch|function|module\.exports|it|describe).+language:js$/d' tags"
+alias cal='cal -3'
+alias now='date +"%a %b %-d %-I:%M:%S %p"'
 
 # ------------------------------------------------------------------------------
 # nvm
@@ -89,7 +59,7 @@ alias nu='nvm use'
 alias nus='nvm use 8.14.1'
 
 # ------------------------------------------------------------------------------
-# git (copied from oh-my-zsh)
+# git (inspired by oh-my-zsh)
 # ------------------------------------------------------------------------------
 alias g='git'
 alias ga='git add'
