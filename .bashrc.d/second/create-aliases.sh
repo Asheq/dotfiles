@@ -43,6 +43,12 @@ alias ts='tmux new-session -s'
 alias tl='tmux list-sessions'
 
 # ------------------------------------------------------------------------------
+# nvm
+# ------------------------------------------------------------------------------
+alias nu='nvm use'
+alias nus='nvm use 8.14.1'
+
+# ------------------------------------------------------------------------------
 # Miscellaneous
 # ------------------------------------------------------------------------------
 alias h='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
@@ -51,12 +57,6 @@ alias termtest='~/dev/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,
 alias jtags="ctags -R src public app config lib && sed -i '' -E '/^(if|switch|function|module\.exports|it|describe).+language:js$/d' tags"
 alias cal='cal -3'
 alias now='date +"%a %b %-d %-I:%M:%S %p"'
-
-# ------------------------------------------------------------------------------
-# nvm
-# ------------------------------------------------------------------------------
-alias nu='nvm use'
-alias nus='nvm use 8.14.1'
 
 # ------------------------------------------------------------------------------
 # git (inspired by oh-my-zsh)
