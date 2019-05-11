@@ -8,8 +8,8 @@
 !.config/git/
 !.config/git/**
 !.config/karabiner/
-!.config/karabiner/**
-.config/karabiner/automatic_backups/
+!.config/karabiner/assets/
+!.config/karabiner/assets/**
 !.config/kitty/
 !.config/kitty/**
 !.editorconfig
