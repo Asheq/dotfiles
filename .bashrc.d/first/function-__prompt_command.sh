@@ -27,7 +27,7 @@ function __prompt_command() {
   if [ "${exit_code}" != 0 ]; then
     exit_code_color='\[\e[0;31m\]' # normal;red
   else
-    exit_code_color='\[\e[0;37m\]' # normal;blue
+    exit_code_color='\[\e[0;34m\]' # normal;blue
   fi
   local reset_color='\[\e[0m\]'
 

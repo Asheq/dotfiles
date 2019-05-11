@@ -62,6 +62,7 @@ alias now='date +"%a %b %-d %-I:%M:%S %p"'
 # ------------------------------------------------------------------------------
 # git (inspired by oh-my-zsh)
 # ------------------------------------------------------------------------------
+# TODO: Use custom fzf function for commands where I need to select something
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
@@ -98,7 +99,6 @@ alias gcm='git checkout master'
 alias gcd='git checkout develop'
 # alias gcmsg='git commit -m'
 alias gco='git checkout'
-alias gcobf='git checkout $(git branch --remote | sed -e "s/origin\///g" | fzf)'
 # alias gcount='git shortlog -sn'
 # alias gcp='git cherry-pick'
 # alias gcpa='git cherry-pick --abort'

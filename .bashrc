@@ -23,7 +23,6 @@ if [[ "${USE_CUSTOM_SHELL_SETTINGS}" == "yes" ]]; then
   # ------------------------------------------------------------------------------
   # Source individual files
   # ------------------------------------------------------------------------------
-  shopt -s globstar
   function source_files_recursively() {
     local dir="$1"
     local file
@@ -36,6 +35,9 @@ if [[ "${USE_CUSTOM_SHELL_SETTINGS}" == "yes" ]]; then
     fi
   }
 
+  # Source functions *first* to avoid accidentally using aliased versions of
+  # commands in function body definitions
   source_files_recursively "${HOME}/.bashrc.d/first"
   source_files_recursively "${HOME}/.bashrc.d/second"
 fi
+
