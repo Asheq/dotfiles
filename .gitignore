@@ -13,7 +13,6 @@
 !.config/kitty/
 !.config/kitty/**
 !.editorconfig
-!.fzf.bash
 !.gitignore
 !.inputrc
 !.jsbeautifyrc
