@@ -13,6 +13,7 @@ alias mkdir='mkdir -pv'
 alias md='mkdir'
 alias rd='rmdir'
 alias o='open'
+alias r='ranger'
 
 # ------------------------------------------------------------------------------
 # List files
