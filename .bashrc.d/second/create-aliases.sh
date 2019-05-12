@@ -14,6 +14,8 @@ alias md='mkdir'
 alias rd='rmdir'
 alias o='open'
 alias r='ranger'
+alias c='cd'
+complete -o dirnames -o nospace -F _fzf_dir_completion c
 
 # ------------------------------------------------------------------------------
 # List files
