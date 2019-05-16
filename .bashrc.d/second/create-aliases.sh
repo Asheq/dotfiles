@@ -1,7 +1,27 @@
 # ------------------------------------------------------------------------------
+# Colors
+# TODO: Move
+# ------------------------------------------------------------------------------
+BLACK=$(tput setaf 0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+LIME_YELLOW=$(tput setaf 190)
+POWDER_BLUE=$(tput setaf 153)
+BLUE=$(tput setaf 4)
+MAGENTA=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 7)
+BRIGHT=$(tput bold)
+NORMAL=$(tput sgr0)
+BLINK=$(tput blink)
+REVERSE=$(tput smso)
+UNDERLINE=$(tput smul)
+
+# ------------------------------------------------------------------------------
 # Eliminate old habits
 # ------------------------------------------------------------------------------
-alias jobs='printf "But do you really need to use jobs though?%.0s\n" {1..15}'
+alias jobs='echo "${RED}Do not use jobs unless you really need to${NORMAL}"'
 
 # ------------------------------------------------------------------------------
 # Basic file management
@@ -14,20 +34,21 @@ alias md='mkdir'
 alias rd='rmdir'
 alias o='open'
 alias r='ranger'
-alias c='cd'
+alias c='\cd'
+alias cd='echo "${RED}Use c${NORMAL}"'
 complete -o dirnames -o nospace -F _fzf_dir_completion c
 
 # ------------------------------------------------------------------------------
 # List files
 # ------------------------------------------------------------------------------
+alias ls='echo "${RED}Use one of: l la ll lg${NORMAL}"'
 if command -v gls >/dev/null 2>&1 ; then
-	alias ls='gls -hFN1 --color --group-directories-first'
+	alias l='\gls -hFN1 --color --group-directories-first'
 else
-	alias ls='ls -hFG'
+	alias l='\ls -hFG'
 fi
-alias l='ls'
-alias la='ls -A'
-alias ll='ls -la'
+alias la='l -A'
+alias ll='l -la'
 alias lg='la | ag'
 
 # ------------------------------------------------------------------------------
