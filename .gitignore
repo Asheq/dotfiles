@@ -16,7 +16,10 @@
 !.gitignore
 !.inputrc
 !.jsbeautifyrc
+!.prettierrc
 !.profile
+!.thesaurus
+!.thesaurus/README.md
 !.tmux.conf
 !.ctags
 !README.md
