@@ -1,6 +1,6 @@
 function parse_git_branch() {
   if [ "${USE_FANCY_GLYPHS}" = "yes" ]; then
-    branch_symbol=''
+    branch_symbol=' '
   else
     branch_symbol='β'
   fi
@@ -8,7 +8,7 @@ function parse_git_branch() {
   if [ ! "${BRANCH}" == "" ]
   then
     STAT=`parse_git_dirty`
-    echo "[${branch_symbol}  ${BRANCH}${STAT}] "
+    echo "[${branch_symbol} ${BRANCH}${STAT}] "
   else
     echo ""
   fi
