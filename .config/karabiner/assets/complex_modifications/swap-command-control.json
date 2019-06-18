@@ -1,3197 +1,3033 @@
 {
-    "title": "Swap Command to Control",
-    "rules": [{
-        "description": "Swap Command and Control (except for tab and tilde)",
-        "manipulators": [{
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "a",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "a",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
+  "title": "Swap Command to Control",
+  "rules": [
+    {
+      "description": "Swap Command and Control (except for tab and tilde)",
+      "manipulators": [
+        {
+          "conditions": [
             {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "b",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "b",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "c",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "c",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "d",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "d",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "e",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "e",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "f",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "f",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "g",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "g",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "h",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "h",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "i",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "f9"
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "j",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "j",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "k",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "k",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "l",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "l",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "m",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "m",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "n",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "n",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "o",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "o",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "p",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "p",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "q",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "q",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "r",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "r",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "s",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "s",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "t",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "t",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "u",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "u",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "v",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "v",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "w",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "w",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "x",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "x",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "y",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "y",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "z",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "z",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "0",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "0",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "1",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "1",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "2",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "2",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "3",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "3",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "4",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "4",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "5",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "5",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "6",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "6",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "7",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "7",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "8",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "8",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "9",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "9",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "return_or_enter",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "return_or_enter",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "escape",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "escape",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "delete_or_backspace",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "delete_or_backspace",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "delete_forward",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "delete_forward",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "hyphen",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "hyphen",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "equal_sign",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "equal_sign",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "open_bracket",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "open_bracket",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "close_bracket",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "close_bracket",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "backslash",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "backslash",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "non_us_pound",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "non_us_pound",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "semicolon",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "semicolon",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "quote",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "quote",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "comma",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "comma",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "period",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "period",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "slash",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "slash",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "non_us_backslash",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "non_us_backslash",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "page_up",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "page_up",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "page_down",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "page_down",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "home",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "home",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "end",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "end",
-                    "modifiers": [
-                        "control"
-                    ]
-                }],
-                "type": "basic"
-            },
-            {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "a",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "a",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "b",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "b",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "c",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "c",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "d",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "d",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "e",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "e",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "f",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "f",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "g",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "g",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "h",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "h",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "i",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "i",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "j",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "j",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "k",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "k",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "l",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "l",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "m",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "m",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "n",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "n",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "o",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "o",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "p",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "p",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "q",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "q",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "r",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "r",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "s",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "s",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "t",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "t",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "u",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "u",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "v",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "v",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "w",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "w",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "x",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "x",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "y",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "y",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "z",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "z",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "0",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "0",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "1",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "1",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "2",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "2",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "3",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "3",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "4",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "4",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "5",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "5",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "6",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "6",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "7",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "7",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "8",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "8",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "9",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "9",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "return_or_enter",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "return_or_enter",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "escape",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "escape",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "delete_or_backspace",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "delete_or_backspace",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "delete_forward",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "delete_forward",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "hyphen",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "hyphen",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "equal_sign",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "equal_sign",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "open_bracket",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "open_bracket",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "close_bracket",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "close_bracket",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "backslash",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "backslash",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "non_us_pound",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "non_us_pound",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "semicolon",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "semicolon",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "quote",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "quote",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "comma",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "comma",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "period",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "period",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "slash",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "slash",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "non_us_backslash",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "non_us_backslash",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "page_up",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "page_up",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "page_down",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "page_down",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "home",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "home",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
-            }, {
-                "conditions": [{
-                    "bundle_identifiers": [
-                        "^org\\.vim\\.MacVim$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^io\\.alacritty$",
-                        "^com\\.qvacua\\.VimR$"
-                    ],
-                    "type": "frontmost_application_if"
-                }],
-                "from": {
-                    "key_code": "end",
-                    "modifiers": {
-                        "mandatory": [
-                            "control"
-                        ],
-                        "optional": [
-                            "any"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "end",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
-                "type": "basic"
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
             }
-        ]
-    }]
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "a",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "b",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "d",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "e",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "g",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "h",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f9"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "j",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "k",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "l",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "m",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "n",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "o",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "p",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "q",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "q",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "r",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "r",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "s",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "t",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "t",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "u",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "v",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "w",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "x",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "x",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "y",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "y",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "z",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "0",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "1",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "2",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "3",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "4",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "4",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "5",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "5",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "6",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "6",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "7",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "7",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "8",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "8",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "9",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "9",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "return_or_enter",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "escape",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "delete_forward",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_forward",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "hyphen",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "equal_sign",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "equal_sign",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "open_bracket",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "close_bracket",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "backslash",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "non_us_pound",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "non_us_pound",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "semicolon",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "quote",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "quote",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "comma",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "period",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "slash",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "slash",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "non_us_backslash",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "non_us_backslash",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "page_up",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_up",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "page_down",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_down",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "home",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "home",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "end",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "end",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "a",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "b",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "d",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "e",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "g",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "h",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "i",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "j",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "k",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "l",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "m",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "n",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "o",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "p",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "q",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "q",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "r",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "r",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "s",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "t",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "t",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "u",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "v",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "w",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "x",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "x",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "y",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "y",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "z",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "0",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "1",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "2",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "3",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "4",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "4",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "5",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "5",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "6",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "6",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "7",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "7",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "8",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "8",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "9",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "9",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "return_or_enter",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "escape",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "delete_forward",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_forward",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "hyphen",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "equal_sign",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "equal_sign",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "open_bracket",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "close_bracket",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "backslash",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "non_us_pound",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "non_us_pound",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "semicolon",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "quote",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "quote",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "comma",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "period",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "slash",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "slash",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "non_us_backslash",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "non_us_backslash",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "page_up",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_up",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "page_down",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_down",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "home",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "home",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "end",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "end",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
 }
