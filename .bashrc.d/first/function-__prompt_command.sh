@@ -32,8 +32,7 @@ function __prompt_command() {
   local reset_color='\[\e[0m\]'
 
   # Set PS1
-  PS1='\n'
-  PS1+="${exit_code_color}"
+  PS1="${exit_code_color}"
   PS1+='┌─ '
   PS1+="${faded_color}"
   PS1+='$(pwd_head)'
