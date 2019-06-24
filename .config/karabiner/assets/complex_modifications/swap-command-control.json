@@ -1,8 +1,8 @@
 {
-  "title": "Swap Command to Control",
+  "title": "Terminal maps",
   "rules": [
     {
-      "description": "Swap Command and Control (except for tab and tilde)",
+      "description": "In terminal emulators, swap Cmd and Ctrl modifiers (except when the other key is Tab or ~)",
       "manipulators": [
         {
           "conditions": [

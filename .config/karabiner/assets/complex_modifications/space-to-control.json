@@ -1,8 +1,8 @@
 {
-  "title": "Space to control",
+  "title": "Space doubles as Ctrl",
   "rules": [
     {
-      "description": "Change spacebar to left_control if pressed with other keys (Post spacebar when pressed alone)",
+      "description": "Change Space to Ctrl if held down with other keys",
       "manipulators": [
         {
           "from": {
@@ -10,6 +10,9 @@
             "modifiers": {
               "optional": ["any"]
             }
+          },
+          "parameters": {
+              "basic.to_if_alone_timeout_milliseconds": 500
           },
           "to": [
             {

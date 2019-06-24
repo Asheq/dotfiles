@@ -2,7 +2,7 @@
   "title": "Everdo maps",
   "rules": [
     {
-      "description": "In Everdo, map Command+Enter to Control+Enter",
+      "description": "In Everdo, map Cmd+Enter to Ctrl+Enter",
       "manipulators": [
         {
           "conditions": [
