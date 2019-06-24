@@ -2,7 +2,7 @@
   "title": "Everdo maps",
   "rules": [
     {
-      "description": "Everdo maps",
+      "description": "In Everdo, map Command+Enter to Control+Enter",
       "manipulators": [
         {
           "conditions": [
