@@ -1,6 +1,6 @@
 function parse_git_branch() {
   if [ "${USE_FANCY_GLYPHS}" = "yes" ]; then
-    branch_symbol=' '
+    branch_symbol=' '
   else
     branch_symbol='β'
   fi

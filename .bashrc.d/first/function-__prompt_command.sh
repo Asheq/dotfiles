@@ -1,8 +1,9 @@
 if [ "${USE_FANCY_GLYPHS}" = "yes" ]; then
-  jobs_symbol=' '
-  not_login_shell_symbol=' '
-  shell_level_symbol=' '
-  user_symbol=' '
+  # TODO: Use glyphs
+  jobs_symbol='j'
+  not_login_shell_symbol='»'
+  shell_level_symbol='sh'
+  user_symbol='u '
 else
   jobs_symbol='j'
   not_login_shell_symbol='»'
