@@ -48,6 +48,7 @@ function __prompt_command() {
     PS1+='[  \h] '
   fi
   PS1+='\n'
+  PS1+="${faded_color}"
   PS1+='└─'
   PS1+="${exit_code_color}"
   PS1+='❱❱❱ '
