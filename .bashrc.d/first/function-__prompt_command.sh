@@ -50,7 +50,7 @@ function __prompt_command() {
   fi
   PS1+='\n'
   PS1+="${exit_code_color}"
-  PS1+='└─❱❱❱ '
+  PS1+='└─❱ '
   PS1+="${reset_color}"
 }
 
