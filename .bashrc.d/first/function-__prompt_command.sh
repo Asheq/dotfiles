@@ -33,9 +33,8 @@ function __prompt_command() {
   local reset_color='\[\e[0m\]'
 
   # Set PS1
-  PS1="${exit_code_color}"
+  PS1="${faded_color}"
   PS1+='┌─ '
-  PS1+="${faded_color}"
   PS1+='$(pwd_head)'
   PS1+="${bright_color}"
   PS1+='$(pwd_tail) '
@@ -49,8 +48,9 @@ function __prompt_command() {
     PS1+='[  \h] '
   fi
   PS1+='\n'
+  PS1+='└─'
   PS1+="${exit_code_color}"
-  PS1+='└─❱❱❱ '
+  PS1+='❱❱❱ '
   PS1+="${reset_color}"
 }
 
