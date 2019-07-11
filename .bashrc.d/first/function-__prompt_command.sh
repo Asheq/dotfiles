@@ -1,14 +1,16 @@
 if [ "${USE_FANCY_GLYPHS}" = "yes" ]; then
   # TODO: Use glyphs
+  hostname_symbol='h'
   jobs_symbol='j'
   not_login_shell_symbol='»'
-  shell_level_symbol='sh'
-  user_symbol='u '
+  shell_level_symbol='s'
+  user_symbol='u'
 else
+  hostname_symbol='h '
   jobs_symbol='j'
   not_login_shell_symbol='»'
-  shell_level_symbol='sh'
-  user_symbol='u '
+  shell_level_symbol='s'
+  user_symbol='u'
 fi
 
 # TODO: Change the [ to [[
@@ -41,13 +43,13 @@ function __prompt_command() {
   PS1+='$(pwd_tail) '
   PS1+="${faded_color}"
   PS1+='$(parse_git_branch)'
-  PS1+='$(jobs_count_flag)'
-  PS1+='$(is_not_login_shell_flag)'
-  # PS1+='$(shell_level_flag)'
   PS1+='$(user_flag)'
   if [ -n "${SSH_CONNECTION}" ]; then
-    PS1+='[  \h] '
+    PS1+='[${hostname_symbol} \h] '
   fi
+  PS1+='$(jobs_count_flag)'
+  # PS1+='$(shell_level_flag)'
+  PS1+='$(is_not_login_shell_flag)'
   PS1+='\n'
   PS1+="${exit_code_color}"
   PS1+='└─❱ '
@@ -83,18 +85,10 @@ function pwd_tail() {
   echo "${l_tail}"
 }
 
-function is_not_login_shell_flag() {
-  if ! shopt -q login_shell ; then
-    echo "[${not_login_shell_symbol}] "
-  fi
-}
-
-function shell_level_flag() {
-  if [ "${SHLVL}" -ne 0 ] ; then
-    local flag='['
-    flag+=$(repeat "${shell_level_symbol}" "${SHLVL}")
-    flag+='] '
-    echo "${flag}"
+function user_flag() {
+  local username="$(whoami)"
+  if [ "${username}" != "${LOGNAME}" ] ; then
+    echo "[${user_symbol} ${username}] "
   fi
 }
 
@@ -108,10 +102,18 @@ function jobs_count_flag() {
   fi
 }
 
-function user_flag() {
-  local username="$(whoami)"
-  if [ "${username}" != "${LOGNAME}" ] ; then
-    echo "[${user_symbol} ${username}] "
+function shell_level_flag() {
+  if [ "${SHLVL}" -ne 0 ] ; then
+    local flag='['
+    flag+=$(repeat "${shell_level_symbol}" "${SHLVL}")
+    flag+='] '
+    echo "${flag}"
+  fi
+}
+
+function is_not_login_shell_flag() {
+  if ! shopt -q login_shell ; then
+    echo "[${not_login_shell_symbol}] "
   fi
 }
 
