@@ -12,10 +12,13 @@
 # ------------------------------------------------------------------------------
 # Source ~/.profile and ~/.bashrc
 # ------------------------------------------------------------------------------
+
+echo -n '.bash_profile:'
 if [[ -f "${HOME}/.profile" ]] ; then
   source "${HOME}/.profile"
 fi
 
+echo -n '.bash_rc:'
 if [[ -f "${HOME}/.bashrc" ]] ; then
   source "${HOME}/.bashrc"
 fi

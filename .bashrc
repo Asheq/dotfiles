@@ -50,7 +50,6 @@ if [[ "${USE_CUSTOM_SHELL_SETTINGS}" == "yes" ]]; then
   source_files_recursively "${HOME}/.bashrc.d/first"
   echo -n '6'
   source_files_recursively "${HOME}/.bashrc.d/second"
-  echo -n '7'
-  echo ':Done'
+  echo '7'
 fi
 
