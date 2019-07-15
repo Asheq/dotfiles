@@ -13,47 +13,44 @@ else
   user_symbol='u'
 fi
 
-# TODO: Change the [ to [[
+# Color palette
+# Reference: https://www.tecmint.com/customize-bash-colors-terminal-prompt-linux
+colors_reset='\[\e[0m\]'
+colors_bright='\[\e[1;39m\]' # bold;brightwhite
+colors_faded='\[\e[0;37m\]'  # normal;white
+colors_error='\[\e[0;31m\]'  # normal;red
+colors_okay='\[\e[0;34m\]'   # normal;blue
 
 # ------------------------------------------------------------------------------
 # The all-important __prompt_command function
 # ------------------------------------------------------------------------------
 function __prompt_command() {
-
-  # Color palette
-  # Reference: https://www.tecmint.com/customize-bash-colors-terminal-prompt-linux
   local exit_code="$?"
-  local bright_color='\[\e[1;39m\]' # bold;brightwhite
-  local faded_color='\[\e[0;37m\]' # normal;white
-
-  local exit_code_color
-  if [ "${exit_code}" != 0 ]; then
-    exit_code_color='\[\e[0;31m\]' # normal;red
+  local colors_exit_code
+  if [[ "${exit_code}" != 0 ]]; then
+    colors_exit_code="${colors_error}"
   else
-    exit_code_color='\[\e[0;34m\]' # normal;blue
+    colors_exit_code="${colors_okay}"
   fi
-  local reset_color='\[\e[0m\]'
 
   # Set PS1
-  PS1="${exit_code_color}"
+  PS1="${colors_exit_code}"
   PS1+='┌─ '
-  PS1+="${faded_color}"
+  PS1+="${colors_faded}"
   PS1+='$(pwd_head)'
-  PS1+="${bright_color}"
+  PS1+="${colors_bright}"
   PS1+='$(pwd_tail) '
-  PS1+="${faded_color}"
-  PS1+='$(parse_git_branch)'
+  PS1+="${colors_faded}"
+  PS1+='$(parse_git_branch)' # really slow
   PS1+='$(user_flag)'
-  if [ -n "${SSH_CONNECTION}" ]; then
-    PS1+='[${hostname_symbol} \h] '
-  fi
-  PS1+='$(jobs_count_flag)'
-  # PS1+='$(shell_level_flag)'
+  PS1+='$(hostname_flag)'
+  PS1+='$(jobs_count_flag)' # slow
+  # PS1+='$(shell_level_flag)' # slow, noisy
   PS1+='$(is_not_login_shell_flag)'
   PS1+='\n'
-  PS1+="${exit_code_color}"
+  PS1+="${colors_exit_code}"
   PS1+='└─❱ '
-  PS1+="${reset_color}"
+  PS1+="${colors_reset}"
 }
 
 # ------------------------------------------------------------------------------
@@ -61,12 +58,12 @@ function __prompt_command() {
 # ------------------------------------------------------------------------------
 function pwd_head() {
   local l_head
-  if [ "${PWD}" = '/' ] || [ "${PWD}" = "${HOME}" ]; then
+  if [[ "${PWD}" = '/' ]] || [[ "${PWD}" = "${HOME}" ]]; then
     l_head=''
   else
     l_head="${PWD%/*}"
     [[ "${l_head}" =~ ^"$HOME"(/|$) ]] && l_head="~${l_head#$HOME}"
-    if [ "${l_head}" = '/' ]; then
+    if [[ "${l_head}" = '/' ]]; then
       l_head="/"
     else
       l_head="${l_head}/"
@@ -77,9 +74,9 @@ function pwd_head() {
 
 function pwd_tail() {
   local l_tail
-  if [ "${PWD}" = "${HOME}" ]; then
+  if [[ "${PWD}" = "${HOME}" ]]; then
     l_tail='~'
-  elif [ "${PWD}" = '/' ]; then
+  elif [[ "${PWD}" = '/' ]]; then
     l_tail='/'
   else
     l_tail="${PWD##*/}"
@@ -88,15 +85,20 @@ function pwd_tail() {
 }
 
 function user_flag() {
-  local username="$(whoami)"
-  if [ "${username}" != "${LOGNAME}" ] ; then
-    echo "[${user_symbol} ${username}] "
+  if [[ "${USER}" != "${LOGNAME}" ]] ; then
+    echo "[${user_symbol} ${USER}] "
+  fi
+}
+
+function hostname_flag() {
+  if [[ -n "${SSH_CONNECTION}" ]]; then
+    echo "[${hostname_symbol} ${HOSTNAME}] "
   fi
 }
 
 function jobs_count_flag() {
   local count="$(\jobs | wc -l)"
-  if [ "${count}" -ne 0 ] ; then
+  if [[ "${count}" -ne 0 ]] ; then
     local flag='['
     flag+=$(repeat "${jobs_symbol}" "${count}")
     flag+='] '
@@ -105,7 +107,7 @@ function jobs_count_flag() {
 }
 
 function shell_level_flag() {
-  if [ "${SHLVL}" -ne 0 ] ; then
+  if [[ "${SHLVL}" -ne 0 ]] ; then
     local flag='['
     flag+=$(repeat "${shell_level_symbol}" "${SHLVL}")
     flag+='] '
@@ -122,7 +124,7 @@ function is_not_login_shell_flag() {
 function repeat() {
   local str=$1
   local num=$2
-  if [ "${num}" -ne 0 ] ; then
+  if [[ "${num}" -ne 0 ]] ; then
     printf "${str}"'%.0s' $(seq 1 "${num}")
   fi
 }
