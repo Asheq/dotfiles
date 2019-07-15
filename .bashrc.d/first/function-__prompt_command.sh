@@ -35,8 +35,6 @@ function __prompt_command() {
 
   # Set PS1
   PS1='\n'
-  PS1+="${colors_exit_code}"
-  PS1+='┌─ '
   PS1+="${colors_faded}"
   PS1+='$(pwd_head)'
   PS1+="${colors_bright}"
@@ -50,7 +48,7 @@ function __prompt_command() {
   PS1+='$(is_not_login_shell_flag)'
   PS1+='\n'
   PS1+="${colors_exit_code}"
-  PS1+='└─❱ '
+  PS1+=':'
   PS1+="${colors_reset}"
 }
 
