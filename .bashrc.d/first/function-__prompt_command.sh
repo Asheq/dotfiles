@@ -34,7 +34,8 @@ function __prompt_command() {
   fi
 
   # Set PS1
-  PS1="${colors_exit_code}"
+  PS1='\n'
+  PS1+="${colors_exit_code}"
   PS1+='┌─ '
   PS1+="${colors_faded}"
   PS1+='$(pwd_head)'
