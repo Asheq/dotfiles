@@ -13,8 +13,6 @@
 # Source ~/.profile and ~/.bashrc
 # ------------------------------------------------------------------------------
 
-echo -n ':'
-
 if [[ -f "${HOME}/.profile" ]] ; then
   source "${HOME}/.profile"
 fi
