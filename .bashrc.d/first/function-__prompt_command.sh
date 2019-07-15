@@ -64,7 +64,7 @@ function pwd_head() {
   if [ "${PWD}" = '/' ] || [ "${PWD}" = "${HOME}" ]; then
     l_head=''
   else
-    l_head="$(dirname "${PWD}")"
+    l_head="${PWD%/*}"
     [[ "${l_head}" =~ ^"$HOME"(/|$) ]] && l_head="~${l_head#$HOME}"
     if [ "${l_head}" = '/' ]; then
       l_head="/"
@@ -79,8 +79,10 @@ function pwd_tail() {
   local l_tail
   if [ "${PWD}" = "${HOME}" ]; then
     l_tail='~'
+  elif [ "${PWD}" = '/' ]; then
+    l_tail='/'
   else
-    l_tail="$(basename "${PWD}")"
+    l_tail="${PWD##*/}"
   fi
   echo "${l_tail}"
 }
