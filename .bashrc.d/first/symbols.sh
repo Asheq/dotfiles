@@ -1,4 +1,3 @@
-# Symbols
 symbols_hostname='H'
 symbols_jobs='J'
 symbols_not_login_shell='NL'
