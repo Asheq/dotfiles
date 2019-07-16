@@ -1,5 +1,5 @@
 [user]
-	email = asheq.imran@ge.com
+	email = asheq.imran@servicemax.com
 	name = Asheq Imran
 [filter "lfs"]
 	clean = git-lfs clean -- %f

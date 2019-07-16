@@ -1,7 +1,11 @@
-### Some of My Favorite Tools
+### Main Tools
 * Terminal Emulator: [kitty](https://sw.kovidgoyal.net/kitty/)
 * Terminal Multiplexer: [tmux](https://github.com/tmux/tmux)
-* Shell: [bash](https://www.gnu.org/software/bash/)
+* Shell: [GNU bash](https://www.gnu.org/software/bash/)
+* CLI Line Editing: [GNU Readline](https://tiswww.case.edu/php/chet/readline/rltop.html)
 * Text Editor: [neovim](https://neovim.io/) (my vim configuration is [here](https://github.com/Asheq/vim-config))
-* Fuzzy Finder: [fzf](https://github.com/junegunn/fzf)
+* MacOS Keyboard Customizer: [Karabiner](https://pqrs.org/osx/karabiner/)
 * Version Control: [git](https://git-scm.com/)
+* Code Searcher: [ag](https://geoff.greer.fm/ag/)
+* Code Formatter: [Prettier](https://prettier.io/)
+* Fuzzy Finder: [fzf](https://github.com/junegunn/fzf)
