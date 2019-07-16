@@ -1,27 +1,3 @@
-if [ "${USE_FANCY_GLYPHS}" = "yes" ]; then
-  # TODO: Use glyphs
-  hostname_symbol='h'
-  jobs_symbol='j'
-  not_login_shell_symbol='»'
-  shell_level_symbol='s'
-  user_symbol='u'
-else
-  hostname_symbol='h '
-  jobs_symbol='j'
-  not_login_shell_symbol='»'
-  shell_level_symbol='s'
-  user_symbol='u'
-fi
-
-# Colors
-# TODO: Replace with tput? tput causes propblems
-# Reference: https://www.tecmint.com/customize-bash-colors-terminal-prompt-linux
-colors_bold_white='\[\e[1;39m\]'
-colors_white='\[\e[0;37m\]'
-colors_bold_red='\[\e[1;31m\]'
-colors_bold_blue='\[\e[1;34m\]'
-colors_reset='\[\e[0m\]'
-
 # ------------------------------------------------------------------------------
 # The all-important __prompt_command function
 # ------------------------------------------------------------------------------
@@ -29,18 +5,18 @@ function __prompt_command() {
   local exit_code="$?"
   local colors_exit_code
   if [[ "${exit_code}" != 0 ]]; then
-    colors_exit_code="${colors_bold_red}"
+    colors_exit_code="${ANSI_RED}"
   else
-    colors_exit_code="${colors_bold_blue}"
+    colors_exit_code="${ANSI_BLUE}"
   fi
 
   # Set PS1
   PS1='\n'
-  PS1+="${colors_white}"
+  PS1+="${ANSI_WHITE}"
   PS1+='$(pwd_head)'
-  PS1+="${colors_bold_white}"
+  PS1+="${ANSI_WHITE_BOLD}"
   PS1+='$(pwd_tail) '
-  PS1+="${colors_white}"
+  PS1+="${ANSI_WHITE}"
   PS1+='$(parse_git_branch)' # really slow
   PS1+='$(user_flag)'
   PS1+='$(hostname_flag)'
@@ -50,7 +26,7 @@ function __prompt_command() {
   PS1+='\n'
   PS1+="${colors_exit_code}"
   PS1+=':'
-  PS1+="${colors_reset}"
+  PS1+="${ANSI_RESET}"
 }
 
 # ------------------------------------------------------------------------------
@@ -86,13 +62,13 @@ function pwd_tail() {
 
 function user_flag() {
   if [[ "${USER}" != "${LOGNAME}" ]] ; then
-    echo "[${user_symbol} ${USER}] "
+    echo "[${symbols_user} ${USER}] "
   fi
 }
 
 function hostname_flag() {
   if [[ -n "${SSH_CONNECTION}" ]]; then
-    echo "[${hostname_symbol} ${HOSTNAME}] "
+    echo "[${symbols_hostname} ${HOSTNAME}] "
   fi
 }
 
@@ -100,7 +76,7 @@ function jobs_count_flag() {
   local count="$(\jobs | wc -l)"
   if [[ "${count}" -ne 0 ]] ; then
     local flag='['
-    flag+=$(repeat "${jobs_symbol}" "${count}")
+    flag+=$(repeat "${symbols_jobs}" "${count}")
     flag+='] '
     echo "${flag}"
   fi
@@ -109,7 +85,7 @@ function jobs_count_flag() {
 function shell_level_flag() {
   if [[ "${SHLVL}" -ne 0 ]] ; then
     local flag='['
-    flag+=$(repeat "${shell_level_symbol}" "${SHLVL}")
+    flag+=$(repeat "${symbols_shell_level}" "${SHLVL}")
     flag+='] '
     echo "${flag}"
   fi
@@ -117,7 +93,7 @@ function shell_level_flag() {
 
 function is_not_login_shell_flag() {
   if ! shopt -q login_shell ; then
-    echo "[${not_login_shell_symbol}] "
+    echo "[${symbols_not_login_shell}] "
   fi
 }
 
