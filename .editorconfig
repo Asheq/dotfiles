@@ -1,6 +1,6 @@
 # https://EditorConfig.org
 
-# Top-most EditorConfig file
+# Top-most .editorconfig file
 root = true
 
 # Set default indent style and indent size

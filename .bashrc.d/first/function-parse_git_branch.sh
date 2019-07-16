@@ -8,7 +8,7 @@ function parse_git_branch() {
   fi
 }
 
-function parse_git_dirty { # TODO: slow
+function parse_git_dirty { # TODO: This is slow
   status=`git status 2>&1 | tee`
   dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
   untracked=`echo -n "${status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?"`

@@ -1,4 +1,4 @@
-# NOTE: Strive to keep this file strictly POSIX-compliant.
+# NOTE: Strive to keep this file strictly POSIX-compliant
 
 # ------------------------------------------------------------------------------
 # Modify environment variables
