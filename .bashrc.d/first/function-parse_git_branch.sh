@@ -2,15 +2,13 @@ function parse_git_branch() {
   BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
   if [ ! "${BRANCH}" == "" ]
   then
-    # STAT=`parse_git_dirty`
-    # echo "[${symbol_branch} ${BRANCH}${STAT}] "
     echo "[${symbol_branch} ${BRANCH}] "
   else
     echo ""
   fi
 }
 
-function parse_git_dirty {
+function parse_git_dirty { # TODO: slow
   status=`git status 2>&1 | tee`
   dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
   untracked=`echo -n "${status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?"`
