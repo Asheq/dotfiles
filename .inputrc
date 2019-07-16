@@ -22,6 +22,5 @@ set enable-bracketed-paste on
 "\e[Z": menu-complete-backward
 
 # Up and Down
-# TODO: Use Ctrl-p and Ctrl-n instead
 "\e[A": history-search-backward
 "\e[B": history-search-forward

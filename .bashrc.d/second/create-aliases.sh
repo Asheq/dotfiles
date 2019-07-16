@@ -1,24 +1,4 @@
 # ------------------------------------------------------------------------------
-# Colors
-# TODO: Move
-# ------------------------------------------------------------------------------
-BLACK=$(tput setaf 0)
-RED=$(tput setaf 1)
-GREEN=$(tput setaf 2)
-YELLOW=$(tput setaf 3)
-LIME_YELLOW=$(tput setaf 190)
-POWDER_BLUE=$(tput setaf 153)
-BLUE=$(tput setaf 4)
-MAGENTA=$(tput setaf 5)
-CYAN=$(tput setaf 6)
-WHITE=$(tput setaf 7)
-BRIGHT=$(tput bold)
-NORMAL=$(tput sgr0)
-BLINK=$(tput blink)
-REVERSE=$(tput smso)
-UNDERLINE=$(tput smul)
-
-# ------------------------------------------------------------------------------
 # Eliminate old habits
 # ------------------------------------------------------------------------------
 alias jobs='echo "${RED}Do not use jobs unless you really need to${NORMAL}"'
@@ -34,8 +14,8 @@ alias md='mkdir'
 alias rd='rmdir'
 alias o='open'
 alias r='ranger'
-alias c='\cd'
 alias cd='echo "${RED}Use c${NORMAL}"'
+alias c='\cd'
 complete -o dirnames -o nospace -F _fzf_dir_completion c
 
 # ------------------------------------------------------------------------------
@@ -85,7 +65,6 @@ alias now='date +"%a %b %-d %-I:%M:%S %p"'
 # ------------------------------------------------------------------------------
 # git (inspired by oh-my-zsh)
 # ------------------------------------------------------------------------------
-# TODO: Use custom fzf function for commands where I need to select something
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'

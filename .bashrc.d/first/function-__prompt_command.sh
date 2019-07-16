@@ -13,13 +13,14 @@ else
   user_symbol='u'
 fi
 
-# Color palette
+# Colors
+# TODO: Replace with tput?
 # Reference: https://www.tecmint.com/customize-bash-colors-terminal-prompt-linux
+colors_bold_white='\[\e[1;39m\]'
+colors_white='\[\e[0;37m\]'
+colors_bold_red='\[\e[1;31m\]'
+colors_bold_blue='\[\e[1;34m\]'
 colors_reset='\[\e[0m\]'
-colors_bright='\[\e[1;39m\]' # bold;brightwhite
-colors_faded='\[\e[0;37m\]'  # normal;white
-colors_error='\[\e[0;31m\]'  # normal;red
-colors_okay='\[\e[0;34m\]'   # normal;blue
 
 # ------------------------------------------------------------------------------
 # The all-important __prompt_command function
@@ -28,18 +29,18 @@ function __prompt_command() {
   local exit_code="$?"
   local colors_exit_code
   if [[ "${exit_code}" != 0 ]]; then
-    colors_exit_code="${colors_error}"
+    colors_exit_code="${colors_bold_red}"
   else
-    colors_exit_code="${colors_okay}"
+    colors_exit_code="${colors_bold_blue}"
   fi
 
   # Set PS1
   PS1='\n'
-  PS1+="${colors_faded}"
+  PS1+="${colors_white}"
   PS1+='$(pwd_head)'
-  PS1+="${colors_bright}"
+  PS1+="${colors_bold_white}"
   PS1+='$(pwd_tail) '
-  PS1+="${colors_faded}"
+  PS1+="${colors_white}"
   PS1+='$(parse_git_branch)' # really slow
   PS1+='$(user_flag)'
   PS1+='$(hostname_flag)'
