@@ -14,7 +14,7 @@ else
 fi
 
 # Colors
-# TODO: Replace with tput?
+# TODO: Replace with tput? tput causes propblems
 # Reference: https://www.tecmint.com/customize-bash-colors-terminal-prompt-linux
 colors_bold_white='\[\e[1;39m\]'
 colors_white='\[\e[0;37m\]'
