@@ -8,6 +8,8 @@ function __prompt_command() {
   fi
 
   PS1='\n'
+  PS1+="${colors_exit_code}"
+  PS1+="┏━ "
   PS1+="${ANSI_WHITE}"
   PS1+='$(pwd_head)'
   PS1+="${ANSI_WHITE_BOLD}"
@@ -20,6 +22,6 @@ function __prompt_command() {
   PS1+='$(is_not_login_shell_flag)'
   PS1+='\n'
   PS1+="${colors_exit_code}"
-  PS1+=':'
+  PS1+='┗━ '
   PS1+="${ANSI_RESET}"
 }
