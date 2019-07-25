@@ -5,5 +5,4 @@ function printargs() {
     echo "Argument: ${arg}"
   done
   echo "Count: $#"
-  ls
 }
