@@ -9,3 +9,21 @@
 * Code searcher: [ag](https://geoff.greer.fm/ag/)
 * Code formatter: [Prettier](https://prettier.io/)
 * Fuzzy finder: [fzf](https://github.com/junegunn/fzf)
+
+### Comment format
+
+Comments in this repo are written in sentence-case, where possible.
+
+```bash
+# This is a comment
+
+# ------------------------------------------------------------------------------
+# This is a special title comment
+# ------------------------------------------------------------------------------
+
+echo 'hi' # This is a comment to the right of code
+
+# This is a comment. There are periods only because there are multiple sentences.
+
+# someVar is a variable. Identifier case is not changed.
+```
