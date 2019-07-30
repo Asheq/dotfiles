@@ -1,8 +1,8 @@
-function parse_git_branch() {
+function git_branch_flag() {
   BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
   if [ ! "${BRANCH}" == "" ]
   then
-    echo "[${symbol_branch} ${BRANCH}] "
+    echo "  ${symbols_branch} ${BRANCH}"
   else
     echo ""
   fi

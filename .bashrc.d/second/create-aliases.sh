@@ -2,6 +2,8 @@
 # Eliminate old habits
 # ------------------------------------------------------------------------------
 alias jobs='echo "${RED}Do not use jobs unless you really need to${NORMAL}"'
+alias cd='echo "${RED}Use c${NORMAL}"'
+alias ls='echo "${RED}Use one of: l la ll lg${NORMAL}"'
 
 # ------------------------------------------------------------------------------
 # Basic file management
@@ -14,18 +16,16 @@ alias md='mkdir'
 alias rd='rmdir'
 alias o='open'
 alias r='ranger'
-alias cd='echo "${RED}Use c${NORMAL}"'
 alias c='\cd'
 complete -o dirnames -o nospace -F _fzf_dir_completion c
 
 # ------------------------------------------------------------------------------
 # List files
 # ------------------------------------------------------------------------------
-alias ls='echo "${RED}Use one of: l la ll lg${NORMAL}"'
 if command -v gls >/dev/null 2>&1 ; then
-	alias l='\gls -hFN1 --color --group-directories-first'
+  alias l='gls -hFN1 --color --group-directories-first'
 else
-	alias l='\ls -hFG'
+  alias l='\ls -hFG'
 fi
 alias la='l -A'
 alias ll='l -la'
