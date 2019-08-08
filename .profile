@@ -35,15 +35,16 @@ export DISPLAY=:0
 
 if [ "${USE_CUSTOM_SHELL_SETTINGS}" == "yes" ]; then
   # EDITOR
-  if command -v nvim > /dev/null; then
-    export EDITOR=nvim
-    export MANPAGER='nvim -c "set ft=man" -'
-  else
-    export EDITOR=vim
-  fi
-  export VISUAL="${EDITOR}"
+  export EDITOR=nvim
+
+  # MANPAGER
+  export MANPAGER='nvim -c "set ft=man" -'
 
   # FZF
   export FZF_DEFAULT_COMMAND='ag -g ""'
   export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
+else
+  export EDITOR='vim -u NONE'
 fi
+
+export VISUAL="${EDITOR}"

@@ -44,5 +44,6 @@ if [[ "${USE_CUSTOM_SHELL_SETTINGS}" == "yes" ]]; then
   # commands in function body definitions
   source_files_recursively "${HOME}/.bashrc.d/first"
   source_files_recursively "${HOME}/.bashrc.d/second"
+else
+  alias vim='vim -u NONE'
 fi
-
