@@ -4,6 +4,7 @@
 alias jobs='echo "${RED}Do not use jobs unless you really need to${NORMAL}"'
 alias cd='echo "${RED}Use c${NORMAL}"'
 alias ls='echo "${RED}Use one of: l la ll lg${NORMAL}"'
+alias nus='echo "${RED}Use nud${NORMAL}"'
 
 # ------------------------------------------------------------------------------
 # Basic file management
@@ -50,7 +51,7 @@ alias tl='tmux list-sessions'
 # nvm
 # ------------------------------------------------------------------------------
 alias nu='nvm use'
-alias nus='nvm use 8.14.1'
+alias nud='nvm use ${NODE_DEFAULT_VERSION}'
 
 # ------------------------------------------------------------------------------
 # Miscellaneous

@@ -4,6 +4,8 @@
 # Modify environment variables
 # ------------------------------------------------------------------------------
 
+NODE_DEFAULT_VERSION='8.14.1'
+
 # PATH
 if [ -d "${HOME}/bin" ] ; then
   PATH="${HOME}/bin:${PATH}"
@@ -11,6 +13,10 @@ fi
 
 if [ -d "${HOME}/.cargo/bin" ] ; then
   PATH="${HOME}/.cargo/bin:${PATH}"
+fi
+
+if [ -d "${HOME}/.nvm/versions/node/v${NODE_DEFAULT_VERSION}/bin" ] ; then
+  PATH="${HOME}/.nvm/versions/node/v${NODE_DEFAULT_VERSION}/bin:${PATH}"
 fi
 
 if [ -d "/usr/local/lib/ruby/gems/2.5.0/bin" ] ; then
