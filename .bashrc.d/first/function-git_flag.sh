@@ -1,3 +1,10 @@
+GIT_PS1_SHOWDIRTYSTATE=yes
+GIT_PS1_SHOWSTASHSTATE=yes
+GIT_PS1_SHOWUNTRACKEDFILES=yes
+GIT_PS1_SHOWUPSTREAM='verbose name'
+GIT_PS1_DESCRIBE_STYLE='default'
+GIT_PS1_SHOWCOLORHINTS=yes
+
 function git_flag() {
   echo "  ${symbols_branch}$(__git_ps1)"
 }
