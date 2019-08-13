@@ -9,9 +9,10 @@
 [[ "$-" != *i* ]] && return
 
 # ------------------------------------------------------------------------------
-# Source git completion scripts
+# Source git completion and prompt scripts
 # ------------------------------------------------------------------------------
 [[ -s ~/.config/git/git-completion.bash ]] && source ~/.config/git/git-completion.bash
+[[ -s ~/.config/git/git-prompt.sh ]] && source ~/.config/git/git-prompt.sh
 
 # ------------------------------------------------------------------------------
 # Source nvm's scripts

@@ -1,3 +1,7 @@
+function git_flag() {
+  echo "  ${symbols_branch}$(__git_ps1)"
+}
+
 function git_branch_flag() {
   BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
   if [ ! "${BRANCH}" == "" ]
