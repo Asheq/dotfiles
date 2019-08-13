@@ -1,7 +1,7 @@
 function __prompt_command() {
   local exit_code="$?"
   if [[ "${exit_code}" != 0 ]]; then
-    exit_symbol="  ${ANSI_RED_FG}${symbols_exit_code_fail}${ANSI_WHITE_FG}"
+    exit_symbol="  ${ANSI_RED_FG}${symbols_exit_code_fail} ${exit_code}${ANSI_WHITE_FG}"
   else
     exit_symbol="  ${ANSI_GREEN_FG}${symbols_exit_code_success}${ANSI_WHITE_FG}"
   fi
