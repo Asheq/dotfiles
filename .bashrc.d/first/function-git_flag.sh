@@ -3,7 +3,6 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWUPSTREAM='verbose name'
 GIT_PS1_DESCRIBE_STYLE='branch'
-GIT_PS1_SHOWCOLORHINTS=true
 
 function git_flag() {
   echo "  ${symbols_branch}$(__git_ps1)"
