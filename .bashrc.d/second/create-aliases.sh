@@ -51,7 +51,7 @@ alias tl='tmux list-sessions'
 # nvm
 # ------------------------------------------------------------------------------
 alias nu='nvm use'
-alias nud='nvm use ${NODE_DEFAULT_VERSION}'
+alias nud='nvm use ${DEFAULT_NODE_VERSION}'
 
 # ------------------------------------------------------------------------------
 # Miscellaneous

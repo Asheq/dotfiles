@@ -17,6 +17,9 @@
 # ------------------------------------------------------------------------------
 # Source nvm's scripts
 # ------------------------------------------------------------------------------
+
+# Avoid using the slow `nvm use` at startup.
+# We already have a default node available in our PATH.
 [[ -s "$NVM_DIR/nvm.sh" ]]          && source "$NVM_DIR/nvm.sh" --no-use
 [[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
 
