@@ -1,6 +1,6 @@
 function setproxy() {
-  local proxy_url='http://proxy-src.research.ge.com:8080'
-  local no_proxy_urls='127.0.0.1,10.*,3.*,localhost,github.build.ge.com,openge.ge.com,ice.ge.com,g2ua6181mjne.logon.ds.ge.com'
+  local proxy_url=''
+  local no_proxy_urls=''
 
   # Uppercase letters
   export {HTTP,HTTPS,FTP,ALL}_PROXY="${proxy_url}"

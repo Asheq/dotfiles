@@ -16,10 +16,10 @@
 !.editorconfig
 !.gitignore
 !.inputrc
-!.jsbeautifyrc
 !.prettierrc
 !.profile
 !.thesaurus
 !.thesaurus/README.md
 !.tmux.conf
 !README.md
+.DS_Store
