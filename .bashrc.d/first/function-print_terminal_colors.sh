@@ -61,7 +61,7 @@ function print_terminal_colors() {
 # 2 - Dim
 # 3 - Italic
 # 4 - Underline
-# 5 - Blink
+# 5 - Blink (does not work in most terminal emulators)
 # 6 - ???
 # 7 - Reverse (invert the foreground and background colors)
 # 8 - Hidden (useful for passwords)
@@ -73,7 +73,7 @@ function print_terminal_colors() {
 # 22 - Reset dim
 # 23 - Reset italic
 # 24 - Reset underline
-# 25 - Reset blink
+# 25 - Reset blink (does not work in most terminal emulators)
 # 26 - Reset ???
 # 27 - Reset reverse
 # 28 - Reset hidden
