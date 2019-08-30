@@ -20,14 +20,14 @@
 
 # Avoid using the slow `nvm use` at startup.
 # We should already have a default node available in our PATH.
-[[ -s "$NVM_DIR/nvm.sh" ]]          && source "$NVM_DIR/nvm.sh" --no-use
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh" --no-use
 [[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
 
 if [[ "${USE_CUSTOM_SHELL_SETTINGS}" == "yes" ]]; then
   # ------------------------------------------------------------------------------
   # Source fzf's scripts
   # ------------------------------------------------------------------------------
-  [[ -f ~/.fzf.bash ]]                && source ~/.fzf.bash
+  [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
 
   # ------------------------------------------------------------------------------
   # Source individual files
