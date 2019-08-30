@@ -15,7 +15,6 @@ if [ -d "${HOME}/.cargo/bin" ] ; then
   PATH="${HOME}/.cargo/bin:${PATH}"
 fi
 
-# Ensure we have a default node version in our PATH at startup
 if [ -d "${HOME}/.nvm/versions/node/v${DEFAULT_NODE_VERSION}/bin" ] ; then
   PATH="${HOME}/.nvm/versions/node/v${DEFAULT_NODE_VERSION}/bin:${PATH}"
 fi
