@@ -4,7 +4,7 @@
 ANSI_RESET='\[\e[0m\]'
 ANSI_BLACK_FG='\[\e[0;30m\]'
 ANSI_RED_FG='\[\e[0;31m\]'
-ANSI_GREEN_FG='\[\e[0;32;40m\]'
+ANSI_GREEN_FG='\[\e[0;32m\]'
 ANSI_YELLOW_FG='\[\e[0;33m\]'
 ANSI_BLUE_FG='\[\e[0;34m\]'
 ANSI_MAGENTA_FG='\[\e[0;35m\]'
