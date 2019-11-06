@@ -1,12 +1,12 @@
 ### Main tools
 * Terminal emulator: [kitty](https://sw.kovidgoyal.net/kitty/)
 * Terminal multiplexer: [tmux](https://github.com/tmux/tmux)
-* Shell: [GNU bash](https://www.gnu.org/software/bash/)
+* Shell: [GNU Bash](https://www.gnu.org/software/bash/)
 * CLI line editing: [GNU Readline](https://tiswww.case.edu/php/chet/readline/rltop.html)
-* Text editor: [neovim](https://neovim.io/) (my vim configuration is [here](https://github.com/Asheq/vim-config))
-* MacOS keyboard customizer: [Karabiner](https://pqrs.org/osx/karabiner/)
-* Version control: [git](https://git-scm.com/)
-* Code searcher: [ag](https://geoff.greer.fm/ag/)
+* Text editor: [Neovim](https://neovim.io/) (my vim configuration is [here](https://github.com/Asheq/vim-config))
+* MacOS keyboard customizer: [Karabiner-Elements](https://pqrs.org/osx/karabiner/)
+* Version control: [Git](https://git-scm.com/)
+* Code searcher: [The Silver Searcher](https://geoff.greer.fm/ag/)
 * Code formatter: [Prettier](https://prettier.io/)
 * Fuzzy finder: [fzf](https://github.com/junegunn/fzf)
 
