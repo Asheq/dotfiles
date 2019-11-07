@@ -10,7 +10,7 @@ function __prompt_command() {
   PS1+="${ANSI_LIGHT_GRAY_FG}"
   PS1+="┌─ "
   PS1+='$(pwd_head)'
-  PS1+="${ANSI_DEFAULT_FG_BOLD}"
+  PS1+="${ANSI_DEFAULT_FG}"
   PS1+='$(pwd_tail)'
   PS1+="${ANSI_LIGHT_GRAY_FG}"
   PS1+='$(git_flag)'

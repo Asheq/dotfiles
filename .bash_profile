@@ -13,6 +13,13 @@
 # Source ~/.profile and ~/.bashrc
 # ------------------------------------------------------------------------------
 
+# ------------------------------------------------------------------------------
+# Environment variables that control the rest of the execution
+# TODO: Set conditionally based on environment? Or always set "yes"?
+# ------------------------------------------------------------------------------
+export USE_CUSTOM_SHELL_SETTINGS=yes
+export USE_FANCY_GLYPHS=yes
+
 if [[ -f "${HOME}/.profile" ]] ; then
   source "${HOME}/.profile"
 fi
