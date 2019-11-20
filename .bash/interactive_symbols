@@ -17,3 +17,4 @@ else
   symbols_not_login_shell='NL'
   symbols_user='U'
 fi
+

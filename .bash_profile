@@ -1,29 +1,14 @@
-# "The personal initialization file, executed for login shells"
-#
-# When bash is invoked as a login shell, it first executes commands from
-# /etc/profile. It then looks for (in order):
+# When bash starts as a login shell (whether interactive or non-interactive), it
+# first executes /etc/profile. It then looks for (in
+# order):
 #    ~/.bash_profile
 #    ~/.bash_login
 #    ~/.profile
-# It executes _only_ the first one. Also, because it is started as a _login_
-# shell, bash does not execute ~/.bashrc. This file ensures both ~/.profile and
-# ~/.bashrc are executed.
+# It executes _only_ the first one it finds.
 
-# ------------------------------------------------------------------------------
-# Source ~/.profile and ~/.bashrc
-# ------------------------------------------------------------------------------
-
-# ------------------------------------------------------------------------------
-# Environment variables that control the rest of the execution
-# TODO: Set conditionally based on environment? Or always set "yes"?
-# ------------------------------------------------------------------------------
-export USE_CUSTOM_SHELL_SETTINGS=yes
-export USE_FANCY_GLYPHS=yes
-
-if [[ -f "${HOME}/.profile" ]] ; then
-  source "${HOME}/.profile"
-fi
-
-if [[ -f "${HOME}/.bashrc" ]] ; then
-  source "${HOME}/.bashrc"
+. ~/.bash/env
+. ~/.bash/login
+# TODO: Is there a better way to detect if this bash is interactive?
+if [ "$PS1" ]; then
+    . ~/.bash/interactive
 fi

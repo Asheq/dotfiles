@@ -1,0 +1,30 @@
+. ~/.shell/interactive
+
+# ------------------------------------------------------------------------------
+# Source git completion and prompt scripts
+# ------------------------------------------------------------------------------
+[[ -s ~/.config/git/git-completion.bash ]] && source ~/.config/git/git-completion.bash
+[[ -s ~/.config/git/git-prompt.sh ]] && source ~/.config/git/git-prompt.sh
+
+# ------------------------------------------------------------------------------
+# Source nvm's scripts
+# ------------------------------------------------------------------------------
+
+# Avoid using the slow `nvm use` at startup.
+# We should already have a default node available in our PATH.
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh" --no-use
+[[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
+
+# ------------------------------------------------------------------------------
+# Source fzf's scripts
+# ------------------------------------------------------------------------------
+[[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
+
+# ------------------------------------------------------------------------------
+# Source git completion and prompt scripts
+# ------------------------------------------------------------------------------
+. ~/.bash/interactive_colors
+. ~/.bash/interactive_environment_variables
+. ~/.bash/interactive_functions
+. ~/.bash/interactive_options
+. ~/.bash/interactive_symbols

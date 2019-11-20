@@ -1,0 +1,355 @@
+function __prompt_command() {
+  local exit_code="$?"
+  if [[ "${exit_code}" != 0 ]]; then
+    exit_symbol="  ${ANSI_RED_FG}${symbols_exit_code_fail} ${exit_code}${ANSI_LIGHT_GRAY_FG}"
+  else
+    exit_symbol="  ${ANSI_GREEN_FG}${symbols_exit_code_success}${ANSI_LIGHT_GRAY_FG}"
+  fi
+
+  PS1="\n"
+  PS1+="${ANSI_LIGHT_GRAY_FG}"
+  PS1+="┌─ "
+  PS1+='$(pwd_head)'
+  PS1+="${ANSI_DEFAULT_FG}"
+  PS1+='$(pwd_tail)'
+  PS1+="${ANSI_LIGHT_GRAY_FG}"
+  PS1+='$(git_flag)'
+  PS1+='$(user_flag)'
+  PS1+='$(hostname_flag)'
+  PS1+='$(jobs_count_flag)'
+  PS1+='$(is_not_login_shell_flag)'
+  PS1+="${exit_symbol}"
+  PS1+="\n"
+  PS1+="${ANSI_LIGHT_GRAY_FG}"
+  PS1+='└─ '
+  PS1+="${ANSI_RESET}"
+}
+
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWUPSTREAM='verbose'
+GIT_PS1_DESCRIBE_STYLE='branch'
+
+function git_flag() {
+  echo "  ${symbols_branch}$(__git_ps1)"
+}
+
+function hostname_flag() {
+  if [[ -n "${SSH_CONNECTION}" ]]; then
+    echo "  ${symbols_hostname} ${HOSTNAME}"
+  fi
+}
+
+function jobs_count_flag() {
+  local count="$(\jobs | wc -l | sed 's/^ *\(\d*\)/\1/')"
+  if [[ "${count}" -ne 0 ]] ; then
+    flag+=$(repeat "${symbols_jobs}" "${count}")
+    echo "  ${symbols_jobs} ${count}"
+  fi
+}
+
+function print_terminal_colors() {
+  # Background
+  for clbg in {40..47} {100..107} 49 ; do
+    # Foreground
+    for clfg in {30..37} {90..97} 39 ; do
+      # Formatting
+      for attr in {0..8} ; do
+        # Print the result
+        echo -en "\e[${attr};${clbg};${clfg}m ^[${attr};${clbg};${clfg}m \e[0m"
+      done
+      echo # Newline
+    done
+  done
+}
+
+# Background values
+# =================
+#  40 - Black
+#  41 - Red
+#  42 - Green
+#  43 - Yellow
+#  44 - Blue
+#  45 - Magenta
+#  46 - Cyan
+#  47 - Light gray
+# 100 - Dark gray
+# 101 - Light red
+# 102 - Light green
+# 103 - Light yellow
+# 104 - Light blue
+# 105 - Light magenta
+# 106 - Light cyan
+# 107 - White
+#  49 - Default background color
+
+# Foreground values
+# =================
+# 30 - Black
+# 31 - Red
+# 32 - Green
+# 33 - Yellow
+# 34 - Blue
+# 35 - Magenta
+# 36 - Cyan
+# 37 - Light gray
+# 90 - Dark gray
+# 91 - Light red
+# 92 - Light green
+# 93 - Light yellow
+# 94 - Light blue
+# 95 - Light magenta
+# 96 - Light cyan
+# 97 - White
+# 39 - Default foreground color
+
+# Formatting values
+# =================
+## Set
+## ---
+# 1 - Bold/Bright
+# 2 - Dim
+# 3 - Italic
+# 4 - Underline
+# 5 - Blink (does not work in most terminal emulators)
+# 6 - ???
+# 7 - Reverse (invert the foreground and background colors)
+# 8 - Hidden (useful for passwords)
+
+## Reset
+## -----
+#  0 - Reset all attributes
+# 21 - Reset bold/bright
+# 22 - Reset dim
+# 23 - Reset italic
+# 24 - Reset underline
+# 25 - Reset blink (does not work in most terminal emulators)
+# 26 - Reset ???
+# 27 - Reset reverse
+# 28 - Reset hidden
+
+function print_terminal_colors_256() {
+  for fgbg in 38 48 ; do # Foreground / Background
+    for color in {0..255} ; do # Colors
+      # Display the color
+      printf "\e[${fgbg};5;%sm  %3s  \e[0m" $color $color
+      # Display 6 colors per lines
+      if [ $((($color + 1) % 6)) == 4 ] ; then
+        echo # New line
+      fi
+    done
+    echo # New line
+  done
+}
+
+function printargs() {
+  local arg
+  for arg in "$@"
+  do
+    echo "Argument: ${arg}"
+  done
+  echo "Count: $#"
+}
+
+function pwd_head() {
+  local l_head
+  if [[ "${PWD}" = '/' ]] || [[ "${PWD}" = "${HOME}" ]]; then
+    l_head=''
+  else
+    l_head="${PWD%/*}"
+    [[ "${l_head}" =~ ^"$HOME"(/|$) ]] && l_head="~${l_head#$HOME}"
+    if [[ "${l_head}" = '/' ]]; then
+      l_head="/"
+    else
+      l_head="${l_head}/"
+    fi
+  fi
+  echo "${l_head}"
+}
+
+function pwd_tail() {
+  local l_tail
+  if [[ "${PWD}" = "${HOME}" ]]; then
+    l_tail='~'
+  elif [[ "${PWD}" = '/' ]]; then
+    l_tail='/'
+  else
+    l_tail="${PWD##*/}"
+  fi
+  echo "${l_tail}"
+}
+
+function repeat() {
+  local str=$1
+  local num=$2
+  if [[ "${num}" -ne 0 ]] ; then
+    printf "${str}"'%.0s' $(seq 1 "${num}")
+  fi
+}
+
+function setproxy() {
+  local proxy_url=''
+  local no_proxy_urls=''
+
+  # Uppercase letters
+  export {HTTP,HTTPS,FTP,ALL}_PROXY="${proxy_url}"
+  export NO_PROXY="${no_proxy_urls}"
+
+  # Lowercase letters
+  export {http,https,ftp,all}_proxy="${proxy_url}"
+  export no_proxy="${no_proxy_urls}"
+}
+
+function unsetproxy() {
+  # Uppercase letters
+  unset {HTTP,HTTPS,FTP,ALL}_PROXY
+  unset NO_PROXY
+
+  # Lowercase letters
+  unset {http,https,ftp,all}_proxy
+  unset no_proxy
+}
+
+function shell_level_flag() {
+  if [[ "${SHLVL}" -ne 0 ]] ; then
+    local flag='['
+    flag+=$(repeat "${symbols_shell_level}" "${SHLVL}")
+    flag+='] '
+    echo "${flag}"
+  fi
+}
+
+function truecolor_test() {
+  awk -v term_cols="${width:-$(tput cols || echo 80)}" 'BEGIN{
+      s="/\\";
+      for (colnum = 0; colnum<term_cols; colnum++) {
+          r = 255-(colnum*255/term_cols);
+          g = (colnum*510/term_cols);
+          b = (colnum*255/term_cols);
+          if (g>255) g = 510-g;
+          printf "\033[48;2;%d;%d;%dm", r,g,b;
+          printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
+          printf "%s\033[0m", substr(s,colnum%2+1,1);
+      }
+      printf "\n";
+  }'
+}
+
+# TODO: Move?
+#!/usr/bin/env sh
+
+# up.sh: Quickly traverse up the current working path.
+# Author: Shannon Moeller <me@shannonmoeller.com>
+# Source to use: [ -f /path/to/up.sh ] && . /path/to/up.sh
+
+__updir() {
+	if [[ "$1" == "/" || -z "$1" || -z "$2" ]]; then
+		return
+	fi
+
+	local p="$(dirname "$1")"
+	local a="$(basename "$p")"
+	local b="$(basename "$2")"
+
+	if [[ -z "$a" || -z "$b" ]]; then
+		return
+	fi
+
+	if [[ "$a" == "$b"* ]]; then
+		echo "$p"
+		return
+	fi
+
+	__updir "$p" "$2"
+}
+
+__upnum() {
+	if [[ -z "$1" || -z "$2" || ! "$2" =~ ^[0-9]+$ ]]; then
+		return
+	fi
+
+	local p="$1"
+	local i="$2"
+
+	while (( i-- )); do
+		p="$(dirname "$p")"
+	done
+
+	echo "$p"
+}
+
+_up() {
+	local p="$(dirname $PWD)"
+	local w="${COMP_WORDS[COMP_CWORD]}"
+
+	COMPREPLY=( $(IFS=';' compgen -S/ -W "${p//\//;}" -- "$w") )
+}
+
+up() {
+	# up one
+	if (( ! $# )); then
+		cd ..
+		return
+	fi
+
+	# up dir
+	local d="$(__updir "$PWD" "$1")"
+
+	if [[ -d "$d" ]]; then
+		cd "$d"
+		return
+	fi
+
+	# up num
+	local n="$(__upnum "$PWD" "$1")"
+
+	if [[ -d "$n" ]]; then
+		cd "$n"
+		return
+	fi
+
+	# fallback
+	if [[ $1 == - || -d $1 ]]; then
+		cd $1
+		return
+	fi
+
+	# usage
+	echo -e "usage: up [dir|num|-]\npwd: $PWD"
+}
+
+# zsh compatibility
+if [[ -n ${ZSH_VERSION-} ]]; then
+	autoload -U +X bashcompinit && bashcompinit
+fi
+
+# tab-completion
+complete -o nospace -F _up up
+
+function user_flag() {
+  if [[ "${USER}" != "${LOGNAME}" ]] ; then
+    echo "  ${symbols_user} ${USER}"
+  fi
+}
+
+function is_not_login_shell_flag() {
+  if ! shopt -q login_shell ; then
+    echo "  ${symbols_not_login_shell}"
+  fi
+}
+
+all_git_branches_normalized() {
+  local branches branch
+  branches=$(git branch --all | grep -v HEAD | sed "s/.* //") &&
+    echo "$branches"
+}
+
+# gcof() {
+#   local branches branch
+#   branches=$(git branch --all | grep -v HEAD) &&
+#   branch=$(echo "$branches" |
+#            fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+#   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+# }
+

@@ -1,0 +1,4 @@
+ssource ~/.shell/interactive_environment_variables
+ssource ~/.shell/interactive_functions
+ssource ~/.shell/interactive_aliases
+ssource ~/.shell/interactive_local

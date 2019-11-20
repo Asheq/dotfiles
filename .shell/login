@@ -1,0 +1,35 @@
+# Personal information
+export NAME='Asheq Imran'
+
+# Preferred programs (TODO: Should be in interactive?)
+export MANPAGER='nvim -c "set ft=man" -'
+export EDITOR=nvim
+export VISUAL=$EDITOR
+export PAGER=less
+
+# NODE/NVM config
+export NVM_DIR=~/.nvm
+export DEFAULT_NODE_VERSION=8.14.1
+
+# FZF config (TODO: Should be in interactive?)
+# TODO: Fix these
+# export FZF_DEFAULT_COMMAND='all_git_branches_normalized'
+# export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
+
+# PATH
+pathprepend ~/bin PATH
+pathprepend ~/.cargo/bin PATH
+pathprepend ~/.nvm/versions/node/v$DEFAULT_NODE_VERSION/bin PATH
+pathprepend /usr/local/lib/ruby/gems/2.5.0/bin PATH
+# The current directory should never be in $PATH
+pathremove . PATH
+pathremove "" PATH
+
+# MANPATH
+pathprepend ~/man MANPATH
+pathprepend ~/share/man MANPATH
+
+# INFOPATH
+pathprepend ~/info INFOPATH
+
+ssource ~/.shell/login_local

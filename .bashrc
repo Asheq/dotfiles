@@ -1,53 +1,8 @@
-# "The individual per-interactive-shell startup file"
-#
-# When bash is invoked as an interactive shell that is _not_ a login shell, it
-# reads and executes commands from ~/.bashrc.
+# When bash is invoked as a non-login interactive shell, it first executes
+# /etc/bash.bashrc. It then executes ~/.bashrc.
 
-# ------------------------------------------------------------------------------
-# Double-check that this bash is interactive before continuing
-# ------------------------------------------------------------------------------
-[[ "$-" != *i* ]] && return
+# When bash is invoked as a remote shell (over ssh or similar), it executes
+# ~/.bashrc.
 
-# ------------------------------------------------------------------------------
-# Source git completion and prompt scripts
-# ------------------------------------------------------------------------------
-[[ -s ~/.config/git/git-completion.bash ]] && source ~/.config/git/git-completion.bash
-[[ -s ~/.config/git/git-prompt.sh ]] && source ~/.config/git/git-prompt.sh
-
-# ------------------------------------------------------------------------------
-# Source nvm's scripts
-# ------------------------------------------------------------------------------
-
-# Avoid using the slow `nvm use` at startup.
-# We should already have a default node available in our PATH.
-[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh" --no-use
-[[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
-
-if [[ "${USE_CUSTOM_SHELL_SETTINGS}" == "yes" ]]; then
-  # ------------------------------------------------------------------------------
-  # Source fzf's scripts
-  # ------------------------------------------------------------------------------
-  [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
-
-  # ------------------------------------------------------------------------------
-  # Source individual files
-  # ------------------------------------------------------------------------------
-  function source_files_recursively() {
-    local dir="$1"
-    local file
-    if [[ -d "${dir}" ]] ; then
-      for file in "${dir}"/** ; do
-        if [[ -f "${file}" ]] ; then
-          source "${file}"
-        fi
-      done
-    fi
-  }
-
-  # Source functions *first* to avoid accidentally using aliased versions of
-  # commands in function body definitions
-  source_files_recursively "${HOME}/.bashrc.d/first"
-  source_files_recursively "${HOME}/.bashrc.d/second"
-else
-  alias vim='vim -u NONE'
-fi
+. ~/.bash/env
+. ~/.bash/interactive

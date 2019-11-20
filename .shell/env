@@ -1,0 +1,3 @@
+. ~/.shell/env_functions
+
+ssource ~/.shell/env_local
