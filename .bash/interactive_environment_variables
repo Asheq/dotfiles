@@ -1,7 +1,13 @@
+# HIST...
 HISTSIZE=10000
 HISTFILESIZE=20000
 HISTTIMEFORMAT='%F %T '
 HISTCONTROL='ignoreboth:erasedups'
 HISTIGNORE='?:??:clear:history:exit:jobs:tmux:vim:nvim'
 
+# FZF...
+FZF_DEFAULT_COMMAND='all_git_branches_normalized'
+FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
+
+# PROMPT_COMMAND
 PROMPT_COMMAND='__prompt_command; history -a'

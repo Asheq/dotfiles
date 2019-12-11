@@ -1,3 +1,63 @@
+# ------------------------------------------------------------------------------
+# Color variables
+# ------------------------------------------------------------------------------
+# Using ANSI escape sequences
+ANSI_RESET='\[\e[0m\]'
+ANSI_BLACK_FG='\[\e[0;30m\]'
+ANSI_RED_FG='\[\e[0;31m\]'
+ANSI_GREEN_FG='\[\e[0;32m\]'
+ANSI_YELLOW_FG='\[\e[0;33m\]'
+ANSI_BLUE_FG='\[\e[0;34m\]'
+ANSI_MAGENTA_FG='\[\e[0;35m\]'
+ANSI_CYAN_FG='\[\e[0;36m\]'
+ANSI_LIGHT_GRAY_FG='\[\e[0;37m\]'
+ANSI_DEFAULT_FG='\[\e[0;39m\]'
+ANSI_DEFAULT_FG_BOLD='\[\e[1;39m\]'
+
+# Using tput
+BLACK=$(tput setaf 0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+BLUE=$(tput setaf 4)
+MAGENTA=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 7)
+LIME_YELLOW=$(tput setaf 190)
+POWDER_BLUE=$(tput setaf 153)
+BRIGHT=$(tput bold)
+NORMAL=$(tput sgr0)
+BLINK=$(tput blink)
+REVERSE=$(tput smso)
+UNDERLINE=$(tput smul)
+
+# ------------------------------------------------------------------------------
+# Symbol variables
+# TODO: Use capital letters?
+# ------------------------------------------------------------------------------
+if [ "${USE_FANCY_GLYPHS}" = "yes" ]; then
+  symbols_branch=' '
+  symbols_directory=' '
+  symbols_exit_code_fail=' '
+  symbols_exit_code_success=' '
+  symbols_hostname=' '
+  symbols_jobs=' '
+  symbols_not_login_shell=' '
+  symbols_user=' '
+else
+  symbols_branch='β'
+  symbols_directory='Δ'
+  symbols_exit_code_fail='✖'
+  symbols_exit_code_success='✔'
+  symbols_hostname='H'
+  symbols_jobs='J'
+  symbols_not_login_shell='NL'
+  symbols_user='U'
+fi
+
+# ------------------------------------------------------------------------------
+# __prompt_command
+# ------------------------------------------------------------------------------
 function __prompt_command() {
   local exit_code="$?"
   if [[ "${exit_code}" != 0 ]]; then
@@ -25,14 +85,50 @@ function __prompt_command() {
   PS1+="${ANSI_RESET}"
 }
 
+# ------------------------------------------------------------------------------
+# __prompt_command helpers
+# ------------------------------------------------------------------------------
+function pwd_head() {
+  local l_head
+  if [[ "${PWD}" = '/' ]] || [[ "${PWD}" = "${HOME}" ]]; then
+    l_head=''
+  else
+    l_head="${PWD%/*}"
+    [[ "${l_head}" =~ ^"$HOME"(/|$) ]] && l_head="~${l_head#$HOME}"
+    if [[ "${l_head}" = '/' ]]; then
+      l_head="/"
+    else
+      l_head="${l_head}/"
+    fi
+  fi
+  echo "${l_head}"
+}
+
+function pwd_tail() {
+  local l_tail
+  if [[ "${PWD}" = "${HOME}" ]]; then
+    l_tail='~'
+  elif [[ "${PWD}" = '/' ]]; then
+    l_tail='/'
+  else
+    l_tail="${PWD##*/}"
+  fi
+  echo "${l_tail}"
+}
+
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWUPSTREAM='verbose'
 GIT_PS1_DESCRIBE_STYLE='branch'
-
 function git_flag() {
   echo "  ${symbols_branch}$(__git_ps1)"
+}
+
+function user_flag() {
+  if [[ "${USER}" != "${LOGNAME}" ]] ; then
+    echo "  ${symbols_user} ${USER}"
+  fi
 }
 
 function hostname_flag() {
@@ -49,21 +145,32 @@ function jobs_count_flag() {
   fi
 }
 
-function print_terminal_colors() {
-  # Background
-  for clbg in {40..47} {100..107} 49 ; do
-    # Foreground
-    for clfg in {30..37} {90..97} 39 ; do
-      # Formatting
-      for attr in {0..8} ; do
-        # Print the result
-        echo -en "\e[${attr};${clbg};${clfg}m ^[${attr};${clbg};${clfg}m \e[0m"
-      done
-      echo # Newline
-    done
-  done
+function is_not_login_shell_flag() {
+  if ! shopt -q login_shell ; then
+    echo "  ${symbols_not_login_shell}"
+  fi
 }
 
+function shell_level_flag() {
+  if [[ "${SHLVL}" -ne 0 ]] ; then
+    local flag='['
+    flag+=$(repeat "${symbols_shell_level}" "${SHLVL}")
+    flag+='] '
+    echo "${flag}"
+  fi
+}
+
+function repeat() {
+  local str=$1
+  local num=$2
+  if [[ "${num}" -ne 0 ]] ; then
+    printf "${str}"'%.0s' $(seq 1 "${num}")
+  fi
+}
+
+# ------------------------------------------------------------------------------
+# Color tests
+# ------------------------------------------------------------------------------
 # Background values
 # =================
 #  40 - Black
@@ -128,6 +235,20 @@ function print_terminal_colors() {
 # 26 - Reset ???
 # 27 - Reset reverse
 # 28 - Reset hidden
+function print_terminal_colors() {
+  # Background
+  for clbg in {40..47} {100..107} 49 ; do
+    # Foreground
+    for clfg in {30..37} {90..97} 39 ; do
+      # Formatting
+      for attr in {0..8} ; do
+        # Print the result
+        echo -en "\e[${attr};${clbg};${clfg}m ^[${attr};${clbg};${clfg}m \e[0m"
+      done
+      echo # Newline
+    done
+  done
+}
 
 function print_terminal_colors_256() {
   for fgbg in 38 48 ; do # Foreground / Background
@@ -143,6 +264,25 @@ function print_terminal_colors_256() {
   done
 }
 
+function truecolor_test() {
+  awk -v term_cols="${width:-$(tput cols || echo 80)}" 'BEGIN{
+      s="/\\";
+      for (colnum = 0; colnum<term_cols; colnum++) {
+          r = 255-(colnum*255/term_cols);
+          g = (colnum*510/term_cols);
+          b = (colnum*255/term_cols);
+          if (g>255) g = 510-g;
+          printf "\033[48;2;%d;%d;%dm", r,g,b;
+          printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
+          printf "%s\033[0m", substr(s,colnum%2+1,1);
+      }
+      printf "\n";
+  }'
+}
+
+# ------------------------------------------------------------------------------
+# printargs
+# ------------------------------------------------------------------------------
 function printargs() {
   local arg
   for arg in "$@"
@@ -152,42 +292,10 @@ function printargs() {
   echo "Count: $#"
 }
 
-function pwd_head() {
-  local l_head
-  if [[ "${PWD}" = '/' ]] || [[ "${PWD}" = "${HOME}" ]]; then
-    l_head=''
-  else
-    l_head="${PWD%/*}"
-    [[ "${l_head}" =~ ^"$HOME"(/|$) ]] && l_head="~${l_head#$HOME}"
-    if [[ "${l_head}" = '/' ]]; then
-      l_head="/"
-    else
-      l_head="${l_head}/"
-    fi
-  fi
-  echo "${l_head}"
-}
 
-function pwd_tail() {
-  local l_tail
-  if [[ "${PWD}" = "${HOME}" ]]; then
-    l_tail='~'
-  elif [[ "${PWD}" = '/' ]]; then
-    l_tail='/'
-  else
-    l_tail="${PWD##*/}"
-  fi
-  echo "${l_tail}"
-}
-
-function repeat() {
-  local str=$1
-  local num=$2
-  if [[ "${num}" -ne 0 ]] ; then
-    printf "${str}"'%.0s' $(seq 1 "${num}")
-  fi
-}
-
+# ------------------------------------------------------------------------------
+# setproxy and unsetproxy
+# ------------------------------------------------------------------------------
 function setproxy() {
   local proxy_url=''
   local no_proxy_urls=''
@@ -211,145 +319,11 @@ function unsetproxy() {
   unset no_proxy
 }
 
-function shell_level_flag() {
-  if [[ "${SHLVL}" -ne 0 ]] ; then
-    local flag='['
-    flag+=$(repeat "${symbols_shell_level}" "${SHLVL}")
-    flag+='] '
-    echo "${flag}"
-  fi
-}
-
-function truecolor_test() {
-  awk -v term_cols="${width:-$(tput cols || echo 80)}" 'BEGIN{
-      s="/\\";
-      for (colnum = 0; colnum<term_cols; colnum++) {
-          r = 255-(colnum*255/term_cols);
-          g = (colnum*510/term_cols);
-          b = (colnum*255/term_cols);
-          if (g>255) g = 510-g;
-          printf "\033[48;2;%d;%d;%dm", r,g,b;
-          printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
-          printf "%s\033[0m", substr(s,colnum%2+1,1);
-      }
-      printf "\n";
-  }'
-}
-
-# TODO: Move?
-#!/usr/bin/env sh
-
-# up.sh: Quickly traverse up the current working path.
-# Author: Shannon Moeller <me@shannonmoeller.com>
-# Source to use: [ -f /path/to/up.sh ] && . /path/to/up.sh
-
-__updir() {
-	if [[ "$1" == "/" || -z "$1" || -z "$2" ]]; then
-		return
-	fi
-
-	local p="$(dirname "$1")"
-	local a="$(basename "$p")"
-	local b="$(basename "$2")"
-
-	if [[ -z "$a" || -z "$b" ]]; then
-		return
-	fi
-
-	if [[ "$a" == "$b"* ]]; then
-		echo "$p"
-		return
-	fi
-
-	__updir "$p" "$2"
-}
-
-__upnum() {
-	if [[ -z "$1" || -z "$2" || ! "$2" =~ ^[0-9]+$ ]]; then
-		return
-	fi
-
-	local p="$1"
-	local i="$2"
-
-	while (( i-- )); do
-		p="$(dirname "$p")"
-	done
-
-	echo "$p"
-}
-
-_up() {
-	local p="$(dirname $PWD)"
-	local w="${COMP_WORDS[COMP_CWORD]}"
-
-	COMPREPLY=( $(IFS=';' compgen -S/ -W "${p//\//;}" -- "$w") )
-}
-
-up() {
-	# up one
-	if (( ! $# )); then
-		cd ..
-		return
-	fi
-
-	# up dir
-	local d="$(__updir "$PWD" "$1")"
-
-	if [[ -d "$d" ]]; then
-		cd "$d"
-		return
-	fi
-
-	# up num
-	local n="$(__upnum "$PWD" "$1")"
-
-	if [[ -d "$n" ]]; then
-		cd "$n"
-		return
-	fi
-
-	# fallback
-	if [[ $1 == - || -d $1 ]]; then
-		cd $1
-		return
-	fi
-
-	# usage
-	echo -e "usage: up [dir|num|-]\npwd: $PWD"
-}
-
-# zsh compatibility
-if [[ -n ${ZSH_VERSION-} ]]; then
-	autoload -U +X bashcompinit && bashcompinit
-fi
-
-# tab-completion
-complete -o nospace -F _up up
-
-function user_flag() {
-  if [[ "${USER}" != "${LOGNAME}" ]] ; then
-    echo "  ${symbols_user} ${USER}"
-  fi
-}
-
-function is_not_login_shell_flag() {
-  if ! shopt -q login_shell ; then
-    echo "  ${symbols_not_login_shell}"
-  fi
-}
-
+# ------------------------------------------------------------------------------
+# all_git_branches_normalized
+# ------------------------------------------------------------------------------
 all_git_branches_normalized() {
   local branches branch
   branches=$(git branch --all | grep -v HEAD | sed "s/.* //") &&
     echo "$branches"
 }
-
-# gcof() {
-#   local branches branch
-#   branches=$(git branch --all | grep -v HEAD) &&
-#   branch=$(echo "$branches" |
-#            fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
-#   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
-# }
-

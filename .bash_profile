@@ -8,7 +8,7 @@
 
 . ~/.bash/env
 . ~/.bash/login
-# TODO: Is there a better way to detect if this bash is interactive?
 if [ "$PS1" ]; then
+    echo 'This is a login interactive bash shell'
     . ~/.bash/interactive
 fi

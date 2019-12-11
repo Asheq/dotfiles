@@ -1,11 +1,8 @@
-# TODO: Make sure all of these are shell-independent
-
 # ------------------------------------------------------------------------------
 # Basic file management
 # ------------------------------------------------------------------------------
 alias cd='echo "Use c"'
 alias ls='echo "Use one of: l la ll lg"'
-alias please='sudo'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rf='rm -rf'
@@ -15,8 +12,7 @@ alias rd='rmdir'
 alias o='open'
 alias r='ranger'
 alias c='\cd'
-# TODO: Fix
-# complete -o dirnames -o nospace -F _fzf_dir_completion c
+complete -o dirnames -o nospace -F _fzf_dir_completion c
 
 # ------------------------------------------------------------------------------
 # List files
@@ -52,7 +48,7 @@ alias nud='nvm use $DEFAULT_NODE_VERSION'
 # ------------------------------------------------------------------------------
 alias py2='python'
 alias py3='python3'
-alias py='python3'
+alias py='py3'
 
 # ------------------------------------------------------------------------------
 # Miscellaneous
@@ -62,6 +58,7 @@ alias info='info --vi-keys'
 alias termtest='~/dev/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
 alias cal='cal -3'
 alias now='date +"%a %b %-d %-I:%M:%S %p"'
+alias please='sudo'
 
 # ------------------------------------------------------------------------------
 # git (inspired by oh-my-zsh)
