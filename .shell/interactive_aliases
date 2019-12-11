@@ -1,3 +1,5 @@
+# Are these POSIX-compliant or bash-specific?
+
 # ------------------------------------------------------------------------------
 # Basic file management
 # ------------------------------------------------------------------------------
@@ -12,7 +14,7 @@ alias rd='rmdir'
 alias o='open'
 alias r='ranger'
 alias c='\cd'
-complete -o dirnames -o nospace -F _fzf_dir_completion c
+complete -o dirnames -o nospace -F _fzf_dir_completion c # TODO: Is this POSIX-compliant or bash-specific?
 
 # ------------------------------------------------------------------------------
 # List files
@@ -53,6 +55,7 @@ alias py='py3'
 # ------------------------------------------------------------------------------
 # Miscellaneous
 # ------------------------------------------------------------------------------
+# TODO: Are these POSIX-compliant or bash-specific?
 alias h='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
 alias info='info --vi-keys'
 alias termtest='~/dev/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'

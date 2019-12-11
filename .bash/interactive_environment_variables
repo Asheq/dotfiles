@@ -1,3 +1,9 @@
+# You might be tempted to move these environment variables to ./bash/login and
+# export them so that interactive bash sub-processes would see them
+# automatically. However, you should not do this because they are bash-specific
+# environment variables and we do not want other sub-processes (e.g. vim) to see
+# them. Thus we should set these everytime an interactive bash starts.
+
 # HIST...
 HISTSIZE=10000
 HISTFILESIZE=20000
@@ -5,9 +11,11 @@ HISTTIMEFORMAT='%F %T '
 HISTCONTROL='ignoreboth:erasedups'
 HISTIGNORE='?:??:clear:history:exit:jobs:tmux:vim:nvim'
 
-# FZF...
-FZF_DEFAULT_COMMAND='all_git_branches_normalized'
-FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
-
 # PROMPT_COMMAND
 PROMPT_COMMAND='__prompt_command; history -a'
+
+# FZF...
+# TODO: Move these to .shell/interactive or ./shell/login? Would this require
+# all_git_branches_normalized to be POSIX-compliant?
+FZF_DEFAULT_COMMAND='all_git_branches_normalized'
+FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"

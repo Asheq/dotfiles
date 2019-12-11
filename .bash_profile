@@ -9,6 +9,5 @@
 . ~/.bash/env
 . ~/.bash/login
 if [ "$PS1" ]; then
-    echo 'This is a login interactive bash shell'
     . ~/.bash/interactive
 fi

@@ -10,4 +10,5 @@
 
 # TODO: Verify the startup order for sh shell
 # TODO: Do we also need to check if sh is being started as an interactive shell
-# here, and if so, execute ~/.sh/interactive here?
+# here, and if so, execute ~/.sh/interactive here? Ask here:
+# https://bitbucket.org/flowblok/dotfiles/src/flowblok/.profile

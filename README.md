@@ -33,3 +33,6 @@ echo 'hi' # This is a comment to the right of code
 These dotfiles contain configuration for the bash shell and sh shell. The
 configuration files are organized according to this website:
 https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html#since
+
+TODO: Rename all shell startup files to have proper extensions.
+TODO: Run all shell startup files through shellcheck.

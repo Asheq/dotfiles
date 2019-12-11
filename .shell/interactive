@@ -2,10 +2,12 @@ ssource ~/.shell/interactive_functions
 ssource ~/.shell/interactive_aliases
 
 # Source git prompt and completion scripts
+# TODO: Are these POSIX-compliant or bash-specific?
 ssource ~/.config/git/git-prompt.sh
 ssource ~/.config/git/git-completion.sh
 
 # Source nvm setup and completion scripts. Avoid using the slow `nvm use` at
 # startup. We should already have a default node available in our PATH.
+# TODO: Are these POSIX-compliant or bash-specific?
 ssource "$NVM_DIR/nvm.sh" --no-use
 ssource "$NVM_DIR/bash_completion"
