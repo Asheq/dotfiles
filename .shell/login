@@ -15,7 +15,7 @@ export GREP_OPTIONS='--color=auto'
 # Set PATH
 pathprepend ~/bin PATH
 pathprepend ~/.cargo/bin PATH
-pathprepend "~/.nvm/versions/node/v$DEFAULT_NODE_VERSION/bin" PATH
+pathprepend ~/".nvm/versions/node/v$DEFAULT_NODE_VERSION/bin" PATH
 pathprepend /usr/local/lib/ruby/gems/2.5.0/bin PATH
 
 # Ensure current directory is not in PATH
