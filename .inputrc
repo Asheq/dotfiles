@@ -15,6 +15,7 @@ set menu-complete-display-prefix on
 set show-all-if-ambiguous on
 set skip-completed-text on
 set visible-stats on
+set blink-matching-paren on
 
 # ------------------------------------------------------------------------------
 # Rebind keys
