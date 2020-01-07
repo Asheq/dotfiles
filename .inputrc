@@ -1,4 +1,7 @@
-# "Individual readline initialization file"
+# Readline is the library that handles reading input when using an interactive
+# shell. When a program which uses the readline library starts up, the
+# initialization file (~/.inputrc) is read, and the key bindings and variables
+# are set.
 
 $include /etc/inputrc
 

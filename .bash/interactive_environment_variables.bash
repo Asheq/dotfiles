@@ -14,8 +14,3 @@ HISTIGNORE='?:??:clear:history:exit:jobs:tmux:vim:nvim'
 # PROMPT_COMMAND
 PROMPT_COMMAND='__prompt_command; history -a'
 
-# FZF...
-# TODO: Move these to .shell/interactive or ./shell/login? Would this require
-# all_git_branches_normalized to be POSIX-compliant?
-FZF_DEFAULT_COMMAND='all_git_branches_normalized'
-FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"

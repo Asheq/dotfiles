@@ -1,6 +1,20 @@
 # Usage: mcd this/is/a/directory/path
 # Makes directory (including intermediate directories) and cds into it
-function mcd () {
+mcd () {
     mkdir -p "$1"
-    cd "$1"
+    cd "$1" || exit
+}
+
+add_icu () {
+  export NODE_ICU_DATA='/Users/asheq.imran/.nvm/versions/node/v8.12.0/lib/node_modules/full-icu'
+}
+
+all_git_branches_normalized() {
+  branches=$(git branch --all | grep -v HEAD | sed "s/.* //") &&
+    echo "$branches"
+}
+
+f() {
+    fff "$@"
+    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
 }

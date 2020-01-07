@@ -6,8 +6,8 @@
 #    ~/.profile
 # It executes _only_ the first one it finds.
 
-. ~/.bash/env
-. ~/.bash/login
+. ~/.bash/env.bash
+. ~/.bash/login.bash
 if [ "$PS1" ]; then
-    . ~/.bash/interactive
+    . ~/.bash/interactive.bash
 fi

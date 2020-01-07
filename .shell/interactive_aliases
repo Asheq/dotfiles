@@ -1,4 +1,4 @@
-# Are these POSIX-compliant or bash-specific?
+# TODO: For aliases, preserve completion
 
 # ------------------------------------------------------------------------------
 # Basic file management
@@ -7,43 +7,55 @@ alias cd='echo "Use c"'
 alias ls='echo "Use one of: l la ll lg"'
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rf='rm -rf'
+alias rf='\rm -rf'
 alias mkdir='mkdir -pv'
 alias md='mkdir'
 alias rd='rmdir'
+alias rm='trash'
 alias o='open'
 alias r='ranger'
 alias c='\cd'
+alias cat='bat'
 complete -o dirnames -o nospace -F _fzf_dir_completion c # TODO: Is this POSIX-compliant or bash-specific?
 
 # ------------------------------------------------------------------------------
 # List files
 # ------------------------------------------------------------------------------
-alias l='exa'
+alias l='exa -F'
 alias la='l -a'
-alias ll='l -la --group-directories-first'
+alias lr='l -R'
+alias ll='l -lah --group-directories-first'
 alias lg='la | ag'
 
 # ------------------------------------------------------------------------------
 # (Neo)vim
 # ------------------------------------------------------------------------------
 alias vim='nvim'
-alias vi='vim'
-alias v='vi'
+alias vi='nvim'
+alias v='nvim'
 
 # ------------------------------------------------------------------------------
-# tmux
+# Kitty kittens
 # ------------------------------------------------------------------------------
-alias t='tmux'
-alias ta='tmux attach -t'
-alias ts='tmux new-session -s'
-alias tl='tmux list-sessions'
+alias icat="kitty +kitten icat"
+
+# ------------------------------------------------------------------------------
+# npm
+# ------------------------------------------------------------------------------
+alias n='npm'
+alias nr='npm run --silent'
+alias nrv='npm run'
 
 # ------------------------------------------------------------------------------
 # nvm
 # ------------------------------------------------------------------------------
 alias nu='nvm use'
-alias nud='nvm use $DEFAULT_NODE_VERSION'
+alias nui='nvm use $INITIAL_NODE_VERSION'
+
+# ------------------------------------------------------------------------------
+# React native debugger
+# ------------------------------------------------------------------------------
+alias rnd='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
 
 # ------------------------------------------------------------------------------
 # python
@@ -62,9 +74,12 @@ alias termtest='~/dev/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,
 alias cal='cal -3'
 alias now='date +"%a %b %-d %-I:%M:%S %p"'
 alias please='sudo'
+alias t='true'
 
 # ------------------------------------------------------------------------------
 # git (inspired by oh-my-zsh)
+# TODO: Put git aliases in ~/.config/git/config. This will probably preserve
+# completion properly for everything.
 # ------------------------------------------------------------------------------
 alias g='git'
 alias ga='git add'
@@ -85,6 +100,7 @@ alias gbr='git branch --remote'
 # alias gbsr='git bisect reset'
 # alias gbss='git bisect start'
 alias gc='git commit -v'
+alias gcnv='git commit --no-verify'
 # alias gc!='git commit -v --amend'
 # alias gcn!='git commit -v --no-edit --amend'
 # alias gca='git commit -v -a'
@@ -177,6 +193,7 @@ alias grh='git reset HEAD'
 # alias gsps='git show --pretty=short --show-signature'
 # alias gsr='git svn rebase'
 # alias gss='git status -s'
+alias gsta='nvim -c Gstatus'
 alias gst='git status'
 alias gs='git status -sb'
 # alias gsta='git stash save'

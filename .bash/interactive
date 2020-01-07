@@ -1,7 +1,0 @@
-ssource ~/.shell/interactive
-
-ssource ~/.bash/interactive_environment_variables
-ssource ~/.bash/interactive_functions
-ssource ~/.bash/interactive_options
-
-ssource ~/.fzf.bash

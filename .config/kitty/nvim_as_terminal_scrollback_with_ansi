@@ -1,0 +1,7 @@
+# Expects to receive scrollback buffer with ANSI escape codes
+# TODO
+/usr/local/bin/nvim \
+  -c "set nocursorline showtabline=0 foldcolumn=0 laststatus=0" \
+  -c "autocmd TermOpen * bd # | set number" \
+  -c "autocmd TextChanged * execute 'normal G{}'" \
+  -c "silent write /tmp/kitty_scrollback_buffer | terminal cat /tmp/kitty_scrollback_buffer - "

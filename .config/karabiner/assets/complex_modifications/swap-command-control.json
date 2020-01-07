@@ -7,11 +7,176 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button1",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "up_arrow",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "down_arrown",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrown",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "mandatory": ["command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
+              "bundle_identifiers": [
+                "^org\\.vim\\.MacVim$",
+                "^net\\.kovidgoyal\\.kitty$",
+                "^io\\.alacritty$",
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -34,11 +199,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -61,11 +231,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -88,11 +263,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -115,11 +295,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -142,11 +327,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -169,11 +359,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -196,11 +391,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -223,11 +423,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -249,11 +454,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -276,11 +486,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -303,11 +518,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -330,11 +550,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -357,11 +582,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -384,11 +614,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -411,11 +646,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -438,11 +678,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -465,11 +710,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -492,11 +742,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -519,11 +774,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -546,11 +806,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -573,11 +838,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -600,11 +870,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -627,11 +902,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -654,11 +934,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -681,11 +966,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -708,11 +998,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -735,11 +1030,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -762,11 +1062,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -789,11 +1094,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -816,11 +1126,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -843,11 +1158,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -870,11 +1190,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -897,11 +1222,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -924,11 +1254,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -951,11 +1286,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -978,11 +1318,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1005,11 +1350,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1032,11 +1382,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1059,11 +1414,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1086,11 +1446,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1113,11 +1478,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1140,11 +1510,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1167,11 +1542,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1194,11 +1574,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1221,11 +1606,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1248,11 +1638,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1275,11 +1670,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1302,11 +1702,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1329,11 +1734,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1356,11 +1766,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1383,11 +1798,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1410,11 +1830,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1437,11 +1862,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1464,11 +1894,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1491,11 +1926,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1518,11 +1958,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1545,11 +1990,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1572,11 +2022,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1599,11 +2054,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1626,11 +2086,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1653,11 +2118,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1680,11 +2150,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1707,11 +2182,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1734,11 +2214,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1761,11 +2246,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1788,11 +2278,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1815,11 +2310,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1842,11 +2342,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1869,11 +2374,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1896,11 +2406,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1923,11 +2438,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1950,11 +2470,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -1977,11 +2502,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2004,11 +2534,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2031,11 +2566,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2058,11 +2598,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2085,11 +2630,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2112,11 +2662,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2139,11 +2694,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2166,11 +2726,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2193,11 +2758,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2220,11 +2790,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2247,11 +2822,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2274,11 +2854,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2301,11 +2886,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2328,11 +2918,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2355,11 +2950,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2382,11 +2982,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2409,11 +3014,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2436,11 +3046,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2463,11 +3078,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2490,11 +3110,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2517,11 +3142,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2544,11 +3174,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2571,11 +3206,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2598,11 +3238,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2625,11 +3270,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2652,11 +3302,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2679,11 +3334,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2706,11 +3366,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2733,11 +3398,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2760,11 +3430,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2787,11 +3462,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2814,11 +3494,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2841,11 +3526,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2868,11 +3558,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2895,11 +3590,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2922,11 +3622,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2949,11 +3654,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -2976,11 +3686,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }
@@ -3003,11 +3718,16 @@
         {
           "conditions": [
             {
+              "file_paths": [
+                "/Applications/neovide"
+              ],
               "bundle_identifiers": [
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "com.outrunlabs.onivim2",
+                "com.ident.gonvim"
               ],
               "type": "frontmost_application_if"
             }

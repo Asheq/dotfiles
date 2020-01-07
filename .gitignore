@@ -1,5 +1,6 @@
 *
 !.agignore
+!ansi-codes.md
 !.bash_logout
 !.bash_profile
 !.bashrc
@@ -13,17 +14,14 @@
 !.config/karabiner/assets/**
 !.config/kitty/
 !.config/kitty/**
+!.config/oni2/
+!.config/oni2/**
 !.editorconfig
 !.gitignore
 !.inputrc
-!.prettierrc
-!.profile
-!.sh
-!.sh/**
 !.shell
 !.shell/**
 !.thesaurus
 !.thesaurus/README.md
-!.tmux.conf
 !README.md
 .DS_Store

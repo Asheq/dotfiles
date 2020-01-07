@@ -1,5 +1,0 @@
-# WARNING: This will not be run for non-login, non-interactive shells.
-# TODO: Why? See here: https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html#since
-
-# Also, you must run ~/.shell/env, to get $ENV. Why Is this important?
-. ~/.shell/env

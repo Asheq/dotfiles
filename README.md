@@ -1,12 +1,10 @@
 ### Main tools
-* Terminal emulator: [kitty](https://sw.kovidgoyal.net/kitty/)
-* Terminal multiplexer: [tmux](https://github.com/tmux/tmux)
+* Terminal emulator/multiplexer: [kitty](https://sw.kovidgoyal.net/kitty/)
 * Shell: [GNU Bash](https://www.gnu.org/software/bash/)
 * CLI line editing: [GNU Readline](https://tiswww.case.edu/php/chet/readline/rltop.html)
-* Text editor: [Neovim](https://neovim.io/) (my vim configuration is [here](https://github.com/Asheq/vim-config))
+* Text editor: [Neovim](https://neovim.io/) (configuration is [here](https://github.com/Asheq/vim-config))
 * MacOS keyboard customizer: [Karabiner-Elements](https://pqrs.org/osx/karabiner/)
 * Version control: [Git](https://git-scm.com/)
-* Code searcher: [The Silver Searcher](https://geoff.greer.fm/ag/)
 * Code formatter: [Prettier](https://prettier.io/)
 * Fuzzy finder: [fzf](https://github.com/junegunn/fzf)
 
@@ -23,7 +21,8 @@ Comments in this repo are written in sentence-case, where possible.
 
 echo 'hi' # This is a comment to the right of code
 
-# This is a comment. There are periods only because there are multiple sentences.
+# This is a comment. There are periods here only because there are multiple
+# sentences.
 
 # someVar is a variable. Identifier case is not changed.
 ```
@@ -32,7 +31,4 @@ echo 'hi' # This is a comment to the right of code
 
 These dotfiles contain configuration for the bash shell and sh shell. The
 configuration files are organized according to this website:
-https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html#since
-
-TODO: Rename all shell startup files to have proper extensions.
-TODO: Run all shell startup files through shellcheck.
+https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
