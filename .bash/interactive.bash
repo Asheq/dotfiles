@@ -1,8 +1,8 @@
 . ~/.shell/interactive
 
-. ~/.bash/interactive_environment_variables.bash
-. ~/.bash/interactive_functions.bash
-. ~/.bash/interactive_options.bash
+. ~/.bash/interactive__environment_variables.bash
+. ~/.bash/interactive__functions.bash
+. ~/.bash/interactive__options.bash
 
 # Source bash-specific nvm script
 ssource "$NVM_DIR/bash_completion"

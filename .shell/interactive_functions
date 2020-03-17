@@ -1,7 +1,7 @@
 # Usage: mcd this/is/a/directory/path
 # Makes directory (including intermediate directories) and cds into it
 mcd () {
-    mkdir -p "$1"
+    mkdir -pv "$1"
     cd "$1" || exit
 }
 

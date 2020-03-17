@@ -1,7 +1,7 @@
 ANSI codes to color text
 ================================================================================
-  Color name  | Color config number | ANSI code (foreground/background)
---------------|---------------------|----------------------------------
+  Color name  | Color config number | ANSI code (fg/bg)
+--------------|---------------------|------------------
 Black         | 0                   | 30/40
 Red           | 1                   | 31/41
 Green         | 2                   | 32/42
@@ -26,7 +26,7 @@ Default       | fg/bg               | 39/49
 ANSI codes to format text
 ================================================================================
 Format type         | ANSI code (set/reset)
------------------------------------
+--------------------|----------------------
 All                 | N.A./0
 Bold (more intense) | 1/21
 Dim (less intense)  | 2/22

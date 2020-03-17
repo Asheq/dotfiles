@@ -3,12 +3,15 @@
 # ------------------------------------------------------------------------------
 function __prompt_command() {
   local exit_code="$?"
-  PS1="┌─"
+  PS1=""
+  PS1+="${__prompt_ansi_primary_connector}┌─"
   PS1+="$(__prompt_section_pwd)"
   PS1+="$(__prompt_section_git)"
   PS1+="$(__prompt_section_other)"
   PS1+="$(__prompt_section_exit_code ${exit_code})"
-  PS1+="${__prompt_ansi_reset}\n└─$ "
+  PS1+="\n"
+  PS1+="${__prompt_ansi_primary_connector}└─$ "
+  PS1+="${__prompt_ansi_reset}"
 }
 
 # ------------------------------------------------------------------------------
@@ -16,10 +19,11 @@ function __prompt_command() {
 # ------------------------------------------------------------------------------
 # ANSI escape codes to format text
 __prompt_ansi_reset='\[\e[0m\]'
+__prompt_ansi_primary_connector='\[\e[0;93m\]'
 __prompt_ansi_primary='\[\e[0;30;103m\]'
-__prompt_ansi_primary_bright='\[\e[1;30;103m\]'
+__prompt_ansi_primary_bright='\[\e[0;30;103m\]'
 __prompt_ansi_secondary='\[\e[0;30;104m\]'
-__prompt_ansi_tertiary='\[\e[0;30;103m\]'
+__prompt_ansi_tertiary='\[\e[0;30;106m\]'
 __prompt_ansi_error='\[\e[0;31m\]'
 __prompt_ansi_success='\[\e[0;32m\]'
 
@@ -68,8 +72,13 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWUPSTREAM='verbose'
 GIT_PS1_DESCRIBE_STYLE='branch'
 GIT_PS1_HIDE_IF_PWD_IGNORED=true
+GIT_PS1_SHOWCOLORHINTS=true # TODO: Does not work?
 function __prompt_section_git() {
-  echo "${__prompt_ansi_secondary} ${__prompt_glyph_branch}$(__git_ps1) "
+  git_ps1_output="$(__git_ps1)"
+
+  if [[ "${git_ps1_output}" != "" ]] ; then
+    echo "${__prompt_ansi_secondary} ${git_ps1_output} "
+  fi
 }
 
 function __prompt_section_other() {
