@@ -77,7 +77,7 @@ function __prompt_section_git() {
   git_ps1_output="$(__git_ps1)"
 
   if [[ "${git_ps1_output}" != "" ]] ; then
-    echo "${__prompt_ansi_secondary} ${git_ps1_output} "
+    echo "${__prompt_ansi_secondary}${git_ps1_output} "
   fi
 }
 

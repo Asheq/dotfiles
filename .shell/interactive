@@ -2,8 +2,10 @@ ssource ~/.shell/interactive_functions
 ssource ~/.shell/interactive_aliases
 
 # Source POSIX-compliant git scripts
-ssource ~/.config/git/git-prompt.sh
-ssource ~/.config/git/git-completion.sh
+git_etc_dir="$(dirname $(realpath $(which git)))/../etc"
+ssource "${git_etc_dir}/bash_completion.d/git-completion.bash"
+ssource "${git_etc_dir}/bash_completion.d/git-prompt.sh"
+
 # Preserve completion for git alias, g
 __git_complete g __git_main
 
