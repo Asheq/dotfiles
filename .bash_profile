@@ -8,6 +8,7 @@
 
 . ~/.bash/env.bash
 . ~/.bash/login.bash
+
 if [ "$PS1" ]; then
     . ~/.bash/interactive.bash
 fi

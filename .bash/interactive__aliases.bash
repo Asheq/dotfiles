@@ -1,5 +1,3 @@
-# TODO For aliases, preserve completion
-
 # ------------------------------------------------------------------------------
 # Basic file management
 # ------------------------------------------------------------------------------
@@ -93,7 +91,6 @@ alias t='true'
 # git
 alias g='git'
 
-
 # git add
 alias ga='git add'
 alias gaa='git add --all'
@@ -125,4 +122,8 @@ alias gsta='nvim -c Gstatus'
 alias gst='git status'
 alias gs='git status -sb'
 
-__git_complete g __git_main # Preserve completion for git alias, g
+# ------------------------------------------------------------------------------
+# Preseve completion
+# ------------------------------------------------------------------------------
+__git_complete g __git_main
+complete -o dirnames -o nospace -F _fzf_dir_completion c

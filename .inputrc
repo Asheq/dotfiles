@@ -1,6 +1,6 @@
-# Readline is the library that handles reading input when using an interactive
-# shell. When a program which uses the readline library starts up, this
-# initialization file (~/.inputrc) is read.
+# Readline is a library that provides line-editing for interactive programs with
+# a command-line interface, such as Bash. Readline is customized by putting
+# commands in this initialization file, ~/.inputrc.
 
 $include /etc/inputrc
 

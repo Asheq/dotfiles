@@ -1,5 +1,5 @@
-ANSI codes to color text
-================================================================================
+### ANSI codes to color text
+
   Color name  | Color config number | ANSI code (fg/bg)
 --------------|---------------------|------------------
 Black         | 0                   | 30/40
@@ -10,7 +10,7 @@ Blue          | 4                   | 34/44
 Magenta       | 5                   | 35/45
 Cyan          | 6                   | 36/46
 White         | 7                   | 37/47
-              |                     |
+--------------|---------------------|------------------
 Light black   | 8                   | 90/100
 Light red     | 9                   | 91/101
 Light green   | 10                  | 92/102
@@ -19,12 +19,12 @@ Light blue    | 12                  | 94/104
 Light magenta | 13                  | 95/105
 Light cyan    | 14                  | 96/106
 Light white   | 15                  | 97/107
-              |                     |
+--------------|---------------------|------------------
 Default       | fg/bg               | 39/49
 
 
-ANSI codes to format text
-================================================================================
+### ANSI codes to format text
+
 Format type         | ANSI code (set/reset)
 --------------------|----------------------
 All                 | N.A./0

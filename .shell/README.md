@@ -1,2 +1,3 @@
-# Everything in this folder should be POSIX-compliant.
-# TODO: Run through `shellcheck -s sh *` to make sure.
+Everything in this folder should be POSIX-compliant.
+
+Perform static analysis with `shellcheck -s sh *`.

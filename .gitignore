@@ -1,27 +1,52 @@
+# vim:foldmethod=marker
+
+# Ignore everything
 *
-!.agignore
-!ansi-codes.md
-!.bash_logout
-!.bash_profile
-!.bashrc
-!.bash
-!.bash/**
-!.config
-!.config/git/
-!.config/git/**
-!.config/karabiner/
-!.config/karabiner/assets/
-!.config/karabiner/assets/**
-!.config/kitty/
-!.config/kitty/**
-!.config/oni2/
-!.config/oni2/**
-!.editorconfig
-!.gitignore
-!.inputrc
-!.shell
-!.shell/**
-!.thesaurus
-!.thesaurus/README.md
-!README.md
+
+# Un-ignore {{{
+
+# This file
+!/.gitignore
+
+# Information
+!/ansi-codes.md
+!/README.md
+
+# Standard config files at root-level
+!/.agignore
+!/.bash_logout
+!/.bash_profile
+!/.bashrc
+!/.editorconfig
+!/.inputrc
+
+# Standard config files in .config directory
+!/.config/
+
+!/.config/git/
+!/.config/git/**
+
+!/.config/karabiner/
+!/.config/karabiner/assets/
+!/.config/karabiner/assets/**
+
+!/.config/kitty/
+!/.config/kitty/**
+
+# Custom .thesaurus directory
+!/.thesaurus/
+!/.thesaurus/README.md
+
+# Custom .bash directory
+!/.bash/
+!/.bash/**
+
+# Custom .shell directory
+!/.shell/
+!/.shell/**
+
+# }}}
+
+# Re-ignore {{{
 .DS_Store
+# }}}
