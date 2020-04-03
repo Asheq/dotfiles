@@ -41,10 +41,6 @@
 !/.bash/
 !/.bash/**
 
-# Custom .shell directory
-!/.shell/
-!/.shell/**
-
 # }}}
 
 # Re-ignore {{{
