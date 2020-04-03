@@ -12,6 +12,15 @@ function __prompt_command() {
   PS1+="\n"
   PS1+="${__prompt_ansi_primary_connector}└─$ "
   PS1+="${__prompt_ansi_reset}"
+
+  # local is_login_shell
+  # if shopt -q login_shell ; then
+  #   is_login_shell=true
+  # else
+  #   is_login_shell=false
+  # fi
+
+  # PS1="$(node /Users/asheq.imran/dev/github.com/Asheq/prompt/lib/main.js -e $exit_code -l $is_login_shell)"
 }
 
 # ------------------------------------------------------------------------------
@@ -19,11 +28,15 @@ function __prompt_command() {
 # ------------------------------------------------------------------------------
 # ANSI escape codes to format text
 __prompt_ansi_reset='\[\e[0m\]'
-__prompt_ansi_primary_connector='\[\e[0;93m\]'
-__prompt_ansi_primary='\[\e[0;30;103m\]'
-__prompt_ansi_primary_bright='\[\e[0;30;103m\]'
-__prompt_ansi_secondary='\[\e[0;30;104m\]'
-__prompt_ansi_tertiary='\[\e[0;30;106m\]'
+
+__prompt_ansi_primary_connector='\[\e[0;35m\]'
+__prompt_ansi_primary='\[\e[2;30;45m\]'
+__prompt_ansi_primary_bright='\[\e[1;30;45m\]'
+
+__prompt_ansi_secondary='\[\e[0;30;47m\]'
+
+__prompt_ansi_tertiary='\[\e[0;30;107m\]'
+
 __prompt_ansi_error='\[\e[0;31m\]'
 __prompt_ansi_success='\[\e[0;32m\]'
 
@@ -72,17 +85,17 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWUPSTREAM='verbose'
 GIT_PS1_DESCRIBE_STYLE='branch'
 GIT_PS1_HIDE_IF_PWD_IGNORED=true
-GIT_PS1_SHOWCOLORHINTS=true # TODO: Does not work?
 function __prompt_section_git() {
   git_ps1_output="$(__git_ps1)"
 
   if [[ "${git_ps1_output}" != "" ]] ; then
-    echo "${__prompt_ansi_secondary}${git_ps1_output} "
+    output="${git_ps1_output:2:-1}"
+    echo "${__prompt_ansi_secondary} ${output} "
   fi
 }
 
 function __prompt_section_other() {
-  flag_array=("$(__prompt_flag_user)" "$(__prompt_flag_host)" "$(__prompt_flag_jobs)" "$(__prompt_flag_not_login_shell)")
+  flag_array=("Node($(node -v))" "$(__prompt_flag_user)" "$(__prompt_flag_host)" "$(__prompt_flag_jobs)" "$(__prompt_flag_not_login_shell)")
 
   flagstring=""
   for flag in "${flag_array[@]}" ; do
@@ -223,8 +236,8 @@ function unsetproxy() {
 # Usage: mcd this/is/a/directory/path
 # Makes directory (including intermediate directories) and cds into it
 mcd () {
-    mkdir -pv "$1"
-    cd "$1" || exit
+    \mkdir -pv "$1"
+    \cd "$1" || exit
 }
 
 add_icu () {
@@ -238,5 +251,5 @@ all_git_branches_normalized() {
 
 f() {
     fff "$@"
-    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")" || exit
+    \cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")" || exit
 }

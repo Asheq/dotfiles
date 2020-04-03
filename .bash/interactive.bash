@@ -30,5 +30,3 @@ ssource ~/.bash/interactive__environment_variables.bash
 ssource ~/.bash/interactive__functions.bash
 ssource ~/.bash/interactive__options.bash
 # }}}
-
-echo 'https://cmdchallenge.com/#/remove_extensions_from_files'

@@ -9,11 +9,10 @@
   newHighlight = green bold 22
 [color "diff"]
   meta = blue
-  frag = white
-  commit = blue
+  frag = magenta
+  commit = brightyellow
   old = red
   new = green
-  whitespace = red reverse
 [filter "lfs"]
   process = git-lfs filter-process
   required = true

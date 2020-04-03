@@ -1,5 +1,7 @@
-# Expects to receive scrollback buffer with ANSI escape codes
-# TODO
+# Expects to receive scrollback buffer with ANSI escape codes included
+
+# Usage: scrollback_pager ~/.config/kitty/nvim_as_terminal_scrollback_with_ansi
+
 /usr/local/bin/nvim \
   -c "set nocursorline showtabline=0 foldcolumn=0 laststatus=0" \
   -c "autocmd TermOpen * bd # | set number" \

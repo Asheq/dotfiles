@@ -1,19 +1,17 @@
-# vim:foldmethod=marker
-
-# Ignore everything
 *
 
-# Un-ignore {{{
+# Un-ignore
+# ==============================================================================
 
 # This file
 !/.gitignore
 
 # Information
 !/ansi-codes.md
+!/comments.md
 !/README.md
 
 # Standard config files at root-level
-!/.agignore
 !/.bash_logout
 !/.bash_profile
 !/.bashrc
@@ -41,8 +39,11 @@
 !/.bash/
 !/.bash/**
 
-# }}}
+# Standard location for user binaries
+!/bin/
+!/bin/**
 
-# Re-ignore {{{
+# Re-ignore
+# ==============================================================================
+
 .DS_Store
-# }}}

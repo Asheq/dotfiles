@@ -1,5 +1,10 @@
-This folder contains bash shell startup files.
+# Static analysis and linting
+Perform static analysis and linting with one of the following:
+- `shellcheck -s bash *`
+- `shellcheck -s sh *` (will check for POSIX-compliance)
 
-Some (but not all) code in here is POSIX-compliant.
+Currently, some (but not all) code in here is POSIX-compliant.
 
-Perform static analysis with `shellcheck -s bash *`.
+# Reference
+- Website: https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
+- Repository: https://bitbucket.org/flowblok/shell-startup/src/default/

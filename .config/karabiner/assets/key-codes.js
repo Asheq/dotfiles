@@ -13,13 +13,13 @@ const modifiers = [
   "fn"
 ];
 
-const controls_and_symbols = [
+const controlsAndSymbols = [
   "return_or_enter",
   "escape",
   "delete_or_backspace",
   "delete_forward",
-  // "tab",
-  // "spacebar",
+  "tab",
+  "spacebar",
   "hyphen",
   "equal_sign",
   "open_bracket",
@@ -28,14 +28,14 @@ const controls_and_symbols = [
   "non_us_pound",
   "semicolon",
   "quote",
-  // "grave_accent_and_tilde",
+  "grave_accent_and_tilde",
   "comma",
   "period",
   "slash",
   "non_us_backslash"
 ];
 
-const arrow_keys = [
+const arrowKeys = [
   "up_arrow",
   "down_arrow",
   "left_arrow",
@@ -46,7 +46,7 @@ const arrow_keys = [
   "end"
 ];
 
-const letter_keys = [
+const letterKeys = [
   "a",
   "b",
   "c",
@@ -75,9 +75,9 @@ const letter_keys = [
   "z"
 ];
 
-const number_keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+const numberKeys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
-const function_keys = [
+const functionKeys = [
   "f1",
   "f2",
   "f3",
@@ -104,7 +104,7 @@ const function_keys = [
   "f24"
 ];
 
-const media_controls = [
+const mediaControls = [
   "display_brightness_decrement",
   "display_brightness_increment",
   "mission_control",
@@ -125,7 +125,7 @@ const media_controls = [
   "apple_top_case_display_brightness_increment"
 ];
 
-const keypad_keys = [
+const keypadKeys = [
   "keypad_num_lock",
   "keypad_slash",
   "keypad_asterisk",
@@ -147,9 +147,9 @@ const keypad_keys = [
   "keypad_comma"
 ];
 
-const virtual_keys = ["vk_none"];
+const virtualKeys = ["vk_none"];
 
-const keys_in_pc_keyboards = [
+const keysInPcKeyboards = [
   "print_screen",
   "scroll_lock",
   "pause",
@@ -169,7 +169,7 @@ const keys_in_pc_keyboards = [
   "find"
 ];
 
-const international_keys = [
+const internationalKeys = [
   "international1",
   "international2",
   "international3",
@@ -225,19 +225,19 @@ const others = [
   "volume_up"
 ];
 
-const key_codes = [
+const keyCodes = [
   // ...modifiers,
-  ...controls_and_symbols,
-  // ...arrow_keys,
-  ...letter_keys,
-  ...number_keys,
-  // ...function_keys,
-  // ...media_controls,
-  ...keypad_keys
-  // ...virtual_keys,
-  // ...keys_in_pc_keyboards,
-  // ...international_keys,
+  ...controlsAndSymbols,
+  // ...arrowKeys,
+  ...letterKeys,
+  ...numberKeys,
+  // ...functionKeys,
+  // ...mediaControls,
+  ...keypadKeys
+  // ...virtualKeys,
+  // ...keysInPcKeyboards,
+  // ...internationalKeys,
   // ...others
 ];
 
-exports.key_codes = key_codes;
+exports.getAllKeyCodes = () => keyCodes

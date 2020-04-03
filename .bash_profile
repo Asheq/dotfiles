@@ -1,10 +1,11 @@
-# When bash starts as a login shell (whether interactive or non-interactive), it
-# first executes /etc/profile. It then looks for (in
-# order):
+# When bash starts as a login shell (interactive or non-interactive), it
+# executes, in order:
+#
+# 1. /etc/profile
+# 2. Only one of the following (which ever it finds first in this given order):
 #    ~/.bash_profile
 #    ~/.bash_login
 #    ~/.profile
-# It executes _only_ the first one it finds.
 
 . ~/.bash/env.bash
 . ~/.bash/login.bash

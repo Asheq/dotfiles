@@ -5,10 +5,6 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias md='mkdir -pv'
 
-# TODO See:
-# - https://github.com/sindresorhus/trash-cli
-# - https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md#safeguard-rm
-# - https://github.com/andreafrancia/trash-cli
 alias rf='rm -rf'
 alias rd='rmdir'
 
@@ -21,6 +17,7 @@ alias r='ranger'
 alias cd='echo "Use c"'
 
 alias c='\cd'
+complete -o dirnames -o nospace -F _fzf_dir_completion c
 
 # ------------------------------------------------------------------------------
 # List files
@@ -44,6 +41,7 @@ alias v='nvim'
 # Kitty kittens
 # ------------------------------------------------------------------------------
 alias icat="kitty +kitten icat"
+alias d="kitty +kitten diff"
 
 # ------------------------------------------------------------------------------
 # npm
@@ -73,7 +71,6 @@ alias py='py3'
 # ------------------------------------------------------------------------------
 # Miscellaneous
 # ------------------------------------------------------------------------------
-# TODO Are these POSIX-compliant or bash-specific?
 alias h='printf "%*s\n" "${COLUMNS:-$(tput cols)}" "" | tr " " -'
 alias info='info --vi-keys'
 alias termtest='~/dev/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
@@ -85,45 +82,31 @@ alias t='true'
 # ------------------------------------------------------------------------------
 # git
 # Inspired by oh-my-zsh: https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
-# TODO Put git aliases in ~/.config/git/config. This will probably preserve
-# completion properly for everything.
 # ------------------------------------------------------------------------------
-# git
-alias g='git'
 
-# git add
-alias ga='git add'
-alias gaa='git add --all'
-
-# git branch
-alias gb='git branch'
-
-# git commit
-alias gc='git commit -v'
-alias gcnv='git commit --no-verify'
-
-# git checkout
-alias gco='git checkout'
-
-# git diff
-alias gd='git diff'
-alias gdv='gd | v -'
-alias gdc='git diff --cached'
-alias gdcv='gdca | v -'
-
-# git fetch
-alias gf='git fetch'
-
-# git push
-alias gp='git push'
-
-# git status
-alias gsta='nvim -c Gstatus'
-alias gst='git status'
-alias gs='git status -sb'
-
-# ------------------------------------------------------------------------------
-# Preseve completion
-# ------------------------------------------------------------------------------
+alias g=git
 __git_complete g __git_main
-complete -o dirnames -o nospace -F _fzf_dir_completion c
+
+alias_git gl   log      'git log'
+alias_git gls  log      'git log --stat'
+alias_git glg  log      'git log --graph'
+alias_git glo  log      'git log --oneline'
+
+alias_git gd   diff     'git diff'
+alias_git gdc  diff     'git diff --cached'
+
+alias_git gs   status   'git status -sb'
+alias_git gst  status   'git status'
+alias gsta='nvim -c Gstatus'
+
+alias_git ga   add      'git add'
+alias_git gaa  add      'git add --all'
+
+alias_git gc   commit   'git commit -v'
+alias_git gcnv commit   'git commit --no-verify'
+
+alias_git gsw  switch   'git switch'
+alias_git gb   branch   'git branch'
+alias_git gco  checkout 'git checkout'
+alias_git gf   fetch    'git fetch'
+alias_git gp   push     'git push'

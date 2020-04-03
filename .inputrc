@@ -1,12 +1,8 @@
-# Readline is a library that provides line-editing for interactive programs with
-# a command-line interface, such as Bash. Readline is customized by putting
-# commands in this initialization file, ~/.inputrc.
-
 $include /etc/inputrc
 
-# ------------------------------------------------------------------------------
 # Set variables
-# ------------------------------------------------------------------------------
+# ==============================================================================
+
 set colored-stats on
 set completion-ignore-case on
 set completion-map-case on
@@ -19,17 +15,17 @@ set skip-completed-text on
 set visible-stats on
 set blink-matching-paren on
 
-# ------------------------------------------------------------------------------
 # Rebind keys
-# ------------------------------------------------------------------------------
-# Tab and Shift+Tab
+# ==============================================================================
+
+# <Tab> and <S-Tab>
 "\t": menu-complete
 "\e[Z": menu-complete-backward
 
-# Up and Down
+# <Up> and <Down>
 "\e[A": history-search-backward
 "\e[B": history-search-forward
 
-# C-p and C-n
+# <C-p> and <C-n>
 "\C-p": history-search-backward
 "\C-n": history-search-forward

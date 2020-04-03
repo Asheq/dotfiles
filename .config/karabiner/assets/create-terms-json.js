@@ -1,5 +1,6 @@
 const fs = require("fs");
-const { key_codes } = require("./key-codes.js");
+const { getAllKeyCodes } = require("./key-codes.js");
+const { getManipulators } = require("./get-manipulators-for-ctrl-cmd-swap.js");
 
 const conditions = [
   {
@@ -17,40 +18,17 @@ const conditions = [
   }
 ];
 
-const type = "basic";
+const keyCodes = getAllKeyCodes().filter(
+  kc => kc !== "grave_accent_and_tilde" && kc !== "tab" && kc !== "spacebar"
+);
 
-const manipulators = [];
-key_codes.forEach(key_code => {
-  [
-    ["command", "control"],
-    ["control", "command"]
-  ].forEach(([mod1, mod2]) => {
-    manipulators.push({
-      conditions,
-      type,
-      from: {
-        key_code,
-        modifiers: {
-          mandatory: [mod1],
-          optional: ["any"]
-        }
-      },
-      to: [
-        {
-          key_code,
-          modifiers: [mod2]
-        }
-      ]
-    });
-  });
-});
+const manipulators = getManipulators(keyCodes, conditions);
 
 const json = {
   title: "Terminal mods",
   rules: [
     {
-      description:
-        "In terminal emulators, swap Cmd and Ctrl (for most keys)",
+      description: "In terminal emulators, swap Cmd and Ctrl (for most keys)",
       manipulators
     }
   ]

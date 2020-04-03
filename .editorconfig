@@ -1,5 +1,3 @@
-# https://EditorConfig.org
-
 root = true
 
 [*]
@@ -8,4 +6,4 @@ indent_size = 2
 
 [*.md]
 indent_style = tab
-indent_size = 8
+indent_size = 4
