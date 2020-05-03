@@ -3,7 +3,6 @@
 # Set other environment variables {{{
 
 # For many programs
-export PAGER='less'
 export EDITOR='nvim'
 export VISUAL="$EDITOR"
 
@@ -13,9 +12,6 @@ export MANPAGER='nvim -c "set ft=man" -'
 # For fzf
 export FZF_CTRL_T_COMMAND="all_git_branches_normalized"
 
-# For grep
-export GREP_OPTIONS='--color=auto'
-
 # For nvm
 export NVM_DIR=~/.nvm
 
@@ -23,7 +19,7 @@ export NVM_DIR=~/.nvm
 export ANDROID_HOME="$HOME"/Library/Android/sdk
 
 # For my own bash startup files
-export INITIAL_NODE_VERSION='8.12.0'
+export INITIAL_NODE_VERSION='10.17.0'
 
 # }}}
 

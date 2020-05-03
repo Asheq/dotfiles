@@ -8,9 +8,8 @@
 # HIST...
 HISTSIZE=10000
 HISTFILESIZE=20000
-HISTTIMEFORMAT='%F %T '
 HISTCONTROL='ignoreboth:erasedups'
-HISTIGNORE='?:??:clear:history:exit:jobs:tmux:vim:nvim'
+HISTIGNORE='?:??'
 
 # PROMPT_COMMAND
 PROMPT_COMMAND='__prompt_command; history -a'

@@ -1,5 +1,0 @@
-# Expects to receive scrollback buffer without ANSI escape codes included
-
-/usr/local/bin/nvim \
-  -c "set nonumber laststatus=0 showtabline=0 foldcolumn=0" \
-  -c "call vimrc#go_to_last_nonempty_line()"

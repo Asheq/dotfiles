@@ -3,6 +3,7 @@ $include /etc/inputrc
 # Set variables
 # ==============================================================================
 
+set blink-matching-paren on
 set colored-stats on
 set completion-ignore-case on
 set completion-map-case on
@@ -13,7 +14,6 @@ set menu-complete-display-prefix on
 set show-all-if-ambiguous on
 set skip-completed-text on
 set visible-stats on
-set blink-matching-paren on
 
 # Rebind keys
 # ==============================================================================

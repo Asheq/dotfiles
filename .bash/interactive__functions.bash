@@ -95,7 +95,7 @@ function __prompt_section_git() {
 }
 
 function __prompt_section_other() {
-  flag_array=("Node($(node -v))" "$(__prompt_flag_user)" "$(__prompt_flag_host)" "$(__prompt_flag_jobs)" "$(__prompt_flag_not_login_shell)")
+  flag_array=("N=$(node -v)" "$(__prompt_flag_user)" "$(__prompt_flag_host)" "$(__prompt_flag_jobs)" "$(__prompt_flag_not_login_shell)")
 
   flagstring=""
   for flag in "${flag_array[@]}" ; do
@@ -207,49 +207,16 @@ function print_args() {
 }
 
 # ------------------------------------------------------------------------------
-# setproxy and unsetproxy
+# add_icu
 # ------------------------------------------------------------------------------
-function setproxy() {
-  local proxy_url=''
-  local no_proxy_urls=''
-
-  # Uppercase
-  export {HTTP,HTTPS,FTP,ALL}_PROXY="${proxy_url}"
-  export NO_PROXY="${no_proxy_urls}"
-
-  # Lowercase
-  export {http,https,ftp,all}_proxy="${proxy_url}"
-  export no_proxy="${no_proxy_urls}"
-}
-
-function unsetproxy() {
-  # Uppercase
-  unset {HTTP,HTTPS,FTP,ALL}_PROXY
-  unset NO_PROXY
-
-  # Lowercase
-  unset {http,https,ftp,all}_proxy
-  unset no_proxy
-}
-
-
-# Usage: mcd this/is/a/directory/path
-# Makes directory (including intermediate directories) and cds into it
-mcd () {
-    \mkdir -pv "$1"
-    \cd "$1" || exit
-}
-
 add_icu () {
   export NODE_ICU_DATA='/Users/asheq.imran/.nvm/versions/node/v8.12.0/lib/node_modules/full-icu'
 }
 
+# ------------------------------------------------------------------------------
+# all_git_branches_normalized
+# ------------------------------------------------------------------------------
 all_git_branches_normalized() {
   branches=$(git branch --all | grep -v HEAD | sed "s/.* //") &&
     echo "$branches"
-}
-
-f() {
-    fff "$@"
-    \cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")" || exit
 }

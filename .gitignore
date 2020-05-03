@@ -6,9 +6,7 @@
 # This file
 !/.gitignore
 
-# Information
-!/ansi-codes.md
-!/comments.md
+# Readme
 !/README.md
 
 # Standard config files at root-level
@@ -30,10 +28,6 @@
 
 !/.config/kitty/
 !/.config/kitty/**
-
-# Custom .thesaurus directory
-!/.thesaurus/
-!/.thesaurus/README.md
 
 # Custom .bash directory
 !/.bash/

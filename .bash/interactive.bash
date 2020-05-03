@@ -2,22 +2,22 @@
 
 # Source library scripts {{{
 
-# For git
+# git
 git_etc_dir="$(dirname "$(realpath "$(command -v git)")")"/../etc
 ssource "$git_etc_dir"/bash_completion.d/git-completion.bash
 ssource "$git_etc_dir"/bash_completion.d/git-prompt.sh
 
-# For nvm
+# nvm
 ssource "$NVM_DIR"/nvm.sh --no-use
 ssource "$NVM_DIR"/bash_completion
 
-# For rvm
+# rvm
 ssource "$HOME"/.rvm/scripts/rvm
 
-# For fzf
+# fzf
 ssource "$HOME"/.fzf.bash
 
-# For kitty
+# kitty
 if hash kitty 2>/dev/null; then
     source <(kitty + complete setup bash)
 fi

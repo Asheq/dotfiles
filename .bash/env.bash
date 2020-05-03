@@ -6,6 +6,7 @@ indirect_expand () {
 }
 
 # Usage: pathremove /path/to/bin [PATH]
+#
 # Eg, to remove ~/bin from $PATH
 #     pathremove ~/bin PATH
 pathremove () {
@@ -24,6 +25,7 @@ pathremove () {
 }
 
 # Usage: pathprepend /path/to/bin [PATH]
+#
 # Eg, to prepend ~/bin to $PATH
 #     pathprepend ~/bin PATH
 pathprepend () {
@@ -37,6 +39,7 @@ pathprepend () {
 }
 
 # Usage: pathappend /path/to/bin [PATH]
+#
 # Eg, to append ~/bin to $PATH
 #     pathappend ~/bin PATH
 pathappend () {
