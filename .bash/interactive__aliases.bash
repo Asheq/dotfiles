@@ -18,15 +18,16 @@ alias v='nvim'
 alias nr='npm run --silent'
 
 # ------------------------------------------------------------------------------
-# React native debugger
+# React native development
 # ------------------------------------------------------------------------------
 alias rnd='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
 alias odm='adb shell input keyevent 82'
+alias opendb='open $(xcrun simctl get_app_container booted com.servicemaxinc.fsadev data)/Library/LocalDatabase/fsa.db'
 
 # ------------------------------------------------------------------------------
 # Terminal test
 # ------------------------------------------------------------------------------
-alias termtest='~/dev/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
+alias termtest='~/dev/zzz/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
 
 # ------------------------------------------------------------------------------
 # git

@@ -1,7 +1,6 @@
-# When bash starts as a non-login, interactive shell, it executes, in order:
-#
-# 1. /etc/bash.bashrc.
-# 2. ~/.bashrc.
-
+# When an interactive shell that is not a login shell is started, bash reads
+# and executes commands from ~/.bashrc, if that file exists. This may be
+# inhibited by using the --norc option. The --rcfile file option will force
+# bash to read and execute commands from file instead of ~/.bashrc.
 . ~/.bash/env.bash
 . ~/.bash/interactive.bash

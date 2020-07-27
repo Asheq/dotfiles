@@ -25,8 +25,8 @@ fi
 # }}}
 
 # Source my scripts {{{
-ssource ~/.bash/interactive__aliases.bash
 ssource ~/.bash/interactive__environment_variables.bash
+ssource ~/.bash/interactive__aliases.bash
 ssource ~/.bash/interactive__functions.bash
 ssource ~/.bash/interactive__options.bash
 # }}}

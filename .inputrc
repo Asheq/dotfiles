@@ -1,12 +1,6 @@
-$include /etc/inputrc
-
 # Set variables
 # ==============================================================================
-
-set blink-matching-paren on
 set colored-stats on
-set completion-ignore-case on
-set completion-map-case on
 set completion-prefix-display-length 1
 set enable-bracketed-paste on
 set mark-symlinked-directories on
@@ -17,7 +11,6 @@ set visible-stats on
 
 # Rebind keys
 # ==============================================================================
-
 # <Tab> and <S-Tab>
 "\t": menu-complete
 "\e[Z": menu-complete-backward

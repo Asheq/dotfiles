@@ -1,3 +1,5 @@
+# Ignore everything
+# ==============================================================================
 *
 
 # Un-ignore
@@ -10,9 +12,9 @@
 !/README.md
 
 # Standard config files at root-level
-!/.bash_logout
 !/.bash_profile
 !/.bashrc
+!/.bash_logout
 !/.editorconfig
 !/.inputrc
 
