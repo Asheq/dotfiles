@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# Source: https://github.com/bbkane/dotfiles/blob/master/bin_common/bin_common/format_shell_cmd.py
+
 import argparse
 import sys
 import typing as t

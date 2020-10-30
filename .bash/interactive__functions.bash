@@ -1,6 +1,5 @@
-# ------------------------------------------------------------------------------
 # Bash prompt
-# ------------------------------------------------------------------------------
+# ==============================================================================
 # ANSI escape codes
 __prompt_ansi_escape_code_reset='\[\e[0m\]'
 __prompt_ansi_escape_code_connector='\[\e[0;35m\]'
@@ -34,11 +33,17 @@ function __prompt_section_pwd() {
   echo "${__prompt_ansi_escape_code_primary} \w "
 }
 
+# shellcheck disable=SC2034
 GIT_PS1_SHOWDIRTYSTATE=true
+# shellcheck disable=SC2034
 GIT_PS1_SHOWSTASHSTATE=true
+# shellcheck disable=SC2034
 GIT_PS1_SHOWUNTRACKEDFILES=true
+# shellcheck disable=SC2034
 GIT_PS1_SHOWUPSTREAM='verbose'
+# shellcheck disable=SC2034
 GIT_PS1_DESCRIBE_STYLE='branch'
+# shellcheck disable=SC2034
 GIT_PS1_HIDE_IF_PWD_IGNORED=true
 function __prompt_section_git() {
   git_ps1_output="$(__git_ps1)"
@@ -101,9 +106,8 @@ function __prompt_flag_not_login_shell() {
   fi
 }
 
-# ------------------------------------------------------------------------------
 # Print colors
-# ------------------------------------------------------------------------------
+# ==============================================================================
 function print_colors() {
   for clbg in {40..47} {100..107} 49 ; do
     for clfg in {30..37} {90..97} 39 ; do
@@ -118,7 +122,7 @@ function print_colors() {
 function print_colors_256() {
   for fgbg in 38 48 ; do
     for color in {0..255} ; do
-      printf "\e[${fgbg};5;%sm  %3s  \e[0m" $color $color
+      printf "\e[${fgbg};5;%sm  %3s  \e[0m" "$color" "$color"
       if [ $(((color + 1) % 6)) == 4 ] ; then
         echo
       fi
@@ -143,9 +147,8 @@ function print_colors_spectrum() {
   }'
 }
 
-# ------------------------------------------------------------------------------
 # Miscellaneous
-# ------------------------------------------------------------------------------
+# ==============================================================================
 function print_args() {
   local arg
   for arg in "$@"
@@ -155,10 +158,7 @@ function print_args() {
   echo "Count: $#"
 }
 
-add_icu () {
-  export NODE_ICU_DATA='/Users/asheq.imran/.nvm/versions/node/v8.12.0/lib/node_modules/full-icu'
-}
-
+# shellcheck disable=SC2034
 FZF_CTRL_T_COMMAND="all_git_branches_normalized"
 all_git_branches_normalized() {
   branches=$(git branch --all | grep -v HEAD | sed "s/.* //") &&

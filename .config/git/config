@@ -1,24 +1,24 @@
 [user]
-  name = Asheq Imran
+    name = Asheq Imran
 [color]
-  ui = auto
+    ui = auto
 [color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
 [color "diff"]
-  meta = blue
-  frag = magenta
-  commit = brightyellow
-  old = red
-  new = green
+    meta = blue
+    frag = magenta
+    commit = brightyellow
+    old = red
+    new = green
 [filter "lfs"]
-  process = git-lfs filter-process
-  required = true
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
 [log]
-  abbrevcommit = yes
+    abbrevcommit = yes
 [pull]
-	ff = only
+    ff = only

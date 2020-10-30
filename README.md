@@ -1,10 +1,11 @@
 # Main tools
 
-* Terminal emulator/multiplexer: [kitty](https://sw.kovidgoyal.net/kitty/)
-* Shell: [GNU Bash](https://www.gnu.org/software/bash/)
-* CLI line editor: [GNU Readline](https://tiswww.case.edu/php/chet/readline/rltop.html)
-* Text editor: [Neovim](https://neovim.io/) (See configuration [here](https://github.com/Asheq/vim-config))
-* Keyboard customizer: [Karabiner-Elements](https://pqrs.org/osx/karabiner/)
-* Version control system: [Git](https://git-scm.com/)
-* Code formatter: [Prettier](https://prettier.io/)
-* Fuzzy finder: [fzf](https://github.com/junegunn/fzf)
+* [kitty](https://sw.kovidgoyal.net/kitty/) - Terminal emulator
+* [GNU Bash](https://www.gnu.org/software/bash/) - Shell
+* [GNU Readline](https://tiswww.case.edu/php/chet/readline/rltop.html) - CLI line editor
+* [Neovim](https://neovim.io/) - Text editor (See configuration [here](https://github.com/Asheq/vim-config))
+* [Karabiner-Elements](https://pqrs.org/osx/karabiner/) - Keyboard customizer
+* [Git](https://git-scm.com/) - Version control system
+* [Prettier](https://prettier.io/) - Code formatter
+* [fzf](https://github.com/junegunn/fzf) - Fuzzy finder
+* [EditorConfig](https://editorconfig.org/) - Editor style configuration

@@ -1,6 +1,5 @@
-# vim:foldmethod=marker
-
-# Set other environment variables {{{
+# Set other environment variables
+# ==============================================================================
 
 # For many programs
 export EDITOR='nvim'
@@ -13,11 +12,10 @@ export MANPAGER='nvim -c "set ft=man" -'
 export NVM_DIR=~/.nvm
 
 # For Android SDK
-export ANDROID_HOME="$HOME"/Library/Android/sdk
+export ANDROID_HOME=~/Library/Android/sdk
 
-# }}}
-
-# Set PATH {{{
+# Set PATH
+# ==============================================================================
 
 # Add user binaries
 pathprepend ~/bin PATH
@@ -26,9 +24,9 @@ pathprepend ~/bin PATH
 pathprepend ~/.cargo/bin PATH
 
 # Add node binaries
-pathprepend ~/.nvm/versions/node/v10.17.0/bin PATH
+pathprepend "$NVM_DIR"/versions/node/v10.17.0/bin PATH
 
-# Add Android SDK stuff
+# Add Android SDK binaries
 pathprepend "$ANDROID_HOME"/emulator PATH # Android emulator
 pathprepend "$ANDROID_HOME"/tools PATH # ???
 pathprepend "$ANDROID_HOME"/tools/bin PATH # Android SDK tools
@@ -40,5 +38,3 @@ pathprepend /Applications/kitty.app/Contents/MacOS
 # Ensure current directory is not in PATH
 pathremove . PATH
 pathremove "" PATH
-
-# }}}

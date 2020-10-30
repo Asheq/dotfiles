@@ -6,8 +6,8 @@
 # --noprofile option may be used when the shell is started to inhibit this
 # behavior.
 #
-#  For interactive shells, PS1 is set and $- includes i if bash is interactive,
-#  allowing a shell script or a startup file to test this state.
+#  PS1 is set and $- includes i if bash is interactive, allowing a shell script
+#  or a startup file to test this state.
 
 . ~/.bash/env.bash
 . ~/.bash/login.bash
