@@ -10,11 +10,11 @@ __prompt_ansi_escape_code_error='\[\e[0;31m\]'
 __prompt_ansi_escape_code_success='\[\e[0;32m\]'
 
 # Glyphs
-__prompt_glyph_host='@'
-__prompt_glyph_jobs='J'
-__prompt_glyph_logout='>'
+__prompt_glyph_host='Hostname'
+__prompt_glyph_jobs='Jobs'
+__prompt_glyph_logout='Non-login'
 __prompt_glyph_success='✔'
-__prompt_glyph_user='U'
+__prompt_glyph_user='User'
 
 function __prompt_command() {
   local exit_code="$?"
@@ -55,7 +55,7 @@ function __prompt_section_git() {
 }
 
 function __prompt_section_other() {
-  flag_array=("N=$(node -v)" "$(__prompt_flag_user)" "$(__prompt_flag_host)" "$(__prompt_flag_jobs)" "$(__prompt_flag_not_login_shell)")
+  flag_array=("Node=$(node -v)" "$(__prompt_flag_user)" "$(__prompt_flag_host)" "$(__prompt_flag_jobs)" "$(__prompt_flag_not_login_shell)")
 
   flagstring=""
   for flag in "${flag_array[@]}" ; do
