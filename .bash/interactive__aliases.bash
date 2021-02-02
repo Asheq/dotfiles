@@ -54,6 +54,7 @@ alias_git gcnv  commit   'git commit --no-verify'
 alias_git gb    branch   'git branch'
 alias_git gco   checkout 'git checkout'
 alias_git gp    push     'git push'
+alias_git gpl   pull     'git pull'
 
 alias_git gs    status   'git status -sb'
 alias_git gst   status   'git status'
