@@ -11,6 +11,9 @@ alias o='open'
 
 alias v='nvim'
 
+alias f='cd "/Users/asheq.imran/Google Drive/"'
+alias p='cd "/Users/asheq.imran/Google Drive/planner"'
+
 # npm run
 # ==============================================================================
 alias nr='npm run --silent'
