@@ -55,7 +55,7 @@ function __prompt_section_git() {
 }
 
 function __prompt_section_other() {
-  flag_array=("Node=$(node -v)" "$(__prompt_flag_user)" "$(__prompt_flag_host)" "$(__prompt_flag_jobs)" "$(__prompt_flag_not_login_shell)")
+  flag_array=("node=$(node -v)" "npm=$(npm -v)" "$(__prompt_flag_user)" "$(__prompt_flag_host)" "$(__prompt_flag_jobs)" "$(__prompt_flag_not_login_shell)")
 
   flagstring=""
   for flag in "${flag_array[@]}" ; do
