@@ -24,7 +24,7 @@ pathprepend ~/bin PATH
 pathprepend ~/.cargo/bin PATH
 
 # Add node binaries
-pathprepend "$NVM_DIR"/versions/node/v10.17.0/bin PATH
+pathprepend "$NVM_DIR"/versions/node/v15.14.0/bin PATH
 
 # Add Android SDK binaries
 pathprepend "$ANDROID_HOME"/emulator PATH # Android emulator
