@@ -5,6 +5,9 @@
 export EDITOR='nvim'
 export VISUAL="$EDITOR"
 
+# For nvr
+export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+
 # For man
 export MANPAGER='nvim -c "set ft=man" -'
 
