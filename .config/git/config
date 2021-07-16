@@ -22,3 +22,5 @@
     abbrevcommit = yes
 [pull]
     ff = only
+[init]
+	defaultBranch = main
