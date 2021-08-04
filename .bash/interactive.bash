@@ -7,6 +7,10 @@ ssource "$git_etc_dir"/bash_completion.d/git-completion.bash
 ssource "$git_etc_dir"/bash_completion.d/git-prompt.sh
 unset git_etc_dir
 
+# npm
+# shellcheck source=/dev/null
+source <(npm completion)
+
 # nvm
 ssource "$NVM_DIR"/nvm.sh --no-use
 ssource "$NVM_DIR"/bash_completion

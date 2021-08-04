@@ -1,18 +1,14 @@
 [user]
     name = Asheq Imran
-[color]
-    ui = auto
+[core]
+    pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+[color "diff"]
+    meta = blue
 [color "diff-highlight"]
     oldNormal = red bold
     oldHighlight = red bold 52
     newNormal = green bold
     newHighlight = green bold 22
-[color "diff"]
-    meta = blue
-    frag = magenta
-    commit = brightyellow
-    old = red
-    new = green
 [filter "lfs"]
     process = git-lfs filter-process
     required = true
@@ -23,4 +19,18 @@
 [pull]
     ff = only
 [init]
-	defaultBranch = main
+    defaultBranch = main
+[alias]
+    l = log
+    lo = log --oneline
+    d = diff
+    a = add
+    aa = add --all
+    c = commit -v
+    cnv = commit --no-verify
+    b = branch
+    co = checkout
+    p = push
+    pl = pull
+    s = status -sb
+    st = status
