@@ -6,6 +6,7 @@
 * [Neovim](https://neovim.io/) - Text editor (See configuration [here](https://github.com/Asheq/vim-config))
 * [Karabiner-Elements](https://pqrs.org/osx/karabiner/) - Keyboard customizer
 * [Git](https://git-scm.com/) - Version control system
+* [EditorConfig](https://editorconfig.org/) - Basic editor formatting config
 * [Prettier](https://prettier.io/) - Code formatter
+* [ESLint](https://eslint.org/) - Code linter
 * [fzf](https://github.com/junegunn/fzf) - Fuzzy finder
-* [EditorConfig](https://editorconfig.org/) - Editor style configuration
