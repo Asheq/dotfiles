@@ -20,7 +20,6 @@ __git_complete g __git_main
 # ==============================================================================
 alias n='npm'
 complete -o default -F _npm_completion n
-alias nr='npm run --silent'
 
 # Terminal test
 # ==============================================================================
