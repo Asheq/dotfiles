@@ -6,7 +6,8 @@ alias ll='exa -Flah'
 
 alias o='open'
 alias v='nvim'
-alias p='cd "/Users/asheq.imran/Google Drive/planner"'
+alias p='cd "/Users/asheq.imran/Google Drive/other/planner"'
+alias s='cd "/Users/asheq.imran/dev/github.com/ServiceMax-Engineering"'
 
 alias c='cd'
 complete -o dirnames -o nospace -F _fzf_dir_completion c
