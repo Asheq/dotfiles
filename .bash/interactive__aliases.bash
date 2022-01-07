@@ -1,32 +1,39 @@
 # Basic file maangement
 # ==============================================================================
-alias l='exa -F'
-alias la='exa -Fa'
-alias ll='exa -Flah'
 
-alias o='open'
+if command -v exa &> /dev/null; then
+    alias l='exa -F'
+    alias la='exa -Fa'
+    alias ll='exa -Flah'
+else
+    alias l='ls --color'
+    alias la='ls --color -Fa'
+    alias ll='ls --color -Flah'
+fi
+
+if command -v open &> /dev/null; then
+    alias o='open'
+elif command -v xdg-open &> /dev/null; then
+    alias o='xdg-open'
+fi
+
 alias v='nvim'
-alias p='cd "/Users/asheq.imran/Google Drive/planner"'
-
 alias c='cd'
-complete -o dirnames -o nospace -F _fzf_dir_completion c
 
 # git
 # ==============================================================================
 alias g='git'
-__git_complete g __git_main
+# TODO: Add __git_complete
+# command -v __git_complete && __git_complete g __git_main
 
 # npm
 # ==============================================================================
 alias n='npm'
 complete -o default -F _npm_completion n
-alias nr='npm run --silent'
-
-# Terminal test
-# ==============================================================================
-alias termtest='~/dev/zzz/github.com/p-e-w/ternimal/ternimal length=20 thickness=70,15,0,1,0 padding=10 radius=5 gradient=0.03:#ffff00,0.15:#0000ff,0.3:#ff0000,0.5:#00ff00'
 
 # React Native development
 # ==============================================================================
 alias rnd='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
+
+# TODO: Move to specific project repository as a shell script
 alias opendb='open $(xcrun simctl get_app_container booted com.servicemaxinc.fsadev data)/Library/LocalDatabase/fsa.db'

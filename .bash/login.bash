@@ -15,13 +15,15 @@ export MANPAGER='nvim -c "set ft=man" -'
 export NVM_DIR=~/.nvm
 
 # For Android SDK
+# TODO: This is Mac-only path
 export ANDROID_HOME=~/Library/Android/sdk
 
 # Set PATH
 # ==============================================================================
 
-# Add user binaries
+# Add user/local binaries
 pathprepend ~/bin PATH
+pathprepend ~/.local/bin PATH
 
 # Add cargo binaries
 pathprepend ~/.cargo/bin PATH
@@ -34,9 +36,6 @@ pathprepend "$ANDROID_HOME"/emulator PATH # Android emulator
 pathprepend "$ANDROID_HOME"/tools PATH # ???
 pathprepend "$ANDROID_HOME"/tools/bin PATH # Android SDK tools
 pathprepend "$ANDROID_HOME"/platform-tools PATH # Android SDK platform tools
-
-# Add kitty terminal
-pathprepend /Applications/kitty.app/Contents/MacOS
 
 # Ensure current directory is not in PATH
 pathremove . PATH
