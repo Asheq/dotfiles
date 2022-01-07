@@ -10,7 +10,7 @@ unset git_etc_dir
 
 # npm
 # shellcheck source=/dev/null
-source <(command -v npm && npm completion)
+source <(command -v npm &> /dev/null && npm completion)
 
 # nvm
 ssource "$NVM_DIR"/nvm.sh --no-use

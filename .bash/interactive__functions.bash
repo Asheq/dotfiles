@@ -47,7 +47,9 @@ GIT_PS1_DESCRIBE_STYLE='branch'
 GIT_PS1_HIDE_IF_PWD_IGNORED=true
 function __prompt_section_git() {
     # TODO: Add __git_ps1
-    git_ps1_output="$(command -v __git_ps1 && __git_ps1)"
+    if command -v __git_ps1 &> /dev/null; then
+        git_ps1_output="$(__git_ps1)"
+    fi
 
     if [[ "${git_ps1_output}" != "" ]] ; then
         output="${git_ps1_output:2:-1}"
@@ -56,8 +58,7 @@ function __prompt_section_git() {
 }
 
 function __prompt_section_other() {
-    # TODO: Move node and npm flags to __prompt_flag_node and __prompt_flag_npm and only show if they are installed
-    flag_array=("node=$(command -v node && node -v)" "npm=$(command -v npm && npm -v)" "$(__prompt_flag_user)" "$(__prompt_flag_host)" "$(__prompt_flag_jobs)" "$(__prompt_flag_not_login_shell)")
+    flag_array=("$(__prompt_flag_node)" "$(__prompt_flag_npm)" "$(__prompt_flag_user)" "$(__prompt_flag_host)" "$(__prompt_flag_jobs)" "$(__prompt_flag_not_login_shell)")
 
     flagstring=""
     for flag in "${flag_array[@]}" ; do
@@ -70,6 +71,18 @@ function __prompt_section_other() {
 
     if [[ "${flagstring}" != "" ]] ; then
         echo "${__style_tertiary} ${flagstring} "
+    fi
+}
+
+function __prompt_flag_node() {
+    if command -v node &> /dev/null; then
+        echo "node=$(node -v)"
+    fi
+}
+
+function __prompt_flag_npm() {
+    if command -v npm &> /dev/null; then
+        echo "npm=$(npm -v)"
     fi
 }
 
