@@ -34,6 +34,3 @@ complete -o default -F _npm_completion n
 # React Native development
 # ==============================================================================
 alias rnd='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
-
-# TODO: Move to specific project repository as a shell script
-alias opendb='open $(xcrun simctl get_app_container booted com.servicemaxinc.fsadev data)/Library/LocalDatabase/fsa.db'
