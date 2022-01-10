@@ -17,6 +17,7 @@
 !/.bash_logout
 !/.editorconfig
 !/.inputrc
+!/.profile
 !/.xprofile
 
 # Standard config files in .config directory
