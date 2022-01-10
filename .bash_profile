@@ -5,11 +5,11 @@
 # and executes commands from the first one that exists and is readable. The
 # --noprofile option may be used when the shell is started to inhibit this
 # behavior.
-#
-#  PS1 is set and $- includes i if bash is interactive, allowing a shell script
-#  or a startup file to test this state.
 
 . ~/.profile
+
+#  PS1 is set and $- includes i if bash is interactive, allowing a shell script
+#  or a startup file to test this state.
 if [ "$PS1" ]; then
     . ~/.bash/interactive.bash
 fi

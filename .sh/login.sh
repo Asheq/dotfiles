@@ -1,4 +1,4 @@
-# TODO: Make sure this file is 100% POSIX-compliant
+# NOTE: This file should be  100% POSIX-compliant
 
 # Set other environment variables
 # ==============================================================================
@@ -17,7 +17,7 @@ export MANPAGER='nvim -c "set ft=man" -'
 export NVM_DIR=~/.nvm
 
 # For Android SDK
-# TODO: This is Mac-only path
+# TODO: This is a Mac-only path
 export ANDROID_HOME=~/Library/Android/sdk
 
 # Set PATH
@@ -27,11 +27,11 @@ export ANDROID_HOME=~/Library/Android/sdk
 pathprepend ~/bin PATH
 pathprepend ~/.local/bin PATH
 
-# Add cargo binaries
-pathprepend ~/.cargo/bin PATH
-
 # Add node binaries
 pathprepend "$NVM_DIR"/versions/node/v14.17.0/bin PATH
+
+# Add cargo binaries
+pathprepend ~/.cargo/bin PATH
 
 # Add Android SDK binaries
 pathprepend "$ANDROID_HOME"/emulator PATH # Android emulator
