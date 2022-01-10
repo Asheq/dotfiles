@@ -2,9 +2,8 @@
 # and export them so that interactive bash sub-processes would see them
 # automatically. However, you should avoid doing this because these are
 # _bash-specific_ variables and we don't want to pollute the variable list of
-# other sub-processes (e.g. vim).  Instead, let's set these as non-exported
-# variables everytime an interactive bash starts, even though it seems slightly
-# redundant.
+# other sub-processes (e.g. vim). Instead, let's set these as non-exported
+# variables only when an interactive bash starts.
 
 # HIST...
 # ==============================================================================
