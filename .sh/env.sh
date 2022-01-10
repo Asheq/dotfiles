@@ -1,3 +1,4 @@
+# TODO: Make sure this file is 100% POSIX-compliant
 # Original source: https://bitbucket.org/flowblok/shell-startup/src/default/.shell/env_functions
 
 # Usage: pathremove <path> <variable>

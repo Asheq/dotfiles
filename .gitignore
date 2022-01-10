@@ -36,6 +36,10 @@
 !/.bash/
 !/.bash/**
 
+# Custom .sh directory
+!/.sh/
+!/.sh/**
+
 # Standard location for user binaries
 !/bin/
 !/bin/**

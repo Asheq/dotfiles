@@ -1,3 +1,5 @@
+# TODO: Make sure this file is 100% POSIX-compliant
+
 # Set other environment variables
 # ==============================================================================
 
