@@ -44,6 +44,9 @@
 # Standard location for user binaries
 !/bin/
 !/bin/**
+!/.local/
+!/.local/bin
+!/.local/bin/**
 
 # Re-ignore
 # ==============================================================================

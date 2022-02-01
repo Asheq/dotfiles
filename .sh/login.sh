@@ -11,7 +11,8 @@ export VISUAL="$EDITOR"
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 
 # For man
-export MANPAGER='nvim -c "set ft=man" -'
+# TODO: This does not work because of the appimage
+export MANPAGER='nvim +Man!'
 
 # For nvm
 export NVM_DIR=~/.nvm
