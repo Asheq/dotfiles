@@ -1,1 +1,2 @@
-This folder should store scripts/sources. No binaries and no symlinks.
+This folder should be included in PATH.
+It should contain scripts/sources; no binaries and no symlinks.
