@@ -34,3 +34,7 @@ complete -o default -F _npm_completion n
 # React Native development
 # ==============================================================================
 alias rnd='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
+
+# Bell
+# ==============================================================================
+alias bell=$'echo ; osascript -e \'display notification "Bell rang from kitty terminal"\''
