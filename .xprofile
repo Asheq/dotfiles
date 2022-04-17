@@ -22,4 +22,4 @@ xinput --set-button-map ${SLIMBLADE_ID} 3 1 2
 
 # Turn on natural scrolling:
 # NOTE: If this does not work, just change the operating system's setting to reverse mouse scroll direction.
-xinput --set-prop ${SLIMBLADE_ID} 314 1
+# xinput --set-prop ${SLIMBLADE_ID} 314 1
