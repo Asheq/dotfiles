@@ -33,6 +33,17 @@
 !/.config/kitty/
 !/.config/kitty/**
 
+!/.config/nvim/
+!/.config/nvim/.projections.json
+!/.config/nvim/after
+!/.config/nvim/after/**
+!/.config/nvim/autoload
+!/.config/nvim/autoload/**
+!/.config/nvim/colors
+!/.config/nvim/colors/**
+!/.config/nvim/vimrc.d/
+!/.config/nvim/vimrc.d/**
+
 # Custom .bash directory
 !/.bash/
 !/.bash/**
