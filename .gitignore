@@ -35,12 +35,15 @@
 
 !/.config/nvim/
 !/.config/nvim/.projections.json
+!/.config/nvim/init.vim
 !/.config/nvim/after
 !/.config/nvim/after/**
 !/.config/nvim/autoload
 !/.config/nvim/autoload/**
 !/.config/nvim/colors
 !/.config/nvim/colors/**
+!/.config/nvim/plugin
+!/.config/nvim/plugin/**
 !/.config/nvim/vimrc.d/
 !/.config/nvim/vimrc.d/**
 
