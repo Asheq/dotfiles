@@ -9,7 +9,7 @@
 
 ## More
 * [kitty](https://sw.kovidgoyal.net/kitty/) - Terminal emulator
-* [Neovim](https://neovim.io/) - Text editor (See configuration [here](https://github.com/Asheq/vim-config))
+* [Neovim](https://neovim.io/) - Text editor
 * [EditorConfig](https://editorconfig.org/) - Editor style configuration
 * [Prettier](https://prettier.io/) - Code formatter
 * [ESLint](https://eslint.org/) - Code linter
