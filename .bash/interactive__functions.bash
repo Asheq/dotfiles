@@ -173,6 +173,11 @@ function print_args() {
     echo "Count: $#"
 }
 
+function c () {
+    cd "$@" && l
+    # TODO: Completions candidates should be directories only
+}
+
 # shellcheck disable=SC2034
 FZF_CTRL_T_COMMAND="all_git_branches_normalized"
 all_git_branches_normalized() {

@@ -18,12 +18,11 @@ elif command -v xdg-open &> /dev/null; then
 fi
 
 alias v='nvim'
-alias c='cd'
 
 # git
 # ==============================================================================
 alias g='git'
-# TODO: Add __git_complete
+# TODO: Add completions via __git_complete
 # command -v __git_complete && __git_complete g __git_main
 
 # npm
