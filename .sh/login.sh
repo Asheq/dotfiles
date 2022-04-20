@@ -44,6 +44,9 @@ pathprepend "$ANDROID_HOME"/platform-tools PATH # Android SDK platform tools
 # Add rvm binaries
 pathappend ~/.rvm/bin
 
+# Add python binaries
+eval "$(pyenv init --path)"
+
 # Ensure current directory is not in PATH
 pathremove . PATH
 pathremove "" PATH
