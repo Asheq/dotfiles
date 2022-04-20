@@ -173,7 +173,7 @@ function print_args() {
     echo "Count: $#"
 }
 
-function c () {
+function c() {
     cd "$@" && l
     # TODO: Completions candidates should be directories only
 }
