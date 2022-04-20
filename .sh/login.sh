@@ -29,7 +29,8 @@ pathprepend ~/bin PATH
 pathprepend ~/.local/bin PATH
 
 # Add node binaries
-pathprepend "$NVM_DIR"/versions/node/v14.17.0/bin PATH
+# TODO
+# pathprepend "$NVM_DIR"/versions/node/v14.17.0/bin PATH
 
 # Add cargo binaries
 pathprepend ~/.cargo/bin PATH
@@ -39,6 +40,9 @@ pathprepend "$ANDROID_HOME"/emulator PATH # Android emulator
 pathprepend "$ANDROID_HOME"/tools PATH # ???
 pathprepend "$ANDROID_HOME"/tools/bin PATH # Android SDK tools
 pathprepend "$ANDROID_HOME"/platform-tools PATH # Android SDK platform tools
+
+# Add rvm binaries
+pathappend ~/.rvm/bin
 
 # Ensure current directory is not in PATH
 pathremove . PATH

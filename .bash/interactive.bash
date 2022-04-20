@@ -13,7 +13,9 @@ unset git_etc_dir
 source <(command -v npm &> /dev/null && npm completion)
 
 # nvm
-ssource "$NVM_DIR"/nvm.sh --no-use
+# TODO: Consider using the following but make sure default node version is in PATH
+# ssource "$NVM_DIR"/nvm.sh --no-use
+ssource "$NVM_DIR"/nvm.sh
 ssource "$NVM_DIR"/bash_completion
 
 # rvm
