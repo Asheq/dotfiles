@@ -62,6 +62,11 @@
 !/.local/bin
 !/.local/bin/**
 
+# SSH config
+# CAREFUL! DO NOT ACCIDENTALLY PUSH PRIVATE SSH KEYS!
+!/.ssh
+!/.ssh/config
+
 # Re-ignore
 # ==============================================================================
 
