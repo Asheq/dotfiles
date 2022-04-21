@@ -3,12 +3,12 @@
 
 if command -v exa &> /dev/null; then
     alias l='exa -F'
-    alias la='exa -Fa'
-    alias ll='exa -Flah'
+    alias la='exa -FA'
+    alias ll='exa -Falh'
 else
-    alias l='ls --color'
-    alias la='ls --color -Fa'
-    alias ll='ls --color -Flah'
+    alias l='ls --color -F'
+    alias la='ls --color -FA'
+    alias ll='ls --color -Falh'
 fi
 
 if command -v open &> /dev/null; then
@@ -36,4 +36,6 @@ alias rnd='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
 
 # Bell
 # ==============================================================================
+# TODO: Is the second one cross-platform?
 alias bell=$'echo ; osascript -e \'display notification "Bell rang from kitty terminal"\''
+# alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
