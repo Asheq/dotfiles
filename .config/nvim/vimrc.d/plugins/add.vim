@@ -73,15 +73,17 @@ Plug 'tpope/vim-abolish'
 
 if executable('node')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    let g:coc_global_extensions = [
-                \ 'coc-prettier',
-                \ 'coc-eslint',
-                \ 'coc-flow',
-                \ 'coc-json',
-                \ 'coc-html',
-                \ 'coc-css',
-                \ ]
-                " \ 'coc-tsserver'
+    " TODO
+    " let g:coc_global_extensions = [
+    "             \ 'coc-prettier',
+    "             \ 'coc-eslint',
+    "             \ 'coc-flow',
+    "             \ 'coc-json',
+    "             \ 'coc-html',
+    "             \ 'coc-css',
+    "             \ 'coc-tsserver',
+    "             \ 'coc-lists'
+    "             \ ]
 endif
 
 " plug#end() automatically executes:

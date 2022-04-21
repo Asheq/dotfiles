@@ -86,6 +86,18 @@ function __prompt_flag_npm() {
     fi
 }
 
+function __prompt_flag_python() {
+    if command -v python &> /dev/null; then
+        echo "python=$(python --version)"
+    fi
+}
+
+function __prompt_flag_pip() {
+    if command -v pip &> /dev/null; then
+        echo "pip=$(pip --version)"
+    fi
+}
+
 function __prompt_flag_user() {
     if [[ "${USER}" != "${LOGNAME}" ]] ; then
         echo "${__glyph_user}=${USER}"
@@ -174,7 +186,8 @@ function print_args() {
 }
 
 function c() {
-    cd "$@" && l
+    cd "$@"
+    # cd "$@" && l
     # TODO: Completions candidates should be directories only
 }
 
