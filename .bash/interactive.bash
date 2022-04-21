@@ -1,8 +1,10 @@
 # Source library scripts
 # ==============================================================================
 
+# TODO
+ssource /etc/bash_completion
+
 # git
-# TODO: Add these files
 git_etc_dir="$(dirname "$(realpath "$(command -v git)")")"/../etc
 ssource "$git_etc_dir"/bash_completion.d/git-completion.bash
 ssource "$git_etc_dir"/bash_completion.d/git-prompt.sh
