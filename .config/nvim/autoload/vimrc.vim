@@ -6,7 +6,7 @@ endfunction
 
 function! vimrc#get_statusline()
     return ""
-                \ . "%n %1*%{expand('%:p:~:.')}%* "
+                \ . "%1*%{expand('%:p:~:.')}%* "
                 \ . "%h%w%m%r[%P]"
                 \ . "%="
                 \ . "%([%{vimrc#get_window_cwd()}]%)"
