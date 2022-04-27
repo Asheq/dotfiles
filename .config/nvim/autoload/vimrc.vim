@@ -13,7 +13,7 @@ function! vimrc#get_statusline()
 endfunction
 
 function! vimrc#get_fold_text()
-    return repeat(' ', indent(v:foldstart)) . foldtext()
+    return getline(v:foldstart)
 endfunction
 
 function! vimrc#open_in_shell(item, ...)

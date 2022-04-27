@@ -15,6 +15,7 @@ set list
 set listchars=tab:·\ ,trail:￮,extends:▶,precedes:◀,nbsp:⏑
 set number
 set showbreak=└─▶
+set fillchars=fold:\ 
 
 " 5. Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
@@ -23,6 +24,11 @@ set termguicolors
 " 6. Multiple windows
 " ----------------------------------------------------------------------------
 set statusline=%!vimrc#get_statusline()
+
+" 9. Using the mouse
+" ----------------------------------------------------------------------------
+set mouse=a
+set mousetime=0
 
 " 13. Editing text
 " ----------------------------------------------------------------------------
@@ -49,5 +55,5 @@ endif
 " Generic GUI options
 " ----------------------------------------------------------------------------
 if exists('&guifont')
-    set guifont=Iosevka:h16
+    set guifont=Iosevka\ Term:h18
 endif

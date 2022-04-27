@@ -103,103 +103,103 @@ let s:diffVioletLight   = '#5900b4' " CUSTOM
 if has('gui') || has("gui_vimr")
     " The contrast is too low using the default s:gray1 as the background so
     " using s:black instead. This becomes the basis for everything else.
-    call <sid>hi('Normal'         , s:gray18       , s:black         , 'NONE'       , 'NONE')
+    call <sid>hi('Normal'             , s:gray18       , s:black           , 'NONE'       , 'NONE')
 endif
 
 " No foreground or background
 " ============================================================================
 " Editor elements
 " ----------------------------------------------------------------------------
-call <sid>hi('MoreMsg'        , 'NONE'      , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('TabLineSel'     , 'NONE'      , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('MoreMsg'                , 'NONE'         , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('TabLineSel'             , 'NONE'         , 'NONE'            , 'NONE'       , 'NONE')
 
 " Syntax groups
 " ----------------------------------------------------------------------------
-call <sid>hi('Directive'      , 'NONE'      , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('Format'         , 'NONE'      , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('PreProc'        , 'NONE'      , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('Special'        , 'NONE'      , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('Underlined'     , 'NONE'      , 'NONE'            , 'UNDERLINE'  , 'NONE')
-call <sid>hi('Search'         , 'NONE'      , 'NONE'            , 'UNDERLINE'  , 'NONE')
-call <sid>hi('CocUnderline'   , 'NONE'      , 'NONE'            , 'UNDERCURL'  , 'NONE')
-call <sid>hi('SpellBad'       , 'NONE'      , 'NONE'            , 'UNDERCURL'  , s:red)
-call <sid>hi('SpellCap'       , 'NONE'      , 'NONE'            , 'UNDERCURL'  , s:orange)
-call <sid>hi('SpellLocal'     , 'NONE'      , 'NONE'            , 'UNDERCURL'  , s:orange)
-call <sid>hi('SpellRare'      , 'NONE'      , 'NONE'            , 'UNDERCURL'  , s:orange)
+call <sid>hi('Directive'              , 'NONE'         , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Format'                 , 'NONE'         , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('PreProc'                , 'NONE'         , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Special'                , 'NONE'         , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Underlined'             , 'NONE'         , 'NONE'            , 'UNDERLINE'  , 'NONE')
+call <sid>hi('Search'                 , 'NONE'         , 'NONE'            , 'UNDERLINE'  , 'NONE')
+call <sid>hi('CocUnderline'           , 'NONE'         , 'NONE'            , 'UNDERCURL'  , 'NONE')
+call <sid>hi('SpellBad'               , 'NONE'         , 'NONE'            , 'UNDERCURL'  , s:red)
+call <sid>hi('SpellCap'               , 'NONE'         , 'NONE'            , 'UNDERCURL'  , s:orange)
+call <sid>hi('SpellLocal'             , 'NONE'         , 'NONE'            , 'UNDERCURL'  , s:orange)
+call <sid>hi('SpellRare'              , 'NONE'         , 'NONE'            , 'UNDERCURL'  , s:orange)
 
 " Foreground only
 " ============================================================================
 " Editor elements
 " ----------------------------------------------------------------------------
-call <sid>hi('Directory'      , s:blue      , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('ErrorMsg'       , s:red       , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('FoldColumn'     , s:gray15    , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('LineNr'         , s:gray12    , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('NonText'        , s:gray13    , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('Question'       , s:blueGreen , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('Title'          , s:blue      , 'NONE'            , 'BOLD'       , 'NONE')
-call <sid>hi('Folded'         , s:gray13    , 'NONE'            , 'ITALIC'     , 'NONE')
-call <sid>hi('VertSplit'      , s:gray10    , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('WarningMsg'     , s:lightRed  , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('Whitespace'     , s:gray13    , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Directory'              , s:blue         , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('ErrorMsg'               , s:red          , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('FoldColumn'             , s:gray16       , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('LineNr'                 , s:gray12       , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('NonText'                , s:gray13       , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Question'               , s:blueGreen    , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Title'                  , s:blue         , 'NONE'            , 'BOLD'       , 'NONE')
+call <sid>hi('VertSplit'              , s:gray10       , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('WarningMsg'             , s:lightRed     , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Whitespace'             , s:gray13       , 'NONE'            , 'NONE'       , 'NONE')
 
 " Syntax groups
 " ----------------------------------------------------------------------------
-call <sid>hi('Boolean'        , s:blue      , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('Comment'        , s:green     , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('Error'          , s:red       , 'NONE'            , 'UNDERCURL'  , 'NONE')
-call <sid>hi('Identifier'     , s:yellow    , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('Ignore'         , s:gray13    , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('Number'         , s:blue      , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('Statement'      , s:pink      , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('String'         , s:orange    , 'NONE'            , 'NONE'       , 'NONE')
-call <sid>hi('Todo'           , s:green     , 'NONE'            , 'BOLD'       , 'NONE')
-call <sid>hi('Type'           , s:blue      , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Boolean'                , s:blue         , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Comment'                , s:green        , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Error'                  , s:red          , 'NONE'            , 'UNDERCURL'  , 'NONE')
+call <sid>hi('Identifier'             , s:yellow       , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Ignore'                 , s:gray13       , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Number'                 , s:blue         , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Statement'              , s:pink         , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('String'                 , s:orange       , 'NONE'            , 'NONE'       , 'NONE')
+call <sid>hi('Todo'                   , s:green        , 'NONE'            , 'BOLD'       , 'NONE')
+call <sid>hi('Type'                   , s:blue         , 'NONE'            , 'NONE'       , 'NONE')
 
 " Background only
 " ============================================================================
 " Cursorline
-call <sid>hi('CursorLine'     , 'NONE'      , s:darkBlue        , 'NONE'       , 'NONE')
+call <sid>hi('CursorLine'             , 'NONE'         , s:darkBlue        , 'NONE'       , 'NONE')
 
 " Diff
-call <sid>hi('DiffAdd'        , 'NONE'      , s:diffGreenDark   , 'NONE'       , 'NONE')
-call <sid>hi('DiffDelete'     , 'NONE'      , s:diffRedDark     , 'NONE'       , 'NONE')
-call <sid>hi('DiffChange'     , 'NONE'      , s:diffVioletDark  , 'NONE'       , 'NONE')
-call <sid>hi('DiffText'       , 'NONE'      , s:diffVioletLight , 'NONE'       , 'NONE')
+call <sid>hi('DiffAdd'                , 'NONE'         , s:diffGreenDark   , 'NONE'       , 'NONE')
+call <sid>hi('DiffDelete'             , 'NONE'         , s:diffRedDark     , 'NONE'       , 'NONE')
+call <sid>hi('DiffChange'             , 'NONE'         , s:diffVioletDark  , 'NONE'       , 'NONE')
+call <sid>hi('DiffText'               , 'NONE'         , s:diffVioletLight , 'NONE'       , 'NONE')
 
 " Other
-call <sid>hi('MatchParen'     , 'NONE'      , s:gray12          , 'NONE'       , 'NONE')
-call <sid>hi('QuickFixLine'   , 'NONE'      , s:slate1          , 'NONE'       , 'NONE')
-call <sid>hi('Substitute'     , 'NONE'      , s:darkOrange      , 'NONE'       , 'NONE')
-call <sid>hi('Visual'         , 'NONE'      , s:slate2          , 'NONE'       , 'NONE')
-call <sid>hi('Match'          , 'NONE'      , s:slate3          , 'NONE'       , 'NONE')
+call <sid>hi('MatchParen'             , 'NONE'         , s:gray12          , 'NONE'       , 'NONE')
+call <sid>hi('QuickFixLine'           , 'NONE'         , s:slate1          , 'NONE'       , 'NONE')
+call <sid>hi('Substitute'             , 'NONE'         , s:darkOrange      , 'NONE'       , 'NONE')
+call <sid>hi('Visual'                 , 'NONE'         , s:slate2          , 'NONE'       , 'NONE')
+call <sid>hi('Match'                  , 'NONE'         , s:slate3          , 'NONE'       , 'NONE')
 
 " Foreground and background
 " ============================================================================
 
 " Window borders
-call <sid>hi('StatusLine'             , s:gray14    , s:gray10          , 'NONE' , 'NONE')
-call <sid>hi('StatusLineNC'           , s:gray14    , s:gray10          , 'NONE' , 'NONE')
-call <sid>hi('User1'                  , s:gray18    , s:gray10          , 'NONE' , 'NONE')
-call <sid>hi('User2'                  , s:lightBlue , s:gray14          , 'NONE' , 'NONE')
-call <sid>hi('TabLine'                , s:gray14    , s:gray4           , 'NONE' , 'NONE')
+call <sid>hi('StatusLine'             , s:gray14       , s:gray10          , 'NONE'       , 'NONE')
+call <sid>hi('StatusLineNC'           , s:gray14       , s:gray10          , 'NONE'       , 'NONE')
+call <sid>hi('User1'                  , s:gray18       , s:gray10          , 'NONE'       , 'NONE')
+call <sid>hi('User2'                  , s:lightBlue    , s:gray14          , 'NONE'       , 'NONE')
+call <sid>hi('TabLine'                , s:gray14       , s:gray4           , 'NONE'       , 'NONE')
 
 " Popup menu
-call <sid>hi('Pmenu'                  , s:gray17    , s:gray7           , 'NONE' , 'NONE')
-call <sid>hi('PmenuSel'               , s:gray17    , s:slate1          , 'NONE' , 'NONE')
-call <sid>hi('PmenuThumb'             , s:gray17    , s:gray17          , 'NONE' , 'NONE')
+call <sid>hi('Pmenu'                  , s:gray17       , s:gray7           , 'NONE'       , 'NONE')
+call <sid>hi('PmenuSel'               , s:gray17       , s:slate1          , 'NONE'       , 'NONE')
+call <sid>hi('PmenuThumb'             , s:gray17       , s:gray17          , 'NONE'       , 'NONE')
 
 " Sandwich
-call <sid>hi('OperatorSandwichAdd'    , 'NONE'      , s:diffGreenLight  , 'NONE' , 'NONE')
-call <sid>hi('OperatorSandwichDelete' , 'NONE'      , s:diffRedLight    , 'NONE' , 'NONE')
-call <sid>hi('OperatorSandwichChange' , 'NONE'      , s:diffVioletLight , 'NONE' , 'NONE')
+call <sid>hi('OperatorSandwichAdd'    , 'NONE'         , s:diffGreenLight  , 'NONE'       , 'NONE')
+call <sid>hi('OperatorSandwichDelete' , 'NONE'         , s:diffRedLight    , 'NONE'       , 'NONE')
+call <sid>hi('OperatorSandwichChange' , 'NONE'         , s:diffVioletLight , 'NONE'       , 'NONE')
 
 " Other
-call <sid>hi('Cursor'                 , s:gray12    , s:gray16          , 'NONE' , 'NONE')
-call <sid>hi('CursorLineNr'           , s:gray14    , s:darkBlue        , 'NONE' , 'NONE')
-call <sid>hi('TermCursor'             , s:gray1     , s:green           , 'NONE' , 'NONE')
-call <sid>hi('TermCursorNC'           , s:gray18    , s:red             , 'NONE' , 'NONE')
-call <sid>hi('IncSearch'              , s:gray9     , s:yellowOrange    , 'NONE' , 'NONE')
+call <sid>hi('Cursor'                 , s:gray12       , s:gray16          , 'NONE'       , 'NONE')
+call <sid>hi('CursorLineNr'           , s:gray14       , s:darkBlue        , 'NONE'       , 'NONE')
+call <sid>hi('TermCursor'             , s:gray1        , s:green           , 'NONE'       , 'NONE')
+call <sid>hi('TermCursorNC'           , s:gray18       , s:red             , 'NONE'       , 'NONE')
+call <sid>hi('IncSearch'              , s:gray9        , s:yellowOrange    , 'NONE'       , 'NONE')
+call <sid>hi('Folded'                 , s:gray16       , s:gray0           , 'ITALIC'     , 'NONE')
 
 " Linked
 " ============================================================================

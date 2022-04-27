@@ -15,6 +15,8 @@ nnoremap          <leader>/        :mat Match //<Left>
 
 " Complete
 " ----------------------------------------------------------------------------
+nnoremap          <CR>             za
+
 nnoremap          <leader>w        :up<CR>
 
 nnoremap          <leader>p        :%!npx --quiet prettier --stdin-filepath %<CR>
