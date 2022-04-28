@@ -68,6 +68,7 @@ Plug 'tpope/vim-characterize'
 Plug 'wellle/context.vim'
 Plug 'tpope/vim-abolish'
 Plug 'dstein64/nvim-scrollview'
+" Plug 'gcavallanti/vim-noscrollbar'
 
 " Language Server
 " ----------------------------------------------------------------------------
