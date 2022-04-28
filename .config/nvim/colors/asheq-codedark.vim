@@ -172,6 +172,7 @@ call <sid>hi('QuickFixLine'           , 'NONE'         , s:slate1          , 'NO
 call <sid>hi('Substitute'             , 'NONE'         , s:darkOrange      , 'NONE'       , 'NONE')
 call <sid>hi('Visual'                 , 'NONE'         , s:slate2          , 'NONE'       , 'NONE')
 call <sid>hi('Match'                  , 'NONE'         , s:slate3          , 'NONE'       , 'NONE')
+" call <sid>hi('ScrollView'             , 'NONE'         , s:lightBlue       , 'NONE'       , 'NONE')
 
 " Foreground and background
 " ============================================================================
@@ -180,7 +181,7 @@ call <sid>hi('Match'                  , 'NONE'         , s:slate3          , 'NO
 call <sid>hi('StatusLine'             , s:gray14       , s:gray10          , 'NONE'       , 'NONE')
 call <sid>hi('StatusLineNC'           , s:gray14       , s:gray10          , 'NONE'       , 'NONE')
 call <sid>hi('User1'                  , s:gray18       , s:gray10          , 'NONE'       , 'NONE')
-call <sid>hi('User2'                  , s:lightBlue    , s:gray14          , 'NONE'       , 'NONE')
+" call <sid>hi('User2'                  , s:lightBlue    , s:gray14          , 'NONE'       , 'NONE')
 call <sid>hi('TabLine'                , s:gray14       , s:gray4           , 'NONE'       , 'NONE')
 
 " Popup menu

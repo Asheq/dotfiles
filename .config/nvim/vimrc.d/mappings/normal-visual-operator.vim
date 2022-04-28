@@ -15,7 +15,10 @@ nnoremap          <leader>/        :mat Match //<Left>
 
 " Complete
 " ----------------------------------------------------------------------------
-nnoremap          <CR>             za
+nnoremap          <CR>             za<Cmd>ScrollViewRefresh<CR>
+
+
+nnoremap <silent> <C-l>            :ScrollViewRefresh<Bar>nohlsearch<Bar>diffupdate<Bar>normal! <C-l><CR>
 
 nnoremap          <leader>w        :up<CR>
 

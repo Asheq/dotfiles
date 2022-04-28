@@ -67,6 +67,7 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-characterize'
 Plug 'wellle/context.vim'
 Plug 'tpope/vim-abolish'
+Plug 'dstein64/nvim-scrollview'
 
 " Language Server
 " ----------------------------------------------------------------------------
