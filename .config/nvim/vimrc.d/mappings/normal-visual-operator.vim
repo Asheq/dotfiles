@@ -15,8 +15,8 @@ nnoremap          <leader>/        :mat Match //<Left>
 
 " Complete
 " ----------------------------------------------------------------------------
-nnoremap          <CR>             za<Cmd>ScrollViewRefresh<CR>
-
+" TODO: This overrides the default <CR> in quickfix window and command window
+" nnoremap          <CR>             za<Cmd>ScrollViewRefresh<CR>
 
 nnoremap <silent> <C-l>            :ScrollViewRefresh<Bar>nohlsearch<Bar>diffupdate<Bar>normal! <C-l><CR>
 
