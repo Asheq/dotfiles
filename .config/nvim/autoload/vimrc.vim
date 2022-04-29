@@ -1,3 +1,11 @@
+function! vimrc#maybe_toggle_fold()
+    if foldlevel('.')
+        normal za
+    else
+        execute "normal! \<CR>"
+    endif
+endfunction
+
 function! vimrc#echo_highlight_info()
     echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
                 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
