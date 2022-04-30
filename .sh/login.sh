@@ -19,7 +19,7 @@ export NVM_DIR=~/.nvm
 
 # For Android SDK
 # TODO: This is a Mac-only path
-export ANDROID_HOME=~/Library/Android/sdk
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
 
 # Set PATH
 # ==============================================================================
@@ -36,10 +36,11 @@ pathprepend ~/.local/bin PATH
 pathprepend ~/.cargo/bin PATH
 
 # Add Android SDK binaries
-pathprepend "$ANDROID_HOME"/emulator PATH # Android emulator
-pathprepend "$ANDROID_HOME"/tools PATH # ???
-pathprepend "$ANDROID_HOME"/tools/bin PATH # Android SDK tools
-pathprepend "$ANDROID_HOME"/platform-tools PATH # Android SDK platform tools
+pathprepend "$ANDROID_SDK_ROOT"/emulator PATH
+pathprepend "$ANDROID_SDK_ROOT"/platform-tools PATH
+
+pathprepend "$ANDROID_SDK_ROOT"/tools PATH
+pathprepend "$ANDROID_SDK_ROOT"/tools/bin PATH
 
 # Add rvm binaries
 pathappend ~/.rvm/bin

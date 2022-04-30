@@ -2,20 +2,15 @@
 " ============================================================================
 call plug#begin('~/.vim/plugged')
 
-" Operators
+" Operators, motions, and text objects
 " ---------------------------------------------------------------------------
 Plug 'tommcdo/vim-lion'
-Plug 'machakann/vim-sandwich'
 Plug 'tpope/vim-commentary'
-Plug 'arthurxavierx/vim-caser'
-
-" Motions
-" ----------------------------------------------------------------------------
 Plug 'jeetsukumaran/vim-indentwise'
 
-" Text objects
-" ----------------------------------------------------------------------------
-" [Text objects go here]
+" TODO: Conflicts with leap keybindings
+" Plug 'machakann/vim-sandwich'
+" Plug 'arthurxavierx/vim-caser'
 
 " Auto-set options
 " ----------------------------------------------------------------------------
@@ -62,13 +57,19 @@ Plug 'peitalin/vim-jsx-typescript'
 " Git
 Plug 'tpope/vim-git'
 
+" Scrollbar
+" ----------------------------------------------------------------------------
+Plug 'dstein64/nvim-scrollview'
+" The 'model' implementation
+" Plug 'gcavallanti/vim-noscrollbar'
+
 " Other
 " ----------------------------------------------------------------------------
 Plug 'tpope/vim-characterize'
 Plug 'wellle/context.vim'
 Plug 'tpope/vim-abolish'
-Plug 'dstein64/nvim-scrollview'
-" Plug 'gcavallanti/vim-noscrollbar'
+" TODO: Add vim-repeat as per instructions
+Plug 'ggandor/leap.nvim'
 
 " Language Server
 " ----------------------------------------------------------------------------

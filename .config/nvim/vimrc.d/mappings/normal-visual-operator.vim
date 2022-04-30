@@ -48,12 +48,6 @@ call              vimrc#create_toggle_maps('s', '&spell'                      , 
 call              vimrc#create_toggle_maps('t', 'match(&colorcolumn, "+1")>=0', 'setl cc-=+1'   , 'setl cc+=+1')
 call              vimrc#create_toggle_maps('w', '&wrap'                       , 'setl nowrap'   , 'setl wrap')
 
-" Operators
-" ============================================================================
-" Do not conflict with sandwich's mappings
-nmap              s                <Nop>
-xmap              s                <Nop>
-
 " Operations
 " ============================================================================
 nnoremap          <leader>d        :cal vimrc#define(expand('<cword>'))<CR>
