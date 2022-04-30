@@ -6,6 +6,13 @@ function! vimrc#maybe_toggle_fold()
     endif
 endfunction
 
+function! vimrc#redraw_screen()
+    ScrollViewRefresh
+    nohlsearch
+    diffupdate
+    execute "normal! \<C-l>"
+endfunction
+
 function! vimrc#echo_highlight_info()
     echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
                 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"

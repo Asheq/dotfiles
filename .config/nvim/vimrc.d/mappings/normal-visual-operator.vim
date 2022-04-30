@@ -19,7 +19,7 @@ nnoremap <silent> <CR>             :cal vimrc#maybe_toggle_fold()<CR>
 
 nnoremap <silent> <leader><CR>     <CR>
 
-nnoremap <silent> <C-l>            :ScrollViewRefresh<Bar>nohlsearch<Bar>diffupdate<Bar>normal! <C-l><CR>
+nnoremap <silent> <C-l>            :cal vimrc#redraw_screen()<CR>
 
 nnoremap          <leader>w        :up<CR>
 
