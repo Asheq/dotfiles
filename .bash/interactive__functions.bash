@@ -46,7 +46,6 @@ GIT_PS1_DESCRIBE_STYLE='branch'
 # shellcheck disable=SC2034
 GIT_PS1_HIDE_IF_PWD_IGNORED=true
 function __prompt_section_git() {
-    # TODO: Add __git_ps1
     if command -v __git_ps1 &> /dev/null; then
         git_ps1_output="$(__git_ps1)"
     fi
