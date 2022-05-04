@@ -4,8 +4,8 @@
 __style_reset='\[\e[0m\]'
 __style_connector='\[\e[0;35m\]'
 __style_primary='\[\e[2;30;45m\]'
-__style_secondary='\[\e[0;30;47m\]'
-__style_tertiary='\[\e[0;30;107m\]'
+__style_secondary='\[\e[0;30;46m\]'
+__style_tertiary='\[\e[0;30;47m\]'
 __style_error='\[\e[0;31m\]'
 __style_success='\[\e[0;32m\]'
 
