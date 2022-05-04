@@ -33,15 +33,15 @@ endfun
 " Shades of gray
 " ----------------------------------------------------------------------------
 let s:black             = '#000000' " CUSTOM
-let s:gray0             = '#0F0F0F' " CUSTOM (unused)
+let s:gray0             = '#0F0F0F' " CUSTOM
 let s:gray1             = '#1E1E1E' " cdBack, cdTabCurrent
-let s:gray2             = '#222222' " cdCursorDarkDark (unused)
-let s:gray3             = '#252526' " cdTabOutside, cdLeftDark (unused)
+let s:gray2             = '#222222' " cdCursorDarkDark
+let s:gray3             = '#252526' " cdTabOutside, cdLeftDark
 let s:gray4             = '#2D2D2D' " cdTabOther
-let s:gray5             = '#2D2D30' " cdPopupBack (unused)
-let s:gray6             = '#373737' " cdLeftMid (unused)
+let s:gray5             = '#2D2D30' " cdPopupBack
+let s:gray6             = '#373737' " cdLeftMid
 let s:gray7             = '#3D3D40' " cdPopupHighlightGray
-let s:gray8             = '#3F3F46' " cdLeftLight (unused)
+let s:gray8             = '#3F3F46' " cdLeftLight
 let s:gray9             = '#424242' " cdSplitThumb
 let s:gray10            = '#444444' " cdSplitDark
 let s:gray11            = '#4C4E50' " cdSearch
@@ -88,23 +88,17 @@ let s:violet            = '#646695' " s:cdViolet
 " ----------------------------------------------------------------------------
 let s:diffRedDark       = '#4B1818' " s:diffRedDark
 let s:diffRedLight      = '#6F1313' " s:diffRedLight
-let s:diffRedLightLight = '#FB0101' " s:diffRedLightLight (unused)
+let s:diffRedLightLight = '#FB0101' " s:diffRedLightLight
 
 let s:diffGreenDark     = '#373D29' " s:diffGreenDark
 let s:diffGreenLight    = '#4B5632' " s:diffGreenLight
 
 let s:diffVioletDark    = '#26004d' " CUSTOM
-let s:diffVioletLight   = '#5900b4' " CUSTOM
+let s:diffVioletLight   = '#48226d' " CUSTOM
 
 " Normal
 " ----------------------------------------------------------------------------
-" NOTE: In the terminal, use the terminal's default background and foreground
-" colors. Only set background explicitly in GUIs.
-if has('gui') || has("gui_vimr")
-    " The contrast is too low using the default s:gray1 as the background so
-    " using s:black instead. This becomes the basis for everything else.
-    call <sid>hi('Normal'             , s:gray18       , s:black           , 'NONE'       , 'NONE')
-endif
+    call <sid>hi('Normal'             , s:gray18       , s:gray0           , 'NONE'       , 'NONE')
 
 " No foreground or background
 " ============================================================================
@@ -200,7 +194,7 @@ call <sid>hi('CursorLineNr'           , s:gray14       , s:darkBlue        , 'NO
 call <sid>hi('TermCursor'             , s:gray1        , s:green           , 'NONE'       , 'NONE')
 call <sid>hi('TermCursorNC'           , s:gray18       , s:red             , 'NONE'       , 'NONE')
 call <sid>hi('IncSearch'              , s:gray9        , s:yellowOrange    , 'NONE'       , 'NONE')
-call <sid>hi('Folded'                 , s:gray16       , s:gray0           , 'ITALIC'     , 'NONE')
+call <sid>hi('Folded'                 , s:gray16       , s:gray1           , 'ITALIC'     , 'NONE')
 
 " Linked
 " ============================================================================
