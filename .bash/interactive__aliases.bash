@@ -19,6 +19,8 @@ fi
 
 alias v='nvim'
 
+alias box='cd ~/Library/CloudStorage/Box-Box/me/'
+
 # git
 # ==============================================================================
 alias g='git'
