@@ -7,10 +7,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
 Plug 'jeetsukumaran/vim-indentwise'
-
-" TODO: Conflicts with leap keybindings
-" Plug 'machakann/vim-sandwich'
-" Plug 'arthurxavierx/vim-caser'
+Plug 'machakann/vim-sandwich'
+Plug 'arthurxavierx/vim-caser'
 
 " Auto-set options
 " ----------------------------------------------------------------------------
@@ -60,16 +58,12 @@ Plug 'tpope/vim-git'
 " Scrollbar
 " ----------------------------------------------------------------------------
 Plug 'dstein64/nvim-scrollview'
-" The 'model' implementation
-" Plug 'gcavallanti/vim-noscrollbar'
 
 " Other
 " ----------------------------------------------------------------------------
 Plug 'tpope/vim-characterize'
 Plug 'wellle/context.vim'
 Plug 'tpope/vim-abolish'
-" TODO: Add vim-repeat as per instructions
-Plug 'ggandor/leap.nvim'
 
 " Language Server
 " ----------------------------------------------------------------------------

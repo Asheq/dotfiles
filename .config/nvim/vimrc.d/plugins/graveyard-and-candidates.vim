@@ -33,3 +33,4 @@ AndrewRadev /whitespaste.vim
 
 " Advanced
 puremourning/vimspector
+ggandor     /leap.nvim
