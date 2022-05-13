@@ -40,9 +40,13 @@ GIT_PS1_SHOWSTASHSTATE=true
 # shellcheck disable=SC2034
 GIT_PS1_SHOWUNTRACKEDFILES=true
 # shellcheck disable=SC2034
-GIT_PS1_SHOWUPSTREAM='verbose'
+GIT_PS1_SHOWUPSTREAM='verbose name'
+# shellcheck disable=SC2034
+GIT_PS1_STATESEPARATOR=' '
 # shellcheck disable=SC2034
 GIT_PS1_DESCRIBE_STYLE='branch'
+# shellcheck disable=SC2034
+GIT_PS1_SHOWCOLORHINTS=true # Only works when using __git_ps1 for PROMPT_COMMAND
 # shellcheck disable=SC2034
 GIT_PS1_HIDE_IF_PWD_IGNORED=true
 function __prompt_section_git() {
