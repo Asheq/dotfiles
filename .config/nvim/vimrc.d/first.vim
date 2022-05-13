@@ -1,2 +1,2 @@
-let mapleader = "\<Space>"
-let maplocalleader = "\\"
+let mapleader = ' '
+let maplocalleader = '\'
