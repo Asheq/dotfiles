@@ -20,7 +20,7 @@ fi
 alias v='nvim'
 
 alias box='cd ~/Library/CloudStorage/Box-Box/me/'
-alias docs='cd ~/Documents/'
+alias doc='cd ~/Documents/'
 alias notes='cd ~/Documents/notes/'
 alias todo='cd ~/Documents/todo/'
 
