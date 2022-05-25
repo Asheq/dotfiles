@@ -64,6 +64,7 @@ Plug 'dstein64/nvim-scrollview'
 Plug 'tpope/vim-characterize'
 Plug 'wellle/context.vim'
 Plug 'tpope/vim-abolish'
+Plug 'azabiong/vim-highlighter'
 
 " Language Server
 " ----------------------------------------------------------------------------

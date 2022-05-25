@@ -79,9 +79,9 @@ function! vimrc#main_nvim_flag()
 endfunction
 
 function! vimrc#create_toggle_maps(letter, test, off, on)
-    execute 'nnoremap [r' . a:letter . ' :' . a:on . '<CR>'
-    execute 'nnoremap ]r' . a:letter . ' :' . a:off . '<CR>'
-    execute 'nnoremap yr' . a:letter . ' :' . '<C-r>=' . a:test . '?"' . a:off . '":"' . a:on . '"<CR><CR>'
+    execute 'nnoremap [o' . a:letter . ' :' . a:on . '<CR>'
+    execute 'nnoremap ]o' . a:letter . ' :' . a:off . '<CR>'
+    execute 'nnoremap co' . a:letter . ' :' . '<C-r>=' . a:test . '?"' . a:off . '":"' . a:on . '"<CR><CR>'
 endfunction
 
 function! vimrc#get_global_cwd()
