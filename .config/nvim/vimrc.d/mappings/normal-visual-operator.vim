@@ -37,7 +37,7 @@ nnoremap <silent> <leader>h        :cal vimrc#echo_highlight_info()<CR>
 
 map               _                <Plug>(dirvish_up)
 
-nnoremap <silent> yr               :echoerr 'Use co...'<CR>
+nnoremap          yr               :Use co
 call              vimrc#create_toggle_maps('a', '&formatoptions=~"a"'         , 'setl fo-=a'    , 'setl fo+=a')
 call              vimrc#create_toggle_maps('b', '&scrollbind'                 , 'setl noscb'    , 'setl scb')
 call              vimrc#create_toggle_maps('c', '&cursorcolumn'               , 'setl nocuc'    , 'setl cuc')
