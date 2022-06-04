@@ -75,11 +75,9 @@ if executable('node')
     " let g:coc_global_extensions = [
     "             \ 'coc-prettier',
     "             \ 'coc-eslint',
-    "             \ 'coc-flow',
     "             \ 'coc-json',
     "             \ 'coc-html',
     "             \ 'coc-css',
-    "             \ 'coc-tsserver',
     "             \ 'coc-lists'
     "             \ ]
 endif
