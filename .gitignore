@@ -31,7 +31,8 @@
 !/.config/karabiner/assets/**
 
 !/.config/kitty/
-!/.config/kitty/**
+!/.config/kitty/kitty.conf
+!/.config/kitty/sample-kitty.conf
 
 !/.config/nvim/
 !/.config/nvim/.projections.json
