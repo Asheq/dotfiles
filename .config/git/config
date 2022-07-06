@@ -35,3 +35,5 @@
     pl = pull
     s = status -sb
     st = status
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/

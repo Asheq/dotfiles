@@ -1,4 +1,7 @@
-colorscheme asheq-codedark
+" TODO
+set background=light
+colorscheme PaperColor
+" colorscheme asheq-codedark
 
 " TODO: Guard if colorizer module is not installed
 lua require'colorizer'.setup()

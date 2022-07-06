@@ -65,6 +65,7 @@ Plug 'tpope/vim-characterize'
 Plug 'wellle/context.vim'
 Plug 'tpope/vim-abolish'
 Plug 'azabiong/vim-highlighter'
+Plug 'NLKNguyen/papercolor-theme'
 
 " Language Server
 " ----------------------------------------------------------------------------
