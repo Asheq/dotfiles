@@ -1,4 +1,4 @@
-" TODO
+" TODO: Change colorscheme and background based on Mac theme
 set background=light
 colorscheme PaperColor
 " colorscheme asheq-codedark

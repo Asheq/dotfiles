@@ -11,14 +11,14 @@ export VISUAL="$EDITOR"
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 
 # For man
-# TODO: This does not work because with an appimage
+# TODO: This does not work with a neovim appimage
 export MANPAGER='nvim +Man!'
 
 # For nvm
 export NVM_DIR=~/.nvm
 
 # For Android SDK
-# TODO: This is a Mac-only path
+# NOTE: This is a Mac-only path
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
 
 # Set PATH
