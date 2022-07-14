@@ -48,6 +48,7 @@ call              vimrc#create_toggle_maps('r', '&relativenumber'             , 
 call              vimrc#create_toggle_maps('s', '&spell'                      , 'setl nospell'  , 'setl spell')
 call              vimrc#create_toggle_maps('t', 'match(&colorcolumn, "+1")>=0', 'setl cc-=+1'   , 'setl cc+=+1')
 call              vimrc#create_toggle_maps('w', '&wrap'                       , 'setl nowrap'   , 'setl wrap')
+call              vimrc#create_toggle_maps('d', '&background=="dark"'         , 'set background=light'   , 'set background=dark')
 
 " Operations
 " ============================================================================

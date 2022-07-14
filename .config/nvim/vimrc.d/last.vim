@@ -1,7 +1,7 @@
 " TODO: Change colorscheme and background based on Mac theme
-set background=light
-colorscheme PaperColor
 " colorscheme asheq-codedark
+colorscheme PaperColor
+set background=dark
 
 " TODO: Guard if colorizer module is not installed
 lua require'colorizer'.setup()
