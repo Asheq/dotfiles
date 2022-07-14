@@ -66,6 +66,7 @@ Plug 'wellle/context.vim'
 Plug 'tpope/vim-abolish'
 Plug 'azabiong/vim-highlighter'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 
 " Language Server
 " ----------------------------------------------------------------------------

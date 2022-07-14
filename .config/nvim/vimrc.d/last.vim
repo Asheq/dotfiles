@@ -1,6 +1,5 @@
 " TODO: Change colorscheme and background based on Mac theme
-" colorscheme asheq-codedark
-colorscheme PaperColor
+colorscheme asheq-codedark
 set background=dark
 
 " TODO: Guard if colorizer module is not installed
