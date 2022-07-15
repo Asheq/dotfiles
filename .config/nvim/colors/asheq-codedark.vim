@@ -116,7 +116,7 @@ call <sid>hi('Special'                , 'NONE'         , 'NONE'            , 'NO
 call <sid>hi('Underlined'             , 'NONE'         , 'NONE'            , 'UNDERLINE'  , 'NONE')
 call <sid>hi('Search'                 , 'NONE'         , 'NONE'            , 'UNDERLINE'  , 'NONE')
 call <sid>hi('CocUnderline'           , 'NONE'         , 'NONE'            , 'UNDERCURL'  , 'NONE')
-call <sid>hi('SpellBad'               , 'NONE'         , 'NONE'            , 'UNDERCURL'  , s:red)
+call <sid>hi('SpellBad'               , 'NONE'         , 'NONE'            , 'UNDERCURL'  , s:lightRed)
 call <sid>hi('SpellCap'               , 'NONE'         , 'NONE'            , 'UNDERCURL'  , s:orange)
 call <sid>hi('SpellLocal'             , 'NONE'         , 'NONE'            , 'UNDERCURL'  , s:orange)
 call <sid>hi('SpellRare'              , 'NONE'         , 'NONE'            , 'UNDERCURL'  , s:orange)
