@@ -11,6 +11,5 @@
 * [ripgrep](https://github.com/BurntSushi/ripgrep) - Regex pattern searcher
 * [nvm](https://github.com/nvm-sh/nvm) - Node Version Manager
 * [npm](https://www.npmjs.com/) - Node Package Manager
-* [rvm](https://rvm.io/) - Ruby Version Manager
 * [cargo](https://doc.rust-lang.org/cargo/) - Rust Package Manager
 * [React Native Debugger](https://github.com/jhen0409/react-native-debugger)

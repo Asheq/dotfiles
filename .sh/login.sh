@@ -35,14 +35,11 @@ pathprepend "$NVM_DIR"/versions/node/v18.0.0/bin PATH
 pathprepend ~/.cargo/bin PATH
 
 # Add Android SDK binaries
-pathprepend "$ANDROID_SDK_ROOT"/emulator PATH
-pathprepend "$ANDROID_SDK_ROOT"/platform-tools PATH
-
 pathprepend "$ANDROID_SDK_ROOT"/tools PATH
 pathprepend "$ANDROID_SDK_ROOT"/tools/bin PATH
 
-# Add rvm binaries
-pathappend ~/.rvm/bin
+pathprepend "$ANDROID_SDK_ROOT"/emulator PATH
+pathprepend "$ANDROID_SDK_ROOT"/platform-tools PATH
 
 # Add python binaries
 command -v pyenv &> /dev/null && eval "$(pyenv init --path)"

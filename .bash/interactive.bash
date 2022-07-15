@@ -18,8 +18,8 @@ source <(command -v npm &> /dev/null && npm completion)
 ssource "$NVM_DIR"/nvm.sh --no-use
 ssource "$NVM_DIR"/bash_completion
 
-# rvm
-ssource ~/.rvm/scripts/rvm
+# rbenv
+eval "$(rbenv init - bash)"
 
 # fzf
 ssource ~/.fzf.bash
