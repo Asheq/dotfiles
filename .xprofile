@@ -4,15 +4,15 @@
 SLIMBLADE_ID=$(xinput list | grep "Kensington Slimblade Trackball" | head -n 1 | sed -r 's/.*id=([0-9]+).*/\1/')
 
 # Default Layout:
-# |-----------------------------------|
-# |                  |                |
-# | 2 (middle click) | 8 (back)       |
-# |                  |                |
-# |------------------O----------------|
-# |                  |                |
-# | 1 (left click)   | 3 (right)      |
-# |                  |                |
-# |-----------------------------------|
+# ╭──────────────────┬────────────────╮
+# │                  │                │
+# │ 2 (middle click) │ 8 (back)       │
+# │                  │                │
+# ├──────────────────┼────────────────┤
+# │                  │                │
+# │ 1 (left click)   │ 3 (right)      │
+# │                  │                │
+# ╰──────────────────┴────────────────╯
 #
 # Map buttons:
 # 1 -> 3
@@ -21,5 +21,5 @@ SLIMBLADE_ID=$(xinput list | grep "Kensington Slimblade Trackball" | head -n 1 |
 xinput --set-button-map ${SLIMBLADE_ID} 3 1 2
 
 # Turn on natural scrolling:
-# NOTE: If this does not work, just change the operating system's setting to reverse mouse scroll direction.
-# xinput --set-prop ${SLIMBLADE_ID} 314 1
+# NOTE: To look at props do xinput --list-props ${SLIMBLADE_ID}
+xinput --set-prop ${SLIMBLADE_ID} 301 1
