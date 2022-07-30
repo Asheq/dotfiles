@@ -24,6 +24,8 @@ alias doc='cd ~/Documents/'
 alias notes='cd ~/Documents/notes/'
 alias todo='cd ~/Documents/todo/'
 
+alias s="kitty +kitten ssh"
+
 # git
 # ==============================================================================
 alias g='git'
