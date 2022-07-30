@@ -19,7 +19,9 @@ ssource "$NVM_DIR"/nvm.sh --no-use
 ssource "$NVM_DIR"/bash_completion
 
 # rbenv
-eval "$(rbenv init - bash)"
+if hash rbenv 2>/dev/null; then
+    eval "$(rbenv init - bash)"
+fi
 
 # fzf
 ssource ~/.fzf.bash
