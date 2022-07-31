@@ -23,7 +23,12 @@ if hash rbenv 2>/dev/null; then
     eval "$(rbenv init - bash)"
 fi
 
-# fzf
+# fzf on Debian as per /usr/share/doc/fzf/README.Debian as per
+# https://packages.debian.org/bullseye/fzf
+ssource /usr/share/doc/fzf/examples/completion.bash
+ssource /usr/share/doc/fzf/examples/key-bindings.bash
+
+# fzf on Mac? TODO: Where did this come from?
 ssource ~/.fzf.bash
 
 # kitty
