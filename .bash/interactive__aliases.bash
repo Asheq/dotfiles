@@ -17,6 +17,8 @@ elif command -v xdg-open &> /dev/null; then
     alias o='xdg-open'
 fi
 
+alias c='cd'
+
 alias v='nvim'
 
 alias box='cd ~/Library/CloudStorage/Box-Box/me/'
