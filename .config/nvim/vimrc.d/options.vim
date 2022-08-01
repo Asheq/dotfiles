@@ -16,14 +16,18 @@ set listchars=tab:·\ ,trail:￮,extends:▶,precedes:◀,nbsp:⏑
 set number
 set showbreak=└─▶
 set fillchars=fold:\ 
+set nowrap
 
 " 5. Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
 set termguicolors
+set nospell
 
 " 6. Multiple windows
 " ----------------------------------------------------------------------------
 set statusline=%!vimrc#get_statusline()
+set splitright
+set splitbelow
 
 " 9. Using the mouse
 " ----------------------------------------------------------------------------
