@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Configure Kensington Slimblade Trackball
+# ========================================
 SLIMBLADE_ID=$(xinput list | grep "Kensington Slimblade Trackball" | head -n 1 | sed -r 's/.*id=([0-9]+).*/\1/')
 
 # Default Layout:
@@ -21,5 +22,5 @@ SLIMBLADE_ID=$(xinput list | grep "Kensington Slimblade Trackball" | head -n 1 |
 xinput --set-button-map ${SLIMBLADE_ID} 3 1 2
 
 # Turn on natural scrolling:
-# NOTE: To look at props do xinput --list-props ${SLIMBLADE_ID}
-xinput --set-prop ${SLIMBLADE_ID} 301 1
+NATURAL_SCROLLING_ID=$(xinput --list-props ${SLIMBLADE_ID} | grep "Natural Scrolling Enabled (.*)" | sed -r 's/.*\(([0-9]+)\).*/\1/')
+xinput --set-prop ${SLIMBLADE_ID} ${NATURAL_SCROLLING_ID} 1
