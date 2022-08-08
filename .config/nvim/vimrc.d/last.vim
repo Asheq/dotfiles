@@ -1,8 +1,10 @@
 " TODO: Detect whether system is in dark or light mode and choose theme accordingly
-colorscheme asheq-codedark
 set background=dark
-" colorscheme default
+" colorscheme asheq-codedark
+colorscheme gruvbox
+
 " set background=light
+" colorscheme default
 
 " TODO: Guard if colorizer module is not installed
 lua require'colorizer'.setup()
