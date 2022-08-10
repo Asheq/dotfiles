@@ -40,7 +40,7 @@ GIT_PS1_SHOWSTASHSTATE=true
 # shellcheck disable=SC2034
 GIT_PS1_SHOWUNTRACKEDFILES=true
 # shellcheck disable=SC2034
-GIT_PS1_SHOWUPSTREAM='verbose name'
+GIT_PS1_SHOWUPSTREAM=true
 # shellcheck disable=SC2034
 GIT_PS1_STATESEPARATOR=' '
 # shellcheck disable=SC2034
@@ -186,4 +186,17 @@ function print_args() {
         echo "Argument: ${arg}"
     done
     echo "Count: $#"
+}
+
+function gps() {
+    echo "
+    *  has UNSTAGED changes
+    +  has STAGED changes
+    $  something is STASHED
+    %  has UNTRACKED files
+    <  branch is BEHIND upstream
+    >  branch is AHEAD of upstream
+   <>  branch has DIVERGED from upstream
+    =  branch has NO DIFFERENCE with upstream
+    "
 }
