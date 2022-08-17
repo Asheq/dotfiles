@@ -1,4 +1,5 @@
 #!/bin/sh
+# NOTE: This file should be 100% POSIX-compliant
 
 # Configure Kensington Slimblade Trackball
 # ========================================

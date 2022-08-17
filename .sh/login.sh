@@ -1,4 +1,4 @@
-# NOTE: This file should be  100% POSIX-compliant
+# NOTE: This file should be 100% POSIX-compliant
 
 # Set other environment variables
 # ==============================================================================
