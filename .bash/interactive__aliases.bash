@@ -28,7 +28,7 @@ alias todo='cd ~/Documents/todo/'
 
 alias s="kitty +kitten ssh"
 
-alias xprofile="~/.xprofile"
+alias xp="~/.xprofile"
 
 # git
 # ==============================================================================
