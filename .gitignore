@@ -58,6 +58,10 @@
 !/.sh/
 !/.sh/**
 
+# Custom directory for all other manually exported cofig
+!/.config-manual-exports
+!/.config-manual-exports/**
+
 # Standard location for user binaries
 !/bin/
 !/bin/**
