@@ -1,7 +1,7 @@
 #!/bin/sh
 # NOTE: This file should be 100% POSIX-compliant
 
-if command -v xinput &> /dev/null; then
+if command -v xinput 1> /dev/null; then
     # Configure Kensington Slimblade Trackball
     # ========================================
     SLIMBLADE_ID=$(xinput list | grep "Kensington Slimblade Trackball" | head -n 1 | sed -r 's/.*id=([0-9]+).*/\1/')
