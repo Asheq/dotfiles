@@ -24,7 +24,7 @@ export ANDROID_SDK_ROOT=~/Library/Android/sdk
 # Set PATH
 # ==============================================================================
 
-# Add user/local binaries
+# Add user's private binaries
 pathprepend ~/bin PATH
 pathprepend ~/.local/bin PATH
 

@@ -65,9 +65,6 @@
 # Standard location for user binaries
 !/bin/
 !/bin/**
-!/.local/
-!/.local/bin
-!/.local/bin/**
 
 # SSH config
 # CAREFUL! DO NOT ACCIDENTALLY PUSH PRIVATE SSH KEYS!

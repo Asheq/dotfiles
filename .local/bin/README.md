@@ -1,2 +1,2 @@
-This folder should be included in PATH.
-It should contain symlinks to binaries/appimages elsewhere.
+This folder is included in PATH by .sh/login.sh
+The contents (other than this file) are not included in my dotfiles repository.
