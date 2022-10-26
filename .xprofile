@@ -4,6 +4,10 @@
 if command -v xinput 1> /dev/null; then
     # Configure Kensington Slimblade Trackball
     # ========================================
+    # NOTE: I am now using:
+    # - https://github.com/sezanzeb/input-remapper on Linux
+    # - https://www.plentycom.jp/en/steermouse on Mac
+
     SLIMBLADE_ID=$(xinput list | grep "Kensington Slimblade Trackball" | head -n 1 | sed -r 's/.*id=([0-9]+).*/\1/')
 
     # Default Layout:
@@ -21,9 +25,9 @@ if command -v xinput 1> /dev/null; then
     # 1 -> 3
     # 3 -> 2
     # 2 -> 1
-    xinput --set-button-map ${SLIMBLADE_ID} 3 1 2
+    # xinput --set-button-map ${SLIMBLADE_ID} 3 1 2
 
     # Turn on natural scrolling:
-    NATURAL_SCROLLING_ID=$(xinput --list-props ${SLIMBLADE_ID} | grep "Natural Scrolling Enabled (.*)" | sed -r 's/.*\(([0-9]+)\).*/\1/')
-    xinput --set-prop ${SLIMBLADE_ID} ${NATURAL_SCROLLING_ID} 1
+    # NATURAL_SCROLLING_ID=$(xinput --list-props ${SLIMBLADE_ID} | grep "Natural Scrolling Enabled (.*)" | sed -r 's/.*\(([0-9]+)\).*/\1/')
+    # xinput --set-prop ${SLIMBLADE_ID} ${NATURAL_SCROLLING_ID} 1
 fi
