@@ -66,7 +66,11 @@ Plug 'wellle/context.vim'
 Plug 'tpope/vim-abolish'
 Plug 'azabiong/vim-highlighter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
+
+" Colorschemes
+" ----------------------------------------------------------------------------
 Plug 'ellisonleao/gruvbox.nvim'
+Plug 'NLKNguyen/papercolor-theme'
 
 " Language Server
 " ----------------------------------------------------------------------------
