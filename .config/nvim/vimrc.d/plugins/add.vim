@@ -38,7 +38,8 @@ Plug 'Asheq/close-buffers.vim'
 Plug 'tpope/vim-apathy'
 
 " Markdown
-Plug 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
