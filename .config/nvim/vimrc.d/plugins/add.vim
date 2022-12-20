@@ -72,6 +72,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
 " ----------------------------------------------------------------------------
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'projekt0n/github-nvim-theme'
 
 " Language Server
 " ----------------------------------------------------------------------------
