@@ -4,7 +4,9 @@ let g:context_enabled = 0
 
 " dirvish
 " ----------------------------------------------------------------------------
-let g:dirvish_mode = ':sort ,^.*[\/],'
+" Uncomment this line to sort directories first
+" let g:dirvish_mode = ':sort ,^.*[\/],'
+
 augroup dirvish_config
     autocmd!
 
