@@ -9,9 +9,13 @@ nnoremap          <leader>rr       :redi @r <Bar> sil  <Bar> redi END<S-Left><S-
 
 nnoremap          <leader>t        :tab<C-z><C-p>
 
-nnoremap          <leader>y        :echo "p = full path\nh = head\nt = tail"<CR>:let @* = expand('%:')<Left><Left>
+nnoremap          <leader>y        "*y
+xnoremap          <leader>y        "*y
 
 nnoremap          <leader>/        :mat Match //<Left>
+
+" TODO
+" nnoremap          <leader>?        :echo "p = full path\nh = head\nt = tail"<CR>:let @* = expand('%:')<Left><Left>
 
 " Complete
 " ----------------------------------------------------------------------------
@@ -21,19 +25,23 @@ nnoremap <silent> <leader><CR>     <CR>
 
 nnoremap <silent> <C-l>            :cal vimrc#redraw_screen()<CR>
 
-nnoremap          <leader>w        :up<CR>
-
-nnoremap          <leader>p        :%!npx --quiet prettier --stdin-filepath %<CR>
-
-nnoremap          <leader>s        :Git<CR>
-
-nnoremap          <leader>n        :noh<CR>
-
-nnoremap          <leader>m        :cal vimrc#mru_dirvish()<CR>
-
-nnoremap          <leader>j        :ju<CR>
-
 nnoremap <silent> <leader>h        :cal vimrc#echo_highlight_info()<CR>
+
+nnoremap <silent> <leader>n        :noh<CR>
+
+nnoremap <silent> <leader>m        :cal vimrc#mru_dirvish()<CR>
+
+nnoremap <silent> <leader>s        :Git<CR>
+
+nnoremap <silent> <leader>j        :ju<CR>
+
+nnoremap <silent> <leader>w        :up<CR>
+
+nnoremap          <leader>p        "*p
+xnoremap          <leader>p        "*p
+
+" TODO
+" nnoremap          <leader>?        :%!npx --quiet prettier --stdin-filepath %<CR>
 
 map               _                <Plug>(dirvish_up)
 
@@ -52,8 +60,8 @@ call              vimrc#create_toggle_maps('d', '&background=="dark"'         , 
 
 " Operations
 " ============================================================================
-nnoremap          <leader>d        :cal vimrc#define(expand('<cword>'))<CR>
-xnoremap          <leader>d        :<C-u>cal vimrc#define(vimrc#get_selection_text())<CR>
+nnoremap <silent> <leader>d        :cal vimrc#define(expand('<cword>'))<CR>
+xnoremap <silent> <leader>d        :<C-u>cal vimrc#define(vimrc#get_selection_text())<CR>
 
 nnoremap <silent> <leader>b        :cal vimrc#browse(expand('<cword>'))<CR>
 xnoremap <silent> <leader>b        :<C-u>cal vimrc#browse(vimrc#get_selection_text())<CR>
