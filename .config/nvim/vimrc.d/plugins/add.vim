@@ -76,18 +76,8 @@ Plug 'projekt0n/github-nvim-theme'
 
 " Language Server
 " ----------------------------------------------------------------------------
-
 if executable('node')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " TODO
-    " let g:coc_global_extensions = [
-    "             \ 'coc-prettier',
-    "             \ 'coc-eslint',
-    "             \ 'coc-json',
-    "             \ 'coc-html',
-    "             \ 'coc-css',
-    "             \ 'coc-lists'
-    "             \ ]
 endif
 
 " plug#end() automatically executes:

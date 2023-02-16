@@ -3,8 +3,6 @@ lua require'colorizer'.setup()
 
 autocmd TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=300, on_visual=true}
 
-source <sfile>:h/last.local.vim
-
 " TODO: Move to permanent location
 function MyTabLabelBufName(n)
     let buflist = tabpagebuflist(a:n)
@@ -63,3 +61,6 @@ function MyTabLine()
 endfunction
 
 set tabline=%!MyTabLine()
+
+source <sfile>:h/last.local.vim
+luafile <sfile>:h/last.local.lua

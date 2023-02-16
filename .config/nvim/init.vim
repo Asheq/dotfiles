@@ -17,4 +17,3 @@ source <sfile>:h/vimrc.d/options.vim
 
 " Last
 source <sfile>:h/vimrc.d/last.vim
-
