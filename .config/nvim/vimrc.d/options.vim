@@ -29,6 +29,10 @@ set statusline=%!vimrc#get_statusline()
 set splitright
 set splitbelow
 
+" 7. Multiple tab pages
+" ----------------------------------------------------------------------------
+set tabline=%!vimrc#get_tabline()
+
 " 9. Using the mouse
 " ----------------------------------------------------------------------------
 set mouse=a

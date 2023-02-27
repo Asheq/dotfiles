@@ -1,8 +1,5 @@
 [user]
     name = Asheq Imran
-[core]
-    ; TODO: Add diff-highlight
-    ; pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [color "diff"]
     meta = blue
 [color "diff-highlight"]

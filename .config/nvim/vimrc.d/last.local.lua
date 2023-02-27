@@ -8,3 +8,5 @@ require("github-theme").setup({
     }
   end
 })
+
+require("colorizer").setup()

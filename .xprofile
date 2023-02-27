@@ -5,7 +5,7 @@ if command -v xinput 1> /dev/null; then
     # Configure Kensington Slimblade Trackball
     # ========================================
     # NOTE: I am now using:
-    # - https://github.com/sezanzeb/input-remapper on Linux (TODO: Replace with xbindkey)
+    # - https://github.com/sezanzeb/input-remapper on Linux
     # - https://www.plentycom.jp/en/steermouse on Mac
     # - https://www.kensington.com/software/kensingtonworks on Windows
 

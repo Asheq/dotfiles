@@ -1,4 +1,4 @@
-# Basic file maangement
+# Basic file management
 # ==============================================================================
 
 if command -v exa &> /dev/null; then
@@ -33,7 +33,7 @@ alias xp="~/.xprofile"
 # git
 # ==============================================================================
 alias g='git'
-# TODO: Add completions via __git_complete
+# TODO: Add completions for g via __git_complete
 # command -v __git_complete && __git_complete g __git_main
 
 # npm
