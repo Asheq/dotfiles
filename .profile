@@ -11,5 +11,4 @@
 
 . ~/.sh/env.sh
 . ~/.sh/login.sh
-
 . ~/.xprofile

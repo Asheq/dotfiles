@@ -22,9 +22,9 @@ alias c='cd'
 alias v='nvim'
 
 alias box='cd ~/Library/CloudStorage/Box-Box/me/'
-alias doc='cd ~/Documents/'
-alias notes='cd ~/Documents/notes/'
-alias todo='cd ~/Documents/todo/'
+alias drive='cd ~/My\ Drive/'
+alias notes='cd ~/My\ Drive/notes/'
+alias todo='cd ~/My\ Drive/todo/'
 
 alias s="kitty +kitten ssh"
 
@@ -49,8 +49,6 @@ alias rnd='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
 # ==============================================================================
 if command -v osascript &> /dev/null; then
     alias bell=$'osascript -e \'display notification "Ring ring ring!"\''
-fi
-
-if command -v notify-send &> /dev/null; then
+elif command -v notify-send &> /dev/null; then
     alias bell='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 fi
