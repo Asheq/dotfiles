@@ -155,3 +155,7 @@ nnoremap <silent><nowait> \k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> \p  :<C-u>CocListResume<CR>
 " Show files.
 nnoremap <silent><nowait> \f        :CocList files<CR>
+" Show buffers.
+nnoremap <silent><nowait> \b        :CocList buffers<CR>
+" Show most recent.
+nnoremap <silent><nowait> \m        :CocList mru<CR>
