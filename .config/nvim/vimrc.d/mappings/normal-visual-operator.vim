@@ -31,6 +31,8 @@ nnoremap <silent> <leader>n        :noh<CR>
 
 nnoremap <silent> <leader>m        :cal vimrc#mru_dirvish()<CR>
 
+nnoremap <silent> <leader>o        :!open '%:h'<CR><CR>
+
 nnoremap <silent> <leader>s        :Git<CR>
 
 nnoremap <silent> <leader>j        :ju<CR>

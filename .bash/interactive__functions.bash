@@ -2,8 +2,8 @@
 # ==============================================================================
 # Text style ANSI escape codes
 __style_reset='\[\e[0m\]'
-__style_connector='\[\e[0;34m\]'
-__style_primary='\[\e[0;30;44m\]'
+__style_connector='\[\e[0;36m\]'
+__style_primary='\[\e[0;30;46m\]'
 __style_secondary='\[\e[0;30;43m\]'
 __style_tertiary='\[\e[0;30;47m\]'
 __style_error='\[\e[0;31m\]'
