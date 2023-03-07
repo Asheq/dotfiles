@@ -70,7 +70,7 @@ function! vimrc#get_tabline()
         let s ..= '%' .. (i + 1) .. 'T'
 
         " the label is made by MyTabLabel()
-	    let s ..= ' %{MyTabLabelBufName(' .. (i + 1) .. ')} %([%{MyTabLabelCWD(' .. (i + 1) .. ')}] %)|'
+        let s ..= ' %{MyTabLabelBufName(' .. (i + 1) .. ')}%( [%{MyTabLabelCWD(' .. (i + 1) .. ')}]%)▕'
     endfor
 
     " after the last tab fill with TabLineFill and reset tab page nr

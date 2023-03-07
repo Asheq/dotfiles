@@ -1,5 +1,5 @@
 require("github-theme").setup({
-  theme_style = "dark",
+  theme_style = "light",
   hide_inactive_statusline = false,
   dark_float = true,
   overrides = function(c)
@@ -10,3 +10,5 @@ require("github-theme").setup({
 })
 
 require("colorizer").setup()
+
+require("pets").setup()

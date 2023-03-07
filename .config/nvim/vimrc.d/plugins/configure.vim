@@ -25,3 +25,4 @@ let g:vim_markdown_folding_style_pythonic = 1
 let g:scrollview_base='left'
 let g:scrollview_column=1
 let g:scrollview_auto_mouse=0
+highlight link ScrollView Statusline
