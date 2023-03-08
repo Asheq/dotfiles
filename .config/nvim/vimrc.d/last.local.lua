@@ -10,5 +10,3 @@ require("github-theme").setup({
 })
 
 require("colorizer").setup()
-
-require("pets").setup()

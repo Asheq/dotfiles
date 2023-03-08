@@ -68,10 +68,6 @@ Plug 'tpope/vim-abolish'
 Plug 'azabiong/vim-highlighter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
 
-Plug 'giusgad/pets.nvim'
-Plug 'giusgad/hologram.nvim'
-Plug 'MunifTanjim/nui.nvim'
-
 " Colorschemes
 " ----------------------------------------------------------------------------
 Plug 'ellisonleao/gruvbox.nvim'
