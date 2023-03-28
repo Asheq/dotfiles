@@ -63,5 +63,5 @@ endif
 " Generic GUI options
 " ----------------------------------------------------------------------------
 if exists('&guifont')
-    set guifont=Iosevka\ Term:h18
+    set guifont=PragmataPro\ Mono:h18
 endif
