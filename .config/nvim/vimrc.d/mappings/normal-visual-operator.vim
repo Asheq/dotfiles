@@ -25,6 +25,8 @@ nnoremap <silent> <leader><CR>     <CR>
 
 nnoremap <silent> <C-l>            :cal vimrc#redraw_screen()<CR>
 
+nnoremap <silent> <leader>x        :ContextToggleWindow<CR>
+
 nnoremap <silent> <leader>h        :cal vimrc#echo_highlight_info()<CR>
 
 nnoremap <silent> <leader>n        :noh<CR>
