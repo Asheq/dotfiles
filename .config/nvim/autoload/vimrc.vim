@@ -107,6 +107,17 @@ function! vimrc#define(keyword)
     call vimrc#open_in_shell('dict://' . vimrc#url_encode(a:keyword))
 endfunction
 
+" TODO: Autoclose terminal on exit
+autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif
+function! vimrc#read_aloud(keyword)
+    10split +terminal
+    let temp = getreg("v")
+    let @v = "say " . shellescape(a:keyword) . " -i -r 250"
+    normal! "vpi
+    call setreg("v", temp)
+    call feedkeys("\<CR>exit\<CR>", 'n')
+endfunction
+
 function! vimrc#browse(item)
     if match(a:item, '^https\?://') > -1
         " The item is already a URL

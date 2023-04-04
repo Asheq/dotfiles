@@ -68,6 +68,12 @@ xnoremap <silent> <leader>d        :<C-u>cal vimrc#define(vimrc#get_selection_te
 nnoremap <silent> <leader>b        :cal vimrc#browse(expand('<cword>'))<CR>
 xnoremap <silent> <leader>b        :<C-u>cal vimrc#browse(vimrc#get_selection_text())<CR>
 
+noremap <silent> <leader>k         :.w !say -r 250<CR><CR>
+xnoremap <silent> <leader>k        :w !say -r 250<CR><CR>
+
+nnoremap <silent> <leader>i        :<C-u>cal vimrc#read_aloud(getline('.'))<CR>
+xnoremap <silent> <leader>i        :<C-u>cal vimrc#read_aloud(vimrc#get_selection_text())<CR>
+
 " Motions
 " ============================================================================
 map               [b               <Plug>(IndentWisePreviousLesserIndent)
