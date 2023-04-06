@@ -35,7 +35,7 @@ set tabline=%!vimrc#get_tabline()
 
 " 9. Using the mouse
 " ----------------------------------------------------------------------------
-set mouse=a
+set mouse=nvi
 set mousetime=0
 
 " 13. Editing text

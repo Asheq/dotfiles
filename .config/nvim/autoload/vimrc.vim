@@ -27,7 +27,7 @@ function! vimrc#get_statusline()
                 \ . "%([%{vimrc#get_window_cwd()}]%)"
 endfunction
 
-function MyTabLabelBufName(n)
+function! MyTabLabelBufName(n)
     let buflist = tabpagebuflist(a:n)
     let winnr = tabpagewinnr(a:n)
     let bname = bufname(buflist[winnr - 1])
@@ -46,7 +46,7 @@ function MyTabLabelBufName(n)
     return a:n . " " . bname_modified
 endfunction
 
-function MyTabLabelCWD(n)
+function! MyTabLabelCWD(n)
     let cwd = vimrc#get_tab_cwd(a:n)
     if cwd == ''
         return ''
@@ -55,7 +55,6 @@ function MyTabLabelCWD(n)
     endif
 endfunction
 
-" TODO: Improve tabline
 function! vimrc#get_tabline()
     let s = ''
     for i in range(tabpagenr('$'))
@@ -88,6 +87,18 @@ function! vimrc#get_fold_text()
     return getline(v:foldstart)
 endfunction
 
+" TODO: Review
+" Auto-close terminal on exit
+autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif
+function! vimrc#read_aloud(keyword)
+    10split +terminal
+    let temp = getreg("v")
+    let @v = "say " . shellescape(a:keyword) . " -i -r 250"
+    normal! "vpi
+    call setreg("v", temp)
+    call feedkeys("\<CR>exit\<CR>", 'n')
+endfunction
+
 function! vimrc#open_in_shell(item, ...)
     let application = get(a:, 1, 0)
 
@@ -107,28 +118,16 @@ function! vimrc#define(keyword)
     call vimrc#open_in_shell('dict://' . vimrc#url_encode(a:keyword))
 endfunction
 
-" TODO: Autoclose terminal on exit
-autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif
-function! vimrc#read_aloud(keyword)
-    10split +terminal
-    let temp = getreg("v")
-    let @v = "say " . shellescape(a:keyword) . " -i -r 250"
-    normal! "vpi
-    call setreg("v", temp)
-    call feedkeys("\<CR>exit\<CR>", 'n')
-endfunction
-
 function! vimrc#browse(item)
     if match(a:item, '^https\?://') > -1
         " The item is already a URL
-        let @* = a:item
-        echo 'Copied' a:item
+        let url = a:item
     else
         " The item is a keyword, so let's generate a DuckDuckGo URL
         let url = 'https://duckduckgo.com/?q=' . vimrc#url_encode(a:item)
-        let @* = url
-        echo 'Copied' url
     endif
+    let @* = url
+    echo 'Copied' url
 endfunction
 
 command! -nargs=1 Define call vimrc#define(<f-args>)
@@ -140,10 +139,6 @@ function! vimrc#get_selection_text()
     let raw_text = getreg("v")
     call setreg("v", temp)
     return raw_text
-endfunction
-
-function! vimrc#main_nvim_flag()
-    return v:servername == $NVIM_LISTEN_ADDRESS ? 'Y' : 'N'
 endfunction
 
 function! vimrc#create_toggle_maps(letter, test, off, on)

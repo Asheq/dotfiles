@@ -70,10 +70,13 @@ xnoremap <silent> <leader>d        :<C-u>cal vimrc#define(vimrc#get_selection_te
 nnoremap <silent> <leader>b        :cal vimrc#browse(expand('<cword>'))<CR>
 xnoremap <silent> <leader>b        :<C-u>cal vimrc#browse(vimrc#get_selection_text())<CR>
 
-noremap <silent> <leader>k         :.w !say -r 250<CR><CR>
-xnoremap <silent> <leader>k        :w !say -r 250<CR><CR>
+let g:say_speed = 250
+noremap  <silent> <leader>k        :execute '.w !say -r ' . g:say_speed<CR><CR>
+xnoremap <silent> <leader>k        :<C-u>execute "'<,'>w !say -r " . g:say_speed<CR><CR>
+nnoremap <silent> <leader><Left>   :let g:say_speed -= 50<CR>:echo g:say_speed<CR>
+nnoremap <silent> <leader><Right>  :let g:say_speed += 50<CR>:echo g:say_speed<CR>
 
-nnoremap <silent> <leader>i        :<C-u>cal vimrc#read_aloud(getline('.'))<CR>
+nnoremap <silent> <leader>i        :cal vimrc#read_aloud(getline('.'))<CR>
 xnoremap <silent> <leader>i        :<C-u>cal vimrc#read_aloud(vimrc#get_selection_text())<CR>
 
 " Motions
