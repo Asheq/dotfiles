@@ -93,7 +93,7 @@ autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | end
 function! vimrc#read_aloud(keyword)
     10split +terminal
     let temp = getreg("v")
-    let @v = "say " . shellescape(a:keyword) . " -i -r 250"
+    let @v = "say " . shellescape(a:keyword) . " -i -r " . g:say_speed
     normal! "vpi
     call setreg("v", temp)
     call feedkeys("\<CR>exit\<CR>", 'n')
