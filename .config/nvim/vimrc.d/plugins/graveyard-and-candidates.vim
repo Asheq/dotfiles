@@ -17,9 +17,6 @@ mattn       /vim-textobj-url
 KabbAmine   /vCoolor.vim
 tyru        /open-browser.vim
 
-" Syntax and highlighting
-luochen1990 /rainbow
-
 " Text editing
 AndrewRadev /deleft.vim
 AndrewRadev /linediff.vim

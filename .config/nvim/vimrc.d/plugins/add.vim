@@ -20,17 +20,30 @@ Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
+" Scrollbar
+" ----------------------------------------------------------------------------
+Plug 'dstein64/nvim-scrollview'
+
 " Directory explorer
 " ----------------------------------------------------------------------------
 Plug 'justinmk/vim-dirvish'
 
-" Syntax/highlighting
+" Undo tree
+" ----------------------------------------------------------------------------
+Plug 'mbbill/undotree'
+
+" Highlighting
 " ----------------------------------------------------------------------------
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'azabiong/vim-highlighter'
 
 " Buffer/window/tab management
 " ----------------------------------------------------------------------------
 Plug 'Asheq/close-buffers.vim'
+
+" Folding/context
+" ----------------------------------------------------------------------------
+Plug 'wellle/context.vim'
 
 " Filetype-specific
 " ----------------------------------------------------------------------------
@@ -56,34 +69,16 @@ Plug 'peitalin/vim-jsx-typescript'
 " Git
 Plug 'tpope/vim-git'
 
-" Scrollbar
-" ----------------------------------------------------------------------------
-Plug 'dstein64/nvim-scrollview'
-
 " Other
 " ----------------------------------------------------------------------------
 Plug 'tpope/vim-characterize'
-Plug 'wellle/context.vim'
 Plug 'tpope/vim-abolish'
-Plug 'azabiong/vim-highlighter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
-
-" Neorg
-" ----------------------------------------------------------------------------
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-" Run the following command in the terminal to install tree-sitter parsers for norg:
-" CC=gcc-12 nvim -c "TSInstallSync norg"
-" Do this any time neorg is updated to ensure the latest version of the parser
-" is installed. Later, when you migrate to the lazy package manger, you won't
-" need to this manually.
-Plug 'nvim-neorg/neorg'
-Plug 'nvim-lua/plenary.nvim'
 
 " Colorschemes
 " ----------------------------------------------------------------------------
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'projekt0n/github-nvim-theme'
 
 " Language Server
 " ----------------------------------------------------------------------------

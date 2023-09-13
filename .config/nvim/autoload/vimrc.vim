@@ -1,3 +1,5 @@
+" TODO: Review
+
 function! vimrc#maybe_toggle_fold()
     if foldlevel('.')
         normal za
@@ -87,7 +89,6 @@ function! vimrc#get_fold_text()
     return getline(v:foldstart)
 endfunction
 
-" TODO: Review
 " Auto-close terminal on exit
 autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif
 function! vimrc#read_aloud(keyword)
@@ -142,9 +143,9 @@ function! vimrc#get_selection_text()
 endfunction
 
 function! vimrc#create_toggle_maps(letter, test, off, on)
-    execute 'nnoremap [o' . a:letter . ' :' . a:on . '<CR>'
-    execute 'nnoremap ]o' . a:letter . ' :' . a:off . '<CR>'
-    execute 'nnoremap co' . a:letter . ' :' . '<C-r>=' . a:test . '?"' . a:off . '":"' . a:on . '"<CR><CR>'
+    execute 'nnoremap <unique> [o' . a:letter . ' :' . a:on . '<CR>'
+    execute 'nnoremap <unique> ]o' . a:letter . ' :' . a:off . '<CR>'
+    execute 'nnoremap <unique> co' . a:letter . ' :' . '<C-r>=' . a:test . '?"' . a:off . '":"' . a:on . '"<CR><CR>'
 endfunction
 
 function! vimrc#get_global_cwd()

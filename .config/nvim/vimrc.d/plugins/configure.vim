@@ -24,6 +24,6 @@ let g:vim_markdown_folding_level = 2
 " scrollview
 " ----------------------------------------------------------------------------
 let g:scrollview_base='left'
-let g:scrollview_column=1
+let g:scrollview_column=2
 let g:scrollview_auto_mouse=0
-highlight link ScrollView Statusline
+highlight link ScrollView Search

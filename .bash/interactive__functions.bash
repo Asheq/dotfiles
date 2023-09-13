@@ -56,7 +56,7 @@ function __prompt_section_git() {
 
     if [[ "${git_ps1_output}" != "" ]] ; then
         output="${git_ps1_output:2:-1}"
-        echo "${__style_secondary} ${output} "
+        echo "${__style_reset} ${output} "
     fi
 }
 
