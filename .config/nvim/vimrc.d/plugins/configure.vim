@@ -26,4 +26,9 @@ let g:vim_markdown_folding_level = 2
 let g:scrollview_base='left'
 let g:scrollview_column=2
 let g:scrollview_auto_mouse=0
-highlight link ScrollView Search
+
+" TODO: Learn how to use augroups and autocmds correctly
+augroup scrollview_color
+    autocmd!
+    autocmd ColorScheme * highlight link ScrollView Search
+augroup END

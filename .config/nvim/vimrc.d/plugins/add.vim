@@ -12,6 +12,7 @@ Plug 'arthurxavierx/vim-caser'
 
 " Auto-set options
 " ----------------------------------------------------------------------------
+" TODO: Remove now that neovim adds support for editorconfig by default?
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-projectionist'
 
