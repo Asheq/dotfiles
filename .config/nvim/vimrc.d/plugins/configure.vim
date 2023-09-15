@@ -30,4 +30,6 @@ let g:scrollview_auto_mouse=0
 augroup link_scrollview_highlight_group
     autocmd!
     autocmd ColorScheme * highlight link ScrollView Search
+    autocmd ColorScheme * highlight BeforeLastJump guifg=white guibg=purple
+    autocmd ColorScheme * highlight Match guifg=white guibg=green
 augroup END

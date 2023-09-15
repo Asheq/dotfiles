@@ -9,7 +9,6 @@ nnoremap <unique>          <leader>rr       :redi @r <Bar> sil  <Bar> redi END<S
 
 nnoremap <unique>          <leader>t        :tab<C-z><C-p>
 
-" TODO: Add a highlight color for Match
 nnoremap <unique>          <leader>/        :mat Match //<Left>
 
 " TODO
