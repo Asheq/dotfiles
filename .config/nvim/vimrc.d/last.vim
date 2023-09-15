@@ -5,3 +5,4 @@ colorscheme gruvbox
 
 luafile <sfile>:h/last.lua
 
+match RedrawDebugClear /.*\%''.*/

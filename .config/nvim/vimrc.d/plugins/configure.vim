@@ -27,8 +27,7 @@ let g:scrollview_base='left'
 let g:scrollview_column=2
 let g:scrollview_auto_mouse=0
 
-" TODO: Learn how to use augroups and autocmds correctly
-augroup scrollview_color
+augroup link_scrollview_highlight_group
     autocmd!
     autocmd ColorScheme * highlight link ScrollView Search
 augroup END

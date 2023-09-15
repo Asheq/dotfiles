@@ -59,6 +59,10 @@ if executable('rg')
     set grepformat+=%f
 endif
 
+" Other
+" ----------------------------------------------------------------------------
+set jumpoptions=stack
+
 " Generic GUI options
 " ----------------------------------------------------------------------------
 if exists('&guifont')

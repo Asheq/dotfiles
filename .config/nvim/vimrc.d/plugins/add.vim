@@ -44,6 +44,7 @@ Plug 'Asheq/close-buffers.vim'
 
 " Folding/context
 " ----------------------------------------------------------------------------
+" TODO: Why does H go to second line?
 Plug 'wellle/context.vim'
 
 " Filetype-specific
