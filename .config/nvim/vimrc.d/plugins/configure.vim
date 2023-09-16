@@ -26,10 +26,3 @@ let g:vim_markdown_folding_level = 2
 let g:scrollview_base='left'
 let g:scrollview_column=2
 let g:scrollview_auto_mouse=0
-
-augroup link_scrollview_highlight_group
-    autocmd!
-    autocmd ColorScheme * highlight link ScrollView Search
-    autocmd ColorScheme * highlight BeforeLastJump guifg=white guibg=purple
-    autocmd ColorScheme * highlight Match guifg=white guibg=green
-augroup END
