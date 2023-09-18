@@ -200,3 +200,12 @@ function gps() {
     =  branch has NO DIFFERENCE with upstream
     "
 }
+
+function smoke_test_font() {
+    echo -e "Normal"
+    echo -e "\033[1mBold\033[22m"
+    echo -e "\033[3mItalic\033[23m"
+    echo -e "\033[3;1mBold Italic\033[0m"
+    echo -e "\033[4mUnderline\033[24m"
+    echo -e "== === !== >= <= =>"
+}

@@ -1,4 +1,5 @@
-" TODO: Review
+" TODO: Verify that this is the correct structure for this file
+" TODO: Review and split into separate script files if needed
 
 function! vimrc#maybe_toggle_fold()
     if foldlevel('.')

@@ -22,3 +22,6 @@ set visible-stats on
 # <C-p> and <C-n>
 "\C-p": history-search-backward
 "\C-n": history-search-forward
+
+# TODO: Learn more readline commands
+# man bash > search "Commands for Moving"

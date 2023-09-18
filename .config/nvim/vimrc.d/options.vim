@@ -3,9 +3,7 @@
 " 2. Moving around, searching and patterns
 " ----------------------------------------------------------------------------
 set nowrapscan
-if exists("&inccommand")
-    set inccommand=split
-endif
+set inccommand=split
 
 " 4. Displaying text
 " ----------------------------------------------------------------------------
@@ -50,7 +48,7 @@ set foldtext=vimrc#get_fold_text()
 " 20. Command line editing
 " ----------------------------------------------------------------------------
 set wildcharm=<C-z>
-let &wildignore='.DS_Store,Icon,.tmp.drivedownload'
+let &wildignore='.DS_Store,.tmp.drivedownload'
 
 " 22. Running make and jumping to errors
 " ----------------------------------------------------------------------------

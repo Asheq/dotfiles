@@ -37,6 +37,12 @@
 !/.config/nvim/
 !/.config/nvim/.projections.json
 !/.config/nvim/init.vim
+!/.config/nvim/filetype.vim
+!/.config/nvim/coc-settings.json
+!/.config/nvim/syntax
+!/.config/nvim/syntax/**
+!/.config/nvim/ftplugin
+!/.config/nvim/ftplugin/**
 !/.config/nvim/after
 !/.config/nvim/after/**
 !/.config/nvim/autoload
