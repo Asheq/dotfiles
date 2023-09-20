@@ -2,7 +2,7 @@
 " ============================================================================
 call plug#begin('~/.vim/plugged')
 
-" TODO: Gradually replace plugins with mini.nvim
+" TODO: Gradually replace with modern lua alternatives (mini.vim, etc.)
 
 " Text editing
 " ---------------------------------------------------------------------------

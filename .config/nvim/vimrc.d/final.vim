@@ -10,25 +10,6 @@ augroup highlight_yanked_text
     autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300, on_visual=true}
 augroup END
 
-augroup highlight_line_before_latest_jump
-    autocmd!
-    autocmd WinLeave * call HighlightLineBeforeLatestJumpStop()
-    autocmd WinScrolled * call HighlightLineBeforeLatestJumpStart()
-augroup END
-
-function! HighlightLineBeforeLatestJumpStart()
-    " TODO: Only call match if group "BeforeLastJump" doesn't already exist?
-    " TODO: Make it take less priority than Search, IncSearch, TODO etc. (similar to CursorLine,). See highlighter plugin implementation.
-    match BeforeLastJump /.*\%''.*/
-endfunction
-
-function! HighlightLineBeforeLatestJumpStop()
-    " TODO: Use "match none"?
-    match BeforeLastJump //
-endfunction
-
-call HighlightLineBeforeLatestJumpStart()
-
 augroup override_colorscheme
     autocmd!
     autocmd ColorScheme * call s:override_colorscheme()
