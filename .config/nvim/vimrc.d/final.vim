@@ -1,15 +1,53 @@
 " TODO: Verify that you are writing these augroups correctly
 " TODO: Move the augroups/autocmds to a file called simple-autocmds.vim
 
-" Auto-close terminal on exit
-" TODO: Put in augroup
-autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif
+" Highlight line before latest jump start
+" ============================================================================
+augroup highlight_line_before_latest_jump_start
+    autocmd!
+    autocmd WinScrolled * call HighlightLineBeforeLatestJumpStart()
+    autocmd WinLeave * call HighlightLineBeforeLatestJumpStop()
+augroup END
 
+let s:match_id = 99
+function! HighlightLineBeforeLatestJumpStart()
+    if !s:contains_property(getmatches(), 'id', s:match_id)
+        call matchadd("BeforeLastJump", ".*\\%''.*", 0, s:match_id)
+    endif
+endfunction
+
+function! HighlightLineBeforeLatestJumpStop()
+    if s:contains_property(getmatches(), 'id', s:match_id)
+        call matchdelete(s:match_id)
+    endif
+endfunction
+
+" TODO: Is there a simpler way to do this
+function! s:contains_property(list, key, value)
+    for dict in a:list
+        if has_key(dict, a:key) && dict[a:key] == a:value
+            return 1
+        endif
+    endfor
+    return 0
+endfunction
+
+" Auto close terminal on exit
+" ============================================================================
+augroup auto_close_terminal_on_exit
+    autocmd!
+    autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif
+augroup END
+
+" Highlight yanked text
+" ============================================================================
 augroup highlight_yanked_text
     autocmd!
     autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300, on_visual=true}
 augroup END
 
+" Override colorscheme
+" ============================================================================
 augroup override_colorscheme
     autocmd!
     autocmd ColorScheme * call s:override_colorscheme()
@@ -35,7 +73,11 @@ function! s:override_colorscheme()
     highlight! Todo gui=bold,italic guibg=none guifg=none
 endfunction
 
+" Set colorscheme
+" ============================================================================
 set background=light
 colorscheme gruvbox
 
+" Run final.lua
+" ============================================================================
 luafile <sfile>:h/final.lua

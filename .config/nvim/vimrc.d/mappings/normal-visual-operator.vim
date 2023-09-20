@@ -18,13 +18,11 @@ nnoremap <unique>          <leader>/        :mat Match //<Left>
 " ----------------------------------------------------------------------------
 nnoremap <unique> <silent> <CR>             :cal vimrc#maybe_toggle_fold()<CR>
 
-nnoremap          <silent> <C-l>            :cal vimrc#redraw_screen()<CR>
-
 nnoremap <unique> <silent> <leader>c        :ColorizerToggle<CR>
 
 nnoremap <unique> <silent> <leader>h        :cal vimrc#echo_highlight_info()<CR>
 
-nnoremap <unique> <silent> <leader>n        :noh<CR>
+nnoremap <unique> <silent> <leader>n        :noh<CR>:call HighlightLineBeforeLatestJumpStop()<CR>
 
 nnoremap <unique> <silent> <leader>m        :cal vimrc#mru_dirvish()<CR>
 
@@ -35,6 +33,8 @@ nnoremap <unique> <silent> <leader>s        :Git<CR>
 nnoremap <unique> <silent> <leader>j        :ju<CR>
 
 nnoremap <unique> <silent> <leader>w        :up<CR>
+
+nnoremap          <silent> <C-l>            :cal vimrc#redraw_screen()<CR>
 
 " TODO
 " nnoremap <unique>          <leader>?        :%!npx --quiet prettier --stdin-filepath %<CR>

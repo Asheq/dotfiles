@@ -4,6 +4,10 @@ call plug#begin('~/.vim/plugged')
 
 " TODO: Gradually replace with modern lua alternatives (mini.vim, etc.)
 
+" Just to refresh screen (CursorMove autocmd?)
+" ---------------------------------------------------------------------------
+Plug 'wellle/context.vim'
+
 " Text editing
 " ---------------------------------------------------------------------------
 " Pure operators
