@@ -15,3 +15,7 @@ let g:scrollview_auto_mouse = 0
 " lion
 " ----------------------------------------------------------------------------
 let g:lion_squeeze_spaces = 1
+
+" Run configure.lua
+" ----------------------------------------------------------------------------
+luafile <sfile>:h/configure.lua

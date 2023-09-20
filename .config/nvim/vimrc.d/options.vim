@@ -59,8 +59,7 @@ endif
 
 " Other
 " ----------------------------------------------------------------------------
-" TODO: How does this work
-set jumpoptions=stack
+" set jumpoptions=stack
 
 " Generic GUI options
 " ----------------------------------------------------------------------------

@@ -1,6 +1,3 @@
-" TODO: Verify that you are writing these augroups correctly
-" TODO: Move the augroups/autocmds to a file called simple-autocmds.vim
-
 " Highlight line before latest jump start
 " ============================================================================
 augroup highlight_line_before_latest_jump_start
@@ -22,7 +19,6 @@ function! HighlightLineBeforeLatestJumpStop()
     endif
 endfunction
 
-" TODO: Is there a simpler way to do this
 function! s:contains_property(list, key, value)
     for dict in a:list
         if has_key(dict, a:key) && dict[a:key] == a:value
@@ -68,7 +64,6 @@ function! s:override_colorscheme()
         highlight! DiffText gui=reverse guifg=#8f3871 guibg=#fbf1c7
     endif
 
-    " TODO: Set color based on &background
     highlight! Match guifg=white guibg=green
     highlight! Todo gui=bold,italic guibg=none guifg=none
 endfunction

@@ -1,5 +1,3 @@
-" TODO: Review and split into separate script files if needed
-
 function! vimrc#maybe_toggle_fold()
     if foldlevel('.')
         normal za

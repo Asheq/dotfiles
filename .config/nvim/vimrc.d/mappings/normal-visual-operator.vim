@@ -11,8 +11,7 @@ nnoremap <unique>          <leader>t        :tab<C-z><C-p>
 
 nnoremap <unique>          <leader>/        :mat Match //<Left>
 
-" TODO
-" nnoremap <unique>          <leader>?        :echo "p = full path\nh = head\nt = tail"<CR>:let @* = expand('%:')<Left><Left>
+nnoremap <unique>          yp               :echo "p = full path\nh = head\nt = tail"<CR>:let @* = expand('%:')<Left><Left>
 
 " Complete
 " ----------------------------------------------------------------------------
@@ -36,7 +35,6 @@ nnoremap <unique> <silent> <leader>w        :up<CR>
 
 nnoremap          <silent> <C-l>            :cal vimrc#redraw_screen()<CR>
 
-" TODO
 " nnoremap <unique>          <leader>?        :%!npx --quiet prettier --stdin-filepath %<CR>
 
 call vimrc#create_toggle_maps('a', '&formatoptions=~"a"'         , 'setl fo-=a'    , 'setl fo+=a')
@@ -51,13 +49,11 @@ call vimrc#create_toggle_maps('t', 'match(&colorcolumn, "+1")>=0', 'setl cc-=+1'
 call vimrc#create_toggle_maps('w', '&wrap'                       , 'setl nowrap'   , 'setl wrap')
 call vimrc#create_toggle_maps('d', '&background=="dark"'         , 'set bg=light'  , 'set bg=dark')
 
-" Other
+" Normal mode command typing helpers
 " ============================================================================
-nnoremap <unique> <silent> <leader><CR>     <CR>
-map      <unique>          _                <Plug>(dirvish_up)
 
 " Yank and Paste Operators/Operations
-" ============================================================================
+" ----------------------------------------------------------------------------
 nnoremap <unique>          <leader>y        "*y
 xnoremap <unique>          <leader>y        "*y
 nmap     <unique>          <leader>Y        "*Y
@@ -65,7 +61,12 @@ nnoremap <unique>          <leader>p        "*p
 xnoremap <unique>          <leader>p        "*p
 nnoremap <unique>          <leader>P        "*P
 
-" Operations
+" Other
+" ----------------------------------------------------------------------------
+nnoremap <unique> <silent> <leader><CR>     <CR>
+map      <unique>          _                <Plug>(dirvish_up)
+
+" Text Operations
 " ============================================================================
 nnoremap <unique> <silent> <leader>d        :cal vimrc#define(expand('<cword>'))<CR>
 xnoremap <unique> <silent> <leader>d        :<C-u>cal vimrc#define(vimrc#get_selection_text())<CR>
@@ -77,7 +78,6 @@ let g:say_speed = 250
 nnoremap <unique> <silent> <leader><Left>   :let g:say_speed -= 50<CR>:echo g:say_speed<CR>
 nnoremap <unique> <silent> <leader><Right>  :let g:say_speed += 50<CR>:echo g:say_speed<CR>
 
-" TODO: Move into function
 nnoremap <unique> <silent> <leader>k        :execute '.w !say -r ' . g:say_speed<CR><CR>
 xnoremap <unique> <silent> <leader>k        :<C-u>execute 'silent !echo ' . shellescape(vimrc#get_selection_text(), 1) . ' <Bar> say -r ' . g:say_speed<CR>
 

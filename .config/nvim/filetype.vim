@@ -1,6 +1,4 @@
-" TODO: Verify that this is the correct structure for this file
-
-augroup set_asheq_filetype
+augroup filetypedetect_user
     autocmd!
     autocmd BufNewFile,BufRead *.asheq setfiletype asheq
 augroup END

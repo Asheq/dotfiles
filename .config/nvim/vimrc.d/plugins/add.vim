@@ -2,9 +2,8 @@
 " ============================================================================
 call plug#begin('~/.vim/plugged')
 
-" TODO: Gradually replace with modern lua alternatives (mini.vim, etc.)
-
-" Just to refresh screen (CursorMove autocmd?)
+" Folding
+" NOTE: I'm just using context to refresh the screen (via CursorMoved autocmd?)
 " ---------------------------------------------------------------------------
 Plug 'wellle/context.vim'
 
