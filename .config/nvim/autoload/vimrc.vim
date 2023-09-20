@@ -89,8 +89,6 @@ function! vimrc#get_fold_text()
     return getline(v:foldstart)
 endfunction
 
-" Auto-close terminal on exit
-autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif
 function! vimrc#read_aloud(keyword)
     10split +terminal
     let temp = getreg("v")

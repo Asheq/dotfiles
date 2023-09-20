@@ -19,7 +19,6 @@ set nowrap
 " 5. Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
 set termguicolors
-set nospell
 set cursorline
 
 " 6. Multiple windows
@@ -60,6 +59,7 @@ endif
 
 " Other
 " ----------------------------------------------------------------------------
+" TODO: How does this work
 set jumpoptions=stack
 
 " Generic GUI options

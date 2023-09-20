@@ -2,13 +2,25 @@
 " ============================================================================
 call plug#begin('~/.vim/plugged')
 
-" Operators, motions, and text objects
+" TODO: Gradually replace plugins with mini.nvim
+
+" Text editing
 " ---------------------------------------------------------------------------
+" Pure operators
 Plug 'tommcdo/vim-lion'
-Plug 'tpope/vim-commentary'
-Plug 'jeetsukumaran/vim-indentwise'
-Plug 'machakann/vim-sandwich'
 Plug 'arthurxavierx/vim-caser'
+
+" Pure motions
+Plug 'jeetsukumaran/vim-indentwise'
+
+" Pure text objects
+" NONE
+
+" Mix of some of ex commands, operators, and text objects
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-abolish'
+Plug 'machakann/vim-sandwich'
+
 
 " Auto-set options
 " ----------------------------------------------------------------------------
@@ -42,12 +54,11 @@ Plug 'azabiong/vim-highlighter'
 " ----------------------------------------------------------------------------
 Plug 'Asheq/close-buffers.vim'
 
-" Folding/context
+" Markdown preview
 " ----------------------------------------------------------------------------
-" TODO: Why does H go to second line?
-Plug 'wellle/context.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
 
-" Filetype-specific
+" Filetype plugins
 " ----------------------------------------------------------------------------
 " Various
 Plug 'tpope/vim-apathy'
@@ -71,16 +82,13 @@ Plug 'peitalin/vim-jsx-typescript'
 " Git
 Plug 'tpope/vim-git'
 
-" Other
+" Character info
 " ----------------------------------------------------------------------------
 Plug 'tpope/vim-characterize'
-Plug 'tpope/vim-abolish'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
 
 " Colorschemes
 " ----------------------------------------------------------------------------
 Plug 'ellisonleao/gruvbox.nvim'
-Plug 'NLKNguyen/papercolor-theme'
 
 " Language Server
 " ----------------------------------------------------------------------------

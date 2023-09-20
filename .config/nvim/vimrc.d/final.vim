@@ -1,3 +1,10 @@
+" TODO: Verify that you are writing these augroups correctly
+" TODO: Move the augroups/autocmds to a file called simple-autocmds.vim
+
+" Auto-close terminal on exit
+" TODO: Put in augroup
+autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif
+
 augroup highlight_yanked_text
     autocmd!
     autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300, on_visual=true}
