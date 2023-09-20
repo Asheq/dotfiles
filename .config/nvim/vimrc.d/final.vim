@@ -18,7 +18,7 @@ augroup END
 
 function! HighlightLineBeforeLatestJumpStart()
     " TODO: Only call match if group "BeforeLastJump" doesn't already exist?
-    " TODO: Make sure it takes less priority than Search, IncSearch, TODO etc. (similar to CursorLine)
+    " TODO: Make it take less priority than Search, IncSearch, TODO etc. (similar to CursorLine,). See highlighter plugin implementation.
     match BeforeLastJump /.*\%''.*/
 endfunction
 
