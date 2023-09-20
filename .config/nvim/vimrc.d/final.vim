@@ -50,4 +50,4 @@ endfunction
 set background=light
 colorscheme gruvbox
 
-luafile <sfile>:h/last.lua
+luafile <sfile>:h/final.lua

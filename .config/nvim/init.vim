@@ -16,4 +16,4 @@ source <sfile>:h/vimrc.d/mappings/terminal.vim
 source <sfile>:h/vimrc.d/options.vim
 
 " Last
-source <sfile>:h/vimrc.d/last.vim
+source <sfile>:h/vimrc.d/final.vim
