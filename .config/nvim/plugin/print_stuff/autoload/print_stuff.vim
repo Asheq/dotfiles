@@ -36,6 +36,7 @@ function! print_stuff#print_indenting_and_formatting_options()
                 \     {'label': 'equalprg', 'value': &equalprg, 'secondary': s:last_set('equalprg')},
                 \     {'label': 'indentexpr', 'value': &indentexpr, 'secondary': s:last_set('indentexpr')},
                 \     {'label': 'cindent', 'value': &cindent, 'secondary': s:last_set('cindent')},
+                \     {'label': 'lisp', 'value': &lisp, 'secondary': s:last_set('lisp')},
                 \   ]
                 \ },
                 \ {
@@ -64,7 +65,7 @@ function! print_stuff#print_indenting_and_formatting_options()
                 \   'items': [
                 \     {'label': 'formatexpr', 'value': &formatexpr, 'secondary': s:last_set('formatexpr')},
                 \     {'label': 'formatprg', 'value': &formatprg, 'secondary': s:last_set('formatprg')},
-                \     {'label': '[internal formatting]', 'value': '[N/A]'},
+                \     {'label': '[internal formatting using textwidth]', 'value': '[N/A]'},
                 \   ]
                 \ },
                 \ {

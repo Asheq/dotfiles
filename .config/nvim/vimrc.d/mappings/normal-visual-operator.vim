@@ -22,6 +22,8 @@ nnoremap          <silent> <C-l>            :cal vimrc#redraw_screen()<CR>
 
 nnoremap <unique> <silent> <leader>x        :ContextToggleWindow<CR>
 
+nnoremap <unique> <silent> <leader>c        :ColorizerToggle<CR>
+
 nnoremap <unique> <silent> <leader>h        :cal vimrc#echo_highlight_info()<CR>
 
 nnoremap <unique> <silent> <leader>n        :noh <Bar> call HighlightLineBeforeLatestJumpStop()<CR>
