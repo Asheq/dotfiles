@@ -162,9 +162,9 @@ function! vimrc#get_window_cwd()
     return ''
 endfunction
 
-" TODO-L: Create one for the current buffer list
-" (Don't do it; Vimscript sucks)
 function! vimrc#mru_dirvish()
+    wshada
+    rshada!
     enew
     silent 0put=v:oldfiles
     silent keeppatterns %s/\v(.*)/\=fnamemodify(submatch(1),':p')/
