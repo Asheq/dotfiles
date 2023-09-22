@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 
 " Folding
 " NOTE: I'm just using context to refresh the screen (via CursorMoved autocmd?)
+" TODO-M- Remove but still retain refreshing of screen
 " ---------------------------------------------------------------------------
 Plug 'wellle/context.vim'
 
@@ -68,6 +69,13 @@ Plug 'tpope/vim-apathy'
 
 " Markdown
 Plug 'godlygeek/tabular'
+" TODO-H: Fix this:
+" This file: $VIMRUNTIME/ftplugin/markdown.vim
+" executes after this file: ~/.vim/plugged/vim-markdown/ftplugin/markdown.vim
+" This means that the $VIMRUNTIME file overrides some things, e.g., mappings
+" set in preservim/vim-markdown.
+" This is pretty bad, right?
+" Just wait until I migrate to Lua and lua plugin manager?
 Plug 'preservim/vim-markdown'
 
 " JavaScript

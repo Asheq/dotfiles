@@ -162,6 +162,8 @@ function! vimrc#get_window_cwd()
     return ''
 endfunction
 
+" TODO-L: Create one for the current buffer list
+" (Don't do it; Vimscript sucks)
 function! vimrc#mru_dirvish()
     enew
     silent 0put=v:oldfiles
