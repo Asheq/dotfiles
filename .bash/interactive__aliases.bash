@@ -18,6 +18,7 @@ elif command -v xdg-open &> /dev/null; then
 fi
 
 alias c='cd'
+complete -o dirnames -o nospace -F _fzf_dir_completion c
 
 alias v='nvim'
 
@@ -26,15 +27,10 @@ alias drive='cd ~/My\ Drive/'
 alias notes='cd ~/My\ Drive/notes/'
 alias todo='cd ~/My\ Drive/todo/'
 
-alias s="kitty +kitten ssh"
-
-alias xp="~/.xprofile"
-
 # git
 # ==============================================================================
 alias g='git'
-# TODO: Add completions for g via __git_complete
-# command -v __git_complete && __git_complete g __git_main
+__git_complete g __git_main
 
 # npm
 # ==============================================================================
