@@ -2,12 +2,6 @@
 " ============================================================================
 call plug#begin('~/.vim/plugged')
 
-" Folding
-" NOTE: I'm just using context to refresh the screen (via CursorMoved autocmd?)
-" TODO-M- Remove but still retain refreshing of screen
-" ---------------------------------------------------------------------------
-Plug 'wellle/context.vim'
-
 " Text editing
 " ---------------------------------------------------------------------------
 " Pure operators
@@ -18,9 +12,9 @@ Plug 'arthurxavierx/vim-caser'
 Plug 'jeetsukumaran/vim-indentwise'
 
 " Pure text objects
-" NONE
+" [NONE]
 
-" Mix of some of ex commands, operators, and text objects
+" Mix of some of: operators, text objects, ex commands
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
 Plug 'machakann/vim-sandwich'
@@ -28,8 +22,6 @@ Plug 'machakann/vim-sandwich'
 
 " Auto-set options
 " ----------------------------------------------------------------------------
-" TODO-M: Remove now that neovim adds support for editorconfig by default?
-Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-projectionist'
 
 " Integration with git and GitHub
