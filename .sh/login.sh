@@ -23,6 +23,9 @@ export ANDROID_SDK_ROOT=~/Library/Android/sdk
 pathprepend ~/bin PATH
 pathprepend ~/.local/bin PATH
 
+# Add doom emacs binary
+pathprepend ~/.emacs.d/bin PATH
+
 # Add node binaries
 pathprepend "$NVM_DIR"/versions/node/v19.7.0/bin PATH
 

@@ -57,6 +57,8 @@ function! s:override_colorscheme()
         highlight! CursorLine guibg=#014575
         highlight! DiffChange gui=reverse guifg=#b16286 guibg=#282828
         highlight! DiffText gui=reverse guifg=#d3869b guibg=#282828
+
+        " TODO-M: Override StatusLIne like in light mode
     else
         highlight! BeforeLastJump guibg=#e1d4f2
         highlight! CursorLine guibg=#d5e6f2
