@@ -62,6 +62,11 @@ function! s:override_colorscheme()
         highlight! CursorLine guibg=#d5e6f2
         highlight! DiffChange gui=reverse guifg=#d3869b guibg=#fbf1c7
         highlight! DiffText gui=reverse guifg=#8f3871 guibg=#fbf1c7
+
+        " highlight! StatusLine gui=reverse   guifg=#d5c4a1 guibg=#3c3836
+        " highlight! StatusLineNC gui=reverse guifg=#ebdbb2 guibg=#7c6f64
+        highlight! StatusLine gui=reverse     guifg=#3c3836 guibg=#ebdbb2
+        highlight! StatusLineNC gui=reverse   guifg=#d5c4a1 guibg=#3c3836
     endif
 
     highlight! Match guifg=white guibg=green
