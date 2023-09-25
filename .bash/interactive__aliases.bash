@@ -51,5 +51,8 @@ fi
 
 # Terminal
 # ==============================================================================
-alias dark="kitty @ --to="$KITTY_LISTEN_ON" set-colors -a ~/.config/kitty/Gruvbox\ Dark.conf"
-alias light="kitty @ --to="$KITTY_LISTEN_ON" set-colors -a ~/.config/kitty/Gruvbox\ Light.conf"
+alias dark="kitty +kitten themes --reload-in=all Gruvbox Dark"
+alias light="kitty +kitten themes --reload-in=all Gruvbox Light"
+# NOTE: These are faster but do not affect new windows
+# alias dark="kitty @ --to="$KITTY_LISTEN_ON" set-colors --all ~/.config/kitty/Gruvbox\ Dark.conf"
+# alias light="kitty @ --to="$KITTY_LISTEN_ON" set-colors --all ~/.config/kitty/Gruvbox\ Light.conf"
