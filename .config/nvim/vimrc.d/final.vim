@@ -2,35 +2,29 @@
 " ============================================================================
 augroup highlight_line_before_latest_jump_start
     autocmd!
-    autocmd WinScrolled * call HighlightLineBeforeLatestJumpStart()
-    autocmd WinLeave * call HighlightLineBeforeLatestJumpStop()
-
-    " Note: For some reason setting &conceallevel redraws highlights. This
-    " helps remove old highlights that are no longer relevant. I got this from
-    " context.vim. Probably not the best way to do this.
-    autocmd CursorMoved  * let &conceallevel=&conceallevel
+    autocmd WinScrolled * call StartHighlightLineBeforeLatestJump(expand("<amatch>"))
+    autocmd WinLeave * call StopHighlightLineBeforeLatestJump()
+    autocmd CursorMoved * call StopHighlightLineBeforeLatestJump()
 augroup END
 
 let s:match_id = 99
-function! HighlightLineBeforeLatestJumpStart()
-    if !s:contains_property(getmatches(), 'id', s:match_id)
+function! StartHighlightLineBeforeLatestJump(winid)
+    " If the window that scrolled is not the current window, ignore it
+    if a:winid != win_getid()
+        return
+    endif
+
+    try
         call matchadd("BeforeLastJump", ".*\\%''.*", 0, s:match_id)
-    endif
+    catch
+    endtry
 endfunction
 
-function! HighlightLineBeforeLatestJumpStop()
-    if s:contains_property(getmatches(), 'id', s:match_id)
+function! StopHighlightLineBeforeLatestJump()
+    try
         call matchdelete(s:match_id)
-    endif
-endfunction
-
-function! s:contains_property(list, key, value)
-    for dict in a:list
-        if has_key(dict, a:key) && dict[a:key] == a:value
-            return 1
-        endif
-    endfor
-    return 0
+    catch
+    endtry
 endfunction
 
 " Auto close terminal on exit
@@ -55,34 +49,46 @@ augroup override_colorscheme
 augroup END
 
 function! s:override_colorscheme()
-    highlight! link ScrollView Cursor
-
     if &background == 'dark'
+        " Reference:
+        " StatusLine     gui=reverse guifg=#504945 guibg=#ebdbb2
+        " StatusLineNC   gui=reverse guifg=#3c3836 guibg=#a89984
+
         highlight! BeforeLastJump guibg=#45009e
         highlight! CursorLine     guibg=#014575
         highlight! DiffChange     gui=reverse   guifg=#b16286 guibg=#282828
         highlight! DiffText       gui=reverse   guifg=#d3869b guibg=#282828
         highlight! StatusLine     gui=reverse   guifg=#ebdbb2 guibg=#3c3836
         highlight! StatusLineNC   gui=reverse   guifg=#504945 guibg=#ebdbb2
-
-        " Reference:
-        " StatusLine     gui=reverse guifg=#504945 guibg=#ebdbb2
-        " StatusLineNC   gui=reverse guifg=#3c3836 guibg=#a89984
     else
+        " Reference:
+        " StatusLine     gui=reverse guifg=#d5c4a1 guibg=#3c3836
+        " StatusLineNC   gui=reverse guifg=#ebdbb2 guibg=#7c6f64
+
         highlight! BeforeLastJump guibg=#e1d4f2
         highlight! CursorLine     guibg=#d5e6f2
         highlight! DiffChange     gui=reverse   guifg=#d3869b guibg=#fbf1c7
         highlight! DiffText       gui=reverse   guifg=#8f3871 guibg=#fbf1c7
         highlight! StatusLine     gui=reverse   guifg=#3c3836 guibg=#ebdbb2
         highlight! StatusLineNC   gui=reverse   guifg=#d5c4a1 guibg=#3c3836
-
-        " Reference:
-        " StatusLine     gui=reverse guifg=#d5c4a1 guibg=#3c3836
-        " StatusLineNC   gui=reverse guifg=#ebdbb2 guibg=#7c6f64
     endif
 
-    highlight! Match guifg=white guibg=green
+    highlight! link ScrollView Cursor
     highlight! Todo gui=bold,italic guibg=none guifg=none
+    highlight! Match guifg=white guibg=green
+
+    " TODO-L:
+    " Analyze and fine-tune the priority of the following highlights that change the background:
+    "     - Search
+    "     - IncSearch
+    "     - CursorLine
+    "     - MatchParen
+    "     - Visual
+    "     - Diff*
+    "     - Fold
+    "     - Match
+    "     - BeforeLastJump
+    "     - colorizer*
 endfunction
 
 " Set colorscheme

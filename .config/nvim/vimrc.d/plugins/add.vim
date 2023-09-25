@@ -43,6 +43,7 @@ Plug 'mbbill/undotree'
 
 " Highlighting
 " ----------------------------------------------------------------------------
+" TODO-L: norcalli/nvim-colorizer.lua is not maintained anymore.
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'azabiong/vim-highlighter'
 
