@@ -48,3 +48,8 @@ if command -v osascript &> /dev/null; then
 elif command -v notify-send &> /dev/null; then
     alias bell='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 fi
+
+# Terminal
+# ==============================================================================
+alias dark="kitty @ --to="$KITTY_LISTEN_ON" set-colors -a ~/.config/kitty/Gruvbox\ Dark.conf"
+alias light="kitty @ --to="$KITTY_LISTEN_ON" set-colors -a ~/.config/kitty/Gruvbox\ Light.conf"

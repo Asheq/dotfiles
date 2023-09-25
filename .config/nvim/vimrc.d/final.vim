@@ -93,7 +93,6 @@ endfunction
 
 " Set colorscheme
 " ============================================================================
-set background=light
 colorscheme gruvbox
 
 " Run final.lua
