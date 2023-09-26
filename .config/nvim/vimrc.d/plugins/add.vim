@@ -62,7 +62,7 @@ Plug 'tpope/vim-apathy'
 
 " Markdown
 Plug 'godlygeek/tabular'
-" TODO-H: Fix this:
+" TODO-L: Fix this:
 " This file: $VIMRUNTIME/ftplugin/markdown.vim
 " executes after this file: ~/.vim/plugged/vim-markdown/ftplugin/markdown.vim
 " This means that the $VIMRUNTIME file overrides some things, e.g., mappings

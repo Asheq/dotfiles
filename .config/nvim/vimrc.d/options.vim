@@ -10,7 +10,7 @@ set inccommand=split
 set breakindent
 set cmdheight=2
 set list
-set listchars=tab:△┈,leadmultispace:□┈┈┈,trail:·,multispace:˙,lead:\ ,extends:▶,precedes:◀,nbsp:‿
+set listchars=tab:▏\ ,leadmultispace:▏\ ,trail:·,multispace:˙,lead:\ ,extends:▶,precedes:◀,nbsp:‿
 set number
 set showbreak=└─▶
 set fillchars=fold:\ 
