@@ -20,11 +20,19 @@ function! vimrc#echo_highlight_info()
 endfunction
 
 function! vimrc#get_statusline()
+    let window_cwd = vimrc#get_window_cwd(g:statusline_winid)
+
+    if window_cwd != ""
+        let window_cwd_string = "[" . vimrc#get_window_cwd(g:statusline_winid) . "]"
+    else
+        let window_cwd_string = ""
+    endif
+
     return ""
                 \ . "%{expand('%:p:~:.')}"
                 \ . "  %h%w%m%r[%P]"
                 \ . "%="
-                \ . "%([%{vimrc#get_window_cwd()}]%)"
+                \ . window_cwd_string
 endfunction
 
 function! MyTabLabelBufName(n)
@@ -155,9 +163,9 @@ function! vimrc#get_tab_cwd(tabnr)
     return ''
 endfunction
 
-function! vimrc#get_window_cwd()
-    if haslocaldir(0)
-        return getcwd()
+function! vimrc#get_window_cwd(winid)
+    if haslocaldir(a:winid)
+        return getcwd(a:winid)
     endif
     return ''
 endfunction
