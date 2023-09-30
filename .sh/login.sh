@@ -27,6 +27,7 @@ pathprepend ~/.local/bin PATH
 pathprepend ~/.emacs.d/bin PATH
 
 # Add node binaries
+# TODO: Update to latest node and run `npm install -g neovim`
 pathprepend "$NVM_DIR"/versions/node/v19.7.0/bin PATH
 
 # Add cargo binaries
