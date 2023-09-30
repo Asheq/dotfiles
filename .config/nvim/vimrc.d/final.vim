@@ -93,7 +93,10 @@ endfunction
 
 " Set colorscheme
 " ============================================================================
-colorscheme gruvbox
+try
+    colorscheme gruvbox
+catch
+endtry
 
 " Run final.lua
 " ============================================================================
