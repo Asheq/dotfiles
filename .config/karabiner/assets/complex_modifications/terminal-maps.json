@@ -24,7 +24,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -70,7 +71,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -116,7 +118,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -162,7 +165,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -208,7 +212,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -254,7 +259,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -300,7 +306,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -346,7 +353,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -392,7 +400,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -435,7 +444,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -481,7 +491,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -527,7 +538,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -573,7 +585,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -619,7 +632,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -665,7 +679,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -711,7 +726,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -757,7 +773,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -803,7 +820,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -849,7 +867,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -895,7 +914,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -941,7 +961,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -987,7 +1008,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1033,7 +1055,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1079,7 +1102,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1125,7 +1149,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1171,7 +1196,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1217,7 +1243,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1263,7 +1290,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1309,7 +1337,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1355,7 +1384,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1401,7 +1431,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1447,7 +1478,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1493,7 +1525,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1539,7 +1572,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1585,7 +1619,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1631,7 +1666,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1677,7 +1713,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1723,7 +1760,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1769,7 +1807,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1815,7 +1854,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1861,7 +1901,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1907,7 +1948,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1953,7 +1995,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -1999,7 +2042,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2045,7 +2089,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2091,7 +2136,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2137,7 +2183,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2183,7 +2230,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2229,7 +2277,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2275,7 +2324,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2321,7 +2371,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2367,7 +2418,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2413,7 +2465,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2459,7 +2512,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2505,7 +2559,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2551,7 +2606,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2597,7 +2653,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2643,7 +2700,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2689,7 +2747,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2735,7 +2794,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2781,7 +2841,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2827,7 +2888,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2873,7 +2935,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2919,7 +2982,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -2965,7 +3029,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3011,7 +3076,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3057,7 +3123,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3103,7 +3170,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3149,7 +3217,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3195,7 +3264,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3241,7 +3311,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3287,7 +3358,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3333,7 +3405,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3379,7 +3452,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3425,7 +3499,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3471,7 +3546,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3517,7 +3593,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3563,7 +3640,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3609,7 +3687,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3655,7 +3734,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3701,7 +3781,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3747,7 +3828,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3793,7 +3875,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3839,7 +3922,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3885,7 +3969,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3931,7 +4016,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -3977,7 +4063,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4023,7 +4110,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4069,7 +4157,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4115,7 +4204,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4161,7 +4251,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4207,7 +4298,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4253,7 +4345,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4299,7 +4392,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4345,7 +4439,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4391,7 +4486,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4437,7 +4533,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4483,7 +4580,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4529,7 +4627,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4575,7 +4674,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4621,7 +4721,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4667,7 +4768,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4713,7 +4815,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4759,7 +4862,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4805,7 +4909,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4851,7 +4956,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4897,7 +5003,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4943,7 +5050,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4989,7 +5097,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -5035,7 +5144,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -5081,7 +5191,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }
@@ -5127,7 +5238,8 @@
                 "^org\\.vim\\.MacVim$",
                 "^net\\.kovidgoyal\\.kitty$",
                 "^io\\.alacritty$",
-                "^com\\.qvacua\\.VimR$"
+                "^com\\.qvacua\\.VimR$",
+                "^org\\.gnu\\.Emacs$"
               ],
               "type": "frontmost_application_if"
             }

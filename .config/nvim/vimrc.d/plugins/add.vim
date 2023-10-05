@@ -1,5 +1,6 @@
-" Add third-party plugins via vim-plug
+" Load third-party plugins via vim-plug
 " ============================================================================
+" TODO-L: Choose a neovim directory
 call plug#begin('~/.vim/plugged')
 
 " Text editing
@@ -105,6 +106,12 @@ endif
 "   2. 'syntax enable'
 call plug#end()
 
-" Add first-party plugins (those included in vim distro)
+" Load first-party plugins.
+"
+" These are included with neovim but not loaded automatically. For a full
+" list of such plugins, see: $VIMRUNTIME/pack/dist/opt/.
+"
+" Note that "matchit" actually is automatically loaded due to
+" $VIMRUNTIME/plugin/matchit.vim.
 " ============================================================================
 packadd cfilter

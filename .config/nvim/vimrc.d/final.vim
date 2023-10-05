@@ -3,7 +3,6 @@
 augroup highlight_line_before_latest_jump_start
     autocmd!
     autocmd WinScrolled * call StartHighlightLineBeforeLatestJump(expand("<amatch>"))
-    autocmd WinLeave * call StopHighlightLineBeforeLatestJump()
     autocmd CursorMoved * call StopHighlightLineBeforeLatestJump()
 augroup END
 
@@ -15,6 +14,10 @@ function! StartHighlightLineBeforeLatestJump(winid)
     endif
 
     try
+        " TODO-M: Some scrolling events are not associated with a jump. So
+        " it's better to manually set a mark right before a command that may
+        " cause the window to scroll and highlight the line with that specific
+        " mark on it.
         call matchadd("BeforeLastJump", ".*\\%''.*", 0, s:match_id)
     catch
     endtry
