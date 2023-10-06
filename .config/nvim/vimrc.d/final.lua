@@ -1,4 +1,5 @@
 local success, module = pcall(require, 'colorizer')
+
 if success then
     module.setup()
 else

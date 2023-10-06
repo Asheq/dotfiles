@@ -4,17 +4,16 @@
 " ----------------------------------------------------------------------------
 set nowrapscan
 set inccommand=split
+set jumpoptions=stack
 
 " 4. Displaying text
 " ----------------------------------------------------------------------------
 set breakindent
 set cmdheight=2
 set list
-set listchars=tab:▏\ ,leadmultispace:▏\ ,trail:·,multispace:˙,lead:\ ,extends:▶,precedes:◀,nbsp:‿
+let &listchars='tab:▏ ,space: ,multispace: ,lead:⚬,leadmultispace:┋ ,trail:⚬,extends:▶,precedes:◀,conceal: ,nbsp:◯'
 set number
-set showbreak=└─▶
-set fillchars=fold:\ 
-set nowrap
+set showbreak=↪
 
 " 5. Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
@@ -30,10 +29,6 @@ set splitbelow
 " 7. Multiple tab pages
 " ----------------------------------------------------------------------------
 set tabline=%!vimrc#get_tabline()
-
-" 9. Using the mouse
-" ----------------------------------------------------------------------------
-set mouse=a
 
 " 13. Editing text
 " ----------------------------------------------------------------------------
@@ -56,10 +51,6 @@ if executable('rg')
     set grepformat^=%f:%l:%c:%m
     set grepformat+=%f
 endif
-
-" Other
-" ----------------------------------------------------------------------------
-set jumpoptions=stack
 
 " Generic GUI options
 " ----------------------------------------------------------------------------

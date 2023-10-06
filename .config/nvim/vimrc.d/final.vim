@@ -6,6 +6,7 @@ augroup highlight_line_before_latest_jump_start
     autocmd CursorMoved * call StopHighlightLineBeforeLatestJump()
 augroup END
 
+" TODO-L: Use a dynamic id
 let s:match_id = 99
 function! StartHighlightLineBeforeLatestJump(winid)
     " If the window that scrolled is not the current window, ignore it
@@ -14,10 +15,6 @@ function! StartHighlightLineBeforeLatestJump(winid)
     endif
 
     try
-        " TODO-M: Some scrolling events are not associated with a jump. So
-        " it's better to manually set a mark right before a command that may
-        " cause the window to scroll and highlight the line with that specific
-        " mark on it.
         call matchadd("BeforeLastJump", ".*\\%''.*", 0, s:match_id)
     catch
     endtry
@@ -29,13 +26,6 @@ function! StopHighlightLineBeforeLatestJump()
     catch
     endtry
 endfunction
-
-" Auto close terminal on exit
-" ============================================================================
-augroup auto_close_terminal_on_exit
-    autocmd!
-    autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif
-augroup END
 
 " Highlight yanked text
 " ============================================================================
