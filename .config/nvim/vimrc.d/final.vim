@@ -66,22 +66,22 @@ function! s:override_colorscheme()
         highlight! StatusLineNC   gui=reverse   guifg=#d5c4a1 guibg=#3c3836
     endif
 
-    highlight! link ScrollView Cursor
     highlight! Todo gui=bold,italic guibg=none guifg=none
     highlight! Match guifg=white guibg=green
 
     " TODO-L:
     " Analyze and fine-tune the priority of the following highlights that change the background:
+    "     - CursorLine
+    "     - BeforeLastJump
+    "     - Diff*
+    "     - Visual
     "     - Search
     "     - IncSearch
-    "     - CursorLine
     "     - MatchParen
-    "     - Visual
-    "     - Diff*
-    "     - Fold
     "     - Match
-    "     - BeforeLastJump
-    "     - colorizer*
+    "     - Fold
+    "
+    "     - colorizer*?
 endfunction
 
 " Set colorscheme
