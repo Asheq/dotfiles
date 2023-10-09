@@ -9,6 +9,7 @@ set jumpoptions=stack
 " 4. Displaying text
 " ----------------------------------------------------------------------------
 set breakindent
+set breakindentopt=list:-1
 set cmdheight=2
 set list
 let &listchars='tab:│ ,lead:⚬,leadmultispace:┊ ,trail:⚬,extends:▶,precedes:◀,conceal: ,nbsp:◯'
