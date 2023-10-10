@@ -83,7 +83,7 @@ endfunction
 function! s:last_set(option)
     let temp = getreg("l")
     redir @l
-    execute 'silent verbose set ' . a:option
+    execute 'silent verbose set ' . a:option . '?'
     redir END
     let full_value = getreg("l")
     call setreg("l", temp)
