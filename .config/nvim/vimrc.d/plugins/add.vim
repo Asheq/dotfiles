@@ -61,16 +61,12 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
 " Various
 Plug 'tpope/vim-apathy'
 
-" Markdown
-Plug 'godlygeek/tabular'
 " TODO-L: Fix this:
+" When I had `Plug 'preservim/vim-markdown'`:
 " This file: $VIMRUNTIME/ftplugin/markdown.vim
-" executes after this file: ~/.vim/plugged/vim-markdown/ftplugin/markdown.vim
-" This means that the $VIMRUNTIME file overrides some things, e.g., mappings
-" set in preservim/vim-markdown.
-" This is pretty bad, right?
-" Just wait until I migrate to Lua and lua plugin manager?
-Plug 'preservim/vim-markdown'
+" executed after this file: ~/.vim/plugged/vim-markdown/ftplugin/markdown.vim
+" This means that the $VIMRUNTIME file overrided some things, e.g., mappings
+" set in the preservim/vim-markdown file.
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
