@@ -3,7 +3,7 @@
 
 " Partial
 " ----------------------------------------------------------------------------
-nnoremap <unique>          <leader>g        :sil gr!  <Bar> cw<S-Left><S-Left><Left>
+nnoremap <unique>          <leader>g        :sil gr!  <Bar> tab cw<S-Left><S-Left><S-Left><Left>
 
 nnoremap <unique>          <leader>rr       :redi @r <Bar> sil  <Bar> redi END<S-Left><S-Left><S-Left><Left>
 
