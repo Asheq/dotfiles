@@ -17,6 +17,11 @@ let g:scrollview_signs_on_startup = []
 " ----------------------------------------------------------------------------
 let g:lion_squeeze_spaces = 1
 
+" sandwich
+" ----------------------------------------------------------------------------
+" TODO-L: Add sandwich text objects without clobbering default as/is
+let g:textobj_sandwich_no_default_key_mappings = 1
+
 " Run configure.lua
 " ----------------------------------------------------------------------------
 luafile <sfile>:h/configure.lua
