@@ -30,17 +30,9 @@ Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
-" Scrollbar
-" ----------------------------------------------------------------------------
-Plug 'dstein64/nvim-scrollview'
-
 " Directory explorer
 " ----------------------------------------------------------------------------
 Plug 'justinmk/vim-dirvish'
-
-" Undo tree
-" ----------------------------------------------------------------------------
-Plug 'mbbill/undotree'
 
 " Highlighting
 " ----------------------------------------------------------------------------
@@ -107,10 +99,10 @@ call plug#end()
 
 " Load first-party plugins.
 "
-" These are included with neovim but not loaded automatically. For a full
+" These are included with neovim but are not loaded automatically. For a full
 " list of such plugins, see: $VIMRUNTIME/pack/dist/opt/.
 "
-" Note that "matchit" actually is automatically loaded due to
+" Note that "matchit" is special; it is automatically loaded due to
 " $VIMRUNTIME/plugin/matchit.vim.
 " ============================================================================
 packadd cfilter
