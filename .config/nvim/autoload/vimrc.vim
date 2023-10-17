@@ -7,7 +7,6 @@ function! vimrc#maybe_toggle_fold()
 endfunction
 
 function! vimrc#redraw_screen()
-    ScrollViewRefresh
     nohlsearch
     diffupdate
     execute "normal! \<C-l>"

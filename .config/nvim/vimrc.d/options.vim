@@ -3,14 +3,12 @@
 " 2. Moving around, searching and patterns
 " ----------------------------------------------------------------------------
 set nowrapscan
-set inccommand=split
 set jumpoptions=stack
 
 " 4. Displaying text
 " ----------------------------------------------------------------------------
 set breakindent
 set breakindentopt=list:-1
-set cmdheight=2
 set list
 let &listchars='tab:│ ,lead:⚬,leadmultispace:┊ ,trail:⚬,extends:▶,precedes:◀,conceal: ,nbsp:◯'
 set number
@@ -25,8 +23,6 @@ set spelloptions=camel
 " 6. Multiple windows
 " ----------------------------------------------------------------------------
 set statusline=%!vimrc#get_statusline()
-set splitright
-set splitbelow
 
 " 7. Multiple tab pages
 " ----------------------------------------------------------------------------
@@ -38,7 +34,7 @@ set undofile
 
 " 15. Folding
 " ----------------------------------------------------------------------------
-set foldcolumn=auto:9
+set foldcolumn=auto
 set foldtext=vimrc#get_fold_text()
 
 " 20. Command line editing
@@ -54,7 +50,7 @@ if executable('rg')
     set grepformat+=%f
 endif
 
-" Generic GUI options
+" GUI options
 " ----------------------------------------------------------------------------
 if exists('&guifont')
     set guifont=PragmataPro\ Mono:h18

@@ -20,7 +20,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
 Plug 'machakann/vim-sandwich'
 
-
 " Auto-set options
 " ----------------------------------------------------------------------------
 Plug 'tpope/vim-projectionist'
@@ -36,8 +35,6 @@ Plug 'justinmk/vim-dirvish'
 
 " Highlighting
 " ----------------------------------------------------------------------------
-" TODO-L: norcalli/nvim-colorizer.lua is not maintained anymore.
-Plug 'norcalli/nvim-colorizer.lua'
 Plug 'azabiong/vim-highlighter'
 
 " Buffer/window/tab management

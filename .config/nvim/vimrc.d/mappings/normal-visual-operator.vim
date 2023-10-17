@@ -33,21 +33,23 @@ nnoremap <unique> <silent> <leader>j        :ju<CR>
 
 nnoremap <unique> <silent> <leader>w        :up<CR>
 
-nnoremap          <silent> <C-l>            :cal vimrc#redraw_screen()<CR>
-
 " nnoremap <unique>          <leader>?        :%!npx --quiet prettier --stdin-filepath %<CR>
 
-call vimrc#create_toggle_maps('a', '&formatoptions=~"a"'         , 'setl fo-=a'    , 'setl fo+=a')
-call vimrc#create_toggle_maps('b', '&scrollbind'                 , 'setl noscb'    , 'setl scb')
-call vimrc#create_toggle_maps('c', '&cursorcolumn'               , 'setl nocuc'    , 'setl cuc')
-call vimrc#create_toggle_maps('f', '&foldopen=="all"'            , 'setl fdo& fcl&', 'setl fdo=all fcl=all')
-call vimrc#create_toggle_maps('l', '&list'                       , 'setl nolist'   , 'setl list')
-call vimrc#create_toggle_maps('n', '&number'                     , 'setl nonu'     , 'setl nu')
-call vimrc#create_toggle_maps('r', '&relativenumber'             , 'setl nornu'    , 'setl rnu')
-call vimrc#create_toggle_maps('s', '&spell'                      , 'setl nospell'  , 'setl spell')
-call vimrc#create_toggle_maps('t', 'match(&colorcolumn, "+1")>=0', 'setl cc-=+1'   , 'setl cc+=+1')
-call vimrc#create_toggle_maps('w', '&wrap'                       , 'setl nowrap'   , 'setl wrap')
-call vimrc#create_toggle_maps('d', '&background=="dark"'         , 'set bg=light'  , 'set bg=dark')
+" TODO-L: Remove
+" nnoremap          <silent> <C-l>            :cal vimrc#redraw_screen()<CR>
+
+" TODO-L: Remove
+" call vimrc#create_toggle_maps('a', '&formatoptions=~"a"'         , 'setl fo-=a'    , 'setl fo+=a')
+" call vimrc#create_toggle_maps('b', '&scrollbind'                 , 'setl noscb'    , 'setl scb')
+" call vimrc#create_toggle_maps('c', '&cursorcolumn'               , 'setl nocuc'    , 'setl cuc')
+" call vimrc#create_toggle_maps('f', '&foldopen=="all"'            , 'setl fdo& fcl&', 'setl fdo=all fcl=all')
+" call vimrc#create_toggle_maps('l', '&list'                       , 'setl nolist'   , 'setl list')
+" call vimrc#create_toggle_maps('n', '&number'                     , 'setl nonu'     , 'setl nu')
+" call vimrc#create_toggle_maps('r', '&relativenumber'             , 'setl nornu'    , 'setl rnu')
+" call vimrc#create_toggle_maps('s', '&spell'                      , 'setl nospell'  , 'setl spell')
+" call vimrc#create_toggle_maps('t', 'match(&colorcolumn, "+1")>=0', 'setl cc-=+1'   , 'setl cc+=+1')
+" call vimrc#create_toggle_maps('w', '&wrap'                       , 'setl nowrap'   , 'setl wrap')
+" call vimrc#create_toggle_maps('d', '&background=="dark"'         , 'set bg=light'  , 'set bg=dark')
 
 " Normal mode command typing helpers
 " ============================================================================
