@@ -1,15 +1,20 @@
 " A vertical version of the :splitfind command
 cabbrev        vf vert sf
 " TODO-L: Add cabbrev lines for these missing "shortcut helper commands":
-" :tabs[p]
+" :tabsp[lit]
+"
 " :vf[ind]
+"
 " :vta[g]
 " :tabta[g]
-" :ste[rm]
-" :vte[rm]
-" :tabte[rm]
+"
+" :ste[rminal]
+" :vte[rminal]
+" :tabte[rminal]
+"
 " :vcope[n]
 " :tabcope[n]
+"
 " :vh[elp]
 " :tabh[elp]
 
