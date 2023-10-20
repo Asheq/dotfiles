@@ -83,6 +83,10 @@ Plug 'tpope/vim-characterize'
 " ----------------------------------------------------------------------------
 Plug 'ellisonleao/gruvbox.nvim'
 
+" Scrollbar
+" ----------------------------------------------------------------------------
+Plug 'gcavallanti/vim-noscrollbar'
+
 " Language Server
 " ----------------------------------------------------------------------------
 if executable('node')
