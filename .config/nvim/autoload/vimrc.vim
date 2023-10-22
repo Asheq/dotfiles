@@ -1,3 +1,20 @@
+" TODO-L: Organize and refactor
+
+function! vimrc#get_command_output(command)
+    let temp = getreg("v")
+    redir @v
+    execute 'silent ' . a:command
+    let output = getreg("v")
+    redir END
+    call setreg("v", temp)
+    return output
+endfunction
+
+function! vimrc#better_ctrl_g()
+    let original_ctrl_g_output = vimrc#get_command_output('file')
+    return noscrollbar#statusline(&columns,'■','◫',['◧'],['◨']) . substitute(original_ctrl_g_output, '\n', '', '')
+endfunction
+
 function! vimrc#maybe_toggle_fold()
     if foldlevel('.')
         normal za

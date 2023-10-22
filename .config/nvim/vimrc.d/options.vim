@@ -13,6 +13,7 @@ set list
 let &listchars='tab:│ ,lead:⚬,leadmultispace:┊ ,trail:⚬,extends:▶,precedes:◀,conceal: ,nbsp:◯'
 set number
 set showbreak=↪
+set cmdheight=2
 
 " 5. Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
@@ -27,6 +28,10 @@ set statusline=%!vimrc#get_statusline()
 " 7. Multiple tab pages
 " ----------------------------------------------------------------------------
 set tabline=%!vimrc#get_tabline()
+
+" 10. Messages and info
+" ----------------------------------------------------------------------------
+set noruler
 
 " 13. Editing text
 " ----------------------------------------------------------------------------

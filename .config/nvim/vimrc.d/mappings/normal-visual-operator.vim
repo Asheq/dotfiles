@@ -15,7 +15,7 @@ nnoremap <unique>          yp               :echo "p = full path\nh = head\nt = 
 
 " Complete
 " ----------------------------------------------------------------------------
-nnoremap <unique> <silent> <C-h>            :echo noscrollbar#statusline(&columns - 12,'-', '#')<CR>
+nnoremap <unique> <silent> <C-g>            :echo vimrc#better_ctrl_g()<CR>
 
 nnoremap <unique> <silent> <CR>             :cal vimrc#maybe_toggle_fold()<CR>
 

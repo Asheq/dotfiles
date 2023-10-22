@@ -1,16 +1,6 @@
-" A vertical version of the :splitfind command
-cabbrev        vf vert sf
-" TODO-L: Add cabbrev lines for these missing "shortcut helper commands":
-" - :tabsp[lit]
-" - :vf[ind]
-" - :vta[g]
-" - :tabta[g]
-" - :vter[minal]
-" - :tabter[minal]
-" - :vcope[n]
-" - :tabcope[n]
-" - :vh[elp]
-" - :tabh[elp]
+" Easier :vert and :tab command modifiers
+cabbrev        v vert
+cabbrev        t tab
 
 " Insert date or date-time
 iabbrev <expr> ,d strftime('%Y-%m-%d')
