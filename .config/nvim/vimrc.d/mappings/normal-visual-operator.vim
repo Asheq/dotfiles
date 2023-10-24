@@ -3,39 +3,39 @@
 
 " Partial
 " ----------------------------------------------------------------------------
-nnoremap <unique>          <leader>g        :sil gr!  <Bar> tab cw<S-Left><S-Left><S-Left><Left>
+nnoremap          <leader>g        :sil gr!  <Bar> tab cw<S-Left><S-Left><S-Left><Left>
 
-nnoremap <unique>          <leader>rr       :redi @r <Bar> sil  <Bar> redi END<S-Left><S-Left><S-Left><Left>
+nnoremap          <leader>rr       :redi @r <Bar> sil  <Bar> redi END<S-Left><S-Left><S-Left><Left>
 
-nnoremap <unique>          <leader>t        :tab<C-z><C-p>
+nnoremap          <leader>t        :tab<C-z><C-p>
 
-nnoremap <unique>          <leader>/        :mat Match //<Left>
+nnoremap          <leader>/        :mat Match //<Left>
 
-nnoremap <unique>          yp               :echo "p = full path\nh = head\nt = tail"<Enter>:let @* = expand('%:')<Left><Left>
+nnoremap          yp               :echo "p = full path\nh = head\nt = tail"<Enter>:let @* = expand('%:')<Left><Left>
 
 " Complete
 " ----------------------------------------------------------------------------
-nnoremap <unique> <silent> <C-g>            :echo vimrc#better_ctrl_g()<Enter>
+nnoremap <silent> <C-g>            :echo vimrc#better_ctrl_g()<Enter>
 
-nnoremap <unique> <silent> <Enter>          :cal vimrc#maybe_toggle_fold()<Enter>
+nnoremap <silent> <Enter>          :cal vimrc#maybe_toggle_fold()<Enter>
 
-nnoremap <unique> <silent> <leader>c        :ColorizerToggle<Enter>
+nnoremap <silent> <leader>c        :ColorizerToggle<Enter>
 
-nnoremap <unique> <silent> <leader>h        :cal vimrc#echo_highlight_info()<Enter>
+nnoremap <silent> <leader>h        :cal vimrc#echo_highlight_info()<Enter>
 
-nnoremap <unique> <silent> <leader>n        :noh<Enter>
+nnoremap <silent> <leader>n        :noh<Enter>
 
-nnoremap <unique> <silent> <leader>m        :cal vimrc#mru_dirvish()<Enter>
+nnoremap <silent> <leader>m        :cal vimrc#mru_dirvish()<Enter>
 
-nnoremap <unique> <silent> <leader>o        :!open '%:h'<Enter><Enter>
+nnoremap <silent> <leader>o        :!open '%:h'<Enter><Enter>
 
-nnoremap <unique> <silent> <leader>s        :Git<Enter>
+nnoremap <silent> <leader>s        :Git<Enter>
 
-nnoremap <unique> <silent> <leader>j        :ju<Enter>
+nnoremap <silent> <leader>j        :ju<Enter>
 
-nnoremap <unique> <silent> <leader>w        :up<Enter>
+nnoremap <silent> <leader>w        :up<Enter>
 
-" nnoremap <unique>          <leader>?        :%!npx --quiet prettier --stdin-filepath %<Enter>
+" nnoremap          <leader>?        :%!npx --quiet prettier --stdin-filepath %<Enter>
 
 " TODO-L: Remove
 " nnoremap          <silent> <C-l>            :cal vimrc#redraw_screen()<Enter>
@@ -58,46 +58,46 @@ nnoremap <unique> <silent> <leader>w        :up<Enter>
 
 " Yank and Paste Operators/Operations
 " ----------------------------------------------------------------------------
-nnoremap <unique>          <leader>y        "*y
-xnoremap <unique>          <leader>y        "*y
-nmap     <unique>          <leader>Y        "*Y
-nnoremap <unique>          <leader>p        "*p
-xnoremap <unique>          <leader>p        "*p
-nnoremap <unique>          <leader>P        "*P
+nnoremap          <leader>y        "*y
+xnoremap          <leader>y        "*y
+nmap              <leader>Y        "*Y
+nnoremap          <leader>p        "*p
+xnoremap          <leader>p        "*p
+nnoremap          <leader>P        "*P
 
 " Other
 " ----------------------------------------------------------------------------
-nnoremap <unique> <silent> <leader><Enter>  <Enter>
-map      <unique>          _                <Plug>(dirvish_up)
+nnoremap <silent> <leader><Enter>  <Enter>
+map               _                <Plug>(dirvish_up)
 
 " Text Operations
 " ============================================================================
-nnoremap <unique> <silent> <leader>d        :cal vimrc#define(expand('<cword>'))<Enter>
-xnoremap <unique> <silent> <leader>d        :<C-u>cal vimrc#define(vimrc#get_selection_text())<Enter>
+nnoremap <silent> <leader>d        :cal vimrc#define(expand('<cword>'))<Enter>
+xnoremap <silent> <leader>d        :<C-u>cal vimrc#define(vimrc#get_selection_text())<Enter>
 
-nnoremap <unique> <silent> <leader>b        :cal vimrc#browse(expand('<cword>'))<Enter>
-xnoremap <unique> <silent> <leader>b        :<C-u>cal vimrc#browse(vimrc#get_selection_text())<Enter>
+nnoremap <silent> <leader>b        :cal vimrc#browse(expand('<cword>'))<Enter>
+xnoremap <silent> <leader>b        :<C-u>cal vimrc#browse(vimrc#get_selection_text())<Enter>
 
 let g:say_speed = 250
-nnoremap <unique> <silent> <leader><Left>   :let g:say_speed -= 50<Enter>:echo g:say_speed<Enter>
-nnoremap <unique> <silent> <leader><Right>  :let g:say_speed += 50<Enter>:echo g:say_speed<Enter>
+nnoremap <silent> <leader><Left>   :let g:say_speed -= 50<Enter>:echo g:say_speed<Enter>
+nnoremap <silent> <leader><Right>  :let g:say_speed += 50<Enter>:echo g:say_speed<Enter>
 
-nnoremap <unique> <silent> <leader>k        :execute '.w !say -r ' . g:say_speed<Enter><Enter>
-xnoremap <unique> <silent> <leader>k        :<C-u>execute 'silent !echo ' . shellescape(vimrc#get_selection_text(), 1) . ' <Bar> say -r ' . g:say_speed<Enter>
+nnoremap <silent> <leader>k        :execute 'silent .w !say -r ' . g:say_speed<Enter>
+xnoremap <silent> <leader>k        :<C-u>execute 'silent !echo ' . shellescape(vimrc#get_selection_text(), 1) . ' <Bar> say -r ' . g:say_speed<Enter>
 
-nnoremap <unique> <silent> <leader>i        :cal vimrc#read_aloud(getline('.'))<Enter>
-xnoremap <unique> <silent> <leader>i        :<C-u>cal vimrc#read_aloud(vimrc#get_selection_text())<Enter>
+nnoremap <silent> <leader>i        :cal vimrc#read_aloud(getline('.'))<Enter>
+xnoremap <silent> <leader>i        :<C-u>cal vimrc#read_aloud(vimrc#get_selection_text())<Enter>
 
 " Motions
 " ============================================================================
-map <unique>               [b               <Plug>(IndentWisePreviousLesserIndent)
-map <unique>               ]b               <Plug>(IndentWiseNextLesserIndent)
+map               [b               <Plug>(IndentWisePreviousLesserIndent)
+map               ]b               <Plug>(IndentWiseNextLesserIndent)
 
-map <unique>               [w               <Plug>(IndentWisePreviousGreaterIndent)
-map <unique>               ]w               <Plug>(IndentWiseNextGreaterIndent)
+map               [w               <Plug>(IndentWisePreviousGreaterIndent)
+map               ]w               <Plug>(IndentWiseNextGreaterIndent)
 
-map <unique>               [v               <Plug>(IndentWisePreviousEqualIndent)
-map <unique>               ]v               <Plug>(IndentWiseNextEqualIndent)
+map               [v               <Plug>(IndentWisePreviousEqualIndent)
+map               ]v               <Plug>(IndentWiseNextEqualIndent)
 
-map <unique>               [a               <Plug>(IndentWiseBlockScopeBoundaryBegin)
-map <unique>               ]a               <Plug>(IndentWiseBlockScopeBoundaryEnd)
+map               [a               <Plug>(IndentWiseBlockScopeBoundaryBegin)
+map               ]a               <Plug>(IndentWiseBlockScopeBoundaryEnd)

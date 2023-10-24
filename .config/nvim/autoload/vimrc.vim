@@ -156,7 +156,7 @@ command! -nargs=1 Browse call vimrc#browse(<f-args>)
 
 function! vimrc#get_selection_text()
     let temp = getreg("v")
-    normal! gv"vy
+    silent normal! gv"vy
     let raw_text = getreg("v")
     call setreg("v", temp)
     return raw_text
