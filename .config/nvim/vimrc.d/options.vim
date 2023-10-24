@@ -14,6 +14,7 @@ let &listchars='tab:│ ,lead:⚬,leadmultispace:┊ ,trail:⚬,extends:▶,prec
 set number
 set showbreak=↪
 set cmdheight=2
+let &fillchars='foldopen:▼,foldclose:▶,diff:╱,lastline:▶'
 
 " 5. Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
@@ -39,7 +40,7 @@ set undofile
 
 " 15. Folding
 " ----------------------------------------------------------------------------
-set foldcolumn=auto
+set foldcolumn=auto:9
 set foldtext=vimrc#get_fold_text()
 
 " 20. Command line editing

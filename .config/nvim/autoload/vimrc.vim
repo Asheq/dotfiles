@@ -19,7 +19,7 @@ function! vimrc#maybe_toggle_fold()
     if foldlevel('.')
         normal za
     else
-        execute "normal! \<CR>"
+        execute "normal! \<Enter>"
     endif
 endfunction
 
@@ -117,7 +117,7 @@ function! vimrc#read_aloud(keyword)
     let @v = "say " . shellescape(a:keyword) . " -i -r " . g:say_speed
     normal! "vpi
     call setreg("v", temp)
-    call feedkeys("\<CR>exit\<CR>", 'n')
+    call feedkeys("\<Enter>exit\<Enter>", 'n')
 endfunction
 
 function! vimrc#open_in_shell(item, ...)
@@ -163,9 +163,9 @@ function! vimrc#get_selection_text()
 endfunction
 
 function! vimrc#create_toggle_maps(letter, test, off, on)
-    execute 'nnoremap <unique> [o' . a:letter . ' :' . a:on . '<CR>'
-    execute 'nnoremap <unique> ]o' . a:letter . ' :' . a:off . '<CR>'
-    execute 'nnoremap <unique> co' . a:letter . ' :' . '<C-r>=' . a:test . '?"' . a:off . '":"' . a:on . '"<CR><CR>'
+    execute 'nnoremap <unique> [o' . a:letter . ' :' . a:on . '<Enter>'
+    execute 'nnoremap <unique> ]o' . a:letter . ' :' . a:off . '<Enter>'
+    execute 'nnoremap <unique> co' . a:letter . ' :' . '<C-r>=' . a:test . '?"' . a:off . '":"' . a:on . '"<Enter><Enter>'
 endfunction
 
 function! vimrc#get_global_cwd()
