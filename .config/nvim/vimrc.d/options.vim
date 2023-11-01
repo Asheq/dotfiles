@@ -12,9 +12,10 @@ set breakindentopt=list:-1
 set list
 let &listchars='tab:│ ,lead:⚬,leadmultispace:┊ ,trail:⚬,extends:▶,precedes:◀,conceal: ,nbsp:◯'
 set number
-set showbreak=↪
+let &showbreak='↪ '
 set cmdheight=2
 let &fillchars='foldopen:▼,foldclose:▶,diff:╱,lastline:▶'
+set nowrap
 
 " 5. Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
@@ -33,6 +34,7 @@ set tabline=%!vimrc#get_tabline()
 " 10. Messages and info
 " ----------------------------------------------------------------------------
 set noruler
+set report=1
 
 " 13. Editing text
 " ----------------------------------------------------------------------------
