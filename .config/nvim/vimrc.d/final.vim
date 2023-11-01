@@ -69,6 +69,9 @@ function! s:override_colorscheme()
     highlight! Todo gui=bold,italic guibg=none guifg=none
     highlight! Match guifg=white guibg=green
     highlight! link QuickFixLine PmenuSel
+    highlight! link TabLineFill StatusLineNC
+    highlight! link TabLine     StatusLineNC
+    highlight! link TabLineSel  StatusLine
 
     " TODO-L:
     " Analyze and fine-tune the priority of the following highlights that change the background:
