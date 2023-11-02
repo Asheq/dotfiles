@@ -19,8 +19,6 @@ nnoremap <silent> <C-g>            :echo vimrc#better_ctrl_g()<Enter>
 
 nnoremap <silent> <Enter>          :cal vimrc#maybe_toggle_fold()<Enter>
 
-nnoremap <silent> <leader>c        :ColorizerToggle<Enter>
-
 nnoremap <silent> <leader>h        :cal vimrc#echo_highlight_info()<Enter>
 
 nnoremap <silent> <leader>n        :noh<Enter>
@@ -35,6 +33,7 @@ nnoremap <silent> <leader>j        :ju<Enter>
 
 nnoremap <silent> <leader>w        :up<Enter>
 
+" TODO-L: Remove
 " nnoremap          <leader>?        :%!npx --quiet prettier --stdin-filepath %<Enter>
 
 " TODO-L: Remove
