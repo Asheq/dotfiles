@@ -1,10 +1,11 @@
 " Highlight line before latest jump start
 " ============================================================================
-augroup highlight_line_before_latest_jump_start
-    autocmd!
-    autocmd WinScrolled * call StartHighlightLineBeforeLatestJump(expand("<amatch>"))
-    autocmd CursorMoved * call StopHighlightLineBeforeLatestJump()
-augroup END
+" TODO-L: Remove
+" augroup highlight_line_before_latest_jump_start
+"     autocmd!
+"     autocmd WinScrolled * call StartHighlightLineBeforeLatestJump(expand("<amatch>"))
+"     autocmd CursorMoved * call StopHighlightLineBeforeLatestJump()
+" augroup END
 
 " TODO-L: Use a dynamic id
 let s:match_id = 99
@@ -42,36 +43,29 @@ augroup override_colorscheme
 augroup END
 
 function! s:override_colorscheme()
+    " TODO-L: BeforeLastJump
     if &background == 'dark'
-        " Reference:
-        " StatusLine     gui=reverse guifg=#504945 guibg=#ebdbb2
-        " StatusLineNC   gui=reverse guifg=#3c3836 guibg=#a89984
-
-        highlight! BeforeLastJump guibg=#45009e
-        highlight! CursorLine     guibg=#014575
-        highlight! DiffChange     gui=reverse   guifg=#b16286 guibg=#282828
-        highlight! DiffText       gui=reverse   guifg=#d3869b guibg=#282828
-        highlight! StatusLine     gui=reverse   guifg=#ebdbb2 guibg=#3c3836
-        highlight! StatusLineNC   gui=reverse   guifg=#504945 guibg=#ebdbb2
+        highlight! BeforeLastJump                           guibg=#45009e
+        highlight! CursorLine                               guibg=#014575
+        highlight! DiffChange                               guibg=#45009e
+        highlight! DiffText                   guifg=#282828 guibg=#a576fe
+        highlight! StatusLine     gui=reverse guifg=#ebdbb2 guibg=#3c3836
+        highlight! StatusLineNC   gui=reverse guifg=#504945 guibg=#ebdbb2
     else
-        " Reference:
-        " StatusLine     gui=reverse guifg=#d5c4a1 guibg=#3c3836
-        " StatusLineNC   gui=reverse guifg=#ebdbb2 guibg=#7c6f64
-
-        highlight! BeforeLastJump guibg=#e1d4f2
-        highlight! CursorLine     guibg=#d5e6f2
-        highlight! DiffChange     gui=reverse   guifg=#d3869b guibg=#fbf1c7
-        highlight! DiffText       gui=reverse   guifg=#8f3871 guibg=#fbf1c7
-        highlight! StatusLine     gui=reverse   guifg=#3c3836 guibg=#ebdbb2
-        highlight! StatusLineNC   gui=reverse   guifg=#d5c4a1 guibg=#3c3836
+        highlight! BeforeLastJump                           guibg=#e1d4f2
+        highlight! CursorLine                               guibg=#d5e6f2
+        highlight! DiffChange                               guibg=#e1d4f2
+        highlight! DiffText                   guifg=#fbf1c7 guibg=#815492
+        highlight! StatusLine     gui=reverse guifg=#3c3836 guibg=#ebdbb2
+        highlight! StatusLineNC   gui=reverse guifg=#d5c4a1 guibg=#3c3836
     endif
 
-    highlight! Todo gui=bold,italic guibg=none guifg=none
-    highlight! Match guifg=white guibg=green
+    highlight! Todo               gui=bold,italic guifg=none  guibg=none
+    highlight! Match                              guifg=white guibg=green
     highlight! link QuickFixLine PmenuSel
-    highlight! link TabLineFill StatusLineNC
-    highlight! link TabLine     StatusLineNC
-    highlight! link TabLineSel  StatusLine
+    highlight! link TabLineFill  StatusLineNC
+    highlight! link TabLine      StatusLineNC
+    highlight! link TabLineSel   StatusLine
 
     " TODO-L:
     " Analyze and fine-tune the priority of the following highlights that change the background:
