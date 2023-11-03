@@ -41,10 +41,6 @@ Plug 'azabiong/vim-highlighter'
 " ----------------------------------------------------------------------------
 Plug 'Asheq/close-buffers.vim'
 
-" Markdown preview
-" ----------------------------------------------------------------------------
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
-
 " Filetype plugins
 " ----------------------------------------------------------------------------
 " Various
