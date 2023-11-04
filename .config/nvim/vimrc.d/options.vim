@@ -61,5 +61,7 @@ endif
 " GUI options
 " ----------------------------------------------------------------------------
 if exists('&guifont')
-    set guifont=PragmataPro\ Mono:h18
+    " NOTE: Neovide doesn't render "PragmataPro Mono", for some reason
+    set guifont=Iosevka\ Term:h18
+    set background=light
 endif
