@@ -47,10 +47,11 @@ function! s:override_colorscheme()
     if &background == 'dark'
         highlight! BeforeLastJump                           guibg=#45009e
         highlight! CursorLine                               guibg=#014575
-        highlight! DiffChange                               guibg=#45009e
+        highlight! DiffChange                               guibg=#410091
         highlight! DiffText                   guifg=#282828 guibg=#a576fe
         highlight! StatusLine     gui=reverse guifg=#ebdbb2 guibg=#3c3836
         highlight! StatusLineNC   gui=reverse guifg=#504945 guibg=#ebdbb2
+        highlight! DiffAdd                                  guibg=#35491e
     else
         highlight! BeforeLastJump                           guibg=#e1d4f2
         highlight! CursorLine                               guibg=#d5e6f2

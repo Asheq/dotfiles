@@ -60,8 +60,14 @@ endif
 
 " GUI options
 " ----------------------------------------------------------------------------
-if exists('&guifont')
+if exists('g:neovide')
     " NOTE: Neovide doesn't render "PragmataPro Mono", for some reason
     set guifont=Iosevka\ Term:h18
-    set background=light
+
+    silent !defaults read -g AppleInterfaceStyle &> /dev/null
+    if v:shell_error == 0
+        set background=dark
+    else
+        set background=light
+    endif
 endif

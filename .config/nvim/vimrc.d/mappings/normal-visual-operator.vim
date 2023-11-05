@@ -69,6 +69,13 @@ nnoremap          <leader>P        "*P
 nnoremap <silent> <leader><Enter>  <Enter>
 map               _                <Plug>(dirvish_up)
 
+" Move up and down through wrapped lines
+" ----------------------------------------------------------------------------
+nnoremap  j                gj
+nnoremap  k                gk
+nnoremap  gj               j
+nnoremap  gk               k
+
 " Text Operations
 " ============================================================================
 nnoremap <silent> <leader>d        :cal vimrc#define(expand('<cword>'))<Enter>
