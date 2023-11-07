@@ -22,7 +22,6 @@ complete -o dirnames -o nospace -F _fzf_dir_completion c
 
 alias v='nvim'
 
-alias box='cd ~/Library/CloudStorage/Box-Box/me/'
 alias drive='cd ~/My\ Drive/'
 alias notes='cd ~/My\ Drive/notes/'
 alias todo='cd ~/My\ Drive/todo/'
