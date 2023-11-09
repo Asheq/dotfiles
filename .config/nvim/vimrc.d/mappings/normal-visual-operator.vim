@@ -5,7 +5,7 @@
 " ----------------------------------------------------------------------------
 nnoremap          <leader>g        :sil gr!  <Bar> tab cw<S-Left><S-Left><S-Left><Left>
 
-nnoremap          <leader>rr       :redi @r <Bar> sil  <Bar> redi END<S-Left><S-Left><S-Left><Left>
+nnoremap          <leader>r        :redi @r <Bar> sil  <Bar> redi END<S-Left><S-Left><S-Left><Left>
 
 nnoremap          <leader>t        :tab<C-z><C-p>
 
@@ -20,8 +20,6 @@ nnoremap <silent> <C-g>            :echo vimrc#better_ctrl_g()<Enter>
 nnoremap <silent> <Enter>          :cal vimrc#maybe_toggle_fold()<Enter>
 
 nnoremap <silent> <leader>h        :cal vimrc#echo_highlight_info()<Enter>
-
-nnoremap <silent> <leader>n        :noh<Enter>
 
 nnoremap <silent> <leader>m        :cal vimrc#mru_dirvish()<Enter>
 
