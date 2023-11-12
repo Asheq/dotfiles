@@ -63,7 +63,7 @@ function! s:override_colorscheme()
 
     highlight! Todo               gui=bold,italic guifg=none  guibg=none
     highlight! Match                              guifg=white guibg=green
-    highlight! link QuickFixLine PmenuSel
+
     highlight! link TabLineFill  StatusLineNC
     highlight! link TabLine      StatusLineNC
     highlight! link TabLineSel   StatusLine
