@@ -1,7 +1,6 @@
 " Load third-party plugins via vim-plug
 " ============================================================================
-" TODO-L: Choose a neovim directory
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 " Text editing
 " ---------------------------------------------------------------------------

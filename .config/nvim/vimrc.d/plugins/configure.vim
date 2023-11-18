@@ -18,6 +18,10 @@ let g:lion_squeeze_spaces = 1
 " TODO-L: Add sandwich text objects without clobbering default as/is
 let g:textobj_sandwich_no_default_key_mappings = 1
 
+" highlighter
+" ----------------------------------------------------------------------------
+let HiKeywords = stdpath("config") . '/after/vim-highlighter'
+
 " Run configure.lua
 " ----------------------------------------------------------------------------
 luafile <sfile>:h/configure.lua

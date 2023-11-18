@@ -1,0 +1,5 @@
+# Highlighter Ver 1.58.8
+
+13:\m\v^\s*\- \zs\[\.\]
+1:\m\v^\s*\- \zs\[x\]
+7:\m\v^\s*\- \zs\[c\]
