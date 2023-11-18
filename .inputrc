@@ -8,6 +8,7 @@ set menu-complete-display-prefix on
 set show-all-if-ambiguous on
 set skip-completed-text on
 set visible-stats on
+set completion-ignore-case on
 
 # Rebind keys
 # ==============================================================================
@@ -23,4 +24,4 @@ set visible-stats on
 "\C-p": history-search-backward
 "\C-n": history-search-forward
 
-# man bash > search "Commands for Moving"
+# For more: man bash > search "Commands for Moving"
