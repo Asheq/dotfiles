@@ -1,6 +1,6 @@
 " This file was copied from the example configuration on coc.nvim's README file, and slightly modified.
 
-if !executable('node')
+if !executable('node') || !exists('*CocActionAsync')
   finish
 endif
 
