@@ -16,6 +16,7 @@ let &showbreak='↪ '
 set cmdheight=2
 let &fillchars='foldopen:▼,foldclose:▶,diff:╱,lastline:▶'
 set nowrap
+set smoothscroll
 
 " 5. Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
