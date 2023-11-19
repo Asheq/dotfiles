@@ -17,6 +17,7 @@ set cmdheight=2
 let &fillchars='foldopen:▼,foldclose:▶,diff:╱,lastline:▶'
 set nowrap
 set smoothscroll
+set conceallevel=2
 
 " 5. Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
