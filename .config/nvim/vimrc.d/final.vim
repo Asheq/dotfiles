@@ -1,33 +1,3 @@
-" Highlight line before latest jump start
-" ============================================================================
-" TODO-L: Remove
-" augroup highlight_line_before_latest_jump_start
-"     autocmd!
-"     autocmd WinScrolled * call StartHighlightLineBeforeLatestJump(expand("<amatch>"))
-"     autocmd CursorMoved * call StopHighlightLineBeforeLatestJump()
-" augroup END
-
-" TODO-L: Use a dynamic id
-let s:match_id = 99
-function! StartHighlightLineBeforeLatestJump(winid)
-    " If the window that scrolled is not the current window, ignore it
-    if a:winid != win_getid()
-        return
-    endif
-
-    try
-        call matchadd("BeforeLastJump", ".*\\%''.*", 0, s:match_id)
-    catch
-    endtry
-endfunction
-
-function! StopHighlightLineBeforeLatestJump()
-    try
-        call matchdelete(s:match_id)
-    catch
-    endtry
-endfunction
-
 " Highlight yanked text
 " ============================================================================
 augroup highlight_yanked_text

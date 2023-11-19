@@ -31,25 +31,6 @@ nnoremap <silent> <leader>j        :ju<Enter>
 
 nnoremap <silent> <leader>w        :up<Enter>
 
-" TODO-L: Remove
-" nnoremap          <leader>?        :%!npx --quiet prettier --stdin-filepath %<Enter>
-
-" TODO-L: Remove
-" nnoremap          <silent> <C-l>            :cal vimrc#redraw_screen()<Enter>
-
-" TODO-L: Remove
-" call vimrc#create_toggle_maps('a', '&formatoptions=~"a"'         , 'setl fo-=a'    , 'setl fo+=a')
-" call vimrc#create_toggle_maps('b', '&scrollbind'                 , 'setl noscb'    , 'setl scb')
-" call vimrc#create_toggle_maps('c', '&cursorcolumn'               , 'setl nocuc'    , 'setl cuc')
-" call vimrc#create_toggle_maps('f', '&foldopen=="all"'            , 'setl fdo& fcl&', 'setl fdo=all fcl=all')
-" call vimrc#create_toggle_maps('l', '&list'                       , 'setl nolist'   , 'setl list')
-" call vimrc#create_toggle_maps('n', '&number'                     , 'setl nonu'     , 'setl nu')
-" call vimrc#create_toggle_maps('r', '&relativenumber'             , 'setl nornu'    , 'setl rnu')
-" call vimrc#create_toggle_maps('s', '&spell'                      , 'setl nospell'  , 'setl spell')
-" call vimrc#create_toggle_maps('t', 'match(&colorcolumn, "+1")>=0', 'setl cc-=+1'   , 'setl cc+=+1')
-" call vimrc#create_toggle_maps('w', '&wrap'                       , 'setl nowrap'   , 'setl wrap')
-" call vimrc#create_toggle_maps('d', '&background=="dark"'         , 'set bg=light'  , 'set bg=dark')
-
 " Normal mode command typing helpers
 " ============================================================================
 
@@ -69,10 +50,10 @@ map               _                <Plug>(dirvish_up)
 
 " Move up and down through wrapped lines
 " ----------------------------------------------------------------------------
-nnoremap  j                gj
-nnoremap  k                gk
-nnoremap  gj               j
-nnoremap  gk               k
+nnoremap          j                gj
+nnoremap          k                gk
+nnoremap          gj               j
+nnoremap          gk               k
 
 " Text Operations
 " ============================================================================
