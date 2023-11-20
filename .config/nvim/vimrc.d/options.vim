@@ -12,7 +12,7 @@ set breakindentopt=list:-1
 set list
 let &listchars='tab:│ ,lead:⚬,leadmultispace:┊ ,trail:⚬,extends:▶,precedes:◀,conceal: ,nbsp:◯'
 set number
-let &showbreak='↪ '
+let &showbreak='> '
 set cmdheight=2
 let &fillchars='foldopen:▼,foldclose:▶,diff:╱,lastline:▶'
 set nowrap
