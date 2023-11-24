@@ -55,7 +55,9 @@ nnoremap          gk               k
 " Fold
 " ----------------------------------------------------------------------------
 nnoremap          <Left>           zc
+nnoremap          <S-Left>         zC
 nnoremap          <Right>          zo
+nnoremap          <S-Right>        zO
 
 " Text Operations
 " ============================================================================
