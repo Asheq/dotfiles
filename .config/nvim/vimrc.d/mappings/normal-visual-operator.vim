@@ -17,8 +17,6 @@ nnoremap          yp               :echo "p = full path\nh = head\nt = tail"<Ent
 " ----------------------------------------------------------------------------
 nnoremap <silent> <C-g>            :echo vimrc#better_ctrl_g()<Enter>
 
-nnoremap <silent> <Enter>          :cal vimrc#maybe_toggle_fold()<Enter>
-
 nnoremap <silent> <leader>h        :cal vimrc#echo_highlight_info()<Enter>
 
 nnoremap <silent> <leader>m        :cal vimrc#mru_dirvish()<Enter>
@@ -45,7 +43,6 @@ nnoremap          <leader>P        "*P
 
 " Other
 " ----------------------------------------------------------------------------
-nnoremap <silent> <leader><Enter>  <Enter>
 map               _                <Plug>(dirvish_up)
 
 " Move up and down through wrapped lines
@@ -54,6 +51,11 @@ nnoremap          j                gj
 nnoremap          k                gk
 nnoremap          gj               j
 nnoremap          gk               k
+
+" Fold
+" ----------------------------------------------------------------------------
+nnoremap          <Left>           zc
+nnoremap          <Right>          zo
 
 " Text Operations
 " ============================================================================

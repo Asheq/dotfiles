@@ -15,14 +15,6 @@ function! vimrc#better_ctrl_g()
     return noscrollbar#statusline(&columns,'■','◫',['◧'],['◨']) . substitute(original_ctrl_g_output, '\n', '', '')
 endfunction
 
-function! vimrc#maybe_toggle_fold()
-    if foldlevel('.')
-        normal za
-    else
-        execute "normal! \<Enter>"
-    endif
-endfunction
-
 function! vimrc#echo_highlight_info()
     echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
                 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
