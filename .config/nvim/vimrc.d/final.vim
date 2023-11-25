@@ -13,9 +13,7 @@ augroup override_colorscheme
 augroup END
 
 function! s:override_colorscheme()
-    " TODO-L: BeforeLastJump
     if &background == 'dark'
-        highlight! BeforeLastJump                           guibg=#45009e
         highlight! CursorLine                               guibg=#014575
         highlight! DiffChange                               guibg=#410091
         highlight! DiffText                   guifg=#282828 guibg=#a576fe
@@ -23,7 +21,6 @@ function! s:override_colorscheme()
         highlight! StatusLineNC   gui=reverse guifg=#504945 guibg=#ebdbb2
         highlight! DiffAdd                                  guibg=#35491e
     else
-        highlight! BeforeLastJump                           guibg=#e1d4f2
         highlight! CursorLine                               guibg=#d5e6f2
         highlight! DiffChange                               guibg=#e1d4f2
         highlight! DiffText                   guifg=#fbf1c7 guibg=#815492
@@ -41,7 +38,6 @@ function! s:override_colorscheme()
     " TODO-L:
     " Analyze and fine-tune the priority of the following highlights that change the background:
     "     - CursorLine
-    "     - BeforeLastJump
     "     - Diff*
     "     - Visual
     "     - Search
