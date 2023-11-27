@@ -1,3 +1,12 @@
+augroup set_listchars
+    autocmd!
+    autocmd OptionSet tabstop call s:set_listchars()
+augroup END
+
+function! s:set_listchars()
+    execute 'set listchars+=leadmultispace:┊' . repeat('\ ', &tabstop - 1)
+endfunction
+
 " Highlight yanked text
 " ============================================================================
 augroup highlight_yanked_text

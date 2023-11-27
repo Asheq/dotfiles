@@ -53,7 +53,7 @@ function! MyTabLabelBufName(n)
         let bname_modified = fnamemodify(bname, ":t")
     endif
 
-    return a:n . " " . bname_modified
+    return a:n . "  " . bname_modified
 endfunction
 
 function! MyTabLabelCWD(n)
