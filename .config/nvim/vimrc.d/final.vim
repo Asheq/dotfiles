@@ -1,9 +1,11 @@
 augroup set_listchars
     autocmd!
     autocmd OptionSet tabstop call s:set_listchars()
+    autocmd BufWinEnter * call s:set_listchars()
 augroup END
 
 function! s:set_listchars()
+    execute 'set listchars-=' . escape(matchstr(&listchars, 'leadmultispace.\{-}\ze\($\|,\)'), ' ')
     execute 'set listchars+=leadmultispace:┊' . repeat('\ ', &tabstop - 1)
 endfunction
 
