@@ -30,9 +30,12 @@ function! vimrc#get_statusline()
         let window_cwd_string = ""
     endif
 
+    " let first_line = line('w0')
+    " let last_line = line('w$')
+
     return ""
                 \ . "%{expand('%:p:~:.')}"
-                \ . "  %h%w%m%r[%P]"
+                \ . "  %h%w%m%r[%P %{noscrollbar#statusline(10,'■','◫',['◧'],['◨'])} %L]"
                 \ . "%="
                 \ . window_cwd_string
 endfunction
