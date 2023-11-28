@@ -30,14 +30,21 @@ function! vimrc#get_statusline()
         let window_cwd_string = ""
     endif
 
-    " let first_line = line('w0')
-    " let last_line = line('w$')
-
     return ""
-                \ . "%{expand('%:p:~:.')}"
-                \ . "  %h%w%m%r[%P %{noscrollbar#statusline(10,'■','◫',['◧'],['◨'])} %L]"
-                \ . "%="
+                \ . "%{vimrc#get_statusline_file_name()}"
+                \ . "%h%w%m%r%=[%P %{noscrollbar#statusline(10,'■','◫',['◧'],['◨'])} %L]"
                 \ . window_cwd_string
+endfunction
+
+function! vimrc#get_statusline_file_name()
+    let filename = expand('%:p:~:.')
+
+    if filename != ""
+        return filename . "  "
+    else
+        return "[No Name]" . "  "
+    endif
+
 endfunction
 
 function! MyTabLabelBufName(n)
@@ -47,7 +54,7 @@ function! MyTabLabelBufName(n)
 
     let bname_modified = ""
     if bname == ""
-        return a:n
+        return "[No Name]" . "  " . a:n
     elseif bname[strlen(bname) - 1] == '/'
         let minus_the_slash = bname[0:strlen(bname) - 2]
         let tail = fnamemodify(minus_the_slash, ":t")
@@ -56,7 +63,7 @@ function! MyTabLabelBufName(n)
         let bname_modified = fnamemodify(bname, ":t")
     endif
 
-    return a:n . "  " . bname_modified
+    return bname_modified . "  " . a:n
 endfunction
 
 function! MyTabLabelCWD(n)
