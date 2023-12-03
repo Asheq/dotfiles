@@ -31,7 +31,7 @@ function! vimrc#get_statusline()
     endif
 
     return ""
-                \ . "%{vimrc#get_statusline_file_name()}"
+                \ . "%{vimrc#get_statusline_file_name()}  "
                 \ . "%h%w%m%r%=[%P %{noscrollbar#statusline(10,'■','◫',['◧'],['◨'])} %L]"
                 \ . window_cwd_string
 endfunction
@@ -40,9 +40,9 @@ function! vimrc#get_statusline_file_name()
     let filename = expand('%:p:~:.')
 
     if filename != ""
-        return filename . "  "
+        return filename
     else
-        return "[No Name]" . "  "
+        return "[No Name]"
     endif
 
 endfunction
