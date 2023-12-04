@@ -18,6 +18,10 @@ augroup highlight_yanked_text
     autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300, on_visual=true}
 augroup END
 
+" Highlights
+" ============================================================================
+highlight! link CocMenuSel PmenuSel
+
 " Run final.lua
 " ============================================================================
 luafile <sfile>:h/final.lua
