@@ -28,6 +28,8 @@ set spelloptions=camel
 " 6. Multiple windows
 " ----------------------------------------------------------------------------
 set statusline=%!vimrc#get_statusline()
+set splitright
+set splitbelow
 
 " 7. Multiple tab pages
 " ----------------------------------------------------------------------------
