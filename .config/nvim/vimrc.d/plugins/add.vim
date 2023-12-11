@@ -84,6 +84,9 @@ if executable('node')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " plug#end() automatically executes:
 "   1. 'filetype plugin indent on'
 "   2. 'syntax enable'
