@@ -65,9 +65,16 @@ endif
 " GUI options
 " ----------------------------------------------------------------------------
 if exists('g:neovide')
+    set linespace=5
+
     " NOTE: Neovide doesn't render "PragmataPro Mono" correctly, for some reason
     set guifont=PragmataPro\ Mono\ Liga:h22
 
+    " Updates 'background' when system theme changes
+    let g:neovide_theme = 'auto'
+
+    " For some reason, we still need to manually detect the system theme and
+    " set 'background' on startup
     silent !defaults read -g AppleInterfaceStyle &> /dev/null
     if v:shell_error == 0
         set background=dark
