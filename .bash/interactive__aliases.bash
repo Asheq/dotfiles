@@ -23,8 +23,8 @@ complete -o dirnames -o nospace -F _fzf_dir_completion c
 alias v='nvim'
 
 alias drive='cd ~/My\ Drive/'
-alias notes='cd ~/My\ Drive/notes/'
-alias todo='cd ~/My\ Drive/todo/'
+alias notes='cd ~/My\ Drive/Notes/'
+alias todo='cd ~/My\ Drive/Todo/'
 
 # git
 # ==============================================================================
