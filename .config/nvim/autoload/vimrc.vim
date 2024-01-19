@@ -25,7 +25,7 @@ function! vimrc#get_statusline()
     let window_cwd = vimrc#get_window_cwd(g:statusline_winid)
 
     if window_cwd != ""
-        let window_cwd_string = "[" . vimrc#get_window_cwd(g:statusline_winid) . "]"
+        let window_cwd_string = "[" . pathshorten(fnamemodify(window_cwd, ":~")) . "]"
     else
         let window_cwd_string = ""
     endif
@@ -37,6 +37,9 @@ function! vimrc#get_statusline()
 endfunction
 
 function! vimrc#get_statusline_file_name()
+    " TODO: filename in statusline should be relative to the window's own
+    " current working directory, not the active window's current working
+    " directory.
     let filename = expand('%:p:~:.')
 
     if filename != ""
