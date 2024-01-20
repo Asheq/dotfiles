@@ -52,7 +52,7 @@ set foldtext=vimrc#get_fold_text()
 " 20. Command line editing
 " ----------------------------------------------------------------------------
 set wildcharm=<C-z>
-let &wildignore='.DS_Store,.tmp.drivedownload'
+let &wildignore='.DS_Store,.tmp.drivedownload,.tmp.driveupload,Icon'
 
 " 22. Running make and jumping to errors
 " ----------------------------------------------------------------------------
