@@ -65,12 +65,10 @@ endif
 " GUI options
 " ----------------------------------------------------------------------------
 if exists('g:neovide')
+    set linespace=5
     " NOTE: Neovide doesn't render "PragmataPro Mono" correctly, for some reason
-    set guifont=PragmataPro\ Mono\ Liga:h22
-
-    " Update 'background' when system theme changes
+    set guifont=PragmataPro\ Mono\ Liga:h18
     let g:neovide_theme = 'auto'
-
-    " Allow alt/meta mappings
     let g:neovide_input_macos_alt_is_meta = v:true
+    let g:neovide_cursor_animation_length = 0
 endif
