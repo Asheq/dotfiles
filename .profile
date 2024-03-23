@@ -12,3 +12,5 @@
 . ~/.sh/env.sh
 . ~/.sh/login.sh
 . ~/.xprofile
+
+ssource ~/.sh/login-private.sh
