@@ -52,6 +52,7 @@ fi
 # ==============================================================================
 alias dark=" kitty +kitten themes --config-file-name=theme.conf --reload-in=all Gruvbox Dark"
 alias light="kitty +kitten themes --config-file-name=theme.conf --reload-in=all Gruvbox Light"
+
 # NOTE: These are faster but do not affect new windows
-# alias dark="kitty @ --to="$KITTY_LISTEN_ON" set-colors --all ~/.config/kitty/Gruvbox\ Dark.conf"
-# alias light="kitty @ --to="$KITTY_LISTEN_ON" set-colors --all ~/.config/kitty/Gruvbox\ Light.conf"
+alias darke="kitty @ --to="$KITTY_LISTEN_ON" set-colors --all ~/.config/kitty/Gruvbox\ Dark.conf"
+alias lighte="kitty @ --to="$KITTY_LISTEN_ON" set-colors --all ~/.config/kitty/Gruvbox\ Light.conf"
