@@ -15,7 +15,6 @@ Plug 'jeetsukumaran/vim-indentwise'
 " [NONE]
 
 " Mix of some of: operators, text objects, ex commands
-Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
 Plug 'machakann/vim-sandwich'
 
