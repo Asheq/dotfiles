@@ -5,6 +5,7 @@
 * [Git](https://git-scm.com/) - Version control system
 * [kitty](https://sw.kovidgoyal.net/kitty/) - Terminal emulator
 * [Neovim](https://neovim.io/) - Text editor
+* [Neovide](https://neovide.dev/) - Neovim graphical UI
 * [EditorConfig](https://editorconfig.org/) - Editor style configurator
 * [fzf](https://github.com/junegunn/fzf) - Fuzzy finder
 * [Karabiner-Elements](https://pqrs.org/osx/karabiner/) - Keyboard customizer
