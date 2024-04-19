@@ -85,6 +85,7 @@ endif
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-context'
 
 " plug#end() automatically executes:
 "   1. 'filetype plugin indent on'
