@@ -10,7 +10,7 @@ set jumpoptions=stack
 set breakindent
 set breakindentopt=list:-1
 set list
-let &listchars='tab:│ ,lead:⚬,leadmultispace:┊ ,trail:⚬,extends:▶,precedes:◀,conceal: ,nbsp:◯'
+let &listchars='tab:│ ,lead:⚬,trail:⚬,extends:▶,precedes:◀,conceal: ,nbsp:◯,leadmultispace:┊ '
 set number
 let &showbreak='> '
 set cmdheight=2
