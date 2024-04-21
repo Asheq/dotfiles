@@ -4,10 +4,6 @@ call plug#begin()
 
 " Text editing
 " ---------------------------------------------------------------------------
-" Pure operators
-Plug 'tommcdo/vim-lion'
-Plug 'arthurxavierx/vim-caser'
-
 " Pure motions
 Plug 'jeetsukumaran/vim-indentwise'
 
@@ -15,7 +11,6 @@ Plug 'jeetsukumaran/vim-indentwise'
 " [NONE]
 
 " Mix of some of: operators, text objects, ex commands
-Plug 'tpope/vim-abolish'
 Plug 'machakann/vim-sandwich'
 
 " Auto-set options
@@ -31,13 +26,13 @@ Plug 'tpope/vim-rhubarb'
 " ----------------------------------------------------------------------------
 Plug 'justinmk/vim-dirvish'
 
+" Scrollbar
+" ----------------------------------------------------------------------------
+Plug 'gcavallanti/vim-noscrollbar'
+
 " Highlighting
 " ----------------------------------------------------------------------------
 Plug 'azabiong/vim-highlighter'
-
-" Buffer/window/tab management
-" ----------------------------------------------------------------------------
-Plug 'Asheq/close-buffers.vim'
 
 " Filetype plugins
 " ----------------------------------------------------------------------------
@@ -68,14 +63,6 @@ Plug 'peitalin/vim-jsx-typescript'
 
 " Git
 Plug 'tpope/vim-git'
-
-" Character info
-" ----------------------------------------------------------------------------
-Plug 'tpope/vim-characterize'
-
-" Scrollbar
-" ----------------------------------------------------------------------------
-Plug 'gcavallanti/vim-noscrollbar'
 
 " Language Server
 " ----------------------------------------------------------------------------
