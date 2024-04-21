@@ -15,17 +15,15 @@ nnoremap          yp               :echo "p = full path\nh = head\nt = tail"<Ent
 
 " Complete
 " ----------------------------------------------------------------------------
-nnoremap <silent> <C-g>            :echo vimrc#better_ctrl_g()<Enter>
+nnoremap <silent> <C-g>            :cal vimrc#better_ctrl_g()<Enter>
 
 nnoremap <silent> <leader>h        :cal vimrc#echo_highlight_info()<Enter>
 
-nnoremap <silent> <leader>m        :cal vimrc#mru_dirvish()<Enter>
+nnoremap <silent> <leader>j        :ju<Enter>
 
 nnoremap <silent> <leader>o        :!open '%:h'<Enter><Enter>
 
 nnoremap <silent> <leader>s        :Git<Enter>
-
-nnoremap <silent> <leader>j        :ju<Enter>
 
 nnoremap <silent> <leader>w        :up<Enter>
 
