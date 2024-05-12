@@ -1,3 +1,7 @@
+" Some open keys
+" ============================================================================
+" CTRL-H
+
 " Ex command typing helpers
 " ============================================================================
 
@@ -30,17 +34,22 @@ nnoremap <silent> <leader>w        :up<Enter>
 " Normal mode command typing helpers
 " ============================================================================
 
-" Yank and Paste Operators/Operations
+" Yank and Paste
 " ----------------------------------------------------------------------------
 nnoremap          <leader>y        "*y
-xnoremap          <leader>y        "*y
 nmap              <leader>Y        "*Y
 nnoremap          <leader>p        "*p
-xnoremap          <leader>p        "*p
 nnoremap          <leader>P        "*P
+
+xnoremap          <leader>y        "*y
+xnoremap          <leader>p        "*p
+
+nnoremap          <C-h>            `[v`]
 
 " Other
 " ----------------------------------------------------------------------------
+noremap           _                g_
+noremap           g_               g$ge
 map               _                <Plug>(dirvish_up)
 
 " Move up and down through wrapped lines
