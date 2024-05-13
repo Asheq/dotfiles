@@ -48,8 +48,6 @@ nnoremap          <C-h>            `[v`]
 
 " Other
 " ----------------------------------------------------------------------------
-noremap           _                g_
-noremap           g_               g$ge
 map               _                <Plug>(dirvish_up)
 
 " Move up and down through wrapped lines
