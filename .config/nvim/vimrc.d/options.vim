@@ -50,6 +50,10 @@ set dictionary+=/usr/share/dict/words
 set foldcolumn=auto:9
 set foldtext=vimrc#get_fold_text()
 
+" 16. Mapping
+" ----------------------------------------------------------------------------
+set notimeout
+
 " 20. Command line editing
 " ----------------------------------------------------------------------------
 set wildcharm=<C-z>
