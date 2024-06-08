@@ -20,8 +20,9 @@ augroup END
 
 " Highlights
 " ============================================================================
-highlight! link CocMenuSel  PmenuSel
-highlight! link CocListLine PmenuSel
+highlight! link CocMenuSel   PmenuSel
+highlight! link CocListLine  PmenuSel
+highlight! link StatusLineNC Visual
 
 " Run final.lua
 " ============================================================================

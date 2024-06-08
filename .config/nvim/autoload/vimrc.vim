@@ -92,12 +92,6 @@ endfunction
 command! -nargs=1 Define call vimrc#define(<f-args>)
 command! -nargs=1 Browse call vimrc#browse(<f-args>)
 
-" Foldtext
-" ============================================================================
-function! vimrc#get_fold_text()
-    return getline(v:foldstart)
-endfunction
-
 " Statusline
 " ============================================================================
 function! vimrc#get_statusline()

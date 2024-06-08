@@ -24,7 +24,7 @@ Plug 'tpope/vim-rhubarb'
 
 " Directory explorer
 " ----------------------------------------------------------------------------
-Plug 'justinmk/vim-dirvish'
+Plug 'stevearc/oil.nvim'
 
 " Scrollbar
 " ----------------------------------------------------------------------------
