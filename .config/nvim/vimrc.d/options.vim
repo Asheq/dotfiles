@@ -21,7 +21,6 @@ set conceallevel=2
 
 " 5. Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
-set termguicolors
 set cursorline
 set spelloptions=camel
 
@@ -48,7 +47,7 @@ set dictionary+=/usr/share/dict/words
 " 15. Folding
 " ----------------------------------------------------------------------------
 set foldcolumn=auto:9
-set foldtext=vimrc#get_fold_text()
+set foldtext=
 
 " 16. Mapping
 " ----------------------------------------------------------------------------
