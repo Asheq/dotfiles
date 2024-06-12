@@ -12,9 +12,9 @@ set breakindentopt=list:-1
 let &showbreak='↪ '
 
 set list
-let &listchars='tab:│ ,multispace:⚬,lead:⚬,leadmultispace:┊ ,trail:⚬,nbsp:◯,extends:▶,precedes:◀'
+let &listchars='tab:│ ,multispace:⚬,lead:⚬,leadmultispace:┊ ,trail:⚬,nbsp:◯,extends:➤,precedes:⮜'
 
-let &fillchars='foldopen:▽,foldclose:▷,diff:╱,lastline:▶'
+let &fillchars='foldopen:▽,foldclose:▶,diff:╱,lastline:➤'
 
 set number
 set cmdheight=2
