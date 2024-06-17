@@ -46,10 +46,6 @@ xnoremap          <leader>p        "*p
 
 nnoremap          <C-h>            `[v`]
 
-" Other
-" ----------------------------------------------------------------------------
-map               _                <Plug>(dirvish_up)
-
 " Move up and down through wrapped lines
 " ----------------------------------------------------------------------------
 nnoremap          j                gj
