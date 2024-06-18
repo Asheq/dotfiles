@@ -9,7 +9,6 @@ set jumpoptions=stack
 " ----------------------------------------------------------------------------
 set breakindent
 set breakindentopt=list:-1
-let &showbreak='↪ '
 
 set list
 let &listchars='tab:│ ,multispace:⚬,lead:⚬,leadmultispace:┊ ,trail:⚬,nbsp:◯,extends:➤,precedes:⮜'
@@ -72,14 +71,14 @@ endif
 
 " GUI options
 " ----------------------------------------------------------------------------
+" NOTE: Neovide doesn't render "PragmataPro Mono" correctly, for some reason
+" set guifont=Iosevka\ Term:h20
+set guifont=PragmataPro\ Mono\ Liga:h20
+set guicursor=a:blinkwait100-blinkon600-blinkoff500,n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
+set linespace=5
+
 if exists('g:neovide')
-    " NOTE: Neovide doesn't render "PragmataPro Mono" correctly, for some reason
-    set guifont=PragmataPro\ Mono\ Liga:h16
-    " set guifont=Iosevka\ Term:h16
-
     let g:neovide_theme = 'auto'
-    let g:neovide_input_macos_alt_is_meta = v:true
+    let g:neovide_input_macos_option_key_is_meta = 'both'
     let g:neovide_cursor_animation_length = 0
-
-    set linespace=5
 endif
