@@ -41,10 +41,14 @@ pathprepend "$ANDROID_SDK_ROOT"/emulator PATH
 pathprepend "$ANDROID_SDK_ROOT"/platform-tools PATH
 
 # Add python binaries
-command -v pyenv &> /dev/null && eval "$(pyenv init --path)"
+if command -v pyenv >/dev/null 2>&1; then
+  eval "$(pyenv init --path)"
+fi
 
 # Add brew binaries
-command -v /opt/homebrew/bin/brew &> /dev/null && eval "$(/opt/homebrew/bin/brew shellenv)"
+if command -v /opt/homebrew/bin/brew >/dev/null 2>&1; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # Ensure current directory is not in PATH
 pathremove . PATH

@@ -65,6 +65,8 @@
 # Custom .sh directory
 !/.sh/
 !/.sh/**
+# Re-ignore login-private.sh
+.sh/login.private.sh
 
 # Custom directory for all other manually exported cofig
 !/.config-manual-exports
@@ -78,9 +80,5 @@
 # CAREFUL! DO NOT ACCIDENTALLY PUSH PRIVATE SSH KEYS!
 !/.ssh
 !/.ssh/config
-
-# Re-ignore
-# ==============================================================================
-.sh/login-private.sh
 
 .DS_Store
