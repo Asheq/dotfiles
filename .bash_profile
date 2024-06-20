@@ -8,8 +8,8 @@
 
 . ~/.profile
 
-#  PS1 is set and $- includes i if bash is interactive, allowing a shell script
-#  or a startup file to test this state.
+# PS1 is set and $- includes i if bash is interactive, allowing a shell script
+# or a startup file to test this state.
 if [ "$PS1" ]; then
-    . ~/.bash/interactive.bash
+    ssource ~/.bash/interactive.bash
 fi
