@@ -1,7 +1,3 @@
-" Some open keys
-" ============================================================================
-" CTRL-H
-
 " Ex command typing helpers
 " ============================================================================
 
@@ -24,6 +20,8 @@ nnoremap <silent> <C-g>            :cal vimrc#better_ctrl_g()<Enter>
 nnoremap <silent> <leader>h        :cal vimrc#echo_highlight_info()<Enter>
 
 nnoremap <silent> <leader>j        :ju<Enter>
+
+nnoremap <silent> <leader>c        :changes<Enter>
 
 nnoremap <silent> <leader>o        :!open '%:h'<Enter><Enter>
 

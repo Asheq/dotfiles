@@ -51,6 +51,8 @@ Plug 'tpope/vim-apathy'
 " set in preservim/vim-markdown.
 " This is pretty bad, right?
 " Just wait until I migrate to Lua and lua plugin manager?
+" TODO-L: Also, it's best to remove this plugin, anyway. It seems unmaintained
+" and does a lot strange things like force overwrite fold method.
 Plug 'preservim/vim-markdown'
 
 " JavaScript
