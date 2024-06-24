@@ -22,12 +22,15 @@ augroup END
 " ============================================================================
 highlight! link CocMenuSel   PmenuSel
 highlight! link CocListLine  PmenuSel
+
 highlight! link StatusLineNC Visual
 
-highlight! link htmlH1 CocListBlackGreen
-highlight! link htmlH2 CocListBlackBlue
-highlight! link htmlH3 CocListBlackWhite
-highlight! link htmlH4 CocListBlackGrey
+highlight! link MatchParen   CocBold
+
+highlight! link htmlH1       CocListBlackGreen
+highlight! link htmlH2       CocListBlackBlue
+highlight! link htmlH3       CocListBlackWhite
+highlight! link htmlH4       CocListBlackGrey
 
 " Run final.lua
 " ============================================================================
