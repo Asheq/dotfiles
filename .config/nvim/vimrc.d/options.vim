@@ -78,7 +78,8 @@ endif
 " NOTE: Neovide doesn't render "PragmataPro Mono" correctly, for some reason
 " set guifont=Iosevka\ Term:h20
 set guifont=PragmataPro\ Mono\ Liga:h20
-set guicursor=a:blinkwait100-blinkon600-blinkoff500,n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
+
+" set guicursor=a:blinkwait100-blinkon600-blinkoff500,n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
 set linespace=5
 
 if exists('g:neovide')
