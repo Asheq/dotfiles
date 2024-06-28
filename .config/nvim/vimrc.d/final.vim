@@ -7,8 +7,8 @@ augroup set_listchars
 augroup END
 
 function! s:set_listchars()
-    execute 'set listchars-=' . escape(matchstr(&listchars, 'leadmultispace.\{-}\ze\($\|,\)'), ' ')
-    execute 'set listchars+=leadmultispace:┊' . repeat('\ ', &tabstop - 1)
+    execute 'setlocal listchars-=' . escape(matchstr(&listchars, 'leadmultispace.\{-}\ze\($\|,\)'), ' ')
+    execute 'setlocal listchars+=leadmultispace:┊' . repeat('\ ', &tabstop - 1)
 endfunction
 
 " Highlight yanked text
