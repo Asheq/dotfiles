@@ -14,8 +14,8 @@ let &showbreak='↪'
 set linebreak
 
 set list
-let &listchars='tab:│ ,lead: ,leadmultispace:┊ ,nbsp:▢,extends:➤,precedes:⮜,eol:࿁'
-" │   ┊ ▢ ➤ ⮜ ࿁ 🞩   🮮 ┘ 🮤 ┊ ⚬ ◃ ╼ ╾ 
+let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,extends:➤,precedes:⮜,eol:'
+" │   ┊ ▢ ➤ ⮜ ࿁ 🞩    🮮 ┘ 🮤 ┊ ⚬ ◃ ╼ ╾ 
 
 let &fillchars='foldopen:▽,foldclose:▶,diff:╱,lastline:➤'
 
