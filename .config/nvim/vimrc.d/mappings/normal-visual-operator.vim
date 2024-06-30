@@ -53,10 +53,15 @@ nnoremap          gk               k
 
 " Make half-page scrolling less disorienting
 " ----------------------------------------------------------------------------
-nnoremap <silent> <C-d>            L:sleep 200m<CR>zz
-nnoremap <silent> <C-u>            H:sleep 200m<CR>zz
+if exists('g:neovide')
+    nnoremap <silent> <C-d>            Lzz
+    nnoremap <silent> <C-u>            Hzz
+else
+    nnoremap <silent> <C-d>            L:sleep 200m<CR>zz
+    nnoremap <silent> <C-u>            H:sleep 200m<CR>zz
+endif
 
-" NOTE: I could make it work with [count]
+" NOTE: I could make it work with [count], but it's probably not worth it
 
 "" Make full-page scrolling less disorienting
 "" ----------------------------------------------------------------------------
