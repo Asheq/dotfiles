@@ -25,6 +25,9 @@ highlight! link CocListLine  PmenuSel
 
 highlight! link StatusLineNC Visual
 
+highlight! link WinBar       StatusLine
+highlight! link WinBarNC     StatusLineNC
+
 highlight! link MatchParen   CocBold
 
 highlight! link htmlH1       CocListBlackGreen
