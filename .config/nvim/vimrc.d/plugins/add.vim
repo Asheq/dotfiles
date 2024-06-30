@@ -1,42 +1,24 @@
-" Load third-party plugins via vim-plug
-" ============================================================================
+" Begin
+" ----------------------------------------------------------------------------
 call plug#begin()
 
 " Other
 " ---------------------------------------------------------------------------
+Plug 'azabiong/vim-highlighter'
+Plug 'gcavallanti/vim-noscrollbar'
+Plug 'stevearc/oil.nvim'
 Plug 'tpope/vim-characterize'
-
-" Text editing
-" ---------------------------------------------------------------------------
-" Pure motions
-Plug 'jeetsukumaran/vim-indentwise'
-
-" Pure text objects
-" [NONE]
-
-" Mix of some of: operators, text objects, ex commands
-Plug 'machakann/vim-sandwich'
-
-" Auto-set options
-" ----------------------------------------------------------------------------
 Plug 'tpope/vim-projectionist'
+
+" Motions, Operators, Text objects
+" ---------------------------------------------------------------------------
+Plug 'jeetsukumaran/vim-indentwise'
+Plug 'machakann/vim-sandwich'
 
 " Integration with git and GitHub
 " ----------------------------------------------------------------------------
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-
-" Directory explorer
-" ----------------------------------------------------------------------------
-Plug 'stevearc/oil.nvim'
-
-" Scrollbar
-" ----------------------------------------------------------------------------
-Plug 'gcavallanti/vim-noscrollbar'
-
-" Highlighting
-" ----------------------------------------------------------------------------
-Plug 'azabiong/vim-highlighter'
 
 " Filetype plugins
 " ----------------------------------------------------------------------------
@@ -77,20 +59,13 @@ if executable('node')
 endif
 
 " Treesitter
+" ----------------------------------------------------------------------------
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-context'
 
+" End
+" ----------------------------------------------------------------------------
 " plug#end() automatically executes:
 "   1. 'filetype plugin indent on'
 "   2. 'syntax enable'
 call plug#end()
-
-" Load first-party plugins.
-"
-" These are included with neovim but are not loaded automatically. For a full
-" list of such plugins, see: $VIMRUNTIME/pack/dist/opt/.
-"
-" Note that "matchit" is special; it is automatically loaded due to
-" $VIMRUNTIME/plugin/matchit.vim.
-" ============================================================================
-packadd cfilter

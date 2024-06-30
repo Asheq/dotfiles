@@ -7,11 +7,10 @@ set jumpoptions=stack
 
 " 4. Displaying text
 " ----------------------------------------------------------------------------
+set linebreak
+let &showbreak='↪'
 set breakindent
 set breakindentopt=list:-1
-let &showbreak='↪'
-
-set linebreak
 
 set list
 let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,extends:➤,precedes:⮜,eol:▫'
@@ -21,7 +20,6 @@ let &fillchars='foldopen:▽,foldclose:▶,diff:╱,lastline:➤'
 
 set number
 set cmdheight=2
-set nowrap
 set smoothscroll
 set conceallevel=2
 
@@ -79,8 +77,9 @@ endif
 " set guifont=Iosevka\ Term:h20
 set guifont=PragmataPro\ Mono\ Liga:h20
 
-" set guicursor=a:blinkwait100-blinkon600-blinkoff500,n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
 set linespace=5
+
+" set guicursor=a:blinkwait100-blinkon600-blinkoff500,n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
 
 if exists('g:neovide')
     let g:neovide_theme = 'auto'

@@ -54,7 +54,7 @@ endfunction
 
 " Better Ctrl-g
 " ============================================================================
-function! vimrc#better_ctrl_g()
+function! vimrc#ctrl_g_with_scrollbar()
     let original_ctrl_g_output = vimrc#get_command_output('file')
     echo noscrollbar#statusline(&columns,'■','◫',['◧'],['◨']) . substitute(original_ctrl_g_output, '\n', '', '')
 endfunction
@@ -110,7 +110,7 @@ function! vimrc#get_statusline()
 endfunction
 
 function! vimrc#get_statusline_file_name()
-    " TODO: filename in statusline should be relative to the window's own
+    " TODO-M: filename in statusline should be relative to the window's own
     " current working directory, not the active window's current working
     " directory.
     let filename = expand('%:p:~:.')

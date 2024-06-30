@@ -2,7 +2,8 @@
 source <sfile>:h/vimrc.d/first.vim
 
 " Plugins
-source <sfile>:h/vimrc.d/plugins/remove.vim
+source <sfile>:h/vimrc.d/plugins/do-not-load-built-in.vim
+source <sfile>:h/vimrc.d/plugins/load-built-in.vim
 source <sfile>:h/vimrc.d/plugins/add.vim
 source <sfile>:h/vimrc.d/plugins/configure.vim
 source <sfile>:h/vimrc.d/plugins/configure-coc.vim

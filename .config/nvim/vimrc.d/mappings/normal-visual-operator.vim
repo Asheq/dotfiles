@@ -15,8 +15,6 @@ nnoremap          yp               :echo "p = full path\nh = head\nt = tail"<Ent
 
 " Complete
 " ----------------------------------------------------------------------------
-nnoremap <silent> <C-g>            :cal vimrc#better_ctrl_g()<Enter>
-
 nnoremap <silent> <leader>h        :cal vimrc#echo_highlight_info()<Enter>
 
 nnoremap <silent> <leader>j        :ju<Enter>
@@ -28,6 +26,8 @@ nnoremap <silent> <leader>o        :!open '%:h'<Enter><Enter>
 nnoremap <silent> <leader>s        :Git<Enter>
 
 nnoremap <silent> <leader>w        :up<Enter>
+
+nnoremap <silent> <C-g>            :cal vimrc#ctrl_g_with_scrollbar()<Enter>
 
 " Normal mode command typing helpers
 " ============================================================================
@@ -51,26 +51,26 @@ nnoremap          k                gk
 nnoremap          gj               j
 nnoremap          gk               k
 
-" Make half-page scrolling less disorienting
+" Make full-page scrolling less disorienting
 " ----------------------------------------------------------------------------
-if exists('g:neovide')
-    nnoremap <silent> <C-d>            Lzz
-    nnoremap <silent> <C-u>            Hzz
-else
-    nnoremap <silent> <C-d>            L:sleep 200m<CR>zz
-    nnoremap <silent> <C-u>            H:sleep 200m<CR>zz
-endif
-
-" NOTE: I could make it work with [count], but it's probably not worth it
-
-"" Make full-page scrolling less disorienting
-"" ----------------------------------------------------------------------------
 "nnoremap <expr>   <C-f>            winheight(0) - 1 . "<C-e>"
 "nnoremap <expr>   <C-b>            winheight(0) - 1 . "<C-y>"
-"
-"" Make it work with [count]
-"nnoremap <silent> <C-f>            @=winheight(0) - 1 . "\<lt>C-e>"<CR>
-"nnoremap <silent> <C-b>            @=winheight(0) - 1 . "\<lt>C-y>"<CR>
+nnoremap <silent> <C-f>            @=winheight(0) - 1 . "\<lt>C-e>"<CR>
+nnoremap <silent> <C-b>            @=winheight(0) - 1 . "\<lt>C-y>"<CR>
+
+" Make half-page scrolling less disorienting
+" ----------------------------------------------------------------------------
+" Other attempts:
+"if exists('g:neovide')
+"    nnoremap <silent> <C-d>            Lzz
+"    nnoremap <silent> <C-u>            Hzz
+"else
+"    nnoremap <silent> <C-d>            L:sleep 200m<CR>zz
+"    nnoremap <silent> <C-u>            H:sleep 200m<CR>zz
+"endif
+
+nnoremap <silent> <C-d>            @=winheight(0) / 2 . "\<lt>C-e>"<CR>
+nnoremap <silent> <C-u>            @=winheight(0) / 2 . "\<lt>C-y>"<CR>
 
 " Fold
 " ----------------------------------------------------------------------------
