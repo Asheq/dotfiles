@@ -56,14 +56,16 @@ nnoremap          gk               k
 nnoremap <silent> <C-d>            L:sleep 200m<CR>zz
 nnoremap <silent> <C-u>            H:sleep 200m<CR>zz
 
-" Make full-page scrolling less disorienting
-" ----------------------------------------------------------------------------
-" nnoremap <expr>   <C-f>            winheight(0) - 1 . "<C-e>"
-" nnoremap <expr>   <C-b>            winheight(0) - 1 . "<C-y>"
+" NOTE: I could make it work with [count]
+
+"" Make full-page scrolling less disorienting
+"" ----------------------------------------------------------------------------
+"nnoremap <expr>   <C-f>            winheight(0) - 1 . "<C-e>"
+"nnoremap <expr>   <C-b>            winheight(0) - 1 . "<C-y>"
 "
-" Make it work with [count]
-" nnoremap <silent> <C-f>            @=winheight(0) - 1 . "\<lt>C-e>"<CR>
-" nnoremap <silent> <C-b>            @=winheight(0) - 1 . "\<lt>C-y>"<CR>
+"" Make it work with [count]
+"nnoremap <silent> <C-f>            @=winheight(0) - 1 . "\<lt>C-e>"<CR>
+"nnoremap <silent> <C-b>            @=winheight(0) - 1 . "\<lt>C-y>"<CR>
 
 " Fold
 " ----------------------------------------------------------------------------
