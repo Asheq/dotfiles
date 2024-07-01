@@ -53,13 +53,13 @@ nnoremap          gk               k
 
 " Make half-page scrolling less disorienting
 " ----------------------------------------------------------------------------
-if exists('g:neovide')
-    nnoremap <silent> <C-d>            Lzz
-    nnoremap <silent> <C-u>            Hzz
-else
-    nnoremap <silent> <C-d>            L:sleep 200m<CR>zz
-    nnoremap <silent> <C-u>            H:sleep 200m<CR>zz
-endif
+"if exists('g:neovide')
+"    nnoremap <silent> <C-d>            Lzz
+"    nnoremap <silent> <C-u>            Hzz
+"else
+"    nnoremap <silent> <C-d>            L:sleep 200m<CR>zz
+"    nnoremap <silent> <C-u>            H:sleep 200m<CR>zz
+"endif
 
 "nnoremap <silent> <C-d>            @=winheight(0) / 2 . "\<lt>C-e>"<CR>
 "nnoremap <silent> <C-u>            @=winheight(0) / 2 . "\<lt>C-y>"<CR>
