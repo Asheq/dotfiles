@@ -14,7 +14,7 @@ set breakindentopt=list:-1
 
 set list
 let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,extends:➤,precedes:⮜,eol:▫'
-" │ ┊   ➤ ⮜ ▢ ࿁ ⬚ ⁺ ₊ ˖ ʴ ۦ ա ؞ 🮮 🮤 ┘ ⚬ ◃ ╼ ╾ 🞩 ͵▫ ༜ 🞡 
+" │ ┊   ➤ ⮜ ▢ ࿁ ⬚ ⁺ ₊ ˖ ʴ ↵ ۦ ա ؞ 🮮 🮤 ┘ ⚬ ◃ ╼ ╾ 🞩 ͵▫ ༜ 🞡 
 
 let &fillchars='foldopen:▽,foldclose:▶,diff:╱,lastline:➤'
 

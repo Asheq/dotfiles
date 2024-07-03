@@ -61,12 +61,12 @@ xnoremap          gk               k
 "    nnoremap <silent> <C-d>            Lzz
 "    nnoremap <silent> <C-u>            Hzz
 "else
-"    nnoremap <silent> <C-d>            L:sleep 200m<CR>zz
-"    nnoremap <silent> <C-u>            H:sleep 200m<CR>zz
+"    nnoremap <silent> <C-d>            L:sleep 200m<Return>zz
+"    nnoremap <silent> <C-u>            H:sleep 200m<Return>zz
 "endif
 
-"nnoremap <silent> <C-d>            @=winheight(0) / 2 . "\<lt>C-e>"<CR>
-"nnoremap <silent> <C-u>            @=winheight(0) / 2 . "\<lt>C-y>"<CR>
+"nnoremap <silent> <C-d>            @=winheight(0) / 2 . "\<lt>C-e>"<Return>
+"nnoremap <silent> <C-u>            @=winheight(0) / 2 . "\<lt>C-y>"<Return>
 
 " Fold
 " ----------------------------------------------------------------------------
@@ -106,3 +106,10 @@ map               ]v               <Plug>(IndentWiseNextEqualIndent)
 
 map               [a               <Plug>(IndentWiseBlockScopeBoundaryBegin)
 map               ]a               <Plug>(IndentWiseBlockScopeBoundaryEnd)
+
+" Duplicate keys that could be useful (* = used)
+"   Normal-mode
+"       h <Left>* CTRL-H* <BS>*
+"       l <Right>* <Space>*
+"       j <Down> CTRL-J <NL> CTRL-N
+"       + CTRL-M <Return>
