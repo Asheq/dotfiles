@@ -55,8 +55,8 @@
 !/.config/nvim/plugin/**
 !/.config/nvim/vimrc.d/
 !/.config/nvim/vimrc.d/**
-# Re-ignore last.local.vim
-.config/nvim/vimrc.d/last.local.vim
+# Re-ignore final.local.vim
+.config/nvim/vimrc.d/final.local.vim
 
 # Custom .bash directory
 !/.bash/
