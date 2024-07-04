@@ -36,24 +36,20 @@ nnoremap <silent> <C-g>            :cal vimrc#ctrl_g_with_scrollbar()<Enter>
 " ----------------------------------------------------------------------------
 nnoremap          <leader>y        "*y
 nmap              <leader>Y        "*Y
+xnoremap          <leader>y        "*y
+
 nnoremap          <leader>p        "*p
 nnoremap          <leader>P        "*P
-
-xnoremap          <leader>y        "*y
 xnoremap          <leader>p        "*p
 
 nnoremap          <C-h>            `[v`]
 
 " Move up and down through wrapped lines
 " ----------------------------------------------------------------------------
-nnoremap          j                gj
-nnoremap          k                gk
-nnoremap          gj               j
-nnoremap          gk               k
-xnoremap          j                gj
-xnoremap          k                gk
-xnoremap          gj               j
-xnoremap          gk               k
+noremap           j                gj
+noremap           k                gk
+noremap           gj               j
+noremap           gk               k
 
 " Make half-page scrolling less disorienting
 " ----------------------------------------------------------------------------
@@ -107,9 +103,9 @@ map               ]v               <Plug>(IndentWiseNextEqualIndent)
 map               [a               <Plug>(IndentWiseBlockScopeBoundaryBegin)
 map               ]a               <Plug>(IndentWiseBlockScopeBoundaryEnd)
 
-" Duplicate keys that could be useful (* = used)
+" Duplicate keys (* = used in mapping already, ! = do not map or map to self only)
 "   Normal-mode
-"       h <Left>* CTRL-H* <BS>*
-"       l <Right>* <Space>*
-"       j <Down> CTRL-J <NL> CTRL-N
-"       + CTRL-M <Return>
+"       h! <Left>* CTRL-H* <BS>*
+"       l! <Right>* <Space>*
+"       j! <Down> CTRL-J <NL> CTRL-N
+"       <Return>! +! CTRL-M 
