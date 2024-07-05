@@ -20,6 +20,9 @@
 !/.profile
 !/.xprofile
 
+!/.hammerspoon
+!/.hammerspoon/**
+
 # Standard config files in .config directory
 !/.config/
 
