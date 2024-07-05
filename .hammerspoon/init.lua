@@ -52,7 +52,7 @@ local function buildNvimCommand(isDarkMode)
     local serverAddresses = splitString(serverAddressesString, "\n")
     local shellCommands = map(serverAddresses,
         function(serverAddress)
-            return '/opt/homebrew/bin/nvim --remote-send ":set bg=' ..
+            return '/opt/homebrew/bin/nvim --remote-send "<Esc>:set bg=' ..
                 nvimBg .. '<CR>" --server "' .. serverAddress .. '"'
         end)
 
