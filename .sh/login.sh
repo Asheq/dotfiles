@@ -24,7 +24,7 @@ pathprepend ~/bin PATH
 pathprepend ~/.local/bin PATH
 
 # Add doom emacs binary
-pathprepend ~/.emacs.d/bin PATH
+pathprepend ~/.config/emacs/bin PATH
 
 # Add node binaries
 # TODO: Update to latest node and run `npm install -g neovim`
