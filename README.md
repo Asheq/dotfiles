@@ -10,7 +10,7 @@
 * [EditorConfig](https://editorconfig.org/) - Editor style configurator
 * [nvm](https://github.com/nvm-sh/nvm) - Node Version Manager
 * [npm](https://www.npmjs.com/) - Node Package Manager
-* [cargo](https://doc.rust-lang.org/cargo/) - Rust Package Manager
+* [Cargo](https://doc.rust-lang.org/cargo/) - Rust Package Manager
 * [React Native Debugger](https://github.com/jhen0409/react-native-debugger)
 * [Karabiner-Elements](https://pqrs.org/osx/karabiner/) - Keyboard customizer
 * [SteerMouse](https://plentycom.jp/en/steermouse/) - Mouse customizer

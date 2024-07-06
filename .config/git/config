@@ -19,13 +19,14 @@
 [init]
     defaultBranch = main
 [alias]
+    al = config --get-regexp '^alias'
     l = log
     lo = log --oneline
     d = diff
     a = add
     aa = add --all
     c = commit -v
-    cnv = commit --no-verify
+    cnv = commit -v --no-verify
     b = branch
     co = checkout
     p = push
