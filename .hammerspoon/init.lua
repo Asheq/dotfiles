@@ -1,17 +1,17 @@
 -- This file was originally inspired by: https://github.com/jesse-c/dotfiles/blob/main/home/dot_hammerspoon/appearance.lua
 -- TODO: Do not require passing full paths to shell commands like `kitty`, `nvr`, and `nvim`
 
-local function map(tbl, func)
-    local newTbl = {}
-    for k, v in pairs(tbl) do
-        newTbl[k] = func(v)
+local function map(table, func)
+    local result = {}
+    for key, val in pairs(table) do
+        result[key] = func(val)
     end
-    return newTbl
+    return result
 end
 
 local function splitString(inputStr, delimiter)
     local result = {}
-    for match in (inputStr):gmatch("(.-)" .. delimiter) do
+    for match in (inputStr):gmatch('(.-)' .. delimiter) do
         table.insert(result, match)
     end
     return result
@@ -19,73 +19,65 @@ end
 
 local function isDarkModeEnabled()
     local _, res = hs.osascript.javascript([[
-    Application("System Events").appearancePreferences.darkMode()
+    Application('System Events').appearancePreferences.darkMode()
   ]])
 
-    return res == true -- getting nil here sometimes
+    -- NOTE: Getting nil here sometimes
+    return res == true
 end
 
-local function buildKittyCommand(isDarkMode)
+local function buildKittyCommand(darkModeEnabled)
     local gruvboxTheme
-
-    if isDarkMode then
-        gruvboxTheme = "Dark"
+    if darkModeEnabled then
+        gruvboxTheme = 'Dark'
     else
-        gruvboxTheme = "Light"
+        gruvboxTheme = 'Light'
     end
 
     return
-        "/Applications/kitty.app/Contents/MacOS/kitty +kitten themes --config-file-name=theme.conf --reload-in=all Gruvbox " ..
+        '/Applications/kitty.app/Contents/MacOS/kitty +kitten themes --config-file-name=theme.conf --reload-in=all Gruvbox ' ..
         gruvboxTheme
 end
 
-local function buildNvimCommand(isDarkMode)
+local function buildNvimCommand(darkModeEnabled)
     local nvimBg
-
-    if isDarkMode then
-        nvimBg = "dark"
+    if darkModeEnabled then
+        nvimBg = 'dark'
     else
-        nvimBg = "light"
+        nvimBg = 'light'
     end
 
-    local serverAddressesString = hs.execute("/opt/homebrew/bin/nvr --serverlist")
-    local serverAddresses = splitString(serverAddressesString, "\n")
-    local shellCommands = map(serverAddresses,
+    local serverAddressesString = hs.execute('/opt/homebrew/bin/nvr --serverlist')
+    local serverAddresses = splitString(serverAddressesString, '\n')
+    local commands = map(serverAddresses,
         function(serverAddress)
             return '/opt/homebrew/bin/nvim --remote-send "<Esc>:set bg=' ..
                 nvimBg .. '<CR>" --server "' .. serverAddress .. '"'
         end)
 
-    local singleShellCommand = table.concat(shellCommands, '; ')
-    return singleShellCommand
+    -- TODO: Run commands in parallel not in sequence
+    local combinedCommand = table.concat(commands, ' & ') .. ' &'
+    return combinedCommand
 end
 
-local function executeCommand(appName, command)
-    print("Executing " .. appName .. " command: " .. command)
+local function executeCommand(command)
+    print('Executing command: ' .. command)
 
     local output, status, type, rc = hs.execute(command)
 
-    print("output: " .. output)
-    print("status: " .. tostring(status))
-    print("type: " .. type)
-    print("rc: " .. rc)
+    print('output: ' .. output)
+    print('status: ' .. tostring(status))
+    print('type: ' .. type)
+    print('rc: ' .. rc)
 end
 
 local themeChangeWatcherCallback = function()
-    local isDarkMode = isDarkModeEnabled()
-
-    print("Theme changed. Dark mode: " .. tostring(isDarkMode))
-
-    local commands = {
-        { appName = "kitty", builder = buildKittyCommand },
-        { appName = "nvim", builder = buildNvimCommand },
-    }
-
-    for _i, v in ipairs(commands) do
-        executeCommand(v.appName, v.builder(isDarkMode))
-    end
+    local darkModeEnabled = isDarkModeEnabled()
+    print('Theme changed. Dark mode enabled: ' .. tostring(darkModeEnabled))
+    executeCommand(buildKittyCommand(darkModeEnabled))
+    executeCommand(buildNvimCommand(darkModeEnabled))
 end
 
-local notificationName = "AppleInterfaceThemeChangedNotification"
+local notificationName = 'AppleInterfaceThemeChangedNotification'
 local themeChangeWatcher = hs.distributednotifications.new(themeChangeWatcherCallback, notificationName, nil)
 themeChangeWatcher:start()
