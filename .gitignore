@@ -67,7 +67,7 @@
 # Custom .sh directory
 !/.sh/
 !/.sh/**
-# Re-ignore login-private.sh
+# Re-ignore login.private.sh
 .sh/login.private.sh
 
 # Custom directory for all other manually exported cofig

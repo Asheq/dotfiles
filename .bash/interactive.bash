@@ -23,7 +23,7 @@ fi
 # fzf
 ssource ~/.fzf.bash
 
-# Source my scripts
+# Source user scripts
 # ==============================================================================
 ssource ~/.bash/interactive__environment_variables.bash
 ssource ~/.bash/interactive__options.bash

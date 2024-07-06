@@ -12,4 +12,3 @@
 
 ssource ~/.sh/login.sh
 ssource ~/.sh/login.private.sh
-ssource ~/.xprofile

@@ -36,7 +36,6 @@ pathprepend ~/.cargo/bin PATH
 # Add Android SDK binaries
 pathprepend "$ANDROID_SDK_ROOT"/tools PATH
 pathprepend "$ANDROID_SDK_ROOT"/tools/bin PATH
-
 pathprepend "$ANDROID_SDK_ROOT"/emulator PATH
 pathprepend "$ANDROID_SDK_ROOT"/platform-tools PATH
 
