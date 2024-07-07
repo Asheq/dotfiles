@@ -72,8 +72,8 @@ end
 local respondToThemeChange = function()
     local darkModeEnabled = isDarkModeEnabled()
     print('Theme changed. Dark mode enabled: ' .. tostring(darkModeEnabled))
-    executeCommand(getKittyCommand(darkModeEnabled))
     executeCommand(getNvimCommand(darkModeEnabled))
+    executeCommand(getKittyCommand(darkModeEnabled))
 end
 
 local notificationName = 'AppleInterfaceThemeChangedNotification'
