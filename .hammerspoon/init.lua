@@ -1,9 +1,10 @@
--- This file was originally inspired by: https://github.com/jesse-c/dotfiles/blob/main/home/dot_hammerspoon/appearance.lua
--- TODO: Do not require passing full paths to shell commands like `kitty`, `nvr`, and `nvim`
+-- This file was originally inspired by:
+-- https://github.com/jesse-c/dotfiles/blob/main/home/dot_hammerspoon/appearance.lua
+-- TODO: Do not require passing full paths for shell commands like `kitty`, `nvr`, and `nvim`
 
-local function map(table, func)
+local function map(tbl, func)
     local result = {}
-    for key, val in pairs(table) do
+    for key, val in pairs(tbl) do
         result[key] = func(val)
     end
     return result
@@ -18,12 +19,12 @@ local function split(str, delimiter)
 end
 
 local function isDarkModeEnabled()
-    local _, res = hs.osascript.javascript([[
+    local _, result = hs.osascript.javascript([[
     Application('System Events').appearancePreferences.darkMode()
   ]])
 
-    -- NOTE: Getting nil here sometimes
-    return res == true
+    -- If result is nil, cast to false
+    return result == true
 end
 
 local function getKittyCommand(darkModeEnabled)
