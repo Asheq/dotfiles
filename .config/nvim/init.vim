@@ -18,7 +18,3 @@ source <sfile>:h/vimrc.d/options.vim
 
 " Final
 source <sfile>:h/vimrc.d/final.vim
-
-if filereadable(expand('<sfile>:h') . '/vimrc.d/final.local.vim')
-    source <sfile>:h/vimrc.d/final.local.vim
-endif

@@ -52,3 +52,6 @@ fi
 # Ensure current directory is not in PATH
 pathremove . PATH
 pathremove "" PATH
+
+# Source login.private.sh
+ssource ~/.sh/login.private.sh

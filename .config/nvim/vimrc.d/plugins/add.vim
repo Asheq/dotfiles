@@ -15,10 +15,19 @@ Plug 'tpope/vim-projectionist'
 Plug 'jeetsukumaran/vim-indentwise'
 Plug 'machakann/vim-sandwich'
 
-" Integration with git and GitHub
+" git, GitHub
 " ----------------------------------------------------------------------------
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+
+" Language Server, Treesitter
+" ----------------------------------------------------------------------------
+if executable('node')
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-context'
 
 " Filetype plugins
 " ----------------------------------------------------------------------------
@@ -51,17 +60,6 @@ Plug 'peitalin/vim-jsx-typescript'
 
 " Git
 Plug 'tpope/vim-git'
-
-" Language Server
-" ----------------------------------------------------------------------------
-if executable('node')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-endif
-
-" Treesitter
-" ----------------------------------------------------------------------------
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/nvim-treesitter-context'
 
 " End
 " ----------------------------------------------------------------------------

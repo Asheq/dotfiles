@@ -94,5 +94,6 @@ map               ]a               <Plug>(IndentWiseBlockScopeBoundaryEnd)
 "   Normal-mode
 "       h! <Left>* CTRL-H* <BS>*
 "       l! <Right>* <Space>*
-"       j! <Down> CTRL-J <NL> CTRL-N
-"       <Return>! +! CTRL-M 
+"       j! <Down> CTRL-J CTRL-N
+"       k! <Up> CTRL-P
+"       <Return>! + CTRL-M

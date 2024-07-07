@@ -11,4 +11,3 @@
 . ~/.sh/env.sh
 
 ssource ~/.sh/login.sh
-ssource ~/.sh/login.private.sh
