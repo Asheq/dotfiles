@@ -13,8 +13,7 @@ set breakindent
 set breakindentopt=list:-1
 
 set list
-let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,extends:➤,precedes:⮜,eol:▫'
-" │ ┊   ➤ ⮜ ▢ ࿁ ⬚ ⁺ ₊ ˖ ʴ ↵ ۦ ա ؞ 🮮 🮤 ┘ ⚬ ◃ ╼ ╾ 🞩 ͵▫ ༜ 🞡 
+let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,eol:🮦,extends:➤,precedes:⮜'
 
 let &fillchars='foldopen:▽,foldclose:▶,diff:╱,lastline:➤'
 
@@ -86,3 +85,15 @@ if exists('g:neovide')
     let g:neovide_input_macos_option_key_is_meta = 'both'
     let g:neovide_cursor_animation_length = 0
 endif
+
+" Character reference
+" │ ┊
+" ╱
+" 🮮 🮤 🮦
+" ➤ ▷ ▶ ▹ ▸
+" ↪ └  
+" ࿁ ⚬
+" ▢ ⬚ ▫
+" ⁺ ₊ ˖
+" 🞩
+" ┘ ʴ ↵
