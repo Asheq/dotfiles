@@ -35,6 +35,12 @@ highlight! link htmlH2       CocListBlackBlue
 highlight! link htmlH3       CocListBlackWhite
 highlight! link htmlH4       CocListBlackGrey
 
+" Open Neovide in home directory
+" ============================================================================
+if exists('g:neovide')
+    cd ~
+endif
+
 " Run final.lua
 " ============================================================================
 luafile <sfile>:h/final.lua
