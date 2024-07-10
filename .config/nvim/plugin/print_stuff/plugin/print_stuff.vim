@@ -1,2 +1,3 @@
-command! Pb call print_stuff#print_basic_info()
-command! Pif call print_stuff#print_indenting_and_formatting_options()
+command! Pg call print_stuff#print_general()
+command! Pf call print_stuff#print_formatting()
+command! Pi call print_stuff#print_indenting()
