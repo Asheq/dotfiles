@@ -53,7 +53,7 @@ local function getNvimCommand(darkModeEnabled)
     local commands = map(serverAddresses,
         function(serverAddress)
             return '/opt/homebrew/bin/nvim --remote-send "<Esc>:set bg=' ..
-                nvimBg .. '<CR>" --server "' .. serverAddress .. '"'
+                nvimBg .. '<Enter>" --server "' .. serverAddress .. '"'
         end)
     return table.concat(commands, ' & ') .. ' &'
 end
