@@ -15,6 +15,7 @@ function! print_stuff#print_general()
                 \     {'label': 'expandtab', 'value': &expandtab, 'secondary': s:last_set('expandtab')},
                 \     {'label': 'tabstop', 'value': &tabstop, 'secondary': s:last_set('tabstop')},
                 \     {'label': 'shiftwidth', 'value': &shiftwidth, 'secondary': s:last_set('shiftwidth')},
+                \     {'label': 'smarttab', 'value': &smarttab, 'secondary': s:last_set('smarttab')},
                 \   ]
                 \ },
                 \ {
