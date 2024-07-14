@@ -2,7 +2,7 @@
   "title": "Terminal maps",
   "rules": [
     {
-      "description": "In terminal emulators, swap Cmd and Ctrl modifiers (except when the other key is Tab or ~)",
+      "description": "In some apps, swap Cmd / Ctrl (except with Tab, `, Space, Arrows)",
       "manipulators": [
         {
           "conditions": [
