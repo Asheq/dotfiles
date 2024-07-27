@@ -40,17 +40,17 @@ function! print_stuff#print_formatting()
                 \ {
                 \   'title': 'Formatting methods for gq/gw operator',
                 \   'items': [
-                \     {'label': 'formatexpr', 'value': &formatexpr, 'secondary': s:last_set('formatexpr')},
-                \     {'label': 'formatprg', 'value': &formatprg, 'secondary': s:last_set('formatprg')},
                 \     {'label': '[internal formatting]', 'value': '[N/A]'},
+                \     {'label': 'formatprg', 'value': &formatprg, 'secondary': s:last_set('formatprg')},
+                \     {'label': 'formatexpr', 'value': &formatexpr, 'secondary': s:last_set('formatexpr')},
                 \   ]
                 \ },
                 \ {
                 \   'title': 'For internal formatting',
                 \   'items': [
+                \     {'label': 'textwidth', 'value': &textwidth, 'secondary': s:last_set('textwidth')},
                 \     {'label': 'formatoptions', 'value': &formatoptions, 'secondary': s:last_set('formatoptions')},
                 \     {'label': 'formatlistpat', 'value': &formatlistpat, 'secondary': s:last_set('formatlistpat')},
-                \     {'label': 'textwidth', 'value': &textwidth, 'secondary': s:last_set('textwidth')},
                 \   ]
                 \ }
                 \ ])
@@ -59,12 +59,20 @@ endfunction
 function! print_stuff#print_indenting()
     call s:print_values([
                 \ {
-                \   'title': 'Indenting methods for = operator',
+                \   'title': 'Indenting methods',
                 \   'items': [
-                \     {'label': 'equalprg', 'value': &equalprg, 'secondary': s:last_set('equalprg')},
-                \     {'label': 'indentexpr', 'value': &indentexpr, 'secondary': s:last_set('indentexpr')},
+                \     {'label': 'autoindent', 'value': &autoindent, 'secondary': s:last_set('autoindent')},
+                \     {'label': 'smartindent', 'value': &smartindent, 'secondary': s:last_set('smartindent')},
                 \     {'label': 'cindent', 'value': &cindent, 'secondary': s:last_set('cindent')},
-                \     {'label': 'lisp', 'value': &lisp, 'secondary': s:last_set('lisp')},
+                \     {'label': 'indentexpr', 'value': &indentexpr, 'secondary': s:last_set('indentexpr')},
+                \   ]
+                \ },
+                \ {
+                \   'title': 'For cindent',
+                \   'items': [
+                \     {'label': 'cinoptions', 'value': &cinoptions, 'secondary': s:last_set('cinoptions')},
+                \     {'label': 'cinkeys', 'value': &cinkeys, 'secondary': s:last_set('cinkeys')},
+                \     {'label': 'cinwords', 'value': &cinwords, 'secondary': s:last_set('cinwords')},
                 \   ]
                 \ },
                 \ {
@@ -73,21 +81,6 @@ function! print_stuff#print_indenting()
                 \     {'label': 'indentkeys', 'value': &indentkeys, 'secondary': s:last_set('indentkeys')},
                 \   ]
                 \ },
-                \ {
-                \   'title': 'For cindent',
-                \   'items': [
-                \     {'label': 'cinkeys', 'value': &cinkeys, 'secondary': s:last_set('cinkeys')},
-                \     {'label': 'cinoptions', 'value': &cinoptions, 'secondary': s:last_set('cinoptions')},
-                \     {'label': 'cinwords', 'value': &cinwords, 'secondary': s:last_set('cinwords')},
-                \   ]
-                \ },
-                \ {
-                \   'title': 'Indenting methods not for = operator',
-                \   'items': [
-                \     {'label': 'smartindent', 'value': &smartindent, 'secondary': s:last_set('smartindent')},
-                \     {'label': 'autoindent', 'value': &autoindent, 'secondary': s:last_set('autoindent')},
-                \   ]
-                \ }
                 \ ])
 endfunction
 
