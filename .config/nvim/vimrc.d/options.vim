@@ -7,6 +7,7 @@ set jumpoptions=stack
 
 " 4. Displaying text
 " ----------------------------------------------------------------------------
+set nowrap
 set linebreak
 let &showbreak='↪'
 set breakindent
