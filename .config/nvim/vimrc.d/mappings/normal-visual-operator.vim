@@ -90,16 +90,16 @@ map               ]v               <Plug>(IndentWiseNextEqualIndent)
 map               [a               <Plug>(IndentWiseBlockScopeBoundaryBegin)
 map               ]a               <Plug>(IndentWiseBlockScopeBoundaryEnd)
 
-map               <A-b>            <Plug>(IndentWisePreviousLesserIndent)
-map               <A-f>            <Plug>(IndentWiseNextGreaterIndent)
+map               <C-p>            <Plug>(IndentWisePreviousLesserIndent)
+map               <C-n>            <Plug>(IndentWiseNextGreaterIndent)
 
-map               <A-u>            <Plug>(IndentWisePreviousEqualIndent)
-map               <A-d>            <Plug>(IndentWiseNextEqualIndent)
+map               <A-p>            <Plug>(IndentWisePreviousEqualIndent)
+map               <A-n>            <Plug>(IndentWiseNextEqualIndent)
 
 " Duplicate keys (* = used in mapping already, ! = do not map or map to self only)
 "   Normal-mode
 "       h! <Left>* CTRL-H* <BS>*
 "       l! <Right>* <Space>*
-"       j! <Down> CTRL-J CTRL-N
-"       k! <Up> CTRL-P
+"       j! <Down> CTRL-J CTRL-N*
+"       k! <Up> CTRL-P*
 "       <Return>! + CTRL-M
