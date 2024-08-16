@@ -1,6 +1,6 @@
 setlocal colorcolumn+=+1
 setlocal linebreak
 
-inoremap <buffer> <M-b> - [ ] 
+inoremap <buffer> <A-b> - [ ] 
 
 silent Hi load bujo-markers.hl

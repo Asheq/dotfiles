@@ -90,6 +90,12 @@ map               ]v               <Plug>(IndentWiseNextEqualIndent)
 map               [a               <Plug>(IndentWiseBlockScopeBoundaryBegin)
 map               ]a               <Plug>(IndentWiseBlockScopeBoundaryEnd)
 
+map               <A-b>            <Plug>(IndentWisePreviousLesserIndent)
+map               <A-f>            <Plug>(IndentWiseNextGreaterIndent)
+
+map               <A-u>            <Plug>(IndentWisePreviousEqualIndent)
+map               <A-d>            <Plug>(IndentWiseNextEqualIndent)
+
 " Duplicate keys (* = used in mapping already, ! = do not map or map to self only)
 "   Normal-mode
 "       h! <Left>* CTRL-H* <BS>*
