@@ -103,3 +103,14 @@ map               <A-n>            <Plug>(IndentWiseNextEqualIndent)
 "       j! <Down> CTRL-J CTRL-N*
 "       k! <Up> CTRL-P*
 "       <Return>! + CTRL-M
+"       cc! S
+"   Visual-mode(char)
+"       d! x
+"       D! X
+"   Visual-mode (line)
+"       d! x D X
+"   Visual-mode (block)
+"       d! x X
+"
+"
+" ??? c! C s S
