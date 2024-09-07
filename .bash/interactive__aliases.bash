@@ -42,9 +42,5 @@ alias bell=$'osascript -e \'display notification "Ring ring ring!"\''
 
 # Terminal theme
 # ==============================================================================
-alias  dark='kitty +kitten themes --config-file-name=theme.conf --reload-in=all Gruvbox Dark'
-alias light='kitty +kitten themes --config-file-name=theme.conf --reload-in=all Gruvbox Light'
-
-# NOTE: These are faster but do not affect windows created after invoking them
-alias  darkf='kitty @ --to="$KITTY_LISTEN_ON" set-colors --all ~/.config/kitty/Gruvbox\ Dark.conf'
-alias lightf='kitty @ --to="$KITTY_LISTEN_ON" set-colors --all ~/.config/kitty/Gruvbox\ Light.conf'
+alias  dark='kitten themes --config-file-name=kitty.theme.conf --reload-in=all Gruvbox Dark'
+alias light='kitten themes --config-file-name=kitty.theme.conf --reload-in=all Gruvbox Light'

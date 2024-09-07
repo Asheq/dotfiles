@@ -36,7 +36,7 @@ local function getKittyCommand(darkModeEnabled)
     end
 
     return
-        '/Applications/kitty.app/Contents/MacOS/kitty +kitten themes --config-file-name=theme.conf --reload-in=all Gruvbox ' ..
+        '/Applications/kitty.app/Contents/MacOS/kitten themes --config-file-name=theme.conf --reload-in=all Gruvbox ' ..
         gruvboxTheme
 end
 
