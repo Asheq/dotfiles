@@ -11,25 +11,30 @@ nnoremap          <leader>t        :tab<C-z><C-p>
 
 nnoremap          <leader>/        :mat Match //<Left>
 
-nnoremap          yp               :echo "p = full path\nh = head\nt = tail"<Enter>:let @* = expand('%:')<Left><Left>
+nnoremap          yp               :ec "p = full path\nh = head\nt = tail"<Enter>:let @* = expand('%:')<Left><Left>
 
 " Complete
 " ----------------------------------------------------------------------------
+nnoremap <silent> <leader>o        :sil !open '%:h'<Enter><Enter>
+
+nnoremap <silent> <leader>s        :sil Git<Enter>
+
+nnoremap <silent> <leader>w        :sil up<Enter>
+
 nnoremap <silent> <leader>h        :cal vimrc#echo_highlight_info()<Enter>
 
 nnoremap <silent> <leader>j        :ju<Enter>
 
 nnoremap <silent> <leader>c        :changes<Enter>
 
-nnoremap <silent> <leader>o        :!open '%:h'<Enter><Enter>
-
-nnoremap <silent> <leader>s        :Git<Enter>
-
-nnoremap <silent> <leader>w        :up<Enter>
-
 nnoremap <silent> <C-g>            :cal vimrc#ctrl_g_with_scrollbar()<Enter>
 
-" Normal mode command typing helpers
+" This copies the selected text into the system clipboard as rich text so that
+" when it's pasted in certain applications, the application shows the
+" formatted text rather than the raw text.
+xnoremap  <silent> <leader>c       :w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
+
+" Normal and visual mode command typing helpers
 " ============================================================================
 
 " Yank and Paste
