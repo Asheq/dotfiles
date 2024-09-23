@@ -1,9 +1,9 @@
 # Basic file management
 # ==============================================================================
-if command -v exa &> /dev/null; then
-    alias l='exa -F'
-    alias la='exa -Fa'
-    alias ll='exa -Falh'
+if command -v eza &> /dev/null; then
+    alias l='eza -F'
+    alias la='eza -F -a'
+    alias ll='eza -F -a -l -h'
 else
     alias l='ls --color -F'
     alias la='ls --color -F'
