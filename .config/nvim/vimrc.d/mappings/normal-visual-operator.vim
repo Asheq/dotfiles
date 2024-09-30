@@ -112,7 +112,12 @@ map               <A-n>            <Plug>(IndentWiseNextEqualIndent)
 "   Visual-mode(char)
 "       d! x
 "       D! X
+"       c! s*
+"       C! S
 "   Visual-mode (line)
-"       d! x D X
+"       d! x X D
+"       c! s*
+"       C! S
 "   Visual-mode (block)
 "       d! x X
+"       c! s*
