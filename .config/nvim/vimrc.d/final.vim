@@ -23,19 +23,21 @@ augroup END
 highlight! link CocMenuSel   PmenuSel
 highlight! link CocListLine  PmenuSel
 
-highlight! link StatusLineNC Visual
-
-highlight! link WinBar       StatusLine
-highlight! link WinBarNC     StatusLineNC
-
-highlight! link MatchParen   CocBold
-
 highlight! link htmlH1       CocListBlackGreen
 highlight! link htmlH2       CocListBlackBlue
 highlight! link htmlH3       CocListBlackWhite
 highlight! link htmlH4       CocListBlackGrey
 
+highlight! link MatchParen   CocBold
+
+highlight! link WinBar       StatusLine
+highlight! link WinBarNC     StatusLineNC
+
 highlight! Substitute        guifg=#ffffff guibg=#b16286
+
+highlight! StatusLineNC      guifg=NvimDarkGrey3 guibg=NvimLightGrey4
+highlight! Visual            guibg=#bda9b0
+highlight! CursorLine        guibg=#c6d3cf
 
 " Open Neovide in home directory
 " ============================================================================
