@@ -35,6 +35,8 @@ highlight! link htmlH2       CocListBlackBlue
 highlight! link htmlH3       CocListBlackWhite
 highlight! link htmlH4       CocListBlackGrey
 
+highlight! Substitute        guifg=#ffffff guibg=#b16286
+
 " Open Neovide in home directory
 " ============================================================================
 if exists('g:neovide')
