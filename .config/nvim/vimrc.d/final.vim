@@ -35,9 +35,15 @@ highlight! link WinBarNC     StatusLineNC
 
 highlight! Substitute        guifg=#ffffff guibg=#b16286
 
-highlight! StatusLineNC      guifg=NvimDarkGrey3 guibg=NvimLightGrey4
-highlight! Visual            guibg=#bda9b0
-highlight! CursorLine        guibg=#c6d3cf
+if &background ==# 'light'
+    highlight! StatusLineNC      guifg=NvimDarkGrey3 guibg=NvimLightGrey4
+    highlight! Visual            guibg=#bda9b0
+    highlight! CursorLine        guibg=#c6d3cf
+elseif &background ==# 'dark'
+    highlight! StatusLineNC      guifg=NvimLightGrey4 guibg=NvimDarkGrey3
+    highlight! Visual            guibg=#45353b
+    highlight! CursorLine        guibg=#32413c
+endif
 
 " Open Neovide in home directory
 " ============================================================================
