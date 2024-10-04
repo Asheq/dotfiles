@@ -33,17 +33,21 @@ highlight! link MatchParen   CocBold
 highlight! link WinBar       StatusLine
 highlight! link WinBarNC     StatusLineNC
 
-highlight! Substitute        guifg=#ffffff guibg=#b16286
-
-if &background ==# 'light'
-    highlight! StatusLineNC      guifg=NvimDarkGrey3 guibg=NvimLightGrey4
-    highlight! Visual            guibg=#bda9b0
-    highlight! CursorLine        guibg=#c6d3cf
-elseif &background ==# 'dark'
-    highlight! StatusLineNC      guifg=NvimLightGrey4 guibg=NvimDarkGrey3
-    highlight! Visual            guibg=#45353b
-    highlight! CursorLine        guibg=#32413c
-endif
+function! s:on_bg_change()
+    if &background ==# 'light'
+        highlight! StatusLineNC      guifg=NvimDarkGrey3 guibg=NvimLightGrey4
+        highlight! Visual            guibg=#bda9b0
+        highlight! CursorLine        guibg=#c6d3cf
+        highlight! Substitute        guifg=#ffffff guibg=#b16286
+    elseif &background ==# 'dark'
+        highlight! StatusLineNC      guifg=NvimLightGrey3 guibg=NvimDarkGrey4
+        highlight! Visual            guibg=#45353b
+        highlight! CursorLine        guibg=#32413c
+        highlight! Substitute        guifg=#ffffff guibg=#b16286
+    endif
+endfunction
+autocmd OptionSet background call s:on_bg_change()
+call s:on_bg_change()
 
 " Open Neovide in home directory
 " ============================================================================
