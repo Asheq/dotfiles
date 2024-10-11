@@ -83,23 +83,42 @@ xnoremap <silent> <leader>i        :<C-u>cal vimrc#read_aloud(vimrc#get_selectio
 
 " Motions
 " ============================================================================
-map               [b               <Plug>(IndentWisePreviousLesserIndent)
-map               ]b               <Plug>(IndentWiseNextLesserIndent)
-
-map               [w               <Plug>(IndentWisePreviousGreaterIndent)
-map               ]w               <Plug>(IndentWiseNextGreaterIndent)
-
-map               [v               <Plug>(IndentWisePreviousEqualIndent)
-map               ]v               <Plug>(IndentWiseNextEqualIndent)
-
 map               [a               <Plug>(IndentWiseBlockScopeBoundaryBegin)
 map               ]a               <Plug>(IndentWiseBlockScopeBoundaryEnd)
 
-map               <A-b>            <Plug>(IndentWisePreviousLesserIndent)
-map               <A-w>            <Plug>(IndentWiseNextGreaterIndent)
+map               <A-h>            <Plug>(IndentWisePreviousLesserIndent)
+map               <A-l>            <Plug>(IndentWiseNextGreaterIndent)
 
-map               <A-k>            <Plug>(IndentWisePreviousEqualIndent)
-map               <A-j>            <Plug>(IndentWiseNextEqualIndent)
+"map               <A-k>            <Plug>(IndentWisePreviousEqualIndent)
+"map               <A-j>            <Plug>(IndentWiseNextEqualIndent)
+"map               <A-k>            ^<Plug>(edgemotion-k)
+"map               <A-j>            ^<Plug>(edgemotion-j)
+
+nnoremap <silent>  <A-j>            :call NavigateBlockDown()<CR>
+" TODO
+"nnoremap <silent>  <A-k>            :call NavigateBlockUp()<CR>
+
+function! NavigateBlockDown()
+    let l:current_line = line('.')
+    let l:next_line = l:current_line + 1
+    let l:current_line_indent = indent(l:current_line)
+    let l:next_line_indent = indent(l:next_line)
+
+    if l:current_line_indent == l:next_line_indent
+        " Within a block
+        let l:line_num = l:next_line + 1
+        while l:line_num <= line('$') + 1
+            if indent(l:line_num) != l:current_line_indent || getline(l:line_num) == '' || l:line_num == line('$') + 1
+                execute 'normal!' (l:line_num - 1).'G'
+                return
+            endif
+            let l:line_num += 1
+        endwhile
+    else
+        " Already at end of current block
+        " TODO
+    endif
+endfunction
 
 " Duplicate keys (* = used in mapping already, ! = do not map or map to self only)
 "   Normal-mode
