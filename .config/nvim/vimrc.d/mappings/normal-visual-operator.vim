@@ -95,11 +95,11 @@ map               ]v               <Plug>(IndentWiseNextEqualIndent)
 map               [a               <Plug>(IndentWiseBlockScopeBoundaryBegin)
 map               ]a               <Plug>(IndentWiseBlockScopeBoundaryEnd)
 
-map               <C-p>            <Plug>(IndentWisePreviousLesserIndent)
-map               <C-n>            <Plug>(IndentWiseNextGreaterIndent)
+map               <A-b>            <Plug>(IndentWisePreviousLesserIndent)
+map               <A-w>            <Plug>(IndentWiseNextGreaterIndent)
 
-map               <A-p>            <Plug>(IndentWisePreviousEqualIndent)
-map               <A-n>            <Plug>(IndentWiseNextEqualIndent)
+map               <A-k>            <Plug>(IndentWisePreviousEqualIndent)
+map               <A-j>            <Plug>(IndentWiseNextEqualIndent)
 
 " Duplicate keys (* = used in mapping already, ! = do not map or map to self only)
 "   Normal-mode
