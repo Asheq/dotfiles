@@ -58,7 +58,7 @@ endif
 " Run final.lua
 " ============================================================================
 luafile <sfile>:h/final.lua
-"
+
 " Run final.local.vim if it exists
 " ============================================================================
 if filereadable(expand('<sfile>:h') . '/final.local.vim')

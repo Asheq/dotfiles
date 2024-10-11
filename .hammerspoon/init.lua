@@ -19,9 +19,7 @@ local function split(str, delimiter)
 end
 
 local function isDarkModeEnabled()
-    local _, result = hs.osascript.javascript([[
-    Application('System Events').appearancePreferences.darkMode()
-  ]])
+    local _, result = hs.osascript.javascript([[ Application('System Events').appearancePreferences.darkMode() ]])
 
     -- If result is nil, cast to false
     return result == true
@@ -35,9 +33,7 @@ local function getKittyCommand(darkModeEnabled)
         gruvboxTheme = 'Light'
     end
 
-    return
-        '/Applications/kitty.app/Contents/MacOS/kitten themes --reload-in=all Gruvbox ' ..
-        gruvboxTheme
+    return '/Applications/kitty.app/Contents/MacOS/kitten themes --reload-in=all Gruvbox ' .. gruvboxTheme
 end
 
 local function getNvimCommand(darkModeEnabled)
