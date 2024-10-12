@@ -99,24 +99,55 @@ nnoremap <silent>  <A-j>            :call NavigateBlockDown()<CR>
 "nnoremap <silent>  <A-k>            :call NavigateBlockUp()<CR>
 
 function! NavigateBlockDown()
+    " TODO
     let l:current_line = line('.')
     let l:next_line = l:current_line + 1
     let l:current_line_indent = indent(l:current_line)
     let l:next_line_indent = indent(l:next_line)
 
-    if l:current_line_indent == l:next_line_indent
-        " Within a block
-        let l:line_num = l:next_line + 1
-        while l:line_num <= line('$') + 1
-            if indent(l:line_num) != l:current_line_indent || getline(l:line_num) == '' || l:line_num == line('$') + 1
-                execute 'normal!' (l:line_num - 1).'G'
+    if getline(l:current_line) == ''
+        " On empty line
+        let l:line = l:next_line
+        while l:line <= line('$')
+            if getline(l:line) != '' || l:line == line('$')
+                execute 'normal!' (l:line).'G'
                 return
             endif
-            let l:line_num += 1
+
+            let l:line += 1
+        endwhile
+    elseif getline(l:current_line) != '' && getline(l:next_line) != '' && l:current_line_indent == l:next_line_indent 
+        " Within a block
+        let l:line = l:next_line + 1
+
+        while l:line <= line('$') + 1
+            if l:line >= line('$')
+                execute 'normal!' (l:line).'G'
+                return
+            endif
+
+            if getline(l:line) == '' || indent(l:line) != l:current_line_indent
+                execute 'normal!' (l:line - 1).'G'
+                return
+            endif
+
+            let l:line += 1
         endwhile
     else
-        " Already at end of current block
-        " TODO
+        " At end of a block
+        let l:line = l:next_line
+        while l:line <= line('$') + 1
+            if indent(l:line) < l:current_line_indent && getline(l:line) != ''
+                return
+            endif
+
+            if (indent(l:line) == l:current_line_indent && getline(l:line) != '') || l:line == line('$') + 1
+                execute 'normal!' (l:line).'G'
+                return
+            endif
+
+            let l:line += 1
+        endwhile
     endif
 endfunction
 
