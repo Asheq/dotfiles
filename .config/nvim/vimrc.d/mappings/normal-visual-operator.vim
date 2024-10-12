@@ -106,41 +106,29 @@ function! NavigateBlockDown()
 
     if getline(l:current_line) == ''
         " On empty line
-        let l:line = l:next_line
-        while l:line <= line('$')
-            if getline(l:line) != '' || l:line == line('$')
-                execute 'normal!' (l:line).'G'
-                return
-            endif
-
+        let l:line = l:current_line
+        while getline(l:line) == '' && l:line <= line('$')
             let l:line += 1
         endwhile
+        execute 'normal!' (l:line).'G'
     elseif getline(l:current_line) != '' && getline(l:next_line) != '' && l:current_line_indent == l:next_line_indent 
         " Within a block
         let l:line = l:next_line + 1
-        while l:line <= line('$') + 1
-            if getline(l:line) == '' || indent(l:line) != l:current_line_indent
-                execute 'normal!' (l:line - 1).'G'
-                return
-            endif
-
+        while getline(l:line) != '' && indent(l:line) == l:current_line_indent
             let l:line += 1
         endwhile
+        execute 'normal!' (l:line - 1).'G'
     else
         " At end of a block
         let l:line = l:next_line
-        while l:line <= line('$')
+        while (indent(l:line) != l:current_line_indent || getline(l:line) == '') && l:line <= line('$')
             if indent(l:line) < l:current_line_indent && getline(l:line) != ''
                 return
             endif
 
-            if (indent(l:line) == l:current_line_indent && getline(l:line) != '') || l:line == line('$')
-                execute 'normal!' (l:line).'G'
-                return
-            endif
-
             let l:line += 1
         endwhile
+        execute 'normal!' (l:line).'G'
     endif
 endfunction
 
