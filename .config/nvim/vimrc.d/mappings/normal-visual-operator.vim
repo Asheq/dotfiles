@@ -91,46 +91,8 @@ map               <A-l>            <Plug>(IndentWiseNextGreaterIndent)
 
 "map               <A-k>            <Plug>(IndentWisePreviousEqualIndent)
 "map               <A-j>            <Plug>(IndentWiseNextEqualIndent)
-"map               <A-k>            ^<Plug>(edgemotion-k)
-"map               <A-j>            ^<Plug>(edgemotion-j)
-
-nnoremap <silent>  <A-j>            :call NavigateBlockDown()<CR>
-" TODO
-"nnoremap <silent>  <A-k>            :call NavigateBlockUp()<CR>
-
-function! NavigateBlockDown()
-    let l:current_line = line('.')
-    let l:next_line = l:current_line + 1
-    let l:current_line_indent = indent(l:current_line)
-    let l:next_line_indent = indent(l:next_line)
-
-    if getline(l:current_line) == ''
-        " On empty line
-        let l:line = l:current_line
-        while getline(l:line) == '' && l:line <= line('$')
-            let l:line += 1
-        endwhile
-        execute 'normal!' (l:line).'G'
-    elseif getline(l:current_line) != '' && getline(l:next_line) != '' && l:current_line_indent == l:next_line_indent 
-        " Within a block
-        let l:line = l:next_line + 1
-        while getline(l:line) != '' && indent(l:line) == l:current_line_indent
-            let l:line += 1
-        endwhile
-        execute 'normal!' (l:line - 1).'G'
-    else
-        " At end of a block
-        let l:line = l:next_line
-        while (indent(l:line) != l:current_line_indent || getline(l:line) == '') && l:line <= line('$')
-            if indent(l:line) < l:current_line_indent && getline(l:line) != ''
-                return
-            endif
-
-            let l:line += 1
-        endwhile
-        execute 'normal!' (l:line).'G'
-    endif
-endfunction
+nnoremap <silent>  <A-j>            :call navigate_block#down()<CR>
+nnoremap <silent>  <A-k>            :call navigate_block#up()<CR>
 
 " Duplicate keys (* = used in mapping already, ! = do not map or map to self only)
 "   Normal-mode
