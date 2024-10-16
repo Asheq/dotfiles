@@ -91,8 +91,10 @@ map               <A-l>            <Plug>(IndentWiseNextGreaterIndent)
 
 "map               <A-k>            <Plug>(IndentWisePreviousEqualIndent)
 "map               <A-j>            <Plug>(IndentWiseNextEqualIndent)
-nnoremap <silent>  <A-j>            :call navigate_block#down()<CR>
-nnoremap <silent>  <A-k>            :call navigate_block#up()<CR>
+nnoremap <silent>  <A-j>            :call navigate_block#down('n')<CR>
+nnoremap <silent>  <A-k>            :call navigate_block#up('n')<CR>
+vnoremap <silent>  <A-j>            :call navigate_block#down('v')<CR>
+vnoremap <silent>  <A-k>            :call navigate_block#up('v')<CR>
 
 " Duplicate keys (* = used in mapping already, ! = do not map or map to self only)
 "   Normal-mode
