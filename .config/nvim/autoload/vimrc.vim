@@ -44,14 +44,6 @@ function! vimrc#read_aloud(keyword)
     call feedkeys("\<Enter>exit\<Enter>", 'n')
 endfunction
 
-" Echo highlight info
-" ============================================================================
-function! vimrc#echo_highlight_info()
-    echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-                \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-                \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"
-endfunction
-
 " Better Ctrl-g
 " ============================================================================
 function! vimrc#ctrl_g_with_scrollbar()

@@ -21,7 +21,7 @@ nnoremap <silent> <leader>s        :sil Git<Enter>
 
 nnoremap <silent> <leader>w        :sil up<Enter>
 
-nnoremap <silent> <leader>h        :cal vimrc#echo_highlight_info()<Enter>
+nnoremap <silent> <leader>h        :Inspect<Enter>
 
 nnoremap <silent> <leader>j        :ju<Enter>
 
