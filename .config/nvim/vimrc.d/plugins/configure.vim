@@ -13,6 +13,10 @@ let g:vim_markdown_new_list_item_indent = 0
 " TODO-L: Add sandwich text objects without clobbering default as/is
 let g:textobj_sandwich_no_default_key_mappings = 1
 
+" indentwise
+" ----------------------------------------------------------------------------
+let g:indentwise_suppress_keymaps = 1
+
 " highlighter
 " ----------------------------------------------------------------------------
 let HiKeywords = stdpath("config") . '/after/vim-highlighter'

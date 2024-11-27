@@ -1,4 +1,8 @@
-function! navigate_block#down(vim_mode)
+function! <SID>navigate_block_down(vim_mode) range
+    if a:vim_mode == "v"
+        normal! gv
+    endif
+
     let l:current_line = line('.')
     let l:next_line = l:current_line + 1
     let l:current_line_indent = indent(l:current_line)
@@ -48,7 +52,11 @@ function! navigate_block#down(vim_mode)
     endif
 endfunction
 
-function! navigate_block#up(vim_mode) range
+function! <SID>navigate_block_up(vim_mode) range
+    if a:vim_mode == "v"
+        normal! gv
+    endif
+
     let l:current_line = line('.')
     let l:prev_line = l:current_line - 1
     let l:current_line_indent = indent(l:current_line)
@@ -97,3 +105,11 @@ function! navigate_block#up(vim_mode) range
         execute 'normal! ' . (l:target_line) . 'G'
     endif
 endfunction
+
+nnoremap <silent> <Plug>(NavigateBlockDown)    :<C-U>call <SID>navigate_block_down("n")<CR>
+vnoremap <silent> <Plug>(NavigateBlockDown)         :call <SID>navigate_block_down("v")<CR>
+onoremap <silent> <Plug>(NavigateBlockDown)   V:<C-U>call <SID>navigate_block_down("o")<CR>
+
+nnoremap <silent> <Plug>(NavigateBlockUp)     :<C-U>call <SID>navigate_block_up("n")<CR>
+vnoremap <silent> <Plug>(NavigateBlockUp)          :call <SID>navigate_block_up("v")<CR>
+onoremap <silent> <Plug>(NavigateBlockUp)    V:<C-U>call <SID>navigate_block_up("o")<CR>
