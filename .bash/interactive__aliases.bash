@@ -20,7 +20,7 @@ alias v='nvim'
 # ==============================================================================
 alias drive='cd ~/My\ Drive/'
 alias notes='cd ~/My\ Drive/Notes/'
-alias todo='cd ~/My\ Drive/Todo/'
+alias tasks='cd ~/My\ Drive/Tasks/'
 
 # git
 # ==============================================================================
