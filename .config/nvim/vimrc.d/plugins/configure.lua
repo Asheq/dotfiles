@@ -4,12 +4,17 @@ require("oil").setup({
     view_options = {
         show_hidden = true,
         is_always_hidden = function(name)
-            local list = { ".DS_Store", "..", "Icon", ".tmp.driveupload" }
+            local list = { ".DS_Store", "..", ".tmp.driveupload" }
             for _, value in ipairs(list) do
                 if name == value then
                     return true
                 end
             end
+
+            if name:find("^Icon.$") ~= nil then
+                return true
+            end
+
             return false
         end,
     }
