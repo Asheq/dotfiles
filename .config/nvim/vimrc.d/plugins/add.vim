@@ -9,6 +9,7 @@ Plug 'gcavallanti/vim-noscrollbar'
 Plug 'stevearc/oil.nvim'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-projectionist'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 
 " Motions, Operators, Text objects
 " ---------------------------------------------------------------------------
