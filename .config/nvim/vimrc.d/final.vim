@@ -33,6 +33,9 @@ highlight! link MatchParen   CocBold
 highlight! link WinBar       StatusLine
 highlight! link WinBarNC     StatusLineNC
 
+highlight! link TabLine      StatusLineNC
+highlight! link TabLineSel   StatusLine
+
 function! s:on_bg_change()
     if &background ==# 'light'
         highlight! StatusLineNC      guifg=NvimDarkGrey3 guibg=NvimLightGrey4
@@ -46,6 +49,7 @@ function! s:on_bg_change()
         highlight! Substitute        guifg=#ffffff guibg=#b16286
     endif
 endfunction
+
 autocmd OptionSet background call s:on_bg_change()
 call s:on_bg_change()
 
