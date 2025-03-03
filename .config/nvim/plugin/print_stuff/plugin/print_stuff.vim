@@ -1,3 +1,3 @@
-command! Pg call print_stuff#print_general()
-command! Pf call print_stuff#print_formatting()
-command! Pi call print_stuff#print_indenting()
+command! PrintGeneralOptions call print_stuff#print_general()
+command! PrintFormattingOptions call print_stuff#print_formatting()
+command! PrintIndentingOptions call print_stuff#print_indenting()
