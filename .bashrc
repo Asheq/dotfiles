@@ -3,5 +3,5 @@
 # inhibited by using the --norc option. The --rcfile file option will force
 # bash to read and execute commands from file instead of ~/.bashrc.
 
-. ~/.sh/env.sh
+. ~/.sh/helper_functions.sh
 ssource ~/.bash/interactive.bash

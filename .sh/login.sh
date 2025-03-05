@@ -13,9 +13,6 @@ export MANPAGER='nvim +Man!'
 # For nvm
 export NVM_DIR=~/.nvm
 
-# For Android SDK
-export ANDROID_SDK_ROOT=~/Library/Android/sdk
-
 # Set PATH
 # ==============================================================================
 
@@ -23,20 +20,11 @@ export ANDROID_SDK_ROOT=~/Library/Android/sdk
 pathprepend ~/bin PATH
 pathprepend ~/.local/bin PATH
 
-# Add doom emacs binary
-pathprepend ~/.config/emacs/bin PATH
-
 # Add node binaries
 pathprepend "$NVM_DIR"/versions/node/v20.17.0/bin PATH
 
 # Add cargo binaries
 pathprepend ~/.cargo/bin PATH
-
-# Add Android SDK binaries
-pathprepend "$ANDROID_SDK_ROOT"/tools PATH
-pathprepend "$ANDROID_SDK_ROOT"/tools/bin PATH
-pathprepend "$ANDROID_SDK_ROOT"/emulator PATH
-pathprepend "$ANDROID_SDK_ROOT"/platform-tools PATH
 
 # Add python binaries
 if command -v pyenv >/dev/null 2>&1; then
