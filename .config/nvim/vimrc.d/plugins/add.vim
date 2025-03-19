@@ -38,7 +38,7 @@ Plug 'tpope/vim-apathy'
 " Markdown
 " TODO-L: Fix this:
 " This file: $VIMRUNTIME/ftplugin/markdown.vim
-" executes after this file: ~/.vim/plugged/vim-markdown/ftplugin/markdown.vim
+" executes after this file: ~/.local/share/nvim/plugged/vim-markdown/ftplugin/markdown.vim
 " This means that the $VIMRUNTIME file overrides some things, e.g., mappings
 " set in preservim/vim-markdown.
 " This is pretty bad, right?
