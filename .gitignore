@@ -36,6 +36,9 @@
 !/.config/kitty/kitty.conf
 !/.config/kitty/kitty.theme.conf
 !/.config/kitty/sample-kitty.conf
+!/.config/kitty/os-specific-tweaks.conf
+!/.config/kitty/themes/
+!/.config/kitty/themes/**
 
 !/.config/nvim/
 !/.config/nvim/.projections.json
