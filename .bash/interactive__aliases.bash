@@ -43,5 +43,5 @@ alias notify='kitten notify'
 
 # Terminal theme
 # ==============================================================================
-alias  dark='kitten themes --reload-in=all Gruvbox Dark'
-alias light='kitten themes --reload-in=all Gruvbox Light'
+alias dark='kitty @ set-colors -a ~/.config/kitty/my-themes/dark.conf'
+alias light='kitty @ set-colors -a ~/.config/kitty/my-themes/light.conf'

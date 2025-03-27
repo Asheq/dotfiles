@@ -26,14 +26,16 @@ local function isDarkModeEnabled()
 end
 
 local function getKittyCommand(darkModeEnabled)
-    local gruvboxTheme
+    local theme
     if darkModeEnabled then
-        gruvboxTheme = 'Dark'
+        theme = 'dark'
     else
-        gruvboxTheme = 'Light'
+        theme = 'light'
     end
 
-    return '/Applications/kitty.app/Contents/MacOS/kitten themes --reload-in=all Gruvbox ' .. gruvboxTheme
+    -- TODO: Fix this
+    return '/Applications/kitty.app/Contents/MacOS/kitty @ set-colors --all ~/.config/kitty/my-themes/' ..
+    theme .. '.conf'
 end
 
 local function getNvimCommand(darkModeEnabled)

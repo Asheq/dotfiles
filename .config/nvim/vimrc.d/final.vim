@@ -42,17 +42,17 @@ function! s:on_bg_change()
         highlight! Visual            guibg=#bda9b0
         highlight! CursorLine        guibg=#c6d3cf
         highlight! Substitute        guifg=#ffffff guibg=#b16286
-        " FOR TRANSPARENCY
-        " highlight! Normal            guifg=NvimDarkGrey2 guibg=NONE
-        " highlight! LineNr            guifg=NvimDarkGrey4
+
+        " For transparency
+         highlight! Normal            guifg=NvimDarkGrey2 guibg=NONE
     elseif &background ==# 'dark'
         highlight! StatusLineNC      guifg=NvimLightGrey3 guibg=NvimDarkGrey4
         highlight! Visual            guibg=#45353b
         highlight! CursorLine        guibg=#32413c
         highlight! Substitute        guifg=#ffffff guibg=#b16286
-        " FOR TRANSPARENCY
-        " highlight! Normal            guifg=NvimLightGrey2 guibg=NONE
-        " highlight! LineNr            guifg=NvimLightGrey4
+
+        " For transparency
+         highlight! Normal            guifg=NvimLightGrey2 guibg=NONE
     endif
 endfunction
 
