@@ -34,7 +34,7 @@ local function getKittyCommand(darkModeEnabled)
     end
 
     -- TODO: Fix this
-    return '/Applications/kitty.app/Contents/MacOS/kitty @ set-colors --all ~/.config/kitty/my-themes/' ..
+    return '/Applications/kitty.app/Contents/MacOS/kitten @ set-colors --all ~/.config/kitty/my-themes/' ..
     theme .. '.conf'
 end
 
