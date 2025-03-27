@@ -25,19 +25,6 @@ local function isDarkModeEnabled()
     return result == true
 end
 
-local function getKittyCommand(darkModeEnabled)
-    local theme
-    if darkModeEnabled then
-        theme = 'dark'
-    else
-        theme = 'light'
-    end
-
-    -- TODO: Fix this
-    return '/Applications/kitty.app/Contents/MacOS/kitten @ set-colors --all ~/.config/kitty/my-themes/' ..
-    theme .. '.conf'
-end
-
 local function getNvimCommand(darkModeEnabled)
     local nvimBg
     if darkModeEnabled then
@@ -71,7 +58,6 @@ local respondToThemeChange = function()
     local darkModeEnabled = isDarkModeEnabled()
     print('Theme changed. Dark mode enabled: ' .. tostring(darkModeEnabled))
     executeCommand(getNvimCommand(darkModeEnabled))
-    executeCommand(getKittyCommand(darkModeEnabled))
 end
 
 local notificationName = 'AppleInterfaceThemeChangedNotification'

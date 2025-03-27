@@ -40,8 +40,3 @@ alias rnd='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
 # ==============================================================================
 alias bell=$'osascript -e \'display notification "Ring ring ring!"\''
 alias notify='kitten notify'
-
-# Terminal theme
-# ==============================================================================
-alias dark='kitty @ set-colors -a ~/.config/kitty/my-themes/dark.conf'
-alias light='kitty @ set-colors -a ~/.config/kitty/my-themes/light.conf'
