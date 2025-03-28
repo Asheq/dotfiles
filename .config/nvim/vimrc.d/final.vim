@@ -44,7 +44,7 @@ function! s:on_bg_change()
         highlight! Substitute        guifg=#ffffff guibg=#b16286
 
         " For transparency
-         "highlight! Normal            guifg=NvimDarkGrey2 guibg=NONE
+         highlight! Normal            guifg=NvimDarkGrey2 guibg=NONE
     elseif &background ==# 'dark'
         highlight! StatusLineNC      guifg=NvimLightGrey3 guibg=NvimDarkGrey4
         highlight! Visual            guibg=#45353b
@@ -52,7 +52,7 @@ function! s:on_bg_change()
         highlight! Substitute        guifg=#ffffff guibg=#b16286
 
         " For transparency
-         "highlight! Normal            guifg=NvimLightGrey2 guibg=NONE
+         highlight! Normal            guifg=NvimLightGrey2 guibg=NONE
     endif
 endfunction
 
