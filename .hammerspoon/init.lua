@@ -1,6 +1,7 @@
 -- This file was originally inspired by:
 -- https://github.com/jesse-c/dotfiles/blob/main/home/dot_hammerspoon/appearance.lua
--- TODO: Do not require passing full paths for shell commands like `kitty`, `nvr`, and `nvim`
+-- NOTE: It used to contain code to auto-change the display mode for kitty
+-- until that became built into kitty itself.
 
 local function map(tbl, func)
     local result = {}
