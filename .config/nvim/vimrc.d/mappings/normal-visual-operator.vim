@@ -15,6 +15,9 @@ nnoremap          yp               :ec "p = full path\nh = head\nt = tail"<Enter
 
 " Complete
 " ----------------------------------------------------------------------------
+nnoremap <silent> <leader>v        'V:exe 'help ' . expand('%:t')<Enter>'V
+
+
 nnoremap <silent> <leader>o        :sil !open '%:h'<Enter><Enter>
 
 nnoremap <silent> <leader>s        :sil Git<Enter>
