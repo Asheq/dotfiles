@@ -102,9 +102,10 @@ function! vimrc#get_statusline()
 endfunction
 
 function! vimrc#get_statusline_file_name()
-    " TODO-M: filename in statusline should be relative to the window's own
-    " current working directory, not the active window's current working
-    " directory.
+    " NOTE: The filename displayed in a window's statusline is relative to the
+    " _active_ window's working directory. I might want to change this to
+    " always be relative to working directory of the window the statusline
+    " belongs to. Currently, I don't care.
     let filename = expand('%:p:~:.')
 
     if filename != ""

@@ -15,6 +15,9 @@ set breakindentopt=list:-1
 
 set list
 " let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,eol:🮦,extends:➤,precedes:⮜'
+" let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,eol:🮮,extends:➤,precedes:⮜'
+" let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,eol:˼,extends:➤,precedes:⮜'
+" let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,eol:◇,extends:➤,precedes:⮜'
 let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,extends:➤,precedes:⮜'
 
 let &fillchars='foldopen:▽,foldclose:▶,diff:╱,lastline:➤'
@@ -86,8 +89,6 @@ if exists('g:neovide')
     let g:neovide_theme = 'auto'
     let g:neovide_input_macos_option_key_is_meta = 'both'
     let g:neovide_cursor_animation_length = 0
-    " TODO: Open bug report on Neovide: Light box drawing characters like 🮦 are rendering too thick.
-    set listchars+=eol:˼
 endif
 
 " Character reference
