@@ -42,7 +42,6 @@ Plug 'tpope/vim-apathy'
 " This means that the $VIMRUNTIME file overrides some things, e.g., mappings
 " set in preservim/vim-markdown.
 " This is pretty bad, right?
-" Just wait until I migrate to Lua and lua plugin manager?
 " Also, it's best to remove this plugin, anyway. It seems unmaintained
 " and does a lot strange things like force overwrite fold method.
 Plug 'preservim/vim-markdown'
