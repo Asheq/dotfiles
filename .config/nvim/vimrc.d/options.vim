@@ -12,12 +12,10 @@ set linebreak
 let &showbreak='↪'
 set breakindent
 set breakindentopt=list:-1
+set smoothscroll
 
 set list
 " let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,eol:🮦,extends:➤,precedes:⮜'
-" let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,eol:🮮,extends:➤,precedes:⮜'
-" let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,eol:˼,extends:➤,precedes:⮜'
-" let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,eol:◇,extends:➤,precedes:⮜'
 let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,extends:➤,precedes:⮜'
 
 let &fillchars='foldopen:▽,foldclose:▶,diff:╱,lastline:➤'

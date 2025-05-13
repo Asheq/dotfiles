@@ -71,6 +71,7 @@ luafile <sfile>:h/final.lua
 
 " Run final.local.vim if it exists
 " ============================================================================
-if filereadable(expand('<sfile>:h') . '/final.local.vim')
-    source <sfile>:h/final.local.vim
+let s:final_local_file = expand('<sfile>:h') . '/final.local.vim'
+if filereadable(s:final_local_file)
+    execute 'source ' s:final_local_file
 endif
