@@ -1,0 +1,9 @@
+{
+    "name": "com.asheqimran.open_in_firefox",
+    "description": "Launches Firefox with a URL",
+    "path": "/Users/asheq/bin/open-in-firefox-native/open_in_firefox.py",
+    "type": "stdio",
+    "allowed_origins": [
+        "chrome-extension://ipggnbgelnnebbcojboflicehbpikbem/"
+    ]
+}
