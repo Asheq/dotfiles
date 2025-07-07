@@ -46,6 +46,9 @@
     "curtainChangeSize" : {
       "int" : 0
     },
+    "cycleSizesIsChanged" : {
+      "bool" : false
+    },
     "disabledApps" : {
 
     },
@@ -157,6 +160,9 @@
     "screenEdgeGapTopNotch" : {
       "float" : 0
     },
+    "selectedCycleSizes" : {
+      "int" : 0
+    },
     "shortEdgeSnapAreaSize" : {
       "float" : 145
     },
@@ -232,15 +238,11 @@
   },
   "shortcuts" : {
     "bottomHalf" : {
-      "keyCode" : 38,
-      "modifierFlags" : 786432
-    },
-    "center" : {
-      "keyCode" : 46,
+      "keyCode" : 125,
       "modifierFlags" : 786432
     },
     "leftHalf" : {
-      "keyCode" : 4,
+      "keyCode" : 123,
       "modifierFlags" : 786432
     },
     "maximize" : {
@@ -251,12 +253,8 @@
       "keyCode" : 45,
       "modifierFlags" : 786432
     },
-    "restore" : {
-      "keyCode" : 51,
-      "modifierFlags" : 786432
-    },
     "rightHalf" : {
-      "keyCode" : 37,
+      "keyCode" : 124,
       "modifierFlags" : 786432
     },
     "toggleTodo" : {
@@ -264,9 +262,9 @@
       "modifierFlags" : 786432
     },
     "topHalf" : {
-      "keyCode" : 40,
+      "keyCode" : 126,
       "modifierFlags" : 786432
     }
   },
-  "version" : "86"
+  "version" : "94"
 }
