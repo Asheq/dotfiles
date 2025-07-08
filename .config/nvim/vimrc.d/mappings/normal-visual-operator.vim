@@ -15,7 +15,7 @@ nnoremap          yp               :ec "p = full path\nh = head\nt = tail"<Enter
 
 " Complete
 " ----------------------------------------------------------------------------
-nnoremap <silent> <leader>v        'V:exe 'help ' . expand('%:t')<Enter>'V
+nnoremap <silent> <leader>V        'V:exe 'help ' . expand('%:t')<Enter>'V
 
 nnoremap <silent> <C-f>            @=winheight(0) - 1 . "\<lt>C-e>"<Return>
 nnoremap <silent> <C-b>            @=winheight(0) - 1 . "\<lt>C-y>"<Return>
