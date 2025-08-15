@@ -20,6 +20,7 @@ Plug 'machakann/vim-sandwich'
 " ----------------------------------------------------------------------------
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'github/copilot.vim'
 
 " Language Server, Treesitter
 " ----------------------------------------------------------------------------
