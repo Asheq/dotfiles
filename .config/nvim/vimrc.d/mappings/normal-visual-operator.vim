@@ -10,8 +10,10 @@ nnoremap          <leader>r        :redi @r <Bar> sil  <Bar> redi END<S-Left><S-
 nnoremap          <leader>t        :tab<C-z><C-p>
 
 nnoremap          <leader>c        :CopilotChat<C-z><C-p>
+xnoremap          <leader>c        :CopilotChat<C-z><C-p>
 
 nnoremap          <leader>/        :mat Match //<Left>
+xnoremap          <leader>/        :mat Match //<Left>
 
 nnoremap          yp               :ec "p = full path\nh = head\nt = tail"<Enter>:let @* = expand('%:')<Left><Left>
 
@@ -35,14 +37,13 @@ nnoremap <silent> <leader>h        :Inspect<Enter>
 
 nnoremap <silent> <leader>j        :ju<Enter>
 
-" nnoremap <silent> <leader>c        :changes<Enter>
-
 nnoremap <silent> <C-g>            :cal vimrc#ctrl_g_with_scrollbar()<Enter>
 
-" This copies the selected text into the system clipboard as rich text so that
-" when it's pasted in certain applications, the application shows the
-" formatted text rather than the raw text.
-xnoremap  <silent> <leader>c       :w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
+" Copy markdown text as rich text into system clipboard
+nnoremap  <silent> <leader>m       :w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
+xnoremap  <silent> <leader>m       :%w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
+
+" nnoremap <silent> <leader>c        :changes<Enter>
 
 " Normal and visual mode command typing helpers
 " ============================================================================
