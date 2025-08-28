@@ -20,13 +20,12 @@ augroup END
 
 " Highlight Overrides
 " ============================================================================
-highlight! link CocMenuSel   PmenuSel
-highlight! link CocListLine  PmenuSel
 
-highlight! link htmlH1       CocListBlackGreen
-highlight! link htmlH2       CocListBlackBlue
-highlight! link htmlH3       CocListBlackWhite
-highlight! link htmlH4       CocListBlackGrey
+" TODO: Remove comments once you verified these are not desired anymore
+" highlight! link htmlH1       CocListBlackGreen
+" highlight! link htmlH2       CocListBlackBlue
+" highlight! link htmlH3       CocListBlackWhite
+" highlight! link htmlH4       CocListBlackGrey
 
 highlight! link MatchParen   CocBold
 
@@ -40,16 +39,16 @@ function! s:on_bg_change()
     if &background ==# 'light'
         highlight! StatusLineNC      guifg=NvimDarkGrey3 guibg=NvimLightGrey4
         highlight! Visual            guibg=#bda9b0
-        highlight! CursorLine        guibg=#c6d3cf
         highlight! Substitute        guifg=#ffffff guibg=#b16286
+        " highlight! CursorLine        guibg=#c6d3cf
 
         " For transparency
          highlight! Normal            guifg=NvimDarkGrey2 guibg=NONE
     elseif &background ==# 'dark'
         highlight! StatusLineNC      guifg=NvimLightGrey3 guibg=NvimDarkGrey4
         highlight! Visual            guibg=#45353b
-        highlight! CursorLine        guibg=#32413c
         highlight! Substitute        guifg=#ffffff guibg=#b16286
+        " highlight! CursorLine        guibg=#32413c
 
         " For transparency
          highlight! Normal            guifg=NvimLightGrey2 guibg=NONE
