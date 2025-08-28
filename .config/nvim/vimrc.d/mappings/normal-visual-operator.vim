@@ -9,6 +9,8 @@ nnoremap          <leader>r        :redi @r <Bar> sil  <Bar> redi END<S-Left><S-
 
 nnoremap          <leader>t        :tab<C-z><C-p>
 
+nnoremap          <leader>c        :CopilotChat<C-z><C-p>
+
 nnoremap          <leader>/        :mat Match //<Left>
 
 nnoremap          yp               :ec "p = full path\nh = head\nt = tail"<Enter>:let @* = expand('%:')<Left><Left>
@@ -33,7 +35,7 @@ nnoremap <silent> <leader>h        :Inspect<Enter>
 
 nnoremap <silent> <leader>j        :ju<Enter>
 
-nnoremap <silent> <leader>c        :changes<Enter>
+" nnoremap <silent> <leader>c        :changes<Enter>
 
 nnoremap <silent> <C-g>            :cal vimrc#ctrl_g_with_scrollbar()<Enter>
 
