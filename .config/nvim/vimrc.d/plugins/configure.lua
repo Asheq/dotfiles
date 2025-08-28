@@ -1,6 +1,6 @@
-local ok, oil = pcall(require, "oil")
+local oil_ok, oil = pcall(require, "oil")
 
-if ok then
+if oil_ok then
     oil.setup({
         default_file_explorer = true,
         view_options = {
@@ -43,4 +43,10 @@ if ok then
     })
 
     vim.keymap.set("n", "-", "<CMD>Oil<Return>", { desc = "Open parent directory" })
+end
+
+local CopilotChat_ok, CopilotChat = pcall(require, "CopilotChat")
+
+if CopilotChat_ok then
+    CopilotChat.setup()
 end

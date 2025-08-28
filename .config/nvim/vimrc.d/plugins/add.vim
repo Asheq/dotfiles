@@ -10,6 +10,7 @@ Plug 'stevearc/oil.nvim'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-projectionist'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+Plug 'nvim-lua/plenary.nvim' " Required for CopilotChat.nvim
 
 " Motions, Operators, Text objects
 " ---------------------------------------------------------------------------
@@ -21,6 +22,7 @@ Plug 'machakann/vim-sandwich'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'github/copilot.vim'
+Plug 'CopilotC-Nvim/CopilotChat.nvim'
 
 " Language Server, Treesitter
 " ----------------------------------------------------------------------------
