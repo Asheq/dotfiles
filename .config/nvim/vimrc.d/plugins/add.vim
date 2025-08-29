@@ -10,7 +10,7 @@ Plug 'stevearc/oil.nvim'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-projectionist'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
-Plug 'nvim-lua/plenary.nvim' " Required for CopilotChat.nvim
+Plug 'nvim-lua/plenary.nvim' " Required for CopilotChat.nvim and neogit
 
 " Motions, Operators, Text objects
 " ---------------------------------------------------------------------------
@@ -19,10 +19,17 @@ Plug 'machakann/vim-sandwich'
 
 " git, GitHub
 " ----------------------------------------------------------------------------
+" Basic git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+
+" Copilot
 Plug 'github/copilot.vim'
 Plug 'CopilotC-Nvim/CopilotChat.nvim'
+
+" New git plugins to explore
+Plug 'NeogitOrg/neogit'
+Plug 'sindrets/diffview.nvim'
 
 " Language Server, Treesitter
 " ----------------------------------------------------------------------------
@@ -32,6 +39,13 @@ endif
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-context'
+
+" Fuzzy finder/picker
+" ---------------------------------------------------------------------------
+" Plug 'nvim-telescope/telescope.nvim',
+" Plug 'ibhagwan/fzf-lua',
+" Plug 'echasnovski/mini.pick',
+" Plug 'folke/snacks.nvim',
 
 " Filetype plugins
 " ----------------------------------------------------------------------------
