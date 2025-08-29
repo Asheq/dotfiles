@@ -20,12 +20,8 @@ augroup END
 
 " Highlight Overrides
 " ============================================================================
-
-" TODO: Remove comments once you verified these are not desired anymore
-" highlight! link htmlH1       CocListBlackGreen
-" highlight! link htmlH2       CocListBlackBlue
-" highlight! link htmlH3       CocListBlackWhite
-" highlight! link htmlH4       CocListBlackGrey
+highlight! link CocMenuSel   PmenuSel
+highlight! link CocListLine  PmenuSel
 
 highlight! link MatchParen   CocBold
 

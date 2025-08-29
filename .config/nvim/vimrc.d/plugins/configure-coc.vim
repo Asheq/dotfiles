@@ -16,12 +16,13 @@ set updatetime=300
 " diagnostics appear/become resolved
 set signcolumn=yes
 
+" NOTE: <TAB> tends to be overused by plugins, so commenting this out. Use <C-n> and
+" <C-p> instead for navigating the completion menu.
 " Use tab for trigger completion with characters ahead and navigate
 " NOTE: There's always complete item selected by default, you may want to enable
 " no select by `"suggest.noselect": true` in your configuration file
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config
-" I don't want this to interfere with copilot.vim
 "inoremap <silent><expr> <TAB>
 "      \ coc#pum#visible() ? coc#pum#next(1) :
 "      \ CheckBackspace() ? "\<Tab>" :
