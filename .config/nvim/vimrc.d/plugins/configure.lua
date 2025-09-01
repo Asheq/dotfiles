@@ -55,9 +55,7 @@ local neogit_ok, neogit = pcall(require, "neogit")
 
 if neogit_ok then
     neogit.setup()
-    -- neogit.setup({
-    --     integrations = {
-    --         diffview = 1,
-    --     }
-    -- })
 end
+
+vim.g.copilot_no_tab_map = true
+vim.keymap.set('i', '<C-a>', 'copilot#Accept("")', { expr = true, replace_keycodes = false })

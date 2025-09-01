@@ -1,6 +1,6 @@
 local winCharAssoc = {}
 
-hs.hotkey.bind({ "ctrl", "alt" }, "0", function()
+hs.hotkey.bind({ "cmd", "alt" }, "0", function()
     local win = hs.window.focusedWindow()
     local button, input = hs.dialog.textPrompt("Enter a character", "", "", "OK", "Cancel")
 
@@ -14,7 +14,7 @@ hs.hotkey.bind({ "ctrl", "alt" }, "0", function()
 
         table.insert(winCharAssoc, { char, win })
 
-        hs.hotkey.bind({ "ctrl", "alt" }, char, function()
+        hs.hotkey.bind({ "cmd", "alt" }, char, function()
             for _, item in ipairs(winCharAssoc) do
                 if item[1] == char then
                     item[2]:focus()
@@ -23,7 +23,7 @@ hs.hotkey.bind({ "ctrl", "alt" }, "0", function()
             end
         end)
 
-        hs.alert.show("You can now use Ctrl+Alt+" .. string.upper(char) .. " to focus this window " .. win:title() .. " (" .. win:id() .. ")")
+        hs.alert.show("You can now use Cmd+Alt+" .. string.upper(char) .. " to focus this window " .. win:title() .. " (" .. win:id() .. ")")
     else
         hs.alert.show("Cancelled or empty input")
     end

@@ -105,11 +105,11 @@ map               <A-k>            <Plug>(NavigateBlockUp)
 
 " Duplicate keys (* = used in mapping already, ! = do not map or map to self only)
 "   Normal-mode
-"       h! <Left>* CTRL-H* <BS>*
+"       h! <Left>* <C-h>* <BS>*
 "       l! <Right>* <Space>*
-"       j! <Down> CTRL-J CTRL-N*
-"       k! <Up> CTRL-P*
-"       <Return>! + CTRL-M
+"       j! <Down> <C-j> <C-n>*
+"       k! <Up> <C-p>*
+"       <Return>! + <C-m>
 "       cc! S
 "   Visual-mode(char)
 "       d! x
