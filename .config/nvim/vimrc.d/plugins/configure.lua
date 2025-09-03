@@ -48,7 +48,17 @@ end
 local CopilotChat_ok, CopilotChat = pcall(require, "CopilotChat")
 
 if CopilotChat_ok then
-    CopilotChat.setup()
+    CopilotChat.setup(
+        {
+            mappings = {
+                reset = {
+                    normal = "",
+                    insert = "",
+                },
+            },
+            -- Other config options go here...
+        }
+    )
 end
 
 local neogit_ok, neogit = pcall(require, "neogit")

@@ -28,24 +28,20 @@ highlight! link MatchParen   CocBold
 highlight! link WinBar       StatusLine
 highlight! link WinBarNC     StatusLineNC
 
-highlight! link TabLine      StatusLineNC
 highlight! link TabLineSel   StatusLine
+highlight! link TabLine      StatusLineNC
 
 function! s:on_bg_change()
     if &background ==# 'light'
-        highlight! StatusLineNC      guifg=NvimDarkGrey3 guibg=NvimLightGrey4
         highlight! Visual            guibg=#bda9b0
         highlight! Substitute        guifg=#ffffff guibg=#b16286
-        " highlight! CursorLine        guibg=#c6d3cf
-
+        highlight! CursorLine        guibg=#c6d3cf
         " For transparency
          highlight! Normal            guifg=NvimDarkGrey2 guibg=NONE
     elseif &background ==# 'dark'
-        highlight! StatusLineNC      guifg=NvimLightGrey3 guibg=NvimDarkGrey4
         highlight! Visual            guibg=#45353b
         highlight! Substitute        guifg=#ffffff guibg=#b16286
-        " highlight! CursorLine        guibg=#32413c
-
+        highlight! CursorLine        guibg=#32413c
         " For transparency
          highlight! Normal            guifg=NvimLightGrey2 guibg=NONE
     endif
