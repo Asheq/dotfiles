@@ -36,14 +36,20 @@ function! s:on_bg_change()
         highlight! Visual            guibg=#bda9b0
         highlight! Substitute        guifg=#ffffff guibg=#b16286
         highlight! CursorLine        guibg=#c6d3cf
-        " For transparency
-         highlight! Normal            guifg=NvimDarkGrey2 guibg=NONE
+
+        " For transparency in terminal
+        if !exists('g:neovide')
+            highlight! Normal            guifg=NvimDarkGrey2 guibg=NONE
+        endif
     elseif &background ==# 'dark'
         highlight! Visual            guibg=#45353b
         highlight! Substitute        guifg=#ffffff guibg=#b16286
         highlight! CursorLine        guibg=#32413c
-        " For transparency
-         highlight! Normal            guifg=NvimLightGrey2 guibg=NONE
+
+        " For transparency in terminal
+        if !exists('g:neovide')
+            highlight! Normal            guifg=NvimLightGrey2 guibg=NONE
+        endif
     endif
 endfunction
 

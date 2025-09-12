@@ -42,6 +42,7 @@ if oil_ok then
         },
     })
 
+    -- TODO: Move to mappings file
     vim.keymap.set("n", "-", "<CMD>Oil<Return>", { desc = "Open parent directory" })
 end
 
@@ -56,7 +57,6 @@ if CopilotChat_ok then
                     insert = "",
                 },
             },
-            -- Other config options go here...
         }
     )
 end
@@ -68,4 +68,14 @@ if neogit_ok then
 end
 
 vim.g.copilot_no_tab_map = true
+
+-- TODO: Move to mappings file
 vim.keymap.set('i', '<C-a>', 'copilot#Accept("")', { expr = true, replace_keycodes = false })
+
+local snacks_ok, snacks = pcall(require, "snacks")
+
+if snacks_ok then
+    snacks.setup({
+        picker = { enabled = true },
+    })
+end

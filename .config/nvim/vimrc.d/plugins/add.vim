@@ -2,15 +2,6 @@
 " ----------------------------------------------------------------------------
 call plug#begin()
 
-" Other
-" ---------------------------------------------------------------------------
-Plug 'gcavallanti/vim-noscrollbar'
-Plug 'tpope/vim-characterize'
-Plug 'tpope/vim-projectionist'
-Plug 'azabiong/vim-highlighter'
-Plug 'stevearc/oil.nvim'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
-
 " Libraries
 " ---------------------------------------------------------------------------
 Plug 'nvim-lua/plenary.nvim' " Required for CopilotChat.nvim and neogit
@@ -43,12 +34,15 @@ endif
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-context'
 
-" Fuzzy finder/picker
+" Other
 " ---------------------------------------------------------------------------
-" Plug 'nvim-telescope/telescope.nvim',
-" Plug 'ibhagwan/fzf-lua',
-" Plug 'echasnovski/mini.pick',
-" Plug 'folke/snacks.nvim',
+Plug 'gcavallanti/vim-noscrollbar'
+Plug 'tpope/vim-characterize'
+Plug 'tpope/vim-projectionist'
+Plug 'azabiong/vim-highlighter'
+Plug 'stevearc/oil.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+Plug 'folke/snacks.nvim'
 
 " Filetype plugins
 " ----------------------------------------------------------------------------
