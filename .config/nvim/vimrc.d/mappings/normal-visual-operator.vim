@@ -12,20 +12,11 @@ nnoremap          <leader>t        :tab<C-z><C-p>
 nnoremap          <leader>c        :CopilotChat<C-z><C-p>
 xnoremap          <leader>c        :CopilotChat<C-z><C-p>
 
-nnoremap          <leader>/        :mat Match //<Left>
-xnoremap          <leader>/        :mat Match //<Left>
-
-nnoremap          yp               :ec "p = full path\nh = head\nt = tail"<Enter>:let @* = expand('%:')<Left><Left>
+nnoremap          yp               :ec "p = full path\nh = head\nt = tail\n"<Enter>:let @* = expand('%:')<Left><Left>
 
 " Complete
 " ----------------------------------------------------------------------------
 nnoremap <silent> <leader>V        'V:exe 'help ' . expand('%:t')<Enter>'V
-
-nnoremap <silent> <C-f>            @=winheight(0) - 1 . "\<lt>C-e>"<Return>
-nnoremap <silent> <C-b>            @=winheight(0) - 1 . "\<lt>C-y>"<Return>
-
-nnoremap <silent> <C-d>            @=winheight(0) / 2 - 1 . "\<lt>C-e>"<Return>
-nnoremap <silent> <C-u>            @=winheight(0) / 2 - 1 . "\<lt>C-y>"<Return>
 
 nnoremap <silent> <leader>o        :sil !open '%:h'<Enter><Enter>
 
@@ -39,14 +30,18 @@ nnoremap <silent> <leader>j        :ju<Enter>
 
 nnoremap <silent> <C-g>            :cal vimrc#ctrl_g_with_scrollbar()<Enter>
 
-" Copy markdown text as rich text into system clipboard
-nnoremap  <silent> <leader>m       :w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
-xnoremap  <silent> <leader>m       :%w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
-
 " nnoremap <silent> <leader>c        :changes<Enter>
 
 " Normal and visual mode command typing helpers
 " ============================================================================
+
+" Scroll
+" ----------------------------------------------------------------------------
+nnoremap <silent> <C-f>            @=winheight(0) - 1 . "\<lt>C-e>"<Enter>
+nnoremap <silent> <C-b>            @=winheight(0) - 1 . "\<lt>C-y>"<Enter>
+
+nnoremap <silent> <C-d>            @=winheight(0) / 2 - 1 . "\<lt>C-e>"<Enter>
+nnoremap <silent> <C-u>            @=winheight(0) / 2 - 1 . "\<lt>C-y>"<Enter>
 
 " Yank and Paste
 " ----------------------------------------------------------------------------
@@ -58,7 +53,7 @@ nnoremap          <leader>p        "*p
 nnoremap          <leader>P        "*P
 xnoremap          <leader>p        "*p
 
-nnoremap          <C-h>            `[v`]
+nnoremap          gh               `[v`]
 
 " Move up and down through wrapped lines
 " ----------------------------------------------------------------------------
@@ -76,21 +71,30 @@ nnoremap          <S-Right>        zO
 
 " Text Operations
 " ============================================================================
+" View definition
 nnoremap <silent> <leader>d        :cal vimrc#define(expand('<cword>'))<Enter>
 xnoremap <silent> <leader>d        :<C-u>cal vimrc#define(vimrc#get_selection_text())<Enter>
 
+" View browser search
 nnoremap <silent> <leader>b        :cal vimrc#browse(expand('<cword>'))<Enter>
 xnoremap <silent> <leader>b        :<C-u>cal vimrc#browse(vimrc#get_selection_text())<Enter>
 
+" Change speech rate
 let g:say_speed = 250
 nnoremap <silent> <leader><Left>   :let g:say_speed -= 50<Enter>:echo g:say_speed<Enter>
 nnoremap <silent> <leader><Right>  :let g:say_speed += 50<Enter>:echo g:say_speed<Enter>
 
+" Read aloud
 nnoremap <silent> <leader>k        :execute 'silent .w !say -r ' . g:say_speed<Enter>
 xnoremap <silent> <leader>k        :<C-u>execute 'silent !echo ' . shellescape(vimrc#get_selection_text(), 1) . ' <Bar> say -r ' . g:say_speed<Enter>
 
+" Read aloud and highlight text
 nnoremap <silent> <leader>i        :cal vimrc#read_aloud(getline('.'))<Enter>
 xnoremap <silent> <leader>i        :<C-u>cal vimrc#read_aloud(vimrc#get_selection_text())<Enter>
+
+" Copy markdown text as rich text into system clipboard
+nnoremap  <silent> <leader>m       :w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
+xnoremap  <silent> <leader>m       :%w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
 
 " Motions
 " ============================================================================
@@ -109,7 +113,7 @@ map               <A-k>            <Plug>(NavigateBlockUp)
 "       l! <Right>* <Space>*
 "       j! <Down> <C-j> <C-n>*
 "       k! <Up> <C-p>*
-"       <Return>! + <C-m>
+"       <Enter>! + <C-m>
 "       cc! S
 "   Visual-mode(char)
 "       d! x
