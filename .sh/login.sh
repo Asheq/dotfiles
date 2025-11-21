@@ -21,7 +21,7 @@ pathprepend ~/bin PATH
 pathprepend ~/.local/bin PATH
 
 # Add node binaries
-pathprepend "$NVM_DIR"/versions/node/v20.17.0/bin PATH
+pathprepend "$NVM_DIR"/versions/node/v24.11.1/bin PATH
 
 # Add cargo binaries
 pathprepend ~/.cargo/bin PATH
