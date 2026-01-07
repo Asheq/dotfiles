@@ -14,3 +14,9 @@ inoremap <expr> <A-t> strftime('%Y-%m-%dT%TZ')
 "       <Enter>! <C-j>* <C-m>
 "       <C-v>! <C-q>
 "       <C-l>
+
+" In lua, this would be:
+" vim.keymap.set('i', '<C-a>', 'copilot#Accept("")', { expr = true, replace_keycodes = false })
+inoremap <expr> <C-a>              copilot#Accept("")
+inoremap        <C-q>              <Plug>(copilot-accept-line)
+inoremap        <C-z>              <Plug>(copilot-accept-word)

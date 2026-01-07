@@ -34,10 +34,6 @@ nnoremap <silent> <C-g>            :cal vimrc#ctrl_g_with_scrollbar()<Enter>
 " vim.keymap.set("n", "-", "<CMD>Oil<Return>", { desc = "Open parent directory" })
 nnoremap <silent> -                :Oil<Enter>
 
-" In lua, this would be:
-" vim.keymap.set('i', '<C-a>', 'copilot#Accept("")', { expr = true, replace_keycodes = false })
-inoremap <expr> <C-a>              copilot#Accept("")
-
 " nnoremap <silent> <leader>c        :changes<Enter>
 
 " Normal and visual mode command typing helpers
