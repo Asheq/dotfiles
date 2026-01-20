@@ -72,3 +72,8 @@ if CopilotChat_ok then
 end
 
 vim.g.copilot_no_tab_map = true
+
+local livepreview_config_ok, livepreview_config = pcall(require, "livepreview.config")
+if livepreview_config_ok then
+	livepreview_config.set()
+end

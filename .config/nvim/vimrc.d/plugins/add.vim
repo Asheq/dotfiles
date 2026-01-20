@@ -41,7 +41,7 @@ Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-projectionist'
 Plug 'azabiong/vim-highlighter'
 Plug 'stevearc/oil.nvim'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+Plug 'brianhuster/live-preview.nvim'
 Plug 'folke/snacks.nvim'
 
 " Filetype plugins
