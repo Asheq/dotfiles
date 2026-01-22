@@ -2,62 +2,44 @@
 " ----------------------------------------------------------------------------
 call plug#begin()
 
-" Libraries
+" Core Libraries
 " ---------------------------------------------------------------------------
-Plug 'nvim-lua/plenary.nvim' " Required for CopilotChat.nvim and neogit
+Plug 'nvim-lua/plenary.nvim'
 
-" Motions, Operators, Text objects
+" General Editing + Motions/Operators/Text objects
 " ---------------------------------------------------------------------------
 Plug 'jeetsukumaran/vim-indentwise'
 Plug 'machakann/vim-sandwich'
 
-" git, GitHub
+" Git Integration
 " ----------------------------------------------------------------------------
-" Basic git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
-" Copilot
-Plug 'github/copilot.vim'
-Plug 'CopilotC-Nvim/CopilotChat.nvim'
-
-" New git plugins to explore
-Plug 'NeogitOrg/neogit'
-Plug 'sindrets/diffview.nvim'
-
-" Language Server, Treesitter
+" Code Intelligence
 " ----------------------------------------------------------------------------
+" Treesitter
+" NOTE: Treesitter incrementally parses code in real-time to maintain a syntax tree, which is used to provide improved syntax highlighting, code folding, indentation, and structural navigation/editing, etc. (compared to traditional regex-based methods).
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-context'
+
+" LSP
+" NOTE: Language servers handle language intelligence outside the editor to provide completion, diagnostics, go-to-definition, find references, hover documentation, code actions (refactoring, fixes), formatting, etc. via a standardized protocol (LSP).
 if executable('node')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/nvim-treesitter-context'
+" AI/Assistants
+" NOTE: AI/Assistants attempt to understand your codebase to generate code, suggest code, explain code, and automate tasks. They are also useful useful for generating documentation, code review, and learning.
+Plug 'github/copilot.vim'
+Plug 'CopilotC-Nvim/CopilotChat.nvim'
 
-" Other
-" ---------------------------------------------------------------------------
-Plug 'gcavallanti/vim-noscrollbar'
-Plug 'tpope/vim-characterize'
-Plug 'tpope/vim-projectionist'
-Plug 'azabiong/vim-highlighter'
-Plug 'stevearc/oil.nvim'
-Plug 'brianhuster/live-preview.nvim'
-Plug 'folke/snacks.nvim'
-
-" Filetype plugins
+" Filetype Plugins
 " ----------------------------------------------------------------------------
 " Various
 Plug 'tpope/vim-apathy'
 
 " Markdown
-" TODO-L: Fix this:
-" This file: $VIMRUNTIME/ftplugin/markdown.vim
-" executes after this file: ~/.local/share/nvim/plugged/vim-markdown/ftplugin/markdown.vim
-" This means that the $VIMRUNTIME file overrides some things, e.g., mappings
-" set in preservim/vim-markdown.
-" This is pretty bad, right?
-" Also, it's best to remove this plugin, anyway. It seems unmaintained
-" and does a lot strange things like force overwrite fold method.
 Plug 'preservim/vim-markdown'
 
 " JavaScript
@@ -74,6 +56,21 @@ Plug 'peitalin/vim-jsx-typescript'
 
 " Git
 Plug 'tpope/vim-git'
+
+" Other Quality of Life
+" ---------------------------------------------------------------------------
+Plug 'gcavallanti/vim-noscrollbar'
+Plug 'stevearc/oil.nvim'
+Plug 'tpope/vim-characterize'
+Plug 'tpope/vim-projectionist'
+Plug 'azabiong/vim-highlighter'
+Plug 'brianhuster/live-preview.nvim'
+Plug 'folke/snacks.nvim'
+
+" Experimental/To Review
+" ---------------------------------------------------------------------------
+Plug 'NeogitOrg/neogit'
+Plug 'sindrets/diffview.nvim'
 
 " End
 " ----------------------------------------------------------------------------

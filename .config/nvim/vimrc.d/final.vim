@@ -20,8 +20,8 @@ augroup END
 
 " Highlight Overrides
 " ============================================================================
+" TODO-L: Submit issue to coc.nvim: CocMenuSel is difficult to read when bg=light
 highlight! link CocMenuSel   PmenuSel
-highlight! link CocListLine  PmenuSel
 
 highlight! link MatchParen   CocBold
 

@@ -15,7 +15,7 @@ set breakindentopt=list:-1
 set smoothscroll
 
 set list
-"let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,extends:➤,precedes:⮜,eol:🮦'
+" let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,extends:➤,precedes:⮜,eol:🮦'
 let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,extends:➤,precedes:⮜'
 
 let &fillchars='foldopen:▽,foldclose:▶,diff:╱,lastline:➤'
@@ -75,27 +75,23 @@ set notimeout
 " 20. Command line editing
 " ----------------------------------------------------------------------------
 set wildcharm=<C-z>
-let &wildignore='.DS_Store,.tmp.drivedownload,.tmp.driveupload,Icon'
+let &wildignore='.DS_Store,.tmp.drivedownload,.tmp.driveupload'
 
 " 22. Running make and jumping to errors
 " ----------------------------------------------------------------------------
 if executable('rg')
     set grepprg=rg\ --vimgrep
-    set grepformat^=%f:%l:%c:%m
-    set grepformat+=%f
 endif
 
 " GUI options
 " ----------------------------------------------------------------------------
-" NOTE: Neovide doesn't render "PragmataPro Mono" correctly, for some reason
-" set guifont=Iosevka\ Term:h20
-set guifont=PragmataPro\ Mono\ Liga:h22
-
-" set guicursor=a:blinkwait100-blinkon600-blinkoff500,n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
-
+set guifont=PragmataPro\ Mono:h22
 set linespace=5
 
 if exists('g:neovide')
+	" NOTE: Neovide doesn't render "PragmataPro Mono" correctly, for some reason
+	set guifont=PragmataPro\ Mono\ Liga:h22
+
     let g:neovide_theme = 'auto'
     let g:neovide_input_macos_option_key_is_meta = 'both'
     let g:neovide_cursor_animation_length = 0
