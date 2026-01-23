@@ -32,9 +32,9 @@
     - Summarize
     - Make List
     - Make Table
+
 - Expand/shrink selections semantically
 - Emmet expansion
 - Multi-selection/multi-cursor
 - Snippets
-
 - Debugging
