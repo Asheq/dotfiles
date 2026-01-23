@@ -8,7 +8,12 @@
 	- Use for syntax highlighting, code folding, and indentation
 	- Use for structural navigation/editing
 
-- Learn how to use the full power of the snacks.picker: https://github.com/folke/snacks.nvim/blob/main/docs/picker.md
+- File/code visualization+navigation
+	- Breadcrumbs
+	- Outline
+
+- Learn how to use the full power of "picker"
+	- Use all pickers in snacks.picker: https://github.com/folke/snacks.nvim/blob/main/docs/picker.md
 
 - Write a small plugin to view the local and global value for an option and update them quickly in a "scratch" buffer
 
@@ -16,12 +21,10 @@
 	- Timeline (git commit history for a file)
 	- Git "signs" on left side of buffer (statuscolumn?)
 
-- File/code navigation+visualization
-	- Breadcrumbs
-	- Outline
-	- Better search results explorer (just enhance built-in quick-fix experience)
+- Better search results explorer
+	- Enhance built-in quick-fix experience
 
-- Text editing plugins to try:
+- Text editing plugins
 	- arthurxavierx/vim-caser
 	- AndrewRadev/switch.vim
 	- AndrewRadev/sideways.vim (is there a better alternative using Treesitter or LSP?)
@@ -39,6 +42,8 @@
     - Make Table
 
 - Emmet expansion
-- Multi-selection/multi-cursor
 - Snippets
+
+- Multi-selection/multi-cursor
+
 - Debugging
