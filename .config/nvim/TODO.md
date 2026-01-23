@@ -1,12 +1,13 @@
-- In-editor markdown preview with real-time updates and synced scrolling
-
-- Write a small plugin to view the local and global value for an option and update them quickly in a "scratch" buffer
-
 - Learn how to use the full power of LSP and Coc.nvim
+	- Learn how to properly manage Language Servers
 	- Feature: rename file + update references: https://github.com/neoclide/coc.nvim/issues/4336
 	- Switch to a native neovim LSP setup
 
+- Learn how to properly manage treesitter parsers
+
 - Learn how to use the full power of the snacks.picker: https://github.com/folke/snacks.nvim/blob/main/docs/picker.md
+
+- Write a small plugin to view the local and global value for an option and update them quickly in a "scratch" buffer
 
 - Git integration
 	- Timeline (git commit history for a file)
