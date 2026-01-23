@@ -18,8 +18,9 @@
 - Write a small plugin to view the local and global value for an option and update them quickly in a "scratch" buffer
 
 - Git integration
-	- Timeline (git commit history for a file)
+	- File History
 	- Git "signs" on left side of buffer (statuscolumn?)
+	- Other GitLens features
 
 - Better search results explorer
 	- Enhance built-in quick-fix experience
