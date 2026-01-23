@@ -44,11 +44,6 @@ if oil_ok then
 	})
 end
 
-local neogit_ok, neogit = pcall(require, "neogit")
-if neogit_ok then
-	neogit.setup()
-end
-
 local snacks_ok, snacks = pcall(require, "snacks")
 if snacks_ok then
 	snacks.setup({

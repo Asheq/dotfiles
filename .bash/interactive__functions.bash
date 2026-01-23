@@ -17,8 +17,10 @@ __glyph_success='✔'
 __glyph_user='User'
 
 function __prompt_command() {
+	PS1_START='\[\e]133;A\e\\\]'
+
     local exit_code="$?"
-    PS1=""
+    PS1="${PS1_START}"
     PS1+="${__style_connector}┌─"
     PS1+="$(__prompt_section_pwd)"
     PS1+="$(__prompt_section_git)"

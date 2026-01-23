@@ -2,14 +2,14 @@
 " ----------------------------------------------------------------------------
 let g:markdown_folding = 1
 
+" indentwise
+" ----------------------------------------------------------------------------
+let g:indentwise_suppress_keymaps = 1
+
 " sandwich
 " ----------------------------------------------------------------------------
 " TODO-L: Add sandwich text objects without clobbering default as/is
 let g:textobj_sandwich_no_default_key_mappings = 1
-
-" indentwise
-" ----------------------------------------------------------------------------
-let g:indentwise_suppress_keymaps = 1
 
 " highlighter
 " ----------------------------------------------------------------------------

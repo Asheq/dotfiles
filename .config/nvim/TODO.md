@@ -1,9 +1,12 @@
-- Learn how to use the full power of LSP and Coc.nvim
+- Learn how to use the full power of LSP (and Coc.nvim)
 	- Learn how to properly manage Language Servers
 	- Feature: rename file + update references: https://github.com/neoclide/coc.nvim/issues/4336
-	- Switch to a native neovim LSP setup
+	- Switch to a native neovim LSP setup (no Coc.nvim) later
 
-- Learn how to properly manage treesitter parsers
+- Learn how to use the full power of Treesitter
+	- Learn how to properly manage Treesitter parsers
+	- Use for syntax highlighting, code folding, and indentation
+	- Use for structural navigation/editing
 
 - Learn how to use the full power of the snacks.picker: https://github.com/folke/snacks.nvim/blob/main/docs/picker.md
 
@@ -22,6 +25,7 @@
 	- arthurxavierx/vim-caser
 	- AndrewRadev/switch.vim
 	- AndrewRadev/sideways.vim (is there a better alternative using Treesitter or LSP?)
+	- https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-align.md
 
 - Writing tools
     - Proofreading
@@ -34,7 +38,6 @@
     - Make List
     - Make Table
 
-- Expand/shrink selections semantically
 - Emmet expansion
 - Multi-selection/multi-cursor
 - Snippets

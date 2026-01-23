@@ -30,7 +30,7 @@ if executable('node')
 endif
 
 " AI/Assistants
-" NOTE: AI/Assistants attempt to understand your codebase to generate code, suggest code, explain code, and automate tasks. They are also useful useful for generating documentation, code review, and learning.
+" NOTE: AI/Assistants attempt to understand your codebase to review, suggest, generate, and explain code/documentation, and automate tasks.
 Plug 'github/copilot.vim'
 Plug 'CopilotC-Nvim/CopilotChat.nvim'
 
