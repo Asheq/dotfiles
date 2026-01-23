@@ -36,26 +36,30 @@ Plug 'CopilotC-Nvim/CopilotChat.nvim'
 
 " Filetype Plugins
 " ----------------------------------------------------------------------------
+" NOTE: Currently commenting out to reduce plugin bloat, since Treesitter and
+" LSP provide much of the same functionality across languages.
+" TODO-L: Remove permanently if not needed anymore.
+
 " Various
-Plug 'tpope/vim-apathy'
+"Plug 'tpope/vim-apathy'
 
 " Markdown
-Plug 'preservim/vim-markdown'
+"Plug 'preservim/vim-markdown'
 
 " JavaScript
-Plug 'pangloss/vim-javascript'
+"Plug 'pangloss/vim-javascript'
 
 " TypeScript
-Plug 'leafgarland/typescript-vim'
+"Plug 'leafgarland/typescript-vim'
 
 " JSX
-Plug 'MaxMEllon/vim-jsx-pretty'
+"Plug 'MaxMEllon/vim-jsx-pretty'
 
 " TSX
-Plug 'peitalin/vim-jsx-typescript'
+"Plug 'peitalin/vim-jsx-typescript'
 
 " Git
-Plug 'tpope/vim-git'
+"Plug 'tpope/vim-git'
 
 " Other Quality of Life
 " ---------------------------------------------------------------------------
@@ -66,11 +70,6 @@ Plug 'tpope/vim-projectionist'
 Plug 'azabiong/vim-highlighter'
 Plug 'brianhuster/live-preview.nvim'
 Plug 'folke/snacks.nvim'
-
-" Experimental/To Review
-" ---------------------------------------------------------------------------
-Plug 'NeogitOrg/neogit'
-Plug 'sindrets/diffview.nvim'
 
 " End
 " ----------------------------------------------------------------------------

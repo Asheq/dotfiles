@@ -42,6 +42,7 @@
 
 !/.config/nvim/
 !/.config/nvim/.projections.json
+!/.config/nvim/TODO.md
 !/.config/nvim/init.vim
 !/.config/nvim/filetype.vim
 !/.config/nvim/coc-settings.json
