@@ -1,3 +1,7 @@
+" markdown
+" ----------------------------------------------------------------------------
+let g:markdown_folding = 1
+
 " sandwich
 " ----------------------------------------------------------------------------
 " TODO-L: Add sandwich text objects without clobbering default as/is

@@ -1,5 +1,4 @@
-setlocal colorcolumn+=+1
-setlocal linebreak
+setlocal foldtext=
 
 inoremap <buffer> <A-b> - [ ] 
 
