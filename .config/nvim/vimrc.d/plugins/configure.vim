@@ -21,6 +21,13 @@ let g:indentwise_suppress_keymaps = 1
 " ----------------------------------------------------------------------------
 let HiKeywords = stdpath("config") . '/after/vim-highlighter'
 
+" markdown-preview.nvim
+" ----------------------------------------------------------------------------
+function OpenMarkdownPreview (url)
+	execute "silent ! open -a Firefox -n --args --new-window " . a:url
+endfunction
+let g:mkdp_browserfunc = 'OpenMarkdownPreview'
+
 " Run configure.lua
 " ----------------------------------------------------------------------------
 luafile <sfile>:h/configure.lua

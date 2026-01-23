@@ -68,7 +68,7 @@ Plug 'stevearc/oil.nvim'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-projectionist'
 Plug 'azabiong/vim-highlighter'
-Plug 'iamcco/markdown-preview.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 Plug 'folke/snacks.nvim'
 
 " End
