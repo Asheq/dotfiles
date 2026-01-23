@@ -1,15 +1,1 @@
-{
-  "Lua": {
-    "runtime": {
-      "version": "Lua 5.3"
-    },
-    "diagnostics": {
-      "globals": ["hs"]
-    },
-    "workspace": {
-      "library": [
-        "/Applications/Hammerspoon.app/Contents/Resources/extensions/"
-      ]
-    }
-  }
-}
+{}

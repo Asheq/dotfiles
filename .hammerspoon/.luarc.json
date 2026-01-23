@@ -1,0 +1,8 @@
+{
+  "runtime.version": "Lua 5.4",
+  "diagnostics.globals": ["hs"],
+  "workspace.library": [
+    "/Applications/Hammerspoon.app/Contents/Resources/extensions/hs"
+  ],
+  "completion.autoRequire": false
+}
