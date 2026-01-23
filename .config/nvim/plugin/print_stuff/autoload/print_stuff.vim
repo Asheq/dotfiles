@@ -84,6 +84,34 @@ function! print_stuff#print_indenting()
                 \ ])
 endfunction
 
+function! print_stuff#print_folding()
+    call s:print_values([
+                \ {
+                \   'title': 'Basic',
+                \   'items': [
+                \     {'label': 'foldenable', 'value': &foldenable, 'secondary': s:last_set('foldenable')},
+                \     {'label': 'foldmethod', 'value': &foldmethod, 'secondary': s:last_set('foldmethod')},
+                \     {'label': 'foldmarker', 'value': &foldmarker, 'secondary': s:last_set('foldmarker')},
+                \     {'label': 'foldexpr', 'value': &foldexpr, 'secondary': s:last_set('foldexpr')},
+                \   ]
+                \ },
+                \ {
+                \   'title': 'Other',
+                \   'items': [
+                \     {'label': 'foldtext', 'value': &foldtext, 'secondary': s:last_set('foldtext')},
+                \     {'label': 'foldopen', 'value': &foldopen, 'secondary': s:last_set('foldopen')},
+                \     {'label': 'foldclose', 'value': &foldcolumn, 'secondary': s:last_set('foldclose')},
+                \     {'label': 'foldcolumn', 'value': &foldcolumn, 'secondary': s:last_set('foldcolumn')},
+                \     {'label': 'foldignore', 'value': &foldignore, 'secondary': s:last_set('foldignore')},
+                \     {'label': 'foldlevel', 'value': &foldlevel, 'secondary': s:last_set('foldlevel')},
+                \     {'label': 'foldlevelstart', 'value': &foldlevelstart, 'secondary': s:last_set('foldlevelstart')},
+                \     {'label': 'foldminlines', 'value': &foldminlines, 'secondary': s:last_set('foldminlines')},
+                \     {'label': 'foldnestmax', 'value': &foldnestmax, 'secondary': s:last_set('foldnestmax')},
+                \   ]
+                \ }
+                \ ])
+endfunction
+
 function! s:last_set(option)
     let temp = getreg("l")
     redir @l

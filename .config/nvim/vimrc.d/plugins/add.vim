@@ -34,33 +34,6 @@ endif
 Plug 'github/copilot.vim'
 Plug 'CopilotC-Nvim/CopilotChat.nvim'
 
-" Filetype Plugins
-" ----------------------------------------------------------------------------
-" NOTE: Currently commenting out to reduce plugin bloat, since Treesitter and
-" LSP provide much of the same functionality across languages.
-" TODO-L: Remove permanently if not needed anymore.
-
-" Various
-"Plug 'tpope/vim-apathy'
-
-" Markdown
-"Plug 'preservim/vim-markdown'
-
-" JavaScript
-"Plug 'pangloss/vim-javascript'
-
-" TypeScript
-"Plug 'leafgarland/typescript-vim'
-
-" JSX
-"Plug 'MaxMEllon/vim-jsx-pretty'
-
-" TSX
-"Plug 'peitalin/vim-jsx-typescript'
-
-" Git
-"Plug 'tpope/vim-git'
-
 " Other Quality of Life
 " ---------------------------------------------------------------------------
 Plug 'gcavallanti/vim-noscrollbar'

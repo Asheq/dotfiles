@@ -67,6 +67,8 @@ set dictionary+=/usr/share/dict/words
 " ----------------------------------------------------------------------------
 set foldcolumn=auto:9
 set foldtext=
+set foldmethod=expr
+set foldexpr=v:lua.vim.treesitter.foldexpr()
 
 " 16. Mapping
 " ----------------------------------------------------------------------------
