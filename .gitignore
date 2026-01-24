@@ -40,6 +40,11 @@
 !/.config/kitty/themes/
 !/.config/kitty/themes/**
 
+!/.config/emacs
+!/.config/emacs/**
+!/.config/doom
+!/.config/doom/**
+
 !/.config/nvim/
 !/.config/nvim/.projections.json
 !/.config/nvim/TODO.md
