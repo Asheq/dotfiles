@@ -40,8 +40,6 @@
 !/.config/kitty/themes/
 !/.config/kitty/themes/**
 
-!/.config/emacs
-!/.config/emacs/**
 !/.config/doom
 !/.config/doom/**
 
