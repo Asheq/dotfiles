@@ -45,7 +45,6 @@
 
 !/.config/nvim/
 !/.config/nvim/.projections.json
-!/.config/nvim/TODO.md
 !/.config/nvim/.luarc.json
 !/.config/nvim/init.vim
 !/.config/nvim/filetype.vim
