@@ -15,7 +15,7 @@ endfunction
 " ============================================================================
 augroup highlight_yanked_text
     autocmd!
-    autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300, on_visual=true}
+    autocmd TextYankPost * silent! lua vim.hl.on_yank {higroup="IncSearch", timeout=300, on_visual=true}
 augroup END
 
 " Highlight Overrides
