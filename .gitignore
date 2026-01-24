@@ -40,7 +40,7 @@
 !/.config/kitty/themes/
 !/.config/kitty/themes/**
 
-!/.config/doom
+!/.config/doom/
 !/.config/doom/**
 
 !/.config/nvim/
