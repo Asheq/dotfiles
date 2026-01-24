@@ -3,111 +3,112 @@
 
 " Partial
 " ----------------------------------------------------------------------------
-nnoremap          <leader>g        :sil gr!  <Bar> tab cw<S-Left><S-Left><S-Left><Left>
+nnoremap                <leader>g        :sil gr!  <Bar> tab cw<S-Left><S-Left><S-Left><Left>
 
-nnoremap          <leader>r        :redi @r <Bar> sil  <Bar> redi END<S-Left><S-Left><S-Left><Left>
+nnoremap                <leader>r        :redi @r <Bar> sil  <Bar> redi END<S-Left><S-Left><S-Left><Left>
 
-nnoremap          <leader>t        :tab<C-z><C-p>
+nnoremap                <leader>t        :tab<C-z><C-p>
 
-nnoremap          <leader>c        :CopilotChat<C-z><C-p>
-xnoremap          <leader>c        :CopilotChat<C-z><C-p>
+nnoremap                <leader>c        :CopilotChat<C-z><C-p>
+xnoremap                <leader>c        :CopilotChat<C-z><C-p>
 
-nnoremap          yp               :ec "p = full path\nh = head\nt = tail\n"<Enter>:let @* = expand('%:')<Left><Left>
+nnoremap                yp               :ec "p = full path\nh = head\nt = tail\n"<Enter>:let @* = expand('%:')<Left><Left>
 
 " Complete
 " ----------------------------------------------------------------------------
-nnoremap <silent> <leader>V        'V:exe 'help ' . expand('%:t')<Enter>'V
+nnoremap <silent>       <leader>V        'V:exe 'help ' . expand('%:t')<Enter>'V
 
-nnoremap <silent> <leader>o        :sil !open '%:h'<Enter><Enter>
+nnoremap <silent>       <leader>o        :sil !open '%:h'<Enter><Enter>
+nnoremap <silent><expr> <leader>v       ':sil !code --goto ' . shellescape(expand('%') . ':' . line('.') . ':' . col('.')) . "\<Enter>"
 
-nnoremap <silent> <leader>s        :sil Git<Enter>
+nnoremap <silent>       <leader>s        :sil Git<Enter>
 
-nnoremap <silent> <leader>w        :sil up<Enter>
+nnoremap <silent>       <leader>w        :sil up<Enter>
 
-nnoremap <silent> <leader>h        :Inspect<Enter>
+nnoremap <silent>       <leader>h        :Inspect<Enter>
 
-nnoremap <silent> <leader>j        :ju<Enter>
+nnoremap <silent>       <leader>j        :ju<Enter>
 
-nnoremap <silent> <C-g>            :cal vimrc#ctrl_g_with_scrollbar()<Enter>
+nnoremap <silent>       <C-g>            :cal vimrc#ctrl_g_with_scrollbar()<Enter>
 
-nnoremap <silent> -                :Oil<Enter>
+nnoremap <silent>       -                :Oil<Enter>
 
-" nnoremap <silent> <leader>c        :changes<Enter>
+" nnoremap <silent>       <leader>c        :changes<Enter>
 
 " Normal and visual mode command typing helpers
 " ============================================================================
 
 " Scroll
 " ----------------------------------------------------------------------------
-nnoremap <silent> <C-f>            @=winheight(0) - 1 . "\<lt>C-e>"<Enter>
-nnoremap <silent> <C-b>            @=winheight(0) - 1 . "\<lt>C-y>"<Enter>
+nnoremap <silent>       <C-f>            @=winheight(0) - 1 . "\<lt>C-e>"<Enter>
+nnoremap <silent>       <C-b>            @=winheight(0) - 1 . "\<lt>C-y>"<Enter>
 
-nnoremap <silent> <C-d>            @=winheight(0) / 2 - 1 . "\<lt>C-e>"<Enter>
-nnoremap <silent> <C-u>            @=winheight(0) / 2 - 1 . "\<lt>C-y>"<Enter>
+nnoremap <silent>       <C-d>            @=winheight(0) / 2 - 1 . "\<lt>C-e>"<Enter>
+nnoremap <silent>       <C-u>            @=winheight(0) / 2 - 1 . "\<lt>C-y>"<Enter>
 
 " Yank and Paste
 " ----------------------------------------------------------------------------
-nnoremap          <leader>y        "*y
-nmap              <leader>Y        "*Y
-xnoremap          <leader>y        "*y
+nnoremap                <leader>y        "*y
+nmap                    <leader>Y        "*Y
+xnoremap                <leader>y        "*y
 
-nnoremap          <leader>p        "*p
-nnoremap          <leader>P        "*P
-xnoremap          <leader>p        "*p
+nnoremap                <leader>p        "*p
+nnoremap                <leader>P        "*P
+xnoremap                <leader>p        "*p
 
-nnoremap          gh               `[v`]
+nnoremap                gh               `[v`]
 
 " Move up and down through wrapped lines
 " ----------------------------------------------------------------------------
-noremap           j                gj
-noremap           k                gk
-noremap           gj               j
-noremap           gk               k
+noremap                 j                gj
+noremap                 k                gk
+noremap                 gj               j
+noremap                 gk               k
 
 " Fold
 " ----------------------------------------------------------------------------
-nnoremap          <Left>           zc
-nnoremap          <S-Left>         zC
-nnoremap          <Right>          zo
-nnoremap          <S-Right>        zO
+nnoremap                <Left>           zc
+nnoremap                <S-Left>         zC
+nnoremap                <Right>          zo
+nnoremap                <S-Right>        zO
 
 " Text Operations
 " ============================================================================
 " View definition
-nnoremap <silent> <leader>d        :cal vimrc#define(expand('<cword>'))<Enter>
-xnoremap <silent> <leader>d        :<C-u>cal vimrc#define(vimrc#get_selection_text())<Enter>
+nnoremap <silent>       <leader>d        :cal vimrc#define(expand('<cword>'))<Enter>
+xnoremap <silent>       <leader>d        :<C-u>cal vimrc#define(vimrc#get_selection_text())<Enter>
 
 " View browser search
-nnoremap <silent> <leader>b        :cal vimrc#browse(expand('<cword>'))<Enter>
-xnoremap <silent> <leader>b        :<C-u>cal vimrc#browse(vimrc#get_selection_text())<Enter>
+nnoremap <silent>       <leader>b        :cal vimrc#browse(expand('<cword>'))<Enter>
+xnoremap <silent>       <leader>b        :<C-u>cal vimrc#browse(vimrc#get_selection_text())<Enter>
 
 " Change speech rate
 let g:say_speed = 250
-nnoremap <silent> <leader><Left>   :let g:say_speed -= 50<Enter>:echo g:say_speed<Enter>
-nnoremap <silent> <leader><Right>  :let g:say_speed += 50<Enter>:echo g:say_speed<Enter>
+nnoremap <silent>       <leader><Left>   :let g:say_speed -= 50<Enter>:echo g:say_speed<Enter>
+nnoremap <silent>       <leader><Right>  :let g:say_speed += 50<Enter>:echo g:say_speed<Enter>
 
 " Read aloud
-nnoremap <silent> <leader>k        :execute 'silent .w !say -r ' . g:say_speed<Enter>
-xnoremap <silent> <leader>k        :<C-u>execute 'silent !echo ' . shellescape(vimrc#get_selection_text(), 1) . ' <Bar> say -r ' . g:say_speed<Enter>
+nnoremap <silent>       <leader>k        :execute 'silent .w !say -r ' . g:say_speed<Enter>
+xnoremap <silent>       <leader>k        :<C-u>execute 'silent !echo ' . shellescape(vimrc#get_selection_text(), 1) . ' <Bar> say -r ' . g:say_speed<Enter>
 
 " Read aloud and highlight text
-nnoremap <silent> <leader>i        :cal vimrc#read_aloud(getline('.'))<Enter>
-xnoremap <silent> <leader>i        :<C-u>cal vimrc#read_aloud(vimrc#get_selection_text())<Enter>
+nnoremap <silent>       <leader>i        :cal vimrc#read_aloud(getline('.'))<Enter>
+xnoremap <silent>       <leader>i        :<C-u>cal vimrc#read_aloud(vimrc#get_selection_text())<Enter>
 
 " Copy markdown text as rich text into system clipboard
-nnoremap  <silent> <leader>m       :w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
-xnoremap  <silent> <leader>m       :%w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
+nnoremap  <silent>      <leader>m        :w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
+xnoremap  <silent>      <leader>m        :%w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
 
 " Motions
 " ============================================================================
-map               [a               <Plug>(IndentWiseBlockScopeBoundaryBegin)
-map               ]a               <Plug>(IndentWiseBlockScopeBoundaryEnd)
+map                     [a               <Plug>(IndentWiseBlockScopeBoundaryBegin)
+map                     ]a               <Plug>(IndentWiseBlockScopeBoundaryEnd)
 
-map               <A-h>            <Plug>(IndentWisePreviousLesserIndent)
-map               <A-l>            <Plug>(IndentWiseNextGreaterIndent)
+map                     <A-h>            <Plug>(IndentWisePreviousLesserIndent)
+map                     <A-l>            <Plug>(IndentWiseNextGreaterIndent)
 
-map               <A-j>            <Plug>(NavigateBlockDown)
-map               <A-k>            <Plug>(NavigateBlockUp)
+map                     <A-j>            <Plug>(NavigateBlockDown)
+map                     <A-k>            <Plug>(NavigateBlockUp)
 
 " Duplicate keys (* = used in mapping already, ! = do not map or map to self only)
 "   Normal-mode
