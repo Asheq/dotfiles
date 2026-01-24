@@ -26,6 +26,9 @@ pathprepend "$NVM_DIR"/versions/node/v24.11.1/bin PATH
 # Add cargo binaries
 pathprepend ~/.cargo/bin PATH
 
+# Add doom emacs binaries
+pathprepend ~/.config/emacs/bin
+
 # Add python binaries
 if command -v pyenv >/dev/null 2>&1; then
   eval "$(pyenv init --path)"
