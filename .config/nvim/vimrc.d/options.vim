@@ -58,12 +58,12 @@ set tabline=%!vimrc#get_tabline()
 set noruler
 set report=1
 
-" 13. Editing text
+" 12. Editing text
 " ----------------------------------------------------------------------------
 set undofile
 set dictionary+=/usr/share/dict/words
 
-" 15. Folding
+" 14. Folding
 " ----------------------------------------------------------------------------
 set foldcolumn=auto:9
 set foldtext=
@@ -74,7 +74,7 @@ set foldexpr=v:lua.vim.treesitter.foldexpr()
 " ----------------------------------------------------------------------------
 set notimeout
 
-" 20. Command line editing
+" 19. Command line editing
 " ----------------------------------------------------------------------------
 set wildcharm=<C-z>
 let &wildignore='.DS_Store,.tmp.drivedownload,.tmp.driveupload'
