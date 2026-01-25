@@ -12,25 +12,12 @@ set linebreak
 let &showbreak='↪'
 set breakindent
 set breakindentopt=list:-1
-set smoothscroll
 
 set list
 " let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,extends:➤,precedes:⮜,eol:🮦'
 let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,extends:➤,precedes:⮜'
 
 let &fillchars='foldopen:▽,foldclose:▶,diff:╱,lastline:➤'
-
-" Character reference:
-" │ ┊
-" ╱
-" 🮮 🮤 🮦
-" ➤ ▷ ▶ ▹ ▸
-" ↪ └
-" ࿁ ⚬ ◌
-" ▢ ⬚ ▫
-" ⁺ ₊ ˖
-" 🞩
-" ┘ ʴ ˼ ↵
 
 set number
 set cmdheight=2
@@ -98,3 +85,15 @@ if exists('g:neovide')
     let g:neovide_input_macos_option_key_is_meta = 'both'
     let g:neovide_cursor_animation_length = 0
 endif
+
+" Character reference:
+" │ ┊
+" ╱
+" 🮮 🮤 🮦
+" ➤ ▷ ▶ ▹ ▸
+" ↪ └
+" ࿁ ⚬ ◌
+" ▢ ⬚ ▫
+" ⁺ ₊ ˖
+" 🞩
+" ┘ ʴ ˼ ↵

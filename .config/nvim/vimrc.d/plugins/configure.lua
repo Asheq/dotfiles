@@ -61,6 +61,11 @@ if CopilotChat_ok then
 					normal = "",
 					insert = "",
 				},
+				accept_diff = {
+					-- Disable default mappings for resetting a chat because I use the built-in <C-y>
+					normal = "",
+					insert = "",
+				}
 			},
 		}
 	)
