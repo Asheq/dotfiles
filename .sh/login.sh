@@ -51,7 +51,7 @@ ssource ~/.sh/login.private.sh
 # ==============================================================================
 export SSH_ENV="$HOME/.ssh/agent_env"
 
-function start_new_ssh_agent {
+start_new_ssh_agent() {
     echo "Starting new ssh-agent..."
     eval "$(ssh-agent -s)" > /dev/null
     echo "export SSH_AUTH_SOCK=$SSH_AUTH_SOCK" > "$SSH_ENV"
@@ -63,7 +63,7 @@ function start_new_ssh_agent {
 if [ -f "$SSH_ENV" ]; then
     . "$SSH_ENV" > /dev/null
     # Check if agent is still running
-    if ! kill -0 $SSH_AGENT_PID 2>/dev/null; then
+	if ! kill -0 "$SSH_AGENT_PID" 2>/dev/null; then
         start_new_ssh_agent
     fi
 else

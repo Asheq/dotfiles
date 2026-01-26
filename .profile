@@ -5,5 +5,5 @@
 # If the login shell happens to be bash, this file is not read by bash if
 # ~/.bash_profile or ~/.bash_login exists.
 
-. ~/.sh/helper_functions.sh
+. "$HOME"/.sh/helper_functions.sh
 ssource ~/.sh/login.sh

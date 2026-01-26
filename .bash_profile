@@ -6,7 +6,7 @@
 # --noprofile option may be used when the shell is started to inhibit this
 # behavior.
 
-. ~/.profile
+. "$HOME"/.profile
 
 # PS1 is set and $- includes i if bash is interactive, allowing a shell script
 # or a startup file to test this state.
