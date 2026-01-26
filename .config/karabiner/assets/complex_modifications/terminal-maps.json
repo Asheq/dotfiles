@@ -1,8 +1,8 @@
 {
-    "title": "Terminal maps",
+    "title": "Mods for Terminals/Editors",
     "rules": [
         {
-            "description": "In some apps, swap Cmd / Ctrl (except with Tab, `, Space, Arrows, Numbers)",
+            "description": "Swap Cmd<->Ctrl and Cmd+Shft<->Ctrl+Shft (except when paired with numbers, arrows, <Tab>, `, <Space>, <Caps Lock>, function keys)",
             "manipulators": [
                 {
                     "conditions": [
