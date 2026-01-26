@@ -1,4 +1,4 @@
-This folder is added to PATH by .sh/login.sh.
+This folder should be added to PATH.
 
 It should be used to store executables (e.g., scripts, binaries, AppImages)
 that are managed manually rather than by a package manager like Homebrew.
