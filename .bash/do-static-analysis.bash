@@ -1,1 +1,0 @@
-shellcheck -s bash ./*.bash

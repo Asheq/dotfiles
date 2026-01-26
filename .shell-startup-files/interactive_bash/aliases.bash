@@ -38,5 +38,5 @@ alias rnd='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
 
 # Bell
 # ==============================================================================
-alias bell=$'osascript -e \'display notification "Ring ring ring!"\''
-alias notify='kitten notify'
+alias mb=$'osascript -e \'display notification "Ring ring ring!"\''
+alias kb='kitten notify'

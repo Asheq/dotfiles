@@ -1,15 +1,9 @@
-# When bash is invoked as an interactive login shell, or as a non-interactive
-# shell with the --login option, it first reads and executes commands from the
-# file /etc/profile, if that file exists.  After reading that file, it looks
-# for ~/.bash_profile, ~/.bash_login, and ~/.profile, in that order, and reads
-# and executes commands from the first one that exists and is readable. The
-# --noprofile option may be used when the shell is started to inhibit this
-# behavior.
+. "$HOME"/.shell-startup-files/util.sh
 
-. "$HOME"/.profile
+ssource ~/.shell-startup-files/login/main.sh
+ssource ~/.private-login-shell-startup.sh
 
-# PS1 is set and $- includes i if bash is interactive, allowing a shell script
-# or a startup file to test this state.
+# PS1 is set if bash is interactive
 if [ "$PS1" ]; then
-    ssource ~/.bash/interactive.bash
+    ssource ~/.shell-startup-files/interactive_bash/main.bash
 fi

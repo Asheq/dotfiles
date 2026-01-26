@@ -65,10 +65,3 @@ endif
 " Run final.lua
 " ============================================================================
 luafile <sfile>:h/final.lua
-
-" Run final.local.vim if it exists
-" ============================================================================
-let s:final_local_file = expand('<sfile>:h') . '/final.local.vim'
-if filereadable(s:final_local_file)
-    execute 'source ' s:final_local_file
-endif

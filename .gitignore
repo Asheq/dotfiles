@@ -64,20 +64,12 @@
 !/.config/nvim/plugin/**
 !/.config/nvim/vimrc.d/
 !/.config/nvim/vimrc.d/**
-# Re-ignore final.local.vim
-.config/nvim/vimrc.d/final.local.vim
 
-# Custom .bash directory
-!/.bash/
-!/.bash/**
+# Custom .shell-startup-files directory
+!/.shell-startup-files/
+!/.shell-startup-files/**
 
-# Custom .sh directory
-!/.sh/
-!/.sh/**
-# Re-ignore login.private.sh
-.sh/login.private.sh
-
-# Custom directory for all other manually exported cofig
+# Custom directory for all other manually exported config
 !/.config-manual-exports
 !/.config-manual-exports/**
 
