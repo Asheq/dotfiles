@@ -10,6 +10,7 @@
 
 # Readme
 !/README.md
+!/README.bash-startup.md
 
 # Standard config files/directories at root-level
 !/.bash_profile
