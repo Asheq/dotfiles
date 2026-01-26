@@ -1,5 +1,9 @@
--- Annotate each terminal prompt with a sign
--- Copied directly from :h shell-prompt-signs
+-- Annotate each terminal prompt with a sign.
+--
+-- This code was copied directly from :h shell-prompt-signs.
+--
+-- TODO-L There seems to be a bug in nvim where after you press Ctrl-L to clear
+-- the terminal, there are "ghost signs" left behind.
 vim.api.nvim_create_autocmd('TermOpen', {
 	command = 'setlocal signcolumn=auto',
 })
