@@ -1,13 +1,13 @@
 # Basic file management
 # ==============================================================================
 if command -v eza &> /dev/null; then
-    alias l='eza -F'
-    alias la='eza -F -a'
-    alias ll='eza -F -a -l -h'
+	alias l='eza -F'
+	alias la='eza -F -a'
+	alias ll='eza -F -a -l -h'
 else
-    alias l='ls --color -F'
-    alias la='ls --color -F'
-    alias ll='ls --color -Falh'
+	alias l='ls --color -F'
+	alias la='ls --color -F'
+	alias ll='ls --color -Falh'
 fi
 
 alias c='cd'
@@ -18,9 +18,15 @@ alias v='nvim'
 
 # Bookmarks
 # ==============================================================================
-alias drive='cd ~/My\ Drive/'
-alias notes='cd ~/My\ Drive/Notes/'
-alias tasks='cd ~/My\ Drive/Tasks/'
+if [[ "$(hostname)" == "AIMRAN0ML" ]]; then
+	alias drive='cd ~/Documents/'
+	alias notes='cd ~/Documents/Notes/'
+	alias tasks='cd ~/Documents/Tasks/'
+else
+	alias drive='cd ~/My\ Drive/'
+	alias notes='cd ~/My\ Drive/Notes/'
+	alias tasks='cd ~/My\ Drive/Tasks/'
+fi
 
 # git
 # ==============================================================================

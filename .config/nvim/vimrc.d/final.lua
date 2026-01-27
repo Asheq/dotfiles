@@ -19,3 +19,24 @@ vim.api.nvim_create_autocmd('TermRequest', {
 		end
 	end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+	pattern = {
+		'c',
+		'css',
+		'diff',
+		'git_config',
+		'html',
+		'lua',
+		'markdown',
+		'markdown_inline',
+		'query',
+		'regex',
+		'tsx',
+		'typescript',
+		'typescriptreact',
+		'vim',
+		'vimdoc',
+	},
+	callback = function() vim.treesitter.start() end,
+})
