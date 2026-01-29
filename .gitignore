@@ -46,6 +46,7 @@
 !/.config/doom/**
 
 !/.config/nvim/
+!/.config/nvim/README.md
 !/.config/nvim/.projections.json
 !/.config/nvim/.luarc.json
 !/.config/nvim/init.vim
