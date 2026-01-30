@@ -8,6 +8,7 @@ local function source_lua(relpath)
 	dofile(config .. '/' .. relpath)
 end
 
+-- First
 source_lua('init/first.lua')
 
 -- Plugins
