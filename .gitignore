@@ -49,7 +49,7 @@
 !/.config/nvim/README.md
 !/.config/nvim/.projections.json
 !/.config/nvim/.luarc.json
-!/.config/nvim/init.vim
+!/.config/nvim/init.lua
 !/.config/nvim/filetype.vim
 !/.config/nvim/coc-settings.json
 !/.config/nvim/syntax/
@@ -64,8 +64,8 @@
 !/.config/nvim/colors/**
 !/.config/nvim/plugin/
 !/.config/nvim/plugin/**
-!/.config/nvim/vimrc.d/
-!/.config/nvim/vimrc.d/**
+!/.config/nvim/init/
+!/.config/nvim/init/**
 
 # Custom .shell-startup-files directory
 !/.shell-startup-files/

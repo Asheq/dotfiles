@@ -1,3 +1,27 @@
+-- markdown
+vim.g.markdown_folding = 1
+
+-- indentwise
+vim.g.indentwise_suppress_keymaps = 1
+
+-- sandwich
+-- TODO-L: Add sandwich text objects without clobbering default as/is
+vim.g.textobj_sandwich_no_default_key_mappings = 1
+
+-- highlighter
+vim.g.HiKeywords = vim.fn.stdpath('config') .. '/after/vim-highlighter'
+
+-- markdown-preview.nvim
+function _G.OpenMarkdownPreview(url)
+	vim.fn.jobstart({ 'open', '-a', 'Firefox', '-n', '--args', '--new-window', url }, { detach = true })
+end
+vim.cmd([[
+  function! OpenMarkdownPreview(url)
+    call v:lua.OpenMarkdownPreview(a:url)
+  endfunction
+]])
+vim.g.mkdp_browserfunc = 'OpenMarkdownPreview'
+
 local oil_ok, oil = pcall(require, "oil")
 if oil_ok then
 	oil.setup({
