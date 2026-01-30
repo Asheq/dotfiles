@@ -8,9 +8,6 @@ vim.g.indentwise_suppress_keymaps = 1
 -- TODO-L: Add sandwich text objects without clobbering default as/is
 vim.g.textobj_sandwich_no_default_key_mappings = 1
 
--- highlighter
-vim.g.HiKeywords = vim.fn.stdpath('config') .. '/after/vim-highlighter'
-
 -- markdown-preview.nvim
 function _G.OpenMarkdownPreview(url)
 	vim.fn.jobstart({ 'open', '-a', 'Firefox', '-n', '--args', '--new-window', url }, { detach = true })

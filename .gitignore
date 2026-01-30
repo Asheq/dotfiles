@@ -45,6 +45,9 @@
 !/.config/doom/
 !/.config/doom/**
 
+!/.config/keywords
+!/.config/keywords/**
+
 !/.config/nvim/
 !/.config/nvim/README.md
 !/.config/nvim/.projections.json
@@ -52,6 +55,7 @@
 !/.config/nvim/init.lua
 !/.config/nvim/filetype.vim
 !/.config/nvim/coc-settings.json
+!/.config/nvim/sample.asheq
 !/.config/nvim/syntax/
 !/.config/nvim/syntax/**
 !/.config/nvim/ftplugin/
@@ -66,6 +70,8 @@
 !/.config/nvim/plugin/**
 !/.config/nvim/init/
 !/.config/nvim/init/**
+!/.config/nvim/pack/
+!/.config/nvim/pack/**
 
 # Custom .shell-startup-files directory
 !/.shell-startup-files/
