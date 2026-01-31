@@ -83,7 +83,8 @@ if CopilotChat_ok then
 				insert = "",
 			},
 			accept_diff = {
-				-- Disable default mappings for resetting a chat because I use the built-in <C-y>
+				-- Disable default mappings for accepting a diff because I use the built-in <C-y>
+				-- For now, I am copying and pasting diffs manually.
 				normal = "",
 				insert = "",
 			},

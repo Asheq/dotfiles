@@ -44,14 +44,15 @@ keyset("i", "<c-j>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-
 
 -- Use `[g` and `]g` to navigate diagnostics
 -- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
-keyset("n", "[g", "<Plug>(coc-diagnostic-prev)", { silent = true, nowait = true })
-keyset("n", "]g", "<Plug>(coc-diagnostic-next)", { silent = true, nowait = true })
+keyset("n", "[g", "<Plug>(coc-diagnostic-prev)", { silent = true })
+keyset("n", "]g", "<Plug>(coc-diagnostic-next)", { silent = true })
 
 -- GoTo code navigation
-keyset("n", "gd", "<Plug>(coc-definition)", { silent = true, nowait = true })
-keyset("n", "gy", "<Plug>(coc-type-definition)", { silent = true, nowait = true })
-keyset("n", "gi", "<Plug>(coc-implementation)", { silent = true, nowait = true })
+keyset("n", "gd", "<Plug>(coc-definition)", { silent = true })
+keyset("n", "gy", "<Plug>(coc-type-definition)", { silent = true })
+keyset("n", "gi", "<Plug>(coc-implementation)", { silent = true })
 keyset("n", "gr", "<Plug>(coc-references)", { silent = true, nowait = true })
+
 
 -- Use K to show documentation in preview window
 function _G.show_docs()
@@ -75,8 +76,10 @@ vim.api.nvim_create_autocmd("CursorHold", {
 	desc = "Highlight symbol under cursor on CursorHold",
 })
 
+
 -- Symbol renaming
 keyset("n", "<BS>rn", "<Plug>(coc-rename)", { silent = true })
+
 
 -- Formatting selected code
 keyset("x", "<leader>f", "<Plug>(coc-format-selected)", { silent = true })
@@ -93,7 +96,6 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Apply codeAction to the selected region
 -- Example: `<BS>aap` for current paragraph
 local opts = { silent = true, nowait = true }
--- NOTE: These cannot be used since we have <BS>a? below
 keyset("x", "<BS>a", "<Plug>(coc-codeaction-selected)", opts)
 keyset("n", "<BS>a", "<Plug>(coc-codeaction-selected)", opts)
 
@@ -106,12 +108,12 @@ keyset("n", "<BS>qf", "<Plug>(coc-fix-current)", opts)
 
 -- Remap keys for apply refactor code actions.
 keyset("n", "<BS>re", "<Plug>(coc-codeaction-refactor)", { silent = true })
--- NOTE: These cannot be used since we have <BS>r? above
 keyset("x", "<BS>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 keyset("n", "<BS>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 
 -- Run the Code Lens actions on the current line
 keyset("n", "<BS>cl", "<Plug>(coc-codelens-action)", opts)
+
 
 -- Map function and class text objects
 -- NOTE: Requires 'textDocument.documentSymbol' support from the language server
@@ -123,6 +125,7 @@ keyset("x", "ic", "<Plug>(coc-classobj-i)", opts)
 keyset("o", "ic", "<Plug>(coc-classobj-i)", opts)
 keyset("x", "ac", "<Plug>(coc-classobj-a)", opts)
 keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
+
 
 -- Remap <C-f> and <C-b> to scroll float windows/popups
 ---@diagnostic disable-next-line: redefined-local
@@ -140,6 +143,7 @@ keyset("n", "<C-+>", "<Plug>(coc-range-select)", { silent = true })
 keyset("x", "<C-+>", "<Plug>(coc-range-select)", { silent = true })
 keyset("n", "<C-->", "<Plug>(coc-range-select-backward)", { silent = true })
 keyset("x", "<C-->", "<Plug>(coc-range-select-backward)", { silent = true })
+
 
 -- Add `:Format` command to format current buffer
 vim.api.nvim_create_user_command("Format", "call CocAction('format')", {})
