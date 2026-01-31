@@ -1,42 +1,4 @@
-
-" Scroll
-" ----------------------------------------------------------------------------
-nnoremap <silent>       <C-f>            @=winheight(0) - 1 . "\<lt>C-e>"<Enter>
-nnoremap <silent>       <C-b>            @=winheight(0) - 1 . "\<lt>C-y>"<Enter>
-
-nnoremap <silent>       <C-d>            @=winheight(0) / 2 - 1 . "\<lt>C-e>"<Enter>
-nnoremap <silent>       <C-u>            @=winheight(0) / 2 - 1 . "\<lt>C-y>"<Enter>
-
-" Make Normal and Visual Mode Commands Slightly More Convenient
-" ============================================================================
-
-" Yank and Paste
-" ----------------------------------------------------------------------------
-nnoremap                <leader>y        "*y
-nmap                    <leader>Y        "*Y
-xnoremap                <leader>y        "*y
-
-nnoremap                <leader>p        "*p
-nnoremap                <leader>P        "*P
-xnoremap                <leader>p        "*p
-
-nnoremap                gh               `[v`]
-
-" Move up and down through wrapped lines
-" ----------------------------------------------------------------------------
-noremap                 j                gj
-noremap                 k                gk
-noremap                 gj               j
-noremap                 gk               k
-
-" Fold
-" ----------------------------------------------------------------------------
-nnoremap                <Left>           zc
-nnoremap                <S-Left>         zC
-nnoremap                <Right>          zo
-nnoremap                <S-Right>        zO
-
-" Text Operations
+" Operate on Text
 " ============================================================================
 " View definition
 nnoremap <silent>       <leader>d        :cal vimrc#define(expand('<cword>'))<Enter>
@@ -63,7 +25,7 @@ xnoremap <silent>       <leader>i        :<C-u>cal vimrc#read_aloud(vimrc#get_se
 nnoremap  <silent>      <leader>m        :w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
 xnoremap  <silent>      <leader>m        :%w !pandoc --from markdown --to html <Bar> textutil -stdin -format html -convert rtf -stdout <Bar> pbcopy<Enter><Enter>
 
-" Motions
+" Move
 " ============================================================================
 map                     [a               <Plug>(IndentWiseBlockScopeBoundaryBegin)
 map                     ]a               <Plug>(IndentWiseBlockScopeBoundaryEnd)
@@ -73,24 +35,3 @@ map                     <A-l>            <Plug>(IndentWiseNextGreaterIndent)
 
 map                     <A-j>            <Plug>(NavigateBlockDown)
 map                     <A-k>            <Plug>(NavigateBlockUp)
-
-" Duplicate keys (* = used in mapping already, ! = do not map or map to self only)
-"   Normal-mode
-"       h! <Left>* <C-h>* <BS>*
-"       l! <Right>* <Space>*
-"       j! <Down> <C-j> <C-n>*
-"       k! <Up> <C-p>*
-"       <Enter>! + <C-m>
-"       cc! S
-"   Visual-mode(char)
-"       d! x
-"       D! X
-"       c! s*
-"       C! S
-"   Visual-mode (line)
-"       d! x X D
-"       c! s*
-"       C! S
-"   Visual-mode (block)
-"       d! x X
-"       c! s*
