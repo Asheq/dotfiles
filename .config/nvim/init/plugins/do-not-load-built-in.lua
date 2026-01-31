@@ -1,5 +1,12 @@
--- Do not load some built-in plugins that are normally automatically loaded.
--- These plugins are located in $VIMRUNTIME/plugin/.
+-- Neovim has several built-in plugins located in $VIMRUNTIME/plugin/ that are
+-- automatically loaded on startup.
+--
+-- Each plugin has a guard clause in its script to prevent multiple loads by
+-- setting a g:loaded_xxx variable.
+--
+-- Setting this guard variable to 1 here prevents the plugin from loading even
+-- once.
+-- ============================================================================
 
 -- Do not load netrw.
 -- Replace with oil.nvim. Note that oil.nvim does this itself as well.

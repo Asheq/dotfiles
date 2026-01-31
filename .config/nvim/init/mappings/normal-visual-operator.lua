@@ -1,9 +1,8 @@
--- TODO-L: Add description for each mapping
--- TODO: After autoload/vimrc.vim is migrated to lua, update calls here to lua functions
+-- TODO: After autoload/vimrc.vim is migrated to lua, make sure calls here are updated
 
 local ks = vim.keymap.set
 
--- Type Ex Commands Partially
+-- Type Ex Commands Partially (to allow editing before execution)
 -- ============================================================================
 
 ks("n", "<leader>g", ":sil gr!  <Bar> tab cw<S-Left><S-Left><S-Left><Left>")
@@ -23,13 +22,9 @@ ks("n", "<leader>s", "<Cmd>Git<CR>")
 
 ks("n", "<leader>w", "<Cmd>silent update<CR>")
 
-ks("n", "<leader>h", "<Cmd>Inspect<CR>")
-
 ks("n", "<leader>j", "<Cmd>jumps<CR>")
 
 ks("n", "-", "<CMD>Oil<CR>")
-
--- ks('n', '<leader>c', '<Cmd>changes<CR>')
 
 -- Open External GUI Applications
 -- ============================================================================
@@ -38,7 +33,7 @@ ks("n", "<leader>o", function()
 	vim.system({ "open", vim.fn.expand("%:h") }, { detach = true })
 end)
 
--- Open current file in VS C*** at current line and column
+-- Open current file in VS Code at current line and column
 ks("n", "<leader>v", function()
 	local file = vim.fn.expand("%")
 	local line = vim.fn.line(".")

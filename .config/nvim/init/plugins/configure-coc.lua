@@ -1,3 +1,4 @@
+-- This file was copied and adapted from to configure coc.nvim:
 -- https://github.com/neoclide/coc.nvim?tab=readme-ov-file#example-lua-configuration
 
 -- Some servers have issues with backup files, see #649

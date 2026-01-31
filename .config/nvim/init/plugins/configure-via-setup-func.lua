@@ -1,27 +1,11 @@
--- markdown
-vim.g.markdown_folding = 1
+-- Some plugins are configured via their setup() function called after the
+-- plugin is loaded. This setup call is a common pattern in modern Neovim
+-- plugins.
+-- ============================================================================
 
--- indentwise
-vim.g.indentwise_suppress_keymaps = 1
-
--- sandwich
--- TODO-L: Add sandwich text objects without clobbering default as/is
-vim.g.textobj_sandwich_no_default_key_mappings = 1
-
--- markdown-preview.nvim
-function _G.OpenMarkdownPreview(url)
-	vim.fn.jobstart({ "open", "-a", "Firefox", "-n", "--args", "--new-window", url }, { detach = true })
-end
-
-vim.cmd([[
-  function! OpenMarkdownPreview(url)
-    call v:lua.OpenMarkdownPreview(a:url)
-  endfunction
-]])
-vim.g.mkdp_browserfunc = "OpenMarkdownPreview"
-
-local oil_ok, oil = pcall(require, "oil")
-if oil_ok then
+-- oil.nvim
+local oil_loaded, oil = pcall(require, "oil")
+if oil_loaded then
 	oil.setup({
 		default_file_explorer = true,
 		view_options = {
@@ -57,38 +41,35 @@ if oil_ok then
 			["gx"] = "actions.open_external",
 			["g."] = { "actions.toggle_hidden", mode = "n" },
 			["g\\"] = { "actions.toggle_trash", mode = "n" },
-			-- Documentation recommends <C-l> for refresh, but I use the built-in <C-l>.
-			-- Thus, I use "gs" for refresh instead.
 			-- ["<C-l>"] = "actions.refresh",
+			["gs"] = { "actions.refresh", mode = "n" }, -- Mnemonic: get started
 			-- ["gs"] = { "actions.change_sort", mode = "n" },
-			["gs"] = "actions.refresh",
+			["cs"] = { "actions.change_sort", mode = "n" }, -- Mnemonic: change sort
 		},
 	})
 end
 
-local snacks_ok, snacks = pcall(require, "snacks")
-if snacks_ok then
+-- snacks.nvim
+local snacks_loaded, snacks = pcall(require, "snacks")
+if snacks_loaded then
 	snacks.setup({
 		picker = { enabled = true },
 	})
 end
 
-local CopilotChat_ok, CopilotChat = pcall(require, "CopilotChat")
-if CopilotChat_ok then
+-- CopilotChat.nvim
+local CopilotChat_loaded, CopilotChat = pcall(require, "CopilotChat")
+if CopilotChat_loaded then
 	CopilotChat.setup({
 		mappings = {
 			reset = {
-				-- Disable default mappings for resetting a chat because I use the built-in <C-l>
-				normal = "",
+				normal = "gs", -- " Mnemonic: get started "
 				insert = "",
 			},
 			accept_diff = {
-				-- Disable default mappings for accepting a diff because I use the built-in <C-y>
-				-- For now, I am copying and pasting diffs manually.
-				normal = "",
+				normal = "yd", -- " Mnemonic: yes diff "
 				insert = "",
 			},
 		},
 	})
-	vim.g.copilot_no_tab_map = true
 end

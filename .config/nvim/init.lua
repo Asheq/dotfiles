@@ -15,7 +15,8 @@ source_lua("init/first.lua")
 source_lua("init/plugins/do-not-load-built-in.lua")
 source_lua("init/plugins/load-built-in.lua")
 source_vim("init/plugins/add.vim")
-source_lua("init/plugins/configure.lua")
+source_lua("init/plugins/configure-via-global-vars.lua")
+source_lua("init/plugins/configure-via-setup-func.lua")
 source_lua("init/plugins/configure-coc.lua")
 
 -- Mappings
