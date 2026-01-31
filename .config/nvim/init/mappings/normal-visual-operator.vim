@@ -1,42 +1,3 @@
-" Ex command typing helpers
-" ============================================================================
-
-" Partial
-" ----------------------------------------------------------------------------
-nnoremap                <leader>g        :sil gr!  <Bar> tab cw<S-Left><S-Left><S-Left><Left>
-
-nnoremap                <leader>r        :redi @r <Bar> sil  <Bar> redi END<S-Left><S-Left><S-Left><Left>
-
-nnoremap                <leader>t        :tab<C-z><C-p>
-
-nnoremap                <leader>c        :CopilotChat<C-z><C-p>
-xnoremap                <leader>c        :CopilotChat<C-z><C-p>
-
-nnoremap                yp               :ec "p = full path\nh = head\nt = tail\n"<Enter>:let @* = expand('%:')<Left><Left>
-
-" Complete
-" ----------------------------------------------------------------------------
-nnoremap <silent>       <leader>V        'V:exe 'help ' . expand('%:t')<Enter>'V
-
-nnoremap <silent>       <leader>o        :sil !open '%:h'<Enter><Enter>
-nnoremap <silent><expr> <leader>v       ':sil !code --goto ' . shellescape(expand('%') . ':' . line('.') . ':' . col('.')) . "\<Enter>"
-
-nnoremap <silent>       <leader>s        :sil Git<Enter>
-
-nnoremap <silent>       <leader>w        :sil up<Enter>
-
-nnoremap <silent>       <leader>h        :Inspect<Enter>
-
-nnoremap <silent>       <leader>j        :ju<Enter>
-
-nnoremap <silent>       <C-g>            :cal vimrc#ctrl_g_with_scrollbar()<Enter>
-
-nnoremap <silent>       -                :Oil<Enter>
-
-" nnoremap <silent>       <leader>c        :changes<Enter>
-
-" Normal and visual mode command typing helpers
-" ============================================================================
 
 " Scroll
 " ----------------------------------------------------------------------------
@@ -45,6 +6,9 @@ nnoremap <silent>       <C-b>            @=winheight(0) - 1 . "\<lt>C-y>"<Enter>
 
 nnoremap <silent>       <C-d>            @=winheight(0) / 2 - 1 . "\<lt>C-e>"<Enter>
 nnoremap <silent>       <C-u>            @=winheight(0) / 2 - 1 . "\<lt>C-y>"<Enter>
+
+" Make Normal and Visual Mode Commands Slightly More Convenient
+" ============================================================================
 
 " Yank and Paste
 " ----------------------------------------------------------------------------

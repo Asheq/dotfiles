@@ -2,4 +2,6 @@
 -- These plugins are located in $VIMRUNTIME/pack/dist/opt/.
 -- Note that "matchit" is special; it is automatically loaded indirectly by
 -- $VIMRUNTIME/plugin/matchit.vim.
-vim.cmd('packadd cfilter')
+
+-- Load cfilter
+vim.cmd("packadd cfilter")

@@ -10,14 +10,15 @@ vim.g.textobj_sandwich_no_default_key_mappings = 1
 
 -- markdown-preview.nvim
 function _G.OpenMarkdownPreview(url)
-	vim.fn.jobstart({ 'open', '-a', 'Firefox', '-n', '--args', '--new-window', url }, { detach = true })
+	vim.fn.jobstart({ "open", "-a", "Firefox", "-n", "--args", "--new-window", url }, { detach = true })
 end
+
 vim.cmd([[
   function! OpenMarkdownPreview(url)
     call v:lua.OpenMarkdownPreview(a:url)
   endfunction
 ]])
-vim.g.mkdp_browserfunc = 'OpenMarkdownPreview'
+vim.g.mkdp_browserfunc = "OpenMarkdownPreview"
 
 local oil_ok, oil = pcall(require, "oil")
 if oil_ok then
@@ -74,22 +75,19 @@ end
 
 local CopilotChat_ok, CopilotChat = pcall(require, "CopilotChat")
 if CopilotChat_ok then
-	CopilotChat.setup(
-		{
-			mappings = {
-				reset = {
-					-- Disable default mappings for resetting a chat because I use the built-in <C-l>
-					normal = "",
-					insert = "",
-				},
-				accept_diff = {
-					-- Disable default mappings for resetting a chat because I use the built-in <C-y>
-					normal = "",
-					insert = "",
-				}
+	CopilotChat.setup({
+		mappings = {
+			reset = {
+				-- Disable default mappings for resetting a chat because I use the built-in <C-l>
+				normal = "",
+				insert = "",
 			},
-		}
-	)
+			accept_diff = {
+				-- Disable default mappings for resetting a chat because I use the built-in <C-y>
+				normal = "",
+				insert = "",
+			},
+		},
+	})
+	vim.g.copilot_no_tab_map = true
 end
-
-vim.g.copilot_no_tab_map = true
