@@ -1,9 +1,0 @@
-Opening this file should trigger the filetype to be set to "asheq" because of filetype.vim.
-
-Any instance of the word "asheq" should be syntax highlighted because of syntax/asheq.vim.
-
-Line numbers should be set to relative because of ftplugin/asheq.vim.
-
-Here are some sample lines:
-Soft kitty, warm kitty, little ball of fur.
-Happy kitty, sleepy kitty, purr purr purr.

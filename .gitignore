@@ -55,7 +55,7 @@
 !/.config/nvim/init.lua
 !/.config/nvim/filetype.vim
 !/.config/nvim/coc-settings.json
-!/.config/nvim/sample.asheq
+!/.config/nvim/demo.asheq
 !/.config/nvim/after/
 !/.config/nvim/after/**
 !/.config/nvim/autoload/
