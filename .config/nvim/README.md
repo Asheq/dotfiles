@@ -1,6 +1,7 @@
 # Maintenance Commands
-- :PlugClean
-- :PlugInstall
-- :PlugUpdate
-- :CocUpdate
-- :TSUpdate
+
+- :PlugClean - Remove unused plugins
+- :PlugInstall - Install plugins
+- :PlugUpdate - Update plugins
+- :CocUpdate - Update CoC extensions
+- :TSUpdate - Update Treesitter parsers
