@@ -70,6 +70,8 @@
 !/.config/nvim/indent/**
 !/.config/nvim/init/
 !/.config/nvim/init/**
+!/.config/nvim/lua/
+!/.config/nvim/lua/**
 !/.config/nvim/pack/
 !/.config/nvim/pack/**
 !/.config/nvim/plugin/
