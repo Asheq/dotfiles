@@ -1,4 +1,4 @@
-# Print git prompt symbols key
+# Prints git prompt symbols key
 function gk() {
 	echo "
 	*  has UNSTAGED changes
@@ -10,6 +10,11 @@ function gk() {
 	<>  branch has DIVERGED from upstream
 	=  branch has NO DIFFERENCE with upstream
 	"
+}
+
+# Lists all git aliases
+function ga() {
+	git config --get-regexp alias
 }
 
 # Simple shell argument test.

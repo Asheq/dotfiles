@@ -1,5 +1,5 @@
-# These environment variables relevant only for interactive bash. Do not export
-# them to avoid polluting the variable list of subprocesses.
+# These environment variables are relevant only for interactive bash. Do not
+# export them to avoid polluting the variable list of subprocesses.
 
 # HIST...
 HISTSIZE=10000
