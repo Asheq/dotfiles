@@ -14,7 +14,8 @@ ks({ "n", "x" }, "<leader>Y", '"*Y', { remap = true })
 ks({ "n", "x" }, "<leader>p", '"*p')
 ks({ "n", "x" }, "<leader>P", '"*P')
 
--- Visually selcted previuosly changed/yanked text
+-- Visually selected previously changed/yanked text
+-- Mnemonic: g = go highlight
 ks({ "n" }, "gh", '`[v`]')
 
 -- Map to Partial Ex Commands
@@ -40,6 +41,9 @@ ks("n", "yp", ":ec \"p = full path\\nh = head\\nt = tail\\n\"<Enter>:let @* = ex
 -- Mnemonic: j = jumps
 ks("n", "<leader>j", "<Cmd>jumps<CR>")
 
+-- Mnemonic: o = open
+ks("n", "<leader>o", "<Cmd>Open %:h<CR>")
+
 -- Mnemonic: s = status
 ks("n", "<leader>s", "<Cmd>Git<CR>")
 
@@ -50,14 +54,6 @@ ks("n", "-", "<CMD>Oil<CR>")
 
 -- Map to System Commands
 -- ============================================================================
--- Open Mac OS file explorer at current file's directory
--- Mnemonic: o = open
-ks("n", "<leader>o", function()
-	vim.system({ "open", vim.fn.expand("%:h") }, { detach = true })
-end)
-
--- Open current file in VS Code at current line and column
--- Mnemonic: v = VS Code
 ks("n", "<leader>v", function()
 	local file = vim.fn.expand("%")
 	local line = vim.fn.line(".")

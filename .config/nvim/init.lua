@@ -11,6 +11,9 @@ end
 -- First
 source_lua("init/first.lua")
 
+-- Filetypes
+source_lua("init/filetypes/add.lua")
+
 -- Plugins
 source_lua("init/plugins/do-not-load-built-in.lua")
 source_lua("init/plugins/load-built-in.lua")

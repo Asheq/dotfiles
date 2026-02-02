@@ -54,7 +54,6 @@
 !/.config/nvim/.luarc.json
 !/.config/nvim/stylua.toml
 !/.config/nvim/init.lua
-!/.config/nvim/filetype.vim
 !/.config/nvim/coc-settings.json
 !/.config/nvim/demo.asheq
 !/.config/nvim/after/
