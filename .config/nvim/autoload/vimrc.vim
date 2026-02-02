@@ -44,7 +44,7 @@ function! vimrc#read_aloud(keyword)
     call feedkeys("\<Enter>exit\<Enter>", 'n')
 endfunction
 
-" Better Ctrl-g
+" Ctrl-g with scrollbar
 " ============================================================================
 function! vimrc#ctrl_g_with_scrollbar()
     let original_ctrl_g_output = vimrc#get_command_output('file')
@@ -87,32 +87,48 @@ command! -nargs=1 Browse call vimrc#browse(<f-args>)
 " Statusline
 " ============================================================================
 function! vimrc#get_statusline()
-    let window_cwd = vimrc#get_window_cwd(g:statusline_winid)
-
-    if window_cwd != ""
-        let window_cwd_string = "[" . pathshorten(fnamemodify(window_cwd, ":~")) . "]"
-    else
-        let window_cwd_string = ""
-    endif
-
-    return ""
-                \ . "%{vimrc#get_statusline_file_name()}  "
-                \ . "%h%w%m%r%=[%P %{noscrollbar#statusline(10,'■','◫',['◧'],['◨'])} %L]"
-                \ . window_cwd_string
+	return ""
+				\ . "%{vimrc#get_statusline_file_name()}  "
+				\ . "%h%w%m%r%=[%P %{noscrollbar#statusline(10,'■','◫',['◧'],['◨'])} %L]"
+				\ . "%{vimrc#get_statusline_win_cwd_string()}"
 endfunction
 
 function! vimrc#get_statusline_file_name()
-    " NOTE: The filename displayed in a window's statusline is relative to the
-    " _active_ window's working directory. I might want to change this to
-    " always be relative to working directory of the window the statusline
-    " belongs to. Currently, I don't care.
-    let filename = expand('%:p:~:.')
+	" In this context, win_getid() returns the window of the statusline that
+	" is being drawn (a.k.a. the statusline window), not the active window.
+	let winid = win_getid()
 
-    if filename != ""
-        return filename
-    else
-        return "[No Name]"
-    endif
+	let bufnr = winbufnr(winid)
+	let bufname = bufname(bufnr)
+
+	if bufname == ""
+		return "[No Name]"
+	endif
+
+	let bufpath = fnamemodify(bufname, ':p')
+
+	" Get the effective CWD for the statusline window
+	let win_cwd_path = fnamemodify(getcwd(winid), ':p')
+
+	"If file is under the CWD of the statusline window, make path relative to it
+	if stridx(bufpath, win_cwd_path) == 0
+		let relative_bufname = bufpath[len(win_cwd_path):]
+		return relative_bufname != "" ? relative_bufname : bufpath
+	endif
+
+	" Otherwise, shorten with home directory (~)
+	return fnamemodify(bufpath, ':~')
+endfunction
+
+function! vimrc#get_statusline_win_cwd_string()
+	let winid = win_getid()
+	let window_cwd = vimrc#get_window_cwd(winid)
+
+	if window_cwd != ""
+		return "[" . pathshorten(fnamemodify(window_cwd, ":~")) . "]"
+	else
+		return ""
+	endif
 endfunction
 
 " Tabline
@@ -131,7 +147,7 @@ function! vimrc#get_tabline()
         let s ..= '%' .. (i + 1) .. 'T'
 
         " the label is made by MyTabLabel()
-        let s ..= ' %{MyTabLabelBufName(' .. (i + 1) .. ')}%( [%{MyTabLabelCWD(' .. (i + 1) .. ')}]%)▕'
+        let s ..= ' %{vimrc#get_tabline_tab_label(' .. (i + 1) .. ')}%( [%{vimrc#get_tabline_tab_cwd(' .. (i + 1) .. ')}]%)▕'
     endfor
 
     " after the last tab fill with TabLineFill and reset tab page nr
@@ -145,26 +161,11 @@ function! vimrc#get_tabline()
     return s
 endfunction
 
-function! MyTabLabelBufName(n)
-    let buflist = tabpagebuflist(a:n)
-    let winnr = tabpagewinnr(a:n)
-    let bname = bufname(buflist[winnr - 1])
-
-    let bname_modified = ""
-    if bname == ""
-        return "[No Name]" . "  " . a:n
-    elseif bname[strlen(bname) - 1] == '/'
-        let minus_the_slash = bname[0:strlen(bname) - 2]
-        let tail = fnamemodify(minus_the_slash, ":t")
-        let bname_modified = tail . "/"
-    else
-        let bname_modified = fnamemodify(bname, ":t")
-    endif
-
-    return bname_modified . "  " . a:n
+function! vimrc#get_tabline_tab_label(n)
+    return a:n
 endfunction
 
-function! MyTabLabelCWD(n)
+function! vimrc#get_tabline_tab_cwd(n)
     let cwd = vimrc#get_tab_cwd(a:n)
     if cwd == ''
         return ''

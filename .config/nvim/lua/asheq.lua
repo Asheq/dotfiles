@@ -1,3 +1,4 @@
 -- TODO
+--
 -- `lua/`: For Lua modules, loaded via `require`, not auto-executed.
 -- `plugin/`: For auto-executed scripts, sourced at startup, can be Lua or Vimscript.
