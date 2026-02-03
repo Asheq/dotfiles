@@ -20,28 +20,11 @@ endfunction
 
 " Buffer-local option
 setlocal relativenumber
-" - formatting options
-"     - `'formatprg'`
-"     - `'formatexpr'`
-"     - `'textwidth'`
-"     - `'formatoptions'`
-"     - `'formatlistpath'`
-" - `'keywordprg'`
-" - `'comments'`
-" - `'commentstring'`
-" - `'path'`
-" - `'suffixes'`
-" - `'suffixesadd'`
-" - `'includeexpr'`
-" - `'omnifunc'`
 
 let b:undo_ftplugin = join([
       \ 'unlet b:asheq_var',
       \ 'delcommand AsheqCmd',
       \ 'delfunction AsheqFunc',
+      \ 'exe "nunmap <buffer> <leader>b"',
       \ 'setl relativenumber<',
       \ ], ' | ')
-
-" I would like to include the following in b:undo_ftplugin, however it does not work and throws an error:
-"     nunmap <buffer> <leader>b
-" Manually removing the mapping works though.

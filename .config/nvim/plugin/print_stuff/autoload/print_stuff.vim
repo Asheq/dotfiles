@@ -10,15 +10,6 @@ function! print_stuff#print_general()
                 \   ]
                 \ },
                 \ {
-                \   'title': 'Tabs',
-                \   'items': [
-                \     {'label': 'expandtab', 'value': &expandtab, 'secondary': s:last_set('expandtab')},
-                \     {'label': 'tabstop', 'value': &tabstop, 'secondary': s:last_set('tabstop')},
-                \     {'label': 'shiftwidth', 'value': &shiftwidth, 'secondary': s:last_set('shiftwidth')},
-                \     {'label': 'smarttab', 'value': &smarttab, 'secondary': s:last_set('smarttab')},
-                \   ]
-                \ },
-                \ {
                 \   'title': 'Encoding and format',
                 \   'items': [
                 \     {'label': 'fileencoding', 'value': &fileencoding, 'secondary': s:last_set('fileencoding')},
@@ -58,6 +49,15 @@ endfunction
 
 function! print_stuff#print_indenting()
     call s:print_values([
+                \ {
+                \   'title': 'Tabs',
+                \   'items': [
+                \     {'label': 'expandtab', 'value': &expandtab, 'secondary': s:last_set('expandtab')},
+                \     {'label': 'tabstop', 'value': &tabstop, 'secondary': s:last_set('tabstop')},
+                \     {'label': 'shiftwidth', 'value': &shiftwidth, 'secondary': s:last_set('shiftwidth')},
+                \     {'label': 'smarttab', 'value': &smarttab, 'secondary': s:last_set('smarttab')},
+                \   ]
+                \ },
                 \ {
                 \   'title': 'Indenting methods',
                 \   'items': [
