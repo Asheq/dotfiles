@@ -63,9 +63,7 @@ end)
 
 -- Map to Vim Functions
 -- ============================================================================
-ks("n", "<C-g>", function()
-	vim.fn["vimrc#ctrl_g_with_scrollbar"]()
-end)
+vim.keymap.set('n', '<C-g>', '<Cmd>PrintGeneralOptions<CR>')
 
 -- Map to feedkeys
 -- ============================================================================

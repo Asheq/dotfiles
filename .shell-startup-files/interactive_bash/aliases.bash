@@ -22,12 +22,12 @@ if [[ "$(hostname)" == "AIMRAN0ML" ]]; then
 	alias drive='cd ~/Documents/'
 	alias notes='cd ~/Documents/Notes/'
 	alias tasks='cd ~/Documents/Tasks/'
-	alias vc='cd ~/.config/nvim'
+	alias cv='cd ~/.config/nvim'
 else
 	alias drive='cd ~/My\ Drive/'
 	alias notes='cd ~/My\ Drive/Notes/'
 	alias tasks='cd ~/My\ Drive/Tasks/'
-	alias vc='cd ~/.config/nvim'
+	alias cv='cd ~/.config/nvim'
 fi
 
 # git

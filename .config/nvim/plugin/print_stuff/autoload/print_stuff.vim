@@ -1,4 +1,9 @@
 function! print_stuff#print_general()
+	let original_ctrl_g_output = vimrc#get_command_output('file')
+	echo noscrollbar#statusline(&columns,'■','◫',['◧'],['◨'])
+	echo substitute(original_ctrl_g_output, '\n', '', '')
+	echo "\n"
+
     call s:print_values([
                 \ {
                 \   'title': 'Basic',

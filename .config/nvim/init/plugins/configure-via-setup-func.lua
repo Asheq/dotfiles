@@ -70,6 +70,10 @@ if CopilotChat_loaded then
 				normal = "yd", -- " Mnemonic: yes diff "
 				insert = "",
 			},
+			jump_to_diff = {
+				normal = "",
+				insert = "",
+			},
 		},
 	})
 end

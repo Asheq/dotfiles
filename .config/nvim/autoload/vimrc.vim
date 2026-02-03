@@ -44,13 +44,6 @@ function! vimrc#read_aloud(keyword)
     call feedkeys("\<Enter>exit\<Enter>", 'n')
 endfunction
 
-" Ctrl-g with scrollbar
-" ============================================================================
-function! vimrc#ctrl_g_with_scrollbar()
-    let original_ctrl_g_output = vimrc#get_command_output('file')
-    echo noscrollbar#statusline(&columns,'■','◫',['◧'],['◨']) . substitute(original_ctrl_g_output, '\n', '', '')
-endfunction
-
 " Get current working directory
 " ============================================================================
 function! vimrc#get_global_cwd()
