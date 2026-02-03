@@ -44,6 +44,19 @@ function! vimrc#read_aloud(keyword)
     call feedkeys("\<Enter>exit\<Enter>", 'n')
 endfunction
 
+" Define and Browse
+" ============================================================================
+function! vimrc#define(keyword)
+    call vimrc#open_in_shell('dict://' . vimrc#url_encode(a:keyword))
+endfunction
+
+function! vimrc#browse(keyword)
+    call vimrc#open_in_shell('https://www.google.com/search?q=' . vimrc#url_encode(a:keyword))
+endfunction
+
+command! -nargs=1 Define call vimrc#define(<f-args>)
+command! -nargs=1 Browse call vimrc#browse(<f-args>)
+
 " Get current working directory
 " ============================================================================
 function! vimrc#get_global_cwd()
@@ -63,19 +76,6 @@ function! vimrc#get_window_cwd(winid)
     endif
     return ''
 endfunction
-
-" Define and Browse
-" ============================================================================
-function! vimrc#define(keyword)
-    call vimrc#open_in_shell('dict://' . vimrc#url_encode(a:keyword))
-endfunction
-
-function! vimrc#browse(keyword)
-    call vimrc#open_in_shell('https://www.google.com/search?q=' . vimrc#url_encode(a:keyword))
-endfunction
-
-command! -nargs=1 Define call vimrc#define(<f-args>)
-command! -nargs=1 Browse call vimrc#browse(<f-args>)
 
 " Statusline
 " ============================================================================

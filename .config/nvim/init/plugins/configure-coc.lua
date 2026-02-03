@@ -37,7 +37,6 @@ local opts = { silent = true, noremap = true, expr = true, replace_keycodes = fa
 -- <C-g>u breaks current undo, please make your own choice
 keyset("i", "<c-j>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
--- TODO-L: Find good mappings for these
 -- Use <c-j> to trigger snippets
 -- keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
 -- Use <c-space> to trigger completion

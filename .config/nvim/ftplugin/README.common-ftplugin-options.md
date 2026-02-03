@@ -13,6 +13,7 @@ Some buffer-local options that are commonly set in filetype plugins (ftplugins) 
 - textwidth
 
 # Other
+<!-- TODO: Add a :Print... command  -->
 
 - suffixesadd
 - iskeyword
@@ -24,14 +25,8 @@ Some buffer-local options that are commonly set in filetype plugins (ftplugins) 
 - isfname
 - suffixes
 
-# Tab
-
-- shiftwidth
-- expandtab
-- tabstop
-
 # Include
-
+<!-- TODO: Add a :Print... command  -->
 - include
 - includeexpr
 

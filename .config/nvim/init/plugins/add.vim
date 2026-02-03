@@ -1,5 +1,3 @@
-" TODO: Migrate to mini.deps and convert this file to Lua
-"
 " Begin
 " ----------------------------------------------------------------------------
 call plug#begin()

@@ -11,12 +11,11 @@ let b:asheq_var = "This is a buffer-local variable"
 command! -buffer AsheqCmd echo "Hello from AsheqCmd"
 
 " Buffer-local mapping
-nnoremap <buffer> <leader>b :call AsheqFunc()<CR>
+nnoremap <buffer> <leader>b :echo AsheqFunc()<CR>
 
 " Global function
 function! AsheqFunc()
-	call asheq#hello()
-	echo "Hello from AsheqFunc"
+	return "Hello from AsheqFunc"
 endfunction
 
 " Buffer-local option

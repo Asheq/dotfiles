@@ -1,4 +1,4 @@
-" This file is loaded when the `:compiler asheqc` command is executed
+" This file is loaded when `:compiler asheqc` is executed
 
 if exists("current_compiler")
   finish
