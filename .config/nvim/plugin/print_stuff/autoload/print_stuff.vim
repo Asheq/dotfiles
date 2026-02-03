@@ -94,9 +94,11 @@ function! print_stuff#print_folding()
                 \   'title': 'Basic',
                 \   'items': [
                 \     {'label': 'foldenable', 'value': &foldenable, 'secondary': s:last_set('foldenable')},
+                \     {'label': 'foldlevelstart', 'value': &foldlevelstart, 'secondary': s:last_set('foldlevelstart')},
+                \     {'label': 'foldlevel', 'value': &foldlevel, 'secondary': s:last_set('foldlevel')},
                 \     {'label': 'foldmethod', 'value': &foldmethod, 'secondary': s:last_set('foldmethod')},
-                \     {'label': 'foldmarker', 'value': &foldmarker, 'secondary': s:last_set('foldmarker')},
                 \     {'label': 'foldexpr', 'value': &foldexpr, 'secondary': s:last_set('foldexpr')},
+                \     {'label': 'foldmarker', 'value': &foldmarker, 'secondary': s:last_set('foldmarker')},
                 \   ]
                 \ },
                 \ {
@@ -104,11 +106,9 @@ function! print_stuff#print_folding()
                 \   'items': [
                 \     {'label': 'foldtext', 'value': &foldtext, 'secondary': s:last_set('foldtext')},
                 \     {'label': 'foldopen', 'value': &foldopen, 'secondary': s:last_set('foldopen')},
-                \     {'label': 'foldclose', 'value': &foldcolumn, 'secondary': s:last_set('foldclose')},
+                \     {'label': 'foldclose', 'value': &foldclose, 'secondary': s:last_set('foldclose')},
                 \     {'label': 'foldcolumn', 'value': &foldcolumn, 'secondary': s:last_set('foldcolumn')},
                 \     {'label': 'foldignore', 'value': &foldignore, 'secondary': s:last_set('foldignore')},
-                \     {'label': 'foldlevel', 'value': &foldlevel, 'secondary': s:last_set('foldlevel')},
-                \     {'label': 'foldlevelstart', 'value': &foldlevelstart, 'secondary': s:last_set('foldlevelstart')},
                 \     {'label': 'foldminlines', 'value': &foldminlines, 'secondary': s:last_set('foldminlines')},
                 \     {'label': 'foldnestmax', 'value': &foldnestmax, 'secondary': s:last_set('foldnestmax')},
                 \   ]
