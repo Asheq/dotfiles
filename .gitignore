@@ -42,9 +42,6 @@
 !/.config/kitty/themes/
 !/.config/kitty/themes/**
 
-!/.config/doom/
-!/.config/doom/**
-
 !/.config/keywords
 !/.config/keywords/**
 

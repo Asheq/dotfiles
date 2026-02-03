@@ -2,21 +2,22 @@ local ks = vim.keymap.set
 
 -- Map to Normal Mode Commands
 -- ============================================================================
+
 -- Fold
 ks("n", "<Left>", "zc")
 ks("n", "<S-Left>", "zC")
 ks("n", "<Right>", "zo")
 ks("n", "<S-Right>", "zO")
 
+-- Visually select previously changed/yanked text
+-- Mnemonic: g = go highlight
+ks({ "n" }, "gh", '`[v`]')
+
 -- Yank and Put
 ks({ "n", "x" }, "<leader>y", '"*y')
 ks({ "n", "x" }, "<leader>Y", '"*Y', { remap = true })
 ks({ "n", "x" }, "<leader>p", '"*p')
 ks({ "n", "x" }, "<leader>P", '"*P')
-
--- Visually selected previously changed/yanked text
--- Mnemonic: g = go highlight
-ks({ "n" }, "gh", '`[v`]')
 
 -- Map to Partial Ex Commands
 -- ============================================================================
@@ -34,7 +35,7 @@ ks("n", "<leader>r", ":redi @r <Bar> sil  <Bar> redi END<S-Left><S-Left><S-Left>
 ks("n", "<leader>t", ":tab<C-z><C-p>")
 
 -- Mnemonic: yp = yank path
-ks("n", "yp", ":ec \"p = full path\\nh = head\\nt = tail\\n\"<Enter>:let @* = expand('%:')<Left><Left>")
+ks("n", "yp", ":ec \"p = full path\\nh = head\\nt = tail\\n\"<CR>:let @* = expand('%:')<Left><Left>")
 
 -- Map to Full Ex Commands
 -- ============================================================================
@@ -50,7 +51,13 @@ ks("n", "<leader>s", "<Cmd>Git<CR>")
 -- Mnemonic: w = write
 ks("n", "<leader>w", "<Cmd>silent update<CR>")
 
-ks("n", "-", "<CMD>Oil<CR>")
+-- Mnemonic: p = print
+ks('n', '<C-p>g', '<Cmd>PrintGeneralOptions<CR>')
+ks('n', '<C-p>f', '<Cmd>PrintFormattingOptions<CR>')
+ks('n', '<C-p>i', '<Cmd>PrintIndentingOptions<CR>')
+ks('n', '<C-p>d', '<Cmd>PrintFoldingOptions<CR>')
+
+ks("n", "-", "<Cmd>Oil<CR>")
 
 -- Map to System Commands
 -- ============================================================================
@@ -60,14 +67,6 @@ ks("n", "<leader>v", function()
 	local col = vim.fn.col(".")
 	vim.system({ "code", "--goto", string.format("%s:%d:%d", file, line, col) }, { detach = true })
 end)
-
--- Map to Vim Functions
--- ============================================================================
--- Mnemonic: l = list
-vim.keymap.set('n', '<leader>lg', '<Cmd>PrintGeneralOptions<CR>')
-vim.keymap.set('n', '<leader>lf', '<Cmd>PrintFormattingOptions<CR>')
-vim.keymap.set('n', '<leader>li', '<Cmd>PrintIndentingOptions<CR>')
-vim.keymap.set('n', '<leader>ld', '<Cmd>PrintFoldingOptions<CR>')
 
 -- Map to feedkeys
 -- ============================================================================
@@ -98,7 +97,7 @@ end)
 --       h!         <Left>*    <C-h>      <BS>*
 --       l!         <Right>*   <Space>*
 --       j!         <Down>!    <C-j>      <C-n>
---       k!         <Up>!                 <C-p>
+--       k!         <Up>!                 <C-p>*
 --       <Enter>!              +          <C-m>
 --       cc!        S
 --   Visual-mode(char)
