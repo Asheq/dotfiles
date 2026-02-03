@@ -1,5 +1,8 @@
+" TODO: Make sure every function lists all relevant options.
+
 function! print_stuff#print_general()
 	echo noscrollbar#statusline(&columns,'■','◫',['◧'],['◨'])
+
     call s:print_values([
                 \ {
                 \   'title': 'Basic',

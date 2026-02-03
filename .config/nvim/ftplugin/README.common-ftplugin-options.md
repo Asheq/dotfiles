@@ -1,17 +1,5 @@
 Some buffer-local options that are commonly set in filetype plugins (ftplugins) include:
 
-# Commenting
-
-- commentstring
-- comments
-
-# Formatting
-
-- formatoptions
-- formatlistpat
-- formatprg
-- textwidth
-
 # Other
 <!-- TODO: Add a :Print... command  -->
 
@@ -24,13 +12,22 @@ Some buffer-local options that are commonly set in filetype plugins (ftplugins) 
 - matchpairs
 - isfname
 - suffixes
-
-# Include
-<!-- TODO: Add a :Print... command  -->
 - include
 - includeexpr
 
-# Indentation
+# Commenting
+
+- commentstring
+- comments
+
+# Formatting
+
+- formatoptions
+- formatlistpat
+- formatprg
+- textwidth
+
+# Indenting
 
 - indentkeys
 
