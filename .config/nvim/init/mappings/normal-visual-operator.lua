@@ -63,7 +63,11 @@ end)
 
 -- Map to Vim Functions
 -- ============================================================================
-vim.keymap.set('n', '<C-g>', '<Cmd>PrintGeneralOptions<CR>')
+-- Mnemonic: l = list
+vim.keymap.set('n', '<leader>lg', '<Cmd>PrintGeneralOptions<CR>')
+vim.keymap.set('n', '<leader>lf', '<Cmd>PrintFormattingOptions<CR>')
+vim.keymap.set('n', '<leader>li', '<Cmd>PrintIndentingOptions<CR>')
+vim.keymap.set('n', '<leader>ld', '<Cmd>PrintFoldingOptions<CR>')
 
 -- Map to feedkeys
 -- ============================================================================

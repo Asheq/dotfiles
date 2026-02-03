@@ -1,164 +1,172 @@
-" TODO: Make sure every function lists all relevant options.
-
 function! print_stuff#print_general()
 	echo noscrollbar#statusline(&columns,'■','◫',['◧'],['◨'])
 
-    call s:print_values([
-                \ {
-                \   'title': 'Basic',
-                \   'items': [
-                \     {'label': 'CWD', 'value': getcwd()},
-                \     {'label': 'File', 'value': expand('%:.')},
-                \     {'label': 'Git branch', 'value': FugitiveHead()},
-                \     {'label': 'filetype', 'value': &filetype, 'secondary': s:last_set('filetype')},
-                \   ]
-                \ },
-                \ {
-                \   'title': 'Encoding and format',
-                \   'items': [
-                \     {'label': 'fileencoding', 'value': &fileencoding, 'secondary': s:last_set('fileencoding')},
-                \     {'label': 'fileformat (EOL)', 'value': &fileformat, 'secondary': s:last_set('fileformat')},
-                \   ]
-                \ },
-                \ {
-                \   'title': 'Comments',
-                \   'items': [
-                \     {'label': 'comments', 'value': &comments, 'secondary': s:last_set('comments')},
-                \     {'label': 'commentstring', 'value': &commentstring, 'secondary': s:last_set('commentstring')},
-                \   ]
-                \ }
-                \ ])
+	call s:print_values([
+				\ {
+				\   'title': 'Basic',
+				\   'items': [
+				\     {'label': 'Working Directory', 'value': getcwd()},
+				\     {'label': 'File', 'value': expand('%:.')},
+				\     s:option_info('filetype'),
+				\   ]
+				\ },
+				\ {
+				\   'title': 'Encoding and format',
+				\   'items': [
+				\     s:option_info('fileencoding'),
+				\     s:option_info('fileformat'),
+				\   ]
+				\ },
+				\ {
+				\   'title': 'Comments',
+				\   'items': [
+				\     s:option_info('comments'),
+				\     s:option_info('commentstring'),
+				\   ]
+				\ }
+				\ ])
 endfunction
 
 function! print_stuff#print_formatting()
-    call s:print_values([
-                \ {
-                \   'title': 'Formatting methods for gq/gw operator',
-                \   'items': [
-                \     {'label': '[internal formatting]', 'value': '[N/A]'},
-                \     {'label': 'formatprg', 'value': &formatprg, 'secondary': s:last_set('formatprg')},
-                \     {'label': 'formatexpr', 'value': &formatexpr, 'secondary': s:last_set('formatexpr')},
-                \   ]
-                \ },
-                \ {
-                \   'title': 'For internal formatting',
-                \   'items': [
-                \     {'label': 'textwidth', 'value': &textwidth, 'secondary': s:last_set('textwidth')},
-                \     {'label': 'formatoptions', 'value': &formatoptions, 'secondary': s:last_set('formatoptions')},
-                \     {'label': 'formatlistpat', 'value': &formatlistpat, 'secondary': s:last_set('formatlistpat')},
-                \   ]
-                \ }
-                \ ])
+	call s:print_values([
+				\ {
+				\   'title': 'Formatting methods for gq/gw operator (ascending priority)',
+				\   'items': [
+				\     {'label': '[internal formatting]', 'value': '[N/A]'},
+				\     s:option_info('formatprg'),
+				\     s:option_info('formatexpr'),
+				\   ]
+				\ },
+				\ {
+				\   'title': 'For internal formatting',
+				\   'items': [
+				\     s:option_info('textwidth'),
+				\     s:option_info('formatoptions'),
+				\     s:option_info('formatlistpat'),
+				\   ]
+				\ }
+				\ ])
 endfunction
 
 function! print_stuff#print_indenting()
-    call s:print_values([
-                \ {
-                \   'title': 'Tabs',
-                \   'items': [
-                \     {'label': 'expandtab', 'value': &expandtab, 'secondary': s:last_set('expandtab')},
-                \     {'label': 'tabstop', 'value': &tabstop, 'secondary': s:last_set('tabstop')},
-                \     {'label': 'shiftwidth', 'value': &shiftwidth, 'secondary': s:last_set('shiftwidth')},
-                \     {'label': 'smarttab', 'value': &smarttab, 'secondary': s:last_set('smarttab')},
-                \   ]
-                \ },
-                \ {
-                \   'title': 'Indenting methods',
-                \   'items': [
-                \     {'label': 'autoindent', 'value': &autoindent, 'secondary': s:last_set('autoindent')},
-                \     {'label': 'smartindent', 'value': &smartindent, 'secondary': s:last_set('smartindent')},
-                \     {'label': 'cindent', 'value': &cindent, 'secondary': s:last_set('cindent')},
-                \     {'label': 'indentexpr', 'value': &indentexpr, 'secondary': s:last_set('indentexpr')},
-                \   ]
-                \ },
-                \ {
-                \   'title': 'For cindent',
-                \   'items': [
-                \     {'label': 'cinoptions', 'value': &cinoptions, 'secondary': s:last_set('cinoptions')},
-                \     {'label': 'cinkeys', 'value': &cinkeys, 'secondary': s:last_set('cinkeys')},
-                \     {'label': 'cinwords', 'value': &cinwords, 'secondary': s:last_set('cinwords')},
-                \   ]
-                \ },
-                \ {
-                \   'title': 'For indentexpr',
-                \   'items': [
-                \     {'label': 'indentkeys', 'value': &indentkeys, 'secondary': s:last_set('indentkeys')},
-                \   ]
-                \ },
-                \ ])
+	call s:print_values([
+				\ {
+				\   'title': 'Tabs',
+				\   'items': [
+				\     s:option_info('expandtab'),
+				\     s:option_info('tabstop'),
+				\     s:option_info('shiftwidth'),
+				\     s:option_info('smarttab'),
+				\     s:option_info('softtabstop'),
+				\     s:option_info('copyindent'),
+				\     s:option_info('preserveindent'),
+				\   ]
+				\ },
+				\ {
+				\   'title': 'Indenting methods (ascending priority)',
+				\   'items': [
+				\     s:option_info('autoindent'),
+				\     s:option_info('smartindent'),
+				\     s:option_info('cindent'),
+				\     s:option_info('indentexpr'),
+				\   ]
+				\ },
+				\ {
+				\   'title': 'For cindent',
+				\   'items': [
+				\     s:option_info('cinoptions'),
+				\     s:option_info('cinkeys'),
+				\     s:option_info('cinwords'),
+				\   ]
+				\ },
+				\ {
+				\   'title': 'For indentexpr',
+				\   'items': [
+				\     s:option_info('indentkeys'),
+				\   ]
+				\ },
+				\ ])
 endfunction
 
 function! print_stuff#print_folding()
-    call s:print_values([
-                \ {
-                \   'title': 'Basic',
-                \   'items': [
-                \     {'label': 'foldenable', 'value': &foldenable, 'secondary': s:last_set('foldenable')},
-                \     {'label': 'foldlevelstart', 'value': &foldlevelstart, 'secondary': s:last_set('foldlevelstart')},
-                \     {'label': 'foldlevel', 'value': &foldlevel, 'secondary': s:last_set('foldlevel')},
-                \     {'label': 'foldmethod', 'value': &foldmethod, 'secondary': s:last_set('foldmethod')},
-                \     {'label': 'foldexpr', 'value': &foldexpr, 'secondary': s:last_set('foldexpr')},
-                \     {'label': 'foldmarker', 'value': &foldmarker, 'secondary': s:last_set('foldmarker')},
-                \   ]
-                \ },
-                \ {
-                \   'title': 'Other',
-                \   'items': [
-                \     {'label': 'foldtext', 'value': &foldtext, 'secondary': s:last_set('foldtext')},
-                \     {'label': 'foldopen', 'value': &foldopen, 'secondary': s:last_set('foldopen')},
-                \     {'label': 'foldclose', 'value': &foldclose, 'secondary': s:last_set('foldclose')},
-                \     {'label': 'foldcolumn', 'value': &foldcolumn, 'secondary': s:last_set('foldcolumn')},
-                \     {'label': 'foldignore', 'value': &foldignore, 'secondary': s:last_set('foldignore')},
-                \     {'label': 'foldminlines', 'value': &foldminlines, 'secondary': s:last_set('foldminlines')},
-                \     {'label': 'foldnestmax', 'value': &foldnestmax, 'secondary': s:last_set('foldnestmax')},
-                \   ]
-                \ }
-                \ ])
+	call s:print_values([
+				\ {
+				\   'title': 'Basic',
+				\   'items': [
+				\     s:option_info('foldenable'),
+				\     s:option_info('foldlevelstart'),
+				\     s:option_info('foldlevel'),
+				\     s:option_info('foldmethod'),
+				\     s:option_info('foldexpr'),
+				\     s:option_info('foldmarker'),
+				\   ]
+				\ },
+				\ {
+				\   'title': 'Other',
+				\   'items': [
+				\     s:option_info('foldtext'),
+				\     s:option_info('foldopen'),
+				\     s:option_info('foldclose'),
+				\     s:option_info('foldcolumn'),
+				\     s:option_info('foldignore'),
+				\     s:option_info('foldminlines'),
+				\     s:option_info('foldnestmax'),
+				\   ]
+				\ }
+				\ ])
+endfunction
+
+function! s:option_info(optname) abort
+	return {
+				\ 'label': a:optname,
+				\ 'value': eval('&' . a:optname),
+				\ 'secondary': s:last_set(a:optname)
+				\ }
 endfunction
 
 function! s:last_set(option)
-    let temp = getreg("l")
-    redir @l
-    execute 'silent verbose set ' . a:option . '?'
-    redir END
-    let full_value = getreg("l")
-    call setreg("l", temp)
+	let temp = getreg("l")
+	redir @l
+	execute 'silent verbose set ' . a:option . '?'
+	redir END
+	let full_value = getreg("l")
+	call setreg("l", temp)
 
-    let idx = match(full_value, 'Last set from ')
-    if (idx != -1)
-        let file = substitute(full_value[idx:], 'Last set from ', '', '')
-        let file = substitute(file, '\vline \d+$', '', '')
-        return ' => ' . substitute(file, $VIMRUNTIME, '$VIMRUNTIME', 'g')
-    else
-        return ''
-    endif
+	let idx = match(full_value, 'Last set from ')
+	if (idx != -1)
+		let file = substitute(full_value[idx:], 'Last set from ', '', '')
+		let file = substitute(file, '\vline \d+$', '', '')
+		return ' => ' . substitute(file, $VIMRUNTIME, '$VIMRUNTIME', 'g')
+	else
+		return ''
+	endif
 endfunction
 
 function! s:print_values(categories)
-    let all_items = []
-    for category in a:categories
-        let all_items = all_items + category.items
-    endfor
-    let max_item_label_length = max(map(all_items, 'len(v:val.label)'))
+	let all_items = []
+	for category in a:categories
+		let all_items = all_items + category.items
+	endfor
+	let max_item_label_length = max(map(all_items, 'len(v:val.label)'))
 
-    for category in a:categories
-        call s:echo_hi(category.title, 'htmlH1', 'echo')
+	for category in a:categories
+		call s:echo_hi(category.title, 'Underlined', 'echo')
 
-        for item in category.items
-            echo repeat(' ', max_item_label_length - len(item.label) + 4)
-            call s:echo_hi(item.label . ': ', 'Statement', 'echon')
-            if exists('item.value')
-                echon item.value
-            endif
-            if exists('item.secondary')
-                call s:echo_hi(item.secondary, 'NonText', 'echon')
-            endif
-        endfor
-    endfor
+		for item in category.items
+			echo repeat(' ', max_item_label_length - len(item.label) + 4)
+			call s:echo_hi(item.label . ': ', 'String', 'echon')
+			if exists('item.value')
+				echon item.value
+			endif
+			if exists('item.secondary')
+				call s:echo_hi(item.secondary, 'NonText', 'echon')
+			endif
+		endfor
+	endfor
 endfunction
 
 function! s:echo_hi(msg, hi_grp, echo_cmd)
-    execute "echohl " . a:hi_grp
-    execute a:echo_cmd . " '" . a:msg . "'"
-    echohl None
+	execute "echohl " . a:hi_grp
+	execute a:echo_cmd . " '" . a:msg . "'"
+	echohl None
 endfunction
