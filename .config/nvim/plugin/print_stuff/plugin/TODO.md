@@ -1,5 +1,7 @@
 # TODO
 
+- Convert to lua
+
 - Read the following for ideas about how to present options:
     - `:h options.txt`
     - `:h :set...`

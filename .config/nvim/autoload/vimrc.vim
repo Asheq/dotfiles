@@ -16,11 +16,14 @@ function! vimrc#url_encode(str)
 endfunction
 
 function! vimrc#get_selection_text()
-    let temp = getreg("v")
-    silent normal! gv"vy
-    let raw_text = getreg("v")
-    call setreg("v", temp)
-    return raw_text
+	" TODO: This is a bad way to get the selection text because it could
+	" trigger side effects, e.g., if there are autocommands related to yanking
+	" text or setting registers. Similar issue in vimrc#read_aloud() below.
+	let temp = getreg("v")
+	silent normal! gv"vy
+	let raw_text = getreg("v")
+	call setreg("v", temp)
+	return raw_text
 endfunction
 
 " Read aloud
@@ -60,9 +63,9 @@ function! vimrc#get_tab_cwd(tabnr)
     return ''
 endfunction
 
-function! vimrc#get_window_cwd(winid)
-    if haslocaldir(a:winid)
-        return getcwd(a:winid)
+function! vimrc#get_window_cwd(winnr)
+    if haslocaldir(a:winnr)
+        return getcwd(a:winnr)
     endif
     return ''
 endfunction
@@ -73,7 +76,7 @@ function! vimrc#get_statusline()
 	return ""
 				\ . "%{vimrc#get_statusline_file_name()}  "
 				\ . "%h%w%m%r%=[%P %{noscrollbar#statusline(10,'■','◫',['◧'],['◨'])} %L]"
-				\ . "%{vimrc#get_statusline_win_cwd_string()}"
+				\ . "%([%{vimrc#get_statusline_win_cwd()}]%)"
 endfunction
 
 function! vimrc#get_statusline_file_name()
@@ -103,15 +106,10 @@ function! vimrc#get_statusline_file_name()
 	return fnamemodify(bufpath, ':~')
 endfunction
 
-function! vimrc#get_statusline_win_cwd_string()
+function! vimrc#get_statusline_win_cwd()
 	let winid = win_getid()
-	let window_cwd = vimrc#get_window_cwd(winid)
-
-	if window_cwd != ""
-		return "[" . pathshorten(fnamemodify(window_cwd, ":~")) . "]"
-	else
-		return ""
-	endif
+	let cwd = vimrc#get_window_cwd(winid)
+	return cwd == '' ? '' : pathshorten(fnamemodify(cwd, ":~"))
 endfunction
 
 " Tabline
@@ -144,15 +142,11 @@ function! vimrc#get_tabline()
     return s
 endfunction
 
-function! vimrc#get_tabline_tab_label(n)
-    return a:n
+function! vimrc#get_tabline_tab_label(tabnr)
+    return a:tabnr
 endfunction
 
-function! vimrc#get_tabline_tab_cwd(n)
-    let cwd = vimrc#get_tab_cwd(a:n)
-    if cwd == ''
-        return ''
-    else
-        return pathshorten(fnamemodify(cwd, ":~"))
-    endif
+function! vimrc#get_tabline_tab_cwd(tabnr)
+    let cwd = vimrc#get_tab_cwd(a:tabnr)
+	return cwd == '' ? '' : pathshorten(fnamemodify(cwd, ":~"))
 endfunction

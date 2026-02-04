@@ -132,7 +132,7 @@ function! s:option_info(optname) abort
 				\ }
 endfunction
 
-function! s:last_set(option)
+function! s:last_set(option) abort
 	let temp = getreg("l")
 	redir @l
 	execute 'silent verbose set ' . a:option . '?'
@@ -150,7 +150,7 @@ function! s:last_set(option)
 	endif
 endfunction
 
-function! s:print_values(categories)
+function! s:print_values(categories) abort
 	let all_items = []
 	for category in a:categories
 		let all_items = all_items + category.items
@@ -173,7 +173,7 @@ function! s:print_values(categories)
 	endfor
 endfunction
 
-function! s:echo_hi(msg, hi_grp, echo_cmd)
+function! s:echo_hi(msg, hi_grp, echo_cmd) abort
 	execute "echohl " . a:hi_grp
 	execute a:echo_cmd . " '" . a:msg . "'"
 	echohl None
