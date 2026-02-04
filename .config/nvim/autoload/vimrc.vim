@@ -19,6 +19,7 @@ function! vimrc#get_selection_text()
 	" TODO: This is a bad way to get the selection text because it could
 	" trigger side effects, e.g., if there are autocommands related to yanking
 	" text or setting registers. Similar issue in vimrc#read_aloud() below.
+	" Fix this when you migrate this file to Lua.
 	let temp = getreg("v")
 	silent normal! gv"vy
 	let raw_text = getreg("v")
