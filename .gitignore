@@ -52,7 +52,7 @@
 !/.config/nvim/stylua.toml
 !/.config/nvim/init.lua
 !/.config/nvim/coc-settings.json
-!/.config/nvim/demo.asheq
+!/.config/nvim/file.demo
 !/.config/nvim/after/
 !/.config/nvim/after/**
 !/.config/nvim/autoload/

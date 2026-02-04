@@ -1,10 +1,10 @@
-" This file is loaded when `:compiler asheqc` is executed
+" This file is loaded when `:compiler democ` is executed
 
 if exists("current_compiler")
   finish
 endif
 
-let current_compiler = "asheqc"
+let current_compiler = "democ"
 
 " Copied from $VIMRUNTIME/compiler/go.vim
 CompilerSet makeprg=go\ build

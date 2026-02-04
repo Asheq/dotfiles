@@ -1,6 +1,7 @@
 Some buffer-local options that are commonly set in filetype plugins (ftplugins) include:
 
 # Other
+
 <!-- TODO: Add a :Print... command  -->
 
 - suffixesadd

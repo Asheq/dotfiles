@@ -1,15 +1,5 @@
 " General utilities
 " ============================================================================
-function! vimrc#get_command_output(command)
-    let temp = getreg("v")
-    redir @v
-    execute 'silent ' . a:command
-    let output = getreg("v")
-    redir END
-    call setreg("v", temp)
-    return output
-endfunction
-
 function! vimrc#open_in_shell(item, ...)
     let application = get(a:, 1, 0)
 
