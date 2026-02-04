@@ -1,21 +1,5 @@
 Some buffer-local options that are commonly set in filetype plugins (ftplugins) include:
 
-# Other
-
-<!-- TODO: Add a :Print... command  -->
-
-- suffixesadd
-- iskeyword
-- define
-- omnifunc
-- path
-- keywordprg
-- matchpairs
-- isfname
-- suffixes
-- include
-- includeexpr
-
 # Commenting
 
 - commentstring
@@ -37,3 +21,23 @@ Some buffer-local options that are commonly set in filetype plugins (ftplugins) 
 - foldmethod
 - foldexpr
 - foldcolumn
+
+# Other
+
+- path
+- suffixesadd
+
+- suffixes
+
+- iskeyword
+- isfname
+
+- keywordprg
+
+- omnifunc
+
+- matchpairs
+
+- define
+- include
+- includeexpr
