@@ -23,6 +23,14 @@ function! print_stuff#print_general()
 				\     s:option_info('comments'),
 				\     s:option_info('commentstring'),
 				\   ]
+				\ },
+				\ {
+				\   'title': 'UI',
+				\   'items': [
+				\     s:option_info('tabline'),
+				\     s:option_info('statusline'),
+				\     s:option_info('winbar'),
+				\   ]
 				\ }
 				\ ])
 endfunction
