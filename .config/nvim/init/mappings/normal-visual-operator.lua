@@ -51,11 +51,10 @@ ks("n", "<leader>s", "<Cmd>Git<CR>")
 -- Mnemonic: w = write
 ks("n", "<leader>w", "<Cmd>silent update<CR>")
 
--- Mnemonic: p = print
-ks('n', '<C-p>g', '<Cmd>PrintGeneralOptions<CR>')
-ks('n', '<C-p>f', '<Cmd>PrintFormattingOptions<CR>')
-ks('n', '<C-p>i', '<Cmd>PrintIndentingOptions<CR>')
-ks('n', '<C-p>d', '<Cmd>PrintFoldingOptions<CR>')
+ks('n', '<C-g><C-g>', '<Cmd>PrintGeneralOptions<CR>')
+ks('n', '<C-g><C-f>', '<Cmd>PrintFormattingOptions<CR>')
+ks('n', '<C-g><C-t>', '<Cmd>PrintIndentingOptions<CR>')
+ks('n', '<C-g><C-d>', '<Cmd>PrintFoldingOptions<CR>')
 
 ks("n", "-", "<Cmd>Oil<CR>")
 
