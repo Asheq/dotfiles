@@ -1,7 +1,7 @@
-command! PrintGeneralOptions call print_options#general()
+command! PrintGeneralOptions call print_options#print_general()
 
-command! PrintFormattingOptions call print_options#formatting()
+command! PrintFormattingOptions call print_options#print_formatting()
 
-command! PrintIndentingOptions call print_options#indenting()
+command! PrintIndentingOptions call print_options#print_indenting()
 
-command! PrintFoldingOptions call print_options#folding()
+command! PrintFoldingOptions call print_options#print_folding()
