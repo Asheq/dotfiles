@@ -55,6 +55,7 @@ ks('n', '<C-g><C-g>', '<Cmd>PrintGeneralOptions<CR>')
 ks('n', '<C-g><C-f>', '<Cmd>PrintFormattingOptions<CR>')
 ks('n', '<C-g><C-t>', '<Cmd>PrintIndentingOptions<CR>')
 ks('n', '<C-g><C-d>', '<Cmd>PrintFoldingOptions<CR>')
+ks('n', '<C-g><C-u>', '<Cmd>PrintUpdatedOptions<CR>')
 
 ks("n", "-", "<Cmd>Oil<CR>")
 

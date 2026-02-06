@@ -5,3 +5,5 @@ command! PrintFormattingOptions call print_options#print_formatting()
 command! PrintIndentingOptions call print_options#print_indenting()
 
 command! PrintFoldingOptions call print_options#print_folding()
+
+command! PrintUpdatedOptions call print_options#print_updated()

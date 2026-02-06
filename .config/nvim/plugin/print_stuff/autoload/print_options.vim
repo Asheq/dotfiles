@@ -1,4 +1,4 @@
-function! print_options#print_nondefault_options() abort
+function! print_options#print_updated() abort
 	let lines = split(execute('silent set!'), "\n")
 
 	let seen = {}
@@ -226,11 +226,11 @@ function! s:print_option_groups(groups) abort
 					call s:echo_hi(tail, 'NonText', 'echon')
 				elseif stridx(last_set, config_path_abs) == 0
 					let tail = substitute(last_set, '\V' . escape(config_path_abs, '\\') . '/', '', '')
-					call s:echo_hi('$CONFIGHOME/', 'String', 'echon')
+					call s:echo_hi(config_path_short . '/', 'String', 'echon')
 					call s:echo_hi(tail, 'NonText', 'echon')
 				elseif !empty(config_path_short) && stridx(last_set, config_path_short) == 0
 					let tail = substitute(last_set, '\V' . escape(config_path_short, '\\') . '/', '', '')
-					call s:echo_hi('$CONFIGHOME/', 'String', 'echon')
+					call s:echo_hi(config_path_short . '/', 'String', 'echon')
 					call s:echo_hi(tail, 'NonText', 'echon')
 				else
 					call s:echo_hi(last_set, 'NonText', 'echon')
