@@ -1,6 +1,9 @@
 {
   "bundleId" : "com.knollsoft.Rectangle",
   "defaults" : {
+    "SUEnableAutomaticChecks" : {
+      "bool" : true
+    },
     "allowAnyShortcut" : {
       "bool" : false
     },
@@ -10,11 +13,11 @@
     "almostMaximizeWidth" : {
       "float" : 0
     },
-    "alternateDefaultShortcuts" : {
-      "bool" : true
-    },
     "altThirdCycle" : {
       "int" : 0
+    },
+    "alternateDefaultShortcuts" : {
+      "bool" : true
     },
     "alwaysAccountForStage" : {
       "int" : 0
@@ -34,10 +37,10 @@
     "cascadeAllDeltaSize" : {
       "float" : 30
     },
-    "centeredDirectionalMove" : {
+    "centerHalfCycles" : {
       "int" : 0
     },
-    "centerHalfCycles" : {
+    "centeredDirectionalMove" : {
       "int" : 0
     },
     "cornerSnapAreaSize" : {
@@ -151,14 +154,17 @@
     "screenEdgeGapRight" : {
       "float" : 0
     },
-    "screenEdgeGapsOnMainScreenOnly" : {
-      "bool" : false
-    },
     "screenEdgeGapTop" : {
       "float" : 0
     },
     "screenEdgeGapTopNotch" : {
       "float" : 0
+    },
+    "screenEdgeGapsOnMainScreenOnly" : {
+      "bool" : false
+    },
+    "screensOrderedByX" : {
+      "int" : 0
     },
     "selectedCycleSizes" : {
       "int" : 0
@@ -202,9 +208,6 @@
     "subsequentExecutionMode" : {
       "int" : 2
     },
-    "SUEnableAutomaticChecks" : {
-      "bool" : true
-    },
     "systemWideMouseDown" : {
       "int" : 0
     },
@@ -232,6 +235,9 @@
     "unsnapRestore" : {
       "int" : 1
     },
+    "widthStepSize" : {
+      "float" : 30
+    },
     "windowSnapping" : {
       "int" : 1
     }
@@ -239,15 +245,15 @@
   "shortcuts" : {
     "bottomHalf" : {
       "keyCode" : 125,
-      "modifierFlags" : 786432
+      "modifierFlags" : 1572864
     },
     "leftHalf" : {
       "keyCode" : 123,
-      "modifierFlags" : 786432
+      "modifierFlags" : 1572864
     },
     "maximize" : {
       "keyCode" : 36,
-      "modifierFlags" : 786432
+      "modifierFlags" : 1572864
     },
     "reflowTodo" : {
       "keyCode" : 45,
@@ -255,7 +261,7 @@
     },
     "rightHalf" : {
       "keyCode" : 124,
-      "modifierFlags" : 786432
+      "modifierFlags" : 1572864
     },
     "toggleTodo" : {
       "keyCode" : 11,
@@ -263,8 +269,8 @@
     },
     "topHalf" : {
       "keyCode" : 126,
-      "modifierFlags" : 786432
+      "modifierFlags" : 1572864
     }
   },
-  "version" : "94"
+  "version" : "99"
 }
