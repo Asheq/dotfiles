@@ -26,10 +26,10 @@ ks({ "n", "x" }, "<leader>P", '"*P')
 ks({ "n", "x" }, "<leader>c", ":CopilotChat<C-z><C-p>")
 
 -- Mnemonic: g = grep
-ks("n", "<leader>g", ":sil gr!  <Bar> tab cw<S-Left><S-Left><S-Left><Left>")
+ks("n", "<leader>g", ":sil gr!  | tab cw<S-Left><S-Left><S-Left><Left>")
 
 -- Mnemonic: r = redirect
-ks("n", "<leader>r", ":redi @r <Bar> sil  <Bar> redi END<S-Left><S-Left><S-Left><Left>")
+ks("n", "<leader>r", ":redi @r | sil  | redi END<S-Left><S-Left><S-Left><Left>")
 
 -- Mnemonic: t = tab
 ks("n", "<leader>t", ":tab<C-z><C-p>")

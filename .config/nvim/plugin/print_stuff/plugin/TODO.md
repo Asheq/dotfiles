@@ -28,10 +28,16 @@
 
 - Ideas for how to present options:
     - Indicate if the option is
-        1. **global** (`[g]`)
-        2. **local** to window, buffer, tab (`[w]`, `[b]`, `[t]`)
+        1. **global**: `[g]`
+        2. **local** to window, buffer, tab: `[w]`, `[b]`, `[t]`
         3. **global** _and_ **local**
             - Print both values
+	- Indicate the "data type"
+		- String: `{s}`
+			- List (comma-separated): `{s-l}`
+			- Flags (not comma-separated): `{s-f}`
+		- Boolean: `{b}`
+		- Number: `{n}`
 
 # Mappings
 
