@@ -1,5 +1,4 @@
-local winCharAssoc = {}
-local winCharMap = {}
+local charWinMap = {}
 local winHotkeys = {}
 
 local function captureNextChar(callback)
@@ -30,14 +29,7 @@ end
 hs.hotkey.bind({ "cmd", "alt" }, "1", function()
 	local win = hs.window.focusedWindow()
 	captureNextChar(function(char)
-		for i = #winCharAssoc, 1, -1 do
-			if winCharAssoc[i][1] == char then
-				table.remove(winCharAssoc, i)
-			end
-		end
-
-		winCharMap[char] = win
-		table.insert(winCharAssoc, { char, win })
+		charWinMap[char] = win
 
 		if winHotkeys[char] then
 			winHotkeys[char]:delete()
@@ -45,7 +37,7 @@ hs.hotkey.bind({ "cmd", "alt" }, "1", function()
 		end
 
 		winHotkeys[char] = hs.hotkey.bind({ "cmd", "alt" }, char, function()
-			local target = winCharMap[char]
+			local target = charWinMap[char]
 			if target and target:isStandard() then
 				target:focus()
 			end
