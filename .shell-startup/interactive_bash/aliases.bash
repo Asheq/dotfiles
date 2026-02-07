@@ -40,7 +40,7 @@ __git_complete g _git
 # npm
 # ==============================================================================
 alias n='npm'
-complete -o default -o nospace -F npm_completion n
+complete -o default -o nospace -F _npm_completion n
 
 # Bell
 # ==============================================================================
