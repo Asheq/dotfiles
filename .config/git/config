@@ -29,6 +29,7 @@
     cnv = commit -v --no-verify
     b = branch
     co = checkout
+    sw = switch
     p = push
     pl = pull
     s = status -sb
