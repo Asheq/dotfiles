@@ -8,8 +8,8 @@ if command -v eza &> /dev/null; then
 	alias ll='eza -F -a -l -h'
 else
 	alias l='ls --color -F'
-	alias la='ls --color -F'
-	alias ll='ls --color -Falh'
+	alias la='ls --color -F -a'
+	alias ll='ls --color -F -a -l -h'
 fi
 
 alias c='cd'
@@ -35,16 +35,12 @@ fi
 # git
 # ==============================================================================
 alias g='git'
-__git_complete g __git_main
+__git_complete g _git
 
 # npm
 # ==============================================================================
 alias n='npm'
-complete -o default -F _npm_completion n
-
-# React Native Debugger
-# ==============================================================================
-alias rnd='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
+complete -o default -o nospace -F npm_completion n
 
 # Bell
 # ==============================================================================
