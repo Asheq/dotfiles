@@ -38,10 +38,13 @@ local function getNvimCommand(darkModeEnabled)
     local serverAddresses = split(serverAddressesString, '\n')
     local commands = map(serverAddresses,
         function(serverAddress)
+            if serverAddress == '' then
+                return nil
+            end
             return '/opt/homebrew/bin/nvim --remote-send "<Esc>:set bg=' ..
                 nvimBg .. '<Enter>" --server "' .. serverAddress .. '"'
         end)
-    return table.concat(commands, ' & ') .. ' &'
+    return commands
 end
 
 local function executeCommand(command)
@@ -58,7 +61,12 @@ end
 local respondToThemeChange = function()
     local darkModeEnabled = isDarkModeEnabled()
     print('Theme changed. Dark mode enabled: ' .. tostring(darkModeEnabled))
-    executeCommand(getNvimCommand(darkModeEnabled))
+    local commands = getNvimCommand(darkModeEnabled)
+    for _, command in ipairs(commands) do
+        if command ~= nil then
+            executeCommand(command)
+        end
+    end
 end
 
 local notificationName = 'AppleInterfaceThemeChangedNotification'

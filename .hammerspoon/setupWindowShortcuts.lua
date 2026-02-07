@@ -1,4 +1,6 @@
 local winCharAssoc = {}
+local winCharMap = {}
+local winHotkeys = {}
 
 local function captureNextChar(callback)
 	local eventtap
@@ -34,14 +36,18 @@ hs.hotkey.bind({ "cmd", "alt" }, "1", function()
 			end
 		end
 
+		winCharMap[char] = win
 		table.insert(winCharAssoc, { char, win })
 
-		hs.hotkey.bind({ "cmd", "alt" }, char, function()
-			for _, item in ipairs(winCharAssoc) do
-				if item[1] == char then
-					item[2]:focus()
-					break
-				end
+		if winHotkeys[char] then
+			winHotkeys[char]:delete()
+			winHotkeys[char] = nil
+		end
+
+		winHotkeys[char] = hs.hotkey.bind({ "cmd", "alt" }, char, function()
+			local target = winCharMap[char]
+			if target and target:isStandard() then
+				target:focus()
 			end
 		end)
 
