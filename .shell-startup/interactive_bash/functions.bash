@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Prints git prompt symbols key
 function gk() {
 	echo "

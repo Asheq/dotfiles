@@ -1,3 +1,3 @@
-. "$HOME"/.shell-startup-files/util.sh
+. "$HOME"/.shell-startup/util.sh
 
-ssource ~/.shell-startup-files/interactive_bash/main.bash
+safe_source ~/.shell-startup/interactive_bash/main.bash

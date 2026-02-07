@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Text style ANSI escape codes
 __style_reset='\[\e[0m\]'
 __style_connector='\[\e[0;36m\]'

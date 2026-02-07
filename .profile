@@ -1,4 +1,3 @@
-. "$HOME"/.shell-startup-files/util.sh
+. "$HOME"/.shell-startup/util.sh
 
-ssource ~/.shell-startup-files/login/main.sh
-ssource ~/.private-login-shell-startup.sh
+safe_source ~/.shell-startup/login/main.sh

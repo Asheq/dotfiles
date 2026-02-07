@@ -1,9 +1,11 @@
+#!/usr/bin/env bash
+
 # Source library scripts that enhance the interactive shell environment
 
 # Git
 git_etc_dir="$(dirname "$(realpath "$(command -v git)")")"/../etc
-ssource "$git_etc_dir"/bash_completion.d/git-completion.bash
-ssource "$git_etc_dir"/bash_completion.d/git-prompt.sh
+safe_source "$git_etc_dir"/bash_completion.d/git-completion.bash
+safe_source "$git_etc_dir"/bash_completion.d/git-prompt.sh
 unset git_etc_dir
 
 # NPM
@@ -11,8 +13,8 @@ unset git_etc_dir
 source <(command -v npm &> /dev/null && npm completion)
 
 # NVM
-ssource "$NVM_DIR"/nvm.sh --no-use
-ssource "$NVM_DIR"/bash_completion
+safe_source "$NVM_DIR"/nvm.sh --no-use
+safe_source "$NVM_DIR"/bash_completion
 
 # rbenv
 if hash rbenv 2>/dev/null; then
@@ -20,4 +22,4 @@ if hash rbenv 2>/dev/null; then
 fi
 
 # fzf
-ssource ~/.fzf.bash
+safe_source ~/.fzf.bash

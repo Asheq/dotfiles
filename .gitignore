@@ -76,9 +76,9 @@
 !/.config/nvim/syntax/
 !/.config/nvim/syntax/**
 
-# Custom .shell-startup-files directory
-!/.shell-startup-files/
-!/.shell-startup-files/**
+# Custom .shell-startup/ directory
+!/.shell-startup/
+!/.shell-startup/**
 
 # Custom directory for all other manually exported config
 !/.config-manual-exports

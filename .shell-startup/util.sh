@@ -1,11 +1,20 @@
-# NOTE: This file should be 100% POSIX-compliant
+#!/bin/sh
 
-# Usage: pathremove <path> <variable>
-# Example: pathremove ~/bin PATH
+# Usage: path_remove <path> <variable>
+# Example: path_remove ~/bin PATH
 # ==============================================================================
-pathremove() {
+path_remove() {
 	dir_to_remove=$1
 	var=${2:-PATH}
+
+	# Guard against empty path
+	if [ -z "$dir_to_remove" ]; then
+		return 1
+	fi
+
+	# Normalize trailing slash
+	dir_to_remove=${dir_to_remove%/}
+
 	newpath=
 	first=1
 
@@ -22,18 +31,26 @@ pathremove() {
 		fi
 	done
 
-	eval "export $var=\"$newpath\""
+	export "$var=$newpath"
 }
 
-# Usage: pathprepend <path> <variable>
-# Example: pathprepend ~/bin PATH
+# Usage: path_prepend <path> <variable>
+# Example: path_prepend ~/bin PATH
 # ==============================================================================
-pathprepend() {
+path_prepend() {
 	dir_to_prepend=$1
 	var=${2:-PATH}
 
-	# Call the pathremove function to ensure we don't have duplicates
-	pathremove "$dir_to_prepend" "$var"
+	# Guard against empty path
+	if [ -z "$dir_to_prepend" ]; then
+		return 1
+	fi
+
+	# Normalize trailing slash
+	dir_to_prepend=${dir_to_prepend%/}
+
+	# Call the path_remove function to ensure we don't have duplicates
+	path_remove "$dir_to_prepend" "$var"
 
 	# Get the current value of the variable (e.g., $PATH)
 	eval current_value="\$$var"
@@ -46,18 +63,26 @@ pathprepend() {
 	fi
 
 	# Export the updated variable
-	eval "export $var=\"$new_value\""
+	export "$var=$new_value"
 }
 
-# Usage: pathappend <path> <variable>
-# Example: pathappend ~/bin PATH
+# Usage: path_append <path> <variable>
+# Example: path_append ~/bin PATH
 # ==============================================================================
-pathappend() {
+path_append() {
 	dir_to_append=$1
 	var=${2:-PATH}
 
-	# Call the pathremove function to ensure we don't have duplicates
-	pathremove "$dir_to_append" "$var"
+	# Guard against empty path
+	if [ -z "$dir_to_append" ]; then
+		return 1
+	fi
+
+	# Normalize trailing slash
+	dir_to_append=${dir_to_append%/}
+
+	# Call the path_remove function to ensure we don't have duplicates
+	path_remove "$dir_to_append" "$var"
 
 	# Get the current value of the variable (e.g., $PATH)
 	eval current_value="\$$var"
@@ -70,14 +95,16 @@ pathappend() {
 	fi
 
 	# Export the updated variable
-	eval "export $var=\"$new_value\""
+	export "$var=$new_value"
 }
 
-# Usage: ssource <filename>
+# Usage: safe_source <filename>
 # ==============================================================================
-ssource () {
+safe_source () {
 	if [ -r "$1" ]; then
 		# shellcheck source=/dev/null
 		. "$1"
+		return 0
 	fi
+	return 1
 }

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Basic file management
 # ==============================================================================
 if command -v eza &> /dev/null; then

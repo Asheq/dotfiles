@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Add directories to PATH
 # ==============================================================================
 
@@ -12,19 +14,16 @@ if command -v /opt/homebrew/bin/brew >/dev/null 2>&1; then
 fi
 
 # Node
-pathprepend "$NVM_DIR"/versions/node/v24.11.1/bin PATH
+path_prepend "$NVM_DIR"/versions/node/v24.11.1/bin PATH
 
 # Cargo
-pathprepend ~/.cargo/bin PATH
-
-# Doom Emacs
-pathprepend ~/.config/emacs/bin PATH
+path_prepend ~/.cargo/bin PATH
 
 # User
-pathprepend ~/bin PATH
-pathprepend ~/.local/bin PATH
+path_prepend ~/bin PATH
+path_prepend ~/.local/bin PATH
 
 # Remove directories from PATH
 # ==============================================================================
-pathremove . PATH
-pathremove "" PATH
+path_remove . PATH
+path_remove "" PATH
