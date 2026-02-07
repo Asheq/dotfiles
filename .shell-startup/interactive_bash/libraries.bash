@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# Source library scripts that enhance the interactive shell environment
-
 # Git
 git_etc_dir="$(dirname "$(realpath "$(command -v git)")")"/../etc
 safe_source "$git_etc_dir"/bash_completion.d/git-completion.bash

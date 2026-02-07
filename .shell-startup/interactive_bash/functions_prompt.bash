@@ -31,7 +31,7 @@ function __prompt_command() {
 }
 
 function __prompt_section_pwd() {
-	echo "${__style_primary} \w "
+	printf '%s' "${__style_primary} \w "
 }
 
 export GIT_PS1_SHOWDIRTYSTATE=true
@@ -43,14 +43,13 @@ export GIT_PS1_DESCRIBE_STYLE='branch'
 export GIT_PS1_SHOWCOLORHINTS=true # Only works when using __git_ps1 for PROMPT_COMMAND
 export GIT_PS1_HIDE_IF_PWD_IGNORED=true
 function __prompt_section_git() {
-	if command -v __git_ps1 &> /dev/null; then
+	if declare -F __git_ps1 >/dev/null; then
 		local git_ps1_output
-		git_ps1_output="$(__git_ps1)"
+		git_ps1_output="$(__git_ps1 "%s")"
 	fi
 
 	if [[ "${git_ps1_output}" != "" ]] ; then
-		local output="${git_ps1_output:2:-1}"
-		echo "${__style_reset} ${output} "
+		printf '%s' "${__style_reset} ${git_ps1_output} "
 	fi
 }
 
@@ -67,65 +66,65 @@ function __prompt_section_other() {
 	flagstring="${flagstring/%  /}"
 
 	if [[ "${flagstring}" != "" ]] ; then
-		echo "${__style_tertiary} ${flagstring} "
+		printf '%s' "${__style_tertiary} ${flagstring} "
 	fi
 }
 
 function __prompt_flag_node() {
 	if command -v node &> /dev/null; then
-		echo "node=$(node -v)"
+		printf '%s' "node=$(node -v)"
 	fi
 }
 
 function __prompt_flag_npm() {
 	if command -v npm &> /dev/null; then
-		echo "npm=$(npm -v)"
+		printf '%s' "npm=$(npm -v)"
 	fi
 }
 
 function __prompt_flag_python() {
 	if command -v python &> /dev/null; then
-		echo "python=$(python --version)"
+		printf '%s' "python=$(python --version)"
 	fi
 }
 
 function __prompt_flag_pip() {
 	if command -v pip &> /dev/null; then
-		echo "pip=$(pip --version)"
+		printf '%s' "pip=$(pip --version)"
 	fi
 }
 
 function __prompt_flag_user() {
 	if [[ "${USER}" != "${LOGNAME}" ]] ; then
-		echo "${__glyph_user}=${USER}"
+		printf '%s' "${__glyph_user}=${USER}"
 	fi
 }
 
 function __prompt_flag_host() {
 	if [[ -n "${SSH_CONNECTION}" ]]; then
-		echo "${__glyph_host}=${HOSTNAME}"
+		printf '%s' "${__glyph_host}=${HOSTNAME}"
 	fi
 }
 
 function __prompt_flag_jobs() {
 	local count
-	count="$(\jobs | wc -l | sed 's/^ *\(\d*\)/\1/')"
+	count="$(jobs -p | wc -l | awk '{print $1}')"
 	if [[ "${count}" -ne 0 ]] ; then
-		echo "${__glyph_jobs}=${count}"
+		printf '%s' "${__glyph_jobs}=${count}"
 	fi
 }
 
 function __prompt_flag_not_login_shell() {
 	if ! shopt -q login_shell ; then
-		echo "${__glyph_non_login}"
+		printf '%s' "${__glyph_non_login}"
 	fi
 }
 
 function __prompt_section_exit_code() {
 	local exit_code="$1"
 	if [[ "${exit_code}" != 0 ]]; then
-		echo "${__style_error} ${exit_code} "
+		printf '%s' "${__style_error} ${exit_code} "
 	else
-		echo "${__style_success} ${__glyph_success} "
+		printf '%s' "${__style_success} ${__glyph_success} "
 	fi
 }
