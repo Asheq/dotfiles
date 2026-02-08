@@ -44,9 +44,10 @@ end
 
 local show_default_value = true
 local show_used_value = true
-local show_initial_value = true
 
 local function print_option(optname)
+	-- TODO: Handle tab-local options?
+
 	local info = vim.api.nvim_get_option_info2(optname, {})
 	local value = vim.api.nvim_get_option_value(optname, {})
 
@@ -56,10 +57,10 @@ local function print_option(optname)
 	local local_info = vim.api.nvim_get_option_info2(optname, { scope = "local" })
 	local local_value = vim.api.nvim_get_option_value(optname, { scope = "local" })
 
-	local was_set_by_script =
-		info.last_set_sid ~= 0 or
-		global_info.last_set_sid ~= 0 or
-		local_info.last_set_sid ~= 0
+	-- local was_set_by_script =
+	-- 	info.last_set_sid ~= 0 or
+	-- 	global_info.last_set_sid ~= 0 or
+	-- 	local_info.last_set_sid ~= 0
 
 	echo_line({
 		{ " " .. optname .. " ",         "TermCursor" },
@@ -70,17 +71,17 @@ local function print_option(optname)
 	if (show_used_value) then
 		echo_line(
 			{
-				{ "   Used: ",     "Normal" },
+				{ "          Used: ",     "Normal" },
 				{ tostring(value), "String" },
 			},
 			2)
 	end
 
 	if info.scope == "buf" or info.scope == "win" then
-		local local_scope_label = info.scope == "buf" and " Buffer" or " Window"
+		local local_scope_label = info.scope == "buf" and "           Buf" or "Win (This Buf)"
 
 		local local_last_set_sid = local_info.last_set_sid
-		local local_was_set_by_script = local_info.last_set_sid ~= 0
+		-- local local_was_set_by_script = local_info.last_set_sid ~= 0
 		local local_last_set_filename = get_filename(local_last_set_sid)
 
 		echo_line(
@@ -93,32 +94,32 @@ local function print_option(optname)
 			2)
 	end
 
-	if (info.scope == "global" or info.global_local or show_initial_value) then
-		local global_scope_label = ""
-		if (info.scope == "global" or info.global_local) then
-			global_scope_label = " Global"
-		else
-			global_scope_label = "Initial"
-		end
-
-		local global_last_set_sid = global_info.last_set_sid
-		local global_was_set_by_script = global_info.last_set_sid ~= 0
-		local global_last_set_filename = get_filename(global_last_set_sid)
-
-		echo_line(
-			{
-				{ global_scope_label .. ": ", "Normal" },
-				{ tostring(global_value),     "SpecialKey" },
-				global_last_set_filename and { " ➤ ", "DiagnosticError" },
-				global_last_set_filename and { tostring(global_last_set_filename), "DiagnosticError" },
-			},
-			2)
+	local global_scope_label = "           ???"
+	if (info.scope == "global" or info.global_local) then
+		global_scope_label = "        Global"
+	elseif (info.scope == "buf") then
+		global_scope_label = "    Buf (Init)"
+	elseif (info.scope == "win") then
+		global_scope_label = "Win (All Bufs)"
 	end
+
+	local global_last_set_sid = global_info.last_set_sid
+	-- local global_was_set_by_script = global_info.last_set_sid ~= 0
+	local global_last_set_filename = get_filename(global_last_set_sid)
+
+	echo_line(
+		{
+			{ global_scope_label .. ": ", "Normal" },
+			{ tostring(global_value),     "SpecialKey" },
+			global_last_set_filename and { " ➤ ", "DiagnosticError" },
+			global_last_set_filename and { tostring(global_last_set_filename), "DiagnosticError" },
+		},
+		2)
 
 	if (show_default_value) then
 		echo_line(
 			{
-				{ "Default: ",            "Normal" },
+				{ "       Default: ",            "Normal" },
 				{ tostring(info.default), "SpecialKey" },
 			},
 			2)
