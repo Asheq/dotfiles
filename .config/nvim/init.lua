@@ -22,6 +22,9 @@ source_lua("init/plugins/configure-via-global-vars.lua")
 source_lua("init/plugins/configure-via-setup-func.lua")
 source_lua("init/plugins/configure-coc.lua")
 
+-- Commands
+source_vim("init/commands.lua")
+
 -- Mappings
 source_lua("init/mappings/normal-visual-operator.lua")
 source_vim("init/mappings/normal-visual-operator.vim")
