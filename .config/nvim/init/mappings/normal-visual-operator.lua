@@ -52,6 +52,7 @@ ks("n", "<leader>s", "<Cmd>Git<CR>")
 ks("n", "<leader>w", "<Cmd>silent update<CR>")
 
 ks('n', '<C-g><C-g>', '<Cmd>PrintGeneralOptions<CR>')
+ks('n', '<C-g><C-b>', '<Cmd>PrintBorderOptions<CR>')
 ks('n', '<C-g><C-f>', '<Cmd>PrintFormattingOptions<CR>')
 ks('n', '<C-g><C-t>', '<Cmd>PrintIndentingOptions<CR>')
 ks('n', '<C-g><C-d>', '<Cmd>PrintFoldingOptions<CR>')
