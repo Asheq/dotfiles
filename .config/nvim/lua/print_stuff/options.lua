@@ -46,9 +46,7 @@ local function get_filename(sid)
 	return sid
 end
 
-local show_default_value = false
-
-local function print_option(optname)
+local function print_option(optname, conf)
 	-- TODO: Handle tab-local options?
 
 	local info = vim.api.nvim_get_option_info2(optname, {})
@@ -73,7 +71,7 @@ local function print_option(optname)
 
 	echo_line(
 		{
-			{ "  used: ",      "Normal" },
+			{ "   used: ",     "Normal" },
 			{ tostring(value), "String" },
 		},
 		2)
@@ -83,7 +81,7 @@ local function print_option(optname)
 		-- local local_was_set_by_script = local_info.last_set_sid ~= 0
 		local local_last_set_filename = get_filename(local_last_set_sid)
 
-		local local_scope_label = " local"
+		local local_scope_label = "  local"
 
 		echo_line(
 			{
@@ -99,7 +97,7 @@ local function print_option(optname)
 	-- local global_was_set_by_script = global_info.last_set_sid ~= 0
 	local global_last_set_filename = get_filename(global_last_set_sid)
 
-	local global_scope_label = "global"
+	local global_scope_label = " global"
 
 	echo_line(
 		{
@@ -110,7 +108,7 @@ local function print_option(optname)
 		},
 		2)
 
-	if (show_default_value) then
+	if (conf and conf.show_default_value) then
 		echo_line(
 			{
 				{ "default: ",            "Normal" },
@@ -120,7 +118,7 @@ local function print_option(optname)
 	end
 end
 
-local function print_option_groups(groups)
+local function print_option_groups(groups, conf)
 	for _, group in ipairs(groups) do
 		if group.title and group.title ~= "" then
 			local extra_space = math.ceil((vim.o.columns - #group.title) / 2)
@@ -128,7 +126,7 @@ local function print_option_groups(groups)
 		end
 
 		for _, optname in ipairs(group.options) do
-			print_option(optname)
+			print_option(optname, conf)
 		end
 	end
 end
@@ -266,6 +264,35 @@ function M.print_folding()
 				"foldnestmax",
 			},
 		},
+	})
+end
+
+function M.print_all_not_default()
+	local all_options = {}
+	local info_by_name = vim.api.nvim_get_all_options_info()
+
+	for name, info in pairs(info_by_name) do
+		local default_value = info.default
+		local has_diff = false
+
+		local ok, value = pcall(vim.api.nvim_get_option_value, name, {})
+		if ok and value ~= default_value then
+			has_diff = true
+		end
+
+		if has_diff then
+			table.insert(all_options, name)
+		end
+	end
+
+	table.sort(all_options)
+	print_option_groups({
+		{
+			title = "All options with local or global value different from default",
+			options = all_options,
+		},
+	}, {
+		show_default_value = true,
 	})
 end
 

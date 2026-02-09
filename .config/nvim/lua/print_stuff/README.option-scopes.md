@@ -10,7 +10,7 @@
     2.  global value = local to a window and global to all buffers in that window
 - scope = (buf | win) + global
     1.  local value = ???
-    2.  global value
+    2.  global value = fallback when the local value is "unset"
 
 # More Details
 
