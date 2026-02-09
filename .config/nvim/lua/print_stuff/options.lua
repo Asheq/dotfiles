@@ -47,8 +47,6 @@ local function get_filename(sid)
 end
 
 local function print_option(optname, conf)
-	-- TODO: Handle tab-local options?
-
 	local info = vim.api.nvim_get_option_info2(optname, {})
 	local value = vim.api.nvim_get_option_value(optname, {})
 
@@ -76,7 +74,7 @@ local function print_option(optname, conf)
 		},
 		2)
 
-	if info.scope == "buf" or info.scope == "win" then
+	if info.scope == "buf" or info.scope == "win" or info.scope == "tab" then
 		local local_last_set_sid = local_info.last_set_sid
 		-- local local_was_set_by_script = local_info.last_set_sid ~= 0
 		local local_last_set_filename = get_filename(local_last_set_sid)
