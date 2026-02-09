@@ -12,6 +12,10 @@ local function get_filename(sid)
 		return nil
 	end
 
+	if sid == -1 then
+		return "[modeline]"
+	end
+
 	if sid < 0 then
 		return sid
 	end
