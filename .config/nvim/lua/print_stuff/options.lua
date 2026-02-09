@@ -42,7 +42,6 @@ local function get_filename(sid)
 	return sid
 end
 
-local show_used_value = false
 local show_default_value = false
 
 local function print_option(optname)
@@ -63,55 +62,45 @@ local function print_option(optname)
 	-- 	local_info.last_set_sid ~= 0
 
 	echo_line({
-		{ " " .. optname .. " ",                                          "TermCursor" },
-		{ " (" .. info.shortname .. ")",                                  "NonText" },
+		{ " " .. optname .. " (" .. info.shortname .. ") ",               "TermCursor" },
+		{ " " .. info.scope .. (info.global_local and " + global" or ""), "Identifier" },
 		{ " [" .. info.type .. "]",                                       "NonText" },
-		{ " " .. (info.global_local and "global + " or "") .. info.scope, "NonText" }
 	}, 1)
 
-	if (show_used_value) then
-		echo_line(
-			{
-				{ "          Used: ", "Normal" },
-				{ tostring(value),    "String" },
-			},
-			2)
-	end
+	echo_line(
+		{
+			{ "  used: ",      "Normal" },
+			{ tostring(value), "String" },
+		},
+		2)
 
 	if info.scope == "buf" or info.scope == "win" then
-		local local_scope_label = info.scope == "buf" and "       Buf" or "       Win"
-
 		local local_last_set_sid = local_info.last_set_sid
 		-- local local_was_set_by_script = local_info.last_set_sid ~= 0
 		local local_last_set_filename = get_filename(local_last_set_sid)
 
+		local local_scope_label = " local"
+
 		echo_line(
 			{
 				{ local_scope_label .. ": ", "Normal" },
-				{ tostring(local_value),     "String" },
+				{ tostring(local_value),     "NonText" },
 				local_last_set_filename and { " ➤ ", "DiagnosticError" },
 				local_last_set_filename and { tostring(local_last_set_filename), "DiagnosticError" },
 			},
 			2)
 	end
 
-	local global_scope_label = "       ???"
-	if (info.scope == "global" or info.global_local) then
-		global_scope_label = "       Gbl"
-	elseif (info.scope == "buf") then
-		global_scope_label = "(Init) Gbl"
-	elseif (info.scope == "win") then
-		global_scope_label = "(Bufs) Gbl"
-	end
-
 	local global_last_set_sid = global_info.last_set_sid
 	-- local global_was_set_by_script = global_info.last_set_sid ~= 0
 	local global_last_set_filename = get_filename(global_last_set_sid)
 
+	local global_scope_label = "global"
+
 	echo_line(
 		{
 			{ global_scope_label .. ": ", "Normal" },
-			{ tostring(global_value),     info.scope == "global" and "String" or "NonText" },
+			{ tostring(global_value),     "NonText" },
 			global_last_set_filename and { " ➤ ", "DiagnosticError" },
 			global_last_set_filename and { tostring(global_last_set_filename), "DiagnosticError" },
 		},
@@ -120,7 +109,7 @@ local function print_option(optname)
 	if (show_default_value) then
 		echo_line(
 			{
-				{ "       Default: ",     "Normal" },
+				{ "default: ",            "Normal" },
 				{ tostring(info.default), "NonText" },
 			},
 			2)
