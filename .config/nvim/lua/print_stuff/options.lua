@@ -160,8 +160,8 @@ function M.print_border()
 			title = "Window dressing",
 			options = {
 				"tabline",
-				"statusline",
 				"laststatus",
+				"statusline",
 				"winbar",
 				"statuscolumn",
 				"signcolumn",
@@ -171,7 +171,6 @@ function M.print_border()
 			title = "Displaying text",
 			options = {
 				"list",
-				"number",
 				"relativenumber",
 			},
 		},
@@ -203,10 +202,10 @@ function M.print_indenting()
 		{
 			title = "Tabs",
 			options = {
+				"smarttab",
 				"expandtab",
 				"tabstop",
 				"shiftwidth",
-				"smarttab",
 				"softtabstop",
 				"copyindent",
 				"preserveindent",
@@ -243,8 +242,8 @@ function M.print_folding()
 		{
 			title = "Basic",
 			options = {
-				"foldenable",
 				"foldlevelstart",
+				"foldenable",
 				"foldlevel",
 				"foldmethod",
 				"foldexpr",
@@ -254,9 +253,9 @@ function M.print_folding()
 		{
 			title = "Other",
 			options = {
-				"foldtext",
 				"foldopen",
 				"foldclose",
+				"foldtext",
 				"foldcolumn",
 				"foldignore",
 				"foldminlines",
