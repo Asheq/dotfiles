@@ -1,10 +1,14 @@
 local M = {}
 
-local function echo_line(chunks, indent)
+-- ===========================================
+-- Helpers
+-- ===========================================
+
+local function echo_with_indent(chunks, indent, history, opts)
 	local indent_str = string.rep("  ", indent and (indent * 2) or 0)
 	local indented_chunks = vim.deepcopy(chunks)
 	table.insert(indented_chunks, 1, { indent_str, "Normal" })
-	vim.api.nvim_echo(indented_chunks, true, {})
+	vim.api.nvim_echo(indented_chunks, history or true, opts or {})
 end
 
 local function get_filename(sid)
@@ -46,7 +50,7 @@ local function get_filename(sid)
 	return sid
 end
 
-local function print_option(optname, conf)
+function M.print_option(optname, conf)
 	local info = vim.api.nvim_get_option_info2(optname, {})
 	local value = vim.api.nvim_get_option_value(optname, {})
 
@@ -61,13 +65,13 @@ local function print_option(optname, conf)
 	-- 	global_info.last_set_sid ~= 0 or
 	-- 	local_info.last_set_sid ~= 0
 
-	echo_line({
+	echo_with_indent({
 		{ " " .. optname .. " (" .. info.shortname .. ") ",               "TermCursor" },
 		{ " " .. info.scope .. (info.global_local and " + global" or ""), "Identifier" },
 		{ " [" .. info.type .. "]",                                       "NonText" },
 	}, 1)
 
-	echo_line(
+	echo_with_indent(
 		{
 			{ "   used: ",     "Normal" },
 			{ tostring(value), "String" },
@@ -81,7 +85,7 @@ local function print_option(optname, conf)
 
 		local local_scope_label = "  local"
 
-		echo_line(
+		echo_with_indent(
 			{
 				{ local_scope_label .. ": ", "Normal" },
 				{ tostring(local_value),     "NonText" },
@@ -97,7 +101,7 @@ local function print_option(optname, conf)
 
 	local global_scope_label = " global"
 
-	echo_line(
+	echo_with_indent(
 		{
 			{ global_scope_label .. ": ", "Normal" },
 			{ tostring(global_value),     "NonText" },
@@ -107,7 +111,7 @@ local function print_option(optname, conf)
 		2)
 
 	if (conf and conf.show_default_value) then
-		echo_line(
+		echo_with_indent(
 			{
 				{ "default: ",            "Normal" },
 				{ tostring(info.default), "NonText" },
@@ -120,14 +124,18 @@ local function print_option_groups(groups, conf)
 	for _, group in ipairs(groups) do
 		if group.title and group.title ~= "" then
 			local extra_space = math.ceil((vim.o.columns - #group.title) / 2)
-			echo_line({ { group.title .. string.rep(" ", extra_space), "Underlined" } }, 0)
+			echo_with_indent({ { group.title .. string.rep(" ", extra_space), "Underlined" } }, 0)
 		end
 
 		for _, optname in ipairs(group.options) do
-			print_option(optname, conf)
+			M.print_option(optname, conf)
 		end
 	end
 end
+
+-- ===========================================
+-- Preset groups of options to print
+-- ===========================================
 
 function M.print_general()
 	print_option_groups({

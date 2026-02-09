@@ -14,11 +14,21 @@ set breakindent
 set breakindentopt=list:-1
 
 set list
-" let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,extends:➤,precedes:⮜,eol:🮦'
-let &listchars='tab:│ ,lead:࿁,leadmultispace:┊ ,nbsp:▢,trail:࿁,extends:➤,precedes:⮜'
+let &listchars='tab:│ ,lead:࿁,nbsp:▢,trail:࿁,extends:➤,precedes:⮜' " NOTE: Could add "eol:🮦"
+" NOTE: I am setting the value of "leadmultispace" within 'listchars' in an
+" autocommand below, since it depends on the value of "tabstop" which could be
+" different for different buffers and can change on the fly.
+augroup set_listchars
+    autocmd!
+    autocmd OptionSet tabstop call s:set_listchars()
+    autocmd BufWinEnter * call s:set_listchars()
+augroup END
+function! s:set_listchars()
+    execute 'setlocal listchars-=' . escape(matchstr(&listchars, 'leadmultispace.\{-}\ze\($\|,\)'), ' ')
+    execute 'setlocal listchars+=leadmultispace:┊' . repeat('\ ', &tabstop - 1)
+endfunction
 
 let &fillchars='foldopen:▽,foldclose:▶,diff:╱,lastline:➤'
-
 set number
 set cmdheight=2
 set smoothscroll
