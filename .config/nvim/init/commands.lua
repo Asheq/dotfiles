@@ -5,9 +5,9 @@ vim.api.nvim_create_user_command("PrintFormattingOptions", options.print_formatt
 vim.api.nvim_create_user_command("PrintIndentingOptions", options.print_indenting, {})
 vim.api.nvim_create_user_command("PrintFoldingOptions", options.print_folding, {})
 vim.api.nvim_create_user_command("PrintBorderOptions", options.print_border, {})
-vim.api.nvim_create_user_command("PrintAllNotDefault", options.print_all_not_default, {})
+vim.api.nvim_create_user_command("PrintAllNotDefaultOptions", options.print_all_not_default, {})
 
-vim.api.nvim_create_user_command("PrintOption", function(opts)
+vim.api.nvim_create_user_command("PrintOptions", function(opts)
 	local option_names = {}
 	local conf = { show_default_value = false }
 	for _, arg in ipairs(opts.fargs) do
