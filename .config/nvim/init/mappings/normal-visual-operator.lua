@@ -1,4 +1,5 @@
-local vimrc = require("vimrc")
+local util = require("util")
+local system_commands = require("system_commands")
 
 local ks = vim.keymap.set
 
@@ -63,22 +64,22 @@ ks("n", "-", "<Cmd>Oil<CR>")
 
 -- Map to System Commands
 -- ============================================================================
+-- Open file in VSCode at current line and column
 ks("n", "<leader>v", function()
 	local file = vim.fn.expand("%")
 	local line = vim.fn.line(".")
 	local col = vim.fn.col(".")
-	vim.system({ "code", "--goto", string.format("%s:%d:%d", file, line, col) }, { detach = true })
+	system_commands.open_file_in_vscode(file, line, col)
 end)
 
--- Map to ???
--- ============================================================================
--- View definition
+-- Open dictionary for current word or selected text
 ks("n", "<leader>d", function()
-	vimrc.define(vim.fn.expand("<cword>"))
+	local keyword = vim.fn.expand("<cword>")
+	system_commands.open_dictionary(keyword)
 end, { silent = true })
-
 ks("x", "<leader>d", function()
-	vimrc.define(vimrc.get_selection_text())
+	local keyword = util.get_selected_text()
+	system_commands.open_dictionary(keyword)
 end, { silent = true })
 
 -- Map to feedkeys

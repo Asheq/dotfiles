@@ -7,6 +7,7 @@ vim.api.nvim_create_user_command("PrintFoldingOptions", options.print_folding, {
 vim.api.nvim_create_user_command("PrintBorderOptions", options.print_border, {})
 vim.api.nvim_create_user_command("PrintAllNotDefaultOptions", options.print_all_not_default, {})
 
+-- Usage: :PrintOptions [option1] [option2] ... [-def]
 vim.api.nvim_create_user_command("PrintOptions", function(opts)
 	local option_names = {}
 	local conf = { show_default_value = false }
@@ -29,3 +30,5 @@ end, {
 	complete = "option",
 	desc = "Print info about Vim options",
 })
+
+-- TODO: Add a command for :Define / :Dictionary
