@@ -32,7 +32,10 @@ source_vim("init/mappings/insert_command_line.vim")
 source_vim("init/mappings/terminal.vim")
 
 -- Options
-source_vim("init/options.vim")
+source_vim("init/options/basic.vim")
+source_vim("init/options/gui.vim")
+source_vim("init/options/listchars-fillchars.vim")
+source_vim("init/options/wrap.vim")
 
 -- Final
 source_vim("init/final.vim")
