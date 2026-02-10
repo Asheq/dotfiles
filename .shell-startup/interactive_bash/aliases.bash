@@ -16,7 +16,7 @@ alias c='cd'
 complete -o dirnames -o nospace -F _fzf_dir_completion c
 
 alias o='open'
-alias v='nvim -V1'
+alias v='nvim'
 
 # Bookmarks
 # ==============================================================================
