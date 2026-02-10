@@ -38,6 +38,9 @@ set conceallevel=2
 " ----------------------------------------------------------------------------
 set cursorline
 set spelloptions=camel
+
+" NOTE: There are bugs that cause colorcolumn to be displayed incorrectly when
+" used in combination with linebreak/breakindent/showbreak.
 set colorcolumn+=+1
 
 " 6. Multiple windows
