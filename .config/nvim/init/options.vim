@@ -27,6 +27,7 @@ function! s:set_listchars()
     execute 'setlocal listchars-=' . escape(matchstr(&listchars, 'leadmultispace.\{-}\ze\($\|,\)'), ' ')
     execute 'setlocal listchars+=leadmultispace:┊' . repeat('\ ', &tabstop - 1)
 endfunction
+call s:set_listchars()
 
 let &fillchars='foldopen:▽,foldclose:▶,diff:╱,lastline:➤'
 set number
@@ -40,8 +41,22 @@ set cursorline
 set spelloptions=camel
 
 " NOTE: There are bugs that cause colorcolumn to be displayed incorrectly when
-" used in combination with linebreak/breakindent/showbreak.
-set colorcolumn+=+1
+" used in combination with wrap and linebreak/breakindent/showbreak. Until
+" these bugs are fixed, I am using an autocommand to toggle colorcolumn when
+" wrap is toggled, to avoid confusing display.
+augroup set_colorcolumn
+    autocmd!
+    autocmd OptionSet wrap call s:set_colorcolumn()
+    autocmd BufWinEnter * call s:set_colorcolumn()
+augroup END
+function! s:set_colorcolumn()
+	if &wrap
+		set colorcolumn-=+1
+	else
+		set colorcolumn+=+1
+	endif
+endfunction
+call s:set_colorcolumn()
 
 " 6. Multiple windows
 " ----------------------------------------------------------------------------
