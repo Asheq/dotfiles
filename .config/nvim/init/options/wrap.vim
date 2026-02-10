@@ -7,8 +7,6 @@
 "      with gq or when auto-format executes during typing (because 'fo' includes
 "      t or a)
 
-set nowrap
-
 set linebreak
 set breakindent
 set breakindentopt=list:-1

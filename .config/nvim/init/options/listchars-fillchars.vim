@@ -11,10 +11,12 @@ augroup set_listchars
     autocmd OptionSet tabstop call s:set_listchars()
     autocmd BufWinEnter * call s:set_listchars()
 augroup END
+
 function! s:set_listchars()
     execute 'setlocal listchars-=' . escape(matchstr(&listchars, 'leadmultispace.\{-}\ze\($\|,\)'), ' ')
     execute 'setlocal listchars+=leadmultispace:┊' . repeat('\ ', &tabstop - 1)
 endfunction
+
 call s:set_listchars()
 
 " fillchars
@@ -22,6 +24,7 @@ call s:set_listchars()
 let &fillchars='foldopen:▽,foldclose:▶,diff:╱,lastline:➤'
 
 " Character reference:
+" ----------------------------------------------------------------------------
 " │ ┊
 " ╱
 " 🮮 🮤 🮦
