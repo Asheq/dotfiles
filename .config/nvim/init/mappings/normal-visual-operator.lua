@@ -13,7 +13,7 @@ ks("n", "<Right>", "zo")
 ks("n", "<S-Right>", "zO")
 
 -- Visually select previously changed/yanked text
--- Mnemonic: g = go highlight
+-- Mnemonic: gh = go highlight
 ks({ "n" }, "gh", '`[v`]')
 
 -- Yank and Put
@@ -54,6 +54,7 @@ ks("n", "<leader>s", "<Cmd>Git<CR>")
 -- Mnemonic: w = write
 ks("n", "<leader>w", "<Cmd>silent update<CR>")
 
+-- Mnemonic: g = get
 ks('n', '<C-g><C-g>', '<Cmd>PrintGeneralOptions<CR>')
 ks('n', '<C-g><C-b>', '<Cmd>PrintBorderOptions<CR>')
 ks('n', '<C-g><C-f>', '<Cmd>PrintFormattingOptions<CR>')
@@ -76,11 +77,11 @@ end)
 ks("n", "<leader>d", function()
 	local keyword = vim.fn.expand("<cword>")
 	system_commands.open_dictionary(keyword)
-end, { silent = true })
+end)
 ks("x", "<leader>d", function()
 	local keyword = util.get_selected_text()
 	system_commands.open_dictionary(keyword)
-end, { silent = true })
+end)
 
 -- Map to feedkeys
 -- ============================================================================

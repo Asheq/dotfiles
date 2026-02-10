@@ -31,4 +31,4 @@ end, {
 	desc = "Print info about Vim options",
 })
 
--- TODO: Add a command for :Define / :Dictionary
+-- TODO: Add a command for :Dictionary
