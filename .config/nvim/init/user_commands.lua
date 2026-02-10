@@ -32,4 +32,4 @@ vim.api.nvim_create_user_command("PrintFoldingOptions", options.print_folding, {
 vim.api.nvim_create_user_command("PrintBorderOptions", options.print_border, {})
 vim.api.nvim_create_user_command("PrintAllNotDefaultOptions", options.print_all_not_default, {})
 
--- TODO: Add a command for :Dictionary
+-- TODO: Add a command for :Dictionary that calls system_calls.open_dictionary() for the word that is the first argument

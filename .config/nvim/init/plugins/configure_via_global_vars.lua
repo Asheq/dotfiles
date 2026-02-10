@@ -19,13 +19,9 @@ vim.g.textobj_sandwich_no_default_key_mappings = 1
 vim.g.copilot_no_tab_map = true
 
 -- markdown-preview.nvim
-function _G.OpenMarkdownPreview(url)
-	vim.system({ "open", "-a", "Firefox", "-n", "--args", "--new-window", url }, { detach = true })
-end
-
 vim.cmd([[
   function! OpenMarkdownPreview(url)
-    call v:lua.OpenMarkdownPreview(a:url)
+    call v:lua.require('system_calls').open_url_in_firefox(a:url)
   endfunction
 ]])
 
