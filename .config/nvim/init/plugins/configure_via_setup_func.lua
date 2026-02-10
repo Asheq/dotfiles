@@ -1,5 +1,5 @@
 -- Some plugins are configured via their setup() function called after the
--- plugin is loaded. This setup call is a common pattern in modern Neovim
+-- plugin is loaded. This setup call is a common pattern in modern Neovim Lua
 -- plugins.
 -- ============================================================================
 

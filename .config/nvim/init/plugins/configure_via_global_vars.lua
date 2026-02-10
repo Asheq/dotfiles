@@ -28,4 +28,5 @@ vim.cmd([[
     call v:lua.OpenMarkdownPreview(a:url)
   endfunction
 ]])
+
 vim.g.mkdp_browserfunc = "OpenMarkdownPreview"

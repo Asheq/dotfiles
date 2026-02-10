@@ -2,9 +2,9 @@
 -- $VIMRUNTIME/pack/dist/opt/
 --
 -- These are not loaded automatically. You must explicitly load them using
--- :packadd {plugin-name} if you want to use them.
+-- :packadd {name} if you want to use them.
 --
--- Note that "matchit" is special; it is automatically loaded indirectly by
+-- NOTE: "matchit" is special -- it is automatically loaded indirectly by
 -- $VIMRUNTIME/plugin/matchit.vim which runs on startup.
 -- ============================================================================
 

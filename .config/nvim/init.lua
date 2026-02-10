@@ -15,20 +15,20 @@ source_lua("init/first.lua")
 source_lua("init/filetypes/add.lua")
 
 -- Plugins
-source_lua("init/plugins/do-not-load-built-in.lua")
-source_lua("init/plugins/load-built-in.lua")
+source_lua("init/plugins/do_not_load_built_in.lua")
+source_lua("init/plugins/load_built_in.lua")
 source_vim("init/plugins/add.vim")
-source_lua("init/plugins/configure-via-global-vars.lua")
-source_lua("init/plugins/configure-via-setup-func.lua")
-source_lua("init/plugins/configure-coc.lua")
+source_lua("init/plugins/configure_via_global_vars.lua")
+source_lua("init/plugins/configure_via_setup_func.lua")
+source_lua("init/plugins/configure_coc.lua")
 
--- Commands
-source_vim("init/commands.lua")
+-- User Commands
+source_vim("init/user_commands.lua")
 
 -- Mappings
-source_lua("init/mappings/normal-visual-operator.lua")
-source_vim("init/mappings/normal-visual-operator.vim")
-source_vim("init/mappings/insert-command_line.vim")
+source_lua("init/mappings/normal_visual_operator.lua")
+source_vim("init/mappings/normal_visual_operator.vim")
+source_vim("init/mappings/insert_command_line.vim")
 source_vim("init/mappings/terminal.vim")
 
 -- Options
