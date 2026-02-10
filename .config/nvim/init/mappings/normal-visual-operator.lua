@@ -1,3 +1,5 @@
+local vimrc = require("vimrc")
+
 local ks = vim.keymap.set
 
 -- Map to Normal Mode Commands
@@ -67,6 +69,17 @@ ks("n", "<leader>v", function()
 	local col = vim.fn.col(".")
 	vim.system({ "code", "--goto", string.format("%s:%d:%d", file, line, col) }, { detach = true })
 end)
+
+-- Map to ???
+-- ============================================================================
+-- View definition
+ks("n", "<leader>d", function()
+	vimrc.define(vim.fn.expand("<cword>"))
+end, { silent = true })
+
+ks("x", "<leader>d", function()
+	vimrc.define(vimrc.get_selection_text())
+end, { silent = true })
 
 -- Map to feedkeys
 -- ============================================================================

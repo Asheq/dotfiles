@@ -1,8 +1,5 @@
 " Operate on Text
 " ============================================================================
-" View definition
-nnoremap <silent>       <leader>d        :cal vimrc#define(expand('<cword>'))<Enter>
-xnoremap <silent>       <leader>d        :<C-u>cal vimrc#define(vimrc#get_selection_text())<Enter>
 
 " View browser search
 nnoremap <silent>       <leader>b        :cal vimrc#browse(expand('<cword>'))<Enter>
