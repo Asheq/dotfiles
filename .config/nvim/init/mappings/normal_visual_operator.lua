@@ -1,5 +1,5 @@
 local util = require("util")
-local system_commands = require("system_commands")
+local system_calls = require("system_calls")
 
 local ks = vim.keymap.set
 
@@ -12,15 +12,36 @@ ks("n", "<S-Left>", "zC")
 ks("n", "<Right>", "zo")
 ks("n", "<S-Right>", "zO")
 
--- Visually select previously changed/yanked text
--- Mnemonic: gh = go highlight
-ks({ "n" }, "gh", '`[v`]')
-
 -- Yank and Put
 ks({ "n", "x" }, "<leader>y", '"*y')
 ks({ "n", "x" }, "<leader>Y", '"*Y', { remap = true })
 ks({ "n", "x" }, "<leader>p", '"*p')
 ks({ "n", "x" }, "<leader>P", '"*P')
+
+-- Visually select previously changed/yanked text
+-- Mnemonic: gh = go highlight
+ks({ "n" }, "gh", '`[v`]')
+
+-- Map to Normal Mode Commands (via expression)
+-- ============================================================================
+
+-- Scrolling
+ks('n', '<C-f>', function()
+	local count = vim.fn.winheight(0) - 1
+	return count .. "<C-e>"
+end, { expr = true })
+ks('n', '<C-b>', function()
+	local count = vim.fn.winheight(0) - 1
+	return count .. "<C-y>"
+end, { expr = true })
+ks('n', '<C-d>', function()
+	local count = math.floor(vim.fn.winheight(0) / 2) - 1
+	return count .. "<C-e>"
+end, { expr = true })
+ks('n', '<C-u>', function()
+	local count = math.floor(vim.fn.winheight(0) / 2) - 1
+	return count .. "<C-y>"
+end, { expr = true })
 
 -- Map to Partial Ex Commands
 -- ============================================================================
@@ -63,46 +84,24 @@ ks('n', '<C-g><C-d>', '<Cmd>PrintFoldingOptions<CR>')
 
 ks("n", "-", "<Cmd>Oil<CR>")
 
--- Map to System Commands
+-- Map to Function Calls -> System Commands
 -- ============================================================================
 -- Open file in VSCode at current line and column
 ks("n", "<leader>v", function()
 	local file = vim.fn.expand("%")
 	local line = vim.fn.line(".")
 	local col = vim.fn.col(".")
-	system_commands.open_file_in_vscode(file, line, col)
+	system_calls.open_file_in_vscode(file, line, col)
 end)
 
 -- Open dictionary for current word or selected text
 ks("n", "<leader>d", function()
 	local keyword = vim.fn.expand("<cword>")
-	system_commands.open_dictionary(keyword)
+	system_calls.open_dictionary(keyword)
 end)
 ks("x", "<leader>d", function()
 	local keyword = util.get_selected_text()
-	system_commands.open_dictionary(keyword)
-end)
-
--- Map to feedkeys
--- ============================================================================
--- Improved, consistent scrolling
-local ctrl_e = vim.api.nvim_replace_termcodes('<C-e>', true, false, true)
-local ctrl_y = vim.api.nvim_replace_termcodes('<C-y>', true, false, true)
-ks('n', '<C-f>', function()
-	local count = vim.fn.winheight(0) - 1
-	vim.api.nvim_feedkeys(count .. ctrl_e, 'n', false)
-end)
-ks('n', '<C-b>', function()
-	local count = vim.fn.winheight(0) - 1
-	vim.api.nvim_feedkeys(count .. ctrl_y, 'n', false)
-end)
-ks('n', '<C-d>', function()
-	local count = math.floor(vim.fn.winheight(0) / 2) - 1
-	vim.api.nvim_feedkeys(count .. ctrl_e, 'n', false)
-end)
-ks('n', '<C-u>', function()
-	local count = math.floor(vim.fn.winheight(0) / 2) - 1
-	vim.api.nvim_feedkeys(count .. ctrl_y, 'n', false)
+	system_calls.open_dictionary(keyword)
 end)
 
 -- Reference

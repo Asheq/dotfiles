@@ -1,8 +1,7 @@
 local M = {}
 
--- ===========================================
 -- Helpers
--- ===========================================
+-- ============================================================================
 
 local function echo_with_indent(chunks, indent, history, opts)
 	local indent_str = string.rep("  ", indent and (indent * 2) or 0)
@@ -133,9 +132,8 @@ local function print_option_groups(groups, conf)
 	end
 end
 
--- ===========================================
 -- Preset groups of options to print
--- ===========================================
+-- ============================================================================
 
 function M.print_general()
 	print_option_groups({
