@@ -7,7 +7,14 @@ local M = {}
 
 ---@param optname string
 ---@param conf? { show_default_value?: boolean }
-function M.print_option(optname, conf)
+---@param printer? EchoBuffer
+function M.print_option(optname, conf, printer)
+	local own_printer = false
+	if not printer then
+		printer = util.new_echo_buffer({ history = true })
+		own_printer = true
+	end
+
 	local info = vim.api.nvim_get_option_info2(optname, {})
 	local value = vim.api.nvim_get_option_value(optname, {})
 
@@ -22,18 +29,16 @@ function M.print_option(optname, conf)
 	-- 	global_info.last_set_sid ~= 0 or
 	-- 	local_info.last_set_sid ~= 0
 
-	util.echo_with_indent({
+	printer:append_line({
 		{ " " .. optname .. " (" .. info.shortname .. ") ",               "TermCursor" },
 		{ " " .. info.scope .. (info.global_local and " + global" or ""), "Identifier" },
 		{ " [" .. info.type .. "]",                                       "NonText" },
 	}, 1)
 
-	util.echo_with_indent(
-		{
-			{ "   used: ",     "Normal" },
-			{ tostring(value), "String" },
-		},
-		2)
+	printer:append_line({
+		{ "   used: ",     "Normal" },
+		{ tostring(value), "String" },
+	}, 2)
 
 	if info.scope == "buf" or info.scope == "win" or info.scope == "tab" then
 		local local_last_set_sid = local_info.last_set_sid
@@ -42,14 +47,12 @@ function M.print_option(optname, conf)
 
 		local local_scope_label = "  local"
 
-		util.echo_with_indent(
-			{
-				{ local_scope_label .. ": ", "Normal" },
-				{ tostring(local_value),     "NonText" },
-				local_last_set_filename and { " ➤ ", "DiagnosticError" },
-				local_last_set_filename and { tostring(local_last_set_filename), "DiagnosticError" },
-			},
-			2)
+		printer:append_line({
+			{ local_scope_label .. ": ", "Normal" },
+			{ tostring(local_value),     "NonText" },
+			local_last_set_filename and { " ➤ ", "DiagnosticError" },
+			local_last_set_filename and { tostring(local_last_set_filename), "DiagnosticError" },
+		}, 2)
 	end
 
 	local global_last_set_sid = global_info.last_set_sid
@@ -58,37 +61,48 @@ function M.print_option(optname, conf)
 
 	local global_scope_label = " global"
 
-	util.echo_with_indent(
-		{
-			{ global_scope_label .. ": ", "Normal" },
-			{ tostring(global_value),     "NonText" },
-			global_last_set_filename and { " ➤ ", "DiagnosticError" },
-			global_last_set_filename and { tostring(global_last_set_filename), "DiagnosticError" },
-		},
-		2)
+	printer:append_line({
+		{ global_scope_label .. ": ", "Normal" },
+		{ tostring(global_value),     "NonText" },
+		global_last_set_filename and { " ➤ ", "DiagnosticError" },
+		global_last_set_filename and { tostring(global_last_set_filename), "DiagnosticError" },
+	}, 2)
 
 	if (conf and conf.show_default_value) then
-		util.echo_with_indent(
-			{
-				{ "default: ",            "Normal" },
-				{ tostring(info.default), "NonText" },
-			},
-			2)
+		printer:append_line({
+			{ "default: ",            "Normal" },
+			{ tostring(info.default), "NonText" },
+		}, 2)
+	end
+
+	if own_printer then
+		printer:flush()
 	end
 end
 
 ---@param groups { title?: string, options: string[] }[]
 ---@param conf? { show_default_value?: boolean }
-local function print_option_groups(groups, conf)
+---@param printer? EchoBuffer
+local function print_option_groups(groups, conf, printer)
+	local own_printer = false
+	if not printer then
+		printer = util.new_echo_buffer({ history = true })
+		own_printer = true
+	end
+
 	for _, group in ipairs(groups) do
 		if group.title and group.title ~= "" then
 			local extra_space = math.ceil((vim.o.columns - #group.title) / 2)
-			util.echo_with_indent({ { group.title .. string.rep(" ", extra_space), "Underlined" } }, 0)
+			printer:append_line({ { group.title .. string.rep(" ", extra_space), "Underlined" } }, 0)
 		end
 
 		for _, optname in ipairs(group.options) do
-			M.print_option(optname, conf)
+			M.print_option(optname, conf, printer)
 		end
+	end
+
+	if own_printer then
+		printer:flush()
 	end
 end
 

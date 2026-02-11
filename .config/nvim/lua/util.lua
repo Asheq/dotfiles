@@ -27,15 +27,44 @@ function M.get_selected_text()
 	return table.concat(lines, "\n")
 end
 
----@param chunks any[]
----@param indent? integer
----@param history? boolean
----@param opts? vim.api.keyset.echo_opts
-function M.echo_with_indent(chunks, indent, history, opts)
-	local indent_str = string.rep("  ", indent and (indent * 2) or 0)
-	local indented_chunks = vim.deepcopy(chunks)
-	table.insert(indented_chunks, 1, { indent_str, "Normal" })
-	vim.api.nvim_echo(indented_chunks, history or true, opts or {})
+---@class EchoBuffer
+---@field private chunks any[]
+---@field private history boolean
+---@field private opts vim.api.keyset.echo_opts
+---@field append_line fun(self: EchoBuffer, line_chunks: any[], indent?: integer)
+---@field flush fun(self: EchoBuffer)
+
+---@param conf? { history?: boolean, opts?: vim.api.keyset.echo_opts }
+---@return EchoBuffer
+function M.new_echo_buffer(conf)
+	local buf = {
+		chunks = {},
+		history = conf and conf.history ~= nil and conf.history or false,
+		opts = conf and conf.opts or {},
+	}
+
+	---Append a single line beginning with an optional indent, and terminating with a newline
+	---@param line_chunks any[]
+	---@param indent? integer
+	function buf:append_line(line_chunks, indent)
+		local indent_str = string.rep("  ", indent and (indent * 2) or 0)
+		table.insert(self.chunks, { indent_str, "Normal" })
+		for _, chunk in ipairs(line_chunks) do
+			if chunk then
+				table.insert(self.chunks, chunk)
+			end
+		end
+		table.insert(self.chunks, { "\n", "Normal" })
+	end
+
+	function buf:flush()
+		if #self.chunks == 0 then
+			return
+		end
+		vim.api.nvim_echo(self.chunks, self.history, self.opts)
+	end
+
+	return buf
 end
 
 ---@param sid integer
