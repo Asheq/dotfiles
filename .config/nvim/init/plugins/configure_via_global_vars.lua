@@ -21,7 +21,7 @@ vim.g.copilot_no_tab_map = true
 -- markdown-preview.nvim
 vim.cmd([[
   function! OpenMarkdownPreview(url)
-    call v:lua.require('system_calls').open_url_in_firefox(a:url)
+    call v:lua.require("system_calls").open_url_in_firefox(a:url)
   endfunction
 ]])
 

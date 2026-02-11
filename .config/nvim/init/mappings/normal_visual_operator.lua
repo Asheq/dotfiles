@@ -1,5 +1,6 @@
 local util = require("util")
 local system_calls = require("system_calls")
+local print_options = require("print_stuff.options")
 
 local ks = vim.keymap.set
 
@@ -20,25 +21,25 @@ ks({ "n", "x" }, "<leader>P", '"*P')
 
 -- Visually select previously changed/yanked text
 -- Mnemonic: gh = go highlight
-ks({ "n" }, "gh", '`[v`]')
+ks({ "n" }, "gh", "`[v`]")
 
 -- Map to Normal Mode Commands (via expression)
 -- ============================================================================
 
 -- Scrolling
-ks('n', '<C-f>', function()
+ks("n", "<C-f>", function()
 	local count = vim.fn.winheight(0) - 1
 	return count .. "<C-e>"
 end, { expr = true })
-ks('n', '<C-b>', function()
+ks("n", "<C-b>", function()
 	local count = vim.fn.winheight(0) - 1
 	return count .. "<C-y>"
 end, { expr = true })
-ks('n', '<C-d>', function()
+ks("n", "<C-d>", function()
 	local count = math.floor(vim.fn.winheight(0) / 2) - 1
 	return count .. "<C-e>"
 end, { expr = true })
-ks('n', '<C-u>', function()
+ks("n", "<C-u>", function()
 	local count = math.floor(vim.fn.winheight(0) / 2) - 1
 	return count .. "<C-y>"
 end, { expr = true })
@@ -76,11 +77,11 @@ ks("n", "<leader>s", "<Cmd>Git<CR>")
 ks("n", "<leader>w", "<Cmd>silent update<CR>")
 
 -- Mnemonic: g = get
-ks('n', '<C-g><C-g>', '<Cmd>PrintGeneralOptions<CR>')
-ks('n', '<C-g><C-b>', '<Cmd>PrintBorderOptions<CR>')
-ks('n', '<C-g><C-f>', '<Cmd>PrintFormattingOptions<CR>')
-ks('n', '<C-g><C-t>', '<Cmd>PrintIndentingOptions<CR>')
-ks('n', '<C-g><C-d>', '<Cmd>PrintFoldingOptions<CR>')
+ks("n", "<C-g><C-g>", print_options.print_general)
+ks("n", "<C-g><C-b>", print_options.print_border)
+ks("n", "<C-g><C-f>", print_options.print_formatting)
+ks("n", "<C-g><C-t>", print_options.print_indenting)
+ks("n", "<C-g><C-d>", print_options.print_folding)
 
 ks("n", "-", "<Cmd>Oil<CR>")
 

@@ -27,4 +27,56 @@ function M.get_selected_text()
 	return table.concat(lines, "\n")
 end
 
+---@param chunks any[]
+---@param indent? integer
+---@param history? boolean
+---@param opts? vim.api.keyset.echo_opts
+function M.echo_with_indent(chunks, indent, history, opts)
+	local indent_str = string.rep("  ", indent and (indent * 2) or 0)
+	local indented_chunks = vim.deepcopy(chunks)
+	table.insert(indented_chunks, 1, { indent_str, "Normal" })
+	vim.api.nvim_echo(indented_chunks, history or true, opts or {})
+end
+
+---@param sid integer
+---@return string|nil
+function M.get_filename(sid)
+	if sid == 0 then
+		return nil
+	end
+
+	if sid == -1 then
+		return "[modeline]"
+	end
+
+	if sid < 0 then
+		return tostring(sid)
+	end
+
+	local scripts = vim.fn.getscriptinfo({ sid = sid })
+
+	if scripts[1] and scripts[1].name and scripts[1].name ~= "" then
+		local name = scripts[1].name
+
+		local runtime = vim.env.VIMRUNTIME
+		if runtime and runtime ~= "" and name:sub(1, #runtime) == runtime then
+			name = "$VIMRUNTIME" .. name:sub(#runtime + 1)
+		end
+
+		local vimconfig = vim.env.HOME .. "/.config/nvim"
+		if name:sub(1, #vimconfig) == vimconfig then
+			name = "$VIMCONFIG" .. name:sub(#vimconfig + 1)
+		end
+
+		local plug_home = vim.g.plug_home
+		if name:sub(1, #plug_home) == plug_home then
+			name = "$PLUGHOME" .. name:sub(#plug_home + 1)
+		end
+
+		return name
+	end
+
+	return tostring(sid)
+end
+
 return M

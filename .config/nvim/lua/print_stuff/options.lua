@@ -1,59 +1,9 @@
+local util = require("util")
+
 local M = {}
 
--- Helpers
+-- Main functions
 -- ============================================================================
-
----@param chunks any[]
----@param indent? integer
----@param history? boolean
----@param opts? vim.api.keyset.echo_opts
-local function echo_with_indent(chunks, indent, history, opts)
-	local indent_str = string.rep("  ", indent and (indent * 2) or 0)
-	local indented_chunks = vim.deepcopy(chunks)
-	table.insert(indented_chunks, 1, { indent_str, "Normal" })
-	vim.api.nvim_echo(indented_chunks, history or true, opts or {})
-end
-
----@param sid integer
----@return string|nil
-local function get_filename(sid)
-	if sid == 0 then
-		return nil
-	end
-
-	if sid == -1 then
-		return "[modeline]"
-	end
-
-	if sid < 0 then
-		return tostring(sid)
-	end
-
-	local scripts = vim.fn.getscriptinfo({ sid = sid })
-
-	if scripts[1] and scripts[1].name and scripts[1].name ~= "" then
-		local name = scripts[1].name
-
-		local runtime = vim.env.VIMRUNTIME
-		if runtime and runtime ~= "" and name:sub(1, #runtime) == runtime then
-			name = "$VIMRUNTIME" .. name:sub(#runtime + 1)
-		end
-
-		local vimconfig = vim.env.HOME .. "/.config/nvim"
-		if name:sub(1, #vimconfig) == vimconfig then
-			name = "$VIMCONFIG" .. name:sub(#vimconfig + 1)
-		end
-
-		local plug_home = vim.g.plug_home
-		if name:sub(1, #plug_home) == plug_home then
-			name = "$PLUGHOME" .. name:sub(#plug_home + 1)
-		end
-
-		return name
-	end
-
-	return tostring(sid)
-end
 
 ---@param optname string
 ---@param conf? { show_default_value?: boolean }
@@ -72,13 +22,13 @@ function M.print_option(optname, conf)
 	-- 	global_info.last_set_sid ~= 0 or
 	-- 	local_info.last_set_sid ~= 0
 
-	echo_with_indent({
+	util.echo_with_indent({
 		{ " " .. optname .. " (" .. info.shortname .. ") ",               "TermCursor" },
 		{ " " .. info.scope .. (info.global_local and " + global" or ""), "Identifier" },
 		{ " [" .. info.type .. "]",                                       "NonText" },
 	}, 1)
 
-	echo_with_indent(
+	util.echo_with_indent(
 		{
 			{ "   used: ",     "Normal" },
 			{ tostring(value), "String" },
@@ -88,11 +38,11 @@ function M.print_option(optname, conf)
 	if info.scope == "buf" or info.scope == "win" or info.scope == "tab" then
 		local local_last_set_sid = local_info.last_set_sid
 		-- local local_was_set_by_script = local_info.last_set_sid ~= 0
-		local local_last_set_filename = get_filename(local_last_set_sid)
+		local local_last_set_filename = util.get_filename(local_last_set_sid)
 
 		local local_scope_label = "  local"
 
-		echo_with_indent(
+		util.echo_with_indent(
 			{
 				{ local_scope_label .. ": ", "Normal" },
 				{ tostring(local_value),     "NonText" },
@@ -104,11 +54,11 @@ function M.print_option(optname, conf)
 
 	local global_last_set_sid = global_info.last_set_sid
 	-- local global_was_set_by_script = global_info.last_set_sid ~= 0
-	local global_last_set_filename = get_filename(global_last_set_sid)
+	local global_last_set_filename = util.get_filename(global_last_set_sid)
 
 	local global_scope_label = " global"
 
-	echo_with_indent(
+	util.echo_with_indent(
 		{
 			{ global_scope_label .. ": ", "Normal" },
 			{ tostring(global_value),     "NonText" },
@@ -118,7 +68,7 @@ function M.print_option(optname, conf)
 		2)
 
 	if (conf and conf.show_default_value) then
-		echo_with_indent(
+		util.echo_with_indent(
 			{
 				{ "default: ",            "Normal" },
 				{ tostring(info.default), "NonText" },
@@ -133,7 +83,7 @@ local function print_option_groups(groups, conf)
 	for _, group in ipairs(groups) do
 		if group.title and group.title ~= "" then
 			local extra_space = math.ceil((vim.o.columns - #group.title) / 2)
-			echo_with_indent({ { group.title .. string.rep(" ", extra_space), "Underlined" } }, 0)
+			util.echo_with_indent({ { group.title .. string.rep(" ", extra_space), "Underlined" } }, 0)
 		end
 
 		for _, optname in ipairs(group.options) do
@@ -142,7 +92,7 @@ local function print_option_groups(groups, conf)
 	end
 end
 
--- Preset groups of options to print
+-- Print preset groups of functions
 -- ============================================================================
 
 function M.print_general()
