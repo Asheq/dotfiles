@@ -101,7 +101,9 @@ ks("n", "<leader>d", function()
 end)
 ks("x", "<leader>d", function()
 	local keyword = util.get_selected_text()
-	system_calls.open_dictionary(keyword)
+	if keyword then
+		system_calls.open_dictionary(keyword)
+	end
 end)
 
 -- Reference

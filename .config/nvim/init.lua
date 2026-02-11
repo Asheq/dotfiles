@@ -1,9 +1,11 @@
 local config = vim.fn.stdpath("config")
 
+---@param relpath string
 local function source_vim(relpath)
 	vim.cmd("source " .. vim.fn.fnameescape(config .. "/" .. relpath))
 end
 
+---@param relpath string
 local function source_lua(relpath)
 	dofile(config .. "/" .. relpath)
 end

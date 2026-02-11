@@ -1,17 +1,18 @@
 local M = {}
 
+---@return string|nil
 function M.get_selected_text()
 	local mode = vim.fn.mode()
 
 	if not (mode == "v" or mode == "V" or mode == "\022") then
-		return
+		return nil
 	end
 
 	local pos1 = vim.fn.getpos("v")
 	local pos2 = vim.fn.getpos(".")
 
 	if pos1[2] == 0 or pos2[2] == 0 then
-		return
+		return nil
 	end
 
 	-- Normalize order

@@ -3,6 +3,10 @@ local M = {}
 -- Helpers
 -- ============================================================================
 
+---@param chunks any[]
+---@param indent? integer
+---@param history? boolean
+---@param opts? vim.api.keyset.echo_opts
 local function echo_with_indent(chunks, indent, history, opts)
 	local indent_str = string.rep("  ", indent and (indent * 2) or 0)
 	local indented_chunks = vim.deepcopy(chunks)
@@ -10,6 +14,8 @@ local function echo_with_indent(chunks, indent, history, opts)
 	vim.api.nvim_echo(indented_chunks, history or true, opts or {})
 end
 
+---@param sid integer
+---@return string|nil
 local function get_filename(sid)
 	if sid == 0 then
 		return nil
@@ -20,7 +26,7 @@ local function get_filename(sid)
 	end
 
 	if sid < 0 then
-		return sid
+		return tostring(sid)
 	end
 
 	local scripts = vim.fn.getscriptinfo({ sid = sid })
@@ -46,9 +52,11 @@ local function get_filename(sid)
 		return name
 	end
 
-	return sid
+	return tostring(sid)
 end
 
+---@param optname string
+---@param conf? { show_default_value?: boolean }
 function M.print_option(optname, conf)
 	local info = vim.api.nvim_get_option_info2(optname, {})
 	local value = vim.api.nvim_get_option_value(optname, {})
@@ -119,6 +127,8 @@ function M.print_option(optname, conf)
 	end
 end
 
+---@param groups { title?: string, options: string[] }[]
+---@param conf? { show_default_value?: boolean }
 local function print_option_groups(groups, conf)
 	for _, group in ipairs(groups) do
 		if group.title and group.title ~= "" then
