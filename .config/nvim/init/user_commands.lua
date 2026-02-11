@@ -21,7 +21,7 @@ vim.api.nvim_create_user_command("PrintOptions", function(opts)
 end, {
 	nargs = "+",
 	complete = "option",
-	desc = "Print info about Vim options",
 })
 
--- TODO: Add a command for :Dictionary that calls system_calls.open_dictionary() for the word that is the first argument
+-- TODO: Add a command for :Dictionary {keyword}
+-- TODO: Add a command for :Browse {keyword}

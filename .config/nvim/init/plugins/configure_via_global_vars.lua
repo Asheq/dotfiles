@@ -8,20 +8,20 @@
 -- markdown
 vim.g.markdown_folding = 1
 
--- vim-indentwise
+-- indentwise
 vim.g.indentwise_suppress_keymaps = 1
 
--- vim-sandwich
+-- sandwich
 -- TODO-L: Add sandwich text objects without clobbering default as/is
 vim.g.textobj_sandwich_no_default_key_mappings = 1
 
--- copilot.vim
+-- copilot
 vim.g.copilot_no_tab_map = true
 
--- markdown-preview.nvim
+-- markdown-preview
 vim.cmd([[
   function! OpenMarkdownPreview(url)
-    call v:lua.require("system_calls").open_url_in_firefox(a:url)
+    call v:lua.require("system_calls").open_url_in_firefox(a:url, { "new_window": v:true })
   endfunction
 ]])
 

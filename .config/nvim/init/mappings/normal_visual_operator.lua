@@ -23,7 +23,7 @@ ks({ "n", "x" }, "<leader>P", '"*P')
 -- Mnemonic: gh = go highlight
 ks({ "n" }, "gh", "`[v`]")
 
--- Map to Normal Mode Commands (via expression)
+-- Map to Normal Mode Commands (via expr)
 -- ============================================================================
 
 -- Scrolling
@@ -76,16 +76,9 @@ ks("n", "<leader>s", "<Cmd>Git<CR>")
 -- Mnemonic: w = write
 ks("n", "<leader>w", "<Cmd>silent update<CR>")
 
--- Mnemonic: g = get
-ks("n", "<C-g><C-g>", print_options.print_general)
-ks("n", "<C-g><C-b>", print_options.print_border)
-ks("n", "<C-g><C-f>", print_options.print_formatting)
-ks("n", "<C-g><C-t>", print_options.print_indenting)
-ks("n", "<C-g><C-d>", print_options.print_folding)
-
 ks("n", "-", "<Cmd>Oil<CR>")
 
--- Map to Function Calls -> System Commands
+-- Map to System Calls
 -- ============================================================================
 -- Open file in VSCode at current line and column
 ks("n", "<leader>v", function()
@@ -106,6 +99,15 @@ ks("x", "<leader>d", function()
 		system_calls.open_dictionary(keyword)
 	end
 end)
+
+-- Map to Other Lua Functions
+-- ============================================================================
+-- Mnemonic: g = get
+ks("n", "<C-g><C-g>", print_options.print_general)
+ks("n", "<C-g><C-b>", print_options.print_border)
+ks("n", "<C-g><C-f>", print_options.print_formatting)
+ks("n", "<C-g><C-t>", print_options.print_indenting)
+ks("n", "<C-g><C-d>", print_options.print_folding)
 
 -- Reference
 -- ============================================================================

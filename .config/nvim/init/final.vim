@@ -49,7 +49,3 @@ call s:on_bg_change()
 if exists('g:neovide')
     cd ~
 endif
-
-" Run final.lua
-" ============================================================================
-luafile <sfile>:h/final.lua

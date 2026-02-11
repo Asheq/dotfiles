@@ -1,13 +1,13 @@
-local config = vim.fn.stdpath("config")
+local config_path = vim.fn.stdpath("config")
 
----@param relpath string
-local function source_vim(relpath)
-	vim.cmd("source " .. vim.fn.fnameescape(config .. "/" .. relpath))
+---@param rel_path string
+local function source_vim(rel_path)
+	vim.cmd("source " .. vim.fn.fnameescape(config_path .. "/" .. rel_path))
 end
 
----@param relpath string
-local function source_lua(relpath)
-	dofile(config .. "/" .. relpath)
+---@param rel_path string
+local function source_lua(rel_path)
+	dofile(config_path .. "/" .. rel_path)
 end
 
 -- First
@@ -41,3 +41,4 @@ source_vim("init/options/wrap.vim")
 
 -- Final
 source_vim("init/final.vim")
+source_lua("init/final.lua")
