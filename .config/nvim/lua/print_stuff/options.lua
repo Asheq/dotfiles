@@ -92,7 +92,7 @@ local function print_option_groups(groups, conf)
 	end
 end
 
--- Print preset groups of functions
+-- Print preset groups of options
 -- ============================================================================
 
 function M.print_general()
