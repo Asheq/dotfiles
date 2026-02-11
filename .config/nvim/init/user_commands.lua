@@ -1,6 +1,6 @@
 local options = require("print_stuff.options")
 
--- Usage: :PrintOptions [option1] [option2] ... [-def]
+-- Usage: :PrintOptions option1 [option2] [option3] ... [-def]
 vim.api.nvim_create_user_command("PrintOptions", function(opts)
 	local option_names = {}
 	local conf = { show_default_value = false }

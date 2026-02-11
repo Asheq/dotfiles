@@ -2,12 +2,12 @@
 -- automatically loaded on startup.
 --
 -- To prevent multiple loads, each plugin has a guard clause at the top of its
--- script that checks the value of the variable g:loaded_xxx, where xxx is the
--- name of the plugin. If the variable is set to 1, the rest of the file will
--- not execute.
+-- main script that checks the value of the variable g:loaded_xxx, where xxx is
+-- the name of the plugin. If the value is 1, the rest of the script does not
+-- execute.
 --
--- Setting the variable to 1 here prevents the plugin code from executing even
--- once.
+-- Thus, setting the variable to 1 here prevents the plugin code from executing
+-- even once.
 -- ============================================================================
 
 -- Do not load netrw

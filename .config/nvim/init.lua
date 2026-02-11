@@ -17,9 +17,9 @@ source_lua("init/first.lua")
 source_lua("init/filetypes/add.lua")
 
 -- Plugins
-source_lua("init/plugins/do_not_load_built_in.lua")
-source_lua("init/plugins/load_built_in.lua")
-source_vim("init/plugins/add.vim")
+source_lua("init/plugins/disable_built_in.lua")
+source_lua("init/plugins/enable_built_in.lua")
+source_vim("init/plugins/add_third_party.vim")
 source_lua("init/plugins/configure_via_global_vars.lua")
 source_lua("init/plugins/configure_via_setup_func.lua")
 source_lua("init/plugins/configure_coc.lua")
