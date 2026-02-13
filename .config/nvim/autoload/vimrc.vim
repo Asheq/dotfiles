@@ -1,28 +1,3 @@
-" General utilities
-" ============================================================================
-function! vimrc#get_selection_text()
-	" TODO: This is a bad way to get the selection text because it could
-	" trigger side effects, e.g., if there are autocommands related to yanking
-	" text or setting registers. Similar issue in vimrc#read_aloud() below.
-	" Fix this when you migrate this file to Lua.
-	let temp = getreg("v")
-	silent normal! gv"vy
-	let raw_text = getreg("v")
-	call setreg("v", temp)
-	return raw_text
-endfunction
-
-" Read aloud
-" ============================================================================
-function! vimrc#read_aloud(keyword)
-    10split +terminal
-    let temp = getreg("v")
-    let @v = "say " . shellescape(a:keyword) . " -i -r " . g:say_speed
-    normal! "vpi
-    call setreg("v", temp)
-    call feedkeys("\<Enter>exit\<Enter>", 'n')
-endfunction
-
 " Get current working directory
 " ============================================================================
 function! vimrc#get_global_cwd()

@@ -51,7 +51,7 @@ end, { expr = true })
 ks({ "n", "x" }, "<leader>c", ":CopilotChat<C-z><C-p>")
 
 -- Mnemonic: g = grep
-ks("n", "<leader>g", ":sil gr!  | tab cw<S-Left><S-Left><S-Left><Left>")
+ks("n", "<leader>g", ":sil gr!  | cw<S-Left><S-Left><Left>")
 
 -- Mnemonic: r = redirect
 ks("n", "<leader>r", ":redi @r | sil  | redi END<S-Left><S-Left><S-Left><Left>")
@@ -100,12 +100,16 @@ ks("x", "<leader>b", function()
 end)
 
 -- Speak
+-- ----------------------------------------------------------------------------
+
+-- Change speech rate
 vim.keymap.set("n", "<leader><Left>", function()
 	system_calls.change_speech_rate(-50)
 end)
 vim.keymap.set("n", "<leader><Right>", function()
 	system_calls.change_speech_rate(50)
 end)
+
 -- Mnemonic: k = speaK
 vim.keymap.set("n", "<leader>k", function()
 	system_calls.speak(vim.fn.getline("."))
