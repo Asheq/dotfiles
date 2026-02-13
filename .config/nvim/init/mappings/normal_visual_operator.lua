@@ -80,7 +80,7 @@ ks("n", "-", "<Cmd>Oil<CR>")
 
 -- Map to System Calls
 -- ============================================================================
--- Open file in VSCode at current line and column
+-- Open file in VSCode
 ks("n", "<leader>v", function()
 	local file = vim.fn.expand("%")
 	local line = vim.fn.line(".")
@@ -88,7 +88,7 @@ ks("n", "<leader>v", function()
 	system_calls.open_file_in_vscode(file, line, col)
 end)
 
--- Open dictionary for current word or selected text
+-- Open dictionary
 ks("n", "<leader>d", function()
 	local keyword = vim.fn.expand("<cword>")
 	system_calls.open_dictionary(keyword)
@@ -100,16 +100,31 @@ ks("x", "<leader>d", function()
 	end
 end)
 
--- Open browser-based search for current word or selected text
+-- Open browser-based search
 ks("n", "<leader>b", function()
 	local keyword = vim.fn.expand("<cword>")
-	system_calls.open_url_in_firefox('https://www.google.com/search?q=' .. vim.uri_encode(keyword))
+	system_calls.open_url_in_firefox("https://www.google.com/search?q=" .. vim.uri_encode(keyword))
 end)
 ks("x", "<leader>b", function()
 	local keyword = util.get_selected_text()
 	if keyword then
-		system_calls.open_url_in_firefox('https://www.google.com/search?q=' .. vim.uri_encode(keyword))
+		system_calls.open_url_in_firefox("https://www.google.com/search?q=" .. vim.uri_encode(keyword))
 	end
+end)
+
+-- Speech
+vim.keymap.set("n", "<leader><Left>", function()
+	system_calls.change_speech_rate(-50)
+end)
+vim.keymap.set("n", "<leader><Right>", function()
+	system_calls.change_speech_rate(50)
+end)
+-- Mnemonic: k = speaK
+vim.keymap.set("n", "<leader>k", function()
+	system_calls.speak(vim.fn.getline('.'))
+end)
+vim.keymap.set("x", "<leader>k", function()
+	system_calls.speak(util.get_selected_text())
 end)
 
 -- Map to Other Lua Functions

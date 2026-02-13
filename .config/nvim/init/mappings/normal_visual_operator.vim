@@ -1,15 +1,6 @@
 " Operate on Text
 " ============================================================================
 
-" Change speech rate
-let g:say_speed = 250
-nnoremap <silent>       <leader><Left>   :let g:say_speed -= 50<Enter>:echo g:say_speed<Enter>
-nnoremap <silent>       <leader><Right>  :let g:say_speed += 50<Enter>:echo g:say_speed<Enter>
-
-" Read aloud
-nnoremap <silent>       <leader>k        :execute 'silent .w !say -r ' . g:say_speed<Enter>
-xnoremap <silent>       <leader>k        :<C-u>execute 'silent !echo ' . shellescape(vimrc#get_selection_text(), 1) . ' <Bar> say -r ' . g:say_speed<Enter>
-
 " Read aloud and highlight text
 nnoremap <silent>       <leader>i        :cal vimrc#read_aloud(getline('.'))<Enter>
 xnoremap <silent>       <leader>i        :<C-u>cal vimrc#read_aloud(vimrc#get_selection_text())<Enter>
