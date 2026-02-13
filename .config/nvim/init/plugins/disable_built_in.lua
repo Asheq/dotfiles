@@ -13,7 +13,7 @@
 -- Do not load netrw
 vim.g.loaded_netrwPlugin = 1
 
--- Do not load matchit and matchparen. Replace both with just
+-- Do not load matchit and matchparen. They are both replaced with
 -- andymass/vim-matchup.
 -- vim.g.loaded_matchit = 1
 -- vim.g.loaded_matchparen = 1

@@ -24,4 +24,4 @@ end, {
 })
 
 -- TODO: Add a command for :Dictionary {keyword}
--- TODO: Add a command for :Browse {keyword}
+-- TODO: Add a command for :BrowserSearch {keyword}

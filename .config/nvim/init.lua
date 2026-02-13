@@ -13,14 +13,11 @@ end
 -- First
 source_lua("init/first.lua")
 
--- Filetypes
-source_lua("init/filetypes/add.lua")
-
 -- Plugins
-source_lua("init/plugins/disable_built_in.lua")
-source_lua("init/plugins/enable_built_in.lua")
-source_vim("init/plugins/add_third_party.vim")
 source_lua("init/plugins/configure_via_global_vars.lua")
+source_lua("init/plugins/disable_built_in.lua")
+source_lua("init/plugins/execute_built_in.lua")
+source_vim("init/plugins/add_third_party.vim")
 source_lua("init/plugins/configure_via_setup_func.lua")
 source_lua("init/plugins/configure_coc.lua")
 
@@ -38,6 +35,10 @@ source_vim("init/options/basic.vim")
 source_vim("init/options/gui.vim")
 source_vim("init/options/listchars-fillchars.vim")
 source_vim("init/options/wrap.vim")
+
+-- Filetypes
+source_lua("init/filetypes/add-detection.lua")
+source_lua("init/filetypes/start-treesitter.lua")
 
 -- Final
 source_vim("init/final.vim")
