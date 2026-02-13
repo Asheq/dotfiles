@@ -10,6 +10,8 @@ set splitbelow
 set splitright
 set wildcharm=<C-z>
 let &wildignore='.DS_Store,.tmp.drivedownload,.tmp.driveupload'
+let &guifont='PragmataPro Mono:h22'
+set linespace=5
 
 " Tab [+ Global]
 " ----------------------------------------------------------------------------
@@ -32,4 +34,4 @@ set foldtext=
 set spelloptions=camel
 set undofile
 set dictionary+=/usr/share/dict/words
-set grepprg=rg\ --vimgrep
+let &grepprg='rg --vimgrep'

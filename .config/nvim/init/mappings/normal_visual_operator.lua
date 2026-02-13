@@ -126,26 +126,3 @@ ks("n", "<C-g><C-b>", print_options.print_border)
 ks("n", "<C-g><C-f>", print_options.print_formatting)
 ks("n", "<C-g><C-t>", print_options.print_indenting)
 ks("n", "<C-g><C-d>", print_options.print_folding)
-
--- Reference
--- ============================================================================
--- Duplicate keys (* = used in mapping already, ! = do not map or map to self only)
---   Normal-mode
---       h!         <Left>*    <C-h>      <BS>*
---       l!         <Right>*   <Space>*
---       j!         <Down>!    <C-j>      <C-n>
---       k!         <Up>!                 <C-p>
---       <Enter>!   +          <C-m>
---       cc!        S
---   Visual-mode(char)
---       d!         x
---       D!         X
---       c!         s*
---       C!         S
---   Visual-mode (line)
---       d!         x        X          D
---       c!         s*
---       C!         S
---   Visual-mode (block)
---       d!         x        X
---       c!         s*
