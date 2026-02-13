@@ -112,7 +112,7 @@ ks("x", "<leader>b", function()
 	end
 end)
 
--- Speech
+-- Speak
 vim.keymap.set("n", "<leader><Left>", function()
 	system_calls.change_speech_rate(-50)
 end)
