@@ -100,6 +100,18 @@ ks("x", "<leader>d", function()
 	end
 end)
 
+-- Open browser-based search for current word or selected text
+ks("n", "<leader>b", function()
+	local keyword = vim.fn.expand("<cword>")
+	system_calls.open_url_in_firefox('https://www.google.com/search?q=' .. vim.uri_encode(keyword))
+end)
+ks("x", "<leader>b", function()
+	local keyword = util.get_selected_text()
+	if keyword then
+		system_calls.open_url_in_firefox('https://www.google.com/search?q=' .. vim.uri_encode(keyword))
+	end
+end)
+
 -- Map to Other Lua Functions
 -- ============================================================================
 -- Mnemonic: g = get

@@ -1,10 +1,6 @@
 " Operate on Text
 " ============================================================================
 
-" View browser search
-nnoremap <silent>       <leader>b        :cal vimrc#browse(expand('<cword>'))<Enter>
-xnoremap <silent>       <leader>b        :<C-u>cal vimrc#browse(vimrc#get_selection_text())<Enter>
-
 " Change speech rate
 let g:say_speed = 250
 nnoremap <silent>       <leader><Left>   :let g:say_speed -= 50<Enter>:echo g:say_speed<Enter>

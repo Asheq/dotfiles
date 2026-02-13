@@ -1,20 +1,5 @@
 " General utilities
 " ============================================================================
-function! vimrc#open_in_shell(item, ...)
-    let application = get(a:, 1, 0)
-
-    let prefix = 'silent !open '
-    if application isnot 0
-        let prefix = prefix . '-a "' . application . '" '
-    endif
-
-    execute prefix . shellescape(a:item, 1)
-endfunction
-
-function! vimrc#url_encode(str)
-    return substitute(iconv(a:str, 'latin1', 'utf-8'),'[^A-Za-z0-9_.~-]','\="%".printf("%02X",char2nr(submatch(0)))','g')
-endfunction
-
 function! vimrc#get_selection_text()
 	" TODO: This is a bad way to get the selection text because it could
 	" trigger side effects, e.g., if there are autocommands related to yanking
@@ -37,15 +22,6 @@ function! vimrc#read_aloud(keyword)
     call setreg("v", temp)
     call feedkeys("\<Enter>exit\<Enter>", 'n')
 endfunction
-
-" Define and Browse
-" ============================================================================
-
-function! vimrc#browse(keyword)
-    call vimrc#open_in_shell('https://www.google.com/search?q=' . vimrc#url_encode(a:keyword))
-endfunction
-
-command! -nargs=1 Browse call vimrc#browse(<f-args>)
 
 " Get current working directory
 " ============================================================================
