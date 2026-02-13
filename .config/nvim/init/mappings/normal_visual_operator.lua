@@ -80,36 +80,23 @@ ks("n", "-", "<Cmd>Oil<CR>")
 
 -- Map to System Calls
 -- ============================================================================
--- Open file in VSCode
-ks("n", "<leader>v", function()
-	local file = vim.fn.expand("%")
-	local line = vim.fn.line(".")
-	local col = vim.fn.col(".")
-	system_calls.open_file_in_vscode(file, line, col)
-end)
+-- Open current file in VSCode
+ks("n", "<leader>v", system_calls.open_curr_file_in_vscode)
 
 -- Open dictionary
 ks("n", "<leader>d", function()
-	local keyword = vim.fn.expand("<cword>")
-	system_calls.open_dictionary(keyword)
+	system_calls.open_dictionary(vim.fn.expand("<cword>"))
 end)
 ks("x", "<leader>d", function()
-	local keyword = util.get_selected_text()
-	if keyword then
-		system_calls.open_dictionary(keyword)
-	end
+	system_calls.open_dictionary(util.get_selected_text())
 end)
 
--- Open browser-based search
+-- Browser search
 ks("n", "<leader>b", function()
-	local keyword = vim.fn.expand("<cword>")
-	system_calls.open_url_in_firefox("https://www.google.com/search?q=" .. vim.uri_encode(keyword))
+	system_calls.browser_search(vim.fn.expand("<cword>"))
 end)
 ks("x", "<leader>b", function()
-	local keyword = util.get_selected_text()
-	if keyword then
-		system_calls.open_url_in_firefox("https://www.google.com/search?q=" .. vim.uri_encode(keyword))
-	end
+	system_calls.browser_search(util.get_selected_text())
 end)
 
 -- Speak
@@ -121,7 +108,7 @@ vim.keymap.set("n", "<leader><Right>", function()
 end)
 -- Mnemonic: k = speaK
 vim.keymap.set("n", "<leader>k", function()
-	system_calls.speak(vim.fn.getline('.'))
+	system_calls.speak(vim.fn.getline("."))
 end)
 vim.keymap.set("x", "<leader>k", function()
 	system_calls.speak(util.get_selected_text())
@@ -143,8 +130,8 @@ ks("n", "<C-g><C-d>", print_options.print_folding)
 --       h!         <Left>*    <C-h>      <BS>*
 --       l!         <Right>*   <Space>*
 --       j!         <Down>!    <C-j>      <C-n>
---       k!         <Up>!                 <C-p>*
---       <Enter>!              +          <C-m>
+--       k!         <Up>!                 <C-p>
+--       <Enter>!   +          <C-m>
 --       cc!        S
 --   Visual-mode(char)
 --       d!         x
