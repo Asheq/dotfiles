@@ -52,12 +52,12 @@ end
 
 ---@type vim.SystemObj | nil
 local say_process = nil
+local SIGTERM = 15
 
 ---@param text string?
 function M.speak(text)
 	-- If a process is running, kill it
 	if say_process and not say_process:is_closing() then
-		local SIGTERM = 15
 		say_process:kill(SIGTERM)
 		say_process = nil
 		return
@@ -65,8 +65,16 @@ function M.speak(text)
 
 	-- Otherwise, start a new one
 	if text then
-		say_process = vim.system({ "say", "-r", tostring(speech_rate) }, { stdin = text, text = true, detach = true })
+		say_process = vim.system({ "say", "-r", tostring(speech_rate) }, { stdin = text, text = true })
 	end
 end
+
+vim.api.nvim_create_autocmd("VimLeave", {
+	callback = function()
+		if say_process and not say_process:is_closing() then
+			say_process:kill(SIGTERM)
+		end
+	end,
+})
 
 return M

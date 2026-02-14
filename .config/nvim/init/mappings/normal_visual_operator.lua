@@ -116,6 +116,7 @@ vim.keymap.set("n", "<leader>k", function()
 end)
 vim.keymap.set("x", "<leader>k", function()
 	system_calls.speak(util.get_selected_text())
+	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
 end)
 
 -- Map to Other Lua Functions

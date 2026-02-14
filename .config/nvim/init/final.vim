@@ -19,7 +19,13 @@ highlight! link WinBarNC     StatusLineNC
 highlight! link TabLineSel   StatusLine
 highlight! link TabLine      StatusLineNC
 
+highlight! link @markup.heading.1.markdown CocListBlackYellow
+highlight! link @markup.heading.2.markdown CocListBlackCyan
+highlight! link @markup.heading.3.markdown CocListBlackBlue
+highlight! link @markup.heading.4.markdown CocListBlackWhite
+
 function! s:on_bg_change()
+
     if &background ==# 'light'
         highlight! Visual            guibg=#bda9b0
         highlight! Substitute        guifg=#ffffff guibg=#b16286
