@@ -1,4 +1,4 @@
-function! <SID>navigate_block_down(vim_mode) range
+function! s:navigate_block_down(vim_mode) range
     if a:vim_mode == "v"
         normal! gv
     endif
@@ -52,7 +52,7 @@ function! <SID>navigate_block_down(vim_mode) range
     endif
 endfunction
 
-function! <SID>navigate_block_up(vim_mode) range
+function! s:navigate_block_up(vim_mode) range
     if a:vim_mode == "v"
         normal! gv
     endif
@@ -106,10 +106,10 @@ function! <SID>navigate_block_up(vim_mode) range
     endif
 endfunction
 
-nnoremap <silent> <Plug>(NavigateBlockDown)    :<C-U>call <SID>navigate_block_down("n")<CR>
+nnoremap <silent> <Plug>(NavigateBlockDown)    :<C-u>call <SID>navigate_block_down("n")<CR>
 vnoremap <silent> <Plug>(NavigateBlockDown)         :call <SID>navigate_block_down("v")<CR>
-onoremap <silent> <Plug>(NavigateBlockDown)   V:<C-U>call <SID>navigate_block_down("o")<CR>
+onoremap <silent> <Plug>(NavigateBlockDown)   V:<C-u>call <SID>navigate_block_down("o")<CR>
 
-nnoremap <silent> <Plug>(NavigateBlockUp)     :<C-U>call <SID>navigate_block_up("n")<CR>
+nnoremap <silent> <Plug>(NavigateBlockUp)     :<C-u>call <SID>navigate_block_up("n")<CR>
 vnoremap <silent> <Plug>(NavigateBlockUp)          :call <SID>navigate_block_up("v")<CR>
-onoremap <silent> <Plug>(NavigateBlockUp)    V:<C-U>call <SID>navigate_block_up("o")<CR>
+onoremap <silent> <Plug>(NavigateBlockUp)    V:<C-u>call <SID>navigate_block_up("o")<CR>

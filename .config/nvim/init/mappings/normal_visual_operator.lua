@@ -127,3 +127,14 @@ ks("n", "<C-g><C-b>", print_options.print_border)
 ks("n", "<C-g><C-f>", print_options.print_formatting)
 ks("n", "<C-g><C-t>", print_options.print_indenting)
 ks("n", "<C-g><C-d>", print_options.print_folding)
+
+-- Map to <Plug>
+-- ============================================================================
+ks({ "n", "x", "o" }, "[a", "<Plug>(IndentWiseBlockScopeBoundaryBegin)", { remap = true })
+ks({ "n", "x", "o" }, "]a", "<Plug>(IndentWiseBlockScopeBoundaryEnd)", { remap = true })
+
+ks({ "n", "x", "o" }, "<A-h>", "<Plug>(IndentWisePreviousLesserIndent)", { remap = true })
+ks({ "n", "x", "o" }, "<A-l>", "<Plug>(IndentWiseNextGreaterIndent)", { remap = true })
+
+ks({ "n", "x", "o" }, "<A-j>", "<Plug>(NavigateBlockDown)", { remap = true })
+ks({ "n", "x", "o" }, "<A-k>", "<Plug>(NavigateBlockUp)", { remap = true })
