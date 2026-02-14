@@ -26,7 +26,7 @@ source_vim("init/user_commands.lua")
 
 -- Mappings
 source_lua("init/mappings/normal_visual_operator.lua")
-source_vim("init/mappings/insert_command_line.vim")
+source_lua("init/mappings/insert_command_line.lua")
 source_vim("init/mappings/terminal.vim")
 
 -- Options
