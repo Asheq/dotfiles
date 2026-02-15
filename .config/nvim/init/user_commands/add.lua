@@ -1,4 +1,5 @@
 local options = require("print_stuff.options")
+local system_calls = require("system_calls")
 
 -- Usage: :PrintOptions option1 [option2] [option3] ... [-def]
 vim.api.nvim_create_user_command("PrintOptions", function(opts)
@@ -23,5 +24,12 @@ end, {
 	complete = "option",
 })
 
--- TODO: Add a command for :Dictionary {keyword}
--- TODO: Add a command for :BrowserSearch {keyword}
+-- Usage: :Dictionary {keyword}
+vim.api.nvim_create_user_command("Dictionary", function(opts)
+	system_calls.open_dictionary(opts.args)
+end, { nargs = 1 })
+
+-- Usage: :BrowserSearch {keyword}
+vim.api.nvim_create_user_command("BrowserSearch", function(opts)
+	system_calls.browser_search(opts.args)
+end, { nargs = 1 })

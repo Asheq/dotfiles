@@ -1,8 +1,6 @@
 -- Some plugins are configured via global variables set before the plugin is
--- loaded.
---
--- This method pollutes the global namespace, so it is not preferred. However,
--- some plugins only support configuration this way.
+-- loaded. This pollutes the global namespace, but some plugins only support
+-- configuration this way.
 -- ============================================================================
 
 -- markdown

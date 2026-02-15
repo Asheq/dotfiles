@@ -60,7 +60,8 @@ ks("n", "<leader>r", ":redi @r | sil  | redi END<S-Left><S-Left><S-Left><Left>")
 ks("n", "<leader>t", ":tab<C-z><C-p>")
 
 -- Mnemonic: yp = yank path
-ks("n", "yp", ":ec \"p = full path\\nh = head\\nt = tail\\n\"<CR>:let @* = expand('%:')<Left><Left>")
+ks("n", "yp",
+	":ec \"p = full path\\np:. = path from CWD\\nh = head\\nt = tail\\n\"<CR>:let @* = expand('%:')<Left><Left>")
 
 -- Map to Full Ex Commands
 -- ============================================================================

@@ -1,13 +1,5 @@
--- Neovim has several built-in plugins located in $VIMRUNTIME/plugin/ that are
--- automatically loaded on startup.
---
--- To prevent multiple loads, each plugin has a guard clause at the top of its
--- main script that checks the value of the variable g:loaded_xxx, where xxx is
--- the name of the plugin. If the value is 1, the rest of the script does not
--- execute.
---
--- Thus, setting the variable to 1 here prevents the plugin code from executing
--- even once.
+-- Built-in plugins in $VIMRUNTIME/plugin/ auto-load on startup. Setting
+-- g:loaded_xxx = 1 before that happens prevents a plugin from loading.
 -- ============================================================================
 
 -- Do not load netrw

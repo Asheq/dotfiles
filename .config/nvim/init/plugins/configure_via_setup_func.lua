@@ -1,4 +1,4 @@
--- Some plugins are configured via their setup() function called after the
+-- Some plugins are configured by calling their setup() function after the
 -- plugin is loaded.
 -- ============================================================================
 
