@@ -131,6 +131,13 @@ function M.print_general()
 				"commentstring",
 			},
 		},
+		{
+			title = "Other",
+			options = {
+				"matchpairs",
+				"omnifunc",
+			},
+		},
 	})
 end
 
@@ -240,6 +247,35 @@ function M.print_folding()
 				"foldignore",
 				"foldminlines",
 				"foldnestmax",
+			},
+		},
+	})
+end
+
+function M.print_search()
+	print_option_groups({
+		{
+			title = "File finding & gf navigation",
+			options = {
+				"path",
+				"suffixesadd",
+				"suffixes",
+				"isfname",
+			},
+		},
+		{
+			title = "Include & define search",
+			options = {
+				"include",
+				"includeexpr",
+				"define",
+			},
+		},
+		{
+			title = "Keyword",
+			options = {
+				"iskeyword",
+				"keywordprg",
 			},
 		},
 	})
