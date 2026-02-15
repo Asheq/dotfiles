@@ -22,12 +22,12 @@ source_lua("init/plugins/configure_via_setup_func.lua")
 source_lua("init/plugins/configure_coc.lua")
 
 -- User Commands
-source_vim("init/user_commands/add.lua")
+source_lua("init/user_commands/add.lua")
 
 -- Mappings
 source_lua("init/mappings/add_nxo.lua")
 source_lua("init/mappings/add_ci.lua")
-source_vim("init/mappings/add_t.lua")
+source_lua("init/mappings/add_t.lua")
 
 -- Options
 source_lua("init/options/set_basic.lua")
