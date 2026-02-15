@@ -30,7 +30,7 @@ source_lua("init/mappings/insert_command_line.lua")
 source_vim("init/mappings/terminal.lua")
 
 -- Options
-source_vim("init/options/basic.vim")
+source_lua("init/options/basic.lua")
 source_vim("init/options/listchars-fillchars.vim")
 source_vim("init/options/wrap.vim")
 

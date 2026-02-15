@@ -92,7 +92,7 @@ local function print_option_groups(groups, conf, printer)
 
 	for _, group in ipairs(groups) do
 		if group.title and group.title ~= "" then
-			local extra_space = math.ceil((vim.o.columns - #group.title) / 2)
+			local extra_space = math.ceil((vim.opt.columns:get() - #group.title) / 2)
 			printer:append_line({ { group.title .. string.rep(" ", extra_space), "Underlined" } }, 0)
 		end
 
