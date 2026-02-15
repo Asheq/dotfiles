@@ -146,6 +146,7 @@ function M.print_display()
 		{
 			title = "Window chrome",
 			options = {
+				"showtabline",
 				"tabline",
 				"laststatus",
 				"statusline",
@@ -167,6 +168,7 @@ function M.print_display()
 			title = "Cursor indicators",
 			options = {
 				"cursorline",
+				"cursorlineopt",
 				"cursorcolumn",
 				"colorcolumn",
 			},
@@ -196,8 +198,10 @@ function M.print_formatting()
 			title = "For internal formatting",
 			options = {
 				"textwidth",
+				"wrapmargin",
 				"formatoptions",
 				"formatlistpat",
+				"joinspaces",
 			},
 		},
 	})
@@ -246,11 +250,16 @@ end
 function M.print_folding()
 	print_option_groups({
 		{
-			title = "Basic",
+			title = "State",
 			options = {
-				"foldlevelstart",
 				"foldenable",
 				"foldlevel",
+				"foldlevelstart",
+			},
+		},
+		{
+			title = "Fold method",
+			options = {
 				"foldmethod",
 				"foldexpr",
 				"foldmarker",
