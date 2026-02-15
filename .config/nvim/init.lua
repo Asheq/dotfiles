@@ -31,7 +31,7 @@ source_vim("init/mappings/terminal.lua")
 
 -- Options
 source_lua("init/options/basic.lua")
-source_vim("init/options/listchars-fillchars.vim")
+source_lua("init/options/listchars-fillchars.lua")
 source_vim("init/options/wrap.vim")
 
 -- Filetypes
