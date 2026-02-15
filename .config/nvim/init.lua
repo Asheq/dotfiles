@@ -11,7 +11,7 @@ local function source_lua(rel_path)
 end
 
 -- First
-source_lua("init/first.lua")
+source_lua("init/mappings/set_mapleader.lua")
 
 -- Plugins
 source_lua("init/plugins/configure_via_global_vars.lua")
@@ -22,21 +22,23 @@ source_lua("init/plugins/configure_via_setup_func.lua")
 source_lua("init/plugins/configure_coc.lua")
 
 -- User Commands
-source_vim("init/user_commands.lua")
+source_vim("init/user_commands/add.lua")
 
 -- Mappings
-source_lua("init/mappings/normal_visual_operator.lua")
-source_lua("init/mappings/insert_command_line.lua")
-source_vim("init/mappings/terminal.lua")
+source_lua("init/mappings/add_nxo.lua")
+source_lua("init/mappings/add_ci.lua")
+source_vim("init/mappings/add_t.lua")
 
 -- Options
-source_lua("init/options/basic.lua")
-source_lua("init/options/listchars-fillchars.lua")
-source_lua("init/options/wrap.lua")
+source_lua("init/options/set_basic.lua")
+source_lua("init/options/set_listchars_fillchars.lua")
+source_lua("init/options/set_wrap.lua")
 
--- Filetypes
-source_lua("init/filetypes/add-detection.lua")
-source_lua("init/filetypes/start-treesitter.lua")
+-- Filetype Detection
+source_lua("init/ft_detection/add.lua")
 
--- Final
-source_lua("init/final.lua")
+-- Autocmds
+source_lua("init/autocmds/start_treesitter_on_ft.lua")
+source_lua("init/autocmds/highlight_text_on_yank.lua")
+source_lua("init/autocmds/override_highlights_on_colorscheme.lua")
+source_lua("init/autocmds/show_terminal_prompt_signs.lua")
