@@ -8,9 +8,10 @@ vim.opt.listchars = "tab:│ ,lead:࿁,nbsp:▢,trail:࿁,extends:➤,precedes:�
 -- different for different buffers and can change on the fly.
 local function set_listchars()
 	---@diagnostic disable-next-line: undefined-field
-	local lcs = vim.opt.listchars:get()
-	lcs.leadmultispace = "┊" .. string.rep(" ", vim.opt.tabstop:get() - 1)
-	vim.opt_local.listchars = lcs
+	local listchars = vim.opt.listchars:get()
+	local tabstop = vim.opt.tabstop:get()
+	listchars.leadmultispace = "┊" .. string.rep(" ", tabstop - 1)
+	vim.opt_local.listchars = listchars
 end
 
 local group = vim.api.nvim_create_augroup("set_listchars", { clear = true })
