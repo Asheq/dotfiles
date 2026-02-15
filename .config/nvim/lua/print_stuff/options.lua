@@ -141,10 +141,10 @@ function M.print_general()
 	})
 end
 
-function M.print_border()
+function M.print_display()
 	print_option_groups({
 		{
-			title = "Window dressing",
+			title = "Window chrome",
 			options = {
 				"tabline",
 				"laststatus",
@@ -152,13 +152,32 @@ function M.print_border()
 				"winbar",
 				"statuscolumn",
 				"signcolumn",
+				"fillchars",
 			},
 		},
 		{
-			title = "Displaying text",
+			title = "Line numbers",
+			options = {
+				"number",
+				"relativenumber",
+				"numberwidth",
+			},
+		},
+		{
+			title = "Cursor indicators",
+			options = {
+				"cursorline",
+				"cursorcolumn",
+				"colorcolumn",
+			},
+		},
+		{
+			title = "Text rendering",
 			options = {
 				"list",
-				"relativenumber",
+				"listchars",
+				"conceallevel",
+				"concealcursor",
 			},
 		},
 	})
@@ -258,6 +277,7 @@ function M.print_search()
 			title = "File finding & gf navigation",
 			options = {
 				"path",
+				"cdpath",
 				"suffixesadd",
 				"suffixes",
 				"isfname",
@@ -272,10 +292,36 @@ function M.print_search()
 			},
 		},
 		{
+			title = "Grep",
+			options = {
+				"grepprg",
+				"grepformat",
+			},
+		},
+		{
 			title = "Keyword",
 			options = {
 				"iskeyword",
+				"isident",
 				"keywordprg",
+			},
+		},
+		{
+			title = "Case sensitivity",
+			options = {
+				"ignorecase",
+				"smartcase",
+			},
+		},
+		{
+			title = "Tags",
+			options = {
+				"tags",
+				"tagfunc",
+				"tagcase",
+				"tagstack",
+				"taglength",
+				"tagrelative",
 			},
 		},
 	})
