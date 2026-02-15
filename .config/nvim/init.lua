@@ -39,5 +39,4 @@ source_lua("init/filetypes/add-detection.lua")
 source_lua("init/filetypes/start-treesitter.lua")
 
 -- Final
-source_vim("init/final.vim")
 source_lua("init/final.lua")

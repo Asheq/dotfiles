@@ -103,18 +103,18 @@ end)
 -- ----------------------------------------------------------------------------
 
 -- Change speech rate
-vim.keymap.set("n", "<leader><Left>", function()
+ks("n", "<leader><Left>", function()
 	system_calls.change_speech_rate(-50)
 end)
-vim.keymap.set("n", "<leader><Right>", function()
+ks("n", "<leader><Right>", function()
 	system_calls.change_speech_rate(50)
 end)
 
 -- Mnemonic: k = speaK
-vim.keymap.set("n", "<leader>k", function()
+ks("n", "<leader>k", function()
 	system_calls.speak(vim.fn.getline("."))
 end)
-vim.keymap.set("x", "<leader>k", function()
+ks("x", "<leader>k", function()
 	system_calls.speak(util.get_selected_text())
 	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
 end)

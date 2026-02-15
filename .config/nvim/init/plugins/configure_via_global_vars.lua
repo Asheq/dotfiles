@@ -26,8 +26,3 @@ vim.cmd([[
 ]])
 
 vim.g.mkdp_browserfunc = "OpenMarkdownPreview"
-
--- neovide
-vim.g.neovide_theme = "auto"
-vim.g.neovide_input_macos_option_key_is_meta = "both"
-vim.g.neovide_cursor_animation_length = 0
