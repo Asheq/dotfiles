@@ -1,2 +1,1 @@
-require("respondToThemeChange")
 require("setupWindowShortcuts")
