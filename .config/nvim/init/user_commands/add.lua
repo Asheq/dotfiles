@@ -1,4 +1,4 @@
-local options = require("print_stuff.options")
+local options = require("print.options")
 local system_calls = require("system_calls")
 
 -- Usage: :PrintOptions option1 [option2] [option3] ... [-def]
