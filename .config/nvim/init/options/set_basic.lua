@@ -31,7 +31,7 @@ vim.opt.foldtext = ""
 
 -- Buffer [+ Global]
 -- ----------------------------------------------------------------------------
-vim.opt.spelloptions = "camel"
+vim.opt.spelloptions = "camel,noplainbuffer"
 vim.opt.undofile = true
 vim.opt.dictionary:append("/usr/share/dict/words")
 vim.opt.grepprg = "rg --vimgrep"
