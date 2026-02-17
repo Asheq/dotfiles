@@ -1,5 +1,6 @@
-" <M-Esc> does not work, but everything else does
-inoremap <M-Esc> M-Esc<CR>
+" NOTE: <M-Esc> is reserved for "Speak Selection" at the OS level
+" inoremap <M-Esc> M-Esc<CR>
+
 inoremap <M-`> M-`<CR>
 inoremap <M-1> M-1<CR>
 inoremap <M-2> M-2<CR>
@@ -50,3 +51,8 @@ inoremap <M-m> M-m<CR>
 inoremap <M-,> M-,<CR>
 inoremap <M-.> M-.<CR>
 inoremap <M-/> M-/<CR>
+inoremap <M-Space> M-Space<CR>
+inoremap <M-Up> M-Up<CR>
+inoremap <M-Down> M-Down<CR>
+inoremap <M-Left> M-Left<CR>
+inoremap <M-Right> M-Right<CR>

@@ -2,7 +2,7 @@
     "title": "Mods for Terminals/Editors",
     "rules": [
         {
-            "description": "Swap Cmd<->Ctrl and Cmd+Shft<->Ctrl+Shft (except when paired with numbers, arrows, <Tab>, `, <Space>, <Caps Lock>, function keys)",
+            "description": "Swap Cmd<->Ctrl and Cmd+Shft<->Ctrl+Shft (except when paired with function keys, `, numbers, Tab, Caps Lock, Space, arrows)",
             "manipulators": [
                 {
                     "conditions": [
