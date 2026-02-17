@@ -27,7 +27,8 @@ local function override_highlights()
 	end
 end
 
-vim.api.nvim_create_autocmd("ColorScheme", {
+vim.api.nvim_create_autocmd({ "ColorScheme", "OptionSet" }, {
+	pattern = { "*", "background" },
 	callback = override_highlights,
 })
 
