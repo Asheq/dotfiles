@@ -8,9 +8,9 @@
 # This file
 !/.gitignore
 
-# Readme
+# Documentation
 !/README.md
-!/README.bash-startup.md
+!/BASH-STARTUP.md
 
 # Standard config files/directories at root-level
 !/.bash_profile
