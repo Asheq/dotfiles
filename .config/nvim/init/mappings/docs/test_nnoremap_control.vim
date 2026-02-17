@@ -20,7 +20,7 @@ nnoremap <nowait> <C-=> :echo "C-="<CR>
 nnoremap <nowait> <C-BS> :echo "C-BS"<CR>
 
 " NOTE: <C-Tab> is reserved for cycling through tabs at the terminal level
-"nnoremap <nowait> <C-Tab> :echo "C-Tab"<CR>
+" nnoremap <nowait> <C-Tab> :echo "C-Tab"<CR>
 
 nnoremap <nowait> <C-q> :echo "C-q"<CR>
 nnoremap <nowait> <C-w> :echo "C-w"<CR>
@@ -32,7 +32,7 @@ nnoremap <nowait> <C-u> :echo "C-u"<CR>
 
 " NOTE: <C-i> is the same as <Tab> in terminals (or just "dead" for some
 " reason)
-"nnoremap <nowait> <C-i> :echo "C-i"<CR>
+" nnoremap <nowait> <C-i> :echo "C-i"<CR>
 
 nnoremap <nowait> <C-o> :echo "C-o"<CR>
 nnoremap <nowait> <C-p> :echo "C-p"<CR>
