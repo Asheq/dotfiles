@@ -58,9 +58,9 @@
             - `<C-b>`
             - `<C-f>`
         - Numeric
-            - ???
+            - ??? TODO-L
         - Other
-            - ???
+            - ??? TODO-L
     - Meta
         - `<M-[all]>`
 
@@ -76,7 +76,7 @@
     - `C`
         - `S`
 - Unused
-    - ???
+    - ??? TODO-L
 
 # Visual-mode (line)
 
@@ -90,7 +90,7 @@
     - `C`
         - `S`
 - Unused
-    - ???
+    - ??? TODO-L
 
 # Visual-mode (block)
 
@@ -101,4 +101,4 @@
     - `c`
         - `s`
 - Unused
-    - ???
+    - ??? TODO-L
