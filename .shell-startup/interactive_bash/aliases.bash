@@ -20,7 +20,7 @@ alias v='nvim -V1'
 
 # Bookmarks
 # ==============================================================================
-if [[ "$(hostname)" == "AIMRAN0ML" ]]; then
+if [[ "$(hostname)" == "PTC"* ]]; then
 	alias drive='cd ~/Documents/'
 	alias notes='cd ~/Documents/Notes/'
 	alias tasks='cd ~/Documents/Tasks/'
