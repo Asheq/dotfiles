@@ -18,11 +18,11 @@ local function override_highlights()
 	hi(0, "@markup.heading.3.markdown", { link = "CocListBlackBlue", force = true })
 	hi(0, "@markup.heading.4.markdown", { link = "CocListBlackWhite", force = true })
 
-	if vim.opt.background == "light" then
+	if vim.o.background == "light" then
 		hi(0, "Visual", { bg = "#bda9b0", force = true })
 		hi(0, "Substitute", { fg = "#ffffff", bg = "#b16286", force = true })
 		hi(0, "CursorLine", { bg = "#c6d3cf", force = true })
-	elseif vim.opt.background == "dark" then
+	else
 		hi(0, "Visual", { bg = "#45353b", force = true })
 		hi(0, "Substitute", { fg = "#ffffff", bg = "#b16286", force = true })
 		hi(0, "CursorLine", { bg = "#32413c", force = true })
@@ -30,7 +30,7 @@ local function override_highlights()
 end
 
 vim.api.nvim_create_autocmd("OptionSet", {
-	pattern = { "background" },
+	pattern = "background",
 	callback = override_highlights,
 })
 

@@ -3,8 +3,7 @@ vim.g.colors_name = 'demo'
 
 local hi = vim.api.nvim_set_hl
 
--- Define colors based on background
-if vim.opt.background == 'light' then
+if vim.o.background == 'light' then
 	hi(0, 'Normal', { fg = '#000000', bg = '#ffffff' })
 	hi(0, 'Comment', { fg = 'purple' })
 	hi(0, 'Constant', { fg = '#cc0000' })

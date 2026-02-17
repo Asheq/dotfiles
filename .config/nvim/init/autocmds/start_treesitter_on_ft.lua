@@ -16,5 +16,5 @@ vim.api.nvim_create_autocmd("FileType", {
 		"vim",
 		"vimdoc",
 	},
-	callback = vim.treesitter.start,
+	callback = function() vim.treesitter.start() end,
 })
