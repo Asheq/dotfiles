@@ -20,13 +20,18 @@ vim.api.nvim_buf_create_user_command(0, 'DemoCmdLua', function()
 end, {})
 
 -- Undo ftplugin
-local undo_commands = 'lua ' .. table.concat({
-	'vim.b.demo_var_lua = nil',
-	'_G.DemoFuncLua = nil',
-	'pcall(vim.cmd, "setl scrolloff<")',
-	'pcall(vim.keymap.del, "n", "<leader>bl", { buffer = true })',
-	'pcall(vim.api.nvim_buf_del_user_command, 0, "DemoCmdLua")',
-}, '; ')
+vim.b.undo_ftplugin_func = function()
+	vim.b.demo_var_lua = nil
+	_G.DemoFuncLua = nil
+	vim.opt_local.scrolloff = nil
+	vim.keymap.del("n", "<leader>bl", { buffer = true })
+	vim.api.nvim_buf_del_user_command(0, "DemoCmdLua")
+
+	-- Clean up self
+	vim.b.undo_ftplugin_func = nil
+end
+
+local undo_commands = 'lua vim.b.undo_ftplugin_func()'
 
 if vim.b.undo_ftplugin then
 	vim.b.undo_ftplugin = vim.b.undo_ftplugin .. ' | ' .. undo_commands
