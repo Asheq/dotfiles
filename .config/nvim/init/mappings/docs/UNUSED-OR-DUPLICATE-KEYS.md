@@ -22,21 +22,17 @@
         - `S`
 - Unused
     - Control
-        - Alphabetic
-            - `<C-k>`
-        - Numeric
-            - `<C-[numeric]>`
-        - Other
-            - `<C-->`
-            - `<C-=>`
-            - `<C-BS>`
-            - `<C-[>`
-            - `<C-;>`
-            - `<C-'>`
-            - `<C-CR>`
-            - `<C-,>`
-            - `<C-.>`
-            - `<C-/>`
+        - `<C-Esc>`
+        - `<C-->`
+        - `<C-=>`
+        - `<C-BS>`
+        - `<C-k>`
+        - `<C-;>`
+        - `<C-'>`
+        - `<C-CR>`
+        - `<C-,>`
+        - `<C-.>`
+        - `<C-/>`
     - Meta
         - `<M-[all]>`
 
@@ -54,13 +50,10 @@
         - `<C-q>`
 - Unused
     - Control
-        - Alphabetic
-            - `<C-b>`
-            - `<C-f>`
-        - Numeric
-            - ??? TODO-L
-        - Other
-            - ??? TODO-L
+		- ??? TODO-L
+		- `<C-b>`
+		- `<C-f>`
+		- ??? TODO-L
     - Meta
         - `<M-[all]>`
 
