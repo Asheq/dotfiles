@@ -1,5 +1,3 @@
-" TODO: Convert to lua
-
 if exists("b:did_ftplugin")
 	finish
 endif
@@ -7,26 +5,26 @@ endif
 let b:did_ftplugin = 1
 
 " Buffer-local variable
-let b:demo_var = "This is b:demo_var"
+let b:demo_var_vim = "This is b:demo_var_vim"
 
-" Buffer-local ex command
-command! -buffer DemoCmd echo "Hello from :DemoCmd"
-
-" Global function
-function! DemoFunc()
-	echo "Hello from DemoFunc()"
+" Global Vimscript function
+function! DemoFuncVim()
+	echo "Hello from DemoFuncVim()"
 endfunction
 
-" Buffer-local mappings
-nnoremap <buffer> <leader>b :lua require('demo').hello()<CR>
-
-" Buffer-local option
+" Window-local option
 setlocal relativenumber
 
+" Buffer-local mappings
+nnoremap <buffer> <leader>bv :call demo#hello()<CR>
+
+" Buffer-local user command
+command! -buffer DemoCmdVim echo "Hello from :DemoCmdVim"
+
 let b:undo_ftplugin = join([
-      \ 'unlet b:demo_var',
-      \ 'delcommand DemoCmd',
-      \ 'delfunction DemoFunc',
-      \ 'exe "nunmap <buffer> <leader>b"',
+      \ 'unlet b:demo_var_vim',
+      \ 'delfunction DemoFuncVim',
       \ 'setl relativenumber<',
+      \ 'exe "nunmap <buffer> <leader>bv"',
+      \ 'delcommand DemoCmdVim',
       \ ], ' | ')
