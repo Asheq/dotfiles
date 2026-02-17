@@ -75,6 +75,7 @@ end
 -- Tabline
 -- ============================================================================
 ---@return string
+-- TODO-L: Simplify
 function M.get_tabline()
 	local s = ""
 	for i = 0, vim.fn.tabpagenr("$") - 1 do
