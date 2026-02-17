@@ -1,4 +1,4 @@
-" TODO: Convert to Lua
+" TODO-L: Convert to Lua
 
 function! s:navigate_block_down(vim_mode) range
     if a:vim_mode == "v"

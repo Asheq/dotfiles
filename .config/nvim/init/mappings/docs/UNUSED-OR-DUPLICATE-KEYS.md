@@ -50,10 +50,9 @@
         - `<C-q>`
 - Unused
     - Control
-        - ??? TODO-L
+        - ??? TODO
         - `<C-b>`
         - `<C-f>`
-        - ??? TODO-L
     - Meta
         - `<M-[all]>`
 
