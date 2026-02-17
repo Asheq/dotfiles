@@ -32,7 +32,7 @@ function M.get_statusline()
 	return ""
 		.. "%{v:lua.require('lines').get_statusline_file_name()}  "
 		.. "%h%w%m%r%=[%P %{noscrollbar#statusline(10,'■','◫',['◧'],['◨'])} %L]"
-		.. "%([%{v:lua.require('lines').get_statusline_win_cwd()}]%)"
+		.. "%([%{v:lua.require('lines').get_statusline_window_cwd()}]%)"
 end
 
 -- NOTE: Unlike %f, this function always returns the file name relative to the
