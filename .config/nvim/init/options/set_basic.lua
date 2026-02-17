@@ -1,6 +1,6 @@
 -- Global
 -- ----------------------------------------------------------------------------
-vim.opt.tabline = "%!vimrc#get_tabline()"
+vim.opt.tabline = "%{%v:lua.require('lines').get_tabline()%}"
 vim.opt.ruler = false
 vim.opt.jumpoptions = "stack"
 vim.opt.timeout = false
@@ -19,7 +19,7 @@ vim.opt.cmdheight = 2
 
 -- Window [+ Global]
 -- ----------------------------------------------------------------------------
-vim.opt.statusline = "%!vimrc#get_statusline()"
+vim.opt.statusline = "%{%v:lua.require('lines').get_statusline()%}"
 vim.opt.cursorline = true
 vim.opt.number = true
 vim.opt.conceallevel = 2
