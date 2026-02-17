@@ -1,3 +1,4 @@
+local util = require("util")
 local options = require("print.options")
 local system_calls = require("system_calls")
 
@@ -16,9 +17,12 @@ vim.api.nvim_create_user_command("PrintOptions", function(opts)
 		vim.notify("At least one option name required", vim.log.levels.ERROR)
 		return
 	end
+
+	local printer = util.new_echo_buffer({ history = true })
 	for _, optname in ipairs(option_names) do
-		options.print_option(optname, conf)
+		options.print_option(optname, conf, printer)
 	end
+	printer:flush()
 end, {
 	nargs = "+",
 	complete = "option",
