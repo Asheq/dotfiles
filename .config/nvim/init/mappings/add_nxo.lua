@@ -1,6 +1,6 @@
 local util = require("util")
 local system_calls = require("system_calls")
-local print_options = require("print_stuff.options")
+local print_options = require("print.options")
 
 local ks = vim.keymap.set
 
