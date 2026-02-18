@@ -1,5 +1,5 @@
 " NOTE: <M-Esc> is reserved for "Speak Selection" at the OS level
-" inoremap <M-Esc> M-Esc<CR>
+inoremap <M-Esc> M-Esc<CR>
 
 inoremap <M-`> M-`<CR>
 inoremap <M-1> M-1<CR>
