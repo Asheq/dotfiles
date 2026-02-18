@@ -1,6 +1,6 @@
 # Keys
 
-A list of all keys, not including modifiers, that are available on most keyboards:
+A list of all keys (not including modifiers) available on most keyboards:
 
 - `<Esc>`
 - `` ` ``
