@@ -10,7 +10,6 @@ vim.g.markdown_folding = 1
 vim.g.indentwise_suppress_keymaps = 1
 
 -- sandwich
--- TODO-L: Add sandwich text objects without clobbering default as/is
 vim.g.textobj_sandwich_no_default_key_mappings = 1
 
 -- copilot
