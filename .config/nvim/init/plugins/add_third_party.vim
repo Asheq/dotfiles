@@ -32,7 +32,7 @@ Plug 'nvim-treesitter/nvim-treesitter-context'
 " documentation, code actions (refactoring, fixes), formatting, etc. via a
 " standardized protocol (LSP).
 if executable('node')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
 " AI/Assistants

@@ -22,9 +22,9 @@ nnoremap <buffer> <leader>bv :call demo#hello()<CR>
 command! -buffer DemoCmdVim echo "Hello from :DemoCmdVim"
 
 let b:undo_ftplugin = join([
-      \ 'unlet b:demo_var_vim',
-      \ 'delfunction DemoFuncVim',
-      \ 'setl relativenumber<',
-      \ 'exe "nunmap <buffer> <leader>bv"',
-      \ 'delcommand DemoCmdVim',
-      \ ], ' | ')
+			\ 'unlet b:demo_var_vim',
+			\ 'delfunction DemoFuncVim',
+			\ 'setl relativenumber<',
+			\ 'exe "nunmap <buffer> <leader>bv"',
+			\ 'delcommand DemoCmdVim',
+			\ ], ' | ')
