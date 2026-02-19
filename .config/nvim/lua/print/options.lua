@@ -214,9 +214,9 @@ function M.print_whitespace()
 			options = {
 				"expandtab",
 				"tabstop",
+				"softtabstop",
 				"shiftwidth",
 				"smarttab",
-				"softtabstop",
 				"copyindent",
 				"preserveindent",
 			},
