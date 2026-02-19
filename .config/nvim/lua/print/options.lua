@@ -207,22 +207,22 @@ function M.print_formatting()
 	})
 end
 
-function M.print_indenting()
+function M.print_whitespace()
 	print_option_groups({
 		{
-			title = "Tabs",
+			title = "Auto-indenting, shifting, editing whitespace",
 			options = {
-				"smarttab",
 				"expandtab",
 				"tabstop",
 				"shiftwidth",
+				"smarttab",
 				"softtabstop",
 				"copyindent",
 				"preserveindent",
 			},
 		},
 		{
-			title = "Indenting methods (ascending priority)",
+			title = "How much to auto-indent? (ascending priority)",
 			options = {
 				"autoindent",
 				"smartindent",
@@ -242,6 +242,12 @@ function M.print_indenting()
 			title = "For indentexpr",
 			options = {
 				"indentkeys",
+			},
+		},
+		{
+			title = "Other",
+			options = {
+				"equalprg",
 			},
 		},
 	})

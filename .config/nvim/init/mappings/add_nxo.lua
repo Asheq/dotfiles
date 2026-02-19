@@ -126,7 +126,7 @@ end)
 ks("n", "<C-g><C-g>", print_options.print_general)
 ks("n", "<C-g><C-d>", print_options.print_display)
 ks("n", "<C-g><C-f>", print_options.print_formatting)
-ks("n", "<C-g><C-t>", print_options.print_indenting)
+ks("n", "<C-g><C-w>", print_options.print_whitespace)
 ks("n", "<C-g><C-z>", print_options.print_folding)
 ks("n", "<C-g><C-s>", print_options.print_search)
 
