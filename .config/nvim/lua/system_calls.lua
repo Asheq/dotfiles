@@ -14,14 +14,14 @@ function M.open_curr_file_in_vscode()
 	M.open_file_in_vscode(file, line, col)
 end
 
----@param keyword string | nil
+---@param keyword string?
 function M.open_dictionary(keyword)
 	if keyword then
 		vim.system({ "open", "dict://" .. vim.uri_encode(keyword) }, { detach = true })
 	end
 end
 
----@param keyword string | nil
+---@param keyword string?
 function M.browser_search(keyword)
 	if keyword then
 		M.open_url_in_firefox("https://www.google.com/search?q=" .. vim.uri_encode(keyword))

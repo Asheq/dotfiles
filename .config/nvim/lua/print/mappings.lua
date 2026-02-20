@@ -50,7 +50,7 @@ end
 -- ============================================================================
 
 ---@param map table
----@param printer EchoBuffer
+---@param printer Printer
 ---@param overrides_global? table  -- the global mapping it overrides, if any
 local function print_mapping(map, printer, overrides_global)
 	local scope_label = map.buffer ~= 0 and "buf-local" or "global"
