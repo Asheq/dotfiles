@@ -6,11 +6,5 @@ endif
 
 let current_compiler = "democ"
 
-" Copied from $VIMRUNTIME/compiler/go.vim
-CompilerSet makeprg=go\ build
-CompilerSet errorformat=
-    \%-G#\ %.%#,
-    \%A%f:%l:%c:\ %m,
-    \%A%f:%l:\ %m,
-    \%C%*\\s%m,
-    \%-G%.%#
+CompilerSet makeprg=rg\ --vimgrep\ dolor
+CompilerSet errorformat=%f:%l:%c:%m
