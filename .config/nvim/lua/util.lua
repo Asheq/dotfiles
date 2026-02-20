@@ -11,46 +11,6 @@ function M.get_selected_text()
 	return table.concat(lines, "\n")
 end
 
----@class Printer
----@field private chunks any[]
----@field private history boolean
----@field private opts vim.api.keyset.echo_opts
----@field append_line fun(self: Printer, line_chunks: any[], indent?: integer)
----@field flush fun(self: Printer)
-
----@param conf? { history?: boolean, opts?: vim.api.keyset.echo_opts }
----@return Printer
-function M.new_printer(conf)
-	local buf = {
-		chunks = {},
-		history = conf and conf.history or false,
-		opts = conf and conf.opts or {},
-	}
-
-	---Append a single line beginning with an optional indent, and terminating with a newline
-	---@param line_chunks any[]
-	---@param indent? integer
-	function buf:append_line(line_chunks, indent)
-		local indent_str = string.rep("  ", indent and (indent * 2) or 0)
-		table.insert(self.chunks, { indent_str, "Normal" })
-		for _, chunk in ipairs(line_chunks) do
-			if chunk then
-				table.insert(self.chunks, chunk)
-			end
-		end
-		table.insert(self.chunks, { "\n", "Normal" })
-	end
-
-	function buf:flush()
-		if #self.chunks == 0 then
-			return
-		end
-		vim.api.nvim_echo(self.chunks, self.history, self.opts)
-	end
-
-	return buf
-end
-
 ---@param sid integer
 ---@return string|nil
 function M.get_filename(sid)
@@ -90,6 +50,46 @@ function M.get_filename(sid)
 	end
 
 	return tostring(sid)
+end
+
+---@class Printer
+---@field private chunks any[]
+---@field private history boolean
+---@field private opts vim.api.keyset.echo_opts
+---@field append_line fun(self: Printer, line_chunks: any[], indent?: integer)
+---@field flush fun(self: Printer)
+
+---@param conf? { history?: boolean, opts?: vim.api.keyset.echo_opts }
+---@return Printer
+function M.new_printer(conf)
+	local buf = {
+		chunks = {},
+		history = conf and conf.history or false,
+		opts = conf and conf.opts or {},
+	}
+
+	---Append a single line beginning with an optional indent, and terminating with a newline
+	---@param line_chunks any[]
+	---@param indent? integer
+	function buf:append_line(line_chunks, indent)
+		local indent_str = string.rep("  ", indent and (indent * 2) or 0)
+		table.insert(self.chunks, { indent_str, "Normal" })
+		for _, chunk in ipairs(line_chunks) do
+			if chunk then
+				table.insert(self.chunks, chunk)
+			end
+		end
+		table.insert(self.chunks, { "\n", "Normal" })
+	end
+
+	function buf:flush()
+		if #self.chunks == 0 then
+			return
+		end
+		vim.api.nvim_echo(self.chunks, self.history, self.opts)
+	end
+
+	return buf
 end
 
 return M

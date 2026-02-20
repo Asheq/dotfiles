@@ -8,7 +8,7 @@ function M.open_file_in_vscode(file, line, col)
 end
 
 function M.open_curr_file_in_vscode()
-	local file = vim.fn.expand("%")
+	local file = vim.fn.expand("%:p")
 	local line = vim.fn.line(".")
 	local col = vim.fn.col(".")
 	M.open_file_in_vscode(file, line, col)
