@@ -19,7 +19,7 @@ vim.api.nvim_create_user_command("PrintOptions", function(opts)
 		return
 	end
 
-	local printer = util.new_echo_buffer({ history = true })
+	local printer = util.new_printer({ history = true })
 	for _, optname in ipairs(option_names) do
 		options.print_option(optname, conf, printer)
 	end

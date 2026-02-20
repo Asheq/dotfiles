@@ -7,11 +7,11 @@ local M = {}
 
 ---@param optname string
 ---@param conf? { show_default_value?: boolean }
----@param printer? EchoBuffer
+---@param printer? Printer
 function M.print_option(optname, conf, printer)
 	local own_printer = false
 	if not printer then
-		printer = util.new_echo_buffer({ history = true })
+		printer = util.new_printer({ history = true })
 		own_printer = true
 	end
 
@@ -87,11 +87,11 @@ end
 
 ---@param groups { title?: string, options: string[] }[]
 ---@param conf? { show_default_value?: boolean }
----@param printer? EchoBuffer
+---@param printer? Printer
 local function print_option_groups(groups, conf, printer)
 	local own_printer = false
 	if not printer then
-		printer = util.new_echo_buffer({ history = true })
+		printer = util.new_printer({ history = true })
 		own_printer = true
 	end
 

@@ -1,3 +1,5 @@
+" TODO-L: Review and optionally convert to Lua.
+
 function! s:navigate_block_down(vim_mode) range
 	if a:vim_mode == "v"
 		normal! gv

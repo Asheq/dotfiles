@@ -106,11 +106,11 @@ end
 
 ---Print all mappings for a given mode
 ---@param mode string
----@param printer? EchoBuffer
+---@param printer? Printer
 function M.print_mode(mode, printer)
 	local own_printer = false
 	if not printer then
-		printer = util.new_echo_buffer({ history = true })
+		printer = util.new_printer({ history = true })
 		own_printer = true
 	end
 
@@ -168,7 +168,7 @@ end
 function M.print_all(modes)
 	modes = modes or { "n", "x", "o", "i", "c", "t" }
 
-	local printer = util.new_echo_buffer({ history = true })
+	local printer = util.new_printer({ history = true })
 
 	for _, mode in ipairs(modes) do
 		M.print_mode(mode, printer)

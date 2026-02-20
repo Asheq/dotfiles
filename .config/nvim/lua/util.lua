@@ -11,19 +11,19 @@ function M.get_selected_text()
 	return table.concat(lines, "\n")
 end
 
----@class EchoBuffer
+---@class Printer
 ---@field private chunks any[]
 ---@field private history boolean
 ---@field private opts vim.api.keyset.echo_opts
----@field append_line fun(self: EchoBuffer, line_chunks: any[], indent?: integer)
----@field flush fun(self: EchoBuffer)
+---@field append_line fun(self: Printer, line_chunks: any[], indent?: integer)
+---@field flush fun(self: Printer)
 
 ---@param conf? { history?: boolean, opts?: vim.api.keyset.echo_opts }
----@return EchoBuffer
-function M.new_echo_buffer(conf)
+---@return Printer
+function M.new_printer(conf)
 	local buf = {
 		chunks = {},
-		history = conf and conf.history ~= nil and conf.history or false,
+		history = conf and conf.history or false,
 		opts = conf and conf.opts or {},
 	}
 
@@ -82,7 +82,7 @@ function M.get_filename(sid)
 		end
 
 		local plug_home = vim.g.plug_home
-		if name:sub(1, #plug_home) == plug_home then
+		if plug_home and plug_home ~= "" and name:sub(1, #plug_home) == plug_home then
 			name = "$PLUGHOME" .. name:sub(#plug_home + 1)
 		end
 
