@@ -2,42 +2,41 @@ Some buffer-local options that are commonly set in filetype plugins (ftplugins) 
 
 # Commenting
 
-- commentstring
-- comments
+- `commentstring`
+- `comments`
 
 # Formatting
 
-- formatoptions
-- formatlistpat
-- formatprg
-- textwidth
+- `formatoptions`
+- `formatlistpat`
+- `formatprg`
+- `textwidth`
 
-# Indenting
+# Whitespace
 
-- indentkeys
+- `indentkeys`
 
 # Folding
 
-- foldmethod
-- foldexpr
-- foldcolumn
+- `foldmethod`
+- `foldexpr`
+- `foldcolumn`
+
+# Search
+
+- `path`
+- `suffixesadd`
+- `suffixes`
+- `isfname`
+
+- `iskeyword`
+- `keywordprg`
+
+- `include`
+- `includeexpr`
+- `define`
 
 # Other
 
-- path
-- suffixesadd
-
-- suffixes
-
-- iskeyword
-- isfname
-
-- keywordprg
-
-- omnifunc
-
-- matchpairs
-
-- define
-- include
-- includeexpr
+- `matchpairs`
+- `omnifunc`
