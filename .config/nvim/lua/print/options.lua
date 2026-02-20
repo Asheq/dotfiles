@@ -24,10 +24,9 @@ function M.print_option(optname, conf, printer)
 	local local_info = vim.api.nvim_get_option_info2(optname, { scope = "local" })
 	local local_value = vim.api.nvim_get_option_value(optname, { scope = "local" })
 
-	-- local was_set_by_script =
-	-- 	info.last_set_sid ~= 0 or
-	-- 	global_info.last_set_sid ~= 0 or
-	-- 	local_info.last_set_sid ~= 0
+	local function filename_hl(filename)
+		return vim.startswith(filename, "$VIMCONFIG") and "DiagnosticWarn" or "DiagnosticError"
+	end
 
 	printer:append_line({
 		{ " " .. optname .. " (" .. info.shortname .. ") ",               "TermCursor" },
@@ -42,30 +41,30 @@ function M.print_option(optname, conf, printer)
 
 	if info.scope == "buf" or info.scope == "win" or info.scope == "tab" then
 		local local_last_set_sid = local_info.last_set_sid
-		-- local local_was_set_by_script = local_info.last_set_sid ~= 0
 		local local_last_set_filename = util.get_filename(local_last_set_sid)
+		local local_filename_hl = local_last_set_filename and filename_hl(local_last_set_filename) or nil
 
 		local local_scope_label = "  local"
 
 		printer:append_line({
 			{ local_scope_label .. ": ", "Normal" },
 			{ tostring(local_value),     "NonText" },
-			local_last_set_filename and { " ➤ ", "DiagnosticError" },
-			local_last_set_filename and { tostring(local_last_set_filename), "DiagnosticError" },
+			local_last_set_filename and { " ➤ ", local_filename_hl },
+			local_last_set_filename and { tostring(local_last_set_filename), local_filename_hl },
 		}, 2)
 	end
 
 	local global_last_set_sid = global_info.last_set_sid
-	-- local global_was_set_by_script = global_info.last_set_sid ~= 0
 	local global_last_set_filename = util.get_filename(global_last_set_sid)
+	local global_filename_hl = global_last_set_filename and filename_hl(global_last_set_filename) or nil
 
 	local global_scope_label = " global"
 
 	printer:append_line({
 		{ global_scope_label .. ": ", "Normal" },
 		{ tostring(global_value),     "NonText" },
-		global_last_set_filename and { " ➤ ", "DiagnosticError" },
-		global_last_set_filename and { tostring(global_last_set_filename), "DiagnosticError" },
+		global_last_set_filename and { " ➤ ", global_filename_hl },
+		global_last_set_filename and { tostring(global_last_set_filename), global_filename_hl },
 	}, 2)
 
 	if (conf and conf.show_default_value) then
@@ -109,7 +108,7 @@ end
 -- Print preset groups of options
 -- ============================================================================
 
-function M.print_general()
+local function print_general_options()
 	print_option_groups({
 		{
 			title = "Filetype",
@@ -141,7 +140,7 @@ function M.print_general()
 	})
 end
 
-function M.print_display()
+local function print_display_options()
 	print_option_groups({
 		{
 			title = "Window chrome",
@@ -185,7 +184,7 @@ function M.print_display()
 	})
 end
 
-function M.print_formatting()
+local function print_formatting_options()
 	print_option_groups({
 		{
 			title = "Formatting methods for gq/gw operator (ascending priority)",
@@ -207,7 +206,7 @@ function M.print_formatting()
 	})
 end
 
-function M.print_whitespace()
+local function print_whitespace_options()
 	print_option_groups({
 		{
 			title = "Auto-indenting, shifting, editing whitespace",
@@ -253,7 +252,7 @@ function M.print_whitespace()
 	})
 end
 
-function M.print_folding()
+local function print_folding_options()
 	print_option_groups({
 		{
 			title = "State",
@@ -286,7 +285,7 @@ function M.print_folding()
 	})
 end
 
-function M.print_search()
+local function print_search_options()
 	print_option_groups({
 		{
 			title = "File finding & gf navigation",
@@ -342,7 +341,7 @@ function M.print_search()
 	})
 end
 
-function M.print_all_not_default()
+local function print_all_not_default_options()
 	local all_options = {}
 	local info_by_name = vim.api.nvim_get_all_options_info()
 
@@ -369,6 +368,32 @@ function M.print_all_not_default()
 	}, {
 		show_default_value = true,
 	})
+end
+
+function M.choose()
+	local actions = {
+		{ key = "g", label = "General",         fn = print_general_options },
+		{ key = "d", label = "Display",         fn = print_display_options },
+		{ key = "f", label = "Formatting",      fn = print_formatting_options },
+		{ key = "w", label = "Whitespace",      fn = print_whitespace_options },
+		{ key = "z", label = "Folding",         fn = print_folding_options },
+		{ key = "s", label = "Search",          fn = print_search_options },
+		{ key = "a", label = "All non-default", fn = print_all_not_default_options },
+	}
+
+	vim.ui.select(actions, {
+		prompt = "Print options: choose a group",
+		format_item = function(item)
+			return string.format("[%s] %s", item.key, item.label)
+		end,
+	}, function(choice)
+		if not choice then
+			return
+		end
+		if type(choice.fn) == "function" then
+			choice.fn()
+		end
+	end)
 end
 
 return M
