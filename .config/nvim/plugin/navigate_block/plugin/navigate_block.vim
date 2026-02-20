@@ -1,6 +1,6 @@
 " TODO-L: Review and optionally convert to Lua
 
-function! s:navigate_block_down(vim_mode) range
+function! s:navigate_block_down(vim_mode) range abort
 	if a:vim_mode == "v"
 		normal! gv
 	endif
@@ -54,7 +54,7 @@ function! s:navigate_block_down(vim_mode) range
 	endif
 endfunction
 
-function! s:navigate_block_up(vim_mode) range
+function! s:navigate_block_up(vim_mode) range abort
 	if a:vim_mode == "v"
 		normal! gv
 	endif
