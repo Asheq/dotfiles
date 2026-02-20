@@ -23,9 +23,6 @@ source_vim("init/plugins/add_third_party.vim")
 source_lua("init/plugins/configure_via_setup_func.lua")
 source_lua("init/plugins/configure_coc.lua")
 
--- User Commands
-source_lua("init/user_commands/add.lua")
-
 -- Mappings
 source_lua("init/mappings/add_nxo.lua")
 source_lua("init/mappings/add_ci.lua")
@@ -36,13 +33,16 @@ source_lua("init/options/set_basic.lua")
 source_lua("init/options/set_listchars_fillchars.lua")
 source_lua("init/options/set_wrap.lua")
 
--- Filetype Detection
-source_lua("init/ft_detection/add.lua")
-
 -- Highlighting
 source_lua("init/highlighting/highlight_yank.lua")
 source_lua("init/highlighting/start_treesitter_highlighting.lua")
 source_lua("init/highlighting/override_highlights.lua")
+
+-- User Commands
+source_lua("init/user_commands/add.lua")
+
+-- Filetype Detection
+source_lua("init/ft_detection/add.lua")
 
 -- Other
 source_lua("init/other/show_prompt_signs_in_terminal.lua")
