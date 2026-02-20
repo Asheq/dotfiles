@@ -25,7 +25,13 @@ function M.print_option(optname, conf, printer)
 	local local_value = vim.api.nvim_get_option_value(optname, { scope = "local" })
 
 	local function filename_hl(filename)
-		return vim.startswith(filename, "$VIMCONFIG") and "DiagnosticWarn" or "DiagnosticError"
+		if vim.startswith(filename, "$VIMCONFIG") then
+			return "DiagnosticError"
+		elseif vim.startswith(filename, "$VIMRUNTIME") then
+			return "DiagnosticError"
+		else
+			return "DiagnosticWarn"
+		end
 	end
 
 	printer:append_line({
@@ -371,29 +377,56 @@ local function print_all_not_default_options()
 end
 
 function M.choose()
-	local actions = {
-		{ key = "g", label = "General",         fn = print_general_options },
-		{ key = "d", label = "Display",         fn = print_display_options },
-		{ key = "f", label = "Formatting",      fn = print_formatting_options },
-		{ key = "w", label = "Whitespace",      fn = print_whitespace_options },
-		{ key = "z", label = "Folding",         fn = print_folding_options },
-		{ key = "s", label = "Search",          fn = print_search_options },
-		{ key = "a", label = "All non-default", fn = print_all_not_default_options },
+	-- Ctrl+<letter> is represented as an ASCII control code: byte(letter) & 0x1f
+	-- Examples: Ctrl+g=7, Ctrl+d=4, Ctrl+f=6, Ctrl+w=23, Ctrl+z=26, Ctrl+s=19, Ctrl+a=1
+	local actions_by_code = {
+		[7] = { label = "General", fn = print_general_options },
+		[4] = { label = "Display", fn = print_display_options },
+		[6] = { label = "Formatting", fn = print_formatting_options },
+		[23] = { label = "Whitespace", fn = print_whitespace_options },
+		[26] = { label = "Folding", fn = print_folding_options },
+		[19] = { label = "Search", fn = print_search_options },
+		[1] = { label = "All non-default", fn = print_all_not_default_options },
 	}
 
-	vim.ui.select(actions, {
-		prompt = "Print options: choose a group",
-		format_item = function(item)
-			return string.format("[%s] %s", item.key, item.label)
-		end,
-	}, function(choice)
-		if not choice then
+	local lines = {
+		"Print options: press Ctrl+key",
+		"  [C-g] General",
+		"  [C-d] Display",
+		"  [C-f] Formatting",
+		"  [C-w] Whitespace",
+		"  [C-z] Folding",
+		"  [C-s] Search",
+		"  [C-a] All non-default",
+		"  (Esc to cancel)",
+	}
+
+	vim.api.nvim_echo({ { table.concat(lines, "\n"), "None" } }, false, {})
+
+	while true do
+		local ok, code = pcall(vim.fn.getchar)
+		if not ok or code == nil then
 			return
 		end
-		if type(choice.fn) == "function" then
-			choice.fn()
+
+		-- Some keys may come back as strings depending on UI/input method.
+		if type(code) == "string" then
+			code = string.byte(code)
 		end
-	end)
+
+		-- Cancel only on Esc
+		if code == 27 then
+			return
+		end
+
+		local action = actions_by_code[code]
+		if action and type(action.fn) == "function" then
+			action.fn()
+			return
+		end
+
+		vim.notify("Unknown choice (use Ctrl+key): " .. vim.inspect(code), vim.log.levels.WARN)
+	end
 end
 
 return M
