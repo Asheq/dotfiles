@@ -33,7 +33,7 @@ end
 
 vim.api.nvim_create_autocmd("OptionSet", {
 	pattern = "background",
-	callback = on_colorscheme_change,
+	callback = on_background_change,
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {

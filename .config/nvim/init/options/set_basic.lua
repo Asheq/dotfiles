@@ -1,17 +1,17 @@
 -- Global
 -- ----------------------------------------------------------------------------
-vim.opt.tabline = "%{%v:lua.require('lines').get_tabline()%}"
 vim.opt.ruler = false
-vim.opt.jumpoptions = "stack"
 vim.opt.timeout = false
 vim.opt.wrapscan = false
-vim.opt.report = 1
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-vim.opt.wildcharm = 26
-vim.opt.wildignore = ".DS_Store,.tmp.drivedownload,.tmp.driveupload"
-vim.opt.guifont = "PragmataPro Mono:h22"
+vim.opt.report = 1
 vim.opt.linespace = 5
+vim.opt.wildcharm = vim.fn.char2nr("<C-z>")
+vim.opt.jumpoptions = "stack"
+vim.opt.guifont = "PragmataPro Mono:h22"
+vim.opt.wildignore = ".DS_Store,.tmp.drivedownload,.tmp.driveupload"
+vim.opt.tabline = "%{%v:lua.require('lines').get_tabline()%}"
 
 -- Tab [+ Global]
 -- ----------------------------------------------------------------------------
@@ -19,19 +19,21 @@ vim.opt.cmdheight = 2
 
 -- Window [+ Global]
 -- ----------------------------------------------------------------------------
-vim.opt.statusline = "%{%v:lua.require('lines').get_statusline()%}"
-vim.opt.cursorline = true
+vim.opt.list = true
 vim.opt.number = true
-vim.opt.conceallevel = 2
+vim.opt.cursorline = true
 vim.opt.smoothscroll = true
-vim.opt.foldcolumn = "auto:9"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.opt.foldmethod = "expr"
+vim.opt.conceallevel = 2
+vim.opt.colorcolumn:append("+1")
 vim.opt.foldtext = ""
+vim.opt.foldcolumn = "auto:9"
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.statusline = "%{%v:lua.require('lines').get_statusline()%}"
 
 -- Buffer [+ Global]
 -- ----------------------------------------------------------------------------
-vim.opt.spelloptions = "camel,noplainbuffer"
 vim.opt.undofile = true
-vim.opt.dictionary:append("/usr/share/dict/words")
 vim.opt.grepprg = "rg --vimgrep"
+vim.opt.spelloptions = "camel,noplainbuffer"
+vim.opt.dictionary:append("/usr/share/dict/words")

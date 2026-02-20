@@ -7,18 +7,8 @@ require("oil").setup({
 	view_options = {
 		show_hidden = true,
 		is_always_hidden = function(name)
-			local list = { ".DS_Store", "..", ".tmp.driveupload" }
-			for _, value in ipairs(list) do
-				if name == value then
-					return true
-				end
-			end
-
-			if name:find("^Icon.$") ~= nil then
-				return true
-			end
-
-			return false
+			local hidden = { [".DS_Store"] = true, [".."] = true, [".tmp.driveupload"] = true }
+			return hidden[name] or name:find("^Icon.$") ~= nil
 		end,
 	},
 	use_default_keymaps = true,
@@ -36,11 +26,11 @@ require("snacks").setup({
 require("CopilotChat").setup({
 	mappings = {
 		reset = {
-			normal = "gs", -- " Mnemonic: get started "
+			normal = "gs", -- Mnemonic: get started
 			insert = "",
 		},
 		accept_diff = {
-			normal = "yd", -- " Mnemonic: yes diff "
+			normal = "yd", -- Mnemonic: yes diff
 			insert = "",
 		},
 		jump_to_diff = {

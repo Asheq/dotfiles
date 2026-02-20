@@ -15,9 +15,9 @@ ks("i", "<A-t>", function()
 end, { expr = true })
 
 -- Accept Copilot suggestions
-ks("i", "<C-a>", "copilot#Accept('')", {
+ks("i", "<C-;>", "copilot#Accept('')", {
 	expr = true,
 	replace_keycodes = false
 })
-ks("i", "<C-q>", "<Plug>(copilot-accept-line)", { remap = true })
-ks("i", "<C-z>", "<Plug>(copilot-accept-word)", { remap = true })
+ks("i", "<C-.>", "<Plug>(copilot-accept-word)", { remap = true })
+ks("i", "<C-,>", "<Plug>(copilot-accept-line)", { remap = true })

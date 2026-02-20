@@ -39,8 +39,10 @@ source_lua("init/options/set_wrap.lua")
 -- Filetype Detection
 source_lua("init/ft_detection/add.lua")
 
--- Autocmds
-source_lua("init/autocmds/override_highlights_on_colorscheme.lua")
-source_lua("init/autocmds/start_treesitter_on_ft.lua")
-source_lua("init/autocmds/highlight_text_on_yank.lua")
-source_lua("init/autocmds/show_terminal_prompt_signs.lua")
+-- Highlighting
+source_lua("init/highlighting/highlight_yank.lua")
+source_lua("init/highlighting/start_treesitter_highlighting.lua")
+source_lua("init/highlighting/override_highlights.lua")
+
+-- Other
+source_lua("init/other/show_prompt_signs_in_terminal.lua")

@@ -92,7 +92,6 @@ That said, some of these keys may still not be ideal for key mappings because:
         - `<C-Tab>`
         - `<C-q>`
         - `<C-]>`
-        - `<C-a>`
         - `<C-s>`
         - `<C-;>`
         - `<C-'>`

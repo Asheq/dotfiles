@@ -1,6 +1,5 @@
 -- listchars
 -- =============================================================================
-vim.opt.list = true
 vim.opt.listchars = "tab:│ ,lead:࿁,nbsp:▢,trail:࿁,extends:➤,precedes:⮜"
 
 -- NOTE: I am setting the value of "leadmultispace" within 'listchars' in an

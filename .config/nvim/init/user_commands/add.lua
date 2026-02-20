@@ -2,7 +2,8 @@ local util = require("util")
 local options = require("print.options")
 local system_calls = require("system_calls")
 
--- Usage: :PrintOptions option1 [option2] [option3] ... [-def]
+-- Usage: :PrintOptions                          → interactive picker
+-- Usage: :PrintOptions option1 [option2] [-def] → show specific option(s)
 vim.api.nvim_create_user_command("PrintOptions", function(opts)
 	local option_names = {}
 	local conf = { show_default_value = false }
@@ -14,7 +15,7 @@ vim.api.nvim_create_user_command("PrintOptions", function(opts)
 		end
 	end
 	if #option_names == 0 then
-		vim.notify("At least one option name required", vim.log.levels.ERROR)
+		options.choose()
 		return
 	end
 
@@ -24,7 +25,7 @@ vim.api.nvim_create_user_command("PrintOptions", function(opts)
 	end
 	printer:flush()
 end, {
-	nargs = "+",
+	nargs = "*",
 	complete = "option",
 })
 
