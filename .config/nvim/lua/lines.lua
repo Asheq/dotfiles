@@ -46,14 +46,20 @@ function M.get_statusline_file_name()
 	local winid = vim.fn.win_getid()
 	local bufnr = vim.fn.winbufnr(winid)
 	local bufname = vim.fn.bufname(bufnr)
-	if bufname == "" then return "[No Name]" end
+
+	if bufname == "" then
+		return "[No Name]"
+	end
+
 	local bufpath = vim.fn.fnamemodify(bufname, ":p")
-	local cwd = vim.fn.fnamemodify(vim.fn.getcwd(winid), ":p")
+	local cwd = vim.fn.getcwd(winid)
+
 	if vim.startswith(bufpath, cwd) then
 		local rel_bufpath = bufpath:sub(#cwd + 1)
 		return rel_bufpath ~= "" and rel_bufpath or bufpath
+	else
+		return vim.fn.fnamemodify(bufpath, ":~")
 	end
-	return vim.fn.fnamemodify(bufpath, ":~")
 end
 
 ---@return string
