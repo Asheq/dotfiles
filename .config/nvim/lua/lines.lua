@@ -2,31 +2,35 @@ local M = {}
 
 -- Get current working directory
 -- ============================================================================
+
 ---@return string
 function M.get_global_cwd()
 	return vim.fn.getcwd(-1, -1)
 end
 
 ---@param tabnr integer
----@return string
+---@return string | nil
 function M.get_tab_local_cwd(tabnr)
 	if vim.fn.haslocaldir(-1, tabnr) ~= 0 then
 		return vim.fn.getcwd(-1, tabnr)
+	else
+		return nil
 	end
-	return ""
 end
 
 ---@param winnr integer
----@return string
+---@return string | nil
 function M.get_window_local_cwd(winnr)
 	if vim.fn.haslocaldir(winnr) ~= 0 then
 		return vim.fn.getcwd(winnr)
+	else
+		return nil
 	end
-	return ""
 end
 
 -- Statusline
 -- ============================================================================
+
 ---@return string
 function M.get_statusline()
 	return
@@ -44,10 +48,10 @@ function M.get_statusline_file_name()
 	local bufname = vim.fn.bufname(bufnr)
 	if bufname == "" then return "[No Name]" end
 	local bufpath = vim.fn.fnamemodify(bufname, ":p")
-	local win_cwd_path = vim.fn.fnamemodify(vim.fn.getcwd(winid), ":p")
-	if vim.startswith(bufpath, win_cwd_path) then
-		local relative_bufname = bufpath:sub(#win_cwd_path + 1)
-		return relative_bufname ~= "" and relative_bufname or bufpath
+	local cwd = vim.fn.fnamemodify(vim.fn.getcwd(winid), ":p")
+	if vim.startswith(bufpath, cwd) then
+		local rel_bufname = bufpath:sub(#cwd + 1)
+		return rel_bufname ~= "" and rel_bufname or bufpath
 	end
 	return vim.fn.fnamemodify(bufpath, ":~")
 end
@@ -56,11 +60,12 @@ end
 function M.get_statusline_window_cwd()
 	local winid = vim.fn.win_getid()
 	local cwd = M.get_window_local_cwd(winid)
-	return cwd ~= "" and vim.fn.pathshorten(vim.fn.fnamemodify(cwd, ":~")) or ""
+	return (cwd and cwd ~= "" and vim.fn.pathshorten(vim.fn.fnamemodify(cwd, ":~"))) or ""
 end
 
 -- Tabline
 -- ============================================================================
+
 ---@return string
 function M.get_tabline()
 	local tab_count = vim.fn.tabpagenr("$")
@@ -70,7 +75,7 @@ function M.get_tabline()
 		local hl = (i == current_tab) and "%#TabLineSel#" or "%#TabLine#"
 		table.insert(s, hl .. "%" .. i .. "T" ..
 			string.format(
-				" %%{v:lua.require('lines').get_tabline_tab_label(%d)}%%([%%{v:lua.require('lines').get_tabline_tab_cwd(%d)}]%%)▕",
+				" %%{v:lua.require('lines').get_tabline_tab_label(%d)}%%( [%%{v:lua.require('lines').get_tabline_tab_cwd(%d)}]%%)▕",
 				i, i))
 	end
 	table.insert(s, "%#TabLineFill#%T")
@@ -90,7 +95,7 @@ end
 ---@return string
 function M.get_tabline_tab_cwd(tabnr)
 	local cwd = M.get_tab_local_cwd(tabnr)
-	return cwd ~= "" and vim.fn.pathshorten(vim.fn.fnamemodify(cwd, ":~")) or ""
+	return (cwd and cwd ~= "" and vim.fn.pathshorten(vim.fn.fnamemodify(cwd, ":~"))) or ""
 end
 
 return M
