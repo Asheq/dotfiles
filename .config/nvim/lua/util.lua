@@ -19,35 +19,28 @@ function M.get_filename(sid)
 		return nil
 	end
 
-	if sid == -1 then
-		return "[modeline]"
-	end
-
 	if sid < 0 then
 		return tostring(sid)
 	end
 
 	local scripts = vim.fn.getscriptinfo({ sid = sid })
-
 	if scripts[1] and scripts[1].name and scripts[1].name ~= "" then
-		local name = scripts[1].name
+		local filename = scripts[1].name
 
-		local runtime = vim.env.VIMRUNTIME
-		if runtime and runtime ~= "" and name:sub(1, #runtime) == runtime then
-			name = "$VIMRUNTIME" .. name:sub(#runtime + 1)
+		local prefixes = {
+			{ vim.env.VIMRUNTIME, "$VIMRUNTIME" },
+			{ vim.env.HOME .. "/.config/nvim", "$VIMCONFIG" },
+			{ vim.g.plug_home, "$PLUGHOME" },
+		}
+		for _, pair in ipairs(prefixes) do
+			local prefix, alias = pair[1], pair[2]
+			if prefix and prefix ~= "" and vim.startswith(filename, prefix) then
+				filename = alias .. filename:sub(#prefix + 1)
+				break
+			end
 		end
 
-		local vimconfig = vim.env.HOME .. "/.config/nvim"
-		if name:sub(1, #vimconfig) == vimconfig then
-			name = "$VIMCONFIG" .. name:sub(#vimconfig + 1)
-		end
-
-		local plug_home = vim.g.plug_home
-		if plug_home and plug_home ~= "" and name:sub(1, #plug_home) == plug_home then
-			name = "$PLUGHOME" .. name:sub(#plug_home + 1)
-		end
-
-		return name
+		return filename
 	end
 
 	return tostring(sid)
