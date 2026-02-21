@@ -52,7 +52,7 @@ function M.get_statusline_file_name()
 	end
 
 	local bufpath = vim.fn.fnamemodify(bufname, ":p")
-	local cwd = vim.fn.getcwd(winid)
+	local cwd = vim.fn.fnamemodify(vim.fn.getcwd(winid), ":p")
 
 	if vim.startswith(bufpath, cwd) then
 		local rel_bufpath = bufpath:sub(#cwd + 1)
