@@ -2,38 +2,37 @@ local options = require("print.options")
 local mappings = require("print.mappings")
 local system_calls = require("system_calls")
 
--- Usage: :Dictionary {keyword}
+-- :Dictionary {keyword}
 vim.api.nvim_create_user_command("Dictionary", function(opts)
 	system_calls.open_dictionary(opts.args)
 end, { nargs = 1 })
 
--- Usage: :BrowserSearch {keyword}
+-- :BrowserSearch {keyword}
 vim.api.nvim_create_user_command("BrowserSearch", function(opts)
 	system_calls.browser_search(opts.args)
 end, { nargs = 1 })
 
--- Usage: :PrintOptions                                → interactive picker
--- Usage: :PrintOptions [-def] {option1} [option2] ... → print specified options
+-- :PrintOptions [-def] {option1} [option2] ... → print specified options
 vim.api.nvim_create_user_command("PrintOptions", function(opts)
-	local option_names = {}
+	local optnames = {}
 	local conf = { show_default_value = false }
 
 	for _, arg in ipairs(opts.fargs or {}) do
 		if arg == "-def" then
 			conf.show_default_value = true
 		elseif not vim.startswith(arg, "-") then
-			table.insert(option_names, arg)
+			table.insert(optnames, arg)
 		end
 	end
 
-	options.print_options(option_names, conf)
+	options.print_options(optnames, conf)
 end, {
-	nargs = "*",
+	nargs = "+",
 	complete = "option",
 })
 
--- Usage: :PrintMappings                      → print mappings for all modes
--- Usage: :PrintMappings {mode1} [mode2] ...  → print mappings for specified modes
+-- :PrintMappings                      → print mappings for all modes
+-- :PrintMappings {mode1} [mode2] ...  → print mappings for specified modes
 vim.api.nvim_create_user_command("PrintMappings", function(opts)
 	local modes, err = mappings.normalize_modes(opts.fargs)
 	if err then

@@ -60,8 +60,8 @@ end
 -- Validate and normalize a list of mode tokens
 -- Returns nil when modes is nil/empty
 ---@param modes? string[]
----@return string[]|nil normalized_modes
----@return string|nil err
+---@return string[] | nil normalized_modes
+---@return string | nil err
 function M.normalize_modes(modes)
 	if not modes or not modes[1] then
 		return nil, nil
@@ -124,7 +124,7 @@ local function print_mapping(map, printer, overrides_global)
 	end
 end
 
--- Print multiple mappings for a single mode
+-- Print all mappings for a single mode
 -- ============================================================================
 
 ---@param mode string
@@ -185,10 +185,9 @@ local function print_mode(mode, printer)
 	end
 end
 
--- Print multiple mappings for multiple modes
+-- Print all mappings for multiple modes
 -- ============================================================================
 
----Print all mappings for multiple modes
 ---@param modes? string[]
 function M.print_mappings(modes)
 	modes = modes or { "n", "x", "o", "i", "c", "t" }

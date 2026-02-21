@@ -75,11 +75,27 @@ local function print_option(optname, conf, printer)
 	end
 end
 
--- Print multiple options grouped by category
+-- Print multiple options
 -- ============================================================================
 
----@param groups { title: string, options: string[] }[]
----@param conf { show_default_value: boolean }
+---@param optnames? string[]
+---@param conf? { show_default_value?: boolean }
+function M.print_options(optnames, conf)
+	optnames = optnames or {}
+	conf = conf or { show_default_value = false }
+
+	local printer = util.new_printer({ history = true })
+	for _, optname in ipairs(optnames) do
+		print_option(optname, conf, printer)
+	end
+	printer:flush()
+end
+
+-- Print preset option groups
+-- ============================================================================
+
+---@param groups { title: string, optnames: string[] }[]
+---@param conf? { show_default_value?: boolean }
 local function print_option_groups(groups, conf)
 	local printer = util.new_printer({ history = true })
 
@@ -89,7 +105,7 @@ local function print_option_groups(groups, conf)
 			printer:append_line({ { group.title .. string.rep(" ", extra_space), "Underlined" } }, 0)
 		end
 
-		for _, optname in ipairs(group.options) do
+		for _, optname in ipairs(group.optnames) do
 			print_option(optname, conf, printer)
 		end
 	end
@@ -97,47 +113,43 @@ local function print_option_groups(groups, conf)
 	printer:flush()
 end
 
--- Preset groups
--- ============================================================================
----@param conf { show_default_value: boolean }
-local function print_general_options(conf)
+local function print_general_options()
 	print_option_groups({
 		{
 			title = "Filetype",
-			options = {
+			optnames = {
 				"filetype",
 			},
 		},
 		{
 			title = "Encoding and format",
-			options = {
+			optnames = {
 				"fileencoding",
 				"fileformat",
 			},
 		},
 		{
 			title = "Comments",
-			options = {
+			optnames = {
 				"comments",
 				"commentstring",
 			},
 		},
 		{
 			title = "Other",
-			options = {
+			optnames = {
 				"matchpairs",
 				"omnifunc",
 			},
 		},
-	}, conf)
+	})
 end
 
----@param conf { show_default_value: boolean }
-local function print_display_options(conf)
+local function print_display_options()
 	print_option_groups({
 		{
 			title = "Window chrome",
-			options = {
+			optnames = {
 				"showtabline",
 				"tabline",
 				"laststatus",
@@ -150,7 +162,7 @@ local function print_display_options(conf)
 		},
 		{
 			title = "Line numbers",
-			options = {
+			optnames = {
 				"number",
 				"relativenumber",
 				"numberwidth",
@@ -158,7 +170,7 @@ local function print_display_options(conf)
 		},
 		{
 			title = "Cursor indicators",
-			options = {
+			optnames = {
 				"cursorline",
 				"cursorlineopt",
 				"cursorcolumn",
@@ -167,29 +179,28 @@ local function print_display_options(conf)
 		},
 		{
 			title = "Text rendering",
-			options = {
+			optnames = {
 				"list",
 				"listchars",
 				"conceallevel",
 				"concealcursor",
 			},
 		},
-	}, conf)
+	})
 end
 
----@param conf { show_default_value: boolean }
-local function print_formatting_options(conf)
+local function print_formatting_options()
 	print_option_groups({
 		{
 			title = "Formatting methods for gq/gw operator (ascending priority)",
-			options = {
+			optnames = {
 				"formatprg",
 				"formatexpr",
 			},
 		},
 		{
 			title = "For internal formatting",
-			options = {
+			optnames = {
 				"textwidth",
 				"wrapmargin",
 				"formatoptions",
@@ -197,15 +208,14 @@ local function print_formatting_options(conf)
 				"joinspaces",
 			},
 		},
-	}, conf)
+	})
 end
 
----@param conf { show_default_value: boolean }
-local function print_whitespace_options(conf)
+local function print_whitespace_options()
 	print_option_groups({
 		{
 			title = "Auto-indenting, shifting, editing whitespace",
-			options = {
+			optnames = {
 				"expandtab",
 				"tabstop",
 				"softtabstop",
@@ -217,7 +227,7 @@ local function print_whitespace_options(conf)
 		},
 		{
 			title = "How much to auto-indent? (ascending priority)",
-			options = {
+			optnames = {
 				"autoindent",
 				"smartindent",
 				"cindent",
@@ -226,7 +236,7 @@ local function print_whitespace_options(conf)
 		},
 		{
 			title = "For cindent",
-			options = {
+			optnames = {
 				"cinoptions",
 				"cinkeys",
 				"cinwords",
@@ -234,25 +244,24 @@ local function print_whitespace_options(conf)
 		},
 		{
 			title = "For indentexpr",
-			options = {
+			optnames = {
 				"indentkeys",
 			},
 		},
 		{
 			title = "Other",
-			options = {
+			optnames = {
 				"equalprg",
 			},
 		},
-	}, conf)
+	})
 end
 
----@param conf { show_default_value: boolean }
-local function print_folding_options(conf)
+local function print_folding_options()
 	print_option_groups({
 		{
 			title = "State",
-			options = {
+			optnames = {
 				"foldenable",
 				"foldlevel",
 				"foldlevelstart",
@@ -260,7 +269,7 @@ local function print_folding_options(conf)
 		},
 		{
 			title = "Fold method",
-			options = {
+			optnames = {
 				"foldmethod",
 				"foldexpr",
 				"foldmarker",
@@ -268,7 +277,7 @@ local function print_folding_options(conf)
 		},
 		{
 			title = "Other",
-			options = {
+			optnames = {
 				"foldopen",
 				"foldclose",
 				"foldtext",
@@ -278,15 +287,14 @@ local function print_folding_options(conf)
 				"foldnestmax",
 			},
 		},
-	}, conf)
+	})
 end
 
----@param conf { show_default_value: boolean }
-local function print_search_options(conf)
+local function print_search_options()
 	print_option_groups({
 		{
 			title = "File finding & gf navigation",
-			options = {
+			optnames = {
 				"path",
 				"cdpath",
 				"suffixesadd",
@@ -296,7 +304,7 @@ local function print_search_options(conf)
 		},
 		{
 			title = "Include & define search",
-			options = {
+			optnames = {
 				"include",
 				"includeexpr",
 				"define",
@@ -304,14 +312,14 @@ local function print_search_options(conf)
 		},
 		{
 			title = "Grep",
-			options = {
+			optnames = {
 				"grepprg",
 				"grepformat",
 			},
 		},
 		{
 			title = "Keyword",
-			options = {
+			optnames = {
 				"iskeyword",
 				"isident",
 				"keywordprg",
@@ -319,14 +327,14 @@ local function print_search_options(conf)
 		},
 		{
 			title = "Case sensitivity",
-			options = {
+			optnames = {
 				"ignorecase",
 				"smartcase",
 			},
 		},
 		{
 			title = "Tags",
-			options = {
+			optnames = {
 				"tags",
 				"tagfunc",
 				"tagcase",
@@ -335,7 +343,7 @@ local function print_search_options(conf)
 				"tagrelative",
 			},
 		},
-	}, conf)
+	})
 end
 
 local function print_all_not_default_options()
@@ -360,15 +368,14 @@ local function print_all_not_default_options()
 	print_option_groups({
 		{
 			title = "All options with local or global value different from default",
-			options = all_options,
+			optnames = all_options,
 		},
 	}, {
 		show_default_value = true,
 	})
 end
 
----@param conf { show_default_value: boolean }
-local function choose_preset(conf)
+function M.select_preset_option_groups()
 	local items = {
 		{ label = "General",         fn = print_general_options },
 		{ label = "Display",         fn = print_display_options },
@@ -386,30 +393,9 @@ local function choose_preset(conf)
 		end,
 	}, function(choice)
 		if choice and type(choice.fn) == "function" then
-			choice.fn(conf)
+			choice.fn()
 		end
 	end)
-end
-
--- Print multiple options
--- ============================================================================
-
----@param optnames? string[]
----@param conf? { show_default_value?: boolean }
-function M.print_options(optnames, conf)
-	optnames = optnames or {}
-	conf = conf or { show_default_value = false }
-
-	if #optnames == 0 then
-		choose_preset(conf)
-		return
-	end
-
-	local printer = util.new_printer({ history = true })
-	for _, optname in ipairs(optnames) do
-		print_option(optname, conf, printer)
-	end
-	printer:flush()
 end
 
 return M
