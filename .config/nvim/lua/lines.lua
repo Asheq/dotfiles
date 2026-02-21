@@ -42,7 +42,7 @@ end
 ---@return string
 function M.get_statusline_file_name()
 	-- In this context, win_getid() returns the window of the statusline that
-	-- is being drawn (a.k.a. the statusline window), not the active window.
+	-- is being drawn, not the active window.
 	local winid = vim.fn.win_getid()
 	local bufnr = vim.fn.winbufnr(winid)
 	local bufname = vim.fn.bufname(bufnr)
@@ -50,8 +50,8 @@ function M.get_statusline_file_name()
 	local bufpath = vim.fn.fnamemodify(bufname, ":p")
 	local cwd = vim.fn.fnamemodify(vim.fn.getcwd(winid), ":p")
 	if vim.startswith(bufpath, cwd) then
-		local rel_bufname = bufpath:sub(#cwd + 1)
-		return rel_bufname ~= "" and rel_bufname or bufpath
+		local rel_bufpath = bufpath:sub(#cwd + 1)
+		return rel_bufpath ~= "" and rel_bufpath or bufpath
 	end
 	return vim.fn.fnamemodify(bufpath, ":~")
 end
