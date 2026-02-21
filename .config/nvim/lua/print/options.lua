@@ -346,29 +346,24 @@ local function print_search_options()
 	})
 end
 
-local function print_all_not_default_options()
-	local all_options = {}
+local function print_modified_options()
+	local modified_options = {}
 	local info_by_name = vim.api.nvim_get_all_options_info()
 
 	for name, info in pairs(info_by_name) do
 		local default_value = info.default
-		local has_diff = false
 
 		local ok, value = pcall(vim.api.nvim_get_option_value, name, {})
 		if ok and value ~= default_value then
-			has_diff = true
-		end
-
-		if has_diff then
-			table.insert(all_options, name)
+			table.insert(modified_options, name)
 		end
 	end
 
-	table.sort(all_options)
+	table.sort(modified_options)
 	print_option_groups({
 		{
-			title = "All options with local or global value different from default",
-			optnames = all_options,
+			title = "All options where effective value is diff than default value",
+			optnames = modified_options,
 		},
 	}, {
 		show_default_value = true,
@@ -377,13 +372,13 @@ end
 
 function M.select_preset_option_groups()
 	local items = {
-		{ label = "General",         fn = print_general_options },
-		{ label = "Display",         fn = print_display_options },
-		{ label = "Formatting",      fn = print_formatting_options },
-		{ label = "Whitespace",      fn = print_whitespace_options },
-		{ label = "Folding",         fn = print_folding_options },
-		{ label = "Search",          fn = print_search_options },
-		{ label = "All non-default", fn = print_all_not_default_options },
+		{ label = "General",    fn = print_general_options },
+		{ label = "Display",    fn = print_display_options },
+		{ label = "Formatting", fn = print_formatting_options },
+		{ label = "Whitespace", fn = print_whitespace_options },
+		{ label = "Folding",    fn = print_folding_options },
+		{ label = "Search",     fn = print_search_options },
+		{ label = "Modified",   fn = print_modified_options },
 	}
 
 	vim.ui.select(items, {
