@@ -34,15 +34,15 @@ source_lua("init/options/set_listchars_fillchars.lua")
 source_lua("init/options/set_wrap.lua")
 
 -- Highlighting
-source_lua("init/highlighting/highlight_yank.lua")
-source_lua("init/highlighting/start_treesitter_highlighting.lua")
-source_lua("init/highlighting/override_highlights.lua")
+source_lua("init/highlighting/yank.lua")
+source_lua("init/highlighting/start_treesitter.lua")
+source_lua("init/highlighting/override.lua")
 
 -- User Commands
-source_lua("init/user_commands/add.lua")
+source_lua("init/user_commands/create.lua")
 
 -- Filetype Detection
 source_lua("init/ft_detection/add.lua")
 
 -- Other
-source_lua("init/other/show_prompt_signs_in_terminal.lua")
+source_lua("init/terminal/show_prompt_signs.lua")

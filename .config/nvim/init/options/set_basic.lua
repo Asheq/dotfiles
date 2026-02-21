@@ -12,6 +12,7 @@ vim.opt.jumpoptions = "stack"
 vim.opt.guifont = "PragmataPro Mono:h22"
 vim.opt.wildignore = ".DS_Store,.tmp.drivedownload,.tmp.driveupload"
 vim.opt.tabline = "%{%v:lua.require('lines').get_tabline()%}"
+vim.opt.helpheight = 0
 
 -- Tab [+ Global]
 -- ----------------------------------------------------------------------------
