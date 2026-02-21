@@ -7,7 +7,7 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.report = 1
 vim.opt.linespace = 5
-vim.opt.wildcharm = 26 -- <C-z>
+vim.opt.wildcharm = 26 -- 26 = ASCII decimal value of <C-z> key
 vim.opt.jumpoptions = "stack"
 vim.opt.guifont = "PragmataPro Mono:h22"
 vim.opt.wildignore = ".DS_Store,.tmp.drivedownload,.tmp.driveupload"

@@ -3,6 +3,7 @@ local M = {}
 ---@return string | nil
 function M.get_selected_text()
 	local mode = vim.fn.mode()
+	-- NOTE: 22 = ASCII decimal value of <C-v> key
 	if not (mode == "v" or mode == "V" or mode == "\022") then
 		return nil
 	end
