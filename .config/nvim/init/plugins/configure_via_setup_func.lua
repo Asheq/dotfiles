@@ -7,7 +7,12 @@ require("oil").setup({
 	view_options = {
 		show_hidden = true,
 		is_always_hidden = function(name)
-			local hidden = { [".DS_Store"] = true, [".."] = true, [".tmp.driveupload"] = true }
+			local hidden = {
+				[".."] = true,
+				[".DS_Store"] = true,
+				[".tmp.drivedownload"] = true,
+				[".tmp.driveupload"] = true,
+			}
 			return hidden[name] or name:find("^Icon.$") ~= nil
 		end,
 	},
