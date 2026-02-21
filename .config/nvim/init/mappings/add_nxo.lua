@@ -1,6 +1,5 @@
 local util = require("util")
 local system_calls = require("system_calls")
-local print_options = require("print.options")
 
 local ks = vim.keymap.set
 
@@ -74,6 +73,8 @@ ks("n", "<leader>w", "<Cmd>silent update<CR>")
 
 ks("n", "-", "<Cmd>Oil<CR>")
 
+ks("n", "<C-g>", "<Cmd>PrintOptions<CR>")
+
 -- Map to Lua Functions
 -- ============================================================================
 
@@ -135,7 +136,3 @@ ks("x", "<leader>k", function()
 	system_calls.speak(util.get_selected_text())
 	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
 end)
-
--- Map to Other Lua Functions
--- ---------------------------------------------------------------------------
-ks("n", "<C-g>", print_options.choose)

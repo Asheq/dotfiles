@@ -1,33 +1,6 @@
-local util = require("util")
 local options = require("print.options")
+local mappings = require("print.mappings")
 local system_calls = require("system_calls")
-
--- Usage: :PrintOptions                          → interactive picker
--- Usage: :PrintOptions option1 [option2] [-def] → show specific option(s)
-vim.api.nvim_create_user_command("PrintOptions", function(opts)
-	local option_names = {}
-	local conf = { show_default_value = false }
-	for _, arg in ipairs(opts.fargs) do
-		if arg == "-def" then
-			conf.show_default_value = true
-		elseif not vim.startswith(arg, "-") then
-			table.insert(option_names, arg)
-		end
-	end
-	if #option_names == 0 then
-		options.choose()
-		return
-	end
-
-	local printer = util.new_printer({ history = true })
-	for _, optname in ipairs(option_names) do
-		options.print_option(optname, conf, printer)
-	end
-	printer:flush()
-end, {
-	nargs = "*",
-	complete = "option",
-})
 
 -- Usage: :Dictionary {keyword}
 vim.api.nvim_create_user_command("Dictionary", function(opts)
@@ -38,3 +11,46 @@ end, { nargs = 1 })
 vim.api.nvim_create_user_command("BrowserSearch", function(opts)
 	system_calls.browser_search(opts.args)
 end, { nargs = 1 })
+
+-- Usage: :PrintOptions                                → interactive picker
+-- Usage: :PrintOptions [-def] {option1} [option2] ... → print specified options
+vim.api.nvim_create_user_command("PrintOptions", function(opts)
+	local option_names = {}
+	local conf = { show_default_value = false }
+
+	for _, arg in ipairs(opts.fargs or {}) do
+		if arg == "-def" then
+			conf.show_default_value = true
+		elseif not vim.startswith(arg, "-") then
+			table.insert(option_names, arg)
+		end
+	end
+
+	options.print_options(option_names, conf)
+end, {
+	nargs = "*",
+	complete = "option",
+})
+
+-- Usage: :PrintMappings                      → print mappings for all modes
+-- Usage: :PrintMappings {mode1} [mode2] ...  → print mappings for specified modes
+vim.api.nvim_create_user_command("PrintMappings", function(opts)
+	local modes, err = mappings.normalize_modes(opts.fargs)
+	if err then
+		vim.notify("PrintMappings: " .. err, vim.log.levels.ERROR)
+		return
+	end
+
+	mappings.print_mappings(modes)
+end, {
+	nargs = "*",
+	complete = function(arglead)
+		local out = {}
+		for _, m in ipairs(mappings.valid_modes()) do
+			if arglead == "" or vim.startswith(m, arglead) then
+				table.insert(out, m)
+			end
+		end
+		return out
+	end,
+})

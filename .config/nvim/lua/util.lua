@@ -1,6 +1,6 @@
 local M = {}
 
----@return string|nil
+---@return string | nil
 function M.get_selected_text()
 	local mode = vim.fn.mode()
 	if not (mode == "v" or mode == "V" or mode == "\022") then
@@ -12,7 +12,7 @@ function M.get_selected_text()
 end
 
 ---@param sid integer
----@return string|nil
+---@return string | nil
 function M.get_filename(sid)
 	if sid == 0 then
 		return nil
@@ -50,6 +50,18 @@ function M.get_filename(sid)
 	end
 
 	return tostring(sid)
+end
+
+---@param filename string
+---@return string | nil
+function M.get_filename_hl(filename)
+	if vim.startswith(filename, "$VIMCONFIG") then
+		return "DiagnosticError"
+	elseif vim.startswith(filename, "$VIMRUNTIME") then
+		return "DiagnosticError"
+	else
+		return "DiagnosticWarn"
+	end
 end
 
 ---@class Printer

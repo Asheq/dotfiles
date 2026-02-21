@@ -5,83 +5,106 @@ local M = {}
 -- Helpers
 -- ============================================================================
 
+local valid_modes = { "n", "v", "s", "x", "o", "i", "l", "c", "t", "!", "" }
+local valid_mode_set = {}
+for _, m in ipairs(valid_modes) do
+	valid_mode_set[m] = true
+end
+
 local mode_names = {
-	["n"] = "Normal",
-	["i"] = "Insert",
-	["v"] = "Visual+Select",
-	["x"] = "Visual",
-	["s"] = "Select",
-	["o"] = "Operator-pending",
-	["c"] = "Command-line",
-	["t"] = "Terminal",
-	["l"] = "Lang-Arg",
-	["!"] = "Insert+Command",
-	[""] = "NVO",
+	["n"] = "n - Normal",
+	["v"] = "v - Visual + Select",
+	["s"] = "s - Select",
+	["x"] = "x - Visual",
+	["o"] = "o - Operator-pending",
+	["i"] = "i - Insert",
+	["l"] = "l - Insert + Comand-line + Lang-Arg",
+	["c"] = "c - Command-line",
+	["t"] = "t - Terminal",
+	["!"] = "! - Insert + Command-line",
+	[""] = "  - Normal + Visual + Operator-pending",
 }
 
----@param map table
+---@param map vim.api.keyset.get_keymap
 ---@return boolean
 local function is_plug_mapping(map)
 	local lhs = map.lhs or ""
 	return lhs:find("<Plug>") ~= nil
 end
 
----@param map table
+---@param map vim.api.keyset.get_keymap
 ---@return string
 local function get_rhs_display(map)
 	if map.callback then
-		return "<Lua function>"
+		return "<Lua func>"
 	end
 	return map.rhs or ""
 end
 
----@param map table
----@return string|nil
+---@param map vim.api.keyset.get_keymap
+---@return string | nil
 local function get_set_location(map)
-	local sid = map.sid or 0
-	local filename = util.get_filename(sid)
-	if filename and map.lnum and map.lnum > 0 then
-		return filename .. ":" .. map.lnum
+	return util.get_filename(map.sid or 0)
+end
+
+---Return a copy of valid mode tokens accepted by print_mappings.
+---@return string[]
+function M.valid_modes()
+	local out = {}
+	for _, m in ipairs(valid_modes) do
+		table.insert(out, m)
 	end
-	return filename
+	return out
+end
+
+-- Validate and normalize a list of mode tokens
+-- Returns nil when modes is nil/empty
+---@param modes? string[]
+---@return string[]|nil normalized_modes
+---@return string|nil err
+function M.normalize_modes(modes)
+	if not modes or not modes[1] then
+		return nil, nil
+	end
+
+	local seen = {}
+	local out = {}
+	for _, m in ipairs(modes) do
+		if not valid_mode_set[m] then
+			return nil, ("Invalid mode '%s'. Allowed: %s"):format(m, table.concat(valid_modes, " "))
+		end
+		if not seen[m] then
+			seen[m] = true
+			table.insert(out, m)
+		end
+	end
+
+	return out, nil
 end
 
 -- Print a single mapping
 -- ============================================================================
 
----@param map table
+---@param map vim.api.keyset.get_keymap
 ---@param printer Printer
----@param overrides_global? table  -- the global mapping it overrides, if any
+---@param overrides_global? vim.api.keyset.get_keymap  -- the global mapping it overrides, if any
 local function print_mapping(map, printer, overrides_global)
-	local scope_label = map.buffer ~= 0 and "buf-local" or "global"
-
-	local attrs = {}
-	if map.noremap == 1 then table.insert(attrs, "nore") end
-	if map.silent == 1 then table.insert(attrs, "silent") end
-	if map.expr == 1 then table.insert(attrs, "expr") end
-	if map.nowait == 1 then table.insert(attrs, "nowait") end
-	local attr_str = #attrs > 0 and (" " .. table.concat(attrs, ",")) or ""
+	local scope_label = map.buffer ~= 0 and "buf" or "global"
 
 	local rhs = get_rhs_display(map)
 	local location = get_set_location(map)
 
 	printer:append_line({
-		{ " " .. map.lhs .. " ", "TermCursor" },
-		{ " " .. scope_label,    "Identifier" },
-		{ attr_str,              "NonText" },
+		{ " " .. map.lhs .. " ",   "TermCursor" },
+		{ " " .. scope_label,      "Identifier" },
+		{ " [" .. map.mode .. "]", "NonText" },
 	}, 1)
 
 	printer:append_line({
-		{ "→ ", "Normal" },
+		{ "rhs: ",       "Normal" },
 		{ tostring(rhs), "String" },
+		locatioin and { " ➤ " .. location, util.get_filename_hl(location) },
 	}, 2)
-
-	if location then
-		printer:append_line({
-			{ "set: ",            "Normal" },
-			{ tostring(location), "DiagnosticInfo" },
-		}, 2)
-	end
 
 	if overrides_global then
 		local global_rhs = get_rhs_display(overrides_global)
@@ -101,13 +124,12 @@ local function print_mapping(map, printer, overrides_global)
 	end
 end
 
--- Main functions
+-- Print multiple mappings for a single mode
 -- ============================================================================
 
----Print all mappings for a given mode
 ---@param mode string
 ---@param printer? Printer
-function M.print_mode(mode, printer)
+local function print_mode(mode, printer)
 	local own_printer = false
 	if not printer then
 		printer = util.new_printer({ history = true })
@@ -163,15 +185,18 @@ function M.print_mode(mode, printer)
 	end
 end
 
----Print all mappings for common modes
+-- Print multiple mappings for multiple modes
+-- ============================================================================
+
+---Print all mappings for multiple modes
 ---@param modes? string[]
-function M.print_all(modes)
+function M.print_mappings(modes)
 	modes = modes or { "n", "x", "o", "i", "c", "t" }
 
 	local printer = util.new_printer({ history = true })
 
 	for _, mode in ipairs(modes) do
-		M.print_mode(mode, printer)
+		print_mode(mode, printer)
 	end
 
 	printer:flush()

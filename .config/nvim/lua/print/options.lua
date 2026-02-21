@@ -2,13 +2,13 @@ local util = require("util")
 
 local M = {}
 
--- Main functions
+-- Print a single option
 -- ============================================================================
 
 ---@param optname string
 ---@param conf? { show_default_value?: boolean }
 ---@param printer? Printer
-function M.print_option(optname, conf, printer)
+local function print_option(optname, conf, printer)
 	local own_printer = false
 	if not printer then
 		printer = util.new_printer({ history = true })
@@ -24,16 +24,6 @@ function M.print_option(optname, conf, printer)
 	local local_info = vim.api.nvim_get_option_info2(optname, { scope = "local" })
 	local local_value = vim.api.nvim_get_option_value(optname, { scope = "local" })
 
-	local function filename_hl(filename)
-		if vim.startswith(filename, "$VIMCONFIG") then
-			return "DiagnosticError"
-		elseif vim.startswith(filename, "$VIMRUNTIME") then
-			return "DiagnosticError"
-		else
-			return "DiagnosticWarn"
-		end
-	end
-
 	printer:append_line({
 		{ " " .. optname .. " (" .. info.shortname .. ") ",               "TermCursor" },
 		{ " " .. info.scope .. (info.global_local and " + global" or ""), "Identifier" },
@@ -48,7 +38,7 @@ function M.print_option(optname, conf, printer)
 	if info.scope == "buf" or info.scope == "win" or info.scope == "tab" then
 		local local_last_set_sid = local_info.last_set_sid
 		local local_last_set_filename = util.get_filename(local_last_set_sid)
-		local local_filename_hl = local_last_set_filename and filename_hl(local_last_set_filename) or nil
+		local local_filename_hl = local_last_set_filename and util.get_filename_hl(local_last_set_filename) or nil
 
 		local local_scope_label = "  local"
 
@@ -62,7 +52,7 @@ function M.print_option(optname, conf, printer)
 
 	local global_last_set_sid = global_info.last_set_sid
 	local global_last_set_filename = util.get_filename(global_last_set_sid)
-	local global_filename_hl = global_last_set_filename and filename_hl(global_last_set_filename) or nil
+	local global_filename_hl = global_last_set_filename and util.get_filename_hl(global_last_set_filename) or nil
 
 	local global_scope_label = " global"
 
@@ -85,15 +75,13 @@ function M.print_option(optname, conf, printer)
 	end
 end
 
----@param groups { title?: string, options: string[] }[]
----@param conf? { show_default_value?: boolean }
----@param printer? Printer
-local function print_option_groups(groups, conf, printer)
-	local own_printer = false
-	if not printer then
-		printer = util.new_printer({ history = true })
-		own_printer = true
-	end
+-- Print multiple options grouped by category
+-- ============================================================================
+
+---@param groups { title: string, options: string[] }[]
+---@param conf { show_default_value: boolean }
+local function print_option_groups(groups, conf)
+	local printer = util.new_printer({ history = true })
 
 	for _, group in ipairs(groups) do
 		if group.title and group.title ~= "" then
@@ -102,19 +90,17 @@ local function print_option_groups(groups, conf, printer)
 		end
 
 		for _, optname in ipairs(group.options) do
-			M.print_option(optname, conf, printer)
+			print_option(optname, conf, printer)
 		end
 	end
 
-	if own_printer then
-		printer:flush()
-	end
+	printer:flush()
 end
 
--- Print preset groups of options
+-- Preset groups
 -- ============================================================================
-
-local function print_general_options()
+---@param conf { show_default_value: boolean }
+local function print_general_options(conf)
 	print_option_groups({
 		{
 			title = "Filetype",
@@ -143,10 +129,11 @@ local function print_general_options()
 				"omnifunc",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_display_options()
+---@param conf { show_default_value: boolean }
+local function print_display_options(conf)
 	print_option_groups({
 		{
 			title = "Window chrome",
@@ -187,10 +174,11 @@ local function print_display_options()
 				"concealcursor",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_formatting_options()
+---@param conf { show_default_value: boolean }
+local function print_formatting_options(conf)
 	print_option_groups({
 		{
 			title = "Formatting methods for gq/gw operator (ascending priority)",
@@ -209,10 +197,11 @@ local function print_formatting_options()
 				"joinspaces",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_whitespace_options()
+---@param conf { show_default_value: boolean }
+local function print_whitespace_options(conf)
 	print_option_groups({
 		{
 			title = "Auto-indenting, shifting, editing whitespace",
@@ -255,10 +244,11 @@ local function print_whitespace_options()
 				"equalprg",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_folding_options()
+---@param conf { show_default_value: boolean }
+local function print_folding_options(conf)
 	print_option_groups({
 		{
 			title = "State",
@@ -288,10 +278,11 @@ local function print_folding_options()
 				"foldnestmax",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_search_options()
+---@param conf { show_default_value: boolean }
+local function print_search_options(conf)
 	print_option_groups({
 		{
 			title = "File finding & gf navigation",
@@ -344,7 +335,7 @@ local function print_search_options()
 				"tagrelative",
 			},
 		},
-	})
+	}, conf)
 end
 
 local function print_all_not_default_options()
@@ -376,14 +367,15 @@ local function print_all_not_default_options()
 	})
 end
 
-function M.choose()
+---@param conf { show_default_value: boolean }
+local function choose_preset(conf)
 	local items = {
-		{ label = "General", fn = print_general_options },
-		{ label = "Display", fn = print_display_options },
-		{ label = "Formatting", fn = print_formatting_options },
-		{ label = "Whitespace", fn = print_whitespace_options },
-		{ label = "Folding", fn = print_folding_options },
-		{ label = "Search", fn = print_search_options },
+		{ label = "General",         fn = print_general_options },
+		{ label = "Display",         fn = print_display_options },
+		{ label = "Formatting",      fn = print_formatting_options },
+		{ label = "Whitespace",      fn = print_whitespace_options },
+		{ label = "Folding",         fn = print_folding_options },
+		{ label = "Search",          fn = print_search_options },
 		{ label = "All non-default", fn = print_all_not_default_options },
 	}
 
@@ -394,9 +386,30 @@ function M.choose()
 		end,
 	}, function(choice)
 		if choice and type(choice.fn) == "function" then
-			choice.fn()
+			choice.fn(conf)
 		end
 	end)
+end
+
+-- Print multiple options
+-- ============================================================================
+
+---@param optnames? string[]
+---@param conf? { show_default_value?: boolean }
+function M.print_options(optnames, conf)
+	optnames = optnames or {}
+	conf = conf or { show_default_value = false }
+
+	if #optnames == 0 then
+		choose_preset(conf)
+		return
+	end
+
+	local printer = util.new_printer({ history = true })
+	for _, optname in ipairs(optnames) do
+		print_option(optname, conf, printer)
+	end
+	printer:flush()
 end
 
 return M

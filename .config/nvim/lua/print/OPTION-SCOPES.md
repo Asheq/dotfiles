@@ -8,7 +8,7 @@
 - Window-local option (scope = win)
     1.  local value = local to a window and local to a specific buffer in that window
     2.  global value = local to a window and global to all buffers in that window
-- Global-local option (scope = buf|win, global_local = true)
+- Global-local option (scope = buf | win, global_local = true)
     1.  local value = ???
     2.  global value = fallback when the local value is "unset"
 
