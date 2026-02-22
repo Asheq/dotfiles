@@ -5,6 +5,23 @@ local M = {}
 -- Print a single option
 -- ============================================================================
 
+---@param value any
+---@param info vim.api.keyset.get_option_info
+---@param label string
+---@param printer Printer
+local function print_option_value(value, info, label, printer)
+	local last_set_filename = util.get_filename(info.last_set_sid)
+	local filename_hl = util.get_filename_hl(last_set_filename)
+
+	local chunks = {
+		{ string.format("%s: ", label), "Normal" },
+		{ tostring(value), "NonText" },
+		{ last_set_filename and string.format(" ➤ %s", last_set_filename) or "", filename_hl },
+	}
+
+	printer:append_line(chunks, 2)
+end
+
 ---@param optname string
 ---@param conf? { show_default_value?: boolean }
 ---@param printer? Printer
@@ -25,9 +42,11 @@ local function print_option(optname, conf, printer)
 	local local_value = vim.api.nvim_get_option_value(optname, { scope = "local" })
 
 	printer:append_line({
-		{ " " .. optname .. " (" .. info.shortname .. ") ",               "TermCursor" },
-		{ " " .. info.scope .. (info.global_local and " + global" or ""), "Identifier" },
-		{ " [" .. info.type .. "]",                                       "NonText" },
+		{ string.format(" %s ", info.name),                                      "TermCursor" },
+		{ info.shortname ~= "" and string.format("(%s) ", info.shortname) or "", "TermCursor" },
+		{ string.format(" %s", info.scope),                                      "Identifier" },
+		{ info.global_local and " + global" or "",                               "Identifier" },
+		{ string.format(" [%s]", info.type),                                     "NonText" },
 	}, 1)
 
 	printer:append_line({
@@ -36,32 +55,10 @@ local function print_option(optname, conf, printer)
 	}, 2)
 
 	if info.scope == "buf" or info.scope == "win" or info.scope == "tab" then
-		local local_last_set_sid = local_info.last_set_sid
-		local local_last_set_filename = util.get_filename(local_last_set_sid)
-		local local_filename_hl = local_last_set_filename and util.get_filename_hl(local_last_set_filename) or nil
-
-		local local_scope_label = "  local"
-
-		printer:append_line({
-			{ local_scope_label .. ": ", "Normal" },
-			{ tostring(local_value),     "NonText" },
-			local_last_set_filename and { " ➤ ", local_filename_hl },
-			local_last_set_filename and { tostring(local_last_set_filename), local_filename_hl },
-		}, 2)
+		print_option_value(local_value, local_info, "  local", printer)
 	end
 
-	local global_last_set_sid = global_info.last_set_sid
-	local global_last_set_filename = util.get_filename(global_last_set_sid)
-	local global_filename_hl = global_last_set_filename and util.get_filename_hl(global_last_set_filename) or nil
-
-	local global_scope_label = " global"
-
-	printer:append_line({
-		{ global_scope_label .. ": ", "Normal" },
-		{ tostring(global_value),     "NonText" },
-		global_last_set_filename and { " ➤ ", global_filename_hl },
-		global_last_set_filename and { tostring(global_last_set_filename), global_filename_hl },
-	}, 2)
+	print_option_value(global_value, global_info, " global", printer)
 
 	if (conf and conf.show_default_value) then
 		printer:append_line({

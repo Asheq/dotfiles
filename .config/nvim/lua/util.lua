@@ -12,10 +12,10 @@ function M.get_selected_text()
 	return table.concat(lines, "\n")
 end
 
----@param sid integer
+---@param sid integer | nil
 ---@return string | nil
 function M.get_filename(sid)
-	if sid == 0 then
+	if not sid or sid == 0 then
 		return nil
 	end
 
@@ -28,9 +28,9 @@ function M.get_filename(sid)
 		local filename = scripts[1].name
 
 		local prefixes = {
-			{ vim.env.VIMRUNTIME, "$VIMRUNTIME" },
+			{ vim.env.VIMRUNTIME,              "$VIMRUNTIME" },
 			{ vim.env.HOME .. "/.config/nvim", "$VIMCONFIG" },
-			{ vim.g.plug_home, "$PLUGHOME" },
+			{ vim.g.plug_home,                 "$PLUGHOME" },
 		}
 		for _, pair in ipairs(prefixes) do
 			local prefix, alias = pair[1], pair[2]
@@ -46,9 +46,13 @@ function M.get_filename(sid)
 	return tostring(sid)
 end
 
----@param filename string
----@return string | nil
+---@param filename string | nil
+---@return string
 function M.get_filename_hl(filename)
+	if not filename then
+		return "DiagnosticError"
+	end
+
 	if vim.startswith(filename, "$VIMCONFIG") then
 		return "DiagnosticError"
 	elseif vim.startswith(filename, "$VIMRUNTIME") then
@@ -62,7 +66,7 @@ end
 ---@field private chunks any[]
 ---@field private history boolean
 ---@field private opts vim.api.keyset.echo_opts
----@field append_line fun(self: Printer, line_chunks: any[], indent?: integer)
+---@field append_line fun(self: Printer, chunks: any[], indent?: integer)
 ---@field flush fun(self: Printer)
 
 ---@param conf? { history?: boolean, opts?: vim.api.keyset.echo_opts }
@@ -75,12 +79,12 @@ function M.new_printer(conf)
 	}
 
 	---Append a single line beginning with an optional indent, and terminating with a newline
-	---@param line_chunks any[]
+	---@param chunks any[]
 	---@param indent? integer
-	function buf:append_line(line_chunks, indent)
+	function buf:append_line(chunks, indent)
 		local indent_str = string.rep("  ", indent and (indent * 2) or 0)
 		table.insert(self.chunks, { indent_str, "Normal" })
-		for _, chunk in ipairs(line_chunks) do
+		for _, chunk in ipairs(chunks) do
 			if chunk then
 				table.insert(self.chunks, chunk)
 			end
