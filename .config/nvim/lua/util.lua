@@ -19,8 +19,21 @@ function M.get_filename(sid)
 		return nil
 	end
 
+	local special_sids = {
+		[-1] = "[modeline]",
+		[-2] = "[--cmd]",
+		[-3] = "[-c]",
+		[-4] = "[env variable]",
+		[-5] = "[reset b/c of error]",
+		[-6] = "[none]",
+		[-7] = "[changed window size]",
+		[-8] = "[Lua script/chunk]",
+		[-9] = "[API client]",
+		[-10] = "[sourced string]",
+	}
+
 	if sid < 0 then
-		return tostring(sid)
+		return special_sids[sid] or tostring(sid)
 	end
 
 	local scripts = vim.fn.getscriptinfo({ sid = sid })

@@ -10,16 +10,14 @@ local M = {}
 ---@param label string
 ---@param printer Printer
 local function print_option_value(value, info, label, printer)
-	local last_set_filename = util.get_filename(info.last_set_sid)
-	local filename_hl = util.get_filename_hl(last_set_filename)
+	local filename = util.get_filename(info.last_set_sid)
+	local filename_hl = util.get_filename_hl(filename)
 
-	local chunks = {
+	printer:append_line({
 		{ string.format("%s: ", label), "Normal" },
 		{ tostring(value), "NonText" },
-		{ last_set_filename and string.format(" ➤ %s", last_set_filename) or "", filename_hl },
-	}
-
-	printer:append_line(chunks, 2)
+		{ filename and string.format(" ➤ %s", filename) or "", filename_hl },
+	}, 2)
 end
 
 ---@param optname string
