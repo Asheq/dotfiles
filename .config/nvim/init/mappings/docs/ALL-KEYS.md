@@ -1,6 +1,4 @@
-# Keys
-
-A list of all keys (not including modifiers) available on most keyboards:
+# Keys on most keyboards (excluding modifiers)
 
 - `<Esc>`
 - `` ` ``
@@ -58,6 +56,17 @@ A list of all keys (not including modifiers) available on most keyboards:
 - `<Down>`
 - `<Left>`
 - `<Right>`
+
+# Keys not on some keyboards (excluding modifiers)
+
+- `<Home>`
+- `<End>`
+- `<PageUp>`
+- `<PageDown>`
+- `<Insert>`
+- `<Del>`
+- `<F...>` (function keys)
+- `<k...>` (keypad keys)
 
 # Modifiers
 

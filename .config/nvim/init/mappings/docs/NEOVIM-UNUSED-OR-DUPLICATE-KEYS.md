@@ -1,111 +1,90 @@
-This document lists all keys (either single keys or single-modifier key chords) that are either unused or duplicated in Neovim for each mode. This is useful for identifying potential key mappings that can be added without conflicts.
+This document lists all keys (standalone or single-modifier chords) that are unused or duplicated in Neovim for each mode, helping identify potential mappings without conflicts.
 
-That said, some of these keys may still not be ideal for key mappings because:
+Note: Some keys may still be unsuitable because:
 
-1. They are reserved at the OS level or terminal level, and are therefore "intercepted" before they reach Neovim.
-
-2. They are difficult to press because:
-   i. They can only be accessed on a symbols layer on a programmable keyboard, requiring an extra modifier to begin with (the symbols layer modifier)
-   ii. The modifier is not easy to reach, even after OS-level key mappings added by `Karabiner-Elements`, etc.
+1. They are reserved by the OS or terminal and never reach Neovim.
+2. They are hard to press, e.g.:
+    - Only accessible via a symbols layer on programmable keyboards (requiring an extra modifier)
+    - The modifier itself is hard to reach, even with tools like Karabiner-Elements.
 
 # Normal-mode
 
-- Duplicate
-    - `h`
-        - `<Left>`
-        - `<C-h>`
-        - `<BS>`
-    - `l`
-        - `<Right>`
-        - `<Space>`
-    - `j`
-        - `<Down>`
-        - `<C-j>`
-        - `<C-n>`
-    - `k`
-        - `<Up>`
-        - `<C-p>`
-    - `<Enter>`
-        - `+`
-        - `<C-m>`
-    - `cc`
-        - `S`
-- Unused
-    - Control
-        - `<C-Esc>`
-        - ``<C-`>``
-        - `<C-1>`
-        - `<C-2>`
-        - `<C-3>`
-        - `<C-4>`
-        - `<C-5>`
-        - `<C-7>`
-        - `<C-8>`
-        - `<C-9>`
-        - `<C-0>`
-        - `<C-->`
-        - `<C-=>`
-        - `<C-BS>`
-        - `<C-Tab>`
-        - `<C-;>`
-        - `<C-'>`
-        - `<C-CR>`
-        - `<C-,>`
-        - `<C-.>`
-        - `<C-/>`
-        - `<C-Up>`
-        - `<C-Down>`
-        - `<C-Left>`
-        - `<C-Right>`
-    - Meta
-        - `<M-[all]>`
+- Standalone
+    - `<Esc>`
+    - `<BS>`
+    - `\`
+    - `S`
+    - `<Space>`
+    - `<Up>`
+    - `<Down>`
+    - `<Left>`
+    - `<Right>`
+- Shift
+    - `<S-Esc>`
+    - `+`
+    - `<S-BS>`
+    - `<S-Tab>`
+    - `<S-CR>`
+    - `<S-Space>`
+    - `<S-Up>`
+    - `<S-Down>`
+    - `<S-Left>`
+    - `<S-Right>`
+- Control
+    - `<C-Esc>`
+    - ``<C-`>``
+    - `<C-1>`
+    - `<C-2>`
+    - `<C-3>`
+    - `<C-4>`
+    - `<C-5>`
+    - `<C-7>`
+    - `<C-8>`
+    - `<C-9>`
+    - `<C-0>`
+    - `<C-->`
+    - `<C-=>`
+    - `<C-BS>`
+    - `<C-Tab>`
+    - `<C-q>`
+    - `<C-i>`
+    - `<C-p>`
+    - `<C-[>`
+    - `<C-s>`
+    - `<C-h>`
+    - `<C-j>`
+    - `<C-k>`
+    - `<C-;>`
+    - `<C-'>`
+    - `<C-CR>`
+    - `<C-n>`
+    - `<C-m>`
+    - `<C-,>`
+    - `<C-.>`
+    - `<C-/>`
+    - `<C-Space>`
+    - `<C-Up>`
+    - `<C-Down>`
+    - `<C-Left>`
+    - `<C-Right>`
+- Meta
+    - `<M-[all]>`
 
 # Insert-mode
 
-- Duplicate
-    - `<BS>`
-        - `<C-h>`
-    - `<Tab>`
-        - `<C-i>`
-    - `<CR>`
-        - `<C-j>`
-        - `<C-m>`
-    - `<C-v>`
-        - `<C-q>`
-- Unused
-    - Control
-        - `<C-Esc>`
-        - ``<C-`>``
-        - `<C-1>`
-        - `<C-2>`
-        - `<C-3>`
-        - `<C-4>`
-        - `<C-5>`
-        - `<C-6>`
-        - `<C-7>`
-        - `<C-8>`
-        - `<C-9>`
-        - `<C-0>`
-        - `<C-->`
-        - `<C-=>`
-        - `<C-BS>`
-        - `<C-Tab>`
-        - `<C-q>`
-        - `<C-]>`
-        - `<C-s>`
-        - `<C-;>`
-        - `<C-'>`
-        - `<C-CR>`
-        - `<C-,>`
-        - `<C-.>`
-        - `<C-/>`
-        - `<C-Space>`
-        - `<C-Up>`
-        - `<C-Down>`
-        - `<C-Left>`
-        - `<C-Right>`
-    - Meta
-        - `<M-[all]>`
+- Standalone
+    - `[NONE]`
+- Shift
+    - ???
+- Control
+    - `<C-q>`
+    - `<C-i>`
+    - `<C-h>`
+    - `<C-j>`
+    - `<C-m>`
+    - ???
+- Meta
+    - `<M-[ALL]>`
 
 # Visual-mode (char)
 
@@ -118,8 +97,6 @@ That said, some of these keys may still not be ideal for key mappings because:
         - `s`
     - `C`
         - `S`
-- Unused
-    - ???
 
 # Visual-mode (line)
 
@@ -132,8 +109,6 @@ That said, some of these keys may still not be ideal for key mappings because:
         - `s`
     - `C`
         - `S`
-- Unused
-    - ???
 
 # Visual-mode (block)
 
@@ -143,5 +118,3 @@ That said, some of these keys may still not be ideal for key mappings because:
         - `X`
     - `c`
         - `s`
-- Unused
-    - ???

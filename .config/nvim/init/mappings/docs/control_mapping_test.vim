@@ -31,13 +31,13 @@ nnoremap <nowait> <C-t> :echo "C-t"<CR>
 nnoremap <nowait> <C-y> :echo "C-y"<CR>
 nnoremap <nowait> <C-u> :echo "C-u"<CR>
 
-" NOTE: <C-i> is the same as <Tab> (or "dead") in terminals
+" NOTE: <C-i> and <Tab> are the same in terminals
 nnoremap <nowait> <C-i> :echo "C-i"<CR>
 
 nnoremap <nowait> <C-o> :echo "C-o"<CR>
 nnoremap <nowait> <C-p> :echo "C-p"<CR>
 
-" NOTE: <C-[> is the same as <Esc> in terminals
+" NOTE: <C-[> and <Esc> are the same in terminals
 nnoremap <nowait> <C-[> :echo "C-["<CR>
 
 nnoremap <nowait> <C-]> :echo "C-]"<CR>

@@ -367,12 +367,28 @@ local function print_modified_options()
 	})
 end
 
+local function print_wrapping_options()
+	M.print_option_groups({
+		{
+			title = "Wrapping",
+			optnames = {
+				"wrap",
+				"linebreak",
+				"breakindent",
+				"breakindentopt",
+				"showbreak",
+			},
+		},
+	})
+end
+
 function M.select_preset_options_to_print()
 	local items = {
 		{ label = "General",    fn = print_general_options },
 		{ label = "Display",    fn = print_display_options },
 		{ label = "Formatting", fn = print_formatting_options },
 		{ label = "Whitespace", fn = print_whitespace_options },
+		{ label = "Wrap",       fn = print_wrapping_options },
 		{ label = "Folding",    fn = print_folding_options },
 		{ label = "Search",     fn = print_search_options },
 		{ label = "Modified",   fn = print_modified_options },
