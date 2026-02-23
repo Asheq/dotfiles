@@ -9,7 +9,7 @@ function M.get_global_cwd()
 end
 
 ---@param tabnr integer
----@return string | nil
+---@return string?
 function M.get_tab_local_cwd(tabnr)
 	if vim.fn.haslocaldir(-1, tabnr) ~= 0 then
 		return vim.fn.getcwd(-1, tabnr)
@@ -19,7 +19,7 @@ function M.get_tab_local_cwd(tabnr)
 end
 
 ---@param winnr integer
----@return string | nil
+---@return string?
 function M.get_window_local_cwd(winnr)
 	if vim.fn.haslocaldir(winnr) ~= 0 then
 		return vim.fn.getcwd(winnr)

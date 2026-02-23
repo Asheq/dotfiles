@@ -50,7 +50,7 @@ function M.change_speech_rate(delta)
 	vim.notify(tostring(speech_rate))
 end
 
----@type vim.SystemObj | nil
+---@type vim.SystemObj?
 local say_process = nil
 local SIGTERM = 15
 

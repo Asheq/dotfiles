@@ -56,8 +56,8 @@ end
 -- Validate and normalize a list of mode tokens
 -- Returns nil when modes is nil/empty
 ---@param modes? string[]
----@return string[] | nil normalized_modes
----@return string | nil err
+---@return string[]? normalized_modes
+---@return string? err
 function M.normalize_modes(modes)
 	if not modes or not modes[1] then
 		return nil, nil

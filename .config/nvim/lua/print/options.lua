@@ -42,7 +42,7 @@ end
 ---@param conf { print_default_value: boolean? }?
 ---@param printer Printer
 local function print_option(optname, conf, printer)
-	local print_default_value = (conf and conf.print_default_value) or false
+	local print_default_value = conf and conf.print_default_value or false
 
 	local info = vim.api.nvim_get_option_info2(optname, {})
 	local value = vim.api.nvim_get_option_value(optname, {})
@@ -53,7 +53,7 @@ local function print_option(optname, conf, printer)
 	local local_info = vim.api.nvim_get_option_info2(optname, { scope = "local" })
 	local local_value = vim.api.nvim_get_option_value(optname, { scope = "local" })
 
-	-- Print header for option
+	-- Print header
 	printer:append_line({
 		{ string.format(" %s ", info.name),                                      "TermCursor" },
 		{ info.shortname ~= "" and string.format("(%s) ", info.shortname) or "", "TermCursor" },
@@ -91,10 +91,10 @@ end
 ---@param conf { print_default_value: boolean? }?
 function M.print_option_groups(groups, conf)
 	local printer = util.new_printer({ history = true })
+	local half_screen_cols = math.ceil(vim.opt.columns:get() / 2)
 
 	for _, group in ipairs(groups) do
 		-- Print group title
-		local half_screen_cols = math.ceil(vim.opt.columns:get() / 2)
 		local extra_space = math.max(half_screen_cols - #group.title, 0)
 		printer:append_line({ { group.title .. string.rep(" ", extra_space), "Underlined" } }, 0)
 

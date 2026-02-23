@@ -39,12 +39,12 @@ function M.get_sid_info(sid)
 		return nil
 	end
 
+	if special_sids[sid] then
+		return { kind = "special", name = special_sids[sid] }
+	end
+
 	if sid < 0 then
-		if special_sids[sid] then
-			return { kind = "special", name = special_sids[sid] }
-		else
-			return { kind = "unknown", sid = sid }
-		end
+		return { kind = "unknown", sid = sid }
 	end
 
 	local scripts = vim.fn.getscriptinfo({ sid = sid })
@@ -96,8 +96,8 @@ end
 function M.new_printer(conf)
 	local buf = {
 		chunks = {},
-		history = (conf and conf.history) or false,
-		opts = (conf and conf.opts) or {},
+		history = conf and conf.history or false,
+		opts = conf and conf.opts or {},
 	}
 
 	function buf:append_line(chunks, indent_level)
@@ -112,10 +112,9 @@ function M.new_printer(conf)
 	end
 
 	function buf:flush()
-		if #self.chunks == 0 then
-			return
+		if #self.chunks ~= 0 then
+			vim.api.nvim_echo(self.chunks, self.history, self.opts)
 		end
-		vim.api.nvim_echo(self.chunks, self.history, self.opts)
 	end
 
 	return buf
