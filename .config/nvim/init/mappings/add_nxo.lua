@@ -138,4 +138,4 @@ end)
 
 -- Map to Other Lua Functions
 -- ---------------------------------------------------------------------------
-ks("n", "<C-g>", print_options.select_preset_option_groups)
+ks("n", "<C-g>", print_options.select_preset_options_to_print)

@@ -1,3 +1,5 @@
+-- TODO: Fix
+
 local util = require("util")
 
 local M = {}
@@ -98,9 +100,9 @@ local function print_mapping(map, printer, overrides_global)
 		{ rhs,     "String" },
 	}, 2)
 
-	local filename = util.get_filename(map.sid)
+	local filename = util.get_sid_info(map.sid)
 	if filename then
-		local filename_hl = util.get_filename_hl(filename)
+		local filename_hl = util.get_filename_hl()
 		printer:append_line({
 			{ " ➤ " .. filename, filename_hl },
 		}, 2)
@@ -113,9 +115,9 @@ local function print_mapping(map, printer, overrides_global)
 			{ g_rhs,          "NonText" },
 		}, 2)
 
-		local g_filename = util.get_filename(overrides_global.sid)
+		local g_filename = util.get_sid_info(overrides_global.sid)
 		if g_filename then
-			local g_filename_hl = util.get_filename_hl(g_filename)
+			local g_filename_hl = util.get_filename_hl()
 			printer:append_line({
 				{ g_filename and (" ➤ " .. g_filename) or "", g_filename_hl },
 			}, 2)

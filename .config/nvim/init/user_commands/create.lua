@@ -15,11 +15,11 @@ end, { nargs = 1 })
 -- :PrintOptions [-def] {option1} [option2] ... → print specified options
 vim.api.nvim_create_user_command("PrintOptions", function(opts)
 	local optnames = {}
-	local conf = { show_default_value = false }
+	local conf = { print_default_value = false }
 
 	for _, arg in ipairs(opts.fargs or {}) do
 		if arg == "-def" then
-			conf.show_default_value = true
+			conf.print_default_value = true
 		elseif not vim.startswith(arg, "-") then
 			table.insert(optnames, arg)
 		end

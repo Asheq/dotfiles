@@ -1,5 +1,18 @@
 local M = {}
 
+---@alias SidSpecial { kind: "special", name: string }
+---@alias SidScript { kind: "script", filename: string }
+---@alias SidUnknown { kind: "unknown", sid: integer }
+
+---@alias EchoChunk { [1]: string, [2]: string }
+
+---@class Printer
+---@field private chunks EchoChunk[]
+---@field private history boolean
+---@field private opts vim.api.keyset.echo_opts
+---@field append_line fun(self: Printer, chunks: (EchoChunk?)[], indent_level: integer?)
+---@field flush fun(self: Printer)
+
 local prefixes = {
 	{ path = vim.env.VIMRUNTIME,              alias = "$VIMRUNTIME", highlight = "DiagnosticError" },
 	{ path = vim.env.HOME .. "/.config/nvim", alias = "$VIMCONFIG",  highlight = "DiagnosticWarn" },
@@ -19,11 +32,8 @@ local special_sids = {
 	[-10] = "SID_STR",
 }
 
----@param sid integer | nil
----@alias SidSpecial { kind: "special", name: string }
----@alias SidScript { kind: "script", filename: string }
----@alias SidUnknown { kind: "unknown", sid: integer }
----@return SidSpecial | SidScript | SidUnknown | nil
+---@param sid integer?
+---@return (SidSpecial | SidScript | SidUnknown)?
 function M.get_sid_info(sid)
 	if not sid or sid == 0 then
 		return nil
@@ -39,7 +49,6 @@ function M.get_sid_info(sid)
 
 	local scripts = vim.fn.getscriptinfo({ sid = sid })
 
-
 	if scripts[1] and scripts[1].name and scripts[1].name ~= "" then
 		return { kind = "script", filename = scripts[1].name }
 	end
@@ -47,9 +56,9 @@ function M.get_sid_info(sid)
 	return { kind = "unknown", sid = sid }
 end
 
----@param filename string | nil
----@return { path: string, alias: string, highlight: string, rel: string } | nil
-function M.get_filename_prefix(filename)
+---@param filename string?
+---@return { prefix: string, prefix_alias: string, highlight: string, suffix: string }?
+function M.get_filename_info(filename)
 	if not filename then
 		return nil
 	end
@@ -57,10 +66,10 @@ function M.get_filename_prefix(filename)
 	for _, p in ipairs(prefixes) do
 		if vim.startswith(filename, p.path) then
 			return {
-				path = p.path,
-				alias = p.alias,
+				prefix = p.path,
+				prefix_alias = p.alias,
 				highlight = p.highlight,
-				rel = string.sub(filename, #p.path + 1),
+				suffix = string.sub(filename, #p.path + 1),
 			}
 		end
 	end
@@ -68,7 +77,7 @@ function M.get_filename_prefix(filename)
 	return nil
 end
 
----@return string | nil
+---@return string?
 function M.get_selected_text()
 	local mode = vim.fn.mode()
 
@@ -81,16 +90,7 @@ function M.get_selected_text()
 	return table.concat(lines, "\n")
 end
 
----@alias EchoChunk {[1]: string, [2]: string}
-
----@class Printer
----@field private chunks EchoChunk[]
----@field private history boolean
----@field private opts vim.api.keyset.echo_opts
----@field append_line fun(self: Printer, chunks: (EchoChunk | nil)[], indent?: integer)
----@field flush fun(self: Printer)
-
----@param conf? { history?: boolean, opts?: vim.api.keyset.echo_opts }
+---@param conf { history: boolean?, opts: vim.api.keyset.echo_opts? }?
 ---@return Printer
 ---NOTE: Could use metatable approach to avoid creating new functions for each printer instance
 function M.new_printer(conf)
@@ -100,9 +100,8 @@ function M.new_printer(conf)
 		opts = (conf and conf.opts) or {},
 	}
 
-	---Append a single line beginning with an optional indent, and terminating with a newline
-	function buf:append_line(chunks, indent)
-		local indent_str = string.rep(" ", indent or 0)
+	function buf:append_line(chunks, indent_level)
+		local indent_str = string.rep(" ", (indent_level or 0) * 4)
 		table.insert(self.chunks, { indent_str, "Normal" })
 		for _, chunk in ipairs(chunks) do
 			if chunk then
