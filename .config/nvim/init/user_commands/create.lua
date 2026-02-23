@@ -25,7 +25,10 @@ vim.api.nvim_create_user_command("PrintOptions", function(opts)
 		end
 	end
 
-	options.print_options(optnames, conf)
+	options.print_option_groups({ {
+		title = "Options",
+		optnames = optnames,
+	} }, conf)
 end, {
 	nargs = "+",
 	complete = "option",

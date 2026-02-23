@@ -5,31 +5,42 @@ local M = {}
 -- Print a single option
 -- ============================================================================
 
+---@param label string
 ---@param value any
 ---@param info vim.api.keyset.get_option_info
----@param label string
 ---@param printer Printer
-local function print_option_value(value, info, label, printer)
-	local filename = util.get_filename(info.last_set_sid)
-	local filename_hl = util.get_filename_hl(filename)
-
-	printer:append_line({
+local function print_option_value(label, value, info, printer)
+	local chunks = {
 		{ string.format("%s: ", label), "Normal" },
-		{ tostring(value), "NonText" },
-		{ filename and string.format(" ➤ %s", filename) or "", filename_hl },
-	}, 2)
+		{ tostring(value),              "NonText" },
+	}
+
+	local sid_info = util.get_sid_info(info.last_set_sid)
+	if sid_info then
+		table.insert(chunks, { " ➤ ", "Normal" })
+
+		if sid_info.kind == "special" then
+			table.insert(chunks, { sid_info.name, "Normal" })
+		elseif sid_info.kind == "script" then
+			local prefix = util.get_filename_prefix(sid_info.filename)
+			if prefix then
+				table.insert(chunks, { prefix.alias, prefix.highlight })
+				table.insert(chunks, { prefix.rel, "Normal" })
+			else
+				table.insert(chunks, { sid_info.filename, "IncSearch" })
+			end
+		elseif sid_info.kind == "unknown" then
+			table.insert(chunks, { tostring(sid_info.sid), "IncSearch" })
+		end
+	end
+
+	printer:append_line(chunks, 2)
 end
 
 ---@param optname string
 ---@param conf? { show_default_value?: boolean }
----@param printer? Printer
+---@param printer Printer
 local function print_option(optname, conf, printer)
-	local own_printer = false
-	if not printer then
-		printer = util.new_printer({ history = true })
-		own_printer = true
-	end
-
 	local info = vim.api.nvim_get_option_info2(optname, {})
 	local value = vim.api.nvim_get_option_value(optname, {})
 
@@ -53,10 +64,10 @@ local function print_option(optname, conf, printer)
 	}, 2)
 
 	if info.scope == "buf" or info.scope == "win" or info.scope == "tab" then
-		print_option_value(local_value, local_info, "  local", printer)
+		print_option_value("  local", local_value, local_info, printer)
 	end
 
-	print_option_value(global_value, global_info, " global", printer)
+	print_option_value(" global", global_value, global_info, printer)
 
 	if (conf and conf.show_default_value) then
 		printer:append_line({
@@ -64,34 +75,13 @@ local function print_option(optname, conf, printer)
 			{ tostring(info.default), "NonText" },
 		}, 2)
 	end
-
-	if own_printer then
-		printer:flush()
-	end
 end
 
--- Print multiple options
+-- Print option groups
 -- ============================================================================
-
----@param optnames? string[]
----@param conf? { show_default_value?: boolean }
-function M.print_options(optnames, conf)
-	optnames = optnames or {}
-	conf = conf or { show_default_value = false }
-
-	local printer = util.new_printer({ history = true })
-	for _, optname in ipairs(optnames) do
-		print_option(optname, conf, printer)
-	end
-	printer:flush()
-end
-
--- Print preset option groups
--- ============================================================================
-
 ---@param groups { title: string, optnames: string[] }[]
 ---@param conf? { show_default_value?: boolean }
-local function print_option_groups(groups, conf)
+function M.print_option_groups(groups, conf)
 	local printer = util.new_printer({ history = true })
 
 	for _, group in ipairs(groups) do
@@ -108,8 +98,11 @@ local function print_option_groups(groups, conf)
 	printer:flush()
 end
 
+-- Print preset option groups
+-- ============================================================================
+
 local function print_general_options()
-	print_option_groups({
+	M.print_option_groups({
 		{
 			title = "Filetype",
 			optnames = {
@@ -141,7 +134,7 @@ local function print_general_options()
 end
 
 local function print_display_options()
-	print_option_groups({
+	M.print_option_groups({
 		{
 			title = "Window chrome",
 			optnames = {
@@ -185,7 +178,7 @@ local function print_display_options()
 end
 
 local function print_formatting_options()
-	print_option_groups({
+	M.print_option_groups({
 		{
 			title = "Formatting methods for gq/gw operator (ascending priority)",
 			optnames = {
@@ -207,7 +200,7 @@ local function print_formatting_options()
 end
 
 local function print_whitespace_options()
-	print_option_groups({
+	M.print_option_groups({
 		{
 			title = "Auto-indenting, shifting, editing whitespace",
 			optnames = {
@@ -253,7 +246,7 @@ local function print_whitespace_options()
 end
 
 local function print_folding_options()
-	print_option_groups({
+	M.print_option_groups({
 		{
 			title = "State",
 			optnames = {
@@ -286,7 +279,7 @@ local function print_folding_options()
 end
 
 local function print_search_options()
-	print_option_groups({
+	M.print_option_groups({
 		{
 			title = "File finding & gf navigation",
 			optnames = {
@@ -355,7 +348,7 @@ local function print_modified_options()
 	end
 
 	table.sort(modified_options)
-	print_option_groups({
+	M.print_option_groups({
 		{
 			title = "All options where effective value is diff than default value",
 			optnames = modified_options,
