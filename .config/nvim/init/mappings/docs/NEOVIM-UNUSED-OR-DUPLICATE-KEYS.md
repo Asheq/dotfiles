@@ -1,4 +1,4 @@
-This document lists all keys (standalone or single-modifier chords) that are unused or duplicated in Neovim for each mode, helping identify potential mappings without conflicts.
+This document lists all keys (standalone or single-modifier chords) that are unused or duplicates in Neovim for each mode, helping identify potential mappings without conflicts.
 
 Note: Some keys may still be unsuitable because:
 

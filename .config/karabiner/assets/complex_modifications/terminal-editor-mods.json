@@ -2,7 +2,7 @@
     "title": "Mods for Terminals/Editors",
     "rules": [
         {
-            "description": "Swap Cmd<->Ctrl and Cmd+Shft<->Ctrl+Shft (except when paired with function keys, `, numbers, Tab, Caps Lock, Space, arrows)",
+            "description": "Swap Cmd<->Ctrl and Cmd+Shft<->Ctrl+Shft (except when paired with function keys, `, 1..9, Tab, Caps Lock, Space, arrows)",
             "manipulators": [
                 {
                     "conditions": [
@@ -376,7 +376,8 @@
                     },
                     "to": [
                         {
-                            "key_code": "f9"
+                            "key_code": "i",
+                            "modifiers": ["control"]
                         }
                     ],
                     "type": "basic"
@@ -1090,6 +1091,48 @@
                     "to": [
                         {
                             "key_code": "z",
+                            "modifiers": ["control"]
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "device_unless",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 10730,
+                                    "product_id": 258
+                                },
+                                {
+                                    "vendor_id": 5824,
+                                    "product_id": 10203
+                                }
+                            ]
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^org\\.vim\\.MacVim$",
+                                "^net\\.kovidgoyal\\.kitty$",
+                                "^io\\.alacritty$",
+                                "^com\\.qvacua\\.VimR$",
+                                "^org\\.gnu\\.Emacs$",
+                                "^com\\.neovide\\.neovide$"
+                            ],
+                            "type": "frontmost_application_if"
+                        }
+                    ],
+                    "from": {
+                        "key_code": "0",
+                        "modifiers": {
+                            "mandatory": ["command"],
+                            "optional": ["shift"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "0",
                             "modifiers": ["control"]
                         }
                     ],
@@ -3022,6 +3065,48 @@
                     "to": [
                         {
                             "key_code": "z",
+                            "modifiers": ["command"]
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "device_unless",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 10730,
+                                    "product_id": 258
+                                },
+                                {
+                                    "vendor_id": 5824,
+                                    "product_id": 10203
+                                }
+                            ]
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^org\\.vim\\.MacVim$",
+                                "^net\\.kovidgoyal\\.kitty$",
+                                "^io\\.alacritty$",
+                                "^com\\.qvacua\\.VimR$",
+                                "^org\\.gnu\\.Emacs$",
+                                "^com\\.neovide\\.neovide$"
+                            ],
+                            "type": "frontmost_application_if"
+                        }
+                    ],
+                    "from": {
+                        "key_code": "0",
+                        "modifiers": {
+                            "mandatory": ["control"],
+                            "optional": ["shift"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "0",
                             "modifiers": ["command"]
                         }
                     ],
