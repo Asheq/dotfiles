@@ -101,8 +101,28 @@ ks_group({
 -- ---------------------------------------------------------------------------
 -- Mnemonic: yp = yank path
 ks("n", "yp", function()
-	-- TODO: Fix
-	vim.api.nvim_echo({ { "p = full path | p:. = from CWD | h = head | t = tail" } }, false, {})
+	local hint = " p = full path | p:. = from CWD | h = head | t = tail "
+	local buf = vim.api.nvim_create_buf(false, true)
+	vim.api.nvim_buf_set_lines(buf, 0, -1, false, { hint })
+	local win = vim.api.nvim_open_win(buf, false, {
+		relative = "editor",
+		row = vim.o.lines - 3,
+		col = 0,
+		width = #hint,
+		height = 1,
+		style = "minimal",
+		border = "rounded",
+	})
+
+	vim.api.nvim_create_autocmd("CmdlineLeave", {
+		once = true,
+		callback = function()
+			if vim.api.nvim_win_is_valid(win) then
+				vim.api.nvim_win_close(win, true)
+			end
+		end,
+	})
+
 	local LEFT = vim.api.nvim_replace_termcodes("<Left>", true, false, true)
 	vim.api.nvim_feedkeys(":let @* = expand('%:')" .. LEFT .. LEFT, "n", false)
 end)
