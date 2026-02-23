@@ -58,7 +58,7 @@ local function encode_string(s)
 end
 
 local function indent(depth)
-	return string.rep("    ", depth)
+	return string.rep("	", depth)
 end
 
 -- Encode a Lua value as a pretty-printed JSON string.
@@ -150,6 +150,8 @@ local function make_conditions()
 	}
 end
 
+local conditions = make_conditions()
+
 --- Build a single manipulator entry.
 ---@param key_code string
 ---@param from_mod string  "command" or "control"
@@ -157,7 +159,7 @@ end
 local function make_manipulator(key_code, from_mod, to_mod)
 	return {
 		__order = { "conditions", "from", "to", "type" },
-		conditions = make_conditions(),
+		conditions = conditions,
 		from = {
 			__order = { "key_code", "modifiers" },
 			key_code = key_code,
