@@ -81,7 +81,11 @@ ks_group({
 	{ "n", "<leader>w", "<Cmd>silent update<CR>" }
 })
 
-ks("n", "-", "<Cmd>Oil<CR>")
+ks_group({
+	{ "n", "-",       "<Cmd>Oil<CR>" },
+	{ "n", "<Esc>",   "<Cmd>pwd<CR>" },
+	{ "n", "<S-Esc>", "<Cmd>file<CR>" },
+})
 
 -- Map to Lua Functions
 -- ============================================================================
