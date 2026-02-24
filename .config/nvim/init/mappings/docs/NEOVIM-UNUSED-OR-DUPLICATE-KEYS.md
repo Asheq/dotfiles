@@ -1,18 +1,16 @@
-This document lists all keys that are unused or duplicates in Neovim for each mode, helping identify potential mappings without conflicts. Standalone keys and single-modifier chords (`<S-...>`, `<C-...>`, `<M-...>`) are documented. `<D-...>` chords are not documented as they should never be mapped in Neovim in order to keep them free for OS level shortcuts.
+This document lists unused or duplicate Neovim keys by mode, helping you find conflict-free mappings. Only standalone keys and single-modifier chords (`<S-...>`, `<C-...>`, `<M-...>`) are included. `<D-...>` chords are excluded to preserve OS shortcuts.
 
-Note: Some keys listed may still be unsuitable for mappings because:
+Note: Some keys here may still be unsuitable because:
 
-1. They never reach Neovim because they are reserved/consumed by the OS or terminal:
-    - When <S-Space> is pressed, terminal emulators send <Space>
-    - <C-1> to <C-9> are reserved for jumping to desktops in MacOS
-    - <C-Tab> is reserved for cycling through tabs in kitty terminal
-    - <C-Space> is reserved for "AI Assistant" in my own MacOS setup
-    - <C-Up>, <C-Down>, <C-Left>, and <C-Right> are reserved for "Mission Control" in MacOS
-    - <M-Esc> is reserved for text-to-speech in my own MacOS setup
-    - <M-Space> is reserved for dictation in my own MacOS setup
-2. They are hard to press, e.g.:
-    - Only accessible via a symbols layer on programmable keyboards (requiring an extra modifier)
-    - The modifier itself is hard to reach on certain keyboard setups
+1. They are reserved by the OS or terminal and never reach Neovim, e.g.:
+    - `<S-Space>` sends `<Space>`
+    - `<C-1>`–`<C-9>`: MacOS desktop switching
+    - `<C-Tab>`: tab cycling in kitty
+    - `<C-Space>`: MacOS "AI Assistant"
+    - `<C-Up>`, `<C-Down>`, `<C-Left>`, `<C-Right>`: MacOS "Mission Control"
+    - `<M-Esc>`: MacOS text-to-speech
+    - `<M-Space>`: MacOS dictation
+2. They are hard to press due to keyboard layout or require extra modifiers.
 
 # Normal-mode
 
@@ -126,33 +124,46 @@ Note: Some keys listed may still be unsuitable for mappings because:
 
 # Visual-mode (char)
 
-- Duplicate
-    - `d`
-        - `x`
-    - `D`
-        - `X`
-    - `c`
-        - `s`
-    - `C`
-        - `S`
+- Standalone
+    - `x` (same as `d`)
+    - `s` (same as `c`)
+    - ???
+- Shift
+    - `X` (same as `D`)
+    - `S` (same as `C`)
+    - ???
+- Control
+    - ???
+- Option/Meta/Alt
+    - ???
 
 # Visual-mode (line)
 
-- Duplicate
-    - `d`
-        - `x`
-        - `X`
-        - `D`
-    - `c`
-        - `s`
-    - `C`
-        - `S`
+- Standalone
+    - `x` (same as `d`)
+    - `s` (same as `c`)
+    - ???
+- Shift
+    - `X` (same as `d`)
+    - `S` (same as `c`)
+    - `D` (same as `d`)
+    - `C` (same as `c`)
+    - ???
+- Control
+    - ???
+- Option/Meta/Alt
+    - ???
 
 # Visual-mode (block)
 
-- Duplicate
-    - `d`
-        - `x`
-        - `X`
-    - `c`
-        - `s`
+- Standalone
+    - `x` (same as `d`)
+    - `s` (same as `c`)
+    - ???
+- Shift
+    - `X` (same as `d`)
+    - ???
+- Control
+    - ???
+- Option/Meta/Alt
+    - ???
