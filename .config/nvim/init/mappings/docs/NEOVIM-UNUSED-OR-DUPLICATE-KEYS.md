@@ -1,11 +1,18 @@
-This document lists all keys (standalone or single-modifier chords) that are unused or duplicates in Neovim for each mode, helping identify potential mappings without conflicts.
+This document lists all keys that are unused or duplicates in Neovim for each mode, helping identify potential mappings without conflicts. Standalone keys and single-modifier chords (`<S-...>`, `<C-...>`, `<M-...>`) are documented. `<D-...>` chords are not documented as they should never be mapped in Neovim in order to keep them free for OS level shortcuts.
 
-Note: Some keys may still be unsuitable because:
+Note: Some keys listed may still be unsuitable for mappings because:
 
-1. They are reserved by the OS or terminal and never reach Neovim.
+1. They never reach Neovim because they are reserved/consumed by the OS or terminal:
+    - When <S-Space> is pressed, terminal emulators send <Space>
+    - <C-1> to <C-9> are reserved for jumping to desktops in MacOS
+    - <C-Tab> is reserved for cycling through tabs in kitty terminal
+    - <C-Space> is reserved for "AI Assistant" in my own MacOS setup
+    - <C-Up>, <C-Down>, <C-Left>, and <C-Right> are reserved for "Mission Control" in MacOS
+    - <M-Esc> is reserved for text-to-speech in my own MacOS setup
+    - <M-Space> is reserved for dictation in my own MacOS setup
 2. They are hard to press, e.g.:
     - Only accessible via a symbols layer on programmable keyboards (requiring an extra modifier)
-    - The modifier itself is hard to reach, even with tools like Karabiner-Elements.
+    - The modifier itself is hard to reach on certain keyboard setups
 
 # Normal-mode
 
@@ -67,7 +74,7 @@ Note: Some keys may still be unsuitable because:
     - `<C-Down>`
     - `<C-Left>` (same as `b`)
     - `<C-Right>` (same as `w`)
-- Meta
+- Option/Meta/Alt
     - `<M-...>`
 
 # Insert-mode
@@ -114,7 +121,7 @@ Note: Some keys may still be unsuitable because:
     - `<C-Space>`
     - `<C-Up>`
     - `<C-Down>`
-- Meta
+- Option/Meta/Alt
     - `<M-...>`
 
 # Visual-mode (char)

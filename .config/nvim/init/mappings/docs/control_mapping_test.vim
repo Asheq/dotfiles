@@ -1,11 +1,7 @@
 nnoremap <nowait> <C-Esc> :echo "C-Esc"<CR>
-
-" NOTE: ` is not Cmd<->Ctrl swapped
-" NOTE: <D-`> is reserved for cycling through app windows at the OS level
 nnoremap <nowait> <C-`> :echo "C-`"<CR>
 
-" NOTE: 1 to 9 are not Cmd<->Ctrl swapped
-" NOTE: <C-1> to <C-9> are reserved for jumping to desktops at the OS level
+" NOTE: <C-1> to <C-9> are reserved for jumping to desktops in MacOS
 nnoremap <nowait> <C-1> :echo "C-1"<CR>
 nnoremap <nowait> <C-2> :echo "C-2"<CR>
 nnoremap <nowait> <C-3> :echo "C-3"<CR>
@@ -21,9 +17,7 @@ nnoremap <nowait> <C--> :echo "C--"<CR>
 nnoremap <nowait> <C-=> :echo "C-="<CR>
 nnoremap <nowait> <C-BS> :echo "C-BS"<CR>
 
-" NOTE: Tab is not Cmd<->Ctrl swapped
-" NOTE: <C-Tab> is reserved for cycling through tabs at the terminal level
-" NOTE: <D-Tab> is reserved for cycling through windows at the OS level
+" NOTE: <C-Tab> is reserved for cycling through tabs in kitty terminal
 nnoremap <nowait> <C-Tab> :echo "C-Tab"<CR>
 
 nnoremap <nowait> <C-q> :echo "C-q"<CR>
@@ -33,16 +27,10 @@ nnoremap <nowait> <C-r> :echo "C-r"<CR>
 nnoremap <nowait> <C-t> :echo "C-t"<CR>
 nnoremap <nowait> <C-y> :echo "C-y"<CR>
 nnoremap <nowait> <C-u> :echo "C-u"<CR>
-
-" NOTE: <C-i> and <Tab> are the same in terminals
 nnoremap <nowait> <C-i> :echo "C-i"<CR>
-
 nnoremap <nowait> <C-o> :echo "C-o"<CR>
 nnoremap <nowait> <C-p> :echo "C-p"<CR>
-
-" NOTE: <C-[> and <Esc> are the same in terminals
 nnoremap <nowait> <C-[> :echo "C-["<CR>
-
 nnoremap <nowait> <C-]> :echo "C-]"<CR>
 nnoremap <nowait> <C-\> :echo "C-\\"<CR>
 nnoremap <nowait> <C-a> :echo "C-a"<CR>
@@ -68,14 +56,10 @@ nnoremap <nowait> <C-,> :echo "C-,"<CR>
 nnoremap <nowait> <C-.> :echo "C-."<CR>
 nnoremap <nowait> <C-/> :echo "C-/"<CR>
 
-" NOTE: Space is not Cmd<->Ctrl swapped
-" NOTE: <C-Space> is reserved for "AI Assistant" at the OS level
-" NOTE: <D-Space> is reserved for "Spotlight" at the OS level
+" NOTE: <C-Space> is reserved for "AI Assistant" in my own MacOS setup
 nnoremap <nowait> <C-Space> :echo "C-Space"<CR>
 
-" NOTE: Arrows are not Cmd<->Ctrl swapped
-" NOTE: <C-Up>, <C-Down>, <C-Left>, and <C-Right> are reserved for "Mission
-" Control" at the OS level
+" NOTE: <C-Up>, <C-Down>, <C-Left>, and <C-Right> are reserved for "Mission Control" in MacOS
 nnoremap <nowait> <C-Up> :echo "C-Up"<CR>
 nnoremap <nowait> <C-Down> :echo "C-Down"<CR>
 nnoremap <nowait> <C-Left> :echo "C-Left"<CR>

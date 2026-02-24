@@ -1,4 +1,4 @@
-" NOTE: <M-Esc> is reserved for "Speak Selection" at the OS level
+" NOTE: <M-Esc> is reserved for text-to-speech in my own MacOS setup
 inoremap <M-Esc> M-Esc<CR>
 
 inoremap <M-`> M-`<CR>
@@ -51,7 +51,10 @@ inoremap <M-m> M-m<CR>
 inoremap <M-,> M-,<CR>
 inoremap <M-.> M-.<CR>
 inoremap <M-/> M-/<CR>
+
+" NOTE: <M-Space> is reserved for dictation in my own MacOS setup
 inoremap <M-Space> M-Space<CR>
+
 inoremap <M-Up> M-Up<CR>
 inoremap <M-Down> M-Down<CR>
 inoremap <M-Left> M-Left<CR>

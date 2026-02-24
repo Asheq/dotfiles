@@ -50,7 +50,7 @@ nnoremap <nowait> < :echo "S-,"<CR>
 nnoremap <nowait> > :echo "S-."<CR>
 nnoremap <nowait> ? :echo "S-/"<CR>
 
-" NOTE: <S-Space> and <Space> are the same in terminals
+" NOTE: When <S-Space> is pressed, terminal emulators send <Space>
 nnoremap <nowait> <S-Space> :echo "S-Space"<CR>
 
 nnoremap <nowait> <S-Up> :echo "S-Up"<CR>
