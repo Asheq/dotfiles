@@ -37,4 +37,5 @@ vim.opt.statusline = "%{%v:lua.require('lines').get_statusline()%}"
 vim.opt.undofile = true
 vim.opt.grepprg = "rg --vimgrep"
 vim.opt.spelloptions = "camel,noplainbuffer"
+vim.opt.spelllang = "en_us"
 vim.opt.dictionary:append("/usr/share/dict/words")
