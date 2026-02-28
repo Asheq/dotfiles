@@ -6,6 +6,8 @@ Lua/=
 Neovim/=
 VIMRUNTIME/=
 Vimscript/=
+GitHub/=
+github.com/=
 autocomplete
 codebase
 conf

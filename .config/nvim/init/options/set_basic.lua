@@ -1,5 +1,6 @@
 -- Global
 -- ----------------------------------------------------------------------------
+vim.opt.exrc = true
 vim.opt.ruler = false
 vim.opt.timeout = false
 vim.opt.wrapscan = false
@@ -38,5 +39,5 @@ vim.opt.undofile = true
 vim.opt.grepprg = "rg --vimgrep"
 vim.opt.spelloptions = "camel,noplainbuffer"
 vim.opt.spelllang = "en_us"
-vim.opt_local.spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
+vim.opt.spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
 vim.opt.dictionary:append("/usr/share/dict/words")
