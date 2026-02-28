@@ -1,6 +1,7 @@
 local options = require("print.options")
 local mappings = require("print.mappings")
 local system_calls = require("system_calls")
+local nvim_word_list = require("nvim_word_list")
 
 -- :Dictionary {keyword}
 vim.api.nvim_create_user_command("Dictionary", function(opts)
@@ -70,3 +71,8 @@ vim.api.nvim_create_user_command("MakeSpell", function()
 	vim.notify("Executing: " .. cmd)
 	vim.cmd(cmd)
 end, {})
+
+-- :NeovimWordListUpdate
+vim.api.nvim_create_user_command("NeovimWordListUpdate",
+	nvim_word_list.update_spell_file,
+	{})
