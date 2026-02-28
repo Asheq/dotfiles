@@ -46,13 +46,13 @@
 !/.config/keywords/**
 
 !/.config/nvim/
-!/.config/nvim/README.md
-!/.config/nvim/.projections.json
 !/.config/nvim/.luarc.json
-!/.config/nvim/stylua.toml
-!/.config/nvim/init.lua
+!/.config/nvim/.nvim.lua
+!/.config/nvim/README.md
 !/.config/nvim/coc-settings.json
 !/.config/nvim/file.demo
+!/.config/nvim/init.lua
+!/.config/nvim/stylua.toml
 !/.config/nvim/after/
 !/.config/nvim/after/**
 !/.config/nvim/autoload/
