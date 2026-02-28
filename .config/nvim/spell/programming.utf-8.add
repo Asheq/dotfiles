@@ -1,0 +1,15 @@
+CTRL/=
+CWD/=
+Ctrl/=
+LSP/=
+Lua/=
+Neovim/=
+VIMRUNTIME/=
+Vimscript/=
+autocomplete
+codebase
+conf
+filename
+metatable
+namespace
+param

@@ -75,6 +75,9 @@
 !/.config/nvim/plugin/**
 !/.config/nvim/syntax/
 !/.config/nvim/syntax/**
+!/.config/nvim/spell/
+!/.config/nvim/spell/programming.utf-8.add
+!/.config/nvim/spell/programming.utf-8.add.spl
 
 # Custom .shell-startup/ directory
 !/.shell-startup/

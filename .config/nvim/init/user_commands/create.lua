@@ -56,3 +56,17 @@ end, {
 		return out
 	end,
 })
+
+-- :SpellCleanAdd
+vim.api.nvim_create_user_command("SpellCleanAdd", function()
+	local cmd = "runtime spell/cleanadd.vim"
+	vim.notify("Executing: " .. cmd)
+	vim.cmd(cmd)
+end, {})
+
+-- :MakeSpell
+vim.api.nvim_create_user_command("MakeSpell", function()
+	local cmd = "mkspell! %"
+	vim.notify("Executing: " .. cmd)
+	vim.cmd(cmd)
+end, {})

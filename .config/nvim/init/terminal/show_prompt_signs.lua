@@ -1,4 +1,4 @@
--- TODO-L: There is a bug in nvim where after you press Ctrl-L to clear the
+-- TODO-L: There is a bug in Neovim where after you press Ctrl-L to clear the
 -- shell, signs that should have been cleared remain.
 
 -- This code was copied directly from :h shell-prompt-signs.

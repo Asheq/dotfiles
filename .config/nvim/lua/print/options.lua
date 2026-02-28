@@ -139,6 +139,17 @@ local function print_general_options()
 				"omnifunc",
 			},
 		},
+		{
+			title = "Spell",
+			optnames = {
+				"spell",
+				"spelllang",
+				"spellfile",
+				"spelloptions",
+				"spellsuggest",
+				"spellcapcheck",
+			},
+		},
 	})
 end
 

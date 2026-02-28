@@ -1,16 +1,16 @@
 # Values
 
 - Global option (scope = global)
-    1.  global value
+    1. global value
 - Buffer-local option (scope = buf)
-    1.  local value
-    2.  global value = used to initialize the local value for a new buffer
+    1. local value
+    2. global value = used to initialize the local value for a new buffer
 - Window-local option (scope = win)
-    1.  local value = local to a window and local to a specific buffer in that window
-    2.  global value = local to a window and global to all buffers in that window
+    1. local value = local to a window and local to a specific buffer in that window
+    2. global value = local to a window and global to all buffers in that window
 - Global-local option (scope = buf | win, global_local = true)
-    1.  local value = ???
-    2.  global value = fallback when the local value is "unset"
+    1. local value = ???
+    2. global value = fallback when the local value is "unset"
 
 # More Details
 
@@ -70,5 +70,7 @@ You can think of a window-local option as having values stored in a dictionary l
 	}
 }
 ```
+
 # Other Notes
+
 - When splitting a window to create a new one, window-local option values are copied from the previous window. This is true for most options, but there are a few exceptions like `previewwindow`.

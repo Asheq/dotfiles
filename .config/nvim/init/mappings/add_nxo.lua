@@ -90,7 +90,7 @@ ks_group({
 -- Map to Lua Functions
 -- ============================================================================
 
--- Map to Normal Mode Commands (via expr)
+-- Map to Normal Mode Commands (via expression)
 -- ----------------------------------------------------------------------------
 
 -- Scrolling

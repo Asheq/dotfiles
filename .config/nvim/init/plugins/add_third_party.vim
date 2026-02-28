@@ -18,8 +18,8 @@ Plug 'tpope/vim-rhubarb'
 
 " Code Intelligence
 " ----------------------------------------------------------------------------
-" Treesitter
-" NOTE: Treesitter incrementally parses code in real-time to maintain a syntax
+" Tree-sitter
+" NOTE: Tree-sitter incrementally parses code in real-time to maintain a syntax
 " tree, which is used to provide improved syntax highlighting, code folding,
 " indentation, and structural navigation/editing, etc. (compared to
 " traditional regex-based methods).
@@ -29,7 +29,7 @@ Plug 'nvim-treesitter/nvim-treesitter-context'
 " LSP
 " NOTE: Language servers handle language intelligence outside the editor to
 " provide completion, diagnostics, go-to-definition, find references, hover
-" documentation, code actions (refactoring, fixes), formatting, etc. via a
+" documentation, code actions (refactoring, fixes), formatting, etc., via a
 " standardized protocol (LSP).
 if executable('node')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
