@@ -48,26 +48,18 @@ require("CopilotChat").setup({
 
 require("catppuccin").setup({
 	highlight_overrides = {
-		all = function(colors)
+		all = function(C)
+			local U = require("catppuccin.utils.colors")
 			return {
-				MatchParen = { bg = colors.none, style = { "bold" } },
+				MatchParen       = { bg = C.none, style = { "bold" } },
+				Visual           = { bg = U.darken(C.peach, 0.18, C.base), style = {} },
+				DiffChange       = { bg = U.darken(C.mauve, 0.15, C.base), style = {} },
+				DiffText         = { bg = U.darken(C.mauve, 0.30, C.base), style = {} },
+				CocHighlightText = { bg = U.darken(C.red, 0.30, C.base), style = {} },
+				StatusLineNC     = { bg = C.subtext0, fg = C.surface2, style = { "italic" } },
+				StatusLine       = { bg = C.text, fg = C.crust, style = {} },
 			}
 		end,
-		mocha = function()
-			return {
-				-- TODO: Pick colors that match the palette better.
-				StatusLine = { bg = "darkgreen", fg = "white", style = {} },
-				StatusLineNC = { bg = "lightblue", fg = "black", style = {} },
-				CocHighlightText = { bg = "red", fg = "black", style = {} },
-
-				-- TODO: Pick colors where the background is close to the same
-				-- "darkness" as Normal to ensure that the original text is
-				-- visible.
-				Visual = { bg = "orange", fg = "black", style = {} },
-				DiffChange = { bg = "blue", style = {} },
-				DiffText = { bg = "purple", style = {} },
-			}
-		end
 	},
 	default_integrations = true,
 	auto_integrations = true,
