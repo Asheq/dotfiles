@@ -378,14 +378,6 @@ local function print_file_navigation_options()
 			},
 		},
 		{
-			title = "Keyword",
-			optnames = {
-				"iskeyword",
-				"isident",
-				"keywordprg",
-			},
-		},
-		{
 			title = "Tags",
 			optnames = {
 				"tags",
@@ -399,6 +391,18 @@ local function print_file_navigation_options()
 	})
 end
 
+local function print_keyword_options()
+	M.print_option_groups({
+		{
+			title = "Keyword",
+			optnames = {
+				"iskeyword",
+				"isident",
+				"keywordprg",
+			},
+		},
+	})
+end
 local function print_text_display_options()
 	M.print_option_groups({
 		{
@@ -483,6 +487,7 @@ function M.select_preset_options_to_print()
 		{ label = "Whitespace",      fn = print_whitespace_options },
 		{ label = "Folding",         fn = print_folding_options },
 		{ label = "File Navigation", fn = print_file_navigation_options },
+		{ label = "Keyword",         fn = print_keyword_options },
 		{ label = "Text Search",     fn = print_text_search_options },
 		{ label = "Modified",        fn = print_modified_options },
 	}
