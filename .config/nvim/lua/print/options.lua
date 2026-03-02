@@ -403,6 +403,7 @@ local function print_keyword_options()
 		},
 	})
 end
+
 local function print_text_display_options()
 	M.print_option_groups({
 		{

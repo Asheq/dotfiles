@@ -1,5 +1,5 @@
-local options = require("print.options")
-local mappings = require("print.mappings")
+local print_options = require("print.options")
+local print_mappings = require("print.mappings")
 local system_calls = require("system_calls")
 local nvim_word_list = require("nvim_word_list")
 
@@ -26,7 +26,7 @@ vim.api.nvim_create_user_command("PrintOptions", function(opts)
 		end
 	end
 
-	options.print_option_groups({ {
+	print_options.print_option_groups({ {
 		title = "Options",
 		optnames = optnames,
 	} }, conf)
@@ -38,18 +38,18 @@ end, {
 -- :PrintMappings                      → print mappings for all modes
 -- :PrintMappings {mode1} [mode2] ...  → print mappings for specified modes
 vim.api.nvim_create_user_command("PrintMappings", function(opts)
-	local modes, err = mappings.normalize_modes(opts.fargs)
+	local modes, err = print_mappings.normalize_modes(opts.fargs)
 	if err then
 		vim.notify("PrintMappings: " .. err, vim.log.levels.ERROR)
 		return
 	end
 
-	mappings.print_mappings(modes)
+	print_mappings.print_mappings(modes)
 end, {
 	nargs = "*",
 	complete = function(arglead)
 		local out = {}
-		for _, m in ipairs(mappings.valid_modes()) do
+		for _, m in ipairs(print_mappings.valid_modes()) do
 			if arglead == "" or vim.startswith(m, arglead) then
 				table.insert(out, m)
 			end
