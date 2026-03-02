@@ -51,11 +51,14 @@ require("catppuccin").setup({
 		all = function(colors)
 			return {
 				MatchParen = { bg = colors.none, style = { "bold" } },
+
 				-- TODO: Pick better colors for these:
 				CocHighlightText = { bg = "red", fg = "black", style = {} },
 				Visual = { bg = "orange", fg = "black", style = {} },
-				StatusLine = { bg = "lightblue", fg = "black", style = {} },
-				StatusLineNC = { bg = "blue", fg = "white", style = {} }
+				StatusLine = { bg = "darkgreen", fg = "white", style = {} },
+				StatusLineNC = { bg = "lightblue", fg = "black", style = {} },
+				DiffChange = { bg = "blue", style = {} },
+				DiffText = { bg = "purple", style = {} },
 			}
 		end
 	},
