@@ -1,3 +1,5 @@
+-- TODO: Remove this file
+
 local hi = vim.api.nvim_set_hl
 
 local function on_background_change()

@@ -18,10 +18,8 @@ vim.opt.diffopt = {
 	"internal",
 	"filler",
 	"closeoff",
-	"algorithm:histogram",
 	"indent-heuristic",
-	-- NOTE: Disables context folding
-	"context:999999",
+	"algorithm:histogram",
 	-- NOTE: If diffs are slow, reduce the number 400 (default is 40).
 	"linematch:400",
 	-- NOTE: These options are not available in NVIM v0.11.6. I will turn them on

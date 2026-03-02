@@ -50,6 +50,14 @@ Plug 'azabiong/vim-highlighter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 Plug 'folke/snacks.nvim'
 
+" Color schemes
+" ----------------------------------------------------------------------------
+Plug 'catppuccin/nvim'
+" Plug 'folke/tokyonight.nvim'
+" Plug 'rebelot/kanagawa.nvim'
+" Plug 'rose-pine/neovim'
+" Plug 'EdenEast/nightfox.nvim'
+
 " End
 " ----------------------------------------------------------------------------
 " plug#end() automatically executes:

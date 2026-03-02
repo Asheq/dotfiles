@@ -36,7 +36,6 @@ source_lua("init/options/set_wrap.lua")
 -- Highlighting
 source_lua("init/highlighting/yank.lua")
 source_lua("init/highlighting/start_treesitter.lua")
-source_lua("init/highlighting/override.lua")
 
 -- User Commands
 source_lua("init/user_commands/create.lua")
