@@ -5,10 +5,18 @@ local function on_background_change()
 		hi(0, "Visual", { bg = "#bda9b0", force = true })
 		hi(0, "Substitute", { fg = "#ffffff", bg = "#b16286", force = true })
 		hi(0, "CursorLine", { bg = "#c6d3cf", force = true })
+
+		-- TODO
+		-- hi(0, "DiffAdd", { bg = "#c6d3cf", force = true })
+		-- hi(0, "DiffChange", { bg = "#bda9b0", force = true })
 	else
 		hi(0, "Visual", { bg = "#45353b", force = true })
 		hi(0, "Substitute", { fg = "#ffffff", bg = "#b16286", force = true })
 		hi(0, "CursorLine", { bg = "#32413c", force = true })
+
+		-- TODO
+		-- hi(0, "DiffAdd", { bg = "#32413c", force = true })
+		-- hi(0, "DiffChange", { bg = "#45353b", force = true })
 	end
 end
 

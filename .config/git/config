@@ -1,5 +1,7 @@
 [user]
     name = Asheq Imran
+[diff]
+    algorithm = histogram
 [color "diff"]
     meta = blue
 [color "diff-highlight"]

@@ -126,28 +126,75 @@ local function print_general_options()
 			},
 		},
 		{
-			title = "Comments",
-			optnames = {
-				"comments",
-				"commentstring",
-			},
-		},
-		{
 			title = "Other",
 			optnames = {
 				"matchpairs",
 				"omnifunc",
 			},
-		},
+		}
+	})
+end
+
+local function print_commenting_options()
+	M.print_option_groups({
 		{
-			title = "Spell",
+			title = "Commenting",
+			optnames = {
+				"comments",
+				"commentstring",
+			},
+		},
+	})
+end
+
+local function print_spell_checking_options()
+	M.print_option_groups({
+		{
+			title = "Main",
 			optnames = {
 				"spell",
+				"spelloptions",
 				"spelllang",
 				"spellfile",
-				"spelloptions",
+			},
+		},
+		{
+			title = "Other",
+			optnames = {
 				"spellsuggest",
 				"spellcapcheck",
+			},
+		},
+	})
+end
+
+local function print_diff_options()
+	M.print_option_groups({
+		{
+			title = "Diff",
+			optnames = {
+				"diffopt",
+				"diffexpr",
+			},
+		},
+		{
+			title = "Patch",
+			optnames = {
+				"patchexpr",
+				"patchmode",
+			},
+		},
+		{
+			title = "Auto-updated in diff mode",
+			optnames = {
+				"diff",
+				"wrap",
+				"cursorbind",
+				"scrollbind",
+				"scrollopt",
+				"foldenable",
+				"foldmethod",
+				"foldcolumn",
 			},
 		},
 	})
@@ -156,16 +203,25 @@ end
 local function print_display_options()
 	M.print_option_groups({
 		{
-			title = "Window chrome",
+			title = "Tab line",
 			optnames = {
 				"showtabline",
 				"tabline",
+			},
+		},
+		{
+			title = "Status line",
+			optnames = {
 				"laststatus",
 				"statusline",
+			},
+		},
+		{
+			title = "Window bar, status column, sign column",
+			optnames = {
 				"winbar",
 				"statuscolumn",
 				"signcolumn",
-				"fillchars",
 			},
 		},
 		{
@@ -177,12 +233,11 @@ local function print_display_options()
 			},
 		},
 		{
-			title = "Cursor indicators",
+			title = "Cursor indicator",
 			optnames = {
 				"cursorline",
 				"cursorlineopt",
 				"cursorcolumn",
-				"colorcolumn",
 			},
 		},
 		{
@@ -194,13 +249,21 @@ local function print_display_options()
 				"concealcursor",
 			},
 		},
+		{
+			title = "Other",
+			optnames = {
+				"fillchars",
+				"colorcolumn",
+			},
+		},
 	})
 end
 
 local function print_formatting_options()
+	-- Formatting with `gq`/`gw` operators
 	M.print_option_groups({
 		{
-			title = "Formatting methods for gq/gw operator (ascending priority)",
+			title = "Formatting methods (ascending priority)",
 			optnames = {
 				"formatprg",
 				"formatexpr",
@@ -268,7 +331,7 @@ end
 local function print_folding_options()
 	M.print_option_groups({
 		{
-			title = "State",
+			title = "Fold state",
 			optnames = {
 				"foldenable",
 				"foldlevel",
@@ -279,6 +342,11 @@ local function print_folding_options()
 			title = "Fold method",
 			optnames = {
 				"foldmethod",
+			},
+		},
+		{
+			title = "Fold method specifics",
+			optnames = {
 				"foldexpr",
 				"foldmarker",
 			},
@@ -319,18 +387,18 @@ local function print_search_options()
 			},
 		},
 		{
-			title = "Grep",
-			optnames = {
-				"grepprg",
-				"grepformat",
-			},
-		},
-		{
 			title = "Keyword",
 			optnames = {
 				"iskeyword",
 				"isident",
 				"keywordprg",
+			},
+		},
+		{
+			title = "Grep",
+			optnames = {
+				"grepprg",
+				"grepformat",
 			},
 		},
 		{
@@ -340,6 +408,26 @@ local function print_search_options()
 				"smartcase",
 			},
 		},
+	})
+end
+
+local function print_wrapping_options()
+	M.print_option_groups({
+		{
+			title = "Wrapping",
+			optnames = {
+				"wrap",
+				"linebreak",
+				"breakindent",
+				"breakindentopt",
+				"showbreak",
+			},
+		},
+	})
+end
+
+local function print_tag_options()
+	M.print_option_groups({
 		{
 			title = "Tags",
 			optnames = {
@@ -378,30 +466,19 @@ local function print_modified_options()
 	})
 end
 
-local function print_wrapping_options()
-	M.print_option_groups({
-		{
-			title = "Wrapping",
-			optnames = {
-				"wrap",
-				"linebreak",
-				"breakindent",
-				"breakindentopt",
-				"showbreak",
-			},
-		},
-	})
-end
-
 function M.select_preset_options_to_print()
 	local items = {
 		{ label = "General",    fn = print_general_options },
+		{ label = "Comment",    fn = print_commenting_options },
+		{ label = "Spell",      fn = print_spell_checking_options },
+		{ label = "Diff",       fn = print_diff_options },
 		{ label = "Display",    fn = print_display_options },
 		{ label = "Formatting", fn = print_formatting_options },
 		{ label = "Whitespace", fn = print_whitespace_options },
 		{ label = "Wrap",       fn = print_wrapping_options },
 		{ label = "Folding",    fn = print_folding_options },
 		{ label = "Search",     fn = print_search_options },
+		{ label = "Tag",        fn = print_tag_options },
 		{ label = "Modified",   fn = print_modified_options },
 	}
 
