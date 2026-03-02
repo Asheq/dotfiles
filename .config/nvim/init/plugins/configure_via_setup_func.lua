@@ -47,6 +47,11 @@ require("CopilotChat").setup({
 })
 
 require("catppuccin").setup({
+	background = {
+		light = "latte",
+		dark = "frappe",
+	},
+	transparent_background = true,
 	highlight_overrides = {
 		all = function(C)
 			local U = require("catppuccin.utils.colors")
