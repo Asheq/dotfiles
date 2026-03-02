@@ -51,12 +51,19 @@ require("catppuccin").setup({
 		all = function(colors)
 			return {
 				MatchParen = { bg = colors.none, style = { "bold" } },
-
-				-- TODO: Pick better colors for these:
-				CocHighlightText = { bg = "red", fg = "black", style = {} },
-				Visual = { bg = "orange", fg = "black", style = {} },
+			}
+		end,
+		mocha = function()
+			return {
+				-- TODO: Pick colors that match the palette better.
 				StatusLine = { bg = "darkgreen", fg = "white", style = {} },
 				StatusLineNC = { bg = "lightblue", fg = "black", style = {} },
+				CocHighlightText = { bg = "red", fg = "black", style = {} },
+
+				-- TODO: Pick colors where the background is close to the same
+				-- "darkness" as Normal to ensure that the original text is
+				-- visible.
+				Visual = { bg = "orange", fg = "black", style = {} },
 				DiffChange = { bg = "blue", style = {} },
 				DiffText = { bg = "purple", style = {} },
 			}
