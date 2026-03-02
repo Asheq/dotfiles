@@ -61,6 +61,7 @@ require("catppuccin").setup({
 				DiffChange       = { bg = U.darken(C.mauve, 0.15, C.base), style = {} },
 				DiffText         = { bg = U.darken(C.mauve, 0.30, C.base), style = {} },
 				CocHighlightText = { bg = U.darken(C.red, 0.30, C.base), style = {} },
+				-- NOTE: I can probably remove these when I add mini.statusline
 				StatusLineNC     = { bg = C.subtext0, fg = C.surface2, style = { "italic" } },
 				StatusLine       = { bg = C.text, fg = C.crust, style = {} },
 			}
