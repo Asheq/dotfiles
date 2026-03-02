@@ -54,6 +54,8 @@ require("catppuccin").setup({
 				-- TODO: Pick better colors for these:
 				CocHighlightText = { bg = "red", fg = "black", style = {} },
 				Visual = { bg = "orange", fg = "black", style = {} },
+				StatusLine = { bg = "lightblue", fg = "black", style = {} },
+				StatusLineNC = { bg = "blue", fg = "white", style = {} }
 			}
 		end
 	},
