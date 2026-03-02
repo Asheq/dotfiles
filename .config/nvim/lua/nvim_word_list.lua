@@ -9,6 +9,27 @@ for _, pattern in ipairs(ignore_words) do
 	ignore_words_set[pattern] = true
 end
 
+--- Collect all string keys from a table, recursively up to max_depth
+---@param tbl table
+---@param max_depth? integer
+---@param depth? integer
+---@return string[]
+local function collect_keys(tbl, max_depth, depth)
+	depth = depth or 0
+	max_depth = max_depth or 3
+	local words = {}
+	if depth >= max_depth then return words end
+	for name, val in pairs(tbl) do
+		if type(name) == "string" then
+			table.insert(words, name)
+			if type(val) == "table" then
+				vim.list_extend(words, collect_keys(val, max_depth, depth + 1))
+			end
+		end
+	end
+	return words
+end
+
 function M.update_spell_file()
 	local categories = {
 		["function"] = function() return vim.fn.getcompletion("", "function") end,
@@ -31,6 +52,7 @@ function M.update_spell_file()
 		sign = function() return vim.fn.getcompletion("", "sign") end,
 		syntime = function() return vim.fn.getcompletion("", "syntime") end,
 		var = function() return vim.fn.getcompletion("", "var") end,
+		lua_vim = function() return collect_keys(vim, 2) end,
 	}
 
 	-- Collect words into a set to deduplicate
