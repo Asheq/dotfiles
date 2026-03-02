@@ -45,3 +45,27 @@ require("CopilotChat").setup({
 		jump_to_diff = { normal = "", insert = "" }
 	}
 })
+
+require("catppuccin").setup({
+	highlight_overrides = {
+		all = function(colors)
+			return {
+				MatchParen = { bg = colors.none, style = { "bold" } },
+				-- TODO: Pick better colors for these:
+				CocHighlightText = { bg = "red", fg = "black", style = {} },
+				Visual = { bg = "orange", fg = "black", style = {} },
+			}
+		end
+	},
+	default_integrations = true,
+	auto_integrations = true,
+	integrations = {
+		coc_nvim = true,
+		copilot_vim = true,
+		treesitter_context = true,
+		snacks = {
+			enabled = true,
+		},
+		sandwich = false
+	}
+})

@@ -45,3 +45,6 @@ source_lua("init/ft_detection/add.lua")
 
 -- Other
 source_lua("init/terminal/show_prompt_signs.lua")
+
+-- Last
+vim.cmd("colorscheme catppuccin")
