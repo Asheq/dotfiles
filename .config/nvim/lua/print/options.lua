@@ -2,6 +2,12 @@ local util = require("util")
 
 local M = {}
 
+-- Global types
+-- ===========================================================================
+---@alias PrintOptionsConf { print_default_value: boolean? }
+---@alias PrintOptionGroup PrintOptionSubgroup[]
+---@alias PrintOptionSubgroup { title: string, optnames: string[] }
+
 -- Print a single option
 -- ============================================================================
 
@@ -39,9 +45,9 @@ local function print_option_value(label, value, info, printer)
 end
 
 ---@param optname string
----@param conf { print_default_value: boolean? }?
 ---@param printer Printer
-local function print_option(optname, conf, printer)
+---@param conf PrintOptionsConf?
+local function print_option(optname, printer, conf)
 	local print_default_value = conf and conf.print_default_value or false
 
 	local info = vim.api.nvim_get_option_info2(optname, {})
@@ -85,33 +91,34 @@ local function print_option(optname, conf, printer)
 	end
 end
 
--- Print option groups
+-- Print an option group
 -- ============================================================================
----@param groups { title: string, optnames: string[] }[]
----@param conf { print_default_value: boolean? }?
-function M.print_option_groups(groups, conf)
+---@param group PrintOptionGroup
+---@param conf PrintOptionsConf?
+function M.print_option_group(group, conf)
 	local printer = util.new_printer({ history = true })
 	local half_screen_cols = math.ceil(vim.opt.columns:get() / 2)
 
-	for _, group in ipairs(groups) do
-		-- Print group title
-		local extra_space = math.max(half_screen_cols - #group.title, 0)
-		printer:append_line({ { group.title .. string.rep(" ", extra_space), "Underlined" } }, 0)
+	for _, subgroup in ipairs(group) do
+		-- Print subgroup title
+		local extra_space = math.max(half_screen_cols - #subgroup.title, 0)
+		printer:append_line({ { subgroup.title .. string.rep(" ", extra_space), "Underlined" } }, 0)
 
-		-- Print group options
-		for _, optname in ipairs(group.optnames) do
-			print_option(optname, conf, printer)
+		-- Print subgroup options
+		for _, optname in ipairs(subgroup.optnames) do
+			print_option(optname, printer, conf)
 		end
 	end
 
 	printer:flush()
 end
 
--- Print preset options
+-- Print a preset option group
 -- ============================================================================
 
-local function print_general_options()
-	M.print_option_groups({
+---@param conf PrintOptionsConf?
+local function print_general_group(conf)
+	M.print_option_group({
 		{
 			title = "File type",
 			optnames = {
@@ -132,11 +139,12 @@ local function print_general_options()
 				"omnifunc",
 			},
 		}
-	})
+	}, conf)
 end
 
-local function print_comment_options()
-	M.print_option_groups({
+---@param conf PrintOptionsConf?
+local function print_comment_group(conf)
+	M.print_option_group({
 		{
 			title = "Main",
 			optnames = {
@@ -144,11 +152,12 @@ local function print_comment_options()
 				"commentstring",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_spell_options()
-	M.print_option_groups({
+---@param conf PrintOptionsConf?
+local function print_spell_group(conf)
+	M.print_option_group({
 		{
 			title = "Main",
 			optnames = {
@@ -165,11 +174,12 @@ local function print_spell_options()
 				"spellcapcheck",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_diff_options()
-	M.print_option_groups({
+---@param conf PrintOptionsConf?
+local function print_diff_group(conf)
+	M.print_option_group({
 		{
 			title = "Diff",
 			optnames = {
@@ -197,11 +207,12 @@ local function print_diff_options()
 				"foldcolumn",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_ui_options()
-	M.print_option_groups({
+---@param conf PrintOptionsConf?
+local function print_ui_group(conf)
+	M.print_option_group({
 		{
 			title = "Tab line",
 			optnames = {
@@ -247,12 +258,13 @@ local function print_ui_options()
 				"colorcolumn",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_text_formatting_options()
+---@param conf PrintOptionsConf?
+local function print_text_formatting_group(conf)
 	-- Formatting with `gq`/`gw` operators
-	M.print_option_groups({
+	M.print_option_group({
 		{
 			title = "Formatting methods (ascending priority)",
 			optnames = {
@@ -270,11 +282,12 @@ local function print_text_formatting_options()
 				"joinspaces",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_whitespace_options()
-	M.print_option_groups({
+---@param conf PrintOptionsConf?
+local function print_whitespace_group(conf)
+	M.print_option_group({
 		{
 			title = "Auto-indenting, shifting, editing whitespace",
 			optnames = {
@@ -316,11 +329,12 @@ local function print_whitespace_options()
 				"equalprg",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_folding_options()
-	M.print_option_groups({
+---@param conf PrintOptionsConf?
+local function print_folding_group(conf)
+	M.print_option_group({
 		{
 			title = "Fold state",
 			optnames = {
@@ -354,11 +368,12 @@ local function print_folding_options()
 				"foldnestmax",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_file_navigation_options()
-	M.print_option_groups({
+---@param conf PrintOptionsConf?
+local function print_file_navigation_group(conf)
+	M.print_option_group({
 		{
 			title = "File finding (gf, :find)",
 			optnames = {
@@ -388,11 +403,12 @@ local function print_file_navigation_options()
 				"tagrelative",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_keyword_options()
-	M.print_option_groups({
+---@param conf PrintOptionsConf?
+local function print_keyword_group(conf)
+	M.print_option_group({
 		{
 			title = "Keyword",
 			optnames = {
@@ -401,11 +417,12 @@ local function print_keyword_options()
 				"keywordprg",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_text_display_options()
-	M.print_option_groups({
+---@param conf PrintOptionsConf?
+local function print_text_display_group(conf)
+	M.print_option_group({
 		{
 			title = "List",
 			optnames = {
@@ -430,11 +447,12 @@ local function print_text_display_options()
 				"showbreak",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_text_search_options()
-	M.print_option_groups({
+---@param conf PrintOptionsConf?
+local function print_text_search_group(conf)
+	M.print_option_group({
 		{
 			title = "Grep",
 			optnames = {
@@ -449,10 +467,11 @@ local function print_text_search_options()
 				"smartcase",
 			},
 		},
-	})
+	}, conf)
 end
 
-local function print_modified_options()
+---@param conf PrintOptionsConf?
+local function print_modified_group(conf)
 	local modified_options = {}
 	local info_by_name = vim.api.nvim_get_all_options_info()
 
@@ -466,41 +485,42 @@ local function print_modified_options()
 
 	table.sort(modified_options)
 
-	M.print_option_groups({
+	M.print_option_group({
 		{
 			title = "All options where effective value is diff than default value",
 			optnames = modified_options,
 		},
-	}, {
+	}, conf or {
 		print_default_value = true,
 	})
 end
 
-function M.select_preset_options_to_print()
+---@param conf PrintOptionsConf?
+function M.select_preset_group(conf)
 	local items = {
-		{ label = "General",         fn = print_general_options },
-		{ label = "Comment",         fn = print_comment_options },
-		{ label = "Spell",           fn = print_spell_options },
-		{ label = "Diff",            fn = print_diff_options },
-		{ label = "UI",              fn = print_ui_options },
-		{ label = "Text Display",    fn = print_text_display_options },
-		{ label = "Text Formatting", fn = print_text_formatting_options },
-		{ label = "Whitespace",      fn = print_whitespace_options },
-		{ label = "Folding",         fn = print_folding_options },
-		{ label = "File Navigation", fn = print_file_navigation_options },
-		{ label = "Keyword",         fn = print_keyword_options },
-		{ label = "Text Search",     fn = print_text_search_options },
-		{ label = "Modified",        fn = print_modified_options },
+		{ label = "General",         fn = print_general_group },
+		{ label = "Comment",         fn = print_comment_group },
+		{ label = "Spell",           fn = print_spell_group },
+		{ label = "Diff",            fn = print_diff_group },
+		{ label = "UI",              fn = print_ui_group },
+		{ label = "Text Display",    fn = print_text_display_group },
+		{ label = "Text Formatting", fn = print_text_formatting_group },
+		{ label = "Whitespace",      fn = print_whitespace_group },
+		{ label = "Folding",         fn = print_folding_group },
+		{ label = "File Navigation", fn = print_file_navigation_group },
+		{ label = "Keyword",         fn = print_keyword_group },
+		{ label = "Text Search",     fn = print_text_search_group },
+		{ label = "Modified",        fn = print_modified_group },
 	}
 
 	vim.ui.select(items, {
-		prompt = "Print options:",
+		prompt = "Print preset option group:",
 		format_item = function(item)
 			return item.label
 		end,
 	}, function(choice)
 		if choice and type(choice.fn) == "function" then
-			choice.fn()
+			choice.fn(conf)
 		end
 	end)
 end

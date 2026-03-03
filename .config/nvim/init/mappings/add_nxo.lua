@@ -161,4 +161,4 @@ ks_group({
 
 -- Map to Other Lua Functions
 -- ---------------------------------------------------------------------------
-ks("n", "<C-g>", print_options.select_preset_options_to_print)
+ks("n", "<C-g>", print_options.select_preset_group)
