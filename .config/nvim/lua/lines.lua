@@ -34,7 +34,7 @@ end
 ---@return string
 function M.get_statusline()
 	return
-	"%{v:lua.require('lines').get_statusline_file_name()}  %h%w%m%r%=[%P %{noscrollbar#statusline(10,'■','◫',['◧'],['◨'])} %L]%([%{v:lua.require('lines').get_statusline_window_cwd()}]%)"
+	"%{v:lua.require('lines').get_statusline_file_name()} %h%w%m%r%=[%P %{noscrollbar#statusline(10,'■','◫',['◧'],['◨'])} %L]%([%{v:lua.require('lines').get_statusline_window_cwd()}]%)"
 end
 
 -- NOTE: Unlike %f, this function always returns the file name relative to the
@@ -45,6 +45,11 @@ function M.get_statusline_file_name()
 	-- is being drawn, not the active window.
 	local winid = vim.fn.win_getid()
 	local bufnr = vim.fn.winbufnr(winid)
+
+	if vim.bo[bufnr].buftype == "terminal" then
+		return M.get_statusline_term_title(bufnr)
+	end
+
 	local bufname = vim.fn.bufname(bufnr)
 
 	if bufname == "" then
@@ -60,6 +65,16 @@ function M.get_statusline_file_name()
 	else
 		return vim.fn.fnamemodify(bufpath, ":~")
 	end
+end
+
+---@param bufnr integer
+---@return string
+function M.get_statusline_term_title(bufnr)
+	local title = vim.b[bufnr].term_title
+	if title and title ~= "" then
+		return title
+	end
+	return "[Terminal]"
 end
 
 ---@return string
