@@ -1,8 +1,8 @@
 #!/bin/sh
 
-export EDITOR='nvim'
+export EDITOR='nvimp'
 export VISUAL="$EDITOR"
 
-export MANPAGER='nvim +Man!'
+export MANPAGER='nvimp +Man!'
 
 export NVM_DIR=~/.nvm

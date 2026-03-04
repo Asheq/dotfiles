@@ -17,7 +17,7 @@ complete -o dirnames -o nospace -F _fzf_dir_completion c
 
 alias o='open'
 
-alias v='nvim'
+alias v='nvimp'
 
 # Bookmarks
 # ==============================================================================

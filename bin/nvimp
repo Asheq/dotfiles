@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -n "$NVIM" ]; then
+    # Inside Neovim: open file in the parent instance
+    nvim --server "$NVIM" --remote "$@"
+else
+    # Outside Neovim: just launch normally
+    nvim "$@"
+fi
