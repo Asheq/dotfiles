@@ -17,14 +17,15 @@ __glyph_success='✔'
 __glyph_user='User'
 
 function __prompt_command() {
-	local start='\[\e]133;A\e\\\]'
+	# Must be first: any command (even `local`) clobbers $?
 	local exit_code="$?"
+	local start='\[\e]133;A\e\\\]'
 	PS1="${start}"
 	PS1+="${__style_connector}╭─"
 	PS1+="$(__prompt_section_pwd)"
 	PS1+="$(__prompt_section_git)"
 	PS1+="$(__prompt_section_other)"
-	PS1+="$(__prompt_section_exit_code ${exit_code})"
+	PS1+="$(__prompt_section_exit_code "${exit_code}")"
 	PS1+="\n"
 	PS1+="${__style_connector}╰─$ "
 	PS1+="${__style_reset}"
@@ -122,7 +123,7 @@ function __prompt_flag_not_login_shell() {
 
 function __prompt_section_exit_code() {
 	local exit_code="$1"
-	if [[ "${exit_code}" != 0 ]]; then
+	if [[ "${exit_code}" -ne 0 ]]; then
 		printf '%s' "${__style_error} ${exit_code} "
 	else
 		printf '%s' "${__style_success} ${__glyph_success} "
