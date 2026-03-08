@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "lua",
+	pattern = {"lua", "markdown"},
 	callback = function()
 		vim.opt_local.spelllang:append("vim")
 	end,

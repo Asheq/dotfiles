@@ -62,7 +62,8 @@ ks_group({
 -- t = tab
 ks_group({
 	{ { "n", "x" }, "<leader>c", ":CopilotChat<C-z><C-p>" },
-	{ "n",          "<leader>g", ":sil gr!  | cw<S-Left><S-Left><Left>" },
+	{ "n",          "<leader>g", ":sil gr!  | bot cw<S-Left><S-Left><S-Left><Left>" },
+	{ "n",          "<leader>l", ":sil lgr!  | lw<S-Left><S-Left><Left>" },
 	{ "n",          "<leader>r", ":redi @r | sil  | redi END<S-Left><S-Left><S-Left><Left>" },
 	{ "n",          "<leader>t", ":tab<C-z><C-p>" },
 })
