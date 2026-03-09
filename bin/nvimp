@@ -2,7 +2,7 @@
 
 if [ -n "$NVIM" ]; then
     # Inside Neovim: open file in the parent instance
-    nvim --server "$NVIM" --remote "$@"
+	nvim --server "$NVIM" --remote-wait "$@"
 else
     # Outside Neovim: just launch normally
     nvim "$@"
