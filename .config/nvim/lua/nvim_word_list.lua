@@ -55,43 +55,50 @@ function M.update_spell_file()
 		lua_vim = function() return collect_keys(vim, 2) end,
 	}
 
-	-- Collect words into a set to deduplicate
-	local word_set = {}
-	for _, get_words in pairs(categories) do
-		local words = get_words()
+	-- Collect words grouped by category, deduplicated within each
+	local sorted_names = {}
+	for name in pairs(categories) do
+		table.insert(sorted_names, name)
+	end
+	table.sort(sorted_names)
+
+	local all_lines = {}
+	local total_count = 0
+	for _, name in ipairs(sorted_names) do
+		table.insert(all_lines, "# " .. name)
+		local words = categories[name]()
 		if words then
+			local seen = {}
+			local processed = {}
 			for _, word in ipairs(words) do
 				if word and word ~= "" then
-					-- Truncate at the first '('
 					word = word:match("^([^(]+)") or word
-					-- Split on '/' and add each part
 					for part in word:gmatch("[^/]+") do
-						if part ~= "" and #part > 1 then
-							word_set[part] = true
+						if part ~= "" and #part > 1 and not seen[part] and not ignore_words_set[part] then
+							seen[part] = true
+							table.insert(processed, part)
 						end
 					end
 				end
 			end
+			table.sort(processed)
+			for _, w in ipairs(processed) do
+				table.insert(all_lines, w)
+			end
+			total_count = total_count + #processed
 		end
 	end
 
-	-- Add extra words
-	for _, word in ipairs(extra_words) do
-		if word and word ~= "" then
-			word_set[word] = true
+	-- Add extra words section
+	if #extra_words > 0 then
+		table.insert(all_lines, "# extra_words")
+		for _, word in ipairs(extra_words) do
+			if word and word ~= "" and not ignore_words_set[word] then
+				table.insert(all_lines, word)
+				total_count = total_count + 1
+			end
 		end
 	end
-
-	-- Remove ignored words
-	local filtered_words = {}
-	for word in pairs(word_set) do
-		if not ignore_words_set[word] then
-			table.insert(filtered_words, word)
-		end
-	end
-
-	-- Sort words
-	table.sort(filtered_words)
 
 	-- Write words to a portable temp file
 	local wordfile = vim.fn.tempname() .. ".lst"
@@ -103,8 +110,8 @@ function M.update_spell_file()
 		)
 		return
 	end
-	for _, word in ipairs(filtered_words) do
-		opened_wordfile:write(word .. "\n")
+	for _, line in ipairs(all_lines) do
+		opened_wordfile:write(line .. "\n")
 	end
 	opened_wordfile:close()
 
@@ -128,7 +135,7 @@ function M.update_spell_file()
 	vim.notify(
 		string.format(
 			"nvim_word_list: Spellfile updated with %d words at %s/vim.*.spl",
-			#filtered_words,
+			total_count,
 			spelldir
 		),
 		vim.log.levels.INFO
