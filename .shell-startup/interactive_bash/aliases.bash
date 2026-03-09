@@ -17,7 +17,7 @@ complete -o dirnames -o nospace -F _fzf_dir_completion c
 
 alias o='open'
 
-# NTOE: I can still use nvim and vim directly
+# NTOE: I can still use `nvim` and `vim` directly
 alias v='nvim-smart-open'
 
 
