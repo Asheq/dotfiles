@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ -n "$NVIM" ]; then
+	# Inside Neovim (terminal buffer): open file in the parent instance
+	nvim --server "$NVIM" --remote "$@"
+	
+	# TODO: Use `--remote-wait` flag so commands like "git commit" work
+	# properly. Will need to wait until this flag becomes available in the
+	# latest Neovim release.
+	# nvim --server "$NVIM" --remote-wait "$@"
+else
+    # Outside Neovim: just launch normally
+    nvim "$@"
+fi
