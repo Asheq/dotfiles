@@ -1,3 +1,5 @@
 {
-	"inlayHint.enable": false
+	"inlayHint.enable": false,
+	"list.previousKeymap": "<C-p>",
+	"list.nextKeymap": "<C-n>"
 }

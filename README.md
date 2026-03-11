@@ -10,3 +10,4 @@
 - [SteerMouse](https://plentycom.jp/en/steermouse/) - Mouse customizer
 - [Rectangle](https://rectangleapp.com/) - Tiling window manager
 - [Hammerspoon](https://www.hammerspoon.org/) - OS automation tool
+- [OpenSSH](https://www.openssh.com/) - SSH utilities
