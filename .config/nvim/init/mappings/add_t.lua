@@ -1,3 +1,3 @@
 local ks = vim.keymap.set
 
-ks("t", "<C-Esc>", "<C-\\><C-n>")
+ks("t", "<S-Esc>", "<C-\\><C-n>")
