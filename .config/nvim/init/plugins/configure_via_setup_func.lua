@@ -58,9 +58,15 @@ require("catppuccin").setup({
 			return {
 				MatchParen       = { bg = C.none, style = { "bold" } },
 				Visual           = { bg = U.darken(C.peach, 0.18, C.base), style = {} },
+
+				-- Diff*
 				DiffChange       = { bg = U.darken(C.mauve, 0.15, C.base), style = {} },
 				DiffText         = { bg = U.darken(C.mauve, 0.30, C.base), style = {} },
+
+				-- Coc*
 				CocHighlightText = { bg = U.darken(C.red, 0.30, C.base), style = {} },
+
+				-- StatusLine*
 				-- NOTE: I can probably remove these when I add mini.statusline
 				StatusLineNC     = { bg = C.subtext0, fg = C.surface2, style = { "italic" } },
 				StatusLine       = { bg = C.text, fg = C.crust, style = {} },
