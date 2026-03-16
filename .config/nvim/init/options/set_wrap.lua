@@ -13,4 +13,4 @@ vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.breakindent = true
 vim.opt.breakindentopt = "list:-1"
-vim.opt.showbreak = "↪"
+vim.opt.showbreak = "⤷ "
