@@ -10,6 +10,7 @@
 
 # Documentation
 !/README.md
+!/OTHER-APPS.md
 !/BASH-STARTUP.md
 
 # Standard config files/directories at root-level

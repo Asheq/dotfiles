@@ -8,7 +8,7 @@ local function captureNextChar(callback)
 	eventtap = hs.eventtap.new({ hs.eventtap.event.types.keyDown }, function(event)
 		local char = event:getCharacters()
 		local keyCode = event:getKeyCode()
-		-- Escape key cancels (keyCode 53 on macOS)
+		-- Escape key cancels (keyCode 53)
 		if keyCode == 53 then
 			eventtap:stop()
 			hs.alert.closeSpecific(alertId)
