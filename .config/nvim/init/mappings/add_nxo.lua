@@ -58,6 +58,7 @@ ks_group({
 -- Mnemonic:
 -- c = chat
 -- g = grep
+-- l = lgrep
 -- r = redirect
 -- t = tab
 ks_group({
@@ -76,7 +77,7 @@ ks_group({
 -- s = status
 -- w = write
 ks_group({
-	{ "n", "<leader>j", "<Cmd>jumps<CR>" },
+	{ "n", "<leader>j", "<Cmd>jumps<CR>" }, -- TODO: Use vim.ui.select to select jump
 	{ "n", "<leader>o", "<Cmd>Open %:h<CR>" },
 	{ "n", "<leader>s", "<Cmd>Git<CR>" },
 	{ "n", "<leader>w", "<Cmd>silent update<CR>" }
@@ -106,19 +107,38 @@ ks_group({
 -- ---------------------------------------------------------------------------
 -- Mnemonic: yp = yank path
 ks("n", "yp", function()
-	local hint = " p = full path | p:. = from CWD | h = head | t = tail "
+	-- Hint lines showing the modifier options the user can type
+	local hint = {
+		" p   = full path ",
+		" p:. = from CWD ",
+		" h   = head ",
+		" t   = tail ",
+	}
+
+	-- Create a scratch buffer (not listed, not a real file)
 	local buf = vim.api.nvim_create_buf(false, true)
-	vim.api.nvim_buf_set_lines(buf, 0, -1, false, { hint })
+
+	-- Put the hint text into the buffer
+	vim.api.nvim_buf_set_lines(buf, 0, -1, false, hint)
+
+	local width = 0
+	for _, line in ipairs(hint) do
+		width = math.max(width, #line)
+	end
+
+	-- Open a floating window to display the hint near the bottom of the screen
 	local win = vim.api.nvim_open_win(buf, false, {
-		relative = "editor",
-		row = vim.o.lines - 3,
-		col = 0,
-		width = #hint,
-		height = 1,
-		style = "minimal",
-		border = "rounded",
+		relative = "editor", -- position relative to the whole editor
+		row = vim.o.lines, -- as close to the bottom as possible
+		col = 0,       -- left edge
+		width = width, -- just wide enough for the hint text
+		height = #hint, -- one line per modifier
+		style = "minimal", -- no line numbers, statusline, etc.
+		border = "rounded", -- rounded border
 	})
 
+	-- Set up a one-shot autocommand: when the user leaves the command line
+	-- (either by pressing Enter or Escape), close the floating window
 	vim.api.nvim_create_autocmd("CmdlineLeave", {
 		once = true,
 		callback = function()
@@ -128,8 +148,25 @@ ks("n", "yp", function()
 		end,
 	})
 
+	-- Translate <Left> from its string name to the actual key code
 	local LEFT = vim.api.nvim_replace_termcodes("<Left>", true, false, true)
+
+	-- Feed keystrokes to open the command line with:
+	--   :let @* = expand('%:')
+	-- then press Left twice to position the cursor where a modifier can be
+	-- entered.
 	vim.api.nvim_feedkeys(":let @* = expand('%:')" .. LEFT .. LEFT, "n", false)
+end)
+
+ks("n", "<leader>h", function()
+	local output = vim.api.nvim_exec2("chistory", { output = true }).output
+	local lines = vim.split(output, "\n", { trimempty = true })
+
+	vim.ui.select(lines, { prompt = "Quickfix History:" }, function(_, idx)
+		if idx then
+			vim.cmd("chistory " .. idx)
+		end
+	end)
 end)
 
 -- Map to System Calls
