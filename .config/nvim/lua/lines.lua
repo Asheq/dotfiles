@@ -33,29 +33,55 @@ end
 
 ---@return string
 function M.get_statusline()
-	return
-	"%{v:lua.require('lines').get_statusline_file_name()} %h%w%m%r%=[%P %{noscrollbar#statusline(10,'■','◫',['◧'],['◨'])} %L]%([%{v:lua.require('lines').get_statusline_window_cwd()}]%)"
-end
-
--- NOTE: Unlike %f, this function always returns the file name relative to the
--- effective CWD of the statusline window
----@return string
-function M.get_statusline_file_name()
 	-- In this context, win_getid() returns the window of the statusline that
 	-- is being drawn, not the active window.
 	local winid = vim.fn.win_getid()
 	local bufnr = vim.fn.winbufnr(winid)
 
+	local name_part = ""
 	if vim.bo[bufnr].buftype == "terminal" then
-		local bufname = vim.fn.bufname(bufnr)
-
-		local title = vim.b[bufnr].term_title
-		if title and title ~= "" and title ~= bufname then
-			return title .. " (" .. bufname .. ")"
-		end
-
-		return bufname
+		name_part = "%{v:lua.require('lines').get_terminal_name()}"
+	elseif vim.bo[bufnr].buftype == "quickfix" then
+		name_part = "%t%{v:lua.require('lines').get_quickfix_name()}"
+	else
+		name_part = "%{v:lua.require('lines').get_generic_name()}"
 	end
+
+	local parts = {
+		name_part,
+		" ",
+		"%h%w%m%r%",
+		"=",
+		"[%P %{noscrollbar#statusline(10,'■','◫',['◧'],['◨'])} %L]",
+		"%([%{v:lua.require('lines').get_statusline_window_cwd()}]%)",
+	}
+
+	return table.concat(parts, "")
+end
+
+function M.get_terminal_name()
+	local winid = vim.fn.win_getid()
+	local bufnr = vim.fn.winbufnr(winid)
+
+	local bufname = vim.fn.bufname(bufnr)
+	local term_title = vim.b[bufnr].term_title
+	return bufname .. (term_title and term_title ~= "" and term_title ~= bufname and " (" .. term_title .. ")" or "")
+end
+
+function M.get_quickfix_name()
+	local winid = vim.fn.win_getid()
+
+	local quickfix_title = vim.w[winid].quickfix_title
+
+	return quickfix_title and quickfix_title ~= "" and " " .. vim.trim(quickfix_title) or ""
+end
+
+-- NOTE: Unlike %f, this function always returns the file name relative to the
+-- effective CWD of the statusline window
+---@return string
+function M.get_generic_name()
+	local winid = vim.fn.win_getid()
+	local bufnr = vim.fn.winbufnr(winid)
 
 	local bufname = vim.fn.bufname(bufnr)
 

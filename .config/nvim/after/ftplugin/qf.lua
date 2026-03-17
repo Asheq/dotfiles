@@ -1,1 +1,1 @@
-vim.opt.statusline = "%{%v:lua.require('lines').get_statusline()%}"
+vim.opt_local.statusline = "%{%v:lua.require('lines').get_statusline()%}"
