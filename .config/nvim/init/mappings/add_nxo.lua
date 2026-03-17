@@ -12,7 +12,7 @@ local function ks_group(maps)
 		local mode = map[1]
 		local lhs = map[2]
 		local rhs = map[3]
-		local opts = map[4] or {}
+		local opts = map[4]
 		ks(mode, lhs, rhs, opts)
 	end
 end
@@ -69,15 +69,15 @@ ks_group({
 	{ "n",          "<leader>t", ":tab<C-z><C-p>" },
 })
 
--- Map to Full Ex Commands
+-- Map to Complete Ex Commands
 -- ---------------------------------------------------------------------------
 -- Mnemonic:
 -- j = jumps
 -- o = open
--- s = status
+-- s = status (git)
 -- w = write
 ks_group({
-	{ "n", "<leader>j", "<Cmd>jumps<CR>" }, -- TODO: Use vim.ui.select to select jump
+	{ "n", "<leader>j", "<Cmd>jumps<CR>" },
 	{ "n", "<leader>o", "<Cmd>Open %:h<CR>" },
 	{ "n", "<leader>s", "<Cmd>Git<CR>" },
 	{ "n", "<leader>w", "<Cmd>silent update<CR>" }
@@ -162,7 +162,7 @@ ks("n", "<leader>h", function()
 	local output = vim.api.nvim_exec2("chistory", { output = true }).output
 	local lines = vim.split(output, "\n", { trimempty = true })
 
-	vim.ui.select(lines, { prompt = "Quickfix History:" }, function(_, idx)
+	vim.ui.select(lines, { prompt = "Jump to quickfix list:" }, function(_, idx)
 		if idx then
 			vim.cmd("chistory " .. idx)
 		end
