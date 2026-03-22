@@ -158,28 +158,6 @@ ks("n", "yp", function()
 	vim.api.nvim_feedkeys(":let @* = expand('%:')" .. LEFT .. LEFT, "n", false)
 end)
 
-ks("n", "<leader>hh", function()
-	local output = vim.api.nvim_exec2("chistory", { output = true }).output
-	local lines = vim.split(output, "\n", { trimempty = true })
-
-	vim.ui.select(lines, { prompt = "Jump to quickfix list:" }, function(_, idx)
-		if idx then
-			vim.cmd("chistory " .. idx)
-		end
-	end)
-end)
-
-ks("n", "<leader>hl", function()
-	local output = vim.api.nvim_exec2("lhistory", { output = true }).output
-	local lines = vim.split(output, "\n", { trimempty = true })
-
-	vim.ui.select(lines, { prompt = "Jump to location list:" }, function(_, idx)
-		if idx then
-			vim.cmd("lhistory " .. idx)
-		end
-	end)
-end)
-
 -- Map to System Calls
 -- ----------------------------------------------------------------------------
 ks_group({

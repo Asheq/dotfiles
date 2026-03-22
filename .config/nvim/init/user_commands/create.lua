@@ -85,6 +85,30 @@ vim.api.nvim_create_user_command("NeovimWordListUpdate",
 	nvim_word_list.update_spell_file,
 	{})
 
+-- :ChistorySelect
+vim.api.nvim_create_user_command("ChistorySelect", function()
+	local output = vim.api.nvim_exec2("chistory", { output = true }).output
+	local lines = vim.split(output, "\n", { trimempty = true })
+
+	vim.ui.select(lines, { prompt = "Jump to quickfix list:" }, function(_, idx)
+		if idx then
+			vim.cmd("chistory " .. idx)
+		end
+	end)
+end, {})
+
+-- :LhistorySelect
+vim.api.nvim_create_user_command("LhistorySelect", function()
+	local output = vim.api.nvim_exec2("lhistory", { output = true }).output
+	local lines = vim.split(output, "\n", { trimempty = true })
+
+	vim.ui.select(lines, { prompt = "Jump to location list:" }, function(_, idx)
+		if idx then
+			vim.cmd("lhistory " .. idx)
+		end
+	end)
+end, {})
+
 -- :DiffAlgo         → prompt to select algorithm
 -- :DiffAlgo {algo}  → set specified algorithm
 vim.api.nvim_create_user_command("DiffAlgo", function(opts)
