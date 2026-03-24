@@ -25,6 +25,7 @@ alias v='nvim-smart-open'
 # ==============================================================================
 alias drive='cd ~/My\ Drive/'
 alias notes='cd ~/My\ Drive/Notes/'
+alias desk='cd ~/Desktop'
 alias vc='cd ~/.config/nvim'
 
 # git
