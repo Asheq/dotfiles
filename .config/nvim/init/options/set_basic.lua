@@ -9,11 +9,12 @@ vim.opt.splitright = true
 vim.opt.report = 1
 vim.opt.linespace = 5
 vim.opt.wildcharm = 26 -- 26 = ASCII decimal value of <C-z> key
+vim.opt.helpheight = 0
+vim.opt.shortmess:append("I")
 vim.opt.jumpoptions = "stack"
 vim.opt.guifont = "PragmataPro Mono:h22"
 vim.opt.wildignore = ".DS_Store,.tmp.drivedownload,.tmp.driveupload"
 vim.opt.tabline = "%{%v:lua.require('lines').get_tabline()%}"
-vim.opt.helpheight = 0
 vim.opt.diffopt = {
 	"internal",
 	"filler",
