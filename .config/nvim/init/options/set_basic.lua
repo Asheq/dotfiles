@@ -15,17 +15,6 @@ vim.opt.jumpoptions = "stack"
 vim.opt.guifont = "PragmataPro Mono:h22"
 vim.opt.wildignore = ".DS_Store,.tmp.drivedownload,.tmp.driveupload"
 vim.opt.tabline = "%{%v:lua.require('lines').get_tabline()%}"
-vim.opt.diffopt = {
-	"internal",
-	"filler",
-	"closeoff",
-	"indent-heuristic",
-	"algorithm:histogram",
-	-- NOTE: These options are not available in NVIM v0.11.6. I will turn them on
-	-- when I upgrade.
-	-- "inline:word",
-	-- "anchor"
-}
 
 -- Tab [+ Global]
 -- ----------------------------------------------------------------------------

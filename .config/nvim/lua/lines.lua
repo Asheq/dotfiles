@@ -50,8 +50,8 @@ function M.get_statusline()
 	local parts = {
 		name_part,
 		" ",
-		"%h%w%m%r%",
-		"=",
+		"%h%w%m%r",
+		"%=",
 		"[%P %{noscrollbar#statusline(10,'■','◫',['◧'],['◨'])} %L]",
 		"%([%{v:lua.require('lines').get_statusline_window_cwd()}]%)",
 	}
