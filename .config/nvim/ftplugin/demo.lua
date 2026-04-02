@@ -3,7 +3,7 @@ vim.b.demo_var_lua = "This is b:demo_var_lua"
 
 -- Global Lua function
 _G.DemoFuncLua = function()
-	print("Hello from DemoFuncLua()")
+	vim.notify("Hello from DemoFuncLua()")
 end
 
 -- Window-local option
@@ -16,7 +16,7 @@ end, { buffer = true })
 
 -- Buffer-local user command
 vim.api.nvim_buf_create_user_command(0, "DemoCmdLua", function()
-	print("Hello from :DemoCmdLua")
+	vim.notify("Hello from :DemoCmdLua")
 end, {})
 
 -- Undo ftplugin
