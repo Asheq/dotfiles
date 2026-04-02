@@ -105,7 +105,7 @@ function M.update_spell_file()
 	local opened_wordfile, open_err = io.open(wordfile, "w")
 	if not opened_wordfile then
 		vim.notify(
-			"nvim_word_list: Failed to open temp file: " .. (open_err or "unknown error"),
+			"Failed to open temp file: " .. (open_err or "unknown error"),
 			vim.log.levels.ERROR
 		)
 		return
@@ -118,7 +118,7 @@ function M.update_spell_file()
 	-- Determine the writable spell directory
 	local ok, spelldir = pcall(vim.call, "spellfile#WritableSpellDir")
 	if not ok or not spelldir or spelldir == "" then
-		vim.notify("nvim_word_list: Could not determine spell directory", vim.log.levels.ERROR)
+		vim.notify("Could not determine spell directory", vim.log.levels.ERROR)
 		return
 	end
 
@@ -126,7 +126,7 @@ function M.update_spell_file()
 	local spell_ok, spell_err = pcall(vim.cmd, "mkspell! " .. spelldir .. "/vim " .. wordfile)
 	if not spell_ok then
 		vim.notify(
-			"nvim_word_list: mkspell! failed: " .. tostring(spell_err),
+			"mkspell! failed: " .. tostring(spell_err),
 			vim.log.levels.ERROR
 		)
 		return
@@ -134,7 +134,7 @@ function M.update_spell_file()
 
 	vim.notify(
 		string.format(
-			"nvim_word_list: Spellfile updated with %d words at %s/vim.*.spl",
+			"Spellfile updated with %d words at %s/vim.*.spl",
 			total_count,
 			spelldir
 		),

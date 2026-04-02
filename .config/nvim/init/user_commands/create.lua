@@ -48,7 +48,7 @@ end, {
 vim.api.nvim_create_user_command("PrintMappings", function(opts)
 	local modes, err = print_mappings.normalize_modes(opts.fargs)
 	if err then
-		vim.notify("PrintMappings: " .. err, vim.log.levels.ERROR)
+		vim.notify(err, vim.log.levels.ERROR)
 		return
 	end
 
