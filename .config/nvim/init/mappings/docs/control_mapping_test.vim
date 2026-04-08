@@ -1,7 +1,7 @@
 nnoremap <nowait> <C-Esc> :echo "C-Esc"<CR>
 nnoremap <nowait> <C-`> :echo "C-`"<CR>
 
-" NOTE: <C-1> to <C-9> are reserved for jumping to desktops in MacOS
+" NOTE: <C-1> to <C-9> are reserved for MacOS desktop switching
 nnoremap <nowait> <C-1> :echo "C-1"<CR>
 nnoremap <nowait> <C-2> :echo "C-2"<CR>
 nnoremap <nowait> <C-3> :echo "C-3"<CR>
@@ -17,7 +17,7 @@ nnoremap <nowait> <C--> :echo "C--"<CR>
 nnoremap <nowait> <C-=> :echo "C-="<CR>
 nnoremap <nowait> <C-BS> :echo "C-BS"<CR>
 
-" NOTE: <C-Tab> is reserved for cycling through tabs in kitty terminal
+" NOTE: <C-Tab> is reserved for kitty terminal tab cycling
 nnoremap <nowait> <C-Tab> :echo "C-Tab"<CR>
 
 nnoremap <nowait> <C-q> :echo "C-q"<CR>
@@ -56,10 +56,11 @@ nnoremap <nowait> <C-,> :echo "C-,"<CR>
 nnoremap <nowait> <C-.> :echo "C-."<CR>
 nnoremap <nowait> <C-/> :echo "C-/"<CR>
 
-" NOTE: <C-Space> is reserved for "AI Assistant" in my own MacOS setup
+" NOTE: <C-Space> is reserved for MacOS AI assistant
 nnoremap <nowait> <C-Space> :echo "C-Space"<CR>
 
-" NOTE: <C-Up>, <C-Down>, <C-Left>, and <C-Right> are reserved for "Mission Control" in MacOS
+" NOTE: <C-Up>, <C-Down>, <C-Left>, and <C-Right> are reserved for MacOS
+" "Mission Control"
 nnoremap <nowait> <C-Up> :echo "C-Up"<CR>
 nnoremap <nowait> <C-Down> :echo "C-Down"<CR>
 nnoremap <nowait> <C-Left> :echo "C-Left"<CR>

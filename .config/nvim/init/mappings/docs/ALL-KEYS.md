@@ -70,8 +70,6 @@
 
 # Modifiers
 
-A list of all modifiers available on most keyboards:
-
 - `<S-...>` = "Shift"
 - `<C-...>` = "Control"
 - `<M-...>` = "Option" on macOS, "Meta" or "Alt" on Linux/Windows

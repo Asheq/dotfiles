@@ -1,16 +1,16 @@
-This document lists unused or duplicate Neovim keys by mode, helping you find conflict-free mappings. Only standalone keys and single-modifier chords (`<S-...>`, `<C-...>`, `<M-...>`) are included. `<D-...>` chords are excluded to preserve OS shortcuts.
+This document lists unused or duplicate Neovim keys and key chords by mode, helping you find conflict-free mappings. Only standalone keys (`a`, `b`, `c`, etc.) and single-modifier key chords (`<S-...>`, `<C-...>`, `<M-...>`) are shown.
 
-Note: Some keys here may still be unsuitable because:
+Note: Some keys listed may still be unsuitable because:
 
-1. They are reserved by the OS or terminal and never reach Neovim, e.g.:
-    - `<S-Space>` sends `<Space>`
+1. They are reserved by the OS or terminal, and never reach Neovim. For example, on my setup:
     - `<C-1>`–`<C-9>`: MacOS desktop switching
-    - `<C-Tab>`: tab cycling in kitty
-    - `<C-Space>`: MacOS "AI Assistant"
+    - `<C-Tab>`: kitty terminal tab cycling
+    - `<C-Space>`: MacOS AI assistant
     - `<C-Up>`, `<C-Down>`, `<C-Left>`, `<C-Right>`: MacOS "Mission Control"
     - `<M-Esc>`: MacOS text-to-speech
     - `<M-Space>`: MacOS dictation
-2. They are hard to press due to keyboard layout or require extra modifiers.
+    - `<S-Space>` sends `<Space>`
+2. They are hard to press due to the keyboard layout
 
 # Normal-mode
 
