@@ -61,8 +61,8 @@
 
 - `<S-...>` = "Shift"
 - `<C-...>` = "Control"
-- `<M-...>` = "Option" on macOS, "Meta" on Linux, "Alt" on Windows
-- `<D-...>` = "Command" on macOS, "Super" on Linux, "Windows" on Windows
+- `<M-...>` = "Option" on Mac, "Alt" on PC/Linux
+- `<D-...>` = "Command" on Mac, "Windows" on PC, "Super" on Linux
 
 # Keys not on some keyboards
 
