@@ -28,7 +28,8 @@ vim.opt.smoothscroll = true
 vim.opt.conceallevel = 2
 vim.opt.colorcolumn:append("+1")
 vim.opt.foldtext = ""
-vim.opt.foldcolumn = "auto:9"
+vim.opt.signcolumn = "auto:5"
+vim.opt.foldcolumn = "auto:5"
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.statusline = "%{%v:lua.require('lines').get_statusline()%}"
