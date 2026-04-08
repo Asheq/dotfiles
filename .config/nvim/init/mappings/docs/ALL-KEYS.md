@@ -1,4 +1,4 @@
-# Keys on most keyboards (excluding modifiers)
+# Keys on most keyboards
 
 - `<Esc>`
 - `` ` ``
@@ -57,7 +57,14 @@
 - `<Left>`
 - `<Right>`
 
-# Keys not on some keyboards (excluding modifiers)
+## Modifiers
+
+- `<S-...>` = "Shift"
+- `<C-...>` = "Control"
+- `<M-...>` = "Option" on macOS, "Meta" or "Alt" on Linux/Windows
+- `<D-...>` = "Command" on macOS, "Super" on Linux, "Windows" on Windows
+
+# Keys not on some keyboards
 
 - `<Home>`
 - `<End>`
@@ -67,10 +74,3 @@
 - `<Del>`
 - `<F...>` (function keys)
 - `<k...>` (keypad keys)
-
-# Modifiers
-
-- `<S-...>` = "Shift"
-- `<C-...>` = "Control"
-- `<M-...>` = "Option" on macOS, "Meta" or "Alt" on Linux/Windows
-- `<D-...>` = "Command" on macOS, "Super" on Linux, "Windows" on Windows
