@@ -35,6 +35,7 @@ vim.opt.conceallevel = 2
 vim.opt.foldcolumn = "auto:5"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldmethod = "expr"
+vim.opt.foldopen:remove("mark")
 vim.opt.foldtext = ""
 vim.opt.signcolumn = "auto:5"
 vim.opt.statusline = "%{%v:lua.require('lines').get_statusline()%}"
