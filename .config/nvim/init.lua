@@ -47,4 +47,5 @@ source_lua("init/ft_detection/add.lua")
 -- source_lua("init/terminal/show_prompt_signs.lua")
 
 -- Last
+require('vim._core.ui2').enable()
 vim.cmd("colorscheme catppuccin")
