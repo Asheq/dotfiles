@@ -17,11 +17,6 @@ vim.opt.jumpoptions = "stack"
 vim.opt.tabline = "%{%v:lua.require('lines').get_tabline()%}"
 vim.opt.wildignore = ".DS_Store,.tmp.drivedownload,.tmp.driveupload"
 
--- Tab [+ Global]
--- ----------------------------------------------------------------------------
--- Number
-vim.opt.cmdheight = 2
-
 -- Window [+ Global]
 -- ----------------------------------------------------------------------------
 -- Boolean
