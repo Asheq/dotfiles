@@ -2,20 +2,8 @@ local util = require("util")
 local system_calls = require("system_calls")
 local print_options = require("print.options")
 
--- Helpers
--- ============================================================================
-
-local ks = vim.keymap.set
-
-local function ks_group(maps)
-	for _, map in ipairs(maps) do
-		local mode = map[1]
-		local lhs = map[2]
-		local rhs = map[3]
-		local opts = map[4]
-		ks(mode, lhs, rhs, opts)
-	end
-end
+local ks = util.ks
+local ks_group = util.ks_group
 
 -- Map to Strings
 -- ============================================================================
@@ -105,7 +93,7 @@ ks_group({
 -- ---------------------------------------------------------------------------
 -- Mnemonic: yp = yank path
 ks("n", "yp", function()
-	-- Hint lines showing the modifier options the user can type
+	-- Hint showing the modifier options the user can type
 	local hint = {
 		" p   = full path ",
 		" p:. = from CWD ",
@@ -113,30 +101,28 @@ ks("n", "yp", function()
 		" t   = tail ",
 	}
 
-	-- Create a scratch buffer (not listed, not a real file)
+	-- Create an unlisted, scratch buffer containing the hint
 	local buf = vim.api.nvim_create_buf(false, true)
-
-	-- Put the hint text into the buffer
 	vim.api.nvim_buf_set_lines(buf, 0, -1, false, hint)
 
+	-- Open a floating window to display the buffer
 	local width = 0
 	for _, line in ipairs(hint) do
 		width = math.max(width, #line)
 	end
 
-	-- Open a floating window to display the hint near the bottom of the screen
 	local win = vim.api.nvim_open_win(buf, false, {
-		relative = "editor", -- position relative to the whole editor
-		row = vim.opt.lines:get(), -- as close to the bottom as possible
-		col = 0,       -- left edge
-		width = width, -- just wide enough for the hint text
-		height = #hint, -- one line per modifier
-		style = "minimal", -- no line numbers, statusline, etc.
-		border = "rounded", -- rounded border
+		relative = "editor",
+		row = vim.opt.lines:get(),
+		col = 0,
+		width = width,
+		height = #hint,
+		style = "minimal",
+		border = "rounded",
 	})
 
-	-- Set up a one-shot autocommand: when the user leaves the command line
-	-- (either by pressing Enter or Escape), close the floating window
+	-- Set up a one-shot autocommand: when the user leaves the command line,
+	-- close the floating window
 	vim.api.nvim_create_autocmd("CmdlineLeave", {
 		once = true,
 		callback = function()
@@ -146,13 +132,12 @@ ks("n", "yp", function()
 		end,
 	})
 
-	-- Translate <Left> from its string name to the actual key code
+	-- Feed keystrokes to open the command line with
+	--
+	--   :let @* = expand('%:|')
+	--
+	-- where | represents the cursor position.
 	local LEFT = vim.api.nvim_replace_termcodes("<Left>", true, false, true)
-
-	-- Feed keystrokes to open the command line with:
-	--   :let @* = expand('%:')
-	-- then press Left twice to position the cursor where a modifier can be
-	-- entered.
 	vim.api.nvim_feedkeys(":let @* = expand('%:')" .. LEFT .. LEFT, "n", false)
 end)
 

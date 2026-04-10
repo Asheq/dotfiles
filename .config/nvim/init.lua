@@ -11,7 +11,6 @@ local function source_lua(rel_path)
 end
 
 -- First
-vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", force = true })
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
@@ -33,18 +32,15 @@ source_lua("init/options/set_basic.lua")
 source_lua("init/options/set_listchars_fillchars.lua")
 source_lua("init/options/set_wrap.lua")
 
+-- User Commands
+source_lua("init/user_commands/create.lua")
+
 -- Highlighting
 source_lua("init/highlighting/yank.lua")
 source_lua("init/highlighting/start_treesitter.lua")
 
--- User Commands
-source_lua("init/user_commands/create.lua")
-
 -- Filetype Detection
 source_lua("init/ft_detection/add.lua")
-
--- Other
--- source_lua("init/terminal/show_prompt_signs.lua")
 
 -- Last
 require('vim._core.ui2').enable()

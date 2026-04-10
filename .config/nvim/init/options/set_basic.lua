@@ -15,7 +15,7 @@ vim.opt.wildcharm = 26 -- 26 = ASCII decimal value of <C-z> key
 vim.opt.guifont = "PragmataPro Mono:h22"
 vim.opt.jumpoptions = "stack"
 vim.opt.tabline = "%{%v:lua.require('lines').get_tabline()%}"
-vim.opt.wildignore = { ".DS_Store", ".tmp.drivedownload", ".tmp.driveupload" }
+vim.opt.wildignore = { ".DS_Store", ".tmp.drivedownload", ".tmp.driveupload", "Icon\r" }
 
 -- Window [+ Global]
 -- ----------------------------------------------------------------------------

@@ -120,4 +120,15 @@ function M.new_printer(conf)
 	return buf
 end
 
+M.ks = vim.keymap.set
+function M.ks_group(maps)
+	for _, map in ipairs(maps) do
+		local mode = map[1]
+		local lhs = map[2]
+		local rhs = map[3]
+		local opts = map[4]
+		M.ks(mode, lhs, rhs, opts)
+	end
+end
+
 return M

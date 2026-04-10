@@ -53,10 +53,6 @@ Plug 'folke/snacks.nvim'
 " Color schemes
 " ----------------------------------------------------------------------------
 Plug 'catppuccin/nvim'
-" Plug 'folke/tokyonight.nvim'
-" Plug 'rebelot/kanagawa.nvim'
-" Plug 'rose-pine/neovim'
-" Plug 'EdenEast/nightfox.nvim'
 
 " End
 " ----------------------------------------------------------------------------
