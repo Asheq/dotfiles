@@ -3,7 +3,7 @@ vim.g.colors_name = "demo"
 
 local hi = vim.api.nvim_set_hl
 
-if vim.o.background == "light" then
+if vim.opt.background:get() == "light" then
 	hi(0, "Normal", { fg = "#000000", bg = "#ffffff" })
 	hi(0, "Comment", { fg = "purple" })
 	hi(0, "Constant", { fg = "#cc0000" })

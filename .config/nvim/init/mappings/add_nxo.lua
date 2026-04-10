@@ -127,7 +127,7 @@ ks("n", "yp", function()
 	-- Open a floating window to display the hint near the bottom of the screen
 	local win = vim.api.nvim_open_win(buf, false, {
 		relative = "editor", -- position relative to the whole editor
-		row = vim.o.lines, -- as close to the bottom as possible
+		row = vim.opt.lines:get(), -- as close to the bottom as possible
 		col = 0,       -- left edge
 		width = width, -- just wide enough for the hint text
 		height = #hint, -- one line per modifier
