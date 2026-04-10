@@ -15,7 +15,7 @@ vim.opt.wildcharm = 26 -- 26 = ASCII decimal value of <C-z> key
 vim.opt.guifont = "PragmataPro Mono:h22"
 vim.opt.jumpoptions = "stack"
 vim.opt.tabline = "%{%v:lua.require('lines').get_tabline()%}"
-vim.opt.wildignore = ".DS_Store,.tmp.drivedownload,.tmp.driveupload"
+vim.opt.wildignore = { ".DS_Store", ".tmp.drivedownload", ".tmp.driveupload" }
 
 -- Window [+ Global]
 -- ----------------------------------------------------------------------------
@@ -44,4 +44,4 @@ vim.opt.dictionary:append("/usr/share/dict/words")
 vim.opt.grepprg = "rg --vimgrep"
 vim.opt.spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
 vim.opt.spelllang = "en_us"
-vim.opt.spelloptions = "camel,noplainbuffer"
+vim.opt.spelloptions = { "camel", "noplainbuffer" }
