@@ -16,7 +16,11 @@ require("oil").setup({
 		show_hidden = true,
 		is_always_hidden = function(name)
 			return hidden[name]
-		end
+		end,
+		sort = {
+			{ "name", "asc" },
+		},
+		case_insensitive = true
 	},
 	use_default_keymaps = true,
 	keymaps = {
